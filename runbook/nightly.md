@@ -36,6 +36,10 @@
    - 採用したレベルの `guidance` と、全レベル共通の `global_guidance` に従う。
 3. `content/papers/_TEMPLATE.md` の構成に沿って **日本語の解説 Markdown** を作成する。
    - front matter（title / slug / source_pdf / drive_file_id / drive_url / level / date / tags / summary）を必ず埋める。
+   - **ダイジェスト**: `digest_tagline` / `digest_stats`（`ラベル|値`配列・先頭に雑誌IF）/ `digest_points` を埋める。
+     ページ冒頭にインフォグラフとして表示される。各項目に ASCII カンマは使わない（読点「、」「／」はOK）。
+   - **雑誌のインパクトファクター(IF)** を `digest_stats` 先頭と「書誌情報」の両方に記す。**正確な値を確認**し
+     （不明なら WebSearch 等で調べる）、出典・年（例: JCR 2024 / Clarivate）を併記する。確認できなければ「要確認」とし**捏造しない**。
    - `date` は実行日（JST）。`slug` は英数字・ハイフンのみ（日本語不可）。
    - **出力の基本形は「ほぼ全訳＋必要に応じた補足」（`global_guidance`）。** 独自に章立てを作り直さず、
      **原文の構成・節立てに沿って忠実に日本語訳**する（Abstract→Introduction→Results & Discussion→

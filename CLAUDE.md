@@ -61,6 +61,10 @@ python3 -m http.server 8000 --directory docs
   画像は `content/papers/assets/<slug>/` に置けば、ビルド時に `docs/papers/assets/<slug>/` へ複製される。
   PDF からの図抽出は PyMuPDF を使う（解析セッション側の作業。build_site.py 自体は依存ゼロのまま）。
 - `_` で始まる md（例 `_TEMPLATE.md`）はビルド対象外。
+- 各論文ページ冒頭に **ダイジェスト・インフォグラフ**（`render_digest`）を出す。front matter の
+  `digest_tagline` / `digest_stats`（`ラベル|値`配列・先頭に雑誌IF）/ `digest_points` から生成。
+  配列項目に ASCII カンマは使わない（front matter 配列の区切りのため。読点「、」「／」はOK）。
+- `level` は解説レベルの**指示用メタ**（書きぶり調整）であり、ページ・一覧には**表示しない**。
 - 各論文ページには **AI質問サイドバー**（`docs/assets/chat.js`）が付く。論文本文を JSON で埋め込み、
   ブラウザから直接 Anthropic API を呼ぶ（APIキーは利用者の localStorage 保存・リポジトリには持たない）。
   挙動は `config.json` の `chat`（`enabled`/`default_model`/`models`/`max_tokens`）で制御。一覧ページには付けない。

@@ -7,6 +7,9 @@ drive_url: https://drive.google.com/file/d/.../view
 level: practitioner
 date: 2026-06-28
 tags: [漢方, 生薬, QC]
+digest_tagline: 1行サマリ（ダイジェスト見出し）
+digest_stats: [IF|X.X（JCR2024）, 手法|…, マーカー|…, 主要数値|…]
+digest_points: [要点1, 要点2, 要点3]
 summary: 一覧ページに出す1〜2文の要約。
 ---
 
@@ -15,13 +18,18 @@ summary: 一覧ページに出す1〜2文の要約。
 情報量を落とさない（数値・条件・結果は表で網羅）。
 補足（訳者注）は必要なときだけ「> 補足: ...」で原文と区別して入れる。
 以下の節見出しは原文に合わせて増減してよい。
+
+digest_* はページ冒頭のダイジェスト・インフォグラフになる。
+- digest_stats は `ラベル|値` 形式。先頭に雑誌IFを入れる（IF|4.8（JCR2024） など）。
+- digest_stats / digest_points の各項目に ASCII カンマ「,」は使わない（配列の区切りのため。読点「、」や「／」はOK）。
 -->
 
 ## 書誌情報
 
 - 標題（原題）:
 - 著者・所属:
-- 掲載誌・DOI:
+- 掲載誌・巻号・DOI:
+- インパクトファクター: X.X（雑誌名, JCR 20XX / Clarivate）  ← 正確な値を確認して記す。不明なら「要確認」とし捏造しない
 - 受理経過 / ライセンス:
 
 ## 要旨（Abstract）

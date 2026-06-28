@@ -296,6 +296,46 @@ def slugify(meta, fallback):
     return slug or fallback
 
 
+def render_digest(meta):
+    """front matter の digest_* からダイジェスト・インフォグラフHTMLを生成。
+
+    - digest_tagline: 1行サマリ（任意）
+    - digest_stats: `ラベル|値` 形式の配列（数値タイルになる）
+    - digest_points: 短い要点の配列
+    値・要点に ASCII カンマは使わない（front matter 配列の区切りのため。読点「、」はOK）。
+    """
+    tagline = meta.get("digest_tagline", "")
+    stats = meta.get("digest_stats", [])
+    points = meta.get("digest_points", [])
+    if isinstance(stats, str):
+        stats = [stats]
+    if isinstance(points, str):
+        points = [points]
+    if not (tagline or stats or points):
+        return ""
+
+    parts = ['<section class="digest" aria-label="ダイジェスト">']
+    parts.append('<div class="digest-head">ダイジェスト</div>')
+    if tagline:
+        parts.append(f'<p class="digest-tagline">{_inline(tagline)}</p>')
+    if stats:
+        cells = []
+        for s in stats:
+            label, sep, value = s.partition("|")
+            if not sep:
+                label, value = "", s
+            cells.append(
+                f'<div class="stat"><span class="stat-value">{html.escape(value.strip())}</span>'
+                f'<span class="stat-label">{html.escape(label.strip())}</span></div>'
+            )
+        parts.append('<div class="digest-stats">' + "".join(cells) + "</div>")
+    if points:
+        lis = "".join(f"<li>{_inline(pt)}</li>" for pt in points)
+        parts.append(f'<ul class="digest-points">{lis}</ul>')
+    parts.append("</section>")
+    return "".join(parts)
+
+
 # --------------------------------------------------------------------------- #
 # メイン
 # --------------------------------------------------------------------------- #
@@ -347,13 +387,10 @@ def main():
 
     # 各論文ページ
     for p in papers:
-        level_key = p.get("level", config.get("default_level", "practitioner"))
-        level_label = levels.get(level_key, {}).get("label", level_key)
         tags = p.get("tags", [])
         tags_html = " ".join(f'<span class="tag">{html.escape(t)}</span>' for t in tags) if tags else ""
         meta_html = (
             f'<div class="paper-meta">'
-            f'<span class="badge">レベル: {html.escape(level_label)}</span> '
             f'<span class="date">{html.escape(p.get("date", ""))}</span> '
             f'{tags_html}'
         )
@@ -368,6 +405,7 @@ def main():
             f'<h1>{html.escape(p.get("title", p["slug"]))}</h1>'
             f'{meta_html}'
             f'<hr>'
+            f'{render_digest(p)}'
             f'{p["_body_html"]}'
             f'<p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p>'
             f'</article>'
@@ -403,22 +441,19 @@ def main():
 
         items = []
         for p in papers:
-            level_key = p.get("level", config.get("default_level", "practitioner"))
-            level_label = levels.get(level_key, {}).get("label", level_key)
             summary = p.get("summary", "")
             tags = p.get("tags", [])
             src = p.get("source_pdf", "")
             tag_chips = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in tags)
             blob = " ".join([p.get("title", ""), summary, " ".join(tags), src]).lower()
             meta = (
-                f'<div class="index-meta"><span class="date">{html.escape(p.get("date", ""))}</span> '
-                f'<span class="badge">{html.escape(level_label)}</span>'
+                f'<div class="index-meta"><span class="date">{html.escape(p.get("date", ""))}</span>'
                 + (f' <span class="src">{html.escape(src)}</span>' if src else "")
                 + "</div>"
             )
             items.append(
                 f'<li class="index-item" data-search="{html.escape(blob)}" '
-                f'data-tags="{html.escape(",".join(tags))}" data-level="{html.escape(level_key)}">'
+                f'data-tags="{html.escape(",".join(tags))}">'
                 f'<a class="index-link" href="papers/{p["slug"]}.html">{html.escape(p.get("title", p["slug"]))}</a>'
                 f'{meta}'
                 + (f'<p class="index-summary">{html.escape(summary)}</p>' if summary else "")

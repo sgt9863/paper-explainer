@@ -7,6 +7,9 @@ drive_url: https://drive.google.com/file/d/1-UKpyyJsOfIfouPZ1PhF9i9Lb8hRQTES/vie
 level: practitioner
 date: 2026-06-28
 tags: [漢方, 生薬, QC, QAMS, 単一マーカー, レビュー, RCF]
+digest_tagline: 標準品1つで多成分を定量する「QAMS」の原理・手順・限界を総括したレビュー
+digest_stats: [IF|約3.0（JCR2024）, 種別|総説, 中核|相対補正係数RCF, 採用|米・欧・中 薬局方, 許容誤差|RSD<5%]
+digest_points: [内部標準1成分＋RCFで他成分の含量を算出, 標準品・コスト・溶媒・時間を削減, RCFは装置／カラム／波長で変動するため頑健性確認が必須]
 summary: 標準品が1つで済む多成分定量法「QAMS（単一マーカーによる多成分定量）」の原理・手順・影響因子・利点と限界・将来展望を体系的にまとめたレビュー論文の全訳（＋訳者補足）。相対補正係数(RCF)の式と適用例を網羅。
 ---
 
@@ -17,6 +20,7 @@ summary: 標準品が1つで済む多成分定量法「QAMS（単一マーカー
 - 原題: Quantitative analysis of multi-components by single marker—a rational method for the internal quality of Chinese herbal medicine
 - 著者: Chunsheng Zhu, Xiaoping Li, Bing Zhang, Zhijian Lin（鄭州大学第一附属病院／北京中医薬大学, 中国）
 - 掲載: *Integrative Medicine Research* 2017, 6, 1–11. https://doi.org/10.1016/j.imr.2017.01.008（レビュー論文, オープンアクセス CC BY-NC-ND）
+- インパクトファクター: **約3.0**（*Integrative Medicine Research*, JCR 2024 / Clarivate。出典により2.8–3.04）
 - 受領 2016-10-21 / 改訂 2017-01-07 / 採録 2017-01-10 / オンライン公開 2017-02-03
 
 > 補足: 本論文は実験報告ではなく **QAMS 手法のレビュー**。QAMS = Quantitative Analysis of Multi-components by single Marker（単一マーカーによる多成分定量）。CHM = Chinese Herbal Medicine（漢方・生薬）。RCF = Relative Correction Factor（相対補正係数）。ESM = External Standard Method（外部標準法、＝通常の絶対検量線法）。
