@@ -71,6 +71,21 @@ Claude Code on the web で **スケジュール済みセッション** を作成
 - 論文本文をコンテキストとして送るので、その論文の内容に基づいて日本語で回答します。
 - 設定は `config.json` の `chat`（`enabled` / `default_model` / `models` / `max_tokens`）。
 
+## ダイジェスト画像
+
+- **決定論レンダリング（既定・推奨）**: `scripts/make_slide.py` がダイジェストを 16:9 のスライドPNG
+  （`assets/<slug>/slide.png`）に書き出す。数値・日本語が**100%正確**で、ページ冒頭ヒーロー＋OGP画像に使う。
+  playwright＋プリインストール Chromium を使用（`pip install playwright`）。
+- **AI画像生成（任意・要設定）**: `scripts/make_infographic_ai.py` が OpenAI 画像API（gpt-image 系）で
+  インフォグラフィックを生成する。**前提**: ①`OPENAI_API_KEY` の設定、②環境のネットワークで `api.openai.com`
+  を許可（既定ポリシーでは 403 で遮断）。**注意**: 画像生成モデルは日本語・数値を崩すため、正確さが要る用途には
+  不向き（その場合は `make_slide.py` を使う）。
+
+  ```bash
+  OPENAI_API_KEY=sk-... OPENAI_IMAGE_MODEL=gpt-image-1 \
+    python3 scripts/make_infographic_ai.py            # 全件 / 末尾に slug 指定も可
+  ```
+
 ## 手元での確認
 
 ```bash
