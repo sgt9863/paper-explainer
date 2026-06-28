@@ -56,7 +56,10 @@ python3 -m http.server 8000 --directory docs
   pip install を増やさないこと。
 - front matter パーサは**簡易YAMLサブセット**（`key: value` と `[a, b]` 配列のみ）。ネストや複数行値は非対応。
 - 本文の Markdown→HTML も**自前のサブセット変換**（見出し/段落/強調/箇条書き/番号付き/引用/
-  パイプ表/水平線/リンク/インラインコード）。これ以外の構文は素通しになるので、解説はこの範囲で書く。
+  パイプ表/水平線/リンク/インラインコード/画像）。これ以外の構文は素通しになるので、解説はこの範囲で書く。
+- 図は `![キャプション](assets/<slug>/<file>)` を**単独行**に置くと `<figure>+<figcaption>` 化される。
+  画像は `content/papers/assets/<slug>/` に置けば、ビルド時に `docs/papers/assets/<slug>/` へ複製される。
+  PDF からの図抽出は PyMuPDF を使う（解析セッション側の作業。build_site.py 自体は依存ゼロのまま）。
 - `_` で始まる md（例 `_TEMPLATE.md`）はビルド対象外。
 
 ## 解説レベルの変更

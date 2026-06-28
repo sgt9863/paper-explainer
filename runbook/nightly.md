@@ -45,6 +45,16 @@
    - 補足（訳者注）は必要なときだけ、`> 補足:` 等で原文と区別して加える。憶測で数値・結論を本文に混ぜない。
      読めない/曖昧な箇所のみ「原文参照」と明記する。
    - 実務的示唆を入れる場合も、原文に無い主張は補足として明示する（訳と混在させない）。
+4. **図（Figure）の取り込み**（本文中の図がある場合）:
+   - Drive MCP の `download_file_content` で PDF を base64 取得（巨大なら結果はファイル保存される）。
+     base64 をデコードして PDF を一時保存し、**PyMuPDF** で図を抽出する:
+     `pip install pymupdf` →
+     `import fitz; doc=fitz.open(pdf); page.get_images(full=True); doc.extract_image(xref)`。
+     `page.get_image_rects(xref)` の y 座標で上下（A/B など）の並び順を判定できる。
+   - 抽出画像は `content/papers/assets/<slug>/<name>.png` に保存し、md からは
+     `![Figure N. キャプション和訳](assets/<slug>/<name>.png)` で参照する（単独行に置くと figure 化される）。
+   - `build_site.py` が `content/papers/assets/` を `docs/papers/assets/` に複製し、各論文ページから相対参照できる。
+   - 補足資料(S1〜)は本体PDFに無いことが多い。無い図は「原文参照」とし、無理に作らない。
 
 ## ステップ 3: レビュー（自己点検）
 

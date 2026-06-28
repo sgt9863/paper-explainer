@@ -88,6 +88,24 @@ code {
 
 hr { border: none; border-top: 1px solid var(--border); margin: 1.5em 0; }
 
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+figure img, .paper img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+figcaption {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
 .index-list { list-style: none; padding: 0; }
 .index-item {
   padding: 16px 0;

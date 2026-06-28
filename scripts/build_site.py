@@ -20,6 +20,7 @@ import html
 import json
 import os
 import re
+import shutil
 import sys
 from datetime import datetime
 
@@ -81,6 +82,12 @@ def _inline(text: str) -> str:
     # 残りをエスケープ
     text = html.escape(text)
 
+    # 画像 ![alt](src) … リンクより先に処理（src はローカル相対パスも許可）
+    text = re.sub(
+        r"!\[([^\]]*)\]\(([^\s)]+)\)",
+        r'<img src="\2" alt="\1" loading="lazy">',
+        text,
+    )
     # リンク [text](url)
     text = re.sub(
         r"\[([^\]]+)\]\((https?://[^\s)]+)\)",
@@ -134,6 +141,17 @@ def markdown_to_html(md: str) -> str:
         # 水平線
         if re.match(r"^(\*\s*){3,}$|^(-\s*){3,}$|^(_\s*){3,}$", stripped):
             html_parts.append("<hr>")
+            i += 1
+            continue
+
+        # 単独行の画像 → figure（alt をキャプションに）
+        m_img = re.match(r"^!\[([^\]]*)\]\(([^\s)]+)\)$", stripped)
+        if m_img:
+            alt, src = m_img.group(1), m_img.group(2)
+            cap = f"<figcaption>{_inline(alt)}</figcaption>" if alt else ""
+            html_parts.append(
+                f'<figure><img src="{html.escape(src)}" alt="{html.escape(alt)}" loading="lazy">{cap}</figure>'
+            )
             i += 1
             continue
 
@@ -244,6 +262,15 @@ def main():
     for old in os.listdir(papers_out):
         if old.endswith(".html"):
             os.remove(os.path.join(papers_out, old))
+
+    # 図表などの画像アセットを content/papers/assets → docs/papers/assets に複製。
+    # md からは相対パス `assets/<slug>/<file>` で参照する（各論文ページは docs/papers/ 直下）。
+    assets_src = os.path.join(CONTENT_DIR, "assets")
+    assets_dst = os.path.join(papers_out, "assets")
+    if os.path.isdir(assets_dst):
+        shutil.rmtree(assets_dst)
+    if os.path.isdir(assets_src):
+        shutil.copytree(assets_src, assets_dst)
 
     papers = []
     if os.path.isdir(CONTENT_DIR):
