@@ -61,6 +61,9 @@ python3 -m http.server 8000 --directory docs
   画像は `content/papers/assets/<slug>/` に置けば、ビルド時に `docs/papers/assets/<slug>/` へ複製される。
   PDF からの図抽出は PyMuPDF を使う（解析セッション側の作業。build_site.py 自体は依存ゼロのまま）。
 - `_` で始まる md（例 `_TEMPLATE.md`）はビルド対象外。
+- 各論文ページには **AI質問サイドバー**（`docs/assets/chat.js`）が付く。論文本文を JSON で埋め込み、
+  ブラウザから直接 Anthropic API を呼ぶ（APIキーは利用者の localStorage 保存・リポジトリには持たない）。
+  挙動は `config.json` の `chat`（`enabled`/`default_model`/`models`/`max_tokens`）で制御。一覧ページには付けない。
 
 ## 解説レベルの変更
 

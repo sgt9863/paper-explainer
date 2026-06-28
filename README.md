@@ -61,6 +61,16 @@ Claude Code on the web で **スケジュール済みセッション** を作成
 セッションには Google Drive・Gmail・GitHub の各 MCP 接続が必要です。
 （参考: https://code.claude.com/docs/en/claude-code-on-the-web ）
 
+## 各論文ページのAI質問サイドバー
+
+公開した各論文ページには、その論文についてAIに質問できるサイドバーが付きます。
+静的サイトのままブラウザから直接 Anthropic API を呼ぶ方式です。
+
+- 初回に右上の ⚙ から **Anthropic APIキー** を入力（**このブラウザの localStorage にのみ保存**。GitHubには含まれません）。
+- モデルは既定 **Sonnet 4.6**（⚙で Opus 4.8 / Haiku 4.5 に切替可）。
+- 論文本文をコンテキストとして送るので、その論文の内容に基づいて日本語で回答します。
+- 設定は `config.json` の `chat`（`enabled` / `default_model` / `models` / `max_tokens`）。
+
 ## 手元での確認
 
 ```bash

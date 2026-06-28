@@ -212,25 +212,75 @@ def markdown_to_html(md: str) -> str:
 # --------------------------------------------------------------------------- #
 # HTML テンプレート
 # --------------------------------------------------------------------------- #
-def page_template(title: str, body: str, site_title: str, rel_root: str = ".") -> str:
+def chat_panel_html() -> str:
+    """論文ページ右側に差し込むAIチャットパネル（ブラウザ直叩き方式）。"""
+    return """
+<aside class="chat" id="chatPanel" aria-label="この論文へのAI質問">
+  <div class="chat-head">
+    <span class="chat-title">この論文にAIで質問</span>
+    <button type="button" id="chatGear" class="chat-gear" title="設定" aria-label="設定">&#9881;</button>
+    <button type="button" id="chatClose" class="chat-close" title="閉じる" aria-label="閉じる">&times;</button>
+  </div>
+  <div class="chat-settings" id="chatSettings" hidden>
+    <label>Anthropic APIキー
+      <input type="password" id="chatApiKey" placeholder="sk-ant-..." autocomplete="off">
+    </label>
+    <label>モデル
+      <select id="chatModel"></select>
+    </label>
+    <button type="button" id="chatSave" class="chat-save">保存</button>
+    <p class="chat-hint">キーはこのブラウザ(localStorage)にのみ保存され、送信先はAnthropic APIだけです。GitHubには保存されません。</p>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg chat-assistant">この論文の内容について日本語で質問できます。例：「この分析法のLOQは？」「40℃にした理由は？」</div>
+  </div>
+  <form class="chat-input" id="chatForm">
+    <textarea id="chatText" rows="2" placeholder="質問を入力（Enterで送信 / Shift+Enterで改行）"></textarea>
+    <button type="submit" id="chatSend">送信</button>
+  </form>
+</aside>
+<button type="button" id="chatFab" class="chat-fab" title="AIに質問">&#128172;</button>
+"""
+
+
+def page_template(title, body, site_title, rel_root=".", chat=None):
+    """chat = {"config": <chat config dict>, "paper": {title, content, slug}} を渡すと
+    AIチャットサイドバー付きの2カラムレイアウトで出力する。"""
+    head_extra = ""
+    chat_aside = ""
+    chat_scripts = ""
+    main_open, main_close = "<main class=\"container\">", "</main>"
+    if chat:
+        main_open = '<div class="layout"><main class="container">'
+        chat_aside = chat_panel_html()
+        main_close = "</main>" + chat_aside + "</div>"
+        # </script> 等でスクリプトタグを抜けられないよう "</" をエスケープ
+        paper_json = json.dumps(chat["paper"], ensure_ascii=False).replace("</", "<\\/")
+        config_json = json.dumps(chat["config"], ensure_ascii=False).replace("</", "<\\/")
+        chat_scripts = (
+            f'<script type="application/json" id="paper-data">{paper_json}</script>\n'
+            f'<script type="application/json" id="chat-config">{config_json}</script>\n'
+            f'<script src="{rel_root}/assets/chat.js" defer></script>'
+        )
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
-<link rel="stylesheet" href="{rel_root}/assets/style.css">
+<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}
 </head>
 <body>
 <header class="site-header">
   <a class="site-title" href="{rel_root}/index.html">{html.escape(site_title)}</a>
 </header>
-<main class="container">
+{main_open}
 {body}
-</main>
+{main_close}
 <footer class="site-footer">
   <p>自動生成: paper-explainer パイプライン</p>
 </footer>
+{chat_scripts}
 </body>
 </html>
 """
@@ -282,6 +332,7 @@ def main():
             slug = slugify(meta, os.path.splitext(fname)[0])
             meta["slug"] = slug
             meta["_body_html"] = markdown_to_html(body)
+            meta["_body_raw"] = body
             papers.append(meta)
 
     # 日付降順（新しい順）
@@ -320,9 +371,24 @@ def main():
             f'<p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p>'
             f'</article>'
         )
+        chat_cfg = config.get("chat", {})
+        chat = None
+        if chat_cfg.get("enabled"):
+            chat = {
+                "config": {
+                    "default_model": chat_cfg.get("default_model", "claude-sonnet-4-6"),
+                    "models": chat_cfg.get("models", []),
+                    "max_tokens": chat_cfg.get("max_tokens", 1024),
+                },
+                "paper": {
+                    "title": p.get("title", p["slug"]),
+                    "slug": p["slug"],
+                    "content": p["_body_raw"],
+                },
+            }
         out_path = os.path.join(papers_out, f'{p["slug"]}.html')
         with open(out_path, "w", encoding="utf-8") as f:
-            f.write(page_template(p.get("title", p["slug"]), body, site_title, rel_root=".."))
+            f.write(page_template(p.get("title", p["slug"]), body, site_title, rel_root="..", chat=chat))
 
     # 一覧ページ
     if papers:

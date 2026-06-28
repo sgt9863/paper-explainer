@@ -33,5 +33,15 @@
   "publish": {
     "github_pages": true,
     "output_dir": "docs"
+  },
+  "chat": {
+    "enabled": true,
+    "default_model": "claude-sonnet-4-6",
+    "models": [
+      { "id": "claude-sonnet-4-6", "label": "Sonnet 4.6（推奨）" },
+      { "id": "claude-opus-4-8", "label": "Opus 4.8（高性能）" },
+      { "id": "claude-haiku-4-5-20251001", "label": "Haiku 4.5（高速）" }
+    ],
+    "max_tokens": 1024
   }
 }
