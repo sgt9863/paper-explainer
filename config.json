@@ -25,7 +25,7 @@
     "folder_id": "1nV97RKjkrFX4g3knAMrIzUGADKCfGgx4"
   },
   "email": {
-    "enabled": true,
+    "enabled": false,
     "to": "sugita_shinpei@mail.tsumura.co.jp",
     "mode": "draft",
     "subject_prefix": "[論文解説]"
