@@ -8,8 +8,10 @@ level: practitioner
 date: 2026-06-28
 tags: [漢方, 生薬, QC]
 digest_tagline: 1行サマリ（ダイジェスト見出し）
-digest_stats: [IF|X.X（JCR2024）, 手法|…, マーカー|…, 主要数値|…]
+digest_stats: [IF（2024）|X.X, 手法|…, マーカー|…, 主要数値|…]
 digest_points: [要点1, 要点2, 要点3]
+digest_chart_label: グラフ見出し（例: 実試料中の含量 mg/g）  ← 数値データがあれば
+digest_chart: [ラベルA|12.3, ラベルB|4.5, ラベルC|1.0]       ← 原文の実数のみ。無ければ削除
 summary: 一覧ページに出す1〜2文の要約。
 ---
 

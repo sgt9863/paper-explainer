@@ -88,6 +88,16 @@ code {
 
 hr { border: none; border-top: 1px solid var(--border); margin: 1.5em 0; }
 
+/* ------- スライド一枚絵（ヒーロー） ------- */
+.slide-hero { display: block; margin: 0 0 28px; }
+.slide-hero img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  display: block;
+}
+
 /* ------- ダイジェスト・インフォグラフ ------- */
 .digest {
   background: linear-gradient(180deg, var(--accent-soft), #fff);

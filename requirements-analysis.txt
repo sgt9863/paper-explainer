@@ -1,0 +1,4 @@
+# 解析セッション側（PDF図抽出・スライド画像生成）で使うツール。
+# build_site.py 自体は標準ライブラリのみで動くため、これらは公開ビルドには不要。
+pymupdf>=1.24      # PDFからの図抽出（scripts/ で使用）
+playwright>=1.40   # スライド一枚絵のレンダリング（scripts/make_slide.py）。Chromiumは環境にプリインストール

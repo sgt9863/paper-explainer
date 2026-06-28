@@ -59,6 +59,11 @@
      `![Figure N. キャプション和訳](assets/<slug>/<name>.png)` で参照する（単独行に置くと figure 化される）。
    - `build_site.py` が `content/papers/assets/` を `docs/papers/assets/` に複製し、各論文ページから相対参照できる。
    - 補足資料(S1〜)は本体PDFに無いことが多い。無い図は「原文参照」とし、無理に作らない。
+5. **ダイジェスト用データ**（front matter）を埋める。ページ冒頭の「スライド一枚絵」になる:
+   - `digest_tagline` / `digest_stats`（先頭に IF）/ `digest_points` は必須。
+   - **実験論文は `digest_chart`（`ラベル|数値`配列・数値は原文どおり）と `digest_chart_label` を入れる**
+     （例: 実試料中の含量 mg/g、由来別の成分数 など）。横棒グラフになり「ぱっと分かる」図になる。
+     値は**原文の実数**のみ。レビューで数値が無ければ chart は省略してよい。
 
 ## ステップ 3: レビュー（自己点検）
 
@@ -71,13 +76,19 @@
 - [ ] 実務への示唆・限界の節が具体的か
 - [ ] 誤訳・専門用語の取り違えがないか
 
-## ステップ 4: サイト生成
+## ステップ 4: スライド画像とサイト生成
 
 ```bash
+# 1) ダイジェストを「スライド一枚絵」(PNG)に書き出す（新規slugのみでも可）
+python3 scripts/make_slide.py <slug> ...   # 引数省略で全件
+# 2) サイト再生成（スライドがあればページ冒頭にヒーロー表示＋OGP画像化）
 python3 scripts/build_site.py
 ```
 
-- `docs/` 以下に一覧ページと各論文ページが再生成される（依存ライブラリ不要）。
+- `make_slide.py` は playwright＋プリインストール Chromium を使う（`pip install playwright`。
+  ブラウザは `/opt/pw-browsers/chromium-*/chrome-linux/chrome` を自動検出）。日本語は IPAGothic で描画。
+- スライド生成に失敗しても `build_site.py` は動く（スライドが無ければ HTML ダイジェストカードにフォールバック）。
+- `docs/` 以下に一覧ページと各論文ページが再生成される（build_site 自体は依存ライブラリ不要）。
 - エラーが出たら front matter / Markdown を修正して再実行。
 
 ## ステップ 5: 状態の更新

@@ -243,7 +243,7 @@ def chat_panel_html() -> str:
 """
 
 
-def page_template(title, body, site_title, rel_root=".", chat=None, extra_scripts=""):
+def page_template(title, body, site_title, rel_root=".", chat=None, extra_scripts="", og_image="", description=""):
     """chat = {"config": <chat config dict>, "paper": {title, content, slug}} を渡すと
     AIチャットサイドバー付きの2カラムレイアウトで出力する。"""
     head_extra = ""
@@ -262,13 +262,24 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
             f'<script type="application/json" id="chat-config">{config_json}</script>\n'
             f'<script src="{rel_root}/assets/chat.js" defer></script>'
         )
+    og = (
+        f'<meta property="og:type" content="article">\n'
+        f'<meta property="og:title" content="{html.escape(title)}">\n'
+        + (f'<meta property="og:description" content="{html.escape(description)}">\n' if description else "")
+        + (
+            f'<meta property="og:image" content="{html.escape(og_image)}">\n'
+            f'<meta name="twitter:card" content="summary_large_image">\n'
+            if og_image
+            else ""
+        )
+    )
     return f"""<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
-<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}
+{og}<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}
 </head>
 <body>
 <header class="site-header">
@@ -400,12 +411,24 @@ def main():
             meta_html += f' &middot; <span class="src">{html.escape(p["source_pdf"])}</span>'
         meta_html += "</div>"
 
+        # スライド画像があれば冒頭にヒーロー表示（クリックで原寸）。無ければHTMLダイジェストカード。
+        slide_rel = f'assets/{p["slug"]}/slide.png'
+        slide_abs = os.path.join(papers_out, slide_rel)
+        if os.path.isfile(slide_abs):
+            alt = html.escape(p.get("digest_tagline", p.get("title", "")))
+            top_visual = (
+                f'<a class="slide-hero" href="{slide_rel}" target="_blank" rel="noopener">'
+                f'<img src="{slide_rel}" alt="{alt}" loading="lazy"></a>'
+            )
+        else:
+            top_visual = render_digest(p)
+
         body = (
             f'<article class="paper">'
             f'<h1>{html.escape(p.get("title", p["slug"]))}</h1>'
             f'{meta_html}'
             f'<hr>'
-            f'{render_digest(p)}'
+            f'{top_visual}'
             f'{p["_body_html"]}'
             f'<p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p>'
             f'</article>'
@@ -425,9 +448,14 @@ def main():
                     "content": p["_body_raw"],
                 },
             }
+        site_url = config.get("site_url", "").rstrip("/")
+        og_image = f"{site_url}/papers/{slide_rel}" if (site_url and os.path.isfile(slide_abs)) else ""
         out_path = os.path.join(papers_out, f'{p["slug"]}.html')
         with open(out_path, "w", encoding="utf-8") as f:
-            f.write(page_template(p.get("title", p["slug"]), body, site_title, rel_root="..", chat=chat))
+            f.write(page_template(
+                p.get("title", p["slug"]), body, site_title, rel_root="..", chat=chat,
+                og_image=og_image, description=p.get("summary", ""),
+            ))
 
     # 一覧ページ
     index_scripts = ""
