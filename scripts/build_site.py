@@ -243,7 +243,7 @@ def chat_panel_html() -> str:
 """
 
 
-def page_template(title, body, site_title, rel_root=".", chat=None):
+def page_template(title, body, site_title, rel_root=".", chat=None, extra_scripts=""):
     """chat = {"config": <chat config dict>, "paper": {title, content, slug}} を渡すと
     AIチャットサイドバー付きの2カラムレイアウトで出力する。"""
     head_extra = ""
@@ -281,6 +281,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None):
   <p>自動生成: paper-explainer パイプライン</p>
 </footer>
 {chat_scripts}
+{extra_scripts}
 </body>
 </html>
 """
@@ -391,32 +392,67 @@ def main():
             f.write(page_template(p.get("title", p["slug"]), body, site_title, rel_root="..", chat=chat))
 
     # 一覧ページ
+    index_scripts = ""
     if papers:
+        # 全タグを出現順に収集（絞り込みチップ用）
+        all_tags = []
+        for p in papers:
+            for t in p.get("tags", []):
+                if t not in all_tags:
+                    all_tags.append(t)
+
         items = []
         for p in papers:
             level_key = p.get("level", config.get("default_level", "practitioner"))
             level_label = levels.get(level_key, {}).get("label", level_key)
             summary = p.get("summary", "")
-            items.append(
-                f'<li class="index-item">'
-                f'<a class="index-link" href="papers/{p["slug"]}.html">{html.escape(p.get("title", p["slug"]))}</a>'
+            tags = p.get("tags", [])
+            src = p.get("source_pdf", "")
+            tag_chips = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in tags)
+            blob = " ".join([p.get("title", ""), summary, " ".join(tags), src]).lower()
+            meta = (
                 f'<div class="index-meta"><span class="date">{html.escape(p.get("date", ""))}</span> '
-                f'<span class="badge">{html.escape(level_label)}</span></div>'
+                f'<span class="badge">{html.escape(level_label)}</span>'
+                + (f' <span class="src">{html.escape(src)}</span>' if src else "")
+                + "</div>"
+            )
+            items.append(
+                f'<li class="index-item" data-search="{html.escape(blob)}" '
+                f'data-tags="{html.escape(",".join(tags))}" data-level="{html.escape(level_key)}">'
+                f'<a class="index-link" href="papers/{p["slug"]}.html">{html.escape(p.get("title", p["slug"]))}</a>'
+                f'{meta}'
                 + (f'<p class="index-summary">{html.escape(summary)}</p>' if summary else "")
+                + (f'<div class="index-tags">{tag_chips}</div>' if tags else "")
                 + "</li>"
             )
-        list_html = '<ul class="index-list">' + "".join(items) + "</ul>"
+
+        tagfilters = "".join(
+            f'<button type="button" class="tagfilter" data-tag="{html.escape(t)}">{html.escape(t)}</button>'
+            for t in all_tags
+        )
+        controls = (
+            '<div class="index-controls">'
+            '<input type="search" id="indexSearch" placeholder="キーワードで絞り込み（タイトル・要約・タグ・ファイル名）" aria-label="検索">'
+            + (f'<div class="tagfilters" id="tagFilters">{tagfilters}</div>' if all_tags else "")
+            + "</div>"
+        )
+        list_html = (
+            controls
+            + '<ul class="index-list" id="indexList">' + "".join(items) + "</ul>"
+            + '<p class="noresult" id="noResult" hidden>該当する解説がありません。</p>'
+        )
+        index_scripts = f'<script src="{"."}/assets/index.js" defer></script>'
     else:
         list_html = '<p class="empty">まだ解説はありません。夜間パイプラインが新着PDFを処理すると、ここに一覧が表示されます。</p>'
 
     index_body = (
         f'<h1>{html.escape(site_title)}</h1>'
         f'<p class="lead">{html.escape(config.get("site_description", ""))}</p>'
-        f'<p class="count">{len(papers)} 件の解説</p>'
+        f'<p class="count"><span id="shownCount">{len(papers)}</span> / {len(papers)} 件の解説</p>'
         f'{list_html}'
     )
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
-        f.write(page_template(site_title, index_body, site_title, rel_root="."))
+        f.write(page_template(site_title, index_body, site_title, rel_root=".", extra_scripts=index_scripts))
 
     # GitHub Pages の Jekyll 処理を無効化（_ で始まるファイルもそのまま配信）
     open(os.path.join(out_dir, ".nojekyll"), "w").close()
