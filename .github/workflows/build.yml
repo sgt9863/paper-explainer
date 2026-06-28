@@ -1,0 +1,31 @@
+name: build-site
+
+# content/papers の Markdown から docs/ サイトが正しく生成できることを検証する。
+# （依存ライブラリなしの純標準ライブラリ実装なので、追加インストールは不要）
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "content/**"
+      - "scripts/build_site.py"
+      - "config.json"
+  pull_request:
+    paths:
+      - "content/**"
+      - "scripts/build_site.py"
+      - "config.json"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Build site
+        run: python3 scripts/build_site.py
+      - name: Check docs/index.html exists
+        run: test -f docs/index.html

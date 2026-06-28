@@ -1,0 +1,36 @@
+{
+  "site_title": "漢方・生薬QC 論文解説",
+  "site_description": "Google Driveに集めた漢方・生薬QC関連論文の日本語解説アーカイブ",
+  "default_level": "practitioner",
+  "levels": {
+    "beginner": {
+      "label": "入門",
+      "audience": "前提知識の少ない読者",
+      "guidance": "専門用語は都度かみ砕いて説明し、背景・目的から丁寧に。数式・統計の詳細は省き、結論と意義を中心に整理する。"
+    },
+    "practitioner": {
+      "label": "実務者",
+      "audience": "漢方・生薬QCの実務担当者",
+      "guidance": "専門用語は使ってよいが、要点と実務的示唆（規格設定・分析法・品質管理への応用）を平易に整理する。手法は概要レベルにとどめ、結果が実務に与えるインパクトを重視する。"
+    },
+    "researcher": {
+      "label": "研究者",
+      "audience": "当該領域の研究者",
+      "guidance": "手法・統計・限界まで踏み込んだ専門的な詳説。前提知識は省略してよい。再現に必要な条件、新規性、残された課題を明確にする。"
+    }
+  },
+  "drive": {
+    "folder_name": "論文",
+    "folder_id": "1nV97RKjkrFX4g3knAMrIzUGADKCfGgx4"
+  },
+  "email": {
+    "enabled": true,
+    "to": "sugita_shinpei@mail.tsumura.co.jp",
+    "mode": "draft",
+    "subject_prefix": "[論文解説]"
+  },
+  "publish": {
+    "github_pages": true,
+    "output_dir": "docs"
+  }
+}

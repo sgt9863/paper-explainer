@@ -1,0 +1,109 @@
+:root {
+  --fg: #1f2328;
+  --muted: #57606a;
+  --bg: #ffffff;
+  --accent: #0a5c4a;
+  --accent-soft: #e6f2ee;
+  --border: #d0d7de;
+  --code-bg: #f6f8fa;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+    "Yu Gothic", Meiryo, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  line-height: 1.8;
+}
+
+.site-header {
+  background: var(--accent);
+  padding: 14px 24px;
+}
+.site-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+h1 { font-size: 1.7rem; line-height: 1.4; margin-top: 0; }
+h2 { font-size: 1.35rem; border-bottom: 2px solid var(--accent-soft); padding-bottom: 4px; margin-top: 2em; }
+h3 { font-size: 1.15rem; margin-top: 1.6em; }
+
+a { color: var(--accent); }
+
+.lead { color: var(--muted); }
+.count { color: var(--muted); font-size: 0.9rem; }
+
+.paper-meta { color: var(--muted); font-size: 0.9rem; margin: 8px 0 4px; }
+.badge {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 4px;
+  padding: 1px 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.tag {
+  background: #f0f3f6;
+  border-radius: 4px;
+  padding: 1px 8px;
+  font-size: 0.8rem;
+}
+.src { font-family: monospace; font-size: 0.8rem; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 0.95rem;
+}
+th, td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; }
+th { background: var(--accent-soft); }
+
+blockquote {
+  border-left: 4px solid var(--accent);
+  margin: 1em 0;
+  padding: 4px 16px;
+  color: var(--muted);
+  background: var(--code-bg);
+}
+
+code {
+  background: var(--code-bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+hr { border: none; border-top: 1px solid var(--border); margin: 1.5em 0; }
+
+.index-list { list-style: none; padding: 0; }
+.index-item {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+}
+.index-link { font-size: 1.15rem; font-weight: 600; text-decoration: none; }
+.index-meta { color: var(--muted); font-size: 0.85rem; margin: 4px 0; }
+.index-summary { margin: 6px 0 0; color: var(--muted); }
+
+.empty { color: var(--muted); padding: 40px 0; }
+.back { margin-top: 2.5em; }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.8rem;
+  padding: 24px;
+}
