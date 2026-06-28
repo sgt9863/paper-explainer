@@ -88,14 +88,17 @@ code {
 
 hr { border: none; border-top: 1px solid var(--border); margin: 1.5em 0; }
 
-/* ------- スライド一枚絵（ヒーロー） ------- */
-.slide-hero { display: block; margin: 0 0 28px; }
+/* ------- スライド一枚絵 / インフォグラフィック（ヒーロー） ------- */
+/* 横長スライドは幅いっぱい、縦長インフォグラフィック(AI生成)は高さで抑えて中央寄せ。 */
+.slide-hero { display: block; margin: 0 0 28px; text-align: center; }
 .slide-hero img {
-  width: 100%;
+  max-width: 100%;
+  max-height: 80vh;
+  width: auto;
   height: auto;
   border: 1px solid var(--border);
   border-radius: 10px;
-  display: block;
+  display: inline-block;
 }
 
 /* ------- ダイジェスト・インフォグラフ ------- */

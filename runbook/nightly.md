@@ -81,13 +81,19 @@
 ```bash
 # 1) ダイジェストを「スライド一枚絵」(PNG)に書き出す（新規slugのみでも可）
 python3 scripts/make_slide.py <slug> ...   # 引数省略で全件
-# 2) サイト再生成（スライドがあればページ冒頭にヒーロー表示＋OGP画像化）
+# 1b) （任意）OpenAIで「1枚で研究概要がわかる」横長インフォグラフィックを生成
+OPENAI_API_KEY=sk-... python3 scripts/make_infographic_ai.py <slug> ...  # 引数省略で全件
+# 2) サイト再生成（ヒーロー画像＋OGP画像化）
 python3 scripts/build_site.py
 ```
 
 - `make_slide.py` は playwright＋プリインストール Chromium を使う（`pip install playwright`。
   ブラウザは `/opt/pw-browsers/chromium-*/chrome-linux/chrome` を自動検出）。日本語は IPAGothic で描画。
-- スライド生成に失敗しても `build_site.py` は動く（スライドが無ければ HTML ダイジェストカードにフォールバック）。
+- `make_infographic_ai.py` は OpenAI 画像API（既定 gpt-image-2・横長 1536x1024・webp）で、front matter の
+  事実（タイトル・数値・要点）を正確に反映しつつ研究概要を1枚に描かせる。要 `OPENAI_API_KEY`＋
+  api.openai.com への到達。応答は webp 圧縮で取得し途中切断に再試行する（環境変数で上書き可。スクリプト冒頭参照）。
+- **ヒーロー画像の優先順位**（`build_site.py`）: `ai-infographic.{webp,png,jpg}` → `slide.png` → HTMLダイジェストカード。
+  いずれも生成に失敗しても `build_site.py` は動く（順にフォールバック）。
 - `docs/` 以下に一覧ページと各論文ページが再生成される（build_site 自体は依存ライブラリ不要）。
 - エラーが出たら front matter / Markdown を修正して再実行。
 
