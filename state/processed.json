@@ -1,4 +1,11 @@
 {
   "_comment": "処理済みPDFの記録。Drive file id をキーに、生成した解説のメタ情報を保持する。夜間パイプラインはここに無いPDFのみを新規対象として処理する。",
-  "processed": {}
+  "processed": {
+    "1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz": {
+      "slug": "jge-hplc-pda-qc",
+      "title": "漢方処方「左帰飲（JGE）」の品質管理用HPLC–PDA同時定量法の開発とバリデーション",
+      "source_pdf": "pharmaceuticals-18-00481-v2.pdf",
+      "date": "2026-06-28"
+    }
+  }
 }
