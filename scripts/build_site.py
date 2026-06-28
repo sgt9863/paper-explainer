@@ -411,10 +411,21 @@ def main():
             meta_html += f' &middot; <span class="src">{html.escape(p["source_pdf"])}</span>'
         meta_html += "</div>"
 
-        # スライド画像があれば冒頭にヒーロー表示（クリックで原寸）。無ければHTMLダイジェストカード。
-        slide_rel = f'assets/{p["slug"]}/slide.png'
-        slide_abs = os.path.join(papers_out, slide_rel)
-        if os.path.isfile(slide_abs):
+        # 冒頭ヒーロー画像の選択（クリックで原寸）。無ければHTMLダイジェストカード。
+        # 優先: OpenAI 生成インフォグラフィック（make_infographic_ai.py）→ 決定論スライド（make_slide.py）。
+        # AI画像は webp/png/jpg のいずれか（make_infographic_ai.py の OPENAI_IMAGE_FORMAT 次第）。
+        slide_rel = None
+        for cand in (
+            f'assets/{p["slug"]}/ai-infographic.webp',
+            f'assets/{p["slug"]}/ai-infographic.png',
+            f'assets/{p["slug"]}/ai-infographic.jpg',
+            f'assets/{p["slug"]}/slide.png',
+        ):
+            if os.path.isfile(os.path.join(papers_out, cand)):
+                slide_rel = cand
+                break
+        slide_abs = os.path.join(papers_out, slide_rel) if slide_rel else ""
+        if slide_rel:
             alt = html.escape(p.get("digest_tagline", p.get("title", "")))
             top_visual = (
                 f'<a class="slide-hero" href="{slide_rel}" target="_blank" rel="noopener">'
