@@ -3,7 +3,7 @@
   "processed": {
     "1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz": {
       "slug": "jge-hplc-pda-qc",
-      "title": "漢方処方「左帰飲（JGE）」の品質管理用HPLC–PDA同時定量法の開発とバリデーション",
+      "title": "漢方処方「左帰飲（JGE）」の品質管理を目的としたHPLC–PDA法の開発とバリデーション：9種の指標成分の同時分析",
       "source_pdf": "pharmaceuticals-18-00481-v2.pdf",
       "date": "2026-06-28"
     },
@@ -24,6 +24,84 @@
       "title": "生薬・ハーブ医薬品の品質管理におけるマーカーとしてのフラボノイド — 現在のトレンドと分析的展望（総説）",
       "source_pdf": "separations-12-00289.pdf",
       "date": "2026-06-28"
+    },
+    "11yxhkmCvvvgBpUajQCX13XwrAsSXPcB5": {
+      "slug": "dgjz-uplc-qtof-fingerprint",
+      "title": "当帰建中湯（DGJZ）の指紋分析・多成分定量・UPLC-Q-TOF-MSによる総合的品質評価",
+      "source_pdf": "7dba3b73bmae034.pdf",
+      "date": "2026-06-29"
+    },
+    "1TT4NWzazt0w9GNjXWuacBD9yPnov5mNS": {
+      "slug": "sxg-2dlc-mdf-qmarker",
+      "title": "直交HILIC×RP二次元LC/MSと質量欠損フィルタによる参消顆粒(SXG)の網羅的化学プロファイルとQ-marker探索",
+      "source_pdf": "9cf9b9d6s00216025061809.pdf",
+      "date": "2026-06-29"
+    },
+    "1kwhN8vubXickqnnNo5HLwm4231kVBhsu": {
+      "slug": "shxxd-hplc-fingerprint-qmarker",
+      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
+      "source_pdf": "10ce32f1Bioction.pdf",
+      "date": "2026-06-29"
+    },
+    "12OoVk9GOr_PO4qTHhcW5ai4IsiHLVLKw": {
+      "slug": "centipeda-minima-qmarker-chemometrics",
+      "title": "ケモメトリクス・ネットワーク薬理・分子ドッキングに基づく漢方のQ-marker探索 — 鵝不食草(Centipeda minima)を例として",
+      "source_pdf": "b8283069Phytochemical_Analysis__2022__Liu__Discovery_of_potential_Q_marker_of_traditional_Chinese_medicine_based_on_chemical.pdf",
+      "date": "2026-06-29"
+    },
+    "1jUjpHr0E6Hg3C-ynvMujkG33H1iMEBlg": {
+      "slug": "ssyx-linear-substitution-qmarker",
+      "title": "線形置換法による多成分定量に基づく参松養心カプセル(SSYX)のQ-marker解明",
+      "source_pdf": "06d831481s2.0S0944711325000212main.pdf",
+      "date": "2026-06-29"
+    },
+    "1X6ZWzuZj_DnhVH3fwZ-hcllUjNCFhOXY": {
+      "slug": "cqcqd-multistrategy-qmarker-pancreatitis",
+      "title": "柴芩承気湯(CQCQD)の品質管理とQ-marker選定のための多戦略プラットフォーム",
+      "source_pdf": "426a37c41s2.0S0944711321000672main.pdf",
+      "date": "2026-06-29"
+    },
+    "115AyJtyMvNkk40s2XlT7P6g92pl-wEle": {
+      "slug": "fcg-sugarfree-fingerprint-qams",
+      "title": "無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価",
+      "source_pdf": "45f6735a1s2.0S0731708526001597main.pdf",
+      "date": "2026-06-29"
+    },
+    "1pCE4Q6tvwEXtXkpQD--8FOc-jiLV36mt": {
+      "slug": "mlstp-multistrategy-qmarker-qams",
+      "title": "脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築",
+      "source_pdf": "5108ffac1s2.0S0731708524001109main.pdf",
+      "date": "2026-06-29"
+    },
+    "1vElx34vZ7SOqu0QDKrju2pDfIsdy1d6M": {
+      "slug": "zqfz-ftia-bes-fingerprint-efficacy",
+      "title": "全波長HPLC指紋＋二元評価系とケモメトリクスによる生薬の品質−薬効管理 — 貞芪扶正製剤(ZQFZ)",
+      "source_pdf": "d1d99c2e1s2.0S0021967325007435main.pdf",
+      "date": "2026-06-29"
+    },
+    "1L3fmJIUmh5H_vRONM-FApUJKYBZA7Aeg": {
+      "slug": "sh-rsqfm-fivewavelength-antioxidant",
+      "title": "HPLC比率定量指紋とスペクトル量子指紋・抗酸化活性を統合した生薬品質管理体系 — 豨薟草(Siegesbeckiae Herba)を例として",
+      "source_pdf": "cd3371631s2.0S0021967325006570main.pdf",
+      "date": "2026-06-29"
+    },
+    "1sESZkixdIfXJJ6DEiVPYrHECwdqiF5FL": {
+      "slug": "agnhp-deeplearning-nir-qc",
+      "title": "生物活性成分のスクリーニングと深層学習による安宮牛黄丸(AGNHP)の品質管理",
+      "source_pdf": "93aa44941s2.0S0378874125007822main.pdf",
+      "date": "2026-06-29"
+    },
+    "1InIz4X1KyGprRJFJn1vmzb5IWVjGvoaz": {
+      "slug": "sjg-multidim-network-qmarker",
+      "title": "多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として",
+      "source_pdf": "de71c6a81s2.0S0378874121005043main.pdf",
+      "date": "2026-06-29"
+    },
+    "1NQRe6pr2kMCjEhXCyjpKw64q4qn4ZHAX": {
+      "slug": "clt-fingerprint-ieqfm-fusion",
+      "title": "指紋技術とスペクトル定量予測に基づく漢方複方の総合品質解析戦略 — 複方甘草片(CLT)を例として",
+      "source_pdf": "b25667141s2.0S003991402500147Xmain.pdf",
+      "date": "2026-06-29"
     }
   }
 }
