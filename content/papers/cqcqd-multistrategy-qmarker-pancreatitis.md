@@ -1,6 +1,7 @@
 ---
 title: 柴芩承気湯(CQCQD)の品質管理とQ-marker選定のための多戦略プラットフォーム
 slug: cqcqd-multistrategy-qmarker-pancreatitis
+doi: https://doi.org/10.1016/j.phymed.2021.153525
 source_pdf: 1-s2.0-S0944711321000672-main.pdf
 level: practitioner
 date: 2026-06-29

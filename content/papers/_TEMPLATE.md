@@ -2,8 +2,7 @@
 title: 論文の日本語タイトル（原題の和訳）
 slug: 任意-英数字のファイル名（省略時は source_pdf から自動生成）
 source_pdf: example.pdf
-drive_file_id: DriveのファイルID
-drive_url: https://drive.google.com/file/d/.../view
+doi: https://doi.org/10.xxxx/xxxxx   ← 原文へのリンク（論文ページに「原文 (DOI)」として表示）
 level: practitioner
 date: 2026-06-28
 tags: [漢方, 生薬, QC]

@@ -1,6 +1,7 @@
 ---
 title: 脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築
 slug: mlstp-multistrategy-qmarker-qams
+doi: https://doi.org/10.1016/j.jpba.2024.116070
 source_pdf: 1-s2.0-S0731708524001109-main.pdf
 level: practitioner
 date: 2026-06-29

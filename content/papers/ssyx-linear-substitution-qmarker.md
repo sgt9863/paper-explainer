@@ -1,6 +1,7 @@
 ---
 title: 線形置換法による多成分定量に基づく参松養心カプセル(SSYX)のQ-marker解明
 slug: ssyx-linear-substitution-qmarker
+doi: https://doi.org/10.1016/j.phymed.2025.156382
 source_pdf: 1-s2.0-S0944711325000212-main.pdf
 level: practitioner
 date: 2026-06-29

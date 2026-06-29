@@ -1,6 +1,7 @@
 ---
 title: 当帰建中湯（DGJZ）の指紋分析・多成分定量・UPLC-Q-TOF-MSによる総合的品質評価
 slug: dgjz-uplc-qtof-fingerprint
+doi: https://doi.org/10.1093/chromsci/bmae034
 source_pdf: bmae034.pdf
 drive_file_id: 1wJHf6YllbaYGnKBJ0sNzK3VG1gvpdSp9
 drive_url: https://drive.google.com/file/d/1wJHf6YllbaYGnKBJ0sNzK3VG1gvpdSp9/view

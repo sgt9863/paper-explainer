@@ -1,6 +1,7 @@
 ---
 title: 統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定
 slug: shxxd-hplc-fingerprint-qmarker
+doi: https://doi.org/10.1002/bmc.70477
 source_pdf: Biomedical_Chromatography_2026_Fu_SHXXD.pdf
 level: practitioner
 date: 2026-06-29

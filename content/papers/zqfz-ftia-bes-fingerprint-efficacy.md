@@ -1,6 +1,7 @@
 ---
 title: 全波長HPLC指紋＋二元評価系とケモメトリクスによる生薬の品質−薬効管理 — 貞芪扶正製剤(ZQFZ)
 slug: zqfz-ftia-bes-fingerprint-efficacy
+doi: https://doi.org/10.1016/j.chroma.2025.466399
 source_pdf: 1-s2.0-S0021967325007435-main.pdf
 level: practitioner
 date: 2026-06-29

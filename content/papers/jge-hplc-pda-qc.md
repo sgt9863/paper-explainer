@@ -1,6 +1,7 @@
 ---
 title: 漢方処方「左帰飲（JGE）」の品質管理を目的としたHPLC–PDA法の開発とバリデーション：9種の指標成分の同時分析
 slug: jge-hplc-pda-qc
+doi: https://doi.org/10.3390/ph18040481
 source_pdf: pharmaceuticals-18-00481-v2.pdf
 drive_file_id: 1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz
 drive_url: https://drive.google.com/file/d/1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz/view

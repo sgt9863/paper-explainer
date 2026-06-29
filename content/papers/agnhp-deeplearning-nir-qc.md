@@ -1,6 +1,7 @@
 ---
 title: 生物活性成分のスクリーニングと深層学習による安宮牛黄丸(AGNHP)の品質管理
 slug: agnhp-deeplearning-nir-qc
+doi: https://doi.org/10.1016/j.jep.2025.120095
 source_pdf: 1-s2.0-S0378874125007822-main.pdf
 level: practitioner
 date: 2026-06-29

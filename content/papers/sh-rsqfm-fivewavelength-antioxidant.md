@@ -1,6 +1,7 @@
 ---
 title: HPLC比率定量指紋とスペクトル量子指紋・抗酸化活性を統合した生薬品質管理体系 — 豨薟草(Siegesbeckiae Herba)を例として
 slug: sh-rsqfm-fivewavelength-antioxidant
+doi: https://doi.org/10.1016/j.chroma.2025.466313
 source_pdf: 1-s2.0-S0021967325006570-main.pdf
 level: practitioner
 date: 2026-06-29

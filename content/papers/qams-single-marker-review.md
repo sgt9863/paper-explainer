@@ -1,6 +1,7 @@
 ---
 title: 単一マーカーによる多成分定量（QAMS）— 漢方・生薬の内部品質を評価する合理的手法（レビュー）
 slug: qams-single-marker-review
+doi: https://doi.org/10.1016/j.imr.2017.01.008
 source_pdf: 1-s2.0-S2213422016301421-main.pdf
 drive_file_id: 1-UKpyyJsOfIfouPZ1PhF9i9Lb8hRQTES
 drive_url: https://drive.google.com/file/d/1-UKpyyJsOfIfouPZ1PhF9i9Lb8hRQTES/view

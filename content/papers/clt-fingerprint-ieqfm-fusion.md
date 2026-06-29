@@ -1,6 +1,7 @@
 ---
 title: 指紋技術とスペクトル定量予測に基づく漢方複方の総合品質解析戦略 — 複方甘草片(CLT)を例として
 slug: clt-fingerprint-ieqfm-fusion
+doi: https://doi.org/10.1016/j.talanta.2025.127661
 source_pdf: 1-s2.0-S003991402500147X-main.pdf
 level: practitioner
 date: 2026-06-29

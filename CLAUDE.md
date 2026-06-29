@@ -65,6 +65,10 @@ python3 -m http.server 8000 --directory docs
   `digest_tagline` / `digest_stats`（`ラベル|値`配列・先頭に雑誌IF）/ `digest_points` から生成。
   配列項目に ASCII カンマは使わない（front matter 配列の区切りのため。読点「、」「／」はOK）。
 - `level` は解説レベルの**指示用メタ**（書きぶり調整）であり、ページ・一覧には**表示しない**。
+- front matter の `doi`（`https://doi.org/...` 推奨）を各論文ページの **原文リンク**（「原文 (DOI)」）として表示する。
+- 各論文に **既読トグル**（`docs/assets/read.js`）が付く。既読状態はブラウザの localStorage 保存（リポジトリには持たない）。
+  論文ページを開くと自動で既読化、一覧では「未読のみ表示」での絞り込みと既読件数表示ができる。一覧項目・論文ページの
+  `data-slug` と `.read-toggle` を read.js が拾う仕組み。
 - 各論文ページには **AI質問サイドバー**（`docs/assets/chat.js`）が付く。論文本文を JSON で埋め込み、
   ブラウザから直接 Anthropic API を呼ぶ（APIキーは利用者の localStorage 保存・リポジトリには持たない）。
   挙動は `config.json` の `chat`（`enabled`/`default_model`/`models`/`max_tokens`）で制御。一覧ページには付けない。

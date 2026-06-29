@@ -1,6 +1,7 @@
 ---
 title: 無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価
 slug: fcg-sugarfree-fingerprint-qams
+doi: https://doi.org/10.1016/j.jpba.2026.117491
 source_pdf: 1-s2.0-S0731708526001597-main.pdf
 level: practitioner
 date: 2026-06-29

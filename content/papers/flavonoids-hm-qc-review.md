@@ -1,6 +1,7 @@
 ---
 title: 生薬・ハーブ医薬品の品質管理におけるマーカーとしてのフラボノイド — 現在のトレンドと分析的展望（総説）
 slug: flavonoids-hm-qc-review
+doi: https://doi.org/10.3390/separations12110289
 source_pdf: separations-12-00289.pdf
 drive_file_id: 16-XjxAlqE1vmKSPUtqxg5OqUST0KkAY3
 drive_url: https://drive.google.com/file/d/16-XjxAlqE1vmKSPUtqxg5OqUST0KkAY3/view

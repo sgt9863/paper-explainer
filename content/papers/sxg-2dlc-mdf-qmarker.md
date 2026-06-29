@@ -1,6 +1,7 @@
 ---
 title: 直交HILIC×RP二次元LC/MSと質量欠損フィルタによる参消顆粒(SXG)の網羅的化学プロファイルとQ-marker探索
 slug: sxg-2dlc-mdf-qmarker
+doi: https://doi.org/10.1007/s00216-025-06180-9
 source_pdf: s00216-025-06180-9.pdf
 level: practitioner
 date: 2026-06-29

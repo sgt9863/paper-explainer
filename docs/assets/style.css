@@ -208,6 +208,51 @@ figcaption {
 .empty { color: var(--muted); padding: 40px 0; }
 .back { margin-top: 2.5em; }
 
+/* ------- 既読（read.js） ------- */
+.unread-only {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  cursor: pointer;
+}
+.unread-only input { cursor: pointer; }
+.read-summary { color: var(--muted); }
+
+.read-toggle {
+  background: #f0f3f6;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 2px 12px;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  cursor: pointer;
+  color: var(--fg);
+  white-space: nowrap;
+}
+.read-toggle:hover { border-color: var(--accent); }
+.read-toggle.is-read {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: var(--accent-soft);
+}
+
+/* 一覧: トグルは右上に配置、既読はトーンダウン */
+.index-item { position: relative; padding-right: 110px; }
+.index-item > .read-toggle { position: absolute; top: 16px; right: 0; }
+.index-item.is-read .index-link { color: var(--muted); }
+.index-item.is-read { opacity: 0.62; }
+.index-item.is-read:hover { opacity: 1; }
+
+.paper-meta .read-toggle { vertical-align: baseline; }
+
+@media (max-width: 560px) {
+  .index-item { padding-right: 0; }
+  .index-item > .read-toggle { position: static; display: inline-block; margin-bottom: 8px; }
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   text-align: center;

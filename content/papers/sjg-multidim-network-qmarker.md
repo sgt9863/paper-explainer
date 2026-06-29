@@ -1,6 +1,7 @@
 ---
 title: 多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として
 slug: sjg-multidim-network-qmarker
+doi: https://doi.org/10.1016/j.jep.2021.114277
 source_pdf: 1-s2.0-S0378874121005043-main.pdf
 level: practitioner
 date: 2026-06-29
