@@ -66,10 +66,11 @@ python3 -m http.server 8000 --directory docs
   配列項目に ASCII カンマは使わない（front matter 配列の区切りのため。読点「、」「／」はOK）。
 - `level` は解説レベルの**指示用メタ**（書きぶり調整）であり、ページ・一覧には**表示しない**。
 - front matter の `doi`（`https://doi.org/...` 推奨）を各論文ページの **原文リンク**（「原文 (DOI)」）として表示する。
-- 各論文に **既読トグル**（`docs/assets/read.js`）と **お気に入り★トグル**（`docs/assets/fav.js`）が付く。
-  状態はブラウザの localStorage 保存（リポジトリには持たない）。既読は論文ページを開くと自動で付き、お気に入りは手動のみ。
-  一覧では「未読のみ表示」「★お気に入りのみ」での絞り込みと、既読件数・★件数の表示ができる。一覧項目・論文ページの
-  `data-slug` と `.read-toggle` / `.fav-toggle` を各スクリプトが拾う仕組み。
+- 各論文に **読書ステータス**（`docs/assets/read.js`。未読 / 読み途中 / 既読 の3状態を `<select class="status-select">` で手動設定）と
+  **お気に入り★トグル**（`docs/assets/fav.js`）が付く。状態はブラウザの localStorage 保存（リポジトリには持たない。どちらも手動。
+  ページを開いても自動では既読にしない）。一覧は **左サイドバー**（`index.js`）でカテゴリ（タグ）・ステータス（すべて/未読/読み途中/既読）・
+  ★お気に入りのみ・キーワード検索を合成して絞り込み、既読/読み途中/★の件数を表示する。各項目・論文ページの
+  `data-slug` と `.status-select` / `.fav-toggle` を各スクリプトが拾う仕組み。read.js は旧 `read.v1`(boolean) を `read` として移行する。
 - 各論文ページには **AI質問サイドバー**（`docs/assets/chat.js`）が付く。論文本文を JSON で埋め込み、
   ブラウザから直接 Anthropic API を呼ぶ（APIキーは利用者の localStorage 保存・リポジトリには持たない）。
   挙動は `config.json` の `chat`（`enabled`/`default_model`/`models`/`max_tokens`）で制御。一覧ページには付けない。

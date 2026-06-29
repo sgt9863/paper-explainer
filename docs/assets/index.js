@@ -1,7 +1,8 @@
-/* 一覧ページの検索＋タグ絞り込み＋既読フィルタ（依存なし）。
-   - 検索ボックス: タイトル・要約・タグ・ファイル名を部分一致（AND: スペース区切りで複数語）。
-   - タグチップ: クリックでトグル。複数選択は OR（いずれかのタグを含む）。検索語とは AND。
-   - 未読のみ表示: 既読（read.js / localStorage）を除外。既読件数も表示。 */
+/* 一覧ページの絞り込み（依存なし）。左サイドバーの各フィルタを合成して適用する。
+   - キーワード検索: タイトル・要約・タグ・ファイル名を部分一致（AND: スペース区切りで複数語）。
+   - ステータス: すべて / 未読 / 読み途中 / 既読（read.js / localStorage）。単一選択。
+   - お気に入り: ★のみ（fav.js / localStorage）。
+   - カテゴリ（タグ）: クリックでトグル。複数選択は OR。検索・ステータス・★とは AND。 */
 (function () {
   "use strict";
   var search = document.getElementById("indexSearch");
@@ -9,24 +10,31 @@
   if (!search || !list) return;
   var items = Array.prototype.slice.call(list.querySelectorAll(".index-item"));
   var tagButtons = Array.prototype.slice.call(document.querySelectorAll(".tagfilter"));
+  var statusRadios = Array.prototype.slice.call(document.querySelectorAll('input[name="statusf"]'));
+  var favOnly = document.getElementById("favOnly");
   var noResult = document.getElementById("noResult");
   var shownCount = document.getElementById("shownCount");
   var readCount = document.getElementById("readCount");
+  var readingCount = document.getElementById("readingCount");
   var favCount = document.getElementById("favCount");
-  var unreadOnly = document.getElementById("unreadOnly");
-  var favOnly = document.getElementById("favOnly");
   var activeTags = [];
 
-  function isRead(slug) {
-    return !!(window.PaperRead && slug && window.PaperRead.isRead(slug));
+  function statusOf(slug) {
+    return (window.PaperRead && slug) ? window.PaperRead.getStatus(slug) : "unread";
   }
   function isFav(slug) {
     return !!(window.PaperFav && slug && window.PaperFav.isFav(slug));
   }
+  function selectedStatus() {
+    for (var i = 0; i < statusRadios.length; i++) {
+      if (statusRadios[i].checked) return statusRadios[i].value;
+    }
+    return "all";
+  }
 
   function apply() {
     var terms = search.value.toLowerCase().split(/\s+/).filter(Boolean);
-    var onlyUnread = unreadOnly && unreadOnly.checked;
+    var wantStatus = selectedStatus();
     var onlyFav = favOnly && favOnly.checked;
     var shown = 0;
     items.forEach(function (li) {
@@ -35,9 +43,9 @@
       var tags = (li.getAttribute("data-tags") || "").split(",").filter(Boolean);
       var okText = terms.every(function (t) { return blob.indexOf(t) !== -1; });
       var okTags = activeTags.length === 0 || activeTags.some(function (t) { return tags.indexOf(t) !== -1; });
-      var okRead = !onlyUnread || !isRead(slug);
+      var okStatus = wantStatus === "all" || statusOf(slug) === wantStatus;
       var okFav = !onlyFav || isFav(slug);
-      var show = okText && okTags && okRead && okFav;
+      var show = okText && okTags && okStatus && okFav;
       li.hidden = !show;
       if (show) shown++;
     });
@@ -45,16 +53,17 @@
     if (noResult) noResult.hidden = shown !== 0;
   }
 
-  function updateReadCount() {
-    if (readCount && window.PaperRead) readCount.textContent = window.PaperRead.count();
-  }
-  function updateFavCount() {
+  function updateCounts() {
+    if (window.PaperRead) {
+      if (readCount) readCount.textContent = window.PaperRead.count("read");
+      if (readingCount) readingCount.textContent = window.PaperRead.count("reading");
+    }
     if (favCount && window.PaperFav) favCount.textContent = window.PaperFav.count();
   }
 
   search.addEventListener("input", apply);
-  if (unreadOnly) unreadOnly.addEventListener("change", apply);
   if (favOnly) favOnly.addEventListener("change", apply);
+  statusRadios.forEach(function (r) { r.addEventListener("change", apply); });
   tagButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
       var tag = btn.getAttribute("data-tag");
@@ -65,17 +74,10 @@
     });
   });
 
-  // 既読/お気に入りトグルの変更に追従（件数更新＋絞り込み時は再フィルタ）
-  document.addEventListener("readchange", function () {
-    updateReadCount();
-    apply();
-  });
-  document.addEventListener("favchange", function () {
-    updateFavCount();
-    apply();
-  });
+  // ステータス/お気に入りの変更に追従（件数更新＋絞り込み中は再フィルタ）
+  document.addEventListener("statuschange", function () { updateCounts(); apply(); });
+  document.addEventListener("favchange", function () { updateCounts(); apply(); });
 
-  updateReadCount();
-  updateFavCount();
+  updateCounts();
   apply();
 })();

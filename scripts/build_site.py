@@ -349,6 +349,26 @@ def render_digest(meta):
     return "".join(parts)
 
 
+def status_select(slug):
+    """読書ステータス（未読/読み途中/既読）の select。read.js が値を同期・保存する。"""
+    s = html.escape(slug)
+    return (
+        f'<select class="status-select" data-slug="{s}" aria-label="読書ステータス">'
+        f'<option value="unread">未読</option>'
+        f'<option value="reading">読み途中</option>'
+        f'<option value="read">既読</option>'
+        f'</select>'
+    )
+
+
+def fav_toggle(slug):
+    s = html.escape(slug)
+    return (
+        f'<button type="button" class="fav-toggle" data-slug="{s}" '
+        f'aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button>'
+    )
+
+
 # --------------------------------------------------------------------------- #
 # メイン
 # --------------------------------------------------------------------------- #
@@ -414,11 +434,8 @@ def main():
         if p.get("source_pdf"):
             meta_html += f' &middot; <span class="src">{html.escape(p["source_pdf"])}</span>'
         meta_html += (
-            f' &middot; <button type="button" class="fav-toggle" '
-            f'data-slug="{html.escape(p["slug"])}" aria-pressed="false" '
-            f'aria-label="お気に入り" title="お気に入り">☆</button>'
-            f' <button type="button" class="read-toggle" '
-            f'data-slug="{html.escape(p["slug"])}" aria-pressed="false">既読にする</button>'
+            f' &middot; {fav_toggle(p["slug"])}'
+            f' <span class="status-control">状況: {status_select(p["slug"])}</span>'
         )
         meta_html += "</div>"
 
@@ -505,11 +522,9 @@ def main():
                 f'<li class="index-item" data-search="{html.escape(blob)}" '
                 f'data-slug="{html.escape(p["slug"])}" '
                 f'data-tags="{html.escape(",".join(tags))}">'
-                f'<button type="button" class="fav-toggle" data-slug="{html.escape(p["slug"])}" '
-                f'aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button>'
-                f'<button type="button" class="read-toggle" data-slug="{html.escape(p["slug"])}" '
-                f'aria-pressed="false">既読にする</button>'
+                f'{fav_toggle(p["slug"])}'
                 f'<a class="index-link" href="papers/{p["slug"]}.html">{html.escape(p.get("title", p["slug"]))}</a>'
+                f'<span class="index-status">{status_select(p["slug"])}</span>'
                 f'{meta}'
                 + (f'<p class="index-summary">{html.escape(summary)}</p>' if summary else "")
                 + (f'<div class="index-tags">{tag_chips}</div>' if tags else "")
@@ -520,19 +535,40 @@ def main():
             f'<button type="button" class="tagfilter" data-tag="{html.escape(t)}">{html.escape(t)}</button>'
             for t in all_tags
         )
-        controls = (
-            '<div class="index-controls">'
-            '<input type="search" id="indexSearch" placeholder="キーワードで絞り込み（タイトル・要約・タグ・ファイル名）" aria-label="検索">'
-            '<label class="fav-only"><input type="checkbox" id="favOnly"> ★お気に入りのみ</label>'
-            '<label class="unread-only"><input type="checkbox" id="unreadOnly"> 未読のみ表示</label>'
-            + (f'<div class="tagfilters" id="tagFilters">{tagfilters}</div>' if all_tags else "")
-            + "</div>"
+        count_line = (
+            f'<p class="count"><span id="shownCount">{len(papers)}</span> / {len(papers)} 件'
+            f'<span class="read-summary"> ・ 既読 <span id="readCount">0</span>'
+            f' ・ 読み途中 <span id="readingCount">0</span>'
+            f' ・ ★ <span id="favCount">0</span></span></p>'
         )
-        list_html = (
-            controls
+        sidebar = (
+            '<aside class="index-sidebar">'
+            '<input type="search" id="indexSearch" placeholder="キーワード検索" aria-label="検索">'
+            '<div class="filter-group"><div class="filter-title">ステータス</div>'
+            '<div class="statusfilter" id="statusFilter" role="radiogroup">'
+            '<label><input type="radio" name="statusf" value="all" checked> すべて</label>'
+            '<label><input type="radio" name="statusf" value="unread"> 未読</label>'
+            '<label><input type="radio" name="statusf" value="reading"> 読み途中</label>'
+            '<label><input type="radio" name="statusf" value="read"> 既読</label>'
+            '</div></div>'
+            '<div class="filter-group">'
+            '<label class="fav-only"><input type="checkbox" id="favOnly"> ★お気に入りのみ</label>'
+            '</div>'
+            + (
+                '<div class="filter-group"><div class="filter-title">カテゴリ</div>'
+                f'<div class="tagfilters" id="tagFilters">{tagfilters}</div></div>'
+                if all_tags else ""
+            )
+            + '</aside>'
+        )
+        main_col = (
+            '<div class="index-main">'
+            + count_line
             + '<ul class="index-list" id="indexList">' + "".join(items) + "</ul>"
             + '<p class="noresult" id="noResult" hidden>該当する解説がありません。</p>'
+            + '</div>'
         )
+        list_html = '<div class="index-layout">' + sidebar + main_col + '</div>'
         index_scripts = f'<script src="{"."}/assets/index.js" defer></script>'
     else:
         list_html = '<p class="empty">まだ解説はありません。夜間パイプラインが新着PDFを処理すると、ここに一覧が表示されます。</p>'
@@ -540,9 +576,6 @@ def main():
     index_body = (
         f'<h1>{html.escape(site_title)}</h1>'
         f'<p class="lead">{html.escape(config.get("site_description", ""))}</p>'
-        f'<p class="count"><span id="shownCount">{len(papers)}</span> / {len(papers)} 件の解説'
-        f'<span class="read-summary"> ・ 既読 <span id="readCount">0</span> 件'
-        f' ・ ★ <span id="favCount">0</span> 件</span></p>'
         f'{list_html}'
     )
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:

@@ -208,50 +208,76 @@ figcaption {
 .empty { color: var(--muted); padding: 40px 0; }
 .back { margin-top: 2.5em; }
 
-/* ------- 既読（read.js） ------- */
-.unread-only {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-top: 10px;
-  font-size: 0.85rem;
-  color: var(--muted);
-  cursor: pointer;
-}
-.unread-only input { cursor: pointer; }
 .read-summary { color: var(--muted); }
 
-.read-toggle {
-  background: #f0f3f6;
+/* ------- 一覧: 左サイドバー・レイアウト ------- */
+.index-layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+.index-sidebar {
+  flex: 0 0 220px;
+  position: sticky;
+  top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.index-main { flex: 1 1 auto; min-width: 0; }
+.index-main .count { margin-top: 0; }
+
+.index-sidebar #indexSearch {
+  width: 100%;
+  padding: 9px 11px;
+  font-size: 0.9rem;
   border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 2px 12px;
-  font-size: 0.78rem;
-  line-height: 1.6;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+.filter-group { border-top: 1px solid var(--border); padding-top: 12px; }
+.filter-title {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+.statusfilter { display: flex; flex-direction: column; gap: 6px; }
+.statusfilter label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.9rem;
   cursor: pointer;
+}
+.statusfilter input { cursor: pointer; }
+.fav-only { display: flex; align-items: center; gap: 7px; font-size: 0.9rem; cursor: pointer; }
+.fav-only input { cursor: pointer; }
+.index-sidebar .tagfilters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; }
+
+/* ------- ステータス select（read.js） ------- */
+.status-select {
+  font-size: 0.8rem;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #fff;
   color: var(--fg);
-  white-space: nowrap;
+  cursor: pointer;
 }
-.read-toggle:hover { border-color: var(--accent); }
-.read-toggle.is-read {
-  background: var(--accent-soft);
-  color: var(--accent);
-  border-color: var(--accent-soft);
-}
+.index-status { position: absolute; top: 16px; right: 0; }
+.status-control { white-space: nowrap; }
 
-/* 一覧: トグルは右上に配置、既読はトーンダウン */
-.index-item { position: relative; padding-right: 110px; }
-.index-item > .read-toggle { position: absolute; top: 16px; right: 0; }
-.index-item.is-read .index-link { color: var(--muted); }
-.index-item.is-read { opacity: 0.62; }
-.index-item.is-read:hover { opacity: 1; }
-
-.paper-meta .read-toggle { vertical-align: baseline; }
+/* 一覧項目: ステータスに応じた見え方 */
+.index-item { position: relative; padding-right: 96px; }
+.index-item.status-read { opacity: 0.6; }
+.index-item.status-read:hover { opacity: 1; }
+.index-item.status-read .index-link { color: var(--muted); }
+.index-item.status-reading { border-left: 3px solid var(--accent); padding-left: 10px; margin-left: -13px; }
 
 /* ------- お気に入り（fav.js） ------- */
-.fav-only { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 0.85rem; color: var(--muted); cursor: pointer; }
-.fav-only input { cursor: pointer; }
-
 .fav-toggle {
   background: none;
   border: none;
@@ -263,14 +289,23 @@ figcaption {
 }
 .fav-toggle:hover { color: #f1c40f; }
 .fav-toggle.is-fav { color: #f1c40f; }
-
-/* 一覧: ★はタイトル先頭に置く */
 .index-item > .fav-toggle { vertical-align: middle; margin-right: 4px; }
 .paper-meta .fav-toggle { font-size: 1.05rem; vertical-align: baseline; }
 
-@media (max-width: 560px) {
+@media (max-width: 760px) {
+  .index-layout { flex-direction: column; }
+  .index-sidebar {
+    flex: 1 1 auto;
+    position: static;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px 20px;
+  }
+  .filter-group { border-top: none; padding-top: 0; }
+  .index-sidebar #indexSearch { flex: 1 1 100%; }
   .index-item { padding-right: 0; }
-  .index-item > .read-toggle { position: static; display: inline-block; margin-bottom: 8px; }
+  .index-status { position: static; display: inline-block; margin-top: 6px; }
 }
 
 .site-footer {
