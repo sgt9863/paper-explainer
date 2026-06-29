@@ -12,16 +12,22 @@
   var noResult = document.getElementById("noResult");
   var shownCount = document.getElementById("shownCount");
   var readCount = document.getElementById("readCount");
+  var favCount = document.getElementById("favCount");
   var unreadOnly = document.getElementById("unreadOnly");
+  var favOnly = document.getElementById("favOnly");
   var activeTags = [];
 
   function isRead(slug) {
     return !!(window.PaperRead && slug && window.PaperRead.isRead(slug));
   }
+  function isFav(slug) {
+    return !!(window.PaperFav && slug && window.PaperFav.isFav(slug));
+  }
 
   function apply() {
     var terms = search.value.toLowerCase().split(/\s+/).filter(Boolean);
     var onlyUnread = unreadOnly && unreadOnly.checked;
+    var onlyFav = favOnly && favOnly.checked;
     var shown = 0;
     items.forEach(function (li) {
       var blob = li.getAttribute("data-search") || "";
@@ -30,7 +36,8 @@
       var okText = terms.every(function (t) { return blob.indexOf(t) !== -1; });
       var okTags = activeTags.length === 0 || activeTags.some(function (t) { return tags.indexOf(t) !== -1; });
       var okRead = !onlyUnread || !isRead(slug);
-      var show = okText && okTags && okRead;
+      var okFav = !onlyFav || isFav(slug);
+      var show = okText && okTags && okRead && okFav;
       li.hidden = !show;
       if (show) shown++;
     });
@@ -41,9 +48,13 @@
   function updateReadCount() {
     if (readCount && window.PaperRead) readCount.textContent = window.PaperRead.count();
   }
+  function updateFavCount() {
+    if (favCount && window.PaperFav) favCount.textContent = window.PaperFav.count();
+  }
 
   search.addEventListener("input", apply);
   if (unreadOnly) unreadOnly.addEventListener("change", apply);
+  if (favOnly) favOnly.addEventListener("change", apply);
   tagButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
       var tag = btn.getAttribute("data-tag");
@@ -54,12 +65,17 @@
     });
   });
 
-  // 既読トグルの変更に追従（件数更新＋未読のみ時は再フィルタ）
+  // 既読/お気に入りトグルの変更に追従（件数更新＋絞り込み時は再フィルタ）
   document.addEventListener("readchange", function () {
     updateReadCount();
     apply();
   });
+  document.addEventListener("favchange", function () {
+    updateFavCount();
+    apply();
+  });
 
   updateReadCount();
+  updateFavCount();
   apply();
 })();

@@ -248,6 +248,26 @@ figcaption {
 
 .paper-meta .read-toggle { vertical-align: baseline; }
 
+/* ------- お気に入り（fav.js） ------- */
+.fav-only { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 0.85rem; color: var(--muted); cursor: pointer; }
+.fav-only input { cursor: pointer; }
+
+.fav-toggle {
+  background: none;
+  border: none;
+  padding: 0 4px;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #c9ced4;
+}
+.fav-toggle:hover { color: #f1c40f; }
+.fav-toggle.is-fav { color: #f1c40f; }
+
+/* 一覧: ★はタイトル先頭に置く */
+.index-item > .fav-toggle { vertical-align: middle; margin-right: 4px; }
+.paper-meta .fav-toggle { font-size: 1.05rem; vertical-align: baseline; }
+
 @media (max-width: 560px) {
   .index-item { padding-right: 0; }
   .index-item > .read-toggle { position: static; display: inline-block; margin-bottom: 8px; }

@@ -293,6 +293,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
 </footer>
 {chat_scripts}
 <script src="{rel_root}/assets/read.js" defer></script>
+<script src="{rel_root}/assets/fav.js" defer></script>
 {extra_scripts}
 </body>
 </html>
@@ -413,7 +414,10 @@ def main():
         if p.get("source_pdf"):
             meta_html += f' &middot; <span class="src">{html.escape(p["source_pdf"])}</span>'
         meta_html += (
-            f' &middot; <button type="button" class="read-toggle" '
+            f' &middot; <button type="button" class="fav-toggle" '
+            f'data-slug="{html.escape(p["slug"])}" aria-pressed="false" '
+            f'aria-label="お気に入り" title="お気に入り">☆</button>'
+            f' <button type="button" class="read-toggle" '
             f'data-slug="{html.escape(p["slug"])}" aria-pressed="false">既読にする</button>'
         )
         meta_html += "</div>"
@@ -501,6 +505,8 @@ def main():
                 f'<li class="index-item" data-search="{html.escape(blob)}" '
                 f'data-slug="{html.escape(p["slug"])}" '
                 f'data-tags="{html.escape(",".join(tags))}">'
+                f'<button type="button" class="fav-toggle" data-slug="{html.escape(p["slug"])}" '
+                f'aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button>'
                 f'<button type="button" class="read-toggle" data-slug="{html.escape(p["slug"])}" '
                 f'aria-pressed="false">既読にする</button>'
                 f'<a class="index-link" href="papers/{p["slug"]}.html">{html.escape(p.get("title", p["slug"]))}</a>'
@@ -517,6 +523,7 @@ def main():
         controls = (
             '<div class="index-controls">'
             '<input type="search" id="indexSearch" placeholder="キーワードで絞り込み（タイトル・要約・タグ・ファイル名）" aria-label="検索">'
+            '<label class="fav-only"><input type="checkbox" id="favOnly"> ★お気に入りのみ</label>'
             '<label class="unread-only"><input type="checkbox" id="unreadOnly"> 未読のみ表示</label>'
             + (f'<div class="tagfilters" id="tagFilters">{tagfilters}</div>' if all_tags else "")
             + "</div>"
@@ -534,7 +541,8 @@ def main():
         f'<h1>{html.escape(site_title)}</h1>'
         f'<p class="lead">{html.escape(config.get("site_description", ""))}</p>'
         f'<p class="count"><span id="shownCount">{len(papers)}</span> / {len(papers)} 件の解説'
-        f'<span class="read-summary"> ・ 既読 <span id="readCount">0</span> 件</span></p>'
+        f'<span class="read-summary"> ・ 既読 <span id="readCount">0</span> 件'
+        f' ・ ★ <span id="favCount">0</span> 件</span></p>'
         f'{list_html}'
     )
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
