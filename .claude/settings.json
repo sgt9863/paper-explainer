@@ -1,0 +1,3 @@
+{
+  "enabledMcpjsonServers": ["openalex", "semantic-scholar", "arxiv", "paper-search"]
+}

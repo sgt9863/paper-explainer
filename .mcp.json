@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "openalex": {
+      "command": "npx",
+      "args": ["-y", "openalex-research-mcp"],
+      "env": { "OPENALEX_EMAIL": "sgt9863@gmail.com" }
+    },
+    "semantic-scholar": {
+      "command": "npx",
+      "args": ["-y", "aira-semanticscholar"]
+    },
+    "arxiv": {
+      "command": "uvx",
+      "args": ["arxiv-mcp-server", "--storage-path", "./.arxiv-papers"]
+    },
+    "paper-search": {
+      "command": "uvx",
+      "args": ["--from", "paper-search-mcp", "python", "-m", "paper_search_mcp.server"],
+      "env": { "PAPER_SEARCH_MCP_UNPAYWALL_EMAIL": "sgt9863@gmail.com" }
+    }
+  }
+}
