@@ -1,0 +1,5 @@
+# arxiv MCP のローカルキャッシュ
+.arxiv-papers/
+
+# OpenAI APIキーなどのローカル秘密情報（コミット禁止）
+.env.local
