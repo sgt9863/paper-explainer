@@ -85,3 +85,25 @@ python3 -m http.server 8000 --directory docs
 - `slug` は英数字・ハイフンのみ（日本語不可、一意）。
 - 原文に無い数値・結論を作らない（ハルシネーション防止）。読めない箇所は「原文参照」と明記。
 - 開発ブランチ: `claude/pdf-paper-analysis-workflow-xiw34s`。
+
+## ユーザーについて
+
+ユーザーは**非エンジニア**。専門用語は必要に応じてかみ砕いて補足し、コマンドやコード提示時は
+「何をするものか」を一言添える。git / GitHub / クラウド操作は具体的な手順を省略しない。
+ただし冗長になりすぎないこと（簡単な確認には短く答えてよい）。
+
+## Antigravity サブエージェント連携（コスト最適化）
+
+Gemini（Antigravity CLI / `agy`）をサブエージェントとして使い、Claude のトークンコストを削減できる。
+判断・設計は Claude、ファイル生成・テスト・スキャフォールディング・ウェブ検索は Gemini に委譲する。
+
+| コマンド | 用途 |
+|---------|------|
+| `/antigravity:setup` | AGY のインストール・認証確認 |
+| `/antigravity:delegate` | タスクを AGY に委譲 |
+| `/antigravity:review` | AGY によるクロスモデルレビュー |
+| `/antigravity:research` | AGY による深層調査（ウェブ検索） |
+| `/antigravity:cloud-run-debug` | Cloud Run ログ診断 |
+
+スクリプトは `.claude/scripts/antigravity/` に配置。利用には `agy` の導入が必要:
+`npm install -g @google/antigravity` → `agy auth login`。
