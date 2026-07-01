@@ -276,12 +276,35 @@ def chat_panel_html() -> str:
 """
 
 
-def page_template(title, body, site_title, rel_root=".", chat=None, extra_scripts="", og_image="", description=""):
+def page_template(title, body, site_title, rel_root=".", chat=None, extra_scripts="", og_image="", description="", enable_math=False):
     """chat = {"config": <chat config dict>, "paper": {title, content, slug}} を渡すと
-    AIチャットサイドバー付きの2カラムレイアウトで出力する。"""
+    AIチャットサイドバー付きの2カラムレイアウトで出力する。
+    enable_math=True で KaTeX(CDN・クライアント側) を読み込み $...$ / $$...$$ を数式レンダリングする。"""
     head_extra = ""
     chat_aside = ""
     chat_scripts = ""
+    math_head = ""
+    math_scripts = ""
+    if enable_math:
+        math_head = (
+            '\n<link rel="stylesheet" '
+            'href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" '
+            'integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" '
+            'crossorigin="anonymous">'
+        )
+        math_scripts = (
+            '<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" '
+            'integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" '
+            'crossorigin="anonymous"></script>\n'
+            '<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" '
+            'integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" '
+            'crossorigin="anonymous"></script>\n'
+            '<script>document.addEventListener("DOMContentLoaded",function(){'
+            'if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:['
+            '{left:"$$",right:"$$",display:true},{left:"\\\\[",right:"\\\\]",display:true},'
+            '{left:"$",right:"$",display:false},{left:"\\\\(",right:"\\\\)",display:false}],'
+            'throwOnError:false});}});</script>'
+        )
     main_open, main_close = "<main class=\"container\">", "</main>"
     if chat:
         main_open = '<div class="layout"><main class="container">'
@@ -312,7 +335,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
-{og}<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}
+{og}<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}{math_head}
 </head>
 <body>
 <header class="site-header">
@@ -327,6 +350,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
 {chat_scripts}
 <script src="{rel_root}/assets/read.js" defer></script>
 <script src="{rel_root}/assets/fav.js" defer></script>
+{math_scripts}
 {extra_scripts}
 </body>
 </html>
@@ -549,7 +573,7 @@ def main():
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(page_template(
                 p.get("title", p["slug"]), body, site_title, rel_root="..", chat=chat,
-                og_image=og_image, description=p.get("summary", ""),
+                og_image=og_image, description=p.get("summary", ""), enable_math=True,
             ))
 
     # 一覧ページ
