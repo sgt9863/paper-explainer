@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.phymed.2021.153525
 source_pdf: 1-s2.0-S0944711321000672-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2021
 tags: [漢方, 方剤, QC, 柴芩承気湯, Q-marker, UHPLC, ネットワーク, 急性膵炎]
 digest_tagline: 原料が薬局方適合でも臨床効果はQ-markerの「適正含量域」に依存する—指紋＋22成分定量＋膵炎モデルで実証
 digest_stats: [IF（2024）|7.9, 対象|柴芩承気湯(CQCQD), バッチ|10, 共通ピーク|22, Q-marker|8]

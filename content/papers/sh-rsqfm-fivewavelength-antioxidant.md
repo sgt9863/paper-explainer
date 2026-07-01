@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.chroma.2025.466313
 source_pdf: 1-s2.0-S0021967325006570-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2025
 tags: [漢方, 生薬, QC, 豨薟草, 指紋, HPLC, FTIR, 抗酸化, ケモメトリクス]
 digest_tagline: 5波長融合指紋＋比率定量指紋法(RSQFM)とHPLC・UV・FTIR融合・DPPH相関で豨薟草の品質を多次元評価
 digest_stats: [IF（2024）|3.8, 対象|豨薟草(SH), バッチ|22, 融合|HPLC＋UV＋FTIR, 定量|4成分]

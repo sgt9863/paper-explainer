@@ -7,6 +7,7 @@ drive_file_id: 1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz
 drive_url: https://drive.google.com/file/d/1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz/view
 level: practitioner
 date: 2026-06-28
+published: 2025
 tags: [漢方, 生薬, QC, HPLC, 左帰飲, バリデーション]
 digest_tagline: 6生薬からなる漢方処方「左帰飲」のQC用にHPLC–PDA同時定量法を開発・検証
 digest_stats: [IF（2024）|4.8, 手法|HPLC–PDA, マーカー|9成分, 直線性|r²≥0.9980, 回収率|96.4–107%, 精度|RSD<1.20%]

@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.chroma.2025.466399
 source_pdf: 1-s2.0-S0021967325007435-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2025
 tags: [漢方, 生薬, QC, 貞芪扶正, 指紋, HPLC, ELSD, ケモメトリクス, 免疫]
 digest_tagline: DADのλ-t立方体を全波長積算(FTIA)しELSD融合・二元評価系(BES)で品質と薬効を結ぶ貞芪扶正製剤のQC
 digest_stats: [IF（2024）|3.8, 対象|貞芪扶正製剤(ZQFZ), バッチ|32(3社), 指標|8成分, 検出|DAD＋ELSD]

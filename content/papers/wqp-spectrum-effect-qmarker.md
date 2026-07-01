@@ -5,6 +5,7 @@ source_pdf: JChromatogrB_2026_Shi_Wuwei_Qingzhuo_Pill.pdf
 doi: https://doi.org/10.1016/j.jchromb.2025.124876
 level: practitioner
 date: 2026-07-01
+published: 2026
 tags: [漢方, 生薬, QC, モンゴル医学, 五味清濁丸, WQP, HPLC, 指紋, Q-marker, スペクトル効果関係, 没食子酸, プニカラジン, エラグ酸, ネットワーク薬理]
 digest_tagline: HPLC指紋とスペクトル-効果関係(GRA＋OPLS-DA)を統合し、効果に直結するQ-markerを五味清濁丸(WQP)から同定
 digest_stats: [IF|2.97（JCR2024・Q2）, 対象|五味清濁丸(WQP), バッチ|19（3製造業者）, 共通ピーク|19, Q-marker|没食子酸／プニカラジン／エラグ酸]

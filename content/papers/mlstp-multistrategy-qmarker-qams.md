@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.jpba.2024.116070
 source_pdf: 1-s2.0-S0731708524001109-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2024
 tags: [漢方, 中成薬, QC, 脈絡疏通丸, Q-marker, ネットワーク薬理, UPLC, QAMS, 血管炎]
 digest_tagline: 血清薬物化学＋ネットワーク薬理＋薬効＋UPLC指紋＋QAMSを統合して脈絡疏通丸のQ-markerを選定・定量
 digest_stats: [IF（2024）|3.6, 対象|脈絡疏通丸(MLSTP), バッチ|12, 共通ピーク|29, Q-marker|6]

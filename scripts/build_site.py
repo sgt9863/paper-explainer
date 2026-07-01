@@ -369,6 +369,28 @@ def fav_toggle(slug):
     )
 
 
+def parse_impact_factor(meta):
+    """digest_stats 先頭タイル（例 `IF（2024）|6.1`）から IF 数値を取り出す。無ければ None。"""
+    stats = meta.get("digest_stats", [])
+    if not stats:
+        return None
+    first = stats[0]
+    if "|" not in first:
+        return None
+    label, _, value = first.partition("|")
+    if "IF" not in label.upper() and "IF" not in first.upper():
+        return None
+    m = re.search(r"[0-9]+(?:\.[0-9]+)?", value)
+    return float(m.group()) if m else None
+
+
+def pub_year(meta):
+    """front matter の published から発行年（int）を返す。無ければ None。"""
+    p = str(meta.get("published", "")).strip()
+    m = re.search(r"\d{4}", p)
+    return int(m.group()) if m else None
+
+
 # --------------------------------------------------------------------------- #
 # メイン
 # --------------------------------------------------------------------------- #
@@ -513,14 +535,23 @@ def main():
             src = p.get("source_pdf", "")
             tag_chips = "".join(f'<span class="tag">{html.escape(t)}</span>' for t in tags)
             blob = " ".join([p.get("title", ""), summary, " ".join(tags), src]).lower()
+            iff = parse_impact_factor(p)
+            year = pub_year(p)
+            title = p.get("title", p["slug"])
             meta = (
-                f'<div class="index-meta"><span class="date">{html.escape(p.get("date", ""))}</span>'
+                f'<div class="index-meta"><span class="date">追加 {html.escape(p.get("date", ""))}</span>'
+                + (f' <span class="pubyear">発行 {year}</span>' if year else "")
+                + (f' <span class="ifval">IF {iff:g}</span>' if iff is not None else "")
                 + (f' <span class="src">{html.escape(src)}</span>' if src else "")
                 + "</div>"
             )
             items.append(
                 f'<li class="index-item" data-search="{html.escape(blob)}" '
                 f'data-slug="{html.escape(p["slug"])}" '
+                f'data-added="{html.escape(p.get("date", ""))}" '
+                f'data-published="{year if year else ""}" '
+                f'data-if="{iff if iff is not None else ""}" '
+                f'data-title="{html.escape(title)}" '
                 f'data-tags="{html.escape(",".join(tags))}">'
                 f'{fav_toggle(p["slug"])}'
                 f'<a class="index-link" href="papers/{p["slug"]}.html">{html.escape(p.get("title", p["slug"]))}</a>'
@@ -544,6 +575,16 @@ def main():
         sidebar = (
             '<aside class="index-sidebar">'
             '<input type="search" id="indexSearch" placeholder="キーワード検索" aria-label="検索">'
+            '<div class="filter-group"><div class="filter-title">並び順</div>'
+            '<select id="sortSelect" class="sort-select" aria-label="並び順">'
+            '<option value="added-desc">追加日（新しい順）</option>'
+            '<option value="added-asc">追加日（古い順）</option>'
+            '<option value="published-desc">発行年（新しい順）</option>'
+            '<option value="published-asc">発行年（古い順）</option>'
+            '<option value="if-desc">IF（高い順）</option>'
+            '<option value="if-asc">IF（低い順）</option>'
+            '<option value="title-asc">タイトル（あいうえお順）</option>'
+            '</select></div>'
             '<div class="filter-group"><div class="filter-title">ステータス</div>'
             '<div class="statusfilter" id="statusFilter" role="radiogroup">'
             '<label><input type="radio" name="statusf" value="all" checked> すべて</label>'

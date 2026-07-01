@@ -5,6 +5,7 @@ source_pdf: Separation_Science_Plus_2024_Xin_Gegen_Zhitong_Mixture.pdf
 doi: https://doi.org/10.1002/sscp.202400184
 level: practitioner
 date: 2026-07-01
+published: 2025
 tags: [漢方, 生薬, QC, 葛根止痛合剤, GGZTM, HPLC, 指紋, QASM, 一マーカー多成分定量, プエラリン, ペオニフロリン, フェルラ酸]
 digest_tagline: HPLC化学指紋(14共通ピーク)とQASMを初めて組み合わせ、葛根止痛合剤(GGZTM)を単一指標から総合的品質評価へ
 digest_stats: [IF|約1.6（2024集計・後述）, 定量法|HPLC指紋＋QASM, 共通ピーク|14, 定量3成分|プエラリン／ペオニフロリン／フェルラ酸, 試料|市販3＋自家製10＝13]
