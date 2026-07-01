@@ -2,6 +2,8 @@
 title: HPLC化学指紋＋QASM(一マーカー多成分定量)による葛根止痛合剤(GGZTM)の品質評価
 slug: ggztm-hplc-fingerprint-qasm
 source_pdf: Separation_Science_Plus_2024_Xin_Gegen_Zhitong_Mixture.pdf
+drive_file_id: 12FnCfsks2pqHbE6M-OhJ40TTN-dL5KHn
+drive_url: https://drive.google.com/file/d/12FnCfsks2pqHbE6M-OhJ40TTN-dL5KHn/view
 doi: https://doi.org/10.1002/sscp.202400184
 level: practitioner
 date: 2026-07-01
