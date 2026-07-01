@@ -146,6 +146,8 @@ RAW264.7細胞のタンパク質発現は、ウェスタンブロット解析を
 ##### HPLC指紋図類似度解析 (HPLC fingerprint similarity analysis)
 異なる生産地で異なる年数生育し、異なる季節に収穫された甘草が異なるHPLC指紋図を示すかどうかを調べるために、「HPLC–PDA検出用試料溶液の調製」のセクションに記載された方法に従って調製し、「HPLC–PDA検出条件」のセクションに記載された方法に従って検出された試験溶液を用いて、250および330 nmでクロマトグラムを記録した。コサイン（余弦）角法を用いて、異なる生産地で異なる年数生育し、異なる季節に収穫された甘草について記録されたHPLC指紋図と、共通の甘草HPLC指紋図参照パターンとの間の類似度を算出した（図1）。
 
+![図1. 対象TCMの代表的HPLCクロマトグラム(A・B)。](assets/tcm-comprehensive-quality-index/fig1.jpeg)
+
 ##### 甘草のHPLC指紋図類似度の一元配置分散分析およびt検定解析 (One‑way ANOVA and t test analyses of licorice HPLC fin‑gerprint similarity)
 330および250 nmで記録されたHPLC指紋図は、異なる生産地で異なる年数生育し、異なる季節に収穫された甘草サンプル間で有意に異なっていた（P < 0.05）；したがって、250および330 nmで記録されたHPLC指紋図が内部品質評価指標として同定された。測定結果は追加ファイル1：表S5に要約されている。
 
@@ -182,10 +184,14 @@ SPSS® 23.0ソフトウェアを用いて、甘草の全フラボノイド含量
 ### 甘草品質等級分けのための多変量解析モデルの開発 (Development of the multivariate analysis model for grading licorice quality)
 甘草は複雑な多成分のTCMシステムであり、道地産地、生育年数、および収穫時期などの品質属性に密接に関連する多くの主要な要因が、甘草品質の総合的な評価をさらに複雑にしている。非線形分類、小サンプル要求、および高次元パターン認識などの独自の利点により、SVMは甘草の品質の総合的な評価を促進することができる[14–16]。したがって、甘草の品質を等級分けする手法を確立するためにSVMを使用した。SVMは2クラス分類モデルに基づいて動作するため、甘草サンプルは当初3つの品質レベルに従って分類された。そのため、SVMモデリングの前に、セカンドクラスのサンプルを決定するための基礎としてサンプルの信頼境界を確立し、その後、プレミアムおよびファーストクラスのサンプルを予測するためにSVMを使用した。189バッチのサンプルを研究対象とし、21個の候補指標を用いて甘草品質等級分けモデルを確立し、TCM品質総合評価指標（TCM QCEI）を予測するためのコンピュータモデルをSVM解析を用いて確立した。モデル確立プロセスを図2に示す。研究結果は以下のように決定された。
 
+![図2. SVMに基づく品質等級判定フロー(合格ロット→プレミアム/一級/二級のスコアリング: 86–100 / 70–85 / 60–69)。](assets/tcm-comprehensive-quality-index/fig2.jpeg)
+
 *   **ステップ 1**：グリッドを最適化することにより、ラジアルベース関数（RBF）SVMパラメータを $10^{-5}$ から $10^5$ の範囲、および $e^{-5}$ から $e^5$ の範囲で最適化した。最適なモデルパラメータ $C$ および $\gamma$ はそれぞれ 7.56 および 510.89 であり、10分割クロスバリデーションの精度は 91.56% であった。
 *   **ステップ 2**：モデルパラメータ $C$ および $\gamma$ を変更せず、一度に1つの変数を除去し、ヤコビ行列の差（difference of the Jacobi matrix: DJ）の変化値を算出した。
 *   **ステップ 3**：変数の寄与をDJ値に基づいてソートした。DJ値が比較的大きい9つの変数を主要品質パラメータとして選択し、モデルを再学習させた。モデルパラメータ $c$ および $\gamma$ はそれぞれ 33.71 および 19,634（原文19634）であった。10分割クロスバリデーションの精度は 90.26% であった。甘草の直径、全フラボノイド含量、250および330 nmで記録されたHPLCクロマトグラム指紋図の類似度、リクイリチンアピオシド、リクイリチン、グリチルリチン酸、およびリクイリチゲニンの含量、ならびに薬理活性品質指標が、甘草の品質評価モデルを構築するための重要な指標として同定され、それらの寄与率はモデル内で比例的に重み付けされた。SVMに基づく甘草品質予測モデルに対する21個の候補指標の寄与を表1および追加ファイル1：図S4に示す。
 *   **ステップ 4**：トレーニングセットサンプルのスコアに基づいて、モデルスケールを拡大するためにS字型（シグモイド）関数を用いてモデルの事後確率をフィッティングした。総合スコアは10分割クロスバリデーションに基づいて推定された；プレミアムおよびファーストクラスサンプルのQCEIスコア（それぞれ86–100および70–85の範囲）を図3に示す。
+
+![図3. 品質等級別の生物活性指標(用量反応)。](assets/tcm-comprehensive-quality-index/fig3.jpeg)
 
 > **図2 モデル確立プロセス**
 
@@ -208,7 +214,11 @@ SPSS® 23.0ソフトウェアを用いて、甘草の全フラボノイド含量
 
 インビトロ実験において、RAW 264.7細胞におけるTNF-αおよびIL-1βのレベルは、ブランク対照と比較して、LPS刺激後に有意に増加した（P < 0.0001）。LPS単独群は、異なる甘草品質等級で処理されたLPS群よりも高いTNF-αレベルを示した（P < 0.0001）。LPS単独群は、プレミアムグレードの甘草で処理されたLPS群よりも高いIL-1βレベルを示し（P < 0.01）、ファーストクラスの甘草で処理されたLPS群よりも低いIL-1βレベルを示した（P < 0.0001）；これらの結果は、LPSによって誘発される過剰なTNF-αおよびIL-1βの分泌が、それぞれ異なる甘草品質等級およびプレミアムグレードの甘草のみによって減少させられることを示した（図4）。甘草の化学成分は極めて複雑である。いくつかの成分は抗炎症作用を示し、他の成分は双方向の調節効果を示す。本研究では、異なる甘草の品質等級がTNF-αを阻害したが、IL-1βに対しては異なる影響を及ぼした。これは、抗炎症成分と双方向調節成分がTNF-αとIL-1βの比率に異なる影響を与える可能性があることを示している。したがって、異なる抗炎症および双方向調節成分の含有量がTNF-αおよびIL-1βの傾向を変化させる可能性があり、異なる甘草の品質等級におけるいくつかの化学成分の含有量が異なり、異なる効能をもたらす可能性がある[17–19]。これらの結果は、すべての異なる甘草の品質等級が抗炎症活性を示し、炎症反応はファーストクラスの甘草よりもプレミアムグレードの甘草によってより良好に減少させられる可能性が高いことを予備的に示した。
 
+![図4. SVMによる分類スコア散布図(プレミアム試料 vs 一級試料)。](assets/tcm-comprehensive-quality-index/fig4.jpeg)
+
 甘草の抗炎症活性の基礎となるメカニズムを調査するために、ウェスタンブロッティング解析を用いて甘草の調節効果を検証した。ウェスタンブロッティングは、LPS活性化マクロファージにおいて、甘草がp-PI3K（図5a）、p-AKT1（図5d）、p-PI3K/PI3K（図5b）、およびp-AKT1/AKT1（図5e）によって媒介されるPI3K/AKTシグナル伝達経路を著しく抑制することを示した。
+
+![図5. 作用機序の検証：PI3K/AKT経路のウエスタンブロット(p-PI3K/PI3K・p-AKT/AKT1)と定量(A〜G)。](assets/tcm-comprehensive-quality-index/fig5.jpeg)
 
 > **図3 SVMにより算出されたTCM QCEI分類図**
 > **図4 異なる甘草品質等級によるLPS誘発性サイトカインおよびケモカイン産生の減少効果。**
@@ -257,19 +267,6 @@ PI3K/AKTシグナル伝達経路は、細胞の増殖、アポトーシス、代
 *   **DJ** : The difference of the Jacobi matrix（ヤコビ行列の差）
 *   **VIP** : Variable importance in the project（プロジェクトにおける変数の重要度）
 
-## 図（原論文より）
-
-![図1. 対象TCMの代表的HPLCクロマトグラム(A・B)。](assets/tcm-comprehensive-quality-index/fig1.jpeg)
-
-![図2. SVMに基づく品質等級判定フロー(合格ロット→プレミアム/一級/二級のスコアリング: 86–100 / 70–85 / 60–69)。](assets/tcm-comprehensive-quality-index/fig2.jpeg)
-
-![図3. 品質等級別の生物活性指標(用量反応)。](assets/tcm-comprehensive-quality-index/fig3.jpeg)
-
-![図4. SVMによる分類スコア散布図(プレミアム試料 vs 一級試料)。](assets/tcm-comprehensive-quality-index/fig4.jpeg)
-
-![図5. 作用機序の検証：PI3K/AKT経路のウエスタンブロット(p-PI3K/PI3K・p-AKT/AKT1)と定量(A〜G)。](assets/tcm-comprehensive-quality-index/fig5.jpeg)
-
-
 ## 参考文献
 
 > 原論文の参考文献。番号は本文の引用 [N] に対応。各文献はDOIまたはGoogle Scholar検索へのリンク。
@@ -295,3 +292,4 @@ PI3K/AKTシグナル伝達経路は、細胞の増殖、アポトーシス、代
 19. Apostolova E, Lukova P, Baldzhieva A, Delattre C, Molinié R, Petit E, et al. Structural characterization and in vivo anti-Inflammatory activity of fucoidan from Cystoseira crinita (Desf.) borry. Mar Drugs. 2022;20:174. — [Google Scholarで探す](https://scholar.google.com/scholar?q=Apostolova%20E%2C%20Lukova%20P%2C%20Baldzhieva%20A%2C%20Delattre%20C%2C%20Molini%C3%A9%20R%2C%20Petit%20E%2C%20et%20al.%20Structural%20characterization%20and%20in%20vivo%20anti-Inflammatory%20activity%20of%20fucoidan%20from)
 20. Xia P, Xu XY. PI3K/Akt/mTOR signaling pathway in cancer stem cells: from basic research to clinical application. Am J Cancer Res. 2015;5:1602–9. — [Google Scholarで探す](https://scholar.google.com/scholar?q=Xia%20P%2C%20Xu%20XY.%20PI3K/Akt/mTOR%20signaling%20pathway%20in%20cancer%20stem%20cells%3A%20from%20basic%20research%20to%20clinical%20application.%20Am%20J%20Cancer%20Res.%202015%3B5%3A1602%E2%80%939.)
 21. Xie Y, Shi X, Sheng K, Han G, Li W, Zhao Q, et al. PI3K/Akt signaling trans‑ duction pathway, erythropoiesis and glycolysis in hypoxia (Review). Mol Med Rep. 2019;19:783–91. Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in pub‑ lished maps and institutional affiliations. — [Google Scholarで探す](https://scholar.google.com/scholar?q=Xie%20Y%2C%20Shi%20X%2C%20Sheng%20K%2C%20Han%20G%2C%20Li%20W%2C%20Zhao%20Q%2C%20et%20al.%20PI3K/Akt%20signaling%20trans%E2%80%91%20duction%20pathway%2C%20erythropoiesis%20and%20glycolysis%20in%20hypoxia%20%28Review%29.%20Mol%20Med%20Rep.%2020)
+

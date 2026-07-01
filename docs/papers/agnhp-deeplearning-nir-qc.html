@@ -30,6 +30,7 @@
 <h2>1. 序論（Introduction）</h2>
 <p>脳卒中は罹患率・障害率・死亡率が高い神経疾患で、虚血性脳卒中(IS)は全脳卒中の <strong>80%</strong> を占め死亡率も高い。漢方(TCM)は多標的・多成分・全体調節・高い安全性という利点をもち、脳卒中治療で重要な役割を果たす。AGNHPは脳卒中・熱性けいれん等に広く用いられてきた古典的複方で、<strong>牛黄・郁金・水牛角・麝香・珍珠・梔子・黄連・黄芩・朱砂・雄黄・氷片(竜脳)</strong> からなる。</p>
 <p>中成薬(pCms)の品質検査には2つの大きな課題がある——①指標物質と薬効の関連が不明確（組成が複雑で鍵となる薬効成分を捉えにくい）、②検査作業が膨大で技術・装置の制約から包括的・正確な検査が難しく品質問題を適時に検出しにくい。スペクトル−薬効相関解析により、指紋ピークと薬効が密接に関連することが示されている。深層学習は優れたデータ処理能力からpCmsの精密検出に大きな可能性をもち、CNN(画像同定)・RNN(製造工程の品質変化予測)などがTCMのQCに応用されてきた。本研究はAGNHPのIS治療活性成分をスクリーニング・評価し、携帯NIRと深層学習で含量定量の精度・効率を高める枠組みを提案する。</p>
+<figure><img src="assets/agnhp-deeplearning-nir-qc/fig1.jpeg" alt="図1. 本研究の全体フレームワーク図。" loading="lazy"><figcaption>図1. 本研究の全体フレームワーク図。</figcaption></figure>
 <h2>2. 材料と方法（Materials and Methods）</h2>
 <h3>2.1 試料調製（処方組成）</h3>
 <p>AGNHPの処方は——牛黄 100 g、郁金(Curcuma aromatica) 100 g、水牛角濃縮粉 200 g、麝香(Moschus) 25 g、珍珠(pearl) 50 g、梔子(Gardenia jasminoides) 100 g、黄連(Coptis chinensis) 100 g、黄芩(Scutellaria baicalensis) 100 g、朱砂(cinnabar) 100 g、雄黄(realgar) 100 g、氷片(borneol) 25 g。配合原則に従い牛黄−黄連の比率を変え、牛黄の品種も変えて <strong>計20バッチ</strong> を調製。試料100 mgを メタノール:DMSO:水(1:1:1) 10 mL に懸濁し 200 W で 60分 超音波抽出、0.22 μm 膜濾過。</p>
@@ -93,10 +94,12 @@
 </tbody></table>
 <h3>3.2 脳炎症モデルの評価</h3>
 <p>トランスジェニックゼブラフィッシュで脳内マクロファージ遊走を観察。モデル群(ポナチニブ)では脳領域にマクロファージが集積(P &lt; 0.0001 vs 対照)。投与濃度の増加に伴いマクロファージ数・集積が有意に減少(P &lt; 0.005 vs モデル群)。36成分のうち <strong>タウロコール酸・ケノデオキシコール酸・コール酸・パルミチン酸・エピベルベリン・ベルベリン・パルマチン</strong> が PLSRモデルで <strong>VIP値 &gt; 1</strong>。PLSRの予測は P = 0.7300 で実測と有意差なく良好。</p>
+<figure><img src="assets/agnhp-deeplearning-nir-qc/fig3.jpeg" alt="図3. ゼブラフィッシュ抗炎症活性とLC-MS強度の相関解析。(A)ゼブラフィッシュ脳炎症の可視化、(B)遊走細胞数、(C)VIP値、(D)予測値と実測値の対応。" loading="lazy"><figcaption>図3. ゼブラフィッシュ抗炎症活性とLC-MS強度の相関解析。(A)ゼブラフィッシュ脳炎症の可視化、(B)遊走細胞数、(C)VIP値、(D)予測値と実測値の対応。</figcaption></figure>
 <h3>3.3 品質マーカーのスクリーニングと検証</h3>
 <p>脳抗炎症活性と関連する <strong>7成分</strong> を選定: タウロコール酸(化合物1)・ケノデオキシコール酸(2)・コール酸(3)・パルミチン酸(4)・エピベルベリン(5)・ベルベリン(6)・パルマチン(7)。PPIネットワークは <strong>154ノード・534エッジ</strong>。DEGREEとDMNCの交差度が高い6標的——<strong>TNF・IL6・ALB・EGFR・IL1B・MMP9</strong>——をコア標的とした。鍵標的(TNF-α: 2AZ5、IL6: 1ALU、ALB: 4L9K、EGFR: 6LUD、IL1B: 4×37、MMP9: 1ITV)へのドッキングで、潜在Q-markerの結合エネルギーはいずれも <strong>&lt; −5</strong>(良好な結合)。</p>
 <h3>3.4 TNF-α・IL-6 濃度測定</h3>
 <p>ドッキングからTNF-α・IL6がISに対するAGNHPの鍵標的と示された。BV2細胞で、モデル群のTNF-α・IL6は対照群より有意に高く(P &lt; 0.0005)、7成分はTNF-α・IL6を抑制してISに治療効果を示した。</p>
+<figure><img src="assets/agnhp-deeplearning-nir-qc/fig4.jpeg" alt="図4. 実験検証結果。(A)分子ドッキング結果、(B)TNF-α濃度(n=6)、(C)IL-6濃度、(D)組織像。" loading="lazy"><figcaption>図4. 実験検証結果。(A)分子ドッキング結果、(B)TNF-α濃度(n=6)、(C)IL-6濃度、(D)組織像。</figcaption></figure>
 <h3>3.5 ゼブラフィッシュ行動評価</h3>
 <p>6 dpf で運動行動を測定。モデル群はポナチニブにより移動軌跡・総移動距離が減少したが、AGNHPの7成分で明確に改善した。</p>
 <h3>3.6–3.8 深層学習モデルと結果</h3>
@@ -124,19 +127,14 @@
 <tr><td></td><td>Random Forest</td><td>0.0003</td><td>0.0145</td><td>0.7637</td></tr>
 </tbody></table>
 <blockquote>補足: 上表は各成分の BiGRU-MAR と代表的な比較モデルの抜粋。原文Table 2には7成分×7モデルの全数値が掲載されている。ベルベリンのみ線形回帰(R²=0.7397)がBiGRU-MAR(0.6337)を上回ったが、他の6成分ではBiGRU-MARが最良または上位だった。</blockquote>
+<figure><img src="assets/agnhp-deeplearning-nir-qc/fig2.jpeg" alt="図2. GRU(Gated Recurrent Unit)とMulti-Head Attentionの機構。" loading="lazy"><figcaption>図2. GRU(Gated Recurrent Unit)とMulti-Head Attentionの機構。</figcaption></figure>
+<figure><img src="assets/agnhp-deeplearning-nir-qc/fig5.jpeg" alt="図5. BiGRU-MARのフレームワーク図。" loading="lazy"><figcaption>図5. BiGRU-MARのフレームワーク図。</figcaption></figure>
+<figure><img src="assets/agnhp-deeplearning-nir-qc/fig6.jpeg" alt="図6. 7種の主要成分の含量予測結果。" loading="lazy"><figcaption>図6. 7種の主要成分の含量予測結果。</figcaption></figure>
 <h2>4. 考察・結論（Discussion / Conclusion）</h2>
 <p>本研究のスクリーニングは <strong>活性指向</strong>で、複雑な複方成分から活性成分に焦点を絞ることで薬効に寄与する鍵物質を的確に標的化し、非活性/低活性成分への労力の無駄を避けて研究効率を高めた。鍵活性成分の選定後、ネットワーク薬理で標的・経路を予測し、in vitro細胞実験・in vivo動物モデルで包括的に検証した。携帯NIR分光で迅速・非破壊の品質分析を行い、データ拡張で試料コスト・希少性の問題に対処しつつ予測精度を高めた。BiGRU-MARは複雑データに強く、迅速・高精度の予測を実現し、実製品への適用で指標成分の有効性・正確性を確認した。</p>
 <p><strong>限界:</strong> BiGRU-MARは複雑データに有効だが解釈性に欠ける（今後改良予定）。また活性成分のスクリーニング・検証体系は包括的だが、治療効果・安全性の正確な評価にはより高感度・特異的な手法が必要。</p>
 <p><strong>結論:</strong> AGNHPを対象に中成薬の完全なQC体系を構築。7つの主要活性成分を同定・検証し、BiGRU-MARモデルで含量定量の精度・効率を大幅に向上、実製品検証でQC指標の有効性・正確性を確認した。他の中成薬のQCにも新たな手法を提供し、TCM品質管理の標準化を促進する。</p>
-<blockquote>補足（実務的示唆）: 本研究の枠組みは「活性指向で指標成分を選ぶ → ネットワーク薬理＋in vivo/in vitroで裏取り → 携帯NIR＋深層学習で日常的に含量を予測」という三段構え。実務的には、HPLC等の確定分析に対し、携帯NIR＋学習済みモデルを<strong>スクリーニング/工程内モニタリング</strong>に使い、逸脱が疑われるロットを確定分析に回す運用が想定される。ただしモデルの解釈性・外挿性(訓練範囲外のロットへの適用)には注意が必要で、定期的な再キャリブレーションが前提となる。なお朱砂(水銀)・雄黄(ヒ素)・麝香等を含む製剤であり、ここで扱う有機指標成分の管理は安全性管理(重金属等)とは別枠である点に留意。</blockquote>
-<h2>図（原論文より）</h2>
-<blockquote>以下は原論文から抽出した主要な図。キャプションは訳者による要約。</blockquote>
-<figure><img src="assets/agnhp-deeplearning-nir-qc/fig1.jpeg" alt="図1. 本研究の全体フレームワーク図。" loading="lazy"><figcaption>図1. 本研究の全体フレームワーク図。</figcaption></figure>
-<figure><img src="assets/agnhp-deeplearning-nir-qc/fig2.jpeg" alt="図2. GRU(Gated Recurrent Unit)とMulti-Head Attentionの機構。" loading="lazy"><figcaption>図2. GRU(Gated Recurrent Unit)とMulti-Head Attentionの機構。</figcaption></figure>
-<figure><img src="assets/agnhp-deeplearning-nir-qc/fig3.jpeg" alt="図3. ゼブラフィッシュ抗炎症活性とLC-MS強度の相関解析。(A)ゼブラフィッシュ脳炎症の可視化、(B)遊走細胞数、(C)VIP値、(D)予測値と実測値の対応。" loading="lazy"><figcaption>図3. ゼブラフィッシュ抗炎症活性とLC-MS強度の相関解析。(A)ゼブラフィッシュ脳炎症の可視化、(B)遊走細胞数、(C)VIP値、(D)予測値と実測値の対応。</figcaption></figure>
-<figure><img src="assets/agnhp-deeplearning-nir-qc/fig4.jpeg" alt="図4. 実験検証結果。(A)分子ドッキング結果、(B)TNF-α濃度(n=6)、(C)IL-6濃度、(D)組織像。" loading="lazy"><figcaption>図4. 実験検証結果。(A)分子ドッキング結果、(B)TNF-α濃度(n=6)、(C)IL-6濃度、(D)組織像。</figcaption></figure>
-<figure><img src="assets/agnhp-deeplearning-nir-qc/fig5.jpeg" alt="図5. BiGRU-MARのフレームワーク図。" loading="lazy"><figcaption>図5. BiGRU-MARのフレームワーク図。</figcaption></figure>
-<figure><img src="assets/agnhp-deeplearning-nir-qc/fig6.jpeg" alt="図6. 7種の主要成分の含量予測結果。" loading="lazy"><figcaption>図6. 7種の主要成分の含量予測結果。</figcaption></figure><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="danshen-hplc-nir-chemometrics.html">丹参(Danshen)の産地別品質評価・モニタリング — HPLC-DAD＋NIR＋ケモメトリクス統合</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">分光法</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qmarker-strategies-review-2020-2024.html">伝統中薬のQ-marker(品質マーカー)同定戦略：2020–2024年研究の系統的レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">ネットワーク薬理</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="sjg-multidim-network-qmarker.html">多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として</a><span class="rel-tags"><span class="rel-tag">ネットワーク薬理</span><span class="rel-tag">質量分析</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="tcm-3d-integration-ml-qc.html">三次元(3D)積分と機械学習による中薬(黄芩)のHPLC-DAD品質評価法</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+<blockquote>補足（実務的示唆）: 本研究の枠組みは「活性指向で指標成分を選ぶ → ネットワーク薬理＋in vivo/in vitroで裏取り → 携帯NIR＋深層学習で日常的に含量を予測」という三段構え。実務的には、HPLC等の確定分析に対し、携帯NIR＋学習済みモデルを<strong>スクリーニング/工程内モニタリング</strong>に使い、逸脱が疑われるロットを確定分析に回す運用が想定される。ただしモデルの解釈性・外挿性(訓練範囲外のロットへの適用)には注意が必要で、定期的な再キャリブレーションが前提となる。なお朱砂(水銀)・雄黄(ヒ素)・麝香等を含む製剤であり、ここで扱う有機指標成分の管理は安全性管理(重金属等)とは別枠である点に留意。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="danshen-hplc-nir-chemometrics.html">丹参(Danshen)の産地別品質評価・モニタリング — HPLC-DAD＋NIR＋ケモメトリクス統合</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">分光法</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qmarker-strategies-review-2020-2024.html">伝統中薬のQ-marker(品質マーカー)同定戦略：2020–2024年研究の系統的レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">ネットワーク薬理</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="sjg-multidim-network-qmarker.html">多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として</a><span class="rel-tags"><span class="rel-tag">ネットワーク薬理</span><span class="rel-tag">質量分析</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="tcm-3d-integration-ml-qc.html">三次元(3D)積分と機械学習による中薬(黄芩)のHPLC-DAD品質評価法</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <footer class="site-footer">
   <p>自動生成: paper-explainer パイプライン</p>
