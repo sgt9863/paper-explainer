@@ -36,7 +36,7 @@
     "output_dir": "docs"
   },
   "chat": {
-    "enabled": true,
+    "enabled": false,
     "default_model": "claude-sonnet-4-6",
     "models": [
       { "id": "claude-sonnet-4-6", "label": "Sonnet 4.6（推奨）" },
