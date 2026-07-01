@@ -448,6 +448,32 @@ def pub_year(meta):
     return int(m.group()) if m else None
 
 
+def related_papers(target, papers, tag_counts, k=4):
+    """共通タグの多さ（希少タグほど高評価）で関連論文を選ぶ。
+
+    QC・品質評価 のように大半の論文が持つタグは情報量が乏しいので、
+    共通タグ t のスコアを 1/tag_counts[t] とする IDF 風の重み付けにする。
+    戻り値: [(paper, [共通タグ...]), ...]（スコア降順、同点は新しい順）。
+    """
+    t_tags = set(target.get("tags", []))
+    if not t_tags:
+        return []
+    scored = []
+    for other in papers:
+        if other is target:
+            continue
+        shared = t_tags & set(other.get("tags", []))
+        if not shared:
+            continue
+        score = sum(1.0 / tag_counts.get(t, 1) for t in shared)
+        # 共通タグは希少（＝関連が強い）順に並べて表示する
+        shared_sorted = sorted(shared, key=lambda t: (tag_counts.get(t, 1), t))
+        scored.append((score, other.get("date", ""), shared_sorted, other))
+    # スコア降順 → 同点は追加日の新しい順
+    scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
+    return [(o, tags) for _s, _d, tags, o in scored[:k]]
+
+
 # --------------------------------------------------------------------------- #
 # メイン
 # --------------------------------------------------------------------------- #
@@ -498,6 +524,12 @@ def main():
 
     papers.sort(key=sort_key, reverse=True)
 
+    # 全タグの出現数（関連論文の重み付け・一覧のカテゴリチップ並び順に使う）
+    tag_counts = {}
+    for p in papers:
+        for t in p.get("tags", []):
+            tag_counts[t] = tag_counts.get(t, 0) + 1
+
     # 各論文ページ
     for p in papers:
         tags = p.get("tags", [])
@@ -542,6 +574,27 @@ def main():
         else:
             top_visual = render_digest(p)
 
+        # 関連論文（共通タグの希少度で重み付け・最大4件）
+        related = related_papers(p, papers, tag_counts, k=4)
+        related_html = ""
+        if related:
+            rel_items = []
+            for rp, shared in related:
+                chips = "".join(
+                    f'<span class="rel-tag">{html.escape(t)}</span>' for t in shared
+                )
+                rel_items.append(
+                    f'<li><a href="{html.escape(rp["slug"])}.html">'
+                    f'{html.escape(rp.get("title", rp["slug"]))}</a>'
+                    f'<span class="rel-tags">{chips}</span></li>'
+                )
+            related_html = (
+                '<section class="related" aria-label="関連論文">'
+                '<h2>関連論文</h2>'
+                '<ul class="related-list">' + "".join(rel_items) + '</ul>'
+                '</section>'
+            )
+
         body = (
             f'<article class="paper" data-slug="{html.escape(p["slug"])}">'
             f'<h1>{html.escape(p.get("title", p["slug"]))}</h1>'
@@ -549,6 +602,7 @@ def main():
             f'<hr>'
             f'{top_visual}'
             f'{p["_body_html"]}'
+            f'{related_html}'
             f'<p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p>'
             f'</article>'
         )
@@ -579,11 +633,7 @@ def main():
     # 一覧ページ
     index_scripts = ""
     if papers:
-        # 全タグを収集し出現数を数える（絞り込みチップは件数の多い順に並べる）
-        tag_counts = {}
-        for p in papers:
-            for t in p.get("tags", []):
-                tag_counts[t] = tag_counts.get(t, 0) + 1
+        # 絞り込みチップは件数の多い順に並べる（tag_counts は上で計算済み）
         all_tags = sorted(tag_counts, key=lambda t: (-tag_counts[t], t))
 
         items = []
