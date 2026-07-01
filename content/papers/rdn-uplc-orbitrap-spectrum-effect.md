@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1ICGmrHqr44ToNaJsbe-fGDtETqhVp4Hx/vie
 level: practitioner
 date: 2026-07-01
 published: 2024
-tags: [漢方, 中成薬, 注射剤, QC, 熱毒寧, UPLC-Orbitrap, スペクトル効果, COX-2, Q-marker, ケモメトリクス]
+tags: [方剤・中成薬, QC・品質評価, Q-marker, ケモメトリクス, スペクトル効果, 質量分析, 薬効・薬理]
 digest_tagline: UPLC-Orbitrap MS/MSで118同定34定量＋多変量統計＋COX-2生物学的力価を統合し熱毒寧注射液の高品質バッチと9指標成分を特定
 digest_stats: [IF（2024）|3.6, 対象|熱毒寧注射液(RDN), バッチ|50, 同定/定量|118同定・34定量, 高品質|7バッチ, 指標成分|9（COX-2力価）]
 digest_points: [UPLC-Orbitrap MS/MSで30分以内に118成分同定・34成分を定量(全r≥0.990・回収率80.29–114.24%), 多変量統計(Hotelling T²/PCA)で内容一貫性に影響する11の重要変数と異常バッチを同定, COX-2酵素活性による生物学的力価とスペクトル-効果解析で高品質7バッチを選抜、VIP>1の9成分(スコポレチン等)を品質指標に]

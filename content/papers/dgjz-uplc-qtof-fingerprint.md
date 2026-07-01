@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1wJHf6YllbaYGnKBJ0sNzK3VG1gvpdSp9/vie
 level: practitioner
 date: 2026-06-28
 published: 2024
-tags: [漢方, 生薬, QC, UPLC, Q-TOF-MS, 指紋分析, 当帰建中湯]
+tags: [生薬, QC・品質評価, 指紋分析, 質量分析, HPLC・UPLC]
 digest_tagline: 古典処方「当帰建中湯」をUPLC-Q-TOF-MSで網羅同定し指紋＋6成分定量で総合評価
 digest_stats: [IF（2024）|1.3, 同定|77成分, 指紋|18共通ピーク, 定量|6成分, バッチ|15ロット, 類似度|0.965–0.996]
 digest_points: [UPLC-Q-TOF-MSで77成分を同定（22成分は標準品確認）, 指紋（18ピーク）＋6成分定量の二段構え, パエオニフロリン・グリチルリチンが高含量]

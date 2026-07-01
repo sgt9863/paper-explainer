@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0944711321000672-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2021
-tags: [漢方, 方剤, QC, 柴芩承気湯, Q-marker, UHPLC, ネットワーク, 急性膵炎]
+tags: [方剤・中成薬, QC・品質評価, Q-marker, ネットワーク薬理, HPLC・UPLC, 薬効・薬理]
 digest_tagline: 原料が薬局方適合でも臨床効果はQ-markerの「適正含量域」に依存する—指紋＋22成分定量＋膵炎モデルで実証
 digest_stats: [IF（2024）|7.9, 対象|柴芩承気湯(CQCQD), バッチ|10, 共通ピーク|22, Q-marker|8]
 digest_points: [原料が薬局方適合でも臨床効果はQ-markerの「適正含量域」に依存すると提示, UHPLC指紋(22共通ピーク・類似度0.946-0.990)＋22成分定量＋HCA/PCA＋セルレイン誘発急性膵炎マウスで評価, 主要Q-markerにエモジン・レイン・アロエエモジン・マグノロール・ヘスペリジン・シネフリン・バイカレイン・ゲニポシドを選定]

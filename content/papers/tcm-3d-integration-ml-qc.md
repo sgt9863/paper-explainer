@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/12evDsBDpM_3QA2cDXGeLLC6naeb9PFWi/vie
 level: practitioner
 date: 2026-07-01
 published: 2025
-tags: [漢方, 生薬, QC, 黄芩, HPLC-DAD, 3D積分, 機械学習, ケモメトリクス, 保持時間補正]
+tags: [生薬, QC・品質評価, ケモメトリクス, 機械学習・データ処理, HPLC・UPLC]
 digest_tagline: HPLC-DADの3D(時間×波長)信号を積分縮約＋DTW/COW保持時間補正＋二値評価系＋機械学習で黄芩の品質を評価
 digest_stats: [IF（2024）|3.8, 対象|黄芩(SR), バッチ|20, 手法|3D積分＋DTW/COW＋BES＋ML, 予測誤差|±0.2%（バイカリン）]
 digest_points: [HPLC-DADの多波長3D信号を全波長合算で2Dに縮約し、単一波長依存の誤差を回避して定量(V1とV2のρ=0.97), DTW(全体)＋COW(局所 m=50/t=10)で保持時間ドリフトを補正、二値評価系(Sm・Pm)で8グレード判定, Sm・Pmを説明変数にバイカリン含量を機械学習予測(DTR訓練r²=1.0000・誤差±0.2%。MLR r²=0.9571/RFR r²=0.9889)]

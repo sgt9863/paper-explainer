@@ -579,12 +579,12 @@ def main():
     # 一覧ページ
     index_scripts = ""
     if papers:
-        # 全タグを出現順に収集（絞り込みチップ用）
-        all_tags = []
+        # 全タグを収集し出現数を数える（絞り込みチップは件数の多い順に並べる）
+        tag_counts = {}
         for p in papers:
             for t in p.get("tags", []):
-                if t not in all_tags:
-                    all_tags.append(t)
+                tag_counts[t] = tag_counts.get(t, 0) + 1
+        all_tags = sorted(tag_counts, key=lambda t: (-tag_counts[t], t))
 
         items = []
         for p in papers:
@@ -621,7 +621,8 @@ def main():
             )
 
         tagfilters = "".join(
-            f'<button type="button" class="tagfilter" data-tag="{html.escape(t)}">{html.escape(t)}</button>'
+            f'<button type="button" class="tagfilter" data-tag="{html.escape(t)}">'
+            f'{html.escape(t)}<span class="tagcount">{tag_counts[t]}</span></button>'
             for t in all_tags
         )
         count_line = (

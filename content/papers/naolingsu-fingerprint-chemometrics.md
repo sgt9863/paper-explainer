@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1fQFrTtRNmvmh_kKtjeWMs-07D8n_QyyF/vie
 level: practitioner
 date: 2026-07-01
 published: 2022
-tags: [漢方, 中成薬, カプセル, QC, 脳霊素, HPLC, 指紋, UHPLC-Q-TOF-MS, ケモメトリクス, PLS-DA]
+tags: [方剤・中成薬, QC・品質評価, 指紋分析, ケモメトリクス, 質量分析, HPLC・UPLC]
 digest_tagline: HPLC指紋＋UHPLC-Q/TOF-MSで多成分同定＋多成分定量＋PCA/PLS-DAで脳霊素カプセル24バッチを評価し品質マーカーを選定
 digest_stats: [IF（2022）|2.59, 対象|脳霊素カプセル(NLSC), バッチ|24, 指紋類似度|0.645–0.992, 同定|フラボノイド37＋有機酸21＋リグナン22ほか, 共通ピーク|25]
 digest_points: [HPLC-DAD(Thermo Hypersil Gold C18・326 nm)で24バッチの指紋(25共通ピーク・類似度0.645–0.992)を確立、UHPLC-Q/TOF-MSでフラボノイド37・有機酸21・リグナン22ほかを同定, 複数成分を同時定量し、PCA(3Dスコア)とPLS-DA/VIPで24バッチを判別・品質差の要因成分を抽出, 指紋＋定量＋ケモメトリクスの複合手法で最適な化学マーカーを選定し、多原料の中成薬NLSCの品質評価法を構築]

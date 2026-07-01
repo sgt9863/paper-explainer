@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0731708524001109-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2024
-tags: [漢方, 中成薬, QC, 脈絡疏通丸, Q-marker, ネットワーク薬理, UPLC, QAMS, 血管炎]
+tags: [方剤・中成薬, QC・品質評価, QAMS, Q-marker, ネットワーク薬理, HPLC・UPLC, 薬効・薬理]
 digest_tagline: 血清薬物化学＋ネットワーク薬理＋薬効＋UPLC指紋＋QAMSを統合して脈絡疏通丸のQ-markerを選定・定量
 digest_stats: [IF（2024）|3.6, 対象|脈絡疏通丸(MLSTP), バッチ|12, 共通ピーク|29, Q-marker|6]
 digest_points: [血清薬物化学・ネットワーク薬理・薬効・UPLC指紋・QAMSを束ねる多戦略プラットフォームを構築, TAO(バージャー病)モデルラットでPI3K-AKT／VEGF／HIF-1経路の調節を実証, 6成分(クロロゲン酸・芍薬苷・リクイリチン・カリコシン7Glc・ベルベリン・ホルモノネチン)をQ-markerに選定しQAMSで定量(ESMと相対誤差−4.4〜1.8%)]

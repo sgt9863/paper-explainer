@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0021967325007435-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2025
-tags: [漢方, 生薬, QC, 貞芪扶正, 指紋, HPLC, ELSD, ケモメトリクス, 免疫]
+tags: [生薬, QC・品質評価, 指紋分析, ケモメトリクス, 分光法, HPLC・UPLC, 薬効・薬理]
 digest_tagline: DADのλ-t立方体を全波長積算(FTIA)しELSD融合・二元評価系(BES)で品質と薬効を結ぶ貞芪扶正製剤のQC
 digest_stats: [IF（2024）|3.8, 対象|貞芪扶正製剤(ZQFZ), バッチ|32(3社), 指標|8成分, 検出|DAD＋ELSD]
 digest_points: [DADのλ-t立方体を全波長で時間域積算(FTIA)しELSDと融合した情報豊富な単一指紋を構築, 二元評価系(BES)でパターン類似度Smと定量一致度Pmを分離しメーカー間差を判別, 4直交マーカー(サリドロシド・スペクヌエジド・オノニン・ホルモノネチン)がPm変動の98%を説明し免疫抑制マウスで薬効と連結]

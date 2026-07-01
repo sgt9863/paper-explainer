@@ -7,7 +7,7 @@ drive_file_id: 138LmDxWLVa9NHMGZHDSF183hdTs5gUYD
 level: practitioner
 date: 2026-07-01
 published: 2021
-tags: [漢方, 生薬, 規制, 薬事, レビュー, 中国, 香港, 台湾, 日本, 韓国, 古典処方]
+tags: [生薬, 規制・薬事, レビュー]
 digest_tagline: 中国・香港・台湾・日本・韓国の5つの規制システムを、長い使用歴を持つ伝統/補完医薬品の観点で比較したレビュー
 digest_stats: [IF|約2.6（eCAM・2021当時）, 種別|規制比較レビュー, 対象|5規制システム, 地域|中国・香港・台湾・日本・韓国, 焦点|品質保証＋市販後監視]
 digest_points: [中国・香港・台湾・日本・韓国の5システムを、公式文書分析＋学術論文のスコーピングレビューの混合手法で比較。いずれも「使用歴(history of use)」を有効性・安全性評価のエビデンスの一部として認める, 古典的処方(classic formulas)のリストは古代医学書由来の処方に事前限定され、非臨床/臨床データを免除しうる迅速経路(expedited pathways)が整備される一方、製品範囲に追加制限が課される, 5システムを通じて品質保証(quality assurance)と市販後安全性監視(postmarketing surveillance)が主要な焦点と判明]

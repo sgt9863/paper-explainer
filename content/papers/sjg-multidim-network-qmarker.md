@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0378874121005043-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2021
-tags: [漢方, 生薬, QC, Q-marker, ネットワーク薬理, UPLC-MS, 糖尿病]
+tags: [生薬, QC・品質評価, Q-marker, ネットワーク薬理, 質量分析, 薬効・薬理]
 digest_tagline: 配合／含量／活性／効能／安定性の5次元を「蜘蛛の巣」モデルで統合し参耆降糖顆粒のQ-markerを判別
 digest_stats: [IF（2024）|5.4, 対象|参耆降糖顆粒(SJG), 次元|5次元, 候補成分|30, Q-marker|12]
 digest_points: [現行規格はginsenoside Re 1成分のTLCのみ→全体性を反映できないという課題, 配合・含量・活性・効能・安定性の5次元を蜘蛛の巣モデルで統合し回帰面積で順位付け, 人参由来7・黄耆由来3・五味子由来2の計12成分をSJGのQ-markerに選定]

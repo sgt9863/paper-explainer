@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1YZ2cpnfHpo45hNV2SNUYmq8Bzx9LJVp2/vie
 level: practitioner
 date: 2026-07-01
 published: 2024
-tags: [漢方, 中成薬, 顆粒剤, QC, 通便顆粒, HPLC, 指紋, ケモメトリクス, OPLS-DA, 便秘]
+tags: [方剤・中成薬, QC・品質評価, 指紋分析, ケモメトリクス, HPLC・UPLC, 薬効・薬理]
 digest_tagline: HPLC指紋(17共通ピーク)＋7成分定量＋HCA/PCA/OPLS-DAで通便顆粒20バッチを2群判別し差異マーカーを特定
 digest_stats: [IF（2024）|3.6, 対象|通便顆粒(CLG), バッチ|20, 共通ピーク|17, 定量|7成分, 類似度|0.960–0.991]
 digest_points: [Agilent Eclipse Plus C18・224 nmで20バッチのHPLC指紋(17共通ピーク・類似度0.960–0.991)を確立, サリドロシド等7成分を定量(全R²≥0.9990・回収率94–99%), HCA/PCA(CPV 91.111%)/OPLS-DA(R²X0.865・R²Y0.996・Q²0.985)で20バッチを2群(S1–S11/S12–S20)に判別、サリドロシド・クリソファノール等を差異マーカーに]
