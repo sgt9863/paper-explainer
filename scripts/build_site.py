@@ -68,6 +68,26 @@ def parse_front_matter(text: str):
 # --------------------------------------------------------------------------- #
 # 最小限の Markdown -> HTML コンバータ
 # --------------------------------------------------------------------------- #
+# 本文中の [N] 引用を末尾「参考文献」へのアンカーリンクにするか（ドキュメント単位で切替）
+_LINK_CITATIONS = False
+
+
+def _linkify_citations(text: str) -> str:
+    """エスケープ済みテキスト中の [5] / [5, 6] / [5–7] を #ref-N へのリンクにする。"""
+    def repl(m):
+        inner = m.group(1)
+        parts = re.split(r"([,\-–]\s*)", inner)
+        out = []
+        for part in parts:
+            s = part.strip()
+            if s.isdigit():
+                out.append(f'<a href="#ref-{s}" class="cite">{s}</a>')
+            else:
+                out.append(part)
+        return "[" + "".join(out) + "]"
+    return re.sub(r"\[(\d+(?:\s*[,\-–]\s*\d+)*)\]", repl, text)
+
+
 def _inline(text: str) -> str:
     """インライン要素（コード・強調・リンク）を HTML 化する。"""
     # まずコードスパンを退避（中身をエスケープしてプレースホルダ化）
@@ -104,6 +124,8 @@ def _inline(text: str) -> str:
         return f"<code>{codes[int(m.group(1))]}</code>"
 
     text = re.sub(r"\x00CODE(\d+)\x00", restore_code, text)
+    if _LINK_CITATIONS:
+        text = _linkify_citations(text)
     return text
 
 
@@ -120,11 +142,14 @@ def _render_table(rows):
     return "\n".join(out)
 
 
-def markdown_to_html(md: str) -> str:
+def markdown_to_html(md: str, link_citations: bool = False) -> str:
+    global _LINK_CITATIONS
+    _LINK_CITATIONS = link_citations
     lines = md.split("\n")
     html_parts = []
     i = 0
     n = len(lines)
+    in_refs = False  # 「参考文献」見出し以降の番号付きリストには id=ref-N を振る
 
     def is_table_sep(s: str) -> bool:
         return bool(re.match(r"^\s*\|?[\s:|-]+\|?\s*$", s)) and "-" in s
@@ -159,7 +184,9 @@ def markdown_to_html(md: str) -> str:
         m = re.match(r"^(#{1,6})\s+(.*)$", stripped)
         if m:
             level = len(m.group(1))
-            html_parts.append(f"<h{level}>{_inline(m.group(2).strip())}</h{level}>")
+            heading = m.group(2).strip()
+            in_refs = bool(re.match(r"(参考文献|引用文献|References)", heading))
+            html_parts.append(f"<h{level}>{_inline(heading)}</h{level}>")
             i += 1
             continue
 
@@ -192,8 +219,14 @@ def markdown_to_html(md: str) -> str:
             while i < n and re.match(pat, lines[i]):
                 items.append(re.match(pat, lines[i]).group(1).strip())
                 i += 1
-            inner = "".join(f"<li>{_inline(it)}</li>" for it in items)
-            html_parts.append(f"<{tag}>{inner}</{tag}>")
+            if ordered and in_refs:
+                inner = "".join(
+                    f'<li id="ref-{k}">{_inline(it)}</li>' for k, it in enumerate(items, 1)
+                )
+                html_parts.append(f'<ol class="references">{inner}</ol>')
+            else:
+                inner = "".join(f"<li>{_inline(it)}</li>" for it in items)
+                html_parts.append(f"<{tag}>{inner}</{tag}>")
             continue
 
         # 段落（空行 or 構造行まで連結）
@@ -427,7 +460,8 @@ def main():
                 meta, body = parse_front_matter(f.read())
             slug = slugify(meta, os.path.splitext(fname)[0])
             meta["slug"] = slug
-            meta["_body_html"] = markdown_to_html(body)
+            has_refs = bool(re.search(r"^##\s*(参考文献|引用文献|References)", body, re.M))
+            meta["_body_html"] = markdown_to_html(body, link_citations=has_refs)
             meta["_body_raw"] = body
             papers.append(meta)
 
