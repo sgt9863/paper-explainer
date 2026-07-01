@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1hh3QcjJaqscXmN27lD8H3HzW2OqNL7KP/vie
 level: practitioner
 date: 2026-07-01
 published: 2017
-tags: [生薬, QC・品質評価, 指紋分析, Q-marker, メソッド開発・QbD, レビュー]
+tags: [生薬, QC・品質評価, 指紋分析, Q-marker, メソッド開発・QbD, 製造法, レビュー]
 digest_tagline: 「性-効-成分」理論に基づくQ-marker(品質マーカー)概念とその確立アプローチを論じたQ-marker基礎レビュー
 digest_stats: [IF（2024）|13.8, 種別|Q-marker基礎レビュー, 中核概念|性-効-成分理論, 出典|Acta Pharm Sin B 2017, 提唱者|Liu ら]
 digest_points: [従来の薬局方の化学マーカー基準はTCMの臨床効果と必ずしも結びつかない——「多成分・多標的」の本質に合った品質評価系として「性-効-成分(property-effect-component)」理論に基づくQ-marker概念を提示, Q-marker確立は天然物化学・分析化学・バイオニクス・ケモメトリクス・薬理学・システム生物学・薬力学を統合し、成分の固有性・測定可能性・薬効関連性・処方構成/生合成経路・トレーサビリティを満たす成分を選定, 原料/飲片/中成薬→標準湯液(SDTS)→多分野解析→Q-marker→真偽鑑定＋多成分定量というTCM包括的品質管理システムを提案]
