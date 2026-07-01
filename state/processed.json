@@ -128,6 +128,12 @@
       "source_pdf": "BMC_bmae034.pdf",
       "date": "2026-07-01",
       "note": "duplicate upload of bmae034 (same paper as dgjz-uplc-qtof-fingerprint)"
+    },
+    "12evDsBDpM_3QA2cDXGeLLC6naeb9PFWi": {
+      "slug": "tcm-3d-integration-ml-qc",
+      "title": "三次元(3D)積分と機械学習による中薬(黄芩)のHPLC-DAD品質評価法",
+      "source_pdf": "1-s2.0-S0021967325001748-main.pdf",
+      "date": "2026-07-01"
     }
   }
 }
