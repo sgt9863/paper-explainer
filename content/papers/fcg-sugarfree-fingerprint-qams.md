@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.jpba.2026.117491
 source_pdf: 1-s2.0-S0731708526001597-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2026
 tags: [漢方, 中成薬, QC, 復方刺五加顆粒, 製剤設計, HPLC, QAMS, 指紋, 溶出]
 digest_tagline: AHP-エントロピー＋RSMで無糖造粒を最適化しHPLC指紋＋QAMSで原製剤との品質同等性を実証
 digest_stats: [IF（2024）|3.6, 対象|復方刺五加顆粒(FCG), 設計|AHP-Entropy＋RSM, 指標|8成分, 同等性|f2>50]

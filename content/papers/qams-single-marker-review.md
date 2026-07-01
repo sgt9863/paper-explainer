@@ -7,6 +7,7 @@ drive_file_id: 1-UKpyyJsOfIfouPZ1PhF9i9Lb8hRQTES
 drive_url: https://drive.google.com/file/d/1-UKpyyJsOfIfouPZ1PhF9i9Lb8hRQTES/view
 level: practitioner
 date: 2026-06-28
+published: 2017
 tags: [漢方, 生薬, QC, QAMS, 単一マーカー, レビュー, RCF]
 digest_tagline: 標準品1つで多成分を定量する「QAMS」の原理・手順・限界を総括したレビュー
 digest_stats: [IF（2024）|約3.0, 種別|総説, 中核|相対補正係数RCF, 採用|米・欧・中 薬局方, 許容誤差|RSD<5%]

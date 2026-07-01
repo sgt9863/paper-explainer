@@ -7,6 +7,7 @@ drive_file_id: 16-XjxAlqE1vmKSPUtqxg5OqUST0KkAY3
 drive_url: https://drive.google.com/file/d/16-XjxAlqE1vmKSPUtqxg5OqUST0KkAY3/view
 level: practitioner
 date: 2026-06-28
+published: 2025
 tags: [生薬, ハーブ, QC, フラボノイド, 指紋, メタボロミクス, Q-marker, レビュー]
 digest_tagline: フラボノイドをマーカーとするHM品質管理の戦略・技術・データ解析を俯瞰した総説
 digest_stats: [IF（2024）|2.7, 種別|総説, 対象期間|2017–2024, 戦略|4種, 技術|HPTLC／LC-MS]

@@ -5,6 +5,7 @@ doi: https://doi.org/10.1007/s00216-025-06180-9
 source_pdf: s00216-025-06180-9.pdf
 level: practitioner
 date: 2026-06-29
+published: 2025
 tags: [漢方, 中成薬, QC, 参消顆粒, Q-marker, 二次元LC, LC-MS, Q-TOF, 糖尿病性腎症]
 digest_tagline: オフライン2次元HILIC×RP LC/MS＋Q-TOF＋質量欠損フィルタで260成分を同定し12 Q-markerを選定
 digest_stats: [IF（2024）|4.2, 対象|参消顆粒(SXG), 同定|260成分(36標準品), Q-marker|12, ピーク容量|7161]

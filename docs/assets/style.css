@@ -256,6 +256,19 @@ figcaption {
 .fav-only { display: flex; align-items: center; gap: 7px; font-size: 0.9rem; cursor: pointer; }
 .fav-only input { cursor: pointer; }
 .index-sidebar .tagfilters { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0; }
+.sort-select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.88rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg, #fff);
+  color: inherit;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.index-meta .pubyear, .index-meta .ifval { margin-left: 8px; }
+.index-meta .ifval { font-variant-numeric: tabular-nums; }
 
 /* ------- ステータス select（read.js） ------- */
 .status-select {

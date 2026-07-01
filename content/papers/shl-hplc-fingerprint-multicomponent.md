@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.talanta.2011.04.059
 source_pdf: 1-s2.0-S0039914011003882-main.pdf
 level: practitioner
 date: 2026-07-01
+published: 2011
 tags: [漢方, 生薬, QC, 指紋分析, HPLC, DAD, 多成分定量, 双黄連, フラボノイド]
 digest_tagline: 双黄連口服液をHPLC指紋(45共通ピーク)＋11成分同時定量で総合評価し、単一成分QCの限界を示す
 digest_stats: [IF（2024）|6.1, 対象|双黄連口服液(SHL), 指紋|45共通ピーク, 同時定量|11成分, バッチ|同一業者10＋4業者, 類似度|>0.997（同一業者）]

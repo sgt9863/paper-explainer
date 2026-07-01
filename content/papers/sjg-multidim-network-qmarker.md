@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.jep.2021.114277
 source_pdf: 1-s2.0-S0378874121005043-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2021
 tags: [漢方, 生薬, QC, Q-marker, ネットワーク薬理, UPLC-MS, 糖尿病]
 digest_tagline: 配合／含量／活性／効能／安定性の5次元を「蜘蛛の巣」モデルで統合し参耆降糖顆粒のQ-markerを判別
 digest_stats: [IF（2024）|5.4, 対象|参耆降糖顆粒(SJG), 次元|5次元, 候補成分|30, Q-marker|12]

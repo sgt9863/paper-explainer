@@ -5,6 +5,7 @@ doi: https://doi.org/10.1016/j.talanta.2025.127661
 source_pdf: 1-s2.0-S003991402500147X-main.pdf
 level: practitioner
 date: 2026-06-29
+published: 2025
 tags: [漢方, 中成薬, QC, 複方甘草片, 指紋, HPLC, GC, UV, ケモメトリクス, SAM]
 digest_tagline: 面積＋保持時間の二重管理(IEQFM)とHPLC・GC・UV指紋のCRITIC融合で複方甘草片の品質を多次元評価
 digest_stats: [IF（2024）|6.1, 対象|複方甘草片(CLT), バッチ|35(3社), 定量|11成分, 手法|HPLC＋GC＋UV融合]

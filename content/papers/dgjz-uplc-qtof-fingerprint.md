@@ -7,6 +7,7 @@ drive_file_id: 1wJHf6YllbaYGnKBJ0sNzK3VG1gvpdSp9
 drive_url: https://drive.google.com/file/d/1wJHf6YllbaYGnKBJ0sNzK3VG1gvpdSp9/view
 level: practitioner
 date: 2026-06-28
+published: 2024
 tags: [漢方, 生薬, QC, UPLC, Q-TOF-MS, 指紋分析, 当帰建中湯]
 digest_tagline: 古典処方「当帰建中湯」をUPLC-Q-TOF-MSで網羅同定し指紋＋6成分定量で総合評価
 digest_stats: [IF（2024）|1.3, 同定|77成分, 指紋|18共通ピーク, 定量|6成分, バッチ|15ロット, 類似度|0.965–0.996]

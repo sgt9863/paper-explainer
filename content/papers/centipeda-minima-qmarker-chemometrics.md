@@ -5,6 +5,7 @@ doi: https://doi.org/10.1002/pca.3173
 source_pdf: Phytochemical_Analysis_2022_Liu_Centipeda_minima.pdf
 level: practitioner
 date: 2026-06-29
+published: 2022
 tags: [漢方, 生薬, QC, 鵝不食草, Q-marker, HPLC, 指紋, ケモメトリクス, ネットワーク薬理]
 digest_tagline: ケモメトリクス＋ネットワーク薬理＋分子ドッキングでセスキテルペンラクトン2成分をQ-markerに選定
 digest_stats: [IF（2024）|2.9, 対象|鵝不食草(C. minima), バッチ|EBSC27＋類似品10, 共通ピーク|35, Q-marker|2]

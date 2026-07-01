@@ -5,6 +5,7 @@ doi: https://doi.org/10.1002/bmc.70477
 source_pdf: Biomedical_Chromatography_2026_Fu_SHXXD.pdf
 level: practitioner
 date: 2026-06-29
+published: 2026
 tags: [漢方, 方剤, QC, 三黄瀉心湯, Q-marker, HPLC, 指紋, ケモメトリクス]
 digest_tagline: 大黄・黄連・黄芩の古典方剤をHPLC指紋＋ケモメトリクスで評価し6成分をQ-markerに同定
 digest_stats: [IF（2024）|1.9, 対象|三黄瀉心湯(SHXXD), 生薬|3種, 共通ピーク|24, Q-marker|6]
