@@ -70,3 +70,26 @@ SHXXDは金匱要略収載の古典方剤で、*Rheum palmatum*(大黄)・*Copti
 HPLC指紋とケモメトリクス(類似度・HCA・OPLS-DA)、ネットワーク薬理・分子ドッキングを統合し、SHXXDのバッチ間一貫性(24共通ピーク・平均類似度0.967)を確認、6成分(レイン・エピベルベリン・アロエエモジン・ウォゴニン・エモジン・クリソファノール)を代表的Q-markerとして同定・定量した。確立したQ-marker主導の指紋アプローチは、SHXXDの品質管理・標準化に実用的で信頼できる戦略を提供する。
 
 > 補足（実務的示唆）: 3生薬のシンプルな古典方剤でも、由来生薬ごと(大黄=アントラキノン類、黄連=アルカロイド類、黄芩=フラボン類)に代表成分を割り当ててQ-markerを選ぶ設計が要点。HPLC指紋(24共通ピーク・平均類似度0.967)でロット一貫性を担保しつつ、6成分の定量で要点を押さえる構成は実装しやすい。なおネットワーク薬理は虚血性脳卒中(IS)の文脈で行われており、SHXXD本来の主治とは異なる点に著者も留意している（Q-marker選定の補助的根拠）。
+
+
+## 図（原論文より）
+
+> 以下は原論文から抽出した主要な図。キャプションは訳者による要約。ネットワーク薬理・トランスクリプトーム関連の図(図1〜4)は本研究では補助的な参考情報と位置づけられている。
+
+![図1. 虚血性脳卒中の発現変動遺伝子(DEG)。(a) ボルケーノプロット、(b) クラスタヒートマップ、(c) Venn図。](assets/shxxd-hplc-fingerprint-qmarker/fig1.png)
+
+![図2. 成分–標的–経路の制御ネットワーク。(a) 成分-標的ネットワーク、(b) 標的PPIネットワーク(JUN/IL1B/PTGS2/CXCL2/TNF/NAMPT等)、(c) コア活性成分-主要標的-上位経路。](assets/shxxd-hplc-fingerprint-qmarker/fig2.jpeg)
+
+![図3. 主要標的の機能濃縮解析。(a) GO濃縮、(b) KEGGシグナル経路濃縮。](assets/shxxd-hplc-fingerprint-qmarker/fig3.png)
+
+![図4. SHXXD活性成分と主要標的タンパク質の分子ドッキング。](assets/shxxd-hplc-fingerprint-qmarker/fig4.jpeg)
+
+![図5. SHXXD 19バッチ(S1〜S19)と対照指紋(R)のHPLC指紋クロマトグラム(24共通ピーク)。](assets/shxxd-hplc-fingerprint-qmarker/fig5.jpeg)
+
+![図6. SHXXDと構成生薬のHPLCクロマトグラム。(A)黄芩、(B)黄連、(C)大黄、(D)SHXXD試料。](assets/shxxd-hplc-fingerprint-qmarker/fig6.jpeg)
+
+![図7. 19バッチの11共通ピークのクラスタリングヒートマップ。](assets/shxxd-hplc-fingerprint-qmarker/fig7.jpeg)
+
+![図8. OPLS-DA。(a)スコアプロット(95%信頼楕円)、(b)順列検定 R²=(0.0,0.266)/Q²=(0.0,−0.972)、(c)VIP。](assets/shxxd-hplc-fingerprint-qmarker/fig8.jpeg)
+
+![図9. 混合標準・SHXXD試料・陰性対照液のHPLCクロマトグラム(A〜E)。](assets/shxxd-hplc-fingerprint-qmarker/fig9.jpeg)
