@@ -673,10 +673,11 @@ def main():
     else:
         list_html = '<p class="empty">まだ解説はありません。夜間パイプラインが新着PDFを処理すると、ここに一覧が表示されます。</p>'
 
+    site_desc = config.get("site_description", "").strip()
     index_body = (
         f'<h1>{html.escape(site_title)}</h1>'
-        f'<p class="lead">{html.escape(config.get("site_description", ""))}</p>'
-        f'{list_html}'
+        + (f'<p class="lead">{html.escape(site_desc)}</p>' if site_desc else "")
+        + f'{list_html}'
     )
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(page_template(site_title, index_body, site_title, rel_root=".", extra_scripts=index_scripts))
