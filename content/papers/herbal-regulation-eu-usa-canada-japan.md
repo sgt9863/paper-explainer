@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1bd3HpiNp8YEYQq9dlSxSxbsj69_ApRDX/vie
 level: practitioner
 date: 2026-07-01
 published: 2023
-tags: [漢方, 生薬, 規制, 薬事, レビュー, EU, 米国, カナダ, 日本, ファーマコビジランス]
+tags: [生薬, 規制・薬事, レビュー]
 digest_tagline: EU・米国・カナダ・日本の生薬製品に対する薬事規制の枠組みを法令比較で整理したレビュー
 digest_stats: [誌|Acta Medica Bulgarica 2023, 種別|薬事規制の比較レビュー, EU|伝統生薬に専用登録制度, 米国・加|FD&C/食品医薬品法の枠内, 日本|生薬専用要件なし]
 digest_points: [生薬製品の規制はEU/米/加/日で大きく異なる——EUはDirective 2004/24/ECで「伝統生薬製品」の登録制度とEMAの生薬製品委員会(HMPC)を整備, 米国・カナダは生薬製品を独立カテゴリでなくFD&C Act／食品医薬品法の枠内で扱う。ファーマコビジランス体制(FDA有害事象報告／Canada Vigilance)も比較, 日本の法制度には生薬製品専用の要件がなく、医薬品／医薬部外品の枠組みで規制される]

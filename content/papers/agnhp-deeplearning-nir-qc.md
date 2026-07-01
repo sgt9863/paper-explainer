@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0378874125007822-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2025
-tags: [漢方, 中成薬, QC, 安宮牛黄丸, ネットワーク薬理, NIR, 深層学習, LC-MS]
+tags: [方剤・中成薬, QC・品質評価, 機械学習・データ処理, ネットワーク薬理, 質量分析, 分光法]
 digest_tagline: 抗炎症に効く7成分を活性指向で選び携帯NIR＋深層学習(BiGRU-MAR)で含量を高精度予測する安宮牛黄丸のQC体系
 digest_stats: [IF（2024）|5.4, 対象|安宮牛黄丸(AGNHP), 同定|36成分, 活性指標|7成分, モデル|BiGRU-MAR]
 digest_points: [LC-MS＋ネットワーク薬理＋PLSで抗炎症に寄与する7成分(胆汁酸類・アルカロイド類)を選定, ゼブラフィッシュ脳炎症・BV2細胞(TNF-α/IL-6)・遊泳行動で活性を検証, 携帯NIR＋深層学習BiGRU-MARで7成分含量を予測し胆汁酸3種でR²>0.9を達成]

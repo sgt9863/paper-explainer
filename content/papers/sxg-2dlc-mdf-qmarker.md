@@ -6,7 +6,7 @@ source_pdf: s00216-025-06180-9.pdf
 level: practitioner
 date: 2026-06-29
 published: 2025
-tags: [漢方, 中成薬, QC, 参消顆粒, Q-marker, 二次元LC, LC-MS, Q-TOF, 糖尿病性腎症]
+tags: [方剤・中成薬, QC・品質評価, Q-marker, 質量分析, HPLC・UPLC, 薬効・薬理]
 digest_tagline: オフライン2次元HILIC×RP LC/MS＋Q-TOF＋質量欠損フィルタで260成分を同定し12 Q-markerを選定
 digest_stats: [IF（2024）|4.2, 対象|参消顆粒(SXG), 同定|260成分(36標準品), Q-marker|12, ピーク容量|7161]
 digest_points: [オフライン直交2次元HILIC×RP LC/MS＋Q-TOF＋質量欠損フィルタ(MDF)で260成分を同定(SXG過去最多), 薬局方適合・腎保護薬理関連・コンセンサス指紋ピークの3次元枠組みで12 Q-markerを選定, バリデーションは精度RSD<5%・LOD 0.02-6.56 ng/mL・回収率84-119%]

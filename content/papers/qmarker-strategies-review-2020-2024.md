@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1tMaNlzfgM2DR51a9vVoynBQ3ONIxmon4/vie
 level: practitioner
 date: 2026-07-01
 published: 2025
-tags: [漢方, 生薬, QC, Q-marker, 総説, レビュー, ネットワーク薬理, スペクトル効果, 機械学習, ケモメトリクス]
+tags: [生薬, QC・品質評価, Q-marker, ケモメトリクス, 機械学習・データ処理, ネットワーク薬理, スペクトル効果, レビュー]
 digest_tagline: 2020–2024年の60研究からTCM処方のQ-marker選定戦略を4分類し、長所短所を比較して最適な統合アプローチを提案
 digest_stats: [IF|3.0（Front. Med.・Q1）, 種別|系統的レビュー, 対象|Q-marker選定戦略, 採用文献|60件（2020–2024）, 戦略|4分類]
 digest_points: [Q-marker選定戦略を4つに分類——S1機序駆動型検証(22件・36.67%)／S2プロファイル-効果相関(24件・40.00%)／S3 in silico事前フィルタ(8件・13.33%)／S4多基準意思決定(6件・10.00%), 約60処方の事例を戦略別に表化し、各戦略の長所・短所と平均Q-marker数(S1 7.23/S2 6.61/S3 8.25/S4 7.50)を比較, 血清/尿メタボロミクス＋PCMSモデリング＋TCM原則に基づく多次元スコアリングを組み合わせた統合的な最適アプローチを提案]

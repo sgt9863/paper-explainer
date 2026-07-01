@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0021967325006570-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2025
-tags: [漢方, 生薬, QC, 豨薟草, 指紋, HPLC, FTIR, 抗酸化, ケモメトリクス]
+tags: [生薬, QC・品質評価, 指紋分析, ケモメトリクス, 分光法, HPLC・UPLC, 薬効・薬理]
 digest_tagline: 5波長融合指紋＋比率定量指紋法(RSQFM)とHPLC・UV・FTIR融合・DPPH相関で豨薟草の品質を多次元評価
 digest_stats: [IF（2024）|3.8, 対象|豨薟草(SH), バッチ|22, 融合|HPLC＋UV＋FTIR, 定量|4成分]
 digest_points: [薬局方はキレノール1成分のみ→5波長融合指紋(FWFFP)＋比率系統定量指紋法(RSQFM)で全体評価, HPLC・UV・FTIRの量子指紋を等重み融合し22バッチを5〜6グレードに判別, 指紋−薬効相関(PLS)で抗酸化成分にクロロゲン酸・カフェ酸・ルチンを同定(DPPH IC50 0.24–0.59 mg/mL)]

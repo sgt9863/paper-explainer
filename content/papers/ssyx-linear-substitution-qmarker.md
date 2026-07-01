@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0944711325000212-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2025
-tags: [漢方, 中成薬, QC, 参松養心, Q-marker, UHPLC-MS, 心臓組織分布, ゼブラフィッシュ, 不整脈]
+tags: [方剤・中成薬, QC・品質評価, Q-marker, 質量分析, 薬効・薬理]
 digest_tagline: 化学プロファイル＋心臓組織分布＋不整脈ゼブラフィッシュを統合し線形置換法(LSM)で30成分を同時定量
 digest_stats: [IF（2024）|7.9, 対象|参松養心カプセル(SSYX), Q-marker|30成分, 定量|LSM(2標準液), モデル|不整脈ゼブラフィッシュ]
 digest_points: [化学プロファイル(UHPLC/Q-TOF)＋心臓組織分布＋不整脈ゼブラフィッシュを統合し30成分をQ-markerに選定, 特異性・処方→生体内の追跡性・有効性・配合適合性の4性質で評価, 線形置換法(LSM)で2本の標準液から30成分を同時定量しESMと有意差なし(回収率95.6-103.1%)]

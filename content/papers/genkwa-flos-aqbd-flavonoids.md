@@ -7,7 +7,7 @@ drive_file_id: 194SfBhehyrXdiaAPHGN9p6f-4VhTldkV
 level: practitioner
 date: 2026-07-01
 published: 2021
-tags: [漢方, 生薬, QC, 芫花, AQbD, QbD, UHPLC, フラボノイド, 実験計画法, メソッド開発]
+tags: [生薬, QC・品質評価, HPLC・UPLC, メソッド開発・QbD]
 digest_tagline: 分析的Quality by Design(AQbD)で芫花フラボノイド11成分のUHPLC法を体系的に開発——CMP選定→CCD→デザインスペース
 digest_stats: [IF（2024）|3.8, 対象|芫花(Genkwa Flos), 手法|AQbD(分析的QbD), 定量|11フラボノイド, 最終条件|28℃/335nm/0.35mL/min]
 digest_points: [AQbD(分析的Quality by Design)でLC法を体系開発——ATP(分析ターゲットプロファイル)設定→重要方法特性CMA(11フラボノイドの分離度)→リスクアセスメント(石川図), 因子スクリーニングでカラム温度と移動相勾配(solvent slope)を重要方法パラメータ(CMP)と特定→中心複合計画(CCD)＋応答曲面で最適化(最大Ysum=18.80・d=0.9868), 最終条件(C18 50×2.1 mm/1.7 µm・28℃・335 nm・0.35 mL/min・アセトニトリル/0.1%ギ酸グラジエント)でバリデーションを実施しデザインスペース内でロバストな定量法を確立]

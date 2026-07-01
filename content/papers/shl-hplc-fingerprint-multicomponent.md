@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1FlyWkwjMsSnTNbGn-cKT5rj9aH2noyHG/vie
 level: practitioner
 date: 2026-07-01
 published: 2011
-tags: [漢方, 生薬, QC, 指紋分析, HPLC, DAD, 多成分定量, 双黄連, フラボノイド]
+tags: [生薬, QC・品質評価, 指紋分析, 多成分定量, HPLC・UPLC]
 digest_tagline: 双黄連口服液をHPLC指紋(45共通ピーク)＋11成分同時定量で総合評価し、単一成分QCの限界を示す
 digest_stats: [IF（2024）|6.1, 対象|双黄連口服液(SHL), 指紋|45共通ピーク, 同時定量|11成分, バッチ|同一業者10＋4業者, 類似度|>0.997（同一業者）]
 digest_points: [指紋(45共通ピーク・基準=バイカリン)と11成分同時定量を併用し、単一〜数成分に頼る従来QCの限界を克服, HPLC-DADでフェニルプロパノイド4＋フラボノイド7の計11成分を同時定量（回収率96.0–101.1%・r>0.9995）, 4業者製品で含量が大きく変動（例：バイカリン66.5→154.5 mg/mL）。指紋＋多成分定量の併用が必須と結論]

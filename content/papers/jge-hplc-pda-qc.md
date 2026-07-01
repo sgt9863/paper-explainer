@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz/vie
 level: practitioner
 date: 2026-06-28
 published: 2025
-tags: [漢方, 生薬, QC, HPLC, 左帰飲, バリデーション]
+tags: [生薬, QC・品質評価, HPLC・UPLC]
 digest_tagline: 6生薬からなる漢方処方「左帰飲」のQC用にHPLC–PDA同時定量法を開発・検証
 digest_stats: [IF（2024）|4.8, 手法|HPLC–PDA, マーカー|9成分, 直線性|r²≥0.9980, 回収率|96.4–107%, 精度|RSD<1.20%]
 digest_points: [由来の異なる9成分を1法で同時定量（アラントインのみ別カラム）, グリチルリチンが最多（3.67–3.69 mg/g）, カラム温度40℃が最適／規格設定の基礎データを提供]

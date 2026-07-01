@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1-UKpyyJsOfIfouPZ1PhF9i9Lb8hRQTES/vie
 level: practitioner
 date: 2026-06-28
 published: 2017
-tags: [漢方, 生薬, QC, QAMS, 単一マーカー, レビュー, RCF]
+tags: [生薬, QC・品質評価, QAMS, レビュー]
 digest_tagline: 標準品1つで多成分を定量する「QAMS」の原理・手順・限界を総括したレビュー
 digest_stats: [IF（2024）|約3.0, 種別|総説, 中核|相対補正係数RCF, 採用|米・欧・中 薬局方, 許容誤差|RSD<5%]
 digest_points: [内部標準1成分＋RCFで他成分の含量を算出, 標準品・コスト・溶媒・時間を削減, RCFは装置／カラム／波長で変動するため頑健性確認が必須]

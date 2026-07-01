@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/1JnJ1rd7YLlV5vGK9Xxm4qmzjrpSUI08_/vie
 level: practitioner
 date: 2026-07-01
 published: 2024
-tags: [漢方, 中成薬, 丸剤, QC, 七制香附丸, HPLC, 指紋, QAMS, ケモメトリクス, 月経困難症]
+tags: [方剤・中成薬, QC・品質評価, 指紋分析, QAMS, ケモメトリクス, HPLC・UPLC, 薬効・薬理]
 digest_tagline: HPLC指紋(23共通ピーク)＋HCA/PCA/OPLS-DA＋QAMSで七制香附丸28バッチを評価し、QAMSとESMの一致を実証
 digest_stats: [IF（2024）|1.3, 対象|七制香附丸(QZXFPs), バッチ|28, 共通ピーク|23, QAMS定量|7成分, 類似度|0.916–1.000]
 digest_points: [28バッチのHPLC指紋(23共通ピーク・7成分同定・類似度0.916–1.000)を確立、HCA/PCA/OPLS-DA(R²X0.468・R²Y0.894・Q²0.742)で2群に判別, バイカリンを内部標準にQAMSで6成分を同時定量。相対補正係数(RCF)は装置/カラム/温度/流速の変動下でRSD<5%と頑健, QAMSと外部標準法(ESM)の相対誤差は5%以下で一致し、対照標準品不足・高コストの課題を解決]

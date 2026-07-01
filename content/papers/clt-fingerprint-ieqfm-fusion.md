@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S003991402500147X-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2025
-tags: [漢方, 中成薬, QC, 複方甘草片, 指紋, HPLC, GC, UV, ケモメトリクス, SAM]
+tags: [方剤・中成薬, QC・品質評価, 指紋分析, QAMS, ケモメトリクス, 分光法, HPLC・UPLC]
 digest_tagline: 面積＋保持時間の二重管理(IEQFM)とHPLC・GC・UV指紋のCRITIC融合で複方甘草片の品質を多次元評価
 digest_stats: [IF（2024）|6.1, 対象|複方甘草片(CLT), バッチ|35(3社), 定量|11成分, 手法|HPLC＋GC＋UV融合]
 digest_points: [ピーク面積＋保持時間を二重管理する「積分効率定量指紋法(IEQFM)」で類似度評価を高精度化, HPLC・GC・UVの3指紋をCRITIC法で客観重み付け融合し全体品質を多次元評価, 11成分を標準曲線法(SCM)・単一標準多成分法(SAM)・UVスペクトル予測の3法で定量]
