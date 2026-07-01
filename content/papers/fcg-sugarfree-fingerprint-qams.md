@@ -6,7 +6,7 @@ source_pdf: 1-s2.0-S0731708526001597-main.pdf
 level: practitioner
 date: 2026-06-29
 published: 2026
-tags: [方剤・中成薬, QC・品質評価, 指紋分析, QAMS, HPLC・UPLC, メソッド開発・QbD]
+tags: [方剤・中成薬, QC・品質評価, 指紋分析, QAMS, HPLC・UPLC, メソッド開発・QbD, 製造法]
 digest_tagline: AHP-エントロピー＋RSMで無糖造粒を最適化しHPLC指紋＋QAMSで原製剤との品質同等性を実証
 digest_stats: [IF（2024）|3.6, 対象|復方刺五加顆粒(FCG), 設計|AHP-Entropy＋RSM, 指標|8成分, 同等性|f2>50]
 digest_points: [現行QCはイソフラキシジン1成分のみ→無糖化＋HPLC指紋＋QAMSで多成分評価へ, AHP-エントロピー重み＋Box-Behnken RSMで造粒を最適化(複合賦形剤＋10%エタノール 成形性>96%), 無糖品は原製剤と指紋類似度>0.98・8成分RSD<4%・溶出f2>50で品質同等]
