@@ -189,3 +189,20 @@ LC-MSで成分を解析し、由来である牛黄・黄連から **計36成分*
 **結論:** AGNHPを対象に中成薬の完全なQC体系を構築。7つの主要活性成分を同定・検証し、BiGRU-MARモデルで含量定量の精度・効率を大幅に向上、実製品検証でQC指標の有効性・正確性を確認した。他の中成薬のQCにも新たな手法を提供し、TCM品質管理の標準化を促進する。
 
 > 補足（実務的示唆）: 本研究の枠組みは「活性指向で指標成分を選ぶ → ネットワーク薬理＋in vivo/in vitroで裏取り → 携帯NIR＋深層学習で日常的に含量を予測」という三段構え。実務的には、HPLC等の確定分析に対し、携帯NIR＋学習済みモデルを**スクリーニング/工程内モニタリング**に使い、逸脱が疑われるロットを確定分析に回す運用が想定される。ただしモデルの解釈性・外挿性(訓練範囲外のロットへの適用)には注意が必要で、定期的な再キャリブレーションが前提となる。なお朱砂(水銀)・雄黄(ヒ素)・麝香等を含む製剤であり、ここで扱う有機指標成分の管理は安全性管理(重金属等)とは別枠である点に留意。
+
+
+## 図（原論文より）
+
+> 以下は原論文から抽出した主要な図。キャプションは訳者による要約。
+
+![図1. 本研究の全体フレームワーク図。](assets/agnhp-deeplearning-nir-qc/fig1.jpeg)
+
+![図2. GRU(Gated Recurrent Unit)とMulti-Head Attentionの機構。](assets/agnhp-deeplearning-nir-qc/fig2.jpeg)
+
+![図3. ゼブラフィッシュ抗炎症活性とLC-MS強度の相関解析。(A)ゼブラフィッシュ脳炎症の可視化、(B)遊走細胞数、(C)VIP値、(D)予測値と実測値の対応。](assets/agnhp-deeplearning-nir-qc/fig3.jpeg)
+
+![図4. 実験検証結果。(A)分子ドッキング結果、(B)TNF-α濃度(n=6)、(C)IL-6濃度、(D)組織像。](assets/agnhp-deeplearning-nir-qc/fig4.jpeg)
+
+![図5. BiGRU-MARのフレームワーク図。](assets/agnhp-deeplearning-nir-qc/fig5.jpeg)
+
+![図6. 7種の主要成分の含量予測結果。](assets/agnhp-deeplearning-nir-qc/fig6.jpeg)
