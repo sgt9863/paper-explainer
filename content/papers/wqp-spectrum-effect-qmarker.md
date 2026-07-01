@@ -2,6 +2,8 @@
 title: スペクトル-効果関係とHPLC指紋による五味清濁丸(WQP)の抗炎症Q-marker同定
 slug: wqp-spectrum-effect-qmarker
 source_pdf: JChromatogrB_2026_Shi_Wuwei_Qingzhuo_Pill.pdf
+drive_file_id: 1MuUXH8IDqqxvVsXst7oRWfs6aCoCgzM9
+drive_url: https://drive.google.com/file/d/1MuUXH8IDqqxvVsXst7oRWfs6aCoCgzM9/view
 doi: https://doi.org/10.1016/j.jchromb.2025.124876
 level: practitioner
 date: 2026-07-01

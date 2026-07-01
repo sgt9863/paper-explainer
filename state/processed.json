@@ -103,6 +103,31 @@
       "source_pdf": "7dba3b73bmae034.pdf",
       "date": "2026-06-28",
       "note": "duplicate upload of bmae034 (same paper as dgjz-uplc-qtof-fingerprint)"
+    },
+    "12FnCfsks2pqHbE6M-OhJ40TTN-dL5KHn": {
+      "slug": "ggztm-hplc-fingerprint-qasm",
+      "title": "GGZTM(葛根止痛合剤)のHPLC指紋分析とQASMによる品質評価",
+      "source_pdf": "Separation_Science_Plus_2024_Xin_Gegen_Zhitong_Mixture_QC.pdf",
+      "date": "2026-07-01"
+    },
+    "1MuUXH8IDqqxvVsXst7oRWfs6aCoCgzM9": {
+      "slug": "wqp-spectrum-effect-qmarker",
+      "title": "五味清濁丸(WQP)のスペクトル-効果relationshipによるQ-marker探索",
+      "source_pdf": "JChromatogrB_2026_Shi_Wuwei_Qingzhuo_Pill.pdf",
+      "date": "2026-07-01"
+    },
+    "1FlyWkwjMsSnTNbGn-cKT5rj9aH2noyHG": {
+      "slug": "shl-hplc-fingerprint-multicomponent",
+      "title": "双黄連口服液(SHL)のHPLC指紋分析と11成分同時定量を組み合わせた品質評価法",
+      "source_pdf": "Talanta_2011_S0039914011003882.pdf",
+      "date": "2026-07-01"
+    },
+    "1zjW-LESWoV1aA7yNwoqHXIoIbxTY1MH6": {
+      "slug": "dgjz-uplc-qtof-fingerprint",
+      "title": "当帰建中湯（DGJZ）の指紋分析・多成分定量・UPLC-Q-TOF-MSによる総合的品質評価",
+      "source_pdf": "BMC_bmae034.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of bmae034 (same paper as dgjz-uplc-qtof-fingerprint)"
     }
   }
 }
