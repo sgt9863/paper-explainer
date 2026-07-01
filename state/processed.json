@@ -227,6 +227,76 @@
       "title": "薬用植物の分析法開発へのAQbDアプローチ（総説）",
       "source_pdf": "plants-11-02960.pdf",
       "date": "2026-07-01"
+    },
+    "1tAvRqq5Pl6fK9pTyP4UhuOtrpLAh9i3C": {
+      "slug": "shxxd-hplc-fingerprint-qmarker",
+      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
+      "source_pdf": "Biomedical Chromatography  2026  Fu  Fingerprint Analysis and Quality Marker Identification of Sanhuang Xiexin Decoction 1.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of shxxd-hplc-fingerprint-qmarker (doi 10.1002/bmc.70477)"
+    },
+    "1XlhcKzrrye-7brdnmfUZ6-LjyiGAdC-N": {
+      "slug": "mlstp-multistrategy-qmarker-qams",
+      "title": "脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築",
+      "source_pdf": "1s2.0S0731708524001109main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of mlstp-multistrategy-qmarker-qams (doi 10.1016/j.jpba.2024.116070)"
+    },
+    "11A1DShYV07DfhuP93cUP0IJ19YY43Xyv": {
+      "slug": "cqcqd-multistrategy-qmarker-pancreatitis",
+      "title": "柴芩承気湯(CQCQD)の品質管理とQ-marker選定のための多戦略プラットフォーム",
+      "source_pdf": "1s2.0S0944711321000672main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of cqcqd-multistrategy-qmarker-pancreatitis (doi 10.1016/j.phymed.2021.153525)"
+    },
+    "1OKV-VSS9vF-KO1BwDOoeugcDy6iumjqX": {
+      "slug": "sjg-multidim-network-qmarker",
+      "title": "多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として",
+      "source_pdf": "1s2.0S0378874121005043main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of sjg-multidim-network-qmarker (doi 10.1016/j.jep.2021.114277)"
+    },
+    "1knV4RAWRcNl52Uxqj-dy4uj1KNm790Vn": {
+      "slug": "ssyx-linear-substitution-qmarker",
+      "title": "線形置換法による多成分定量に基づく参松養心カプセル(SSYX)のQ-marker解明",
+      "source_pdf": "1s2.0S0944711325000212main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of ssyx-linear-substitution-qmarker (doi 10.1016/j.phymed.2025.156382)"
+    },
+    "11yxks6f2p5ILU7qrgeIi0p9uSACswB1n": {
+      "slug": "fcg-sugarfree-fingerprint-qams",
+      "title": "無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価",
+      "source_pdf": "1s2.0S0731708526001597main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of fcg-sugarfree-fingerprint-qams (doi 10.1016/j.jpba.2026.117491)"
+    },
+    "1PSA3oFNvSGhqFi67EBL705KwCpgbj_0h": {
+      "slug": "agnhp-deeplearning-nir-qc",
+      "title": "生物活性成分のスクリーニングと深層学習による安宮牛黄丸(AGNHP)の品質管理",
+      "source_pdf": "1s2.0S0378874125007822main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of agnhp-deeplearning-nir-qc (doi 10.1016/j.jep.2025.120095)"
+    },
+    "1AeEStWRuLkB57_scqnl6Rq7FsGy0sws-": {
+      "slug": "zqfz-ftia-bes-fingerprint-efficacy",
+      "title": "全波長HPLC指紋＋二元評価系とケモメトリクスによる生薬の品質−薬効管理 — 貞芪扶正製剤(ZQFZ)",
+      "source_pdf": "1s2.0S0021967325007435main.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of zqfz-ftia-bes-fingerprint-efficacy (doi journal of chromatography A 1761 (2025) 466399)"
+    },
+    "1yJBzHJ_0J2yM8sxH7CIckjNdXnjFH6Qd": {
+      "slug": "tcm-3d-integration-ml-qc",
+      "title": "三次元(3D)積分と機械学習による中薬(黄芩)のHPLC-DAD品質評価法",
+      "source_pdf": "1s2.0S0021967325001748main 1.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of tcm-3d-integration-ml-qc (journal of chromatography A 1747 (2025) 465826)"
+    },
+    "1phiMrncVrm13KiGrflfWwoPxNHgleABj": {
+      "slug": "centipeda-minima-qmarker-chemometrics",
+      "title": "ケモメトリクス・ネットワーク薬理・分子ドッキングに基づく漢方のQ-marker探索 — 鵝不食草(Centipeda minima)を例として",
+      "source_pdf": "Phytochemical Analysis  2022  Liu  Discovery of potential Q‐marker of traditional Chinese medicine based on chemical 1.pdf",
+      "date": "2026-07-01",
+      "note": "duplicate upload of centipeda-minima-qmarker-chemometrics (doi 10.1002/pca.3173)"
     }
   }
 }
