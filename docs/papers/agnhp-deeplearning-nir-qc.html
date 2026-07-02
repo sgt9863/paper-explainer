@@ -16,7 +16,7 @@
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
 </header>
-<main class="container">
+<div class="layout"><main class="container">
 <article class="paper" data-slug="agnhp-deeplearning-nir-qc"><h1>生物活性成分のスクリーニングと深層学習による安宮牛黄丸(AGNHP)の品質管理</h1><div class="paper-meta"><span class="date">2026-06-29</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">機械学習・データ処理</span> <span class="tag">ネットワーク薬理</span> <span class="tag">質量分析</span> <span class="tag">分光法</span> &middot; <a href="https://doi.org/10.1016/j.jep.2025.120095" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0378874125007822-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="agnhp-deeplearning-nir-qc" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="agnhp-deeplearning-nir-qc" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/agnhp-deeplearning-nir-qc/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/agnhp-deeplearning-nir-qc/ai-infographic.webp" alt="抗炎症に効く7成分を活性指向で選び携帯NIR＋深層学習(BiGRU-MAR)で含量を高精度予測する安宮牛黄丸のQC体系" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>原題: Screening of bioactive compounds and deep learning-driven quality control of Angong Niuhuang pills</li><li>著者: Mengyin Tian, Xiaobo Ma, Lei Nie, Hengchang Zang（山東大学薬学院 NMPA薬物製品技術研究評価重点実験室／国家糖工程研究センター ほか, 中国）</li><li>掲載: <em>Journal of Ethnopharmacology</em> 351 (2025) 120095. https://doi.org/10.1016/j.jep.2025.120095</li><li>インパクトファクター: <strong>5.4</strong>（<em>Journal of Ethnopharmacology</em>, JCR 2024 / Clarivate）</li><li>受理経過: 受領 2025-02-12 / 改訂 2025-05-30 / 採録 2025-06-02 / オンライン公開 2025-06-07</li></ul>
@@ -136,12 +136,23 @@
 <p><strong>結論:</strong> AGNHPを対象に中成薬の完全なQC体系を構築。7つの主要活性成分を同定・検証し、BiGRU-MARモデルで含量定量の精度・効率を大幅に向上、実製品検証でQC指標の有効性・正確性を確認した。他の中成薬のQCにも新たな手法を提供し、TCM品質管理の標準化を促進する。</p>
 <blockquote>補足（実務的示唆）: 本研究の枠組みは「活性指向で指標成分を選ぶ → ネットワーク薬理＋in vivo/in vitroで裏取り → 携帯NIR＋深層学習で日常的に含量を予測」という三段構え。実務的には、HPLC等の確定分析に対し、携帯NIR＋学習済みモデルを<strong>スクリーニング/工程内モニタリング</strong>に使い、逸脱が疑われるロットを確定分析に回す運用が想定される。ただしモデルの解釈性・外挿性(訓練範囲外のロットへの適用)には注意が必要で、定期的な再キャリブレーションが前提となる。なお朱砂(水銀)・雄黄(ヒ素)・麝香等を含む製剤であり、ここで扱う有機指標成分の管理は安全性管理(重金属等)とは別枠である点に留意。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="danshen-hplc-nir-chemometrics.html">丹参(Danshen)の産地別品質評価・モニタリング — HPLC-DAD＋NIR＋ケモメトリクス統合</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">分光法</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qmarker-strategies-review-2020-2024.html">伝統中薬のQ-marker(品質マーカー)同定戦略：2020–2024年研究の系統的レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">ネットワーク薬理</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="sjg-multidim-network-qmarker.html">多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として</a><span class="rel-tags"><span class="rel-tag">ネットワーク薬理</span><span class="rel-tag">質量分析</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="tcm-3d-integration-ml-qc.html">三次元(3D)積分と機械学習による中薬(黄芩)のHPLC-DAD品質評価法</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
+<aside class="notes" id="notesPanel" data-slug="agnhp-deeplearning-nir-qc" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
 <footer class="site-footer">
   <p>自動生成: paper-explainer パイプライン</p>
 </footer>
 
 <script src="../assets/read.js" defer></script>
 <script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
 <script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>

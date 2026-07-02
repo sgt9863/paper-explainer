@@ -71,6 +71,10 @@ python3 -m http.server 8000 --directory docs
   ページを開いても自動では既読にしない）。一覧は **左サイドバー**（`index.js`）でカテゴリ（タグ）・ステータス（すべて/未読/読み途中/既読）・
   ★お気に入りのみ・キーワード検索を合成して絞り込み、既読/読み途中/★の件数を表示する。各項目・論文ページの
   `data-slug` と `.status-select` / `.fav-toggle` を各スクリプトが拾う仕組み。read.js は旧 `read.v1`(boolean) を `read` として移行する。
+- 各論文ページの右サイドバーに **メモ欄**（`docs/assets/notes.js`）が付く（一覧には付けない）。入力は自動保存（デバウンス）で
+  既定は localStorage 保存（`paperExplainer.notes.v1`）。`window.PaperNotes`（get/set/getAll/replaceAll）と `noteschange` イベントを公開し、
+  将来のクラウド同期（ログイン）モジュールが `replaceAll()` で他端末のメモを流し込み、`noteschange` を購読して push できる設計。
+  メモパネルは build_site.py の `notes_panel_html` が出力し、`page_template(notes_slug=...)` で有効化する。
 - 各論文ページには **AI質問サイドバー**（`docs/assets/chat.js`）が付く。論文本文を JSON で埋め込み、
   ブラウザから直接 Anthropic API を呼ぶ（APIキーは利用者の localStorage 保存・リポジトリには持たない）。
   挙動は `config.json` の `chat`（`enabled`/`default_model`/`models`/`max_tokens`）で制御。一覧ページには付けない。

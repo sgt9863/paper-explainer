@@ -276,15 +276,37 @@ def chat_panel_html() -> str:
 """
 
 
-def page_template(title, body, site_title, rel_root=".", chat=None, extra_scripts="", og_image="", description="", enable_math=False):
+def notes_panel_html(slug: str) -> str:
+    """論文ページ右側に差し込むメモパネル（notes.js が localStorage 保存・将来クラウド同期）。"""
+    s = html.escape(slug)
+    return f"""
+<aside class="notes" id="notesPanel" data-slug="{s}" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+"""
+
+
+def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=None, extra_scripts="", og_image="", description="", enable_math=False):
     """chat = {"config": <chat config dict>, "paper": {title, content, slug}} を渡すと
     AIチャットサイドバー付きの2カラムレイアウトで出力する。
+    notes_slug を渡すと右サイドバーにメモ欄（notes.js）を出す。
     enable_math=True で KaTeX(CDN・クライアント側) を読み込み $...$ / $$...$$ を数式レンダリングする。"""
     head_extra = ""
     chat_aside = ""
     chat_scripts = ""
+    notes_aside = ""
+    notes_scripts = ""
     math_head = ""
     math_scripts = ""
+    if notes_slug:
+        notes_aside = notes_panel_html(notes_slug)
+        notes_scripts = f'<script src="{rel_root}/assets/notes.js" defer></script>'
     if enable_math:
         math_head = (
             '\n<link rel="stylesheet" '
@@ -307,9 +329,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
         )
     main_open, main_close = "<main class=\"container\">", "</main>"
     if chat:
-        main_open = '<div class="layout"><main class="container">'
         chat_aside = chat_panel_html()
-        main_close = "</main>" + chat_aside + "</div>"
         # </script> 等でスクリプトタグを抜けられないよう "</" をエスケープ
         paper_json = json.dumps(chat["paper"], ensure_ascii=False).replace("</", "<\\/")
         config_json = json.dumps(chat["config"], ensure_ascii=False).replace("</", "<\\/")
@@ -318,6 +338,9 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
             f'<script type="application/json" id="chat-config">{config_json}</script>\n'
             f'<script src="{rel_root}/assets/chat.js" defer></script>'
         )
+    if chat or notes_slug:
+        main_open = '<div class="layout"><main class="container">'
+        main_close = "</main>" + chat_aside + notes_aside + "</div>"
     og = (
         f'<meta property="og:type" content="article">\n'
         f'<meta property="og:title" content="{html.escape(title)}">\n'
@@ -350,6 +373,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, extra_script
 {chat_scripts}
 <script src="{rel_root}/assets/read.js" defer></script>
 <script src="{rel_root}/assets/fav.js" defer></script>
+{notes_scripts}
 {math_scripts}
 {extra_scripts}
 </body>
@@ -627,6 +651,7 @@ def main():
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(page_template(
                 p.get("title", p["slug"]), body, site_title, rel_root="..", chat=chat,
+                notes_slug=p["slug"],
                 og_image=og_image, description=p.get("summary", ""), enable_math=True,
             ))
 
