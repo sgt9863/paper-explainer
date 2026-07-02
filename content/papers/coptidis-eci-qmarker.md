@@ -20,7 +20,7 @@ summary: 黄連(Coptidis Rhizoma)を対象に、抗赤痢菌・抗HepG2細胞と
 
 - 原題: Promotion of quality standard of Chinese herbal medicine by the integrated and efficacy-oriented quality marker of Effect-constituent Index
 - 著者: Yin Xiong, Yupiao Hu, Fan Li, Lijuan Chen, Qin Dong, Jiabo Wang, Elizabeth A. Gullen, Yung-Chi Cheng, Xiaohe Xiao
-- 所属: 昆明理工大学 生命科学技術学院（中国）／北京中医薬大学 中薬学院（中国）／中国人民解放軍総医院第五医学中心（原・302軍医院）中国軍事医学科学院 中薬研究所（中国）／エール大学医学部 薬理学科（米国）
+- 所属: 昆明理工大学 生命科学技術学院（中国）／北京中医薬大学 中薬学院（中国）／中国人民解放軍中薬研究所（302軍医院、北京）（中国）／エール大学医学部 薬理学科（米国）
 - 掲載誌・巻号・DOI: *Phytomedicine* 45 (2018) 26–35. https://doi.org/10.1016/j.phymed.2018.03.013
 - インパクトファクター: **約7.9**（*Phytomedicine*, JCR 2024 / Clarivate。出典により6.7〜8.8と幅があり要確認）
 - 受理経過: 受領 2017-07-23 ／ 改訂受領 2018-01-10 ／ 採録 2018-03-07
