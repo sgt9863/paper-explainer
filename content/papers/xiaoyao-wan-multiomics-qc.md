@@ -5,7 +5,7 @@ source_pdf: 1-s2.0-S0731708523006799-main.pdf
 doi: https://doi.org/10.1016/j.jpba.2023.115910
 level: practitioner
 date: 2026-07-02
-tags: [方剤・中成薬, 質量分析, 指紋分析, 多成分定量]
+tags: [方剤・中成薬, 質量分析, 指紋分析, QC・品質評価]
 digest_tagline: UPLC-Q-Orbitrap-MS＋HS-SPME-GC-MS＋HS-GC-IMSの三法統合で逍遥丸299成分を同定し10社のPRM定量とPCA/HCAで品質差を可視化
 digest_stats: [IF（2024）|3.6, 同定成分数|299成分（不揮発198＋揮発101）, 標準品照合|47成分, PRM定量対象|14成分, 対象メーカー数|10社]
 digest_points: [UPLC-Q-Orbitrap-MSで198の不揮発性成分／HS-SPME-GC-MSとHS-GC-IMSで計101の揮発性成分を同定し計299成分を特性解析, PCA・HCAにより10社の逍遥丸がS1・S2・S6・S8群とS3・S4・S5・S7・S9・S10群の2大トレンドに分かれることを可視化, 調整PRM法で芍薬苷など14成分を同時定量しR2>0.999・LOD 0.03-6.13 ng/mL・回収率84.86-105.09%を達成]
