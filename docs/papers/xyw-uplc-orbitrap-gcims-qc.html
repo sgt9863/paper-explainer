@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UPLC-Q-Orbitrap-MS・HS-SPME-GC-MSおよびHS-GC-IMSによる逍遥丸(Xiaoyao Wan)の多成分包括的キャラクタリゼーションと品質評価</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="UPLC-Q-Orbitrap-MS・HS-SPME-GC-MSおよびHS-GC-IMSによる逍遥丸(Xiaoyao Wan)の多成分包括的キャラクタリゼーションと品質評価">
+<meta property="og:description" content="中医方剤の逍遥丸（XYW）についてUPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMSを統合した戦略で不揮発198成分・揮発101成分の計299成分を同定/推定同定し10社のXYW製剤をPCA・HCAで比較、調整型PRM法により14指標成分を高精度に同時定量して製造所間の品質差を明らかにした研究の全訳（＋訳者補足）。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/xyw-uplc-orbitrap-gcims-qc/slide.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="xyw-uplc-orbitrap-gcims-qc"><h1>UPLC-Q-Orbitrap-MS・HS-SPME-GC-MSおよびHS-GC-IMSによる逍遥丸(Xiaoyao Wan)の多成分包括的キャラクタリゼーションと品質評価</h1><div class="paper-meta"><span class="date">2026-07-03</span> <span class="tag">方剤・中成薬</span> <span class="tag">HPLC・UPLC</span> <span class="tag">質量分析</span> <span class="tag">多成分定量</span> <span class="tag">指紋分析</span> <span class="tag">ケモメトリクス</span> <span class="tag">QC・品質評価</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2023.115910" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0731708523006799-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="xyw-uplc-orbitrap-gcims-qc" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="xyw-uplc-orbitrap-gcims-qc" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/xyw-uplc-orbitrap-gcims-qc/slide.png" target="_blank" rel="noopener"><img src="assets/xyw-uplc-orbitrap-gcims-qc/slide.png" alt="UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMSの3技術で逍遥丸(XYW)299成分を同定し10社製剤のPRM多成分定量で品質差を可視化" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文の構成・節立てに沿って訳出（原文の章立てに合わせ、材料と方法→結果と考察の順）。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Comprehensive multicomponent characterization and quality assessment of Xiaoyao Wan by UPLC-Q-Orbitrap-MS, HS-SPME-GC-MS and HS-GC-IMS</li><li>著者・所属: Jiaxin Yin, Tong Wu, Beibei Zhu, Pengdi Cui, Yang Zhang, Xue Chen, Hui Ding, Lifeng Han, Songtao Bie, Fangyi Li, Xinbo Song, Heshui Yu（責任著者）, Zheng Li（責任著者）（天津中医薬大学 中薬制薬工程学院／中薬組分の国家重点実験室／現代中医薬海河実験室、中国）</li><li>掲載誌・巻号・DOI: <em>Journal of Pharmaceutical and Biomedical Analysis</em> 239 (2024) 115910. https://doi.org/10.1016/j.jpba.2023.115910（受理: 2023年12月5日、オンライン公開: 2023年12月13日）</li><li>インパクトファクター: <strong>3.6</strong>（<em>J. Pharm. Biomed. Anal.</em>, JCR 2024 / Clarivate）</li><li>受理経過 / ライセンス: Received 26 September 2023; Received in revised form 2 December 2023; Accepted 5 December 2023; Available online 13 December 2023。© 2023 Elsevier B.V. All rights reserved.</li></ul>
+<blockquote>補足: 逍遥丸（Xiaoyao Wan, XYW）は、『太平恵民和剤局方』を出典とする古典方剤「逍遥散」の丸剤（製剤）形態で、柴胡（radix bupleuri）・芍薬（Paeonia lactiflora）・当帰（angelica sinensis）・白朮（atractylodes macrocephala）・甘草（liquorice）・薄荷（mentha haplocalyx）・茯苓（poria cocos）・生姜（ginger）の8味からなる。「疏肝解鬱・健脾養血」の効能を持ち、うつ病治療で広く用いられる代表的な処方の一つ。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>逍遥丸（XYW）は、「肝を疏し鬱を解く（soothing the liver and relieving depression）」「脾を強め血を養う（strengthening spleen and nourishing blood）」の効能を持つ中医方剤の処方薬である。XYWはうつ病治療において広く注目され、臨床でよく用いられる古典的な処方の一つとなっている。しかし、XYWの薬効物質基盤や品質管理の研究はこれまで極めて限られていた。本研究では、高度な超高速液体クロマトグラフィー-四重極-Orbitrap質量分析（UPLC-Q-Orbitrap-MS）、ヘッドスペース固相マイクロ抽出-ガスクロマトグラフィー質量分析（HS-SPME-GC-MS）、およびヘッドスペース-ガスクロマトグラフィー-イオン移動度分析（HS-GC-IMS）技術を十分に活用し、XYWの薬理学的物質基盤を深く特徴づけ、品質を定量的に評価することを目的とした。まず、299化合物が同定または暫定的に特徴づけられ、これには198の不揮発性有機化合物（n-VOCs）と101の揮発性有機化合物（VOCs）が含まれた。次に、主成分分析（PCA）および階層クラスター分析（HCA）を用いて、異なる製造所のXYWにおける品質差を解析した。第三に、並行反応モニタリング（PRM）法を確立・バリデーションし、異なる製造所のXYWにおける14の主要有効物質を同時定量した。これらはXYWの品質評価のためのベンチマーク物質として選択された。結論として、本研究は本戦略が中医薬（TCM）の品質管理に有用な方法を提供し、TCMの品質一貫性を探索するための実用的なワークフローを提供することを示している。</p>
+<hr>
+<h2>1. 序論（Introduction）</h2>
+<p>近年、中医方剤製剤（TCMFPs）は、その長い歴史、正確な有効性、比較的少ない副作用のため、世界中でますます注目を集めている [1]。逍遥散は『太平恵民和剤局方』を出典とする古典的処方であり、柴胡（radix bupleuri, RB）、芍薬（Paeonia lactiflora, PL）、当帰（angelica sinensis, AS）、白朮（atractylodes macrocephala, AM）、甘草（liquorice, L）、薄荷（mentha haplocalyx, MH）、茯苓（poria cocos, PC）、生姜（ginger, G）の8味の中薬から構成される。肝脾を調え、肝鬱を解し、血を養い脾を強める機能を持つ。逍遥丸は逍遥散の一製剤形態である。近年、XYWはうつ病治療において広く注目を集めている [2,3]。さらに、臨床データおよび関連研究により、XYWがうつ病に対して正確な有効性を持ち、うつ病治療でよく用いられる古典的処方の一つとなっていることが示されている [4,5]。しかし既存の研究の多くは、XYWが抗うつ効果を発揮する機序の研究に焦点を当てている。これらの研究は、XYWの治療効果によって調節される経路・機序を解明している [6,7]。また別の大多数の研究者はメタボロミクス手法を用いて代謝マーカーを研究し、うつ病治療におけるXYWの臨床応用のためのバイオマーカーを発見している [8–10]。以上の研究はXYWが抗うつ効果を発揮する機序を説明・証明すると同時に、臨床うつ病の早期診断のためのバイオマーカーも発見している。品質の一貫性は常にTCMの関心事であり、TCMの効能の鍵はその品質を管理して薬効を確保することにある。残念ながら、報告されている研究の中には、XYWの物質基盤特徴づけおよび多成分品質管理法に関する研究はほとんどない。さらに、中国薬局方はXYWの品質を芍薬苷（paeoniflorin）を検出指標として評価することのみを規定している。これまでのところ、XYWの品質管理法は包括的ではなく、包括的な品質管理戦略を欠いている。したがって、TCMFPsにおける多成分の品質一貫性評価を実現するための、合理的かつ効果的な定性・定量戦略の確立が急務である。</p>
+<p>技術の進歩と発展に伴い、クロマトグラフィーおよび質量分析技術は、TCM中の物質の特徴づけにおける主要な測定ツールとなっている。近年、液体クロマトグラフィーを分離システムとし質量分析を検出システムとする液体クロマトグラフィー-質量分析法（LC-MS）が発展してきた。LC-MSはクロマトグラフィーの複雑試料に対する高い分離能力と、MSの高選択性・高感度・分子量および構造情報を提供できる利点という、クロマトグラフィーと質量分析の相補的な利点を体現している [11]。TCMFPsにおいて広く用いられている [12–14]。GC-MSは複雑系におけるVOCsの検出において強力な分離・同定機能を持つ。しかし薬物マトリックスの複雑さのため、試料の抽出過程は複雑かつ時間がかかり、迅速な検出を制限する。GC-MSを基礎として、HS-SPME-GC-MSはヘッドスペース固相マイクロ抽出の抽出・濃縮技術を統合し、試料前処理法を簡素化して迅速かつ非破壊的な試料検出を実現する [16,17]。HS-GC-IMSは新しい気相分離・検出技術である。この技術はGCの高い分離能力とIMSの迅速な応答性を組み合わせている [18]。HS-GC-IMSはそのグリーンさ、高感度、試料前処理不要、迅速な測定という特長から、TCM・臨床・食品・環境分析で広く用いられている [19]。そこで本研究では、HS-SPME-GC-MSおよびHS-GC-IMSを用いてXYWのVOCsを包括的に特徴づけた。HS-GC-IMSは通常VOCsの小分子を検出し、これはHS-SPME-GC-MSが中分子のVOCsしか捕捉できないという欠点を補う。定性的には、UPLC-Q-Orbitrap-MS、HS-SPME-GC-MS、HS-GC-IMSを組み合わせ、n-VOCsおよびVOCsの両面からXYWの薬理学的物質基盤を包括的に特徴づける戦略を確立した。</p>
+<p>定量的には、UPLC-Q-Orbitrap-MSと並行反応モニタリング（PRM）を組み合わせた手法を確立し、XYW中の14の主要有効物質を定量した。従来の選択反応モニタリング（SRM）法と比較して、PRMはより広い質量範囲において複数成分の同時検出の特異性を向上させることができ、検出干渉の影響を最小限に抑えられる [20]。さらに、PRMはすべての変換を同時に検出でき、データ処理作業を軽減し、データ解析効率を向上させることができる。PRMにおける複数成分の同時定量精度を向上させるため、エネルギーレベルを調整した。調整後のPRMは、乏しいパラメータを用いることで含量の多い成分の応答を抑制し、最適なパラメータを用いることで微量物質の応答を促進することができる [21]。この戦略により、XYW中の14の薬理学的活性成分を同時に定量した。</p>
+<p>本研究では、UPLC-Q-Orbitrap-MS、HS-SPME-GC-MS、HS-GC-IMSを用いた包括的な戦略を確立した。合計299化合物が同定または暫定的に特徴づけられた。同時に、47化合物がさらに標準品によって確認された。PCAおよびHCAデータは、異なる製造所間でXYWの品質が異なることを示している。さらに、UPLC-Q-Orbitrap-MSとPRMを組み合わせて、XYWにおける多成分品質評価のための豊富量および微量成分の同時モニタリングを行った。本研究のデータは、XYWの多成分品質管理のための基盤と参照を提供する。同時に、本戦略はTCM品質の一貫性を探索するための実用的なワークフローを提供する。実験プログラムの模式図をFig. 1に示す。</p>
+<figure><img src="assets/xyw-uplc-orbitrap-gcims-qc/fig1.png" alt="Fig. 1. XYW薬理学的物質基盤の特徴づけとシステム品質管理研究の技術ロードマップ。" loading="lazy"><figcaption>Fig. 1. XYW薬理学的物質基盤の特徴づけとシステム品質管理研究の技術ロードマップ。</figcaption></figure>
+<hr>
+<h2>2. 材料と方法（Materials and Methods）</h2>
+<h3>2.1. 材料と試薬</h3>
+<p>11種のフラボノイド（1 カテキン, 2 リクイリチン, 3 L-エピカテキン, 4 ヘスペリジン, 5 イソリクイリチンアピオシド, 6 リクイリチゲニン, 7 クエルセチン, 8 カリコシン, 9 イソリクイリチゲニン, 10 リコフラノクマリン, 11 リクイリチンアピオシド）、7種の有機酸（12 クエン酸, 13 プロトカテク酸, 14 プロトカテクアルデヒド, 15 クロロゲン酸, 16 カフェイン酸, 17 フェルラ酸, 18 3,5-O-ジカフェオイルキナ酸）、3種のサポニン（19 サイコサポニンA, 20 サイコサポニンC, 21 サイコサポニンD）、3種のラクトン（22 アトラクチレノリドI, 23 アトラクチレノリドII, 24 アトラクチレノリドIII）、4種のブチルフタリド（25 センキュノリドI, 26 センキュノリドC, 27 E-リグスチリド, 28 Z-リグスチリド）、2種のテルペノイド（29 ヒドロキシパエオニフロリン, 30 グリチルリチン酸）、11種の配糖体（31 グアノシン, 32 1,3-O-ジカフェオイルキナ酸, 33 アルビフロリン, 34 パエオニフロリン, 35 ムータンピオシドE, 36 オノニン, 37 ベンゾイルパエオニフロリン, 38 ベンゾイルアルビフロリン, 39 ムータンピオシドD, 40 ムータンピオシドH, 41 アトラクチロシドA）、その他（42 シリンギン, 43 クエルシトリン, 44 リコアグロカルコンB, 45 センキュノリドH, 46 センキュノリドA, 47 レビストリドA）の合計47の標準品は、上海源葉生物科技有限公司（中国上海）より提供された。ギ酸（ACS, Wilmington, DE, USA）、メタノールおよびHPLCグレードのアセトニトリル（Fisher, Fair lawn, NJ, USA）を使用した。超純水はWatsons Trademark Co., Ltd（中国香港）より購入した。XYWは10の異なる製造所から購入し、S1, S2, S3, S4, S5, S6, S7, S8, S9, S10として表記した。HS-SPME-GC-MSのノルマルアルカンC8-C20はSigma Aldrich Chemical Co., Ltd.（Missouri, USA）より、HS-GC-IMSの保持指数（RI）算出用標準混合物N-ケトンC4-C9は国薬集団化学試薬有限公司（中国上海）より購入した。</p>
+<h3>2.2. 試料調製</h3>
+<p>異なる製造所のXYW試料を粉砕し、100メッシュ篩でろ過した。等量添加法を用いて品質管理（QC）試料を調製した。0.5 g精密に量ったXYW試料を5 mLの水で希釈した。超音波補助で水浴中20分間処理した後、75%メタノールを加えて10 mLに定容し、2分間ボルテックスした。試料を16,000 rpmで10分間遠心分離した後、上清をXYWの多成分特徴づけ用の試験溶液とした。HS-SPME-GC-MSおよびHS-GC-IMS用試料は前処理を必要としない。1.0 g精密に量ったXYW試料を20 mLのヘッドスペース注入バイアルに加え試料検出を行った。</p>
+<h3>2.3. 標準溶液</h3>
+<p>14の定量対象物質のストック溶液を75%メタノールで1 mg/mLの濃度に調製した。次に、ストック溶液を75%メタノールで希釈して検量線検出用の一連の濃度を調製した。すべての溶液は4℃で保管し、以後の解析に用いた。</p>
+<h4>2.3.1. 定性分析のためのUPLC-Q-Orbitrap-MS条件</h4>
+<p>UPLC-Q-Orbitrap-MSシステムは、Q Exactive™ハイブリッド四重極-Orbitrap質量分析計（Thermo Fisher Scientific, San Jose, CA, USA）とWaters I Class ACQUITY™ UPLCシステム（Waters Corporation, Milford, MA, USA）を装備した [22]。クロマトグラフィーカラムはACQUITY UPLC® BEH C18（2.1 × 100 mm, 1.7 µm, Waters, USA）を35℃で使用した。0.1%ギ酸水溶液（A）とアセトニトリル（B）を溶離液として用い、溶出手順は以下の通りとした: 0–3分, 95%A–95%A; 3–12分, 95%A–77%A; 12–17分, 77%A–71%A; 17–25分, 71%A–55%A; 25–30分, 55%A–5%A。</p>
+<p>流速0.3 mL/min、注入量1 µLで効率的かつ対称的なピークが得られた。Q-Orbitrap質量分析計は、HESI源の正・負両イオンモードで同時に動作した。HESI源パラメータは以下の通り設定した: スプレー電圧, 3.0 kV; キャピラリー温度, 350 ℃; 補助ガスヒーター温度, 400 ℃; 補助ガス流量, 8 arb; シースガス流量, 35 arb; 規格化衝突エネルギー（NCE）10/20/30 V。フルMS/ddMS2（TopN）スキャン法を用いてXYWの組成を特徴づけ、フルスキャン範囲はm/z 100–1000とした。データ処理はCompound Discoverer™ 3.3（Thermo Fisher Scientific）およびXcalibur 4.1（Thermo Fisher Scientific）で実施した。</p>
+<h4>2.3.2. 定性分析のためのHS-SPME-GC-MS条件</h4>
+<p>HS-SPME-GC-MSは、Agilent 7890B-7000Dガスクロマトグラフ質量分析検出器（Agilent, Thermo fisher, CA, USA）とSPMEファイバー（supelco, Bellefonte, Penn.）を組み合わせたヘッドスペース自動注入システムであった [22]。クロマトグラフィーカラムはHP-5MSフェニルメチルシロキサン（30 m × 0.25 mm × 0.25 µm, Agilent Technologies, Palo Alto, CA, USA）弾性石英キャピラリーカラムであった [23]。試料を70℃で10分間インキュベートした後、500 µLのヘッドスペース試料をDVB/CAR/PDMS SPMEニードル（2 cm, 50/30 µm; supelco）により210℃で自動注入した。昇温プログラムは以下の通り: 初期温度50℃で2分間保持、10℃/minで85℃まで、5℃/minで120℃まで、次いで2℃/minで140℃まで、最後に5℃/minで210℃まで昇温し2分間保持。キャリアガスはヘリウム（純度99.999%）を流量1.0 mL/minで使用した。質量分析計はEI源を用い正イオンモードで動作した。イオン源温度およびイオン化エネルギーはそれぞれ230℃、70 eVに設定した。スキャン範囲はm/z 30–600とした。データ処理はMasshunterソフトウェア（Agilent Technologies）で実施した。</p>
+<h4>2.3.3. 定性分析のためのHS-GC-IMS条件</h4>
+<p>試料は、1 mL加熱気密シリンジを備えたオートサンプラー（CTC Analytics AG, Switzerland）付きのHS-GC-IMS装置（Flavourspec®, G.A.S, Dortmund, Germany）で解析した。クロマトグラフィーカラムはFS-SE-54-CB-1（CS-Chromatographie Service GmbH, Germany）キャピラリーカラム（15 m × 0.53 mm ID, 0.5 µm）であった [23]。試料を250 rpmで70℃で10分間インキュベートした後、500 µLのヘッドスペース試料を加熱シリンジにより70℃で注入器（75℃、スプリットレスモード）に自動注入した。窒素（99.999%）をキャリアガスとして使用し、その流量は最初2 mL/minで2分間、次いで10 mL/minまで10分かけて増加させ、さらに150 mL/minまで20分かけて増加させて10分間保持した。ドリフトチューブ（長さ9.8 cm）は一定温度45℃、電圧5 kVで動作した。ドリフトガス（N2）の流量は150 mL/minに設定した。</p>
+<h4>2.3.4. 定量分析のためのUPLC-Q-Orbitrap-MS条件</h4>
+<p>XYWの定量実験において、PRMモードの下で、14の対象化合物の規格化エネルギーを10 V, 20 V, 30 V, 40 V, 50 V, 60 V, 70 V, 80 Vのエネルギー最適化勾配で調整・最適化した。最終的に調整された最適化勾配をTable 1に示す。</p>
+<p>さらに、確立した定量法について、検出下限（LOD）および定量下限（LOQ）、日内・日間精度、繰返し性、安定性、直線性および範囲、ならびに試料回収率を含む複数の項目についてレビューを行った。検出下限（LOD）および定量下限（LOQ）はシグナル対ノイズ（S/N）比3および10で測定した [17]。日内精度は同一溶液の6回の並行分析により決定した。日間精度は3日間にわたり溶液を3回ずつ解析して評価した。繰返し性は6個の並行調製試料の解析により評価した。安定性試験では、同一試料溶液を試料室の温度（20℃）で0, 1, 2, 4, 6, 8, 10, 12, 24時間の時点で解析した。平均回収率は、既知含量のXYW試料に低・中・高濃度の混合標準溶液を添加して測定した [20]。</p>
+<h5>Table 1. PRMモードにおけるXYW中の14化合物の関連情報</h5>
+<table>
+<thead><tr><th>分析対象 (Analytes)</th><th>Rt (min)</th><th>イオン化モード</th><th>前駆イオン (m/z)</th><th>プロダクトイオン (m/z)</th><th>衝突エネルギー (V)</th></tr></thead>
+<tbody>
+<tr><td>サイコサポニンA (Saikosaponin A)</td><td>23.89</td><td>ESI−</td><td>825.4645</td><td>779.4537</td><td>10</td></tr>
+<tr><td>サイコサポニンD (Saikosaponin D)</td><td>26.93</td><td>ESI−</td><td>825.4644</td><td>779.4537</td><td>10</td></tr>
+<tr><td>パエオニフロリン (Paeoniflorin)</td><td>8.89</td><td>ESI−</td><td>525.1614</td><td>479.1566</td><td>10</td></tr>
+<tr><td>アルビフロリン (Alibiflorin)</td><td>8.36</td><td>ESI−</td><td>525.1614</td><td>479.1566</td><td>10</td></tr>
+<tr><td>リクイリチンアピオシド (Liquiritin apioside)</td><td>10.34</td><td>ESI−</td><td>549.1616</td><td>255.0662</td><td>30</td></tr>
+<tr><td>イソリクイリチンアピオシド (Isoliquiritin apioside)</td><td>13.01</td><td>ESI−</td><td>549.1615</td><td>255.0659</td><td>30</td></tr>
+<tr><td>クエルセチン (Quercetin)</td><td>14.60</td><td>ESI−</td><td>301.0351</td><td>151.0022</td><td>60</td></tr>
+<tr><td>リクイリチゲニン (Liquiritigenin)</td><td>13.90</td><td>ESI−</td><td>255.0659</td><td>135.0074</td><td>40</td></tr>
+<tr><td>リグスチリド (Ligustilide)</td><td>26.72</td><td>ESI+</td><td>191.1065</td><td>173.0962</td><td>60</td></tr>
+<tr><td>リクイリチン (Liquiritin)</td><td>10.26</td><td>ESI+</td><td>419.1338</td><td>257.0805</td><td>20</td></tr>
+<tr><td>グリチルリチン酸 (Glycyrrhizic acid)</td><td>22.41</td><td>ESI+</td><td>823.4104</td><td>453.3362</td><td>10</td></tr>
+<tr><td>アトラクチレノリドI (Atractylenolide I)</td><td>28.59</td><td>ESI+</td><td>231.1377</td><td>203.5741</td><td>60</td></tr>
+<tr><td>アトラクチレノリドII (Atractylenolide II)</td><td>27.54</td><td>ESI+</td><td>233.1533</td><td>215.1432</td><td>50</td></tr>
+<tr><td>アトラクチレノリドIII (Atractylenolide III)</td><td>24.56</td><td>ESI+</td><td>249.1483</td><td>231.1375</td><td>30</td></tr>
+</tbody></table>
+<hr>
+<h2>3. 結果と考察（Results and Discussion）</h2>
+<h3>3.1. UPLC-Q-Orbitrap-MS定性分析</h3>
+<p>分解能や化合物存在量に影響しうるUPLCシステムの主要パラメータを最適化した。ACQUITY UPLC® BEH C18カラムは、化合物存在量が高く分離能が良好であったため固定相として選択された。クロマトグラフィーピークの形状・数は異なる移動相（水-メタノール／水-アセトニトリル／0.1% v/v ギ酸水-メタノール／0.1% v/v ギ酸水-アセトニトリル）によっても影響を受ける。0.1% v/v ギ酸水-アセトニトリルを移動相として用いた場合、ピーク形状が良好であることが判明した（Fig. S1、詳細は原文の補足資料参照）。さらに、クロマトグラフィーカラムのカラム温度も化合物分離において重要な役割を果たす。そのため、25℃、30℃、35℃、40℃の温度勾配を設定して最適化した。複雑な試料系の分離は35℃において良好であることが判明した（Fig. S2、詳細は原文の補足資料参照）。</p>
+<p>さらに、イオン応答および断片化に影響しうるQ-Orbitrap-MS/MS装置の主要パラメータも最適化した。ESI源パラメータおよび規格化衝突エネルギーは、XYWの化合物を特徴づけるためのより有意義な構造情報を提供するよう最適化された。XYWの主要な薬理学的活性成分は主にサポニン、フラボノイド、有機酸の3つの異なる構造タイプを含んでいた。そのため、これら3カテゴリから代表的な6化合物（サイコサポニンA、サイコサポニンD、リクイリチゲニン、リクイリチン、クロロゲン酸、ポリコイン酸A）を選択し、質量分析パラメータ最適化のための参照データを提供した。補助ガスヒーター温度およびキャピラリー温度は、イオン輸送効率に影響する主要な2パラメータである。スプレー電圧はイオン源にとってイオン応答に影響する重要なパラメータである。したがって、補助ガスヒーター温度（250℃、300℃、350℃、400℃）、キャピラリー温度（250℃、300℃、350℃、400℃）、スプレー電圧（2.5 kV、3.0 kV、3.5 kV、4.0 kV）について単一因子実験によりイオン源パラメータを最適化した。結果として、イオン応答の変化に基づき、補助ガスヒーター温度400℃、キャピラリー温度350℃、スプレー電圧3.5 kVに設定した場合が最適条件であると決定された（Fig. S3、詳細は原文の補足資料参照）。</p>
+<blockquote>補足: 材料と方法（2.3.1節）に記載のHESI源パラメータでは「スプレー電圧3.0 kV」とされていますが、本節（3.1節）の最適化実験結果では「3.5 kV」が最適と述べられています。原文にこの通りの記載があり、訳文でもそのまま両方の記述を残しています。</blockquote>
+<p>確立したUPLC-Q-Orbitrap-MS法に基づき、負・正両方のESIモードで動作する高精細MSEを取得することでXYWの多成分をプロファイリングした。Compound Discoverer™ 3.3（Thermo Fisher Scientific）は、オンラインデータベース（mzCloud）とローカルデータベース（mzVault）を通じて化合物の予備予測を行う定性解析ソフトウェアとしてQ-Orbitrapとマッチングした。Compound Discoverer™によりスクリーニングされた化合物は、Xcalibur 4.1ソフトウェア（Thermo Fisher Scientific）を用いたイオンピーク保持時間対比、質荷比、および二次特徴イオンフラグメンテーションの手段によりさらに解析可能であった。さらに、既発表文献および47の標準物質との比較に基づき、XYWにおいて198化合物が特徴づけまたは予備的に特徴づけられ、これには52のフラボノイド、48のサポニンおよび配糖体、26の有機酸、14のフェノール酸、11のテルペノイド、9のフタリド、8のラクトン、5のアントラキノン、4のフェニルプロパノイド、2のアミノ酸、19のその他化合物が含まれていた。化合物情報のリストはTable S1（詳細は原文の補足資料参照）に示す。正・負両イオンモードにおけるXYWのUPLC-Q-Orbitrap-MSの全イオンクロマトグラム（TIC）をFig. 2に示す。</p>
+<figure><img src="assets/xyw-uplc-orbitrap-gcims-qc/fig2.png" alt="Fig. 2. A: 負イオンモードにおけるXYWのTIC図; B: 正イオンモードにおけるXYWのTIC図。" loading="lazy"><figcaption>Fig. 2. A: 負イオンモードにおけるXYWのTIC図; B: 正イオンモードにおけるXYWのTIC図。</figcaption></figure>
+<h3>3.2. HS-SPME-GC-MS定性分析</h3>
+<p>XYWのVOCsはHS-SPME-GC-MS技術により解析された。最適化されたHS-SPME-GC-MS条件をVOCsの分離に用いた（Fig. 3）。実験を正式に開始する前に3つの主要パラメータを最適化した。VOCsの吸着容量に影響しうる異なる抽出ファイバーヘッド吸着膜。抽出温度および抽出時間の変化は試料の分離度に影響しうる。まず、3種類の抽出ファイバーヘッド吸着膜を最適化した: PDMS、PDMS/DVB、DVB/CAR/PDMS（Fig. S4、詳細は原文の補足資料参照）。DVB/CAR/PDMSプローブを使用した場合、クロマトグラフィーピークが最も豊富であった。次に、抽出温度（50℃、60℃、70℃、80℃）および抽出時間（5分、10分、15分、20分）を最適化した（Fig. S5、詳細は原文の補足資料参照）。結果として、捕捉された化合物の量と含量を比較することにより、HS-SPME-GC-MS検出の最適条件はインキュベート温度70℃・インキュベート時間10分であることが判明した。</p>
+<p>未知化合物の定性解析には、化学ワークステーションのNIST.17標準質量分析ライブラリ（Agilent, California, USA）でスペクトルピーク検索を行い、各化合物の保持指数（RI）はN-アルカンC8-C20を外部参照として算出した。保持指数、マッチング値、および文献参照に基づき、正・負両ESIモードで52化合物が同定され、Table 2に示す。このうち主要成分はテルペノイドで19種を含む。フェノール系成分9種、複素環系成分6種、ケトン系成分6種、エステル系成分5種、アルコール系成分2種、その他成分5種が含まれる。</p>
+<figure><img src="assets/xyw-uplc-orbitrap-gcims-qc/fig3.png" alt="Fig. 3. HS-SPME-GC-MSで検出されたXYW中VOCsのTIC図。" loading="lazy"><figcaption>Fig. 3. HS-SPME-GC-MSで検出されたXYW中VOCsのTIC図。</figcaption></figure>
+<h5>Table 2. HS-SPME-GC-MSによるXYW中VOCsの同定</h5>
+<table>
+<thead><tr><th>No.</th><th>RT (min)</th><th>化合物 (Compounds)</th><th>CAS</th><th>RI1</th><th>RI2</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>4.24</td><td>フルフラール (Furfural)</td><td>98–01–1</td><td>841</td><td>833</td></tr>
+<tr><td>2</td><td>5.45</td><td>2-アセチルフラン (2-Acetylfuran)</td><td>1192–62–7</td><td>919</td><td>911</td></tr>
+<tr><td>3</td><td>6.31</td><td>5-メチルフルフラール (5-Methyl furfural)</td><td>620–02–0</td><td>971</td><td>965</td></tr>
+<tr><td>4</td><td>6.89</td><td>Octamethylcyclotetrasiloxane</td><td>556–67–2</td><td>1002</td><td>994</td></tr>
+<tr><td>5</td><td>8.32</td><td>2-アセチルピロール (2-Acetyl pyrrole)</td><td>1072–83–9</td><td>1075</td><td>1064</td></tr>
+<tr><td>6</td><td>9.40</td><td>3-Hydroxy-2-methyl-4H-pyran-4-one</td><td>118–71–8</td><td>1124</td><td>1110</td></tr>
+<tr><td>7</td><td>9.89</td><td>1,3-Benzodioxole, 3a,7a-dihydro-2,2,4-trimethyl-</td><td>35,502–40–8</td><td>1147</td><td>1148</td></tr>
+<tr><td>8</td><td>10.17</td><td>2,3-Dihydro-3,5-dihydroxy-6-methyl-4(H)-pyran-4-one</td><td>28,564–83–2</td><td>1159</td><td>1151</td></tr>
+<tr><td>9</td><td>10.22</td><td>イソメントン (Isomenthone)</td><td>491–07–6</td><td>1161</td><td>1164</td></tr>
+<tr><td>10</td><td>10.50</td><td>シトロネラール (Citronellal)</td><td>106–23–0</td><td>1173</td><td>1153</td></tr>
+<tr><td>11</td><td>10.72</td><td>ジヒドロテルピネオール (Dihydroterpineol)</td><td>21,129–27–1</td><td>1182</td><td>1178</td></tr>
+<tr><td>12</td><td>11.23</td><td>サリチル酸メチル (Methyl salicylate)</td><td>119–36–8</td><td>1203</td><td>1192</td></tr>
+<tr><td>13</td><td>12.11</td><td>5-ヒドロキシメチルフルフラール (5-Hydroxymethylfurfural)</td><td>67–47–0</td><td>1241</td><td>1233</td></tr>
+<tr><td>14</td><td>12.26</td><td>(+)-プレゴン ((+)-Pulegone)</td><td>89–82–7</td><td>1247</td><td>1237</td></tr>
+<tr><td>15</td><td>12.64</td><td>ピペリトン (Piperitone)</td><td>89–81–6</td><td>1262</td><td>1253</td></tr>
+<tr><td>16</td><td>13.80</td><td>2-Hydroxy-6-(isopropyl)-3-methylcyclohex-2-en-1-one</td><td>490–03–9</td><td>1306</td><td>1302</td></tr>
+<tr><td>17</td><td>14.21</td><td>4-Hydroxy-3-methoxystyrene</td><td>7786–61–0</td><td>1321</td><td>1317</td></tr>
+<tr><td>18</td><td>14.63</td><td>1,5,5-Trimethyl-6-methylenecyclohexene</td><td>514–95–4</td><td>1336</td><td>1338</td></tr>
+<tr><td>19</td><td>15.00</td><td>3-Methyl-6-(1-methylethylidene)cyclohex-2-en-1-one</td><td>491–09–8</td><td>1348</td><td>1340</td></tr>
+<tr><td>20</td><td>15.39</td><td>バレロフェノン (Valerophenone)</td><td>1009–14–9</td><td>1361</td><td>1374</td></tr>
+<tr><td>21</td><td>16.15</td><td>Modhephene</td><td>68,269–87–4</td><td>1386</td><td>1385</td></tr>
+<tr><td>22</td><td>16.38</td><td>Berkheyaradulene</td><td>65,372–78–3</td><td>1393</td><td>1386</td></tr>
+<tr><td>23</td><td>16.79</td><td>(-)-α-グルジュネン ((-)-Alpha-gurjunene)</td><td>489–40–7</td><td>1405</td><td>1409</td></tr>
+<tr><td>24</td><td>17.02</td><td>Cyclopenta[c]pentalene, decahydro-1,3a,5a-trimethyl-4-meth</td><td>71,596–72–0</td><td>1412</td><td>1412</td></tr>
+<tr><td>25</td><td>17.27</td><td>(+)-β-Funebrene</td><td>79,120–98–2</td><td>1419</td><td>1414</td></tr>
+<tr><td>26</td><td>17.46</td><td>β-カリオフィレン (β-Caryophyllene)</td><td>87–44–5</td><td>1425</td><td>1419</td></tr>
+<tr><td>27</td><td>17.98</td><td>(+)-アロマデンドレン ((+)-Aromadendrene)</td><td>489–39–4</td><td>1440</td><td>1440</td></tr>
+<tr><td>28</td><td>18.29</td><td>パエオノール (Paeonol)</td><td>552–41–0</td><td>1448</td><td>1438</td></tr>
+<tr><td>29</td><td>18.65</td><td>α-カリオフィレン (α-Caryophyllene)</td><td>6753–98–6</td><td>1458</td><td>1454</td></tr>
+<tr><td>30</td><td>18.77</td><td>アモルファジエン (Amorphadiene)</td><td>92,692–39–2</td><td>1462</td><td>1458</td></tr>
+<tr><td>31</td><td>19.44</td><td>グアイエン (Guaiene)</td><td>88–84–6</td><td>1479</td><td>1490</td></tr>
+<tr><td>32</td><td>19.73</td><td>イリソン (Irisone)</td><td>14,901–07–6</td><td>1487</td><td>1491</td></tr>
+<tr><td>33</td><td>19.91</td><td>α-セリネン (α-Selinene)</td><td>473–13–2</td><td>1491</td><td>1494</td></tr>
+<tr><td>34</td><td>20.21</td><td>エレモフィレン (Eremophilene)</td><td>10,219–75–7</td><td>1499</td><td>1499</td></tr>
+<tr><td>35</td><td>20.63</td><td>(+)-クパレン ((+)-Cuparene)</td><td>16,982–00–6</td><td>1510</td><td>1505</td></tr>
+<tr><td>36</td><td>20.73</td><td>エレモフィレン (Eremophilene)</td><td>10,219–75–7</td><td>1513</td><td>1499</td></tr>
+<tr><td>37</td><td>20.93</td><td>ジブチルヒドロキシトルエン (Butylated hydroxytoluene, BHT)</td><td>128–37–0</td><td>1518</td><td>1513</td></tr>
+<tr><td>38</td><td>21.88</td><td>Naphthalene, decahydro-4a-methyl-1-methylene-7-(1-methylethylidene)-, (4aR,8aS)-rel-</td><td>58,893–88–2</td><td>1543</td><td>1544</td></tr>
+<tr><td>39</td><td>22.08</td><td>Naphthalene, decahydro-4a-methyl-1-methylene-7-(1-methylethylidene)-, (4aR,8aS)-rel-</td><td>58,893–88–2</td><td>1548</td><td>1544</td></tr>
+<tr><td>40</td><td>22.24</td><td>1-Naphthalenol, 1,2,3,4,4a,5,6,7-octahydro-4a,5-dimethyl-3-(1-methylethenyl)-</td><td>61,847–19–6</td><td>1552</td><td>1553</td></tr>
+<tr><td>41</td><td>22.67</td><td>Germacrene B, 1,5-dimethyl-8-(1-methylethylidene)-1,5-cyclodecadiene</td><td>15,423–57–1</td><td>1563</td><td>1557</td></tr>
+<tr><td>42</td><td>23.51</td><td>1H-Cycloprop[e]azulen-7-ol, decahydro-1,1,7-trimethyl-4-methylene-, (1aS,4aS,7R,7aS,7bS)-</td><td>77,171–55–2</td><td>1583</td><td>1577</td></tr>
+<tr><td>43</td><td>23.87</td><td>1H-Cycloprop[e]azulen-7-ol, decahydro-1,1,7-trimethyl-4-methylene-, (1aS,4aS,7R,7aS,7bS)-</td><td>77,171–55–2</td><td>1592</td><td>1577</td></tr>
+<tr><td>44</td><td>25.89</td><td>2-Amino-4-tert-amylphenol</td><td>91,339–74–1</td><td>1653</td><td>1672</td></tr>
+<tr><td>45</td><td>26.26</td><td>アトラクチリン (Atractyline)</td><td>6989–21–5</td><td>1664</td><td>1662</td></tr>
+<tr><td>46</td><td>26.53</td><td>5-Azulenemethanol</td><td>22,451–73–6</td><td>1672</td><td>1667</td></tr>
+<tr><td>47</td><td>26.86</td><td>N-Butylidenephthalide</td><td>551–08–6</td><td>1682</td><td>1675</td></tr>
+<tr><td>48</td><td>28.46</td><td>α-シペロン (α-Cyperone)</td><td>473–08–5</td><td>1739</td><td>1755</td></tr>
+<tr><td>49</td><td>28.62</td><td>Z-リグスチリド (Z-Ligustilide)</td><td>81,944–09–4</td><td>1744</td><td>1740</td></tr>
+<tr><td>50</td><td>30.19</td><td>1(3H)-Isobenzofuranone, 3-Butylidene-4,5-dihydro-, (3E)-</td><td>81,944–08–3</td><td>1802</td><td>1810</td></tr>
+<tr><td>51</td><td>34.53</td><td>パルミチン酸エチル (Palmitic acid ethyl ester)</td><td>628–97–7</td><td>1998</td><td>1993</td></tr>
+<tr><td>52</td><td>37.85</td><td>(9E,11E)-9,11-オクタデカジエン酸メチル ((9E,11E)–9,11-Octadecadienoic acid methyl ester)</td><td>13,038–47–6</td><td>2181</td><td>2187</td></tr>
+</tbody></table>
+<p>RI1: 化学ワークステーションのNIST.17標準質量分析ライブラリ（Agilent, California, USA）を用いて算出した標準保持指数。RI2: N-アルカンC8-C20を外部参照として算出した実測保持指数。</p>
+<h3>3.3. HS-GC-IMS定性分析</h3>
+<p>異なる製造所のHS-GC-IMS解析における試料情報は、Fig. 4に地形図（トポグラフィックマップ）およびフィンガープリントの形式で表示した。Fig. 4Aは、HS-GC-IMSによるXYW検出の地形図を示しており、4つの異なる製造所の薬物画像を表示している。縦軸はガスクロマトグラフィーの保持時間を表し、横軸はイオン移動時間を表す。画像全体の背景は青色であり、横座標1.0における赤色の縦線は反応イオンピーク（RIP、正規化済み）を表す。RIPピークの両側の各点は1つのVOCを表す。色はある物質のピーク強度を表し、白は低いピーク強度、赤は高いピーク強度を表し、色が濃いほどピーク強度が高い。</p>
+<p>GC-IMSデータの抽出および解析はLaboratory Analytical Viewer（LAV）（version 2.2.1, G.A.S, Dortmund, Germany）により実施した。VOCsはGC-IMS Library Search applicationソフトウェアのIMSデータベースに基づき同定した。各化合物の保持指数（RI）はN-ケトンC4-C9を外部参照として算出した。その結果、49のVOCsが予備的に同定または同定され、詳細データをTable 3に示す。Fig. 4Bの各行は1試料中の選択されたすべてのシグナルピークを表す。各列は異なる試料における同一VOCのシグナルピークを表す。図から、各試料のVOC情報の全体像と試料間のVOCの差異を視覚的に確認できる。全体的な傾向としては、試料S1, S2, S6, S8は同様の変化傾向を示し、物質の含量は左から右に向かって増加する傾向を示した。反対に、試料S3, S4, S5, S7, S9, S10に含まれる物質は徐々に減少する傾向を示した。ラベル付けされた領域A, B, Cから、物質（オクタン酸、4-メチルアセトフェノン、2,6-ジクロロフェノール、4-エチル-2-メトキシフェノールなど）は試料S1, S2, S6, S8において独自かつ相対的に高い含量を示していた。一方、領域D, E, F, G, Hに含まれる物質（プロピレングリコール、2-ヘキセン-1-オール、1-ヘキサノール、ペンタン酸など）は試料S3, S4, S5, S7, S9, S10に固有であった。</p>
+<figure><img src="assets/xyw-uplc-orbitrap-gcims-qc/fig4.png" alt="Fig. 4. A: HS-GC-IMSによるXYW検出の地形図（トポグラフィックマップ）; B: HS-GC-IMSによるXYW検出のフィンガープリント図。" loading="lazy"><figcaption>Fig. 4. A: HS-GC-IMSによるXYW検出の地形図（トポグラフィックマップ）; B: HS-GC-IMSによるXYW検出のフィンガープリント図。</figcaption></figure>
+<h5>Table 3. XYW中VOCsのHS-GC-IMS積分パラメータ</h5>
+<table>
+<thead><tr><th>No.</th><th>Rt [min]</th><th>分子式</th><th>化合物 (Compounds)</th><th>CAS#</th><th>RI</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>2.59</td><td>C4H8O</td><td>Butanal monomer</td><td>C123728</td><td>610</td></tr>
+<tr><td>2</td><td>3.91</td><td>C5H10O2</td><td>エチル プロパノエート monomer (Ethyl propanoate)</td><td>C105373</td><td>712</td></tr>
+<tr><td>3</td><td>3.96</td><td>C4H8O2</td><td>2-butanone 3-hydroxy monomer</td><td>C513860</td><td>714</td></tr>
+<tr><td>4</td><td>3.97</td><td>C5H8O2</td><td>メタクリル酸メチル monomer (Methyl methacrylate)</td><td>C80626</td><td>714</td></tr>
+<tr><td>5</td><td>4.67</td><td>C5H12O</td><td>3-メチルブタノール monomer (3-methylbutanol)</td><td>C123513</td><td>741</td></tr>
+<tr><td>6</td><td>4.72</td><td>C5H8O</td><td>(E)-2-Pentenal monomer</td><td>C1576870</td><td>743</td></tr>
+<tr><td>7</td><td>5.72</td><td>C4H8O2</td><td>2-メチルプロパン酸 monomer (2-Methylpropanoic acid)</td><td>C79312</td><td>775</td></tr>
+<tr><td>8</td><td>5.74</td><td>C3H8O2</td><td>プロピレングリコール monomer (Propylene glycol)</td><td>C57556</td><td>776</td></tr>
+<tr><td>9</td><td>6.34</td><td>C6H12O</td><td>ヘキサナール monomer (Hexanal)</td><td>C66251</td><td>799</td></tr>
+<tr><td>10</td><td>6.82</td><td>C4H10FO2P</td><td>サリン monomer (Sarin)</td><td>C107448</td><td>820</td></tr>
+<tr><td>11</td><td>6.85</td><td>C5H10O3</td><td>Ethyl 2-hydroxypropanoate monomer</td><td>C97643</td><td>821</td></tr>
+<tr><td>12</td><td>7.08</td><td>C5H4O2</td><td>フルフラール monomer (Furfural)</td><td>C98011</td><td>831</td></tr>
+<tr><td>13</td><td>7.10</td><td>C6H14O</td><td>2-メチル-1-ペンタノール monomer (2-Methyl-1-pentanol)</td><td>C105306</td><td>832</td></tr>
+<tr><td>14</td><td>7.41</td><td>C6H10O</td><td>2-メチルシクロペンタノン monomer (2-Methylcyclopentanone)</td><td>C1120725</td><td>845</td></tr>
+<tr><td>15</td><td>7.63</td><td>C6H5Cl</td><td>クロロベンゼン monomer (Chlorobenzene)</td><td>C108907</td><td>853</td></tr>
+<tr><td>16</td><td>7.86</td><td>C6H12O</td><td>2-ヘキセン-1-オール monomer (2-Hexen-1-ol)</td><td>C2305217</td><td>862</td></tr>
+<tr><td>17</td><td>7.88</td><td>C6H14O</td><td>1-ヘキサノール monomer (1-Hexanol)</td><td>C111273</td><td>863</td></tr>
+<tr><td>18</td><td>8.18</td><td>C6H14O</td><td>1-ヘキサノール dimer (1-Hexanol)</td><td>C111273</td><td>874</td></tr>
+<tr><td>19</td><td>8.19</td><td>C5H10O2</td><td>3-メチルブタン酸 monomer (3-Methylbutanoic acid)</td><td>C503742</td><td>874</td></tr>
+<tr><td>20</td><td>8.43</td><td>C5H10O2</td><td>ペンタン酸 monomer (Pentanoic acid)</td><td>C109524</td><td>883</td></tr>
+<tr><td>21</td><td>8.59</td><td>C7H14O</td><td>2-ヘプタノン monomer (2-Heptanone)</td><td>C110430</td><td>888</td></tr>
+<tr><td>22</td><td>8.83</td><td>C7H14O</td><td>ヘプタナール dimer (Heptanal)</td><td>C111717</td><td>898</td></tr>
+<tr><td>23</td><td>8.87</td><td>C7H14O</td><td>ヘプタナール monomer (Heptanal)</td><td>C111717</td><td>900</td></tr>
+<tr><td>24</td><td>8.87</td><td>C8H8</td><td>スチレン monomer (Styrene)</td><td>C100425</td><td>900</td></tr>
+<tr><td>25</td><td>9.14</td><td>C6H8O</td><td>2,4-Hexadienal, (E, E)- monomer</td><td>C142836</td><td>913</td></tr>
+<tr><td>26</td><td>9.23</td><td>C7H14O2</td><td>ヘキサン酸メチル monomer (Hexanoic acid methyl ester)</td><td>C106707</td><td>917</td></tr>
+<tr><td>27</td><td>9.45</td><td>C4H6O2</td><td>Dihydro-2(3H)-furanone monomer</td><td>C96480</td><td>927</td></tr>
+<tr><td>28</td><td>9.46</td><td>C7H14O2</td><td>ヘキサン酸メチル monomer (Hexanoic acid methyl ester)</td><td>C106707</td><td>927</td></tr>
+<tr><td>29</td><td>10.38</td><td>C7H16O</td><td>ヘプタノール monomer (Heptanol)</td><td>C53535334</td><td>967</td></tr>
+<tr><td>30</td><td>10.52</td><td>C6H6O3</td><td>フロ酸メチル monomer (Methyl 2-furoate)</td><td>C611132</td><td>973</td></tr>
+<tr><td>31</td><td>10.98</td><td>C10H16</td><td>ミルセン monomer (Myrcene)</td><td>C123353</td><td>991</td></tr>
+<tr><td>32</td><td>11.09</td><td>C9H14O</td><td>2-ペンチルフラン monomer (2-pentyl furan)</td><td>C3777693</td><td>995</td></tr>
+<tr><td>33</td><td>11.27</td><td>C8H16O</td><td>オクタナール monomer (Octanal)</td><td>C124130</td><td>1004</td></tr>
+<tr><td>34</td><td>11.30</td><td>C7H8O</td><td>ベンジルアルコール monomer (Benzyl alcohol)</td><td>C100516</td><td>1005</td></tr>
+<tr><td>35</td><td>11.30</td><td>C8H14O2</td><td>(Z)-3-ヘキセニル アセテート monomer ((Z)-3-hexenyl acetate)</td><td>C3681718</td><td>1005</td></tr>
+<tr><td>36</td><td>11.81</td><td>C10H16</td><td>リモネン monomer (Limonene)</td><td>C138863</td><td>1029</td></tr>
+<tr><td>37</td><td>11.90</td><td>C10H18O</td><td>1,8-シネオール monomer (1,8 Cineole)</td><td>C470826</td><td>1033</td></tr>
+<tr><td>38</td><td>12.11</td><td>C10H16</td><td>β-オシメン monomer (β-Ocimene)</td><td>C13877913</td><td>1042</td></tr>
+<tr><td>39</td><td>12.80</td><td>C8H18O</td><td>1-オクタノール monomer (1-Octanol)</td><td>C111875</td><td>1072</td></tr>
+<tr><td>40</td><td>13.28</td><td>C6H8O3</td><td>2,5-dimethyl-4-hydroxy 3(2H)-furanone (Furaneol) monomer</td><td>C3658773</td><td>1091</td></tr>
+<tr><td>41</td><td>13.63</td><td>C9H18O2</td><td>プロパン酸ヘキシル monomer (Hexyl propanoate)</td><td>C2445763</td><td>1105</td></tr>
+<tr><td>42</td><td>13.68</td><td>C9H18O</td><td>n-ノナナール monomer (n-nonanal)</td><td>C124196</td><td>1107</td></tr>
+<tr><td>43</td><td>14.44</td><td>C8H16O3</td><td>Ethyl 3-hydroxyhexanoate monomer</td><td>C2305251</td><td>1136</td></tr>
+<tr><td>44</td><td>14.99</td><td>C10H18O</td><td>シトロネラール dimer (Citronelal)</td><td>C106230</td><td>1156</td></tr>
+<tr><td>45</td><td>15.00</td><td>C10H18O</td><td>シトロネラール monomer (Citronelal)</td><td>C106230</td><td>1156</td></tr>
+<tr><td>46</td><td>15.73</td><td>C8H16O2</td><td>オクタン酸 monomer (Octanoic acid)</td><td>C124072</td><td>1182</td></tr>
+<tr><td>47</td><td>15.79</td><td>C9H10O</td><td>4-メチルアセトフェノン monomer (4-Methyl acetophenone)</td><td>C122009</td><td>1183</td></tr>
+<tr><td>48</td><td>16.37</td><td>C6H4Cl2O</td><td>2,6-ジクロロフェノール monomer (2,6-Dichlorophenol)</td><td>C87650</td><td>1203</td></tr>
+<tr><td>49</td><td>18.88</td><td>C9H12O2</td><td>4-エチル-2-メトキシフェノール monomer (4-Ethyl-2-methoxyphenol)</td><td>C2785899</td><td>1279</td></tr>
+</tbody></table>
+<h3>3.4. 総合解析（Comprehensive analysis）</h3>
+<p>UPLC-Q-Orbitrap-MS解析、HS-SPME-GC-MS解析、HS-GC-IMS解析を通じて299化合物が同定された。このうち198化合物はUPLC-Q-Orbitrap-MSにより特徴づけられ、52化合物はHS-SPME-GC-MSにより同定され、49化合物はHS-GC-IMSにより同定された。198のn-VOCsの予備的な特徴づけ・同定では、フラボノイド、サポニン、ラクトン、有機酸が主要成分であった。101のVOCsが特徴づけられ、主にテルペノイド、フェノール類、エステル類が含まれていた。PCAは教師なしモードの多変量統計解析法であり、大量データの次元削減により試料間の規則性と差異を解析するものである。UPLC-Q-Orbitrap-MS、HS-SPME-GC-MS、HS-GC-IMSの検出データに対してPCA解析を行った（Fig. 5）。PCAはSIMCA 14.1ソフトウェアを用いて実施した。</p>
+<p>10の異なる製造所のXYW試料は、化学組成において2つの主要な傾向に分類された。試料S1, S2, S6, S8はX軸の負の半軸上に類似性をもって位置し、一方で試料S3, S4, S5, S7, S9, S10はX軸の正の半軸上に類似の性質をもって位置していた（Fig. 5A）。同時に、試料S1, S2, S6, S8はn-VOCsにおいて試料S3, S4, S5, S7, S9, S10と有意な差を示した。Fig. 5C, Eに示すように、S1, S2, S6, S8とS3, S4, S5, S7, S9, S10はVOCsにおいても有意な差を示した。HCAは、異なるカテゴリのデータ点間の類似度を計算することにより階層的な入れ子クラスタリングを作成し、試料間の類似関係の表現を実現する。HCAデータは、S1, S2, S6, S8の成分が類似しており、一方でS3, S4, S5, S7, S9, S10の成分が非常に類似していることを示している（Fig. 5B, D, F）。試料S1, S2, S6, S8と試料S3, S4, S5, S7, S9, S10の間には有意な差が存在する。結果として、PCA、HCA、フィンガープリントのデータは、試料S1, S2, S6, S8に含まれる成分が類似しており、試料S3, S4, S5, S7, S9, S10に含まれる成分が類似していることを示している。10の異なる製造所のXYW試料は、化学組成において2つの主要な傾向に分類された。</p>
+<figure><img src="assets/xyw-uplc-orbitrap-gcims-qc/fig5.png" alt="Fig. 5. A: UPLC-Q-Orbitrap-MSのPCA解析; B: UPLC-Q-Orbitrap-MSのHCA解析; C: HS-SPME-GC-MSのPCA解析; D: HS-SPME-GC-MSのHCA解析; E: HS-GC-IMSのPCA解析; F: HS-GC-IMSのHCA解析。" loading="lazy"><figcaption>Fig. 5. A: UPLC-Q-Orbitrap-MSのPCA解析; B: UPLC-Q-Orbitrap-MSのHCA解析; C: HS-SPME-GC-MSのPCA解析; D: HS-SPME-GC-MSのHCA解析; E: HS-GC-IMSのPCA解析; F: HS-GC-IMSのHCA解析。</figcaption></figure>
+<h3>3.5. UPLC-Q-Orbitrap-MS定量分析</h3>
+<p>XYWは2000年以上にわたり肝損傷の治療および抗うつ薬として広く使用されてきた [24]。まず、中国薬局方はXYWの品質管理指標としてパエオニフロリン（芍薬苷）を用いることを規定している。柴胡（Radix bupleuri）はXYWにおいて肝疾患治療のための主薬である。サイコサポニンAとサイコサポニンDはいずれもうつ様行動を改善することが示されている [25,26]。しかし、両者が治療効果を発揮する調節機序は異なる。クエルセチンも関連する炎症因子を調節することにより肝損傷を保護しうる [27]。さらに、芍薬（Paeonia lactiflora）中のパエオニフロリンおよびアルビフロリンはうつ様行動を改善する効果が証明されている [28–30]。特にパエオニフロリンは産後うつ病を効果的に改善しうる。生物活性研究により、甘草中のフラボノイドはうつ病に対して顕著な効果を示し、リクイリチゲニンは潜在的な抗うつ薬になることが期待されている [31]。当帰（angelica sinensis）中のリグスチリドは慢性うつ病を改善しうる [32]。アトラクチレノリドI、アトラクチレノリドII、アトラクチレノリドIIIは白朮（atractylodes macrocephala）の主要活性成分であり、これは白朮が抗うつ薬として一般的に使用される理由でもある [33,34]。以上の予備研究および文献レビューに基づき、14化合物（サイコサポニンA、サイコサポニンD、パエオニフロリン、アルビフロリン、リクイリチンアピオシド、イソリクイリチンアピオシド、クエルセチン、リクイリチゲニン、リグスチリド、リクイリチン、グリチルリチン酸、アトラクチレノリドI、アトラクチレノリドII、アトラクチレノリドIII）を、XYWの品質管理のための参照物質として最も有望であると決定し、XYWの品質評価を実現することを目指した。</p>
+<p>イオン化エネルギーはイオンの二次フラグメントに影響しうる。このため、確立したPRMモードにおいて、正・負両イオンモードで14の品質マーキング成分のエネルギーを調整した。まず、14の品質ベンチマーク物質のリストを確立し、異なるエネルギーレベルを設定した。次に、異なるエネルギーにおける異なる成分の応答を解析した。最後に、包括的な解析により、14の品質ベンチマーク物質を可能な限り合意された応答レベル範囲内で同時かつ正確に定量した。調整後のPRMモードは質量応答を促進または抑制する利点を持っていた（Fig. S6、詳細は原文の補足資料参照）。したがって、確立した調整型PRMとUPLC-Q-Orbitrap-MSを組み合わせた戦略は正確かつ信頼性が高く、XYWにおける複数成分の同時定量を実現しうることが示された。さらに、本法の確立はTCMの複雑系における多成分品質管理のための解決策も提供する。上記条件下で、14の品質ベンチマーク物質は干渉を受けることなく正確に検出することができ、本戦略が高い選択性を有することが示された。方法バリデーションは正・負両イオンモードで実施され、直線性、繰返し性、精度、安定性、回収率をTable S2（詳細は原文の補足資料参照）に示した。14のベンチマーク物質の検量線は、高い相関係数（R2 &gt; 0.999）を伴い、広い濃度範囲にわたって定量された。LODsおよびLOQsはそれぞれ0.03–6.13 ng/mLおよび0.10–20.42 ng/mLの範囲で決定された。一方、各化合物の繰返し性、日内精度、日間精度、安定性はすべて5%未満であった。平均回収率は84.86%から105.09%の範囲であり、RSD値は0.20%から4.93%の間で変動した。以上の結果は、確立した方法がXYW中の主要構成成分の定量的決定において高感度・高効率・高精度であることを示している。定量的には、XYW中の14の参照物質は異なる製造所間で大きく異なっていた（Fig. S7、詳細は原文の補足資料参照）。XYWの製造工程には製造所間で差異があるものの、パエオニフロリン、アルビフロリン、サイコサポニンA、リグスチリド、グリチルレチン酸、リクイリチンアピオシド、イソリクイリチンアピオシドの含量はそれぞれの比率において比較的高く、これらが抗うつ活性を発揮する主要成分の一つであることが改めて確認された。XYWの主要な抗うつ成分であるサイコサポニンAは、異なる製造所間で含量が大きく異なっていた（Fig. S7B、詳細は原文の補足資料参照）。例えば、試料S2と試料S9のサイコサポニンA含量には約8倍の差があった。パエオニフロリンの含量はXYW中で最も高かった（Fig. S7D、詳細は原文の補足資料参照）。しかし、異なる製造所間で有意な差があり、例えば試料S4およびS10の含量は試料S7およびS8の約1.5倍であった。さらに、他の成分、特にサイコサポニンD、リクイリチゲニン、アトラクチレノリドI、アトラクチレノリドII、アトラクチレノリドIII、クエルセチンの含量差も比較的大きかった（Fig. S7 I-N、詳細は原文の補足資料参照）。特筆すべきは、サイコサポニンDの含量が試料S3, S4, S5, S7, S9, S10では極めて低いのに対し、試料S1, S2, S6, S8では極めて高いことである。異なる製造所間の含量変化は数十倍にも及んだ。薬物の品質の一貫性は、薬効に影響を与える主要な要因の一つである。調製工程、原材料の品質、その他の要因の違いにより、薬物の品質に有意な差が生じる。薬物品質の差異は、臨床効果に影響を与える潜在的な要因の一つである。したがって、本法はXYWの品質管理の基盤を築き、臨床の抗うつ治療における薬物使用をより良く導く可能性がある。</p>
+<hr>
+<h2>4. 結論（Conclusion）</h2>
+<p>品質評価の実用的な確立に関する詳細な調査という概念に準拠し、本研究はUPLC-Q-Orbitrap-MS、HS-SPME-GC-MS、HS-GC-IMSによる戦略に従い、10の異なる製造所のXYWの包括的な多成分キャラクタリゼーションと品質評価を達成した。UPLC-Q-Orbitrap-MS法はXYWにおける多成分のプロファイリングおよびキャラクタリゼーションにおいて非常に強力であることが証明され、198化合物が暫定的に特徴づけられた。さらに、HS-SPME-GC-MSおよびHS-GC-IMSをXYWの解析に適用し、合計101のVOCsが検出され、XYW中の成分の種類が充実した。この3つの新たに開発された方法は、XYWのn-VOCsおよびVOCsを包括的に特徴づけることができた。続いて、PCAおよびHCAは、異なる製造所によるXYWの化学組成に有意な差があることを示した。XYWの異なる調製工程が、その品質差の主な理由の一つである可能性がある。最後に、調整型PRM法により、10の異なる製造所のXYW試料における14の品質マーキング成分を正確かつ高感度に定量することができた。特筆すべきは、14の薬理学的物質の含量が異なる製造所間で大きく異なっていたことである。含量の変動は薬物の効能に影響を与える可能性がある。これらの結果は、提案された戦略がTCM製剤の包括的な同定と品質一貫性評価の問題を解決するための高い価値を有することを示している。</p>
+<h2>訳者補足（任意）</h2>
+<ul><li>XYW（逍遥丸）は柴胡・芍薬・当帰・白朮・甘草・薄荷・茯苓・生姜の8味からなる古典方剤「逍遥散」の丸剤製剤で、中国薬局方における現行の品質管理指標はパエオニフロリン（芍薬苷）単独である。本研究は、それを補う多成分・多技術（LC-MS＋2種のGC系VOC分析）統合型の品質評価戦略を提示するものである。</li><li>本文中で言及される補足図表（Fig. S1–S7、Table S1–S3）はいずれも原論文のSupporting information（DOI: 10.1016/j.jpba.2023.115910のオンライン版）に格納されており、本解説では抽出していない。詳細な数値（10製造所×14成分の実測含量など）が必要な場合は原文の補足資料を参照されたい。</li><li>PRM法における「調整（adjusted）」とは、成分ごとに衝突エネルギーを個別最適化することで、含量の多い成分（サイコサポニン類など）の過大応答を抑えつつ微量成分の応答を底上げし、広ダイナミックレンジでの同時定量精度を高める工夫を指す。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="bzyqt-ternary-network-qmarker.html">定量的三元ネットワークによる漢方処方からのQ-marker探索—補中益気湯を例に</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">質量分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qhp-hplc-fingerprint-chemometrics.html">指紋分析と複数指標成分の定量分析に化学パターン認識解析を組み合わせた清胃黄連丸(QHP)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="yqg-uplc-fingerprint-qams.html">UPLC指紋分析と一標準多成分定量法(QAMS)を組み合わせた宜清顆粒(YiQing granules)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="naolingsu-fingerprint-chemometrics.html">脳霊素カプセル(NLSC)のHPLC指紋・多成分定量・ケモメトリクスによる中薬処方の品質評価</a><span class="rel-tags"><span class="rel-tag">質量分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="xyw-uplc-orbitrap-gcims-qc" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

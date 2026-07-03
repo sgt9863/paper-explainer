@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>指紋分析と複数指標成分の定量分析に化学パターン認識解析を組み合わせた清胃黄連丸(QHP)の品質評価</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="指紋分析と複数指標成分の定量分析に化学パターン認識解析を組み合わせた清胃黄連丸(QHP)の品質評価">
+<meta property="og:description" content="清胃黄連丸(QHP)15バッチについてHPLC指紋分析と10指標成分の同時定量にHCA・PCA・OPLS-DAを組み合わせ、バッチ間の品質一貫性評価とバッチ差異の主要因ピークのスクリーニングを行った研究の全訳（＋訳者補足）。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/qhp-hplc-fingerprint-chemometrics/slide.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="qhp-hplc-fingerprint-chemometrics"><h1>指紋分析と複数指標成分の定量分析に化学パターン認識解析を組み合わせた清胃黄連丸(QHP)の品質評価</h1><div class="paper-meta"><span class="date">2026-07-03</span> <span class="tag">方剤・中成薬</span> <span class="tag">HPLC・UPLC</span> <span class="tag">指紋分析</span> <span class="tag">多成分定量</span> <span class="tag">ケモメトリクス</span> <span class="tag">QC・品質評価</span> <span class="tag">Q-marker</span> &middot; <a href="https://doi.org/10.1093/chromsci/bmaf018" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">bmaf018.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="qhp-hplc-fingerprint-chemometrics" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="qhp-hplc-fingerprint-chemometrics" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/qhp-hplc-fingerprint-chemometrics/slide.png" target="_blank" rel="noopener"><img src="assets/qhp-hplc-fingerprint-chemometrics/slide.png" alt="清胃黄連丸15バッチをHPLC指紋＋10成分同時定量＋HCA/PCA/OPLS-DAで多角的に品質評価" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成（Abstract→Introduction→Experimental→Results→Discussion→Conclusion）に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Quality Evaluation of Qingwei Huanglian Pills Based on Fingerprint and Quantitative Analysis of Multi-Index Components Combined with Chemical Pattern Recognition Analysis</li><li>著者・所属: Xiaowei Shao¹, Nan Zhao²（責任著者）, Yuping Li¹, Hongming Wang¹, Xueli Xu¹, Shuyue Wang²（¹Binzhou Inspection and Testing Center, Bincheng, Binzhou, China／²Pharmacy Department of Binzhou Hospital of Traditional Chinese Medicine, Bincheng, Binzhou, China）</li><li>掲載誌・巻号・DOI: <em>Journal of Chromatographic Science</em>, 2025, 63(4), bmaf018. https://doi.org/10.1093/chromsci/bmaf018</li><li>インパクトファクター: 要確認（検索した複数の指標サイトで1.3〜1.8と値が分かれ、公式JCRの数値を一意に確認できなかった。捏造を避けるため数値は明記しない）</li><li>受理経過 / ライセンス: 受領 2025-02-27 / 編集決定 2025-03-06。© The Author(s) 2025. Published by Oxford University Press. All rights reserved.</li></ul>
+<blockquote>補足: QHP = 清胃黄連丸（Qingwei Huanglian Pills）。黄連(Coptis chinensis)・石膏・黄芩(Scutellaria baicalensis)・山梔子(Gardenia)・甘草など14種の生薬からなる水丸剤で、中国薬局方2020年版収載。口舌のただれ・歯齦腫脹・咽頭痛など「肺胃の熱」による症状に用いられる中成薬で、2023年の中国国内販売額は52億元超と記載されている。HCA=階層的クラスター分析、PCA=主成分分析、OPLS-DA=直交部分最小二乗判別分析、VIP=Variable Importance in Projection（変数重要度）。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>清胃黄連丸(QHPs)は口舌のただれの治療に最も広く用いられる中成薬製剤の一つであるが、既存の品質評価基準には一定の不備・欠点がある。有効かつ科学的な品質評価法は医薬品の安全性確保に極めて重要な役割を果たす。本研究では、指紋分析と複数指標成分の定量分析に化学パターン認識解析を組み合わせ、QHPsの品質を総合的に評価した。15バッチのQHPsの指紋を作成し類似度を評価したところ、10本の特徴ピークが同定された。階層的クラスター分析(HCA)、主成分分析(PCA)、直交部分最小二乗判別分析(OPLS-DA)を用いて15バッチをクラスタリング・ランク付けするとともに、バッチ間差異の原因となる成分を同定した。QHPsのHPLC指紋と10成分の含量測定を確立した。28本の共通ピークが同定され、うち10成分が特定された。15バッチ間の類似度は0.983〜0.999であった。HCAとPCAによりそれぞれ15バッチのクラスター解析と総合スコアランキングを行い、OPLS-DAによりバッチ差異に影響する13の化学マーカーをスクリーニングした。本研究で確立した手法は、QHPsの品質評価および製品品質管理の参考となりうる。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>中国における口腔潰瘍の発生率は25〜30%に及び、遺伝・環境・免疫機能など複数の要因が絡む複雑な病因を持つ。口舌のただれ、歯齦腫脹、咽頭痛などの症状は摂食・会話の困難を招き、患者のQOLに大きく影響する。QHPsは黄連(Coptis chinensis)、山梔子(Gardenia)、黄芩(Scutellaria baicalensis)、甘草を含む14種の生薬からなる伝統的中成薬製剤で、水丸剤(watery pan-pills)に加工されている。肺胃の熱による口舌のただれ、歯齦・咽頭の腫脹の治療に広く用いられる。清胃・瀉火・解毒・消腫の作用を持ち、歯周炎および口腔潰瘍に有効な治療薬である。2023年のQHPの販売額は52億元を超え、中医学における幅広い利用を示している。したがって、本製剤の全体的な品質を反映する評価法の確立が重要である。</p>
+<p>QHPは中国薬局方2020年版(第一部)に収載されているが、現状では塩酸ベルベリン(berberine hydrochloride)のみが定量指標成分として用いられている。単一成分に依存した管理では製剤の品質を包括的に評価することは難しい。そのため、複方製剤の品質評価において複数指標成分の定量が近年の趨勢となっている。指紋分析は中医学において複方製剤の品質を客観的に評価する手法として広く応用されており、成分の特徴・トレーサビリティ・測定可能性を明らかにし、全体性・動態性・包括性という利点を提供する。化学パターン認識技術はさらに指紋情報を精緻化・解析するものであり、両者を組み合わせることで製剤品質をより直感的かつ正確に反映できる。</p>
+<p>製品のバッチ間品質安定性は、臨床的な等価性と有効性を確保するうえで重要な因子である。本研究では、HPLCを用いてQHPs 15バッチの指紋プロファイルを確立し、10成分の含量を定量した。同時に、HCA・PCA・OPLS-DAといった化学パターン認識解析モードを組み合わせ、QHPsのバッチ間安定性を包括的・系統的に評価し、製剤の品質安定性と臨床有効性の一貫性に関する研究の視座を提供した。</p>
+<h2>2. 実験（Experimental）</h2>
+<h3>2.1 機器・試薬</h3>
+<p><strong>機器・ソフトウェア</strong>: Shimadzu LC-20AD高速液体クロマトグラフ、Mettler XS205Du電子天秤(Mettler)、Kunshan Shumei KQ-700 DV超音波洗浄機(Kunshan Ultrasonic Instrument Co., Ltd)。0.22 μmミクロ多孔性ろ過膜はTianjin Chromatography Science and Technology Co., Ltd製。解析に用いたソフトウェアは「中薬クロマトグラム指紋類似度評価システム」(Version A, 2004)、SIMCA 14.1、SPSS 27.0。</p>
+<p><strong>医薬品・試薬</strong>: ゲニポシド(Geniposide、Lot No. 110749-2011919、含量97.1%)、パエオニフロリン(Paeoniflorin、Lot No. 110736-202044、含量96.8%)、リクイリチン(Liquiritin、Lot No. 111610-201106、含量93.7%)、塩酸コプチシン(Coptisine hydrochloride、Lot No. 112026-201601、含量95.1%)、バイカリン(Baicalin、Lot No. 110715-201821、含量95.4%)、塩酸ベルベリン(Berberine hydrochloride、Lot No. 110713-201613、含量86.8%)、ウォゴノシド(Wogonoside、Lot No. 112002-201702、含量98.5%)、パエオノール(Paeonol、Lot No. 110708-200506、含量100.0%)、バイカレイン(Baicalein、Lot No. 111595-201808、含量97.9%)、ハンバイカリン(Hanbaicalin、Lot No. 111514-201706、含量100.0%)は、いずれも中国食品薬品検定研究院(National Institutes for Food and Drug Control)から入手した。メタノールおよびアセトニトリル(クロマトグラフィーグレード)はTEDIA Limitedから、リン酸(分析グレード)は天津科密化学試薬有限公司から購入した。実験には超純水を使用した。</p>
+<p>15バッチのサンプルは5つのメーカーから収集した: S1〜S3はGansu Foren Pharmaceutical Science and Technology Co. Ltd、S4〜S6はShanxi Huakang Pharmaceutical Co. Ltd、S7〜S9はShandong Kongshengtang Pharmaceutical Co. Ltd、S10〜S12はBeijing Tongrentang Pharmaceutical Co. Ltd、S13〜S15はShanxi Wanglong Pharmaceutical Group Co.より入手した。詳細を表Iに示す。</p>
+<p><strong>表I. 15バッチのサンプル情報</strong></p>
+<table>
+<thead><tr><th>番号</th><th>ロット番号</th><th>製造日</th><th>有効期限（文書上）</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>231201</td><td>2023-12-05</td><td>2025-11</td></tr>
+<tr><td>S2</td><td>230901</td><td>2023-09-05</td><td>2025-08</td></tr>
+<tr><td>S3</td><td>240402</td><td>2024-04-10</td><td>2026-03</td></tr>
+<tr><td>S4</td><td>20240503</td><td>2024-05-10</td><td>2027-04</td></tr>
+<tr><td>S5</td><td>20240210</td><td>2024-02-22</td><td>2027-01</td></tr>
+<tr><td>S6</td><td>20231102</td><td>2023-11-07</td><td>2026-10</td></tr>
+<tr><td>S7</td><td>24022014</td><td>2024-02-21</td><td>2026-02-20</td></tr>
+<tr><td>S8</td><td>23122014</td><td>2023-12-20</td><td>2025-12-19</td></tr>
+<tr><td>S9</td><td>23052012</td><td>2023-05-15</td><td>2025-05-14</td></tr>
+<tr><td>S10</td><td>22081124</td><td>2022-09-02</td><td>2026-08</td></tr>
+<tr><td>S11</td><td>22081121</td><td>2022-08-25</td><td>2026-07</td></tr>
+<tr><td>S12</td><td>24081365</td><td>2024-07-05</td><td>2028-06</td></tr>
+<tr><td>S13</td><td>20221109</td><td>2022-11-26</td><td>2025-10</td></tr>
+<tr><td>S14</td><td>20221005</td><td>2022-10-18</td><td>2025-09</td></tr>
+<tr><td>S15</td><td>20230807</td><td>2023-08-23</td><td>2026-07</td></tr>
+</tbody></table>
+<h3>2.2 クロマトグラフィー条件</h3>
+<p>クロマトグラフィー分離はInertSustain C18カラム(4.6 mm×250 mm, 5 μm)で行った。移動相はメタノール(A)、アセトニトリル(B)、0.2%リン酸溶液(C)からなり、以下のグラジエント溶出プログラムを用いた:</p>
+<ul><li>0〜40分: 5%A→5%A、5%B→20%B、90%C→75%C</li><li>40〜60分: 5%A→10%A、20%B→30%B、76%C→65%C</li><li>60〜80分: 10%A→5%A、30%B→55%B、60%C→40%C</li><li>80〜90分: 5%A→10%A、55%B→5%B、40%C→90%C</li></ul>
+<p>流速は1.0 mL/min、検出波長は254 nm、カラム温度は35℃に維持した。注入量は10 μL。</p>
+<h3>2.3 溶液の調製</h3>
+<p><strong>対照溶液の調製</strong>: ゲニポシド、パエオニフロリン、リクイリチン、塩酸コプチシン、バイカリン、塩酸ベルベリン、ウォゴノシド、パエオノール、バイカレイン、ハンバイカリンの対照品を精密に秤量した。各標準品はメタノールに溶解しストック溶液とした。調製した溶液の濃度は以下の通り: ゲニポシド 106.810 μg/mL、パエオニフロリン 23.584 μg/mL、リクイリチン 10.051 μg/mL、塩酸コプチシン 10.375 μg/mL、バイカリン 136.335 μg/mL、塩酸ベルベリン 52.238 μg/mL、ウォゴノシド 31.878 μg/mL、パエオノール 12.361 μg/mL、バイカレイン 10.057 μg/mL、ハンバイカリン 11.727 μg/mL。</p>
+<p><strong>検体溶液の調製</strong>: QHP 1包を粉砕機で細かく粉砕した。約0.5 gの粉末を精密に秤量し、栓付き三角フラスコに移した。メタノール50 mLを加え、混合物を秤量後、超音波処理(300 W、45 kHz)を30分間行った。室温まで放冷後、フラスコを再度秤量し、目減り分をメタノールで補正した。よく振り混ぜた後0.22 μmミクロ多孔性膜でろ過し、ろ液を検体溶液とした。</p>
+<h3>2.4 指紋マッピング検討</h3>
+<p>15バッチのQHPsの指紋を測定し、クロマトグラムを「中薬クロマトグラム指紋類似度評価システム」(Version A, 2004)に取り込んで解析・評価した。サンプルS3のクロマトグラムを対照クロマトグラム(R)とし、時間窓幅は0.1とした。</p>
+<h3>2.5 化学パターン認識</h3>
+<p><strong>階層的クラスター分析</strong>: 15バッチのQHPsのHCAは、28共通ピーク面積の標準化に基づき、群間平均連結法(inter-group join method)とユークリッド距離平方をサンプル類似度の尺度として、IBM SPSS Statistics(Version 27.0)を用いて実施した。</p>
+<p><strong>主成分分析</strong>: 15バッチの28共通ピークの正規化ピーク面積をSPSS 27.0に取り込み、データの適合性検定(KMO検定・Bartlett球面性検定)を行った。KMO値は0.895であり、1に近いほど変数間の相関が強いことを示す。Bartlett検定のp値は0.05未満であり、変数間に有意な相関があり主成分因子分析に適していることが確認された。</p>
+<p><strong>直交部分最小二乗判別分析</strong>: OPLS-DAは分類問題に対処するためよく用いられる教師あり判別分析法である。群内の変動が大きく群間差が小さい場合に特に有効であり、異なるカテゴリーのサンプルを判別する上でPCAより適している。QHPsの異なるメーカー・バッチ間の化学組成差をさらに検討するため、28共通ピークの標準化ピーク面積を従属変数、メーカーおよびバッチを独立変数として、SIMCA 14.1ソフトウェアに取り込みOPLS-DAで処理した。</p>
+<h3>2.6 複数指標成分の含量測定</h3>
+<p><strong>特異性</strong>: 検体溶液と対照溶液を精密に量り取り、クロマトグラフィー条件下で分析した。</p>
+<p><strong>直線範囲</strong>: 各対照品ストック溶液を1、2.5、5、10、25 mLずつ25 mL容量フラスコ6本に精密に取り、メタノールで標線まで希釈し、よく振り混ぜて異なる濃度の混合対照溶液を調製した。溶液を高速液体クロマトグラフに注入し、クロマトグラフィー条件下で分析した。各成分のピーク面積(Y)を濃度(X)に対して直線回帰した。</p>
+<p><strong>精度</strong>: 対照溶液をクロマトグラフィー条件下で6回連続して注入した。</p>
+<p><strong>再現性</strong>: 6丸(ロット番号: 24022014)を精密に秤量し、検体溶液を調製してクロマトグラフィー条件下で分析した。</p>
+<p><strong>添加回収試験</strong>: QHPs(ロット番号24022014)6検体をそれぞれ約0.25 g精密に秤量した。対照品ストック溶液を各々異なる体積(2.2, 3.6, 3.6, 3.3, 2.5, 3.9, 2.3, 2.5, 1.6, 1.0 mL)添加した。検体溶液を調製し、クロマトグラフィー条件下で分析した。回収率は「回収率＝回収された量／添加量」の式で算出した。各成分について回収率を計算した。</p>
+<p><strong>複数指標成分の含量測定</strong>: クロマトグラフィー条件に従い、ゲニポシド、パエオニフロリン、リクイリチン、塩酸コプチシン、バイカリン、塩酸ベルベリン、ウォゴノシド、パエオノール、バイカレイン、ハンバイカリンの含量を15バッチのサンプルについて測定した。</p>
+<h2>3. 結果（Results）</h2>
+<h3>3.1 指紋マッピング</h3>
+<p>指紋分析により合計28本の共通ピークが同定され、うちピーク18番(バイカリン)はピーク面積が大きく、保持時間が安定し、隣接ピークとの分離が良好という利点を示した。28共通ピークの保持時間のRSDは0.32%未満、ピーク面積のRSDは7.73〜44.72%であった。これらの結果は、15バッチにわたり28共通成分の保持時間は比較的安定している一方、バッチ間で含量にはある程度のばらつきがあることを示している。指紋プロファイルを図1に、対照品のクロマトグラムを図2に示す。保持時間と紫外吸収スペクトルの比較により、10成分が同定された。ピーク5番はゲニポシド、ピーク8番はパエオニフロリン、ピーク11番はリクイリチン(甘草配糖体)、ピーク15番は塩酸コプチシンに対応した。ピーク18番はバイカリン、ピーク19番は塩酸ベルベリン、ピーク22番はウォゴノシド、ピーク23番はパエオノール、ピーク24番はバイカレイン、ピーク26番はハンバイカリンとして同定された。</p>
+<blockquote>補足: 原文の本文記述では「ピーク18番＝バイカレイン、ピーク24番＝バイカレイン」のように同一名称の重複が見られる箇所があるが、直後の表Ⅳでは「ピーク18＝baicalin(バイカリン)」「ピーク24＝baicalein(バイカレイン)」と区別されており、本訳では表Ⅳの記載を優先し整合させた（原文の記述ゆれ。詳細は原文参照）。</blockquote>
+<figure><img src="assets/qhp-hplc-fingerprint-chemometrics/fig1_fingerprint.jpeg" alt="Figure 1. 15バッチの清胃黄連丸の指紋および対照指紋。" loading="lazy"><figcaption>Figure 1. 15バッチの清胃黄連丸の指紋および対照指紋。</figcaption></figure>
+<figure><img src="assets/qhp-hplc-fingerprint-chemometrics/fig2_standards.jpeg" alt="Figure 2. 10種混合対照品溶液のクロマトグラム(1. ゲニポシド、2. パエオニフロリン、3. リクイリチン、4. 塩酸コプチシン、5. バイカリン、6. 塩酸ベルベリン、7. ウォゴノシド、8. パエオノール、9. バイカレイン、10. ハンバイカリン)。" loading="lazy"><figcaption>Figure 2. 10種混合対照品溶液のクロマトグラム(1. ゲニポシド、2. パエオニフロリン、3. リクイリチン、4. 塩酸コプチシン、5. バイカリン、6. 塩酸ベルベリン、7. ウォゴノシド、8. パエオノール、9. バイカレイン、10. ハンバイカリン)。</figcaption></figure>
+<p>15バッチのQHPsの指紋と対照指紋との類似度を算出した結果を表IIに示す。中国薬局方委員会の基準によれば、類似度が90%を超える場合に類似度評価要件を満たすとみなされる。15バッチの類似度は0.983〜0.999の範囲にあり、いずれも0.900を上回った。これは5つのメーカーのサンプルの品質が一貫して安定していたことを示す。類似度の高さは、製造プロセスがよく管理され、製剤全体の品質が高かったことも示唆している。</p>
+<p><strong>表II. 15バッチのサンプルの類似度結果</strong></p>
+<table>
+<thead><tr><th>番号</th><th>類似度</th><th>番号</th><th>類似度</th><th>番号</th><th>類似度</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>0.992</td><td>S6</td><td>0.986</td><td>S11</td><td>0.983</td></tr>
+<tr><td>S2</td><td>0.992</td><td>S7</td><td>0.996</td><td>S12</td><td>0.983</td></tr>
+<tr><td>S3</td><td>0.993</td><td>S8</td><td>0.995</td><td>S13</td><td>0.999</td></tr>
+<tr><td>S4</td><td>0.987</td><td>S9</td><td>0.997</td><td>S14</td><td>0.997</td></tr>
+<tr><td>S5</td><td>0.985</td><td>S10</td><td>0.984</td><td>S15</td><td>0.996</td></tr>
+</tbody></table>
+<h3>3.2 階層的クラスター分析</h3>
+<p>結果を図3に示す。図3によれば、ユークリッド距離20〜25の間で15バッチのサンプルは2つのクラスに分類でき、S1〜S3が第1クラス、S4〜S15が第2クラスとなる。</p>
+<figure><img src="assets/qhp-hplc-fingerprint-chemometrics/fig3_hca.jpeg" alt="Figure 3. クラスター分析ヒートマップ（デンドログラム）。" loading="lazy"><figcaption>Figure 3. クラスター分析ヒートマップ（デンドログラム）。</figcaption></figure>
+<h3>3.3 主成分分析</h3>
+<p>固有値1超を選定基準として、4つの主成分因子が同定され、累積寄与率は97.859%であった（表III）。これは、4つの主成分因子がQHPsの28共通ピークの指紋プロファイルに含まれる本質的な特徴と大部分の情報を代表していることを示している。</p>
+<p><strong>表III. PCA固有値と寄与率</strong></p>
+<table>
+<thead><tr><th>主成分</th><th>固有値</th><th>寄与率(%)</th><th>累積寄与率(%)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>11.698</td><td>41.780</td><td>41.780</td></tr>
+<tr><td>2</td><td>6.986</td><td>24.951</td><td>66.731</td></tr>
+<tr><td>3</td><td>5.634</td><td>20.121</td><td>86.852</td></tr>
+<tr><td>4</td><td>3.082</td><td>11.007</td><td>97.859</td></tr>
+</tbody></table>
+<p>成分負荷行列は、4つの主成分と28共通ピークとの相関係数を示す。負荷量の絶対値が大きいほど主成分への寄与が大きいことを意味する。詳細な結果を表IVに示す。主成分負荷の絶対値0.6超を閾値として原変数と4主成分因子との相関を解析した結果、以下が判明した: 主成分1は主にピーク2, 4, 5, 8-9, 11, 14-16, 18, 20-22, 26, 28の情報を反映する。主成分2はピーク1, 5, 17, 24, 27を反映する。主成分3はピーク3, 6, 7, 10, 12, 13, 19に対応する。主成分4は主にピーク23と25を反映する。</p>
+<p><strong>表IV. 15バッチの清胃黄連丸の成分負荷行列</strong></p>
+<table>
+<thead><tr><th>ピーク番号</th><th>成分</th><th>PC1</th><th>PC2</th><th>PC3</th><th>PC4</th><th>ピーク番号</th><th>成分</th><th>PC1</th><th>PC2</th><th>PC3</th><th>PC4</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>未同定</td><td>0.507</td><td>0.746</td><td>0.375</td><td>0.203</td><td>15</td><td>塩酸コプチシン</td><td>0.740</td><td>0.452</td><td>0.300</td><td>0.393</td></tr>
+<tr><td>2</td><td>未同定</td><td>0.711</td><td>0.478</td><td>0.045</td><td>0.494</td><td>16</td><td>未同定</td><td>0.754</td><td>0.238</td><td>0.560</td><td>0.170</td></tr>
+<tr><td>3</td><td>未同定</td><td>0.411</td><td>0.452</td><td>0.625</td><td>0.483</td><td>17</td><td>未同定</td><td>0.113</td><td>0.953</td><td>0.062</td><td>0.114</td></tr>
+<tr><td>4</td><td>未同定</td><td>0.933</td><td>0.203</td><td>0.158</td><td>0.162</td><td>18</td><td>バイカリン</td><td>0.942</td><td>0.264</td><td>0.135</td><td>0.132</td></tr>
+<tr><td>5</td><td>ゲニポシド</td><td>0.701</td><td>0.685</td><td>0.063</td><td>0.143</td><td>19</td><td>塩酸ベルベリン</td><td>0.322</td><td>0.491</td><td>0.663</td><td>0.452</td></tr>
+<tr><td>6</td><td>未同定</td><td>0.183</td><td>0.497</td><td>0.793</td><td>0.295</td><td>20</td><td>未同定</td><td>0.870</td><td>0.310</td><td>0.269</td><td>0.267</td></tr>
+<tr><td>7</td><td>未同定</td><td>0.580</td><td>0.213</td><td>0.774</td><td>0.069</td><td>21</td><td>未同定</td><td>0.867</td><td>0.448</td><td>0.127</td><td>0.167</td></tr>
+<tr><td>8</td><td>パエオニフロリン</td><td>0.768</td><td>0.383</td><td>0.371</td><td>0.328</td><td>22</td><td>ウォゴノシド</td><td>0.964</td><td>0.110</td><td>0.015</td><td>0.231</td></tr>
+<tr><td>9</td><td>未同定</td><td>0.624</td><td>0.630</td><td>0.457</td><td>0.049</td><td>23</td><td>パエオノール</td><td>0.443</td><td>0.173</td><td>0.480</td><td>0.723</td></tr>
+<tr><td>10</td><td>未同定</td><td>0.428</td><td>0.305</td><td>0.754</td><td>0.373</td><td>24</td><td>バイカレイン</td><td>0.383</td><td>0.806</td><td>0.260</td><td>0.366</td></tr>
+<tr><td>11</td><td>リクイリチン</td><td>0.666</td><td>0.450</td><td>0.414</td><td>0.376</td><td>25</td><td>未同定</td><td>0.529</td><td>0.371</td><td>0.264</td><td>0.713</td></tr>
+<tr><td>12</td><td>未同定</td><td>0.557</td><td>0.516</td><td>0.583</td><td>0.286</td><td>26</td><td>ハンバイカリン</td><td>0.797</td><td>0.135</td><td>0.451</td><td>0.367</td></tr>
+<tr><td>13</td><td>未同定</td><td>0.228</td><td>0.018</td><td>0.893</td><td>0.099</td><td>27</td><td>未同定</td><td>0.159</td><td>0.952</td><td>0.220</td><td>0.101</td></tr>
+<tr><td>14</td><td>未同定</td><td>0.810</td><td>0.461</td><td>0.117</td><td>0.250</td><td>28</td><td>未同定</td><td>0.756</td><td>0.588</td><td>0.175</td><td>0.028</td></tr>
+</tbody></table>
+<p>主成分負荷値からさらに4主成分のスコアを算出する線形モデルが導出された。F1〜F4はそれぞれ4主成分のスコアを表し、X1〜X28は標準化した28共通ピーク面積の結果を表す。4主成分スコアの算出式は以下の通り:</p>
+<blockquote>F1 = 0.148X1+0.208X2+0.120X3+0.273X4+0.205X5−0.054X6−0.170X7+0.225X8+0.182X9+0.125X10+0.195X11+0.163X12+0.067X13+0.237X14+0.216X15+0.220X16+0.033X17+0.275X18+0.094X19+0.254X20+0.254X21+0.282X22+0.130X23−0.112X24+0.155X25−0.233X26−0.046X27−0.221X28  F2 = −0.282X1+0.181X2+0.171X3+0.077X4+0.259X5−0.188X6+0.081X7+0.145X8−0.238X9+0.115X10−0.170X11−0.195X12−0.007X13−0.174X14−0.171X15−0.090X16+0.361X17+0.100X18−0.186X19+0.117X20+0.169X21+0.042X22+0.065X23−0.305X24−0.140X25−0.051X26+0.360X27+0.222X28  F3 = 0.158X1−0.019X2+0.263X3−0.067X4−0.027X5+0.334X6+0.326X7−0.156X8−0.193X9+0.318X10+0.174X11+0.246X12−0.376X13+0.049X14−0.126X15−0.236X16−0.026X17−0.057X18−0.279X19+0.113X20−0.054X21+0.006X22+0.202X23−0.110X24+0.111X25−0.190X26−0.093X27−0.074X28  F4 = 0.116X1+0.281X2+0.275X3−0.092X4+0.081X5−0.168X6+0.039X7−0.187X8+0.028X9+0.212X10−0.214X11−0.163X12−0.056X13−0.142X14+0.224X15+0.097X16+0.065X17−0.075X18+0.257X19−0.152X20−0.095X21−0.132X22+0.412X23+0.208X24+0.406X25+0.209X26+0.058X27+0.016X28</blockquote>
+<p>主成分スコア算出後、寄与率を用いて総合スコアを算出した。総合競争力Fsynthesisの合成式は Fsynthesis = (0.41780F1 + 0.24951F2 + 0.20121F3 + 0.11007F4) / 0.97859 であり、スコア結果を表Vに示す。</p>
+<p>これらのスコアは各バッチのQHPsの品質を反映しており、スコアが高いほど品質が優れていることを示す。総合スコア1超の上位6バッチはS4〜S9であり、これらのバッチの品質が優れていることを示している。15バッチの28共通ピークのピーク面積をさらにSIMCA 14.1ソフトウェアでPCA解析し、PCAスコアプロットを図4に示す。</p>
+<p><strong>表V. 15バッチの清胃黄連丸の主成分スコア・総合スコア・ランキング</strong></p>
+<table>
+<thead><tr><th>番号</th><th>PC1</th><th>PC2</th><th>PC3</th><th>PC4</th><th>総合スコア</th><th>順位</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>−5.48929</td><td>0.93338</td><td>2.52206</td><td>1.05860</td><td>−1.46806</td><td>11</td></tr>
+<tr><td>S2</td><td>−5.38857</td><td>1.16782</td><td>2.19646</td><td>0.97693</td><td>−1.44141</td><td>10</td></tr>
+<tr><td>S3</td><td>−5.46290</td><td>1.01380</td><td>2.38527</td><td>0.95344</td><td>−1.47623</td><td>12</td></tr>
+<tr><td>S4</td><td>3.66742</td><td>−0.79995</td><td>1.73430</td><td>0.18798</td><td>1.73953</td><td>3</td></tr>
+<tr><td>S5</td><td>3.53528</td><td>−0.59377</td><td>1.91956</td><td>0.12516</td><td>1.76672</td><td>2</td></tr>
+<tr><td>S6</td><td>4.28406</td><td>−0.66824</td><td>2.17210</td><td>0.18141</td><td>2.12566</td><td>1</td></tr>
+<tr><td>S7</td><td>2.91924</td><td>2.25444</td><td>−0.02409</td><td>−1.82123</td><td>1.61148</td><td>4</td></tr>
+<tr><td>S8</td><td>2.50562</td><td>2.48059</td><td>0.39154</td><td>−1.72689</td><td>1.58862</td><td>5</td></tr>
+<tr><td>S9</td><td>2.75003</td><td>2.28490</td><td>0.14699</td><td>−1.78857</td><td>1.58586</td><td>6</td></tr>
+<tr><td>S10</td><td>−0.66127</td><td>−4.58640</td><td>−0.88289</td><td>0.34604</td><td>−1.59435</td><td>14</td></tr>
+<tr><td>S11</td><td>−0.26187</td><td>−4.79580</td><td>−1.29807</td><td>0.30410</td><td>−1.56730</td><td>13</td></tr>
+<tr><td>S12</td><td>−0.80801</td><td>−4.59123</td><td>−0.89566</td><td>0.36588</td><td>−1.65863</td><td>15</td></tr>
+<tr><td>S13</td><td>−0.60406</td><td>2.10024</td><td>−3.92064</td><td>0.88983</td><td>−0.42851</td><td>8</td></tr>
+<tr><td>S14</td><td>−1.27559</td><td>2.02963</td><td>−3.52378</td><td>1.19629</td><td>−0.61717</td><td>9</td></tr>
+<tr><td>S15</td><td>−0.34827</td><td>1.44787</td><td>−3.91861</td><td>1.41342</td><td>−0.42637</td><td>7</td></tr>
+</tbody></table>
+<figure><img src="assets/qhp-hplc-fingerprint-chemometrics/fig4_pca.jpeg" alt="Figure 4. PCAスコアプロット。" loading="lazy"><figcaption>Figure 4. PCAスコアプロット。</figcaption></figure>
+<h3>3.4 直交部分最小二乗判別分析</h3>
+<p>モデルの安定性パラメーターR2Yは0.997、モデルの予測パラメーターQ2は0.952であった。いずれも0.5を上回っており、OPLS-DAモデルが高い安定性と強い予測能力を有することを示す。図5(A)にOPLS-DAスコアプロットを示す。</p>
+<p>モデルの過学習の有無を検証するため、データをランダムに200回並べ替える順列検定を実施した。結果は図5(B)に示す通り、R2回帰直線のY切片は0.359、Q2回帰直線のY切片は−0.919であり、いずれも元の値より小さかった。これは過学習が生じていないことを確認するものである。したがって、検証結果はモデルが有効かつ信頼できることを示しており、15バッチのQHPs間のバッチ間変動の解析に利用できる。</p>
+<p>Variable Importance in Projection(VIP)値は差異成分の同定における主要指標であり、VIP値が高いほど対応する成分が群間の品質差異に及ぼす影響が大きいことを示す。サンプルバッチ間の差異の主要因となる成分を選定する基準としてVIP＞1の閾値を用いた。その結果、13本のクロマトグラフィーピークが有意であると同定され、図5(C)に示す。これらのピークはVIP値順に、23(パエオノール)、25、3、19(塩酸ベルベリン)、6、10、24(バイカレイン)、2、12、13、27、7、15(塩酸コプチシン)であった。これら13本のピークはバッチ間差異に寄与する主要な化学成分であり、品質変動の潜在的マーカーとなりうる。</p>
+<figure><img src="assets/qhp-hplc-fingerprint-chemometrics/fig5_oplsda.jpeg" alt="Figure 5. 15バッチのOPLS-DAスコア(A)・順列検定(B)・VIP値(C)図（原文キャプションにはさらにロード散布図(D)が含まれるが、抽出できたラスター画像にはA〜Cのみが確認できた。詳細は原文参照）。" loading="lazy"><figcaption>Figure 5. 15バッチのOPLS-DAスコア(A)・順列検定(B)・VIP値(C)図（原文キャプションにはさらにロード散布図(D)が含まれるが、抽出できたラスター画像にはA〜Cのみが確認できた。詳細は原文参照）。</figcaption></figure>
+<h3>3.5 複数指標成分の含量</h3>
+<p>特異性試験の結果、両溶液は同一保持時間で紫外吸収を示し、UV吸収スペクトルも一致した。さらに検体溶液中の各成分の分離は明瞭であり、本法が良好な特異性を有することを示した。10成分の直線性は良好であり、結果を表VIに示す。精度試験の結果、ゲニポシド、パエオニフロリン、リクイリチン、塩酸コプチシン、バイカリン、塩酸ベルベリン、ウォゴノシド、パエオノール、バイカレイン、ハンバイカリンのピーク面積のRSDはそれぞれ0.38%、0.47%、0.82%、0.71%、0.12%、0.97%、1.01%、0.76%、0.86%、0.94%であり、良好な機器精度を示した。再現性試験の結果、ゲニポシド、パエオニフロリン、リクイリチン、塩酸コプチシン、バイカリン、塩酸ベルベリン、ウォゴノシド、パエオノール、バイカレイン、ハンバイカリンのピーク面積のRSDはそれぞれ1.04%、0.89%、1.14%、1.11%、1.42%、0.78%、0.67%、1.02%、0.87%、0.68%であった。これらの結果は本法の良好な再現性を示す。添加回収試験の結果、ゲニポシド、パエオニフロリン、リクイリチン、塩酸コプチシン、バイカリン、塩酸ベルベリン、ウォゴノシド、パエオノール、バイカレイン、ハンバイカリンの平均回収率はそれぞれ99.44%、98.87%、97.89%、99.97%、100.03%、98.78%、100.10%、98.78%、100.23%、98.17%であった。対応するRSDはそれぞれ1.77%、1.60%、0.83%、1.95%、1.54%、1.45%、1.43%、0.90%、1.43%、1.55%であり、良好な回収精度を示した。</p>
+<p><strong>表VI. 清胃黄連丸中10成分の直線関係の検討結果</strong></p>
+<table>
+<thead><tr><th>対照品</th><th>回帰式（原文表記のまま）</th><th>r</th><th>直線範囲(μg/mL)</th></tr></thead>
+<tbody>
+<tr><td>ゲニポシド</td><td>Y = 9637.9 + 48,282</td><td>0.9997</td><td>21.362〜534.05</td></tr>
+<tr><td>パエオニフロリン</td><td>Y = 2801.7 + 3142.7</td><td>0.9996</td><td>4.7168〜117.92</td></tr>
+<tr><td>リクイリチン</td><td>Y = 6882.0 + 1174.4</td><td>0.9997</td><td>2.0103〜50.257</td></tr>
+<tr><td>塩酸コプチシン</td><td>Y = 36,611 + 8892.5</td><td>0.9998</td><td>2.0749〜51.873</td></tr>
+<tr><td>バイカリン</td><td>Y = 15,608 − 318.66</td><td>1.0000</td><td>27.267〜681.68</td></tr>
+<tr><td>塩酸ベルベリン</td><td>Y = 17,832 + 1977</td><td>0.9998</td><td>10.448〜261.19</td></tr>
+<tr><td>ウォゴノシド</td><td>Y = 18,115 + 12,891</td><td>0.999</td><td>6.3756〜159.39</td></tr>
+<tr><td>パエオノール</td><td>Y = 12,440 + 1776.3</td><td>0.9999</td><td>2.4723〜61.807</td></tr>
+<tr><td>バイカレイン</td><td>Y = 57,515 + 10,007</td><td>0.9997</td><td>2.0114〜50.285</td></tr>
+<tr><td>ハンバイカリン</td><td>Y = 26,488 − 11,283</td><td>0.9998</td><td>2.3455〜58.636</td></tr>
+</tbody></table>
+<blockquote>補足: 表VIの回帰式は原文の記載順（数値1＋数値2）をそのまま転記した。原文ではY(ピーク面積)とX(濃度)の関係式であることは明記されているが、どちらの数値が傾き・切片に対応するかの表記が本文中で判然としない箇所があったため、数値を入れ替えるなどの解釈は行わず原文の並び順のまま記載している。正確な回帰式が必要な場合は原文の表VIを直接参照されたい。</blockquote>
+<p>複数指標成分の含量測定に関する結果として、15バッチのサンプルにおけるゲニポシド、パエオニフロリン、リクイリチン、塩酸コプチシン、バイカリン、塩酸ベルベリン、ウォゴノシド、パエオノール、バイカレイン、ハンバイカリンの含量測定結果を表VIIに示す。バッチ間における10成分のRSDはそれぞれ16.74%、15.79%、28.59%、27.17%、24.04%、14.15%、15.89%、12.34%、41.34%、14.67%であり、バッチ間で成分含量にばらつきがあることを示している。SPSS 27.0を用いて10成分の含量とPCA総合スコアとの相関を解析した。ピアソンの相関係数を用いた二変量相関分析を行い、両側検定で有意性を確認したところ、相関係数は0.752(P＜0.001)であった。この結果は、10種の指標成分とQHPsの総合品質との間に有意な相関があることを示しており、これら10成分が製品の品質評価に利用できることを示唆している。</p>
+<p><strong>表VII. 清胃黄連丸中10成分の含量測定結果(mg/g)</strong></p>
+<table>
+<thead><tr><th>サンプル</th><th>ゲニポシド</th><th>パエオニフロリン</th><th>リクイリチン</th><th>塩酸コプチシン</th><th>バイカリン</th><th>塩酸ベルベリン</th><th>ウォゴノシド</th><th>パエオノール</th><th>バイカレイン</th><th>ハンバイカリン</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>6.80</td><td>2.42</td><td>1.23</td><td>0.62</td><td>7.30</td><td>6.11</td><td>2.03</td><td>0.97</td><td>0.82</td><td>0.59</td></tr>
+<tr><td>S2</td><td>6.53</td><td>2.58</td><td>1.23</td><td>0.63</td><td>7.33</td><td>6.27</td><td>2.06</td><td>1.01</td><td>0.81</td><td>0.58</td></tr>
+<tr><td>S3</td><td>6.58</td><td>2.55</td><td>1.24</td><td>0.62</td><td>7.30</td><td>6.12</td><td>2.04</td><td>0.97</td><td>0.82</td><td>0.59</td></tr>
+<tr><td>S4</td><td>8.27</td><td>3.68</td><td>2.19</td><td>1.22</td><td>14.46</td><td>7.00</td><td>3.23</td><td>0.99</td><td>0.51</td><td>0.40</td></tr>
+<tr><td>S5</td><td>8.31</td><td>3.68</td><td>2.15</td><td>1.22</td><td>14.49</td><td>7.04</td><td>3.23</td><td>0.98</td><td>0.51</td><td>0.40</td></tr>
+<tr><td>S6</td><td>8.50</td><td>3.65</td><td>2.66</td><td>1.22</td><td>14.56</td><td>7.03</td><td>3.27</td><td>1.03</td><td>0.51</td><td>0.40</td></tr>
+<tr><td>S7</td><td>9.58</td><td>3.45</td><td>1.46</td><td>1.39</td><td>13.90</td><td>8.10</td><td>2.94</td><td>1.26</td><td>0.64</td><td>0.49</td></tr>
+<tr><td>S8</td><td>9.87</td><td>3.42</td><td>1.42</td><td>1.37</td><td>13.85</td><td>8.03</td><td>2.89</td><td>1.18</td><td>0.56</td><td>0.51</td></tr>
+<tr><td>S9</td><td>9.83</td><td>3.52</td><td>1.46</td><td>1.39</td><td>13.91</td><td>8.10</td><td>2.92</td><td>1.22</td><td>0.62</td><td>0.51</td></tr>
+<tr><td>S10</td><td>6.28</td><td>2.78</td><td>1.67</td><td>1.49</td><td>9.75</td><td>9.24</td><td>2.45</td><td>0.99</td><td>1.43</td><td>0.59</td></tr>
+<tr><td>S11</td><td>6.33</td><td>2.83</td><td>1.75</td><td>1.50</td><td>9.82</td><td>9.30</td><td>2.46</td><td>0.99</td><td>1.44</td><td>0.60</td></tr>
+<tr><td>S12</td><td>6.25</td><td>2.74</td><td>1.67</td><td>1.48</td><td>9.69</td><td>9.19</td><td>2.43</td><td>1.00</td><td>1.44</td><td>0.59</td></tr>
+<tr><td>S13</td><td>8.03</td><td>3.77</td><td>1.23</td><td>1.08</td><td>12.19</td><td>7.83</td><td>2.64</td><td>0.86</td><td>0.71</td><td>0.57</td></tr>
+<tr><td>S14</td><td>8.40</td><td>3.43</td><td>1.04</td><td>1.07</td><td>12.36</td><td>8.30</td><td>2.66</td><td>0.85</td><td>0.73</td><td>0.58</td></tr>
+<tr><td>S15</td><td>8.41</td><td>3.86</td><td>1.26</td><td>1.07</td><td>12.37</td><td>8.31</td><td>2.66</td><td>0.85</td><td>0.73</td><td>0.58</td></tr>
+</tbody></table>
+<h2>4. 考察（Discussion）</h2>
+<p>QHPにおいて、黄連(Coptis chinensis)と石膏は君薬として機能し、清熱・燥湿・解毒の働きを担う。黄芩(Scutellaria baicalensis)と山梔子(Gardenia)は臣薬として、清熱・除湿・解毒を助ける。連翹(Forsythia suspensa)は清熱・解毒・消腫・散結の働きを持つ。知母(Anemarrhena asphodeloides)と黄柏(Phellodendron amurense)は体を冷やし、陰を養い、乾燥を潤す。玄参(Radix scrophulariae)、地黄(Rehmannia glutinosa)、牡丹皮(Peony bark)、赤芍(Red peony)は清熱・涼血・解毒・活血の働きを持ち、消腫・散瘀を助ける佐薬として含まれる。天花粉は陰を養い乾燥を潤し、清熱して津液の産生を促す佐薬として作用する。桔梗(Platycodon grandiflorus)は咽頭を解毒し薬効を上へ運ぶ働きを助け、甘草はすべての生薬の作用を調和させる使薬として働く。中医学における品質マーカー(quality marker)は、しばしば君薬に由来しつつ、臣薬・佐薬・使薬の役割も考慮して選定される。本研究では、黄連を君薬、黄芩・山梔子・牡丹皮・赤芍を佐薬、甘草を使薬として選定した。この選定はQHPの包括的な品質管理の基盤となるものである。</p>
+<p>中国薬局方2020年版第一部によれば、ゲニポシドは波長238 nmで良好な吸収を示し、パエオニフロリンは230 nmで最大吸収、リクイリチンは237 nmで最大吸収を示す。塩酸ベルベリンと塩酸コプチシンは345 nmで最大吸収を示し、バイカリン、ウォゴノシド、バイカレイン、ハンバイカリンは280 nmで良好な吸収、パエオノールは274 nmで最大吸収を示す。本実験では、230 nm、237 nm、238 nm、254 nm、354 nmの各波長でピーク挙動を検討した。その結果、254 nmではピーク形状が優れ、感度が高く、分離度も良好で、かつ強い紫外吸収を示すことが判明した。したがって、254 nmを検出波長として選定した。</p>
+<p>中薬の指紋分析は、真正性の確保、品質の一貫性評価、製品安定性の評価に有効な手法であり、中医学の品質管理分野で広く採用されている。米国食品医薬品局(FDA)は、生薬製品の申請資料にクロマトグラフィー指紋プロファイルを含めることを認めている。世界保健機関(WHO)も1996年の生薬評価ガイドラインにおいて、生薬の有効成分が明確に同定されていない場合、製品品質の一貫性を示すためにクロマトグラフィー指紋プロファイルを提供できると規定している。同様に、欧州共同体も生薬品質に関するガイドラインにおいて、単一の有効成分の測定のみに依拠した品質安定性評価は不十分であるとしている。これは、生薬とその製剤が全体として一つの活性物質として機能するためである。指紋プロファイルを中薬(天然薬物)エキスおよびその製剤の品質管理手法として用いることは、国際的なコンセンサスとなっている。中薬(天然薬物)特有の性質に適合したさまざまな指紋プロファイル管理技術体系の確立に向けて、研究開発が進められている。</p>
+<h2>5. 結論（Conclusion）</h2>
+<p>本研究では、指紋分析と多成分アッセイを用いて15バッチのQHPsの品質を解析した。結果はバッチ間変動が最小限であり、品質が安定かつ均質であることを示した。本研究はQHPsのHPLC指紋を確立し、10の主要成分を含む28本のピークを同定した。データはさらに化学パターン認識技術で解析され、QHPsの一貫性評価のための手法を提供するとともに、製品の包括的な品質管理の参考を提供した。</p>
+<h2>訳者補足</h2>
+<ul><li>QHPの中国薬局方における定量指標成分は現状「塩酸ベルベリン」の単一成分のみだが、本研究は指紋分析(28共通ピーク・類似度0.983〜0.999)＋10成分同時定量＋HCA/PCA/OPLS-DAという多層的アプローチにより、単一成分管理では見えないバッチ間・メーカー間の品質差を可視化した点が実務的な意義といえる。</li><li>OPLS-DAで抽出されたVIP＞1の13ピーク(パエオノール・塩酸ベルベリン・塩酸コプチシン等を含む)は、必ずしも薬効との対応関係が本論文内で明示的に検証されているわけではなく、あくまで「バッチ間差異への寄与が大きい統計的マーカー」として位置づけられている点に留意されたい。</li><li>表VIの検量線式は原文の数値表記の並び順をそのまま転記しており、傾き・切片の対応関係を独自に解釈していない。定量計算に用いる場合は原文(Table VI)を直接参照することを推奨する。</li><li>インパクトファクターは複数の指標サイトを確認したが1.3〜1.8の間で情報源により差があり、公式なJCR値を一意に確認できなかったため「要確認」としている。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="yqg-uplc-fingerprint-qams.html">UPLC指紋分析と一標準多成分定量法(QAMS)を組み合わせた宜清顆粒(YiQing granules)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="bzyqt-ternary-network-qmarker.html">定量的三元ネットワークによる漢方処方からのQ-marker探索—補中益気湯を例に</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="xyw-uplc-orbitrap-gcims-qc.html">UPLC-Q-Orbitrap-MS・HS-SPME-GC-MSおよびHS-GC-IMSによる逍遥丸(Xiaoyao Wan)の多成分包括的キャラクタリゼーションと品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="tcm-comprehensive-quality-index.html">化学・生物評価を統合したTCM総合品質評価指標(QCEI)による品質等級化</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="qhp-hplc-fingerprint-chemometrics" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
