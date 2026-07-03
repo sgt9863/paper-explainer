@@ -34,16 +34,29 @@
 
   var api = {
     getStatus: function (slug) { return (slug && store[slug]) || "unread"; },
-    setStatus: function (slug, status) {
+    // origin: "local"（ユーザー操作）/ "remote"（クラウド同期の反映）
+    setStatus: function (slug, status, origin) {
       if (!slug) return;
       if (VALID[status]) { store[slug] = status; } else { delete store[slug]; }
       save(store);
       document.dispatchEvent(new CustomEvent("statuschange", {
-        detail: { slug: slug, status: api.getStatus(slug) }
+        detail: { slug: slug, status: api.getStatus(slug), origin: origin || "local" }
       }));
     },
     count: function (status) {
       return Object.keys(store).filter(function (s) { return store[s] === status; }).length;
+    },
+    getAll: function () { return store; },
+    // クラウド同期がまとめて上書きするための入口（UIも更新される）
+    replaceAll: function (map) {
+      store = {};
+      if (map) {
+        Object.keys(map).forEach(function (s) { if (VALID[map[s]]) store[s] = map[s]; });
+      }
+      save(store);
+      document.dispatchEvent(new CustomEvent("statuschange", {
+        detail: { slug: null, status: null, origin: "remote" }
+      }));
     }
   };
   window.PaperRead = api;

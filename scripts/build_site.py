@@ -363,6 +363,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 <body>
 <header class="site-header">
   <a class="site-title" href="{rel_root}/index.html">{html.escape(site_title)}</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
 {main_open}
 {body}
@@ -374,6 +375,8 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 <script src="{rel_root}/assets/read.js" defer></script>
 <script src="{rel_root}/assets/fav.js" defer></script>
 {notes_scripts}
+<script src="{rel_root}/assets/sync-config.js" defer></script>
+<script src="{rel_root}/assets/sync.js" defer></script>
 {math_scripts}
 {extra_scripts}
 </body>

@@ -18,14 +18,27 @@
 
   var api = {
     isFav: function (slug) { return !!store[slug]; },
-    set: function (slug, val) {
+    // origin: "local"（ユーザー操作）/ "remote"（クラウド同期の反映）
+    set: function (slug, val, origin) {
       if (!slug) return;
-      if (val) { store[slug] = Date.now(); } else { delete store[slug]; }
+      if (val) { store[slug] = store[slug] || Date.now(); } else { delete store[slug]; }
       save(store);
-      document.dispatchEvent(new CustomEvent("favchange", { detail: { slug: slug, fav: !!val } }));
+      document.dispatchEvent(new CustomEvent("favchange", {
+        detail: { slug: slug, fav: !!val, origin: origin || "local" }
+      }));
     },
     toggle: function (slug) { this.set(slug, !this.isFav(slug)); return this.isFav(slug); },
-    count: function () { return Object.keys(store).length; }
+    count: function () { return Object.keys(store).length; },
+    getAll: function () { return store; },
+    // クラウド同期がまとめて上書きするための入口（UIも更新される）
+    replaceAll: function (map) {
+      store = {};
+      if (map) { Object.keys(map).forEach(function (s) { if (map[s]) store[s] = map[s]; }); }
+      save(store);
+      document.dispatchEvent(new CustomEvent("favchange", {
+        detail: { slug: null, fav: false, origin: "remote" }
+      }));
+    }
   };
   window.PaperFav = api;
 
