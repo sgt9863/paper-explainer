@@ -427,6 +427,18 @@
       "title": "定量的三元ネットワークによる漢方処方からのQ-marker探索—補中益気湯を例に",
       "source_pdf": "1-s2.0-S0944711324005762-main.pdf",
       "date": "2026-07-03"
+    },
+    "1FnfcjeNIIEzjkz7O-mkn6rYlGjTgcoXr": {
+      "slug": "tcmp-ftnir-hsi-fusion-cqa",
+      "title": "FT-NIRとVis/NIR-HSIのデータ融合戦略による中薬顆粒(TCMP)の重要品質特性の非破壊予測",
+      "source_pdf": "1-s2.0-S0924203125000141-main.pdf",
+      "date": "2026-07-03"
+    },
+    "1TsMDoyXfnTpNQi8YJm3w9jH0Sk8XuWax": {
+      "slug": "fej-tlc-lcms-entropy-qmarker",
+      "title": "多次元クロマトグラフィー指紋融合と機械学習によるTCM Q-marker探索——エントロピーに基づく特徴量評価",
+      "source_pdf": "1-s2.0-S0039914026001554-main.pdf",
+      "date": "2026-07-03"
     }
   }
 }
