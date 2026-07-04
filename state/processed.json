@@ -321,6 +321,34 @@
       "title": "漢方薬の品質評価と製造工程管理のための品質マーカー（Q-marker）新概念",
       "source_pdf": "1-s2.0-S1674638417600704-main.pdf",
       "date": "2026-07-02"
+    },
+    "1DfVkGZD9UlLcDW-2xWybxWQ7RXAdrH9b": {
+      "slug": "mlstp-multistrategy-qmarker-qams",
+      "title": "脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築",
+      "source_pdf": "1-s2.0-S0731708524001109-main.pdf",
+      "date": "2026-07-04",
+      "note": "duplicate upload of MLSTP paper (same as mlstp-multistrategy-qmarker-qams)"
+    },
+    "1wTMFSmhQFyHNBOPFg7j0w-Z5v7jM9EZT": {
+      "slug": "fcg-sugarfree-fingerprint-qams",
+      "title": "無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価",
+      "source_pdf": "1-s2.0-S0731708526001597-main.pdf",
+      "date": "2026-07-04",
+      "note": "duplicate upload of FCG paper (same as fcg-sugarfree-fingerprint-qams)"
+    },
+    "1-9D2TYKpF1Pa3y6UrLwozKn0YBvg5cF2": {
+      "slug": "shxxd-hplc-fingerprint-qmarker",
+      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
+      "source_pdf": "Biomedical_Chromatography_2026_Fu_Sanhuang_Xiexin_Decoction.pdf",
+      "date": "2026-07-04",
+      "note": "duplicate upload of SHXXD paper (doi 10.1002/bmc.70477, same as shxxd-hplc-fingerprint-qmarker)"
+    },
+    "1rq9QDU03Y37lpymIcDWGj2WmcQhzRJJt": {
+      "slug": "retention-modeling-lc-review",
+      "title": "液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー",
+      "source_pdf": "JSSC-44-88.pdf",
+      "date": "2026-07-04",
+      "note": "duplicate upload of retention-modeling-lc-review paper (doi 10.1002/jssc.202000905); original md had been added previously without a drive_file_id record, backfilled here"
     }
   }
 }

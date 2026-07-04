@@ -3,6 +3,8 @@ title: 液体クロマトグラフィーにおける保持モデリングの最�
 slug: retention-modeling-lc-review
 doi: https://doi.org/10.1002/jssc.202000905
 source_pdf: JSSC4488.pdf
+drive_file_id: 1rq9QDU03Y37lpymIcDWGj2WmcQhzRJJt
+drive_url: https://drive.google.com/file/d/1rq9QDU03Y37lpymIcDWGj2WmcQhzRJJt/view
 level: practitioner
 date: 2026-07-03
 published: 2021
