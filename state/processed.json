@@ -349,6 +349,102 @@
       "source_pdf": "JSSC-44-88.pdf",
       "date": "2026-07-04",
       "note": "duplicate upload of retention-modeling-lc-review paper (doi 10.1002/jssc.202000905); original md had been added previously without a drive_file_id record, backfilled here"
+    },
+    "1rOACa_rlpNTtKLnNA9csmrfoDsUkQwAd": {
+      "slug": "yiqing-granules-uplc-qams",
+      "title": "UPLCフィンガープリンティングと単一マーカーによる多成分定量分析(QAMS)を組み合わせた一清顆粒(YiQing granules)の品質評価",
+      "source_pdf": "fchem-13-1632033.pdf",
+      "date": "2026-07-04"
+    },
+    "17WJzzSi6qphHFsuaEXG4AZ5LwKTH0Att": {
+      "slug": "effect-constituent-index-qmarker-review",
+      "title": "統合的・効能指向型の品質マーカー「Effect-constituent Index」による漢方生薬の品質規格の向上",
+      "source_pdf": "1-s2.0-S0944711318300485-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1wa1TYsoJ3tFNDS05KHQdWJZcjUakxHJx": {
+      "slug": "qwhlp-fingerprint-qams-chemometrics",
+      "title": "清胃黄連丸(QHPs)の指紋分析・多指標成分定量とケモメトリクス（化学パターン認識）による品質評価",
+      "source_pdf": "bmaf018.pdf",
+      "date": "2026-07-04"
+    },
+    "10mUjRIYF9BlPpdSPXwpM8E6zhCd-C8H4": {
+      "slug": "agarwood-multicomponent-qc-fullsolution",
+      "title": "多成分定量指向型の生薬品質評価のためのフルソリューション：中国産沈香（Chinese agarwood）を例に",
+      "source_pdf": "1-s2.0-S0021967318305909-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1WGC54yEDxc4EpyNiErMYu6v-KBhG8TZD": {
+      "slug": "mmdhw-threewavelength-fingerprint-antioxidant",
+      "title": "HPLC三波長融合指紋と電気化学指紋・抗酸化法を組み合わせた明目地黄丸の品質一貫性評価",
+      "source_pdf": "1-s2.0-S0021967322006409-main.pdf",
+      "date": "2026-07-04"
+    },
+    "12h4lTsdqn_9AEt-Jv104TMaJHKy5Gjx4": {
+      "slug": "tcm-trinity-fingerprint-system",
+      "title": "漢方生薬のトリニティ指紋評価システム — HPLC定量指紋・UV量子指紋・THz量子指紋の統合による甘草の品質評価",
+      "source_pdf": "1-s2.0-S0021967322003119-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1VYhjOdUvPvU6n43Ys1yVP0un6n0Ftu50": {
+      "slug": "fda-botanical-drug-regulatory-review",
+      "title": "植物薬（Botanical Drug）開発への科学的・規制的アプローチ：米国FDAの視点",
+      "source_pdf": "scientific-regulatory-approach-botanical-drug-development-US-FDA-perspective.pdf",
+      "date": "2026-07-04"
+    },
+    "1lHzZqQg6TxS1jS3IRGCucopsYC68u6Ic": {
+      "slug": "xiaoyao-wan-multiplatform-qc",
+      "title": "UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMSによる逍遥丸(Xiaoyao Wan)の網羅的多成分キャラクタリゼーションと品質評価",
+      "source_pdf": "1-s2.0-S0731708523006799-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1m8uoHCjoXgjfOwp2MYLn2zCpOU-_aM5v": {
+      "slug": "hqgzwwd-uplc-pharmacodynamics-qc",
+      "title": "UPLC-DAD/MS化学プロファイルと薬効評価・ケモメトリクスを統合した黄耆桂枝五物湯の包括的品質評価",
+      "source_pdf": "1-s2.0-S0378874123011959-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1h_mD0T90b4p73Ayy27izNkZkx5E2C7wl": {
+      "slug": "antithrombotic-herbs-networkpharm-qmarker",
+      "title": "ネットワーク薬理学に基づく抗血栓生薬の品質マーカー(Q-marker)研究 — 丹参・川芎薬対を例として",
+      "source_pdf": "1-s2.0-S0378874122002367-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1O01zfhB3DNGrdEpqJMovr3BpT6qj5Vjr": {
+      "slug": "jinyinhua-nir-rtrt-spc-qc",
+      "title": "近赤外分光法とリアルタイムリリース試験(RTRT)・統計的工程管理(SPC)チャートを用いた、生薬「金銀花」工業濃縮工程のオンライン品質管理",
+      "source_pdf": "1-s2.0-S1350449522001165-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1xTZTpxCQazkNX6BClGn08I-21MzAiuOA": {
+      "slug": "bzyqt-ternary-network-qmarker",
+      "title": "定量的三元ネットワークに基づく漢方処方からのQ-marker探索 — 補中益気湯を例として",
+      "source_pdf": "1-s2.0-S0944711324005762-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1TsMDoyXfnTpNQi8YJm3w9jH0Sk8XuWax": {
+      "slug": "tcm-entropy-ml-fingerprint-fusion",
+      "title": "多次元クロマトグラフィー指紋の融合と機械学習: TCM品質マーカー探索のためのエントロピーに基づく特徴量評価",
+      "source_pdf": "1-s2.0-S0039914026001554-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1_aL8qciBJadjPfp8DpUiJZMxMXZSId6j": {
+      "slug": "hugan-capsule-fourwavelength-fingerprint",
+      "title": "四波長融合プロファイリングと電気化学指紋・抗酸化活性・ケモメトリクスを統合した護肝カプセル(Hugan Capsule)の品質管理",
+      "source_pdf": "1-s2.0-S0003267023002362-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1ThjQlx_haqpjrYeGBLMNllC9SpN_qccI": {
+      "slug": "xfzy-ai-nondestructive-qc",
+      "title": "AI駆動型戦略による活性成分探索と非破壊品質管理：血府逐瘀口服液(XZOL)を例に",
+      "source_pdf": "1-s2.0-S0039914025001134-main.pdf",
+      "date": "2026-07-04"
+    },
+    "1FnfcjeNIIEzjkz7O-mkn6rYlGjTgcoXr": {
+      "slug": "tcm-particles-nir-hsi-fusion-cqa",
+      "title": "FT-NIRとVis/NIR-HSIを組み合わせたデータ融合戦略の開発 — 中成薬顆粒(TCMP)の重要品質特性(CQA)の非破壊予測",
+      "source_pdf": "1-s2.0-S0924203125000141-main.pdf",
+      "date": "2026-07-04"
     }
   }
 }
