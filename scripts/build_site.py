@@ -145,6 +145,7 @@ def _render_table(rows):
 def markdown_to_html(md: str, link_citations: bool = False) -> str:
     global _LINK_CITATIONS
     _LINK_CITATIONS = link_citations
+    md = re.sub(r"<!--.*?-->", "", md, flags=re.DOTALL)
     lines = md.split("\n")
     html_parts = []
     i = 0
