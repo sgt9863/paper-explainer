@@ -8,7 +8,7 @@ drive_url: https://drive.google.com/file/d/17WJzzSi6qphHFsuaEXG4AZ5LwKTH0Att/vie
 level: practitioner
 date: 2026-07-04
 published: 2018
-tags: [生薬, 方剤・中成薬, Q-marker, レビュー]
+tags: [生薬, 方剤・中成薬, Q-marker]
 digest_tagline: 黄連（Coptidis Rhizoma）を例に、抗菌・抗腫瘍という異なる効能ごとに最適化した統合的Q-marker「Effect-constituent Index（ECI）」を提案する原著研究
 digest_stats: [IF（2024）|8.81, 対象|黄連（Coptidis Rhizoma）, 新指標|Effect-constituent Index（ECI）, 評価軸|抗菌ECIS・抗腫瘍ECIH, 相関|Rs=0.987／Rh=0.873（P<0.01）]
 digest_points: [微小熱量測定とMTTアッセイで黄連の5活性成分（BER・EPI・COP・PAL・JAT）のIC50・EC50を求め活性の重みを付けた複合指標ECIを構築, ECIは実測の阻害活性・細胞毒性と有意に相関し（Rs=0.987、Rh=0.873、いずれもP<0.01）官能評価や単一マーカー（BER含量）では判別できない品質グレードを明確に分離, 抗菌用途と抗腫瘍用途で異なるECIS・ECIHを設定でき効能ごとに最適なQ-markerを個別に評価する効能指向型の統合的品質評価法を提案]
@@ -168,7 +168,7 @@ Fig. 4aに示す通り、10ロットのC. Rhizoma抽出物における5成分の
 
 この問題を解決するため、各ロットのC. RhizomaのBER・EPI・COP・PAL・JATの含量を式(8)・(9)に代入し、異なる試料のECIS・ECIHを算出した。Fig. 4bに示す結果によれば、ECIの個別指標により、ロットごとのC. Rhizomaの品質差を容易に判別できた。例えば、試料4はECISの点で劣っていた一方、試料5はECISの点で優れており、これはS. dysenteriaeに由来する赤痢の治療に用いる場合の評価である。同時に、ECIの確立により、C. Rhizomaの個別化評価と合理的使用も導くことができる。例えば、試料7はそのECI値によれば、S. dysenteriaeの阻害よりもHepG2細胞の阻害においてより優れていた。
 
-![図4. (a) 5成分（BER・EPI・COP・PAL・JAT）の含有率（10ロット）、および(b) 10ロットのC. Rhizoma試料のECIS・ECIH。測定は三連で実施し、エラーバーは平均値の標準誤差を示す。**P<0.01、対応するECIS値との比較。](assets/effect-constituent-index-qmarker-review/fig4_content_eci.png)
+![図4. (a) 5成分（BER・EPI・COP・PAL・JAT）の含有率（10ロット）、および(b) 10ロットのC. Rhizoma試料のECIS・ECIH。測定は三連で実施し、エラーバーは平均値の標準誤差を示す。原文注記: P<0.01（対応するECIS値との比較、原文では二重アスタリスクで表記）。](assets/effect-constituent-index-qmarker-review/fig4_content_eci.png)
 
 ### 4.5 相関解析
 
@@ -179,7 +179,7 @@ ECIがC. Rhizomaの効果を代表しうるか確認するため、C. Rhizoma抽
 
 ![図5. (a) 種々の濃度のC. Rhizoma抽出物がS. dysenteriaeに及ぼす影響を示すHFP-t曲線、および(b) C. Rhizoma抽出物のHepG2細胞に対する細胞毒性（生存細胞率, %対照）。HepG2細胞に対する阻害効果の測定は三連で実施し、エラーバーは平均値の標準誤差を示す。](assets/effect-constituent-index-qmarker-review/fig5_hfp_extract.png)
 
-測定した効果値とECIの予測値を比較したところ、最も高いECIS・ECIHを示した試料5は、S. dysenteriaeに対する阻害・HepG2細胞に対する細胞毒性においても最も強い（それぞれRIS **15.03%**、EC50 **11.14 mg/mL**）ことが分かった。さらに、ECIと阻害効果の値との相関解析を行った。結果（Fig. 6）によれば、C. RhizomaのECISはRISと有意に相関し（**RS = 0.987、**P<0.01**）（Fig. 6a）、C. RhizomaのECIHは1/EC50と有意に相関しており（**RH = 0.873、**P<0.01**）（Fig. 6b）、ECIS・ECIHがそれぞれS. dysenteriaeおよびHepG2細胞に対するC. Rhizomaの阻害効果をある程度代表しうることが示唆された。
+測定した効果値とECIの予測値を比較したところ、最も高いECIS・ECIHを示した試料5は、S. dysenteriaeに対する阻害・HepG2細胞に対する細胞毒性においても最も強い（それぞれRIS **15.03%**、EC50 **11.14 mg/mL**）ことが分かった。さらに、ECIと阻害効果の値との相関解析を行った。結果（Fig. 6）によれば、C. RhizomaのECISはRISと有意に相関し（**RS = 0.987、P<0.01**）（Fig. 6a）、C. RhizomaのECIHは1/EC50と有意に相関しており（**RH = 0.873、P<0.01**）（Fig. 6b）、ECIS・ECIHがそれぞれS. dysenteriaeおよびHepG2細胞に対するC. Rhizomaの阻害効果をある程度代表しうることが示唆された。
 
 ![図6. (a) ECIS値とRIS（%）の関係、および(b) ECIH値と1/IC50の関係。赤線は回帰直線。](assets/effect-constituent-index-qmarker-review/fig6_correlation.png)
 
