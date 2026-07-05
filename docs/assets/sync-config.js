@@ -6,6 +6,6 @@
    各ユーザーが自分のデータしか読めないよう保護されます。公開リポジトリに置いて問題ありません。
    （秘密の service_role キーは絶対にここへ入れないこと。） */
 window.PAPER_SYNC_CONFIG = {
-  url: "",      // 例: https://xxxxxxxx.supabase.co
-  anonKey: ""   // 例: eyJhbGciOiJIuzI1NiIsInR5cCI6...（公開 anon キー）
+  url: "https://hngvmvofpfypwkhjnmig.supabase.co",
+  anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhuZ3Ztdm9mcGZ5cHdraGpubWlnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODMwNDg2ODcsImV4cCI6MjA5ODYyNDY4N30.FHDP0kMnj9zwH8VKARVWSMIEJ0TM3Tlc3Dc1cHjwXmQ"
 };
