@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>統合的・薬効指向型の品質マーカー「効果構成指数（ECI）」による漢方薬の品質規格向上——黄連（Coptidis Rhizoma）を例に</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="統合的・薬効指向型の品質マーカー「効果構成指数（ECI）」による漢方薬の品質規格向上——黄連（Coptidis Rhizoma）を例に">
+<meta property="og:description" content="黄連(Coptidis Rhizoma)を題材に、抗菌(赤痢菌)・抗腫瘍(HepG2細胞)という薬効ごとに5種プロトベルベリンアルカロイドの含量と活性重みを統合した「効果構成指数(ECI)」という薬効指向型Q-markerを提案。単一マーカーや官能評価では判別できなかった品質グレードをECIが明確に分離できることを黄連バッチ試料で実証した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/coptidis-eci-qmarker/slide.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="coptidis-eci-qmarker"><h1>統合的・薬効指向型の品質マーカー「効果構成指数（ECI）」による漢方薬の品質規格向上——黄連（Coptidis Rhizoma）を例に</h1><div class="paper-meta"><span class="date">2026-07-05</span> <span class="tag">生薬</span> <span class="tag">QC・品質評価</span> <span class="tag">Q-marker</span> <span class="tag">HPLC・UPLC</span> <span class="tag">多成分定量</span> <span class="tag">薬効・薬理</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1016/j.phymed.2018.03.013" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0944711318300485-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="coptidis-eci-qmarker" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="coptidis-eci-qmarker" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/coptidis-eci-qmarker/slide.png" target="_blank" rel="noopener"><img src="assets/coptidis-eci-qmarker/slide.png" alt="黄連の抗菌・抗腫瘍という2つの薬効を5成分の含量と活性重みで統合した「効果構成指数（ECI）」が単一マーカーや官能評価では判別できない品質グレードを見分ける" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成（Introduction→Theory→Materials and methods→Results and discussion→Conclusion）に沿って訳出。「&gt; 補足:」は訳者注。原文の数式はPDFテキスト抽出でレイアウトが崩れていたため、前後の説明文に基づき編集者が読める形に再構成した（意味・値は原文通り）。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Promotion of quality standard of Chinese herbal medicine by the integrated and efficacy-oriented quality marker of Effect-constituent Index</li><li>著者: Yin Xiong, Yupiao Hu, Fan Li, Lijuan Chen, Qin Dong, Jiabo Wang, Elizabeth A. Gullen, Yung-Chi Cheng, Xiaohe Xiao</li><li>所属: 昆明理工大学 生命科学与技術学院（a）／北京中医薬大学 中薬学院（b）／中国人民解放軍第302医院（中国人民解放軍軍事医学科学院・中国中医科学院系列の中薬研究機関、China Military Institute of Chinese Materia Medica, 302 Military Hospital）（c）／米国イェール大学医学部薬理学科（d）</li><li>掲載誌・巻号・DOI: <em>Phytomedicine</em> 45 (2018) 26–35. https://doi.org/10.1016/j.phymed.2018.03.013</li><li>インパクトファクター: <strong>約7.9</strong>（<em>Phytomedicine</em>, JCR 2024 / Clarivate。出典により6.7〜8.8と幅があり要確認）</li><li>受理経過: 2017年7月23日受理（投稿）／2018年1月10日改訂稿受理／2018年3月7日採択。ライセンス: © 2018 Elsevier GmbH. All rights reserved.</li><li>助成: 国家自然科学基金（81660661・81274026）、昆明理工大学（KKSY201526065）、雲南省応用基礎研究重点プロジェクト（2016FD040）</li></ul>
+<blockquote>補足: 略語一覧（原文 Abbreviations）: BER=berberine（ベルベリン）、CHMs=Chinese herbal medicines（漢方薬）、COP=coptisine（コプチシン）、C. Rhizoma=Coptidis Rhizoma（黄連）、DMEM=Dulbecco Modified Eagle Medium、EPI=epiberberine（エピベルベリン）、HFP-t=heat flow power-time（熱流束-時間）、HPLC=high-performance liquid chromatography、JAT=jatrorrhizine（ヤトロリジン）、LDA=linear discriminant analysis（線形判別分析）、MSE=multi-indicator synthetic evaluation（多指標総合評価法）、PAL=palmatine（パルマチン）、QC=quality control。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p><strong>背景:</strong> 現在、複数の構成成分が漢方薬（CHM）の品質管理マーカーとして用いられている。しかし、それらの成分は互いに切り離されており、CHMの薬効（bioeffect）に対する寄与の違いを提示できていない。また、臨床用途の異なるCHMが同一の品質マーカー（Q-marker）で管理されることが多く、効能を差別化して対応づけることができない。</p>
+<p><strong>目的:</strong> 本研究は、統合的・薬効指向型のQ-markerである「効果構成指数（Effect-constituent Index; ECI）」により、CHMの品質規格を向上させることを目的とする。</p>
+<p><strong>方法:</strong> 黄連（Coptidis Rhizoma; C. Rhizoma）を事例研究として、薬効（bioeffect）と活性構成成分の統合に基づくECIというQ-markerを開発した。黄連の効能に基づき、微量熱量測定（microcalorimetry）とMTTアッセイにより、それぞれ抗菌作用と抗腫瘍作用を検討した。高速液体クロマトグラフィー（HPLC）により黄連抽出物の活性構成成分を同時に定量した。多指標総合評価法（multi-indicator synthetic evaluation; MSE）により、赤痢菌（Shigella dysenteriae; S. dysenteriae）増殖抑制のECIS、HepG2細胞増殖抑制のECIHを確立した。黄連試料の官能評価点はデルファイ法により付与した。</p>
+<p><strong>結果:</strong> 相関分析の結果、ECISとECIHは、それぞれ黄連抽出物のS. dysenteriae増殖抑制効果（P&lt;0.01）およびHepG2細胞増殖抑制効果（P&lt;0.01）と有意に相関した。さらに、ECIは薬効に基づく品質グレードを判別・予測する良好な能力を示したのに対し、官能評価と化学分析ではそれを達成できなかった。また、ECISが低い一部の試料はECIHが高く、その逆の試料も見られた。</p>
+<p><strong>結論:</strong> ECIというQ-markerは、複数の活性構成成分を含む黄連の異なる薬理効果を関連づけるのに有用であり、統合的・簡便かつ効能別（differentiated）な形でCHMの品質規格を向上させるのに役立つ。</p>
+<p><strong>キーワード</strong>: Coptidis Rhizoma（黄連）；Quality marker（品質マーカー）；Effect-constituent Index（効果構成指数）；Shigella dysenteriae（赤痢菌）；HepG2 cells（HepG2細胞）</p>
+<h2>1. 序論（Introduction）</h2>
+<p>漢方薬（CHMs）は世界の研究コミュニティで大きな関心を集めており、その品質は薬効と安全性において重要な役割を果たす（Cheung, 2011）。臨床で用いられるCHMの治療効果は、一般にその品質を表す最良の指標と考えられている（Govindaraghavan and Sucher, 2015; Zhong et al., 2014）。数ある品質管理（QC）・評価法のうち、化学分析は実施が容易なため、CHMの真正性確認や品質評価・品種鑑別に現在広く用いられている（Zhang et al., 2014a, b）。しかし、CHMのQCのための一部成分の定量は、しばしばその臨床効能と相関しない。例えば、アデノシンは自然界に広く存在するプリンヌクレオシドであるが、中国薬局方（Chinese Pharmacopoeia Commission, 2015）では冬虫夏草（Cordyceps）のQCマーカーとして定量されているものの、この生薬の機能（腎保護・止血・去痰）との相関に乏しい。</p>
+<p>近年、Liu ら（2017）は、CHMの品質評価・製造工程管理のための品質マーカー（Q-marker）という新概念を提唱し、Q-markerを「CHMの薬理効果に関連する化学構成成分」と明確に定義した。この目的を達成するため、活性構成成分が未知あるいは定量不可能なCHMについては、生物学的アッセイを用いてQ-markerを決定したり品質を評価したりできる（U.S. Food and Drug Administration, 2015）。</p>
+<p>薬理学的物質が比較的明確なCHMについては、単一の活性成分よりも複数の活性成分をQ-markerとする方が、CHMの効能・効果をより包括的に反映しうる。しかしながら、CHMの薬理効果に対する複数成分の寄与の違いはこれまで考慮されてこなかった。どの活性成分が治療において主導的な役割を果たすのかは明らかではない。例えば中国薬局方（Chinese Pharmacopoeia Commission, 2015）では、黄連（C. Rhizoma）の品質管理・評価のために、ベルベリン（BER）・エピベルベリン（EPI）・コプチシン（COP）・パルマチン（PAL）の含量が定量されている。ある黄連試料がEPIをより多く含みCOPをより少なく含む場合、これら成分がいずれもこの生薬のQ-markerであるとすれば、2つの試料の品質差をどのように評価すればよいのか。加えて、CHMは一般に複数の効能のために用いられるため、ある効能について1つの役割を持つCHMが、他の効能についても同じ役割を持つとは限らない。</p>
+<p>多指標総合評価法（Multi-indicator synthetic evaluation; MSE）は、対象の特徴に関連する複数の因子・指標の統計解析に基づき対象を包括的に評価する手法で、経済・生態・政治・医学など様々な分野で広く応用されてきた（Ma et al., 2014; Miao et al., 2015）。臨床効能を関連づけ、CHM中の活性構成成分の寄与の違いを扱うため、我々はMSEを適用し、化学分析と薬効検出結果の統合に基づく新しい品質評価法「効果構成指数（Effect-constituent Index; ECI）」を確立した。ECIは、活性構成成分の相対活性に応じて効果重みを与えたうえで、その含量定量により決定できる。</p>
+<p>黄連（Coptis chinensis Franch.、Coptis deltoidea C. Y. Cheng et Hsiao、またはCoptis teeta Wall.（キンポウゲ科）の乾燥根茎）は、細菌性下痢・便秘・嘔吐・癌腫その他の感染性・炎症性疾患の治療に数千年にわたり広く用いられてきた漢方薬である（Qian et al., 2015; Ren et al., 2013）。これまで、形態学的・顕微鏡的特徴の検討（Yi et al., 2015）、化学構成成分やクロマトグラフィープロファイルの分析（Kong et al., 2009a）、生物学的アッセイ（Qin et al., 2012）など、単独あるいは組み合わせた様々な手法が黄連の品質評価に適用されてきた。研究者らは黄連が多様な薬理学的性質を有することを示しており、その構成成分のうち、プロトベルベリン型アルカロイド類が良好な薬理効果を持つ主要な活性成分であることが示されている（Chen et al., 2012; Yi et al., 2013）。例えばBERは黄連の重要かつ活性な構成成分であり、腸管感染症の治療に用いられ、近年ではがん治療にも有効と考えられている（Tang et al., 2009; Wang et al., 2015）。黄連の他の活性構成成分であるEPI・COP・PAL・ヤトロリジン（JAT）も、抗菌・抗腫瘍・弛緩作用などの薬理効果を示すことが報告されている（Tan et al., 2016）。そこで本研究では、生物活性物質の基盤が比較的明確で臨床効能に関連する特異的な薬効を持つCHMとして黄連を取り上げ、本手法がどのように機能するかを示し、その性能を検討した。異なるニーズに対応するため、我々は赤痢菌（S. dysenteriae）増殖抑制（ECIS）とHepG2細胞増殖抑制（ECIH）という統合的・薬効指向型Q-markerを、黄連の抗菌作用・抗腫瘍作用に基づき確立し、異なるバッチの黄連の個別品質評価にこれを応用することを試みた。</p>
+<h3>1.1 理論（Theory）——ECIの数式的定義</h3>
+<p>各構成成分の薬効（bioeffect）と、CHM中の構成成分の含量をすでに測定していると仮定する。CHMの予測される薬効と活性構成成分のデータとの関係を記述するモデルは、次式で決定できる。</p>
+<blockquote>ECI_j = Σ (W_i × X_i)_sample ／ Σ (W_i × X_i)_reference　……（式1）</blockquote>
+<p>ここで、ECI_jはCHMの予測される薬効j、W_iは構成成分iの薬効に対する重み係数、X_iはCHM中の構成成分iの含量である。一般に、活性が相対的に強く構成成分の含量が高いCHM試料が基準試料（reference sample）として選ばれる。したがって式（1）はECIの形式的表現、すなわち各活性構成成分の含量と効果を、CHMの対応する薬効に結びつける数理モデルである。構成成分の薬効に対する重み係数は相対値であるため、W_iは式（2）を解いて算出しなければならない。</p>
+<blockquote>W_i = A_i ／ Σ A_i　……（式2）</blockquote>
+<p>式（2）において、A_iは構成成分iの実測効果値である。全構成成分の効果値の合計に対する、ある構成成分の効果値の割合が、その構成成分の薬効に対する重み係数となる。W_iの値が高いほど、その構成成分がCHMの薬効と強い（予測的な）相関を持つことを意味する。</p>
+<p>構成成分の薬効に対する重み係数と、CHM中のその活性構成成分の含量を掛け合わせることで、その構成成分がCHMの対応する薬効に対して持つ相対的寄与が明らかになる。したがって、活性寄与が分配された活性構成成分の含量を定量することにより、CHMの予測される薬効を得ることができる。</p>
+<h2>2. 材料と方法（Materials and methods）</h2>
+<h3>2.1 実験材料</h3>
+<p>黄連試料は、中国の四川省・重慶市・湖北省・雲南省の適正農業規範（GAP）基地から入手し、研究者（Xiaohe Xiao, 中国人民解放軍第302医院 中薬研究所）により同定された。基準標本（voucher specimen、番号20120023）は同研究所の実験室に保管されている。BERおよびPALの化学標準品は中国食品薬品検定研究院（National Institute of Control of Pharmaceutical and Biological Products, 北京）から、EPI・COP・JATは成都Must Biotechnology（成都）から購入した。上記標準品の純度はいずれも98%以上であった。</p>
+<h3>2.2 黄連抽出物の調製</h3>
+<p>黄連抽出物は既報の方法（Yan et al., 2014）に準じて調製した。</p>
+<h3>2.3 抗菌活性アッセイ</h3>
+<p>抗菌活性実験は既報の方法（Yan et al., 2014）に準じて実施した。試料には、異なる濃度の黄連抽出物およびアルカロイド溶液を用いた。</p>
+<h3>2.4 細胞培養</h3>
+<p>HepG2細胞は米国イェール大学医学部（New Haven, CT, USA）より入手した。細胞は10%ウシ胎児血清および0.1 mg/mLカナマイシンを含むダルベッコ改変イーグル培地（DMEM）中で、37℃・5% CO2の飽和加湿雰囲気下で培養した。良好な増殖状態の細胞をリン酸緩衝生理食塩水に溶解した2 g/Lパンクレアチンで消化・継代した。</p>
+<h3>2.5 MTTアッセイ</h3>
+<p>コンフルエントに達した細胞を2 g/Lパンクレアチン処理により懸濁し、96ウェル培養プレート（5000細胞/ウェル）に播種し、一部のウェルは空白（ブランク）とした。12時間後に培地を除去し、異なる抽出物またはアルカロイドを含む10%ウシ胎児血清添加DMEMを各ウェルに添加し、ブランクウェルには同容量のDMEMのみを添加した。72時間後、各ウェルに20 µLのMTT試薬（培地中5 mg/mL）を添加した。4時間後、対応する上清を除去し、細胞を再度洗浄した。色素は150 µLのジメチルスルホキシドで抽出した。溶液は振とう機で溶解させた。15分後、マイクロプレートリーダーにより490 nmで吸光度を測定した。アッセイは3連で実施した。</p>
+<h3>2.6 高速液体クロマトグラフィー（HPLC）分析</h3>
+<p>クロマトグラフィー分析は、Kromasil 100-8 C18カラム（250 mm×4.6 mm、5 µm）（AkzoNobel, スウェーデン）を装着したAgilent 1100シリーズHPLCシステム（Agilent Technologies, Santa Clara, USA）で実施した。移動相は、ラウリル硫酸ナトリウム3 g/Lを含むアセトニトリル（A）と、リン酸二水素カリウム6.0 g/L（pH 6.0）を含む超純水（B）（66:34, v/v）から構成した。グラジエントモードは以下の通り: 0分, 38% B; 55分, 38% B; 65分, 15% B; 70分, 0% B。カラム温度は30℃に設定した。流速は1.0 mL/分に設定した。検出波長は345 nm、注入量は10 µLとした（Xiong, 2015）。</p>
+<p>黄連抽出物（50 mg）を50 mLの塩酸-メタノール溶液（1:100, v/v）に溶解し、60℃の水浴中で15分間加熱した。20分間の超音波処理後、溶液を0.45 µmメンブレンフィルターでろ過してからHPLC分析に供した。混合標準溶液は塩酸-メタノール（1:100, v/v）中に（mg/mLで）BER 0.43・EPI 0.11・COP 0.06・PAL 0.12・JAT 0.07を含んだ。5つの構成成分の化学構造は原論文Fig. 1に、黄連抽出物のHPLCフィンガープリントは原論文補足資料Fig. S1に示されている。</p>
+<h3>2.7 デルファイ法に基づく官能評価</h3>
+<p>評価法は我々の既報（Wang et al., 2010a, b）に基づき開発した。質問票は「76種の中薬材規格・等級基準（Standard of Specifications and Grades of 76 Chinese Materia Medica）」（中国国家中医薬管理局, 1984）を参照して作成した。CHMの官能評価に平均31年の経験を持つ13名の専門家を招き、2回にわたり黄連の品質を評価してもらった。黄連に関する熟知度と評価基準についての質問票（原論文 Table S1）により、これら13名の専門性を調査した。黄連に十分に精通し、その基準が実務経験に基づく専門家を、強い権威者とみなした。専門家の2回の評価の一致度、および異なる専門家間での試料グレード評価の一致度を、それぞれ式（S1）・式（S2）として算出した。経験年数が相対的に少なく権威が弱く、2回の評価の一致度が70%以下であった4名の専門家（原論文 Table S2）は最終結果から除外した。残る9名の専門家の間で最も一致度の高かったスコアを、各バッチの黄連の判定結果として決定した。官能評価スコア3・2・1は、それぞれ黄連の「優（superior）」「良（good）」「可（fair）」の品質を表す。</p>
+<h3>2.8 統計解析</h3>
+<p>定量的熱力学パラメータはOrigin 8.5ソフトウェア（OriginLab Company, Northampton, USA）を用いて解析し、HFP-t曲線の作図および熱力学パラメータの算出を行った。IC50・EC50値も同様にOrigin 8.5ソフトウェアを用いたプロビット回帰でフィッティングした。主成分分析（PCA）・線形判別分析（LDA）、およびECI値と実測薬効値との相関分析は、SPSS v20.0（IBM, Armonk, NY, USA）を用いて実施した。結果は平均値±標準偏差で示し、すべての統計的比較は一元配置分散分析（one-way ANOVA）とそれに続くDuncan検定により行った。P&lt;0.05を有意とみなした。</p>
+<h2>3. 結果と考察（Results and discussion）</h2>
+<h3>3.1 抗菌活性</h3>
+<p>黄連は古くから臨床で赤痢性下痢（dysenteric diarrhea）の治療に伝統的に用いられてきた（Fukutake et al., 1998; Li et al., 2013）。数ある病原体のなかでも、S. dysenteriae（赤痢菌）は、粘血便・腹部痙攣・しぶり腹を伴う急性赤痢性下痢を引き起こす主要な細菌として報告されている（Kamgang et al., 2005; Periska et al., 2003）。したがって、S. dysenteriaeに対する抑制作用は、この疾患を治療する有効な手段であり、黄連の効能評価にも適したモデルである。</p>
+<p>生物の増殖・代謝の過程で熱・エネルギー産生が生じ、その変化は薬物の作用を評価する指標として利用できる（Furustrand Tafin et al., 2012; Yan et al., 2009）。微量熱量測定（Microcalorimetry）は、様々な種類の試料における細菌活性・増殖をモニタリングする多用途かつ定量的な分析技術であり、様々な微生物に対する薬物の薬理効果の解析に広く用いられてきた（Kong et al., 2009b; Wu et al., 2005）。そこで、黄連および構成成分の抗菌活性を微量熱量測定により測定した。</p>
+<p>37℃におけるS. dysenteriaeの正常な増殖発熱曲線を原論文Fig. 2に示す。「熱流束-時間（HFP-t）曲線は、S. dysenteriaeの代謝プロファイルが2つの主要な段階（stage 1・2）と5つの相（遅滞相[A-B]、第1指数増殖相[B-C]、移行相[C-D]、第2指数増殖相[D-E]、減衰相[E-F]）から成ることを示した。S. dysenteriae増殖のHFP-t曲線の定量的熱力学パラメータは、式（3）で記述できる。」</p>
+<blockquote>ln P_t = ln P_0 + kt　……（式3）</blockquote>
+<p>ここでP0とPtは、それぞれ時刻0または時刻t（分）における熱流束を表す。微量熱量測定の信頼性を検証するため、未処理の細菌で実験を8回繰り返し、良好な再現性を得た。次いで、異なる濃度の試料の存在下でHFP-t曲線から以下の熱力学パラメータを定量した（Yan et al., 2014）: 第1・第2指数増殖相の増殖速度定数（k1・k2）、第1・第2の最高ピークのHFP（p1・p2）、第1・第2の最高ピークの出現時間（t1・t2）、およびピーク下面積（S. dysenteriaeの総熱産生量、Qt）（原論文 Table S3）（Kong et al., 2010; Kong et al., 2011）。PCAの結果、t2とQtが最大の負荷量を持つ変数であることが明らかになった。対照群と比較して、t2値が高く、Qt値が低いほど、S. dysenteriaeに対する抑制作用が強いことを示す。Fig. 2によれば、試料濃度の増加に伴いHFP-t曲線のt2は遅延しており、これが構成成分の抗菌活性を評価する指標になりうる。</p>
+<p>次に、抑制率ISを式（4）により算出し、IC50値により各構成成分の抗菌活性を定量した。その結果、BER・EPI・COP・PAL・JATのIC50値は（mg/mLで）それぞれ0.166・0.485・0.101・31.981・5.049であった。これは抑制活性の序列がCOP＞BER＞EPI＞JAT＞PALであることを示しており、BERの優位性を過大評価し他の構成成分の寄与を見落としてはならないことを気づかせる。</p>
+<blockquote>I_S = (t2 − t0)／t0 × 100%　……（式4）</blockquote>
+<p>ここでt0は培地単独でのS. dysenteriaeのHFP-t曲線における第2の最高ピークの出現時間、t2は被験試料に曝露されたS. dysenteriaeのHFP-t曲線における第2の最高ピークの出現時間、ISは試料のS. dysenteriaeに対する抑制率である。</p>
+<h3>3.2 MTTアッセイ</h3>
+<p>中医学理論によれば、蓄熱から変化した「毒（toxin）」は、腫瘍・がんを引き起こす主要な病因のひとつである。したがって、清熱解毒（heat-clearing and detoxicating）の治療は腫瘍・がんの予防・治療に有効な療法である（He et al., 2012; Lee et al., 2014）。清熱解毒作用を持つ代表的な漢方薬として、黄連およびその化合物は腫瘍の予防・治療、またはがん治療時の副作用軽減に用いられてきた（Iizuka et al., 2000; Tang et al., 2009）。この治療に関連する機序は、腫瘍細胞の増殖およびがんを誘導する関連遺伝子・転写因子の発現に対する直接的な抑制と関連する（Kim et al., 2004）。黄連とその構成成分は、肝がん・子宮頸がん・上咽頭がん・肺がんなどに対して強い抗腫瘍効果を持つことが報告されており、なかでも肝がん治療における活性・機序に関する報告が多い（Tang et al., 2009; Wang et al., 2010, b; Zhu et al., 2011）。そこで我々は、黄連の効能を検討するため、古典的な肝がんモデルであるHepG2細胞を選択した。</p>
+<p>構成成分の生存細胞率（% control）は式（5）により算出した。</p>
+<blockquote>生存細胞率（% control）= (A_sample − A_blank)／(A_control − A_blank) × 100%　……（式5）</blockquote>
+<p>ここでAは溶液の吸光度である。BER・EPI・COP・PAL・JATの異なる濃度によるHepG2細胞への細胞毒性を原論文Fig. 3に示す。アルカロイドの濃度と生存細胞数の間には負の相関が見られた。BER・EPI・COP・PAL・JATのEC50値は（μMで）それぞれ6.60・67.30・25.52・64.21・76.32であり、BERが最も強い細胞毒性を示し、JATが最も弱い効果を示した。黄連アルカロイドのS. dysenteriaeに対する効果と比較すると、COPが最も強い細胞毒性を示しPALが最も弱い効果を示した。</p>
+<p>これらの結果によれば、5つの構成成分は同一の薬効を発揮するにあたり有意に異なる程度で寄与している。例えば、S. dysenteriaeに対する抑制効果のIC50値でみると、BERの抗菌活性はPALのおよそ200倍強かった。マーカーでないJATも、PALより強い抑制効果を示した。これらの観察は、複数の成分をCHMのQ-markerとする場合、異なる構成成分の相対活性の寄与を考慮すべきことを気づかせる。また、S. dysenteriaeに対する抑制の序列はCOP＞BER＞EPI＞JAT＞PALであったのに対し、MTTアッセイではBER・EPI・COP・PALの4成分がJATより相対的に強い効果を示した。これらの観察は、黄連のQ-markerは臨床で適用される異なる効能によって方向づけられるべきであることを示唆する。喩えるなら、定規は長さを測るものであって、重さを量ることはできない。</p>
+<h3>3.3 ECISとECIHの確立</h3>
+<p>効果重みは、式（6）または式（7）によりIC50iまたはEC50iの逆数を正規化することで各構成成分に割り当てた。</p>
+<blockquote>W_i = (1／IC50_i)／Σ(1／IC50_i)　……（式6） W_i = (1／EC50_i)／Σ(1／EC50_i)　……（式7）</blockquote>
+<p>ここでWiは各構成成分の薬効に対する重み係数を指す。IC50iおよびEC50iは、それぞれ構成成分iのIC50・EC50である。nは構成成分の数である。本研究における構成成分はBER・EPI・COP・PAL・JATである。活性が相対的に強く構成成分の含量が高い黄連を基準試料として選ぶ。本研究では試料5が基準試料と決定された。各構成成分のIC50・EC50値を上記の式に代入することにより、黄連の抗菌活性・抗腫瘍活性のECIモデルが式（8）・式（9）としてそれぞれ得られた。</p>
+<blockquote>ECIS = 3.1676 × X_BER + 1.0842 × X_EPI + 5.2062 × X_COP + 0.0164 × X_PAL + 0.1041 × X_JAT　……（式8） ECIH = 3.7617 × X_BER + 0.3689 × X_EPI + 0.9729 × X_COP + 0.3867 × X_PAL + 0.3253 × X_JAT　……（式9）</blockquote>
+<p>上式において、ECISおよびECIHは、それぞれS. dysenteriaeに対する予測抑制効果、HepG2細胞に対する予測細胞毒性を表す。X_BER・X_EPI・X_COP・X_PAL・X_JATは、それぞれ黄連中のBER・EPI・COP・PAL・JATの含量である。重み係数によれば、COPは他の構成成分より最も強い抑制効果を示す一方、細胞毒性についてはBERが相対的に最も強かった。</p>
+<h3>3.4 黄連のアルカロイド含量・ECIS・ECIHの決定</h3>
+<p>原論文Fig. 4aによれば、黄連抽出物10バッチにおける5成分の含量はバッチごとに不均一であり、異なる試料の品質を評価することを難しくしている。例えば、試料1のEPI・COPの含量は試料2より高かったが、試料1のBER・PAL・JATの含量は試料2より低かった。5つの指標の含量を同時に検討して、どちらの試料が品質面で優れるかを判断することは困難であった。</p>
+<p>上記の問題を解決するため、各バッチの黄連のBER・EPI・COP・PAL・JAT含量を式（8）・式（9）に代入し、異なる試料のECIS・ECIHを算出した。原論文Fig. 4bに示す結果によれば、ECIという個々の指標により、バッチ間の黄連の品質差を容易に判別できた。例えば、S. dysenteriaeが引き起こす赤痢の治療に用いる場合、ECISでみると試料4は劣り、試料5は優れていた。同時に、ECIの確立は黄連の個別評価と合理的な使用の指針にもなりうる。例えば、そのECI値によれば、試料7はS. dysenteriaeに対する抑制よりもHepG2細胞に対する抑制のほうが優れていた。</p>
+<h3>3.5 相関分析</h3>
+<p>ECIが黄連の効果を表しうるかを確認するため、黄連抽出物のS. dysenteriae増殖抑制（原論文Fig. 5a）とHepG2細胞に対する細胞毒性（原論文Fig. 5b）を、それぞれ微量熱量測定とMTTアッセイにより検討した。黄連抽出物の濃度が高いほど、抑制効果は強かった（Fig. 5）。S. dysenteriaeに対する相対抑制率（RI）を式（10）により、また異なるバッチの黄連のHepG2細胞に対するEC50値を決定した。</p>
+<blockquote>RI_S = I_S ／ I_control × 100%　……（式10）</blockquote>
+<p>ここでRISは黄連試料のS. dysenteriaeに対する相対抑制率、ISは黄連試料の抑制率、Icontrolは陽性対照薬BERの抑制率である。実測効果値とECIの予測値を比較したところ、ECISおよびECIHが最も高い試料5は、S. dysenteriaeに対する抑制およびHepG2細胞に対する細胞毒性についても最も強い結果を示した（それぞれRIS 15.03%、EC50 11.14 mg/mL）。さらに、ECIと抑制効果の値との相関分析を行った。その結果（Fig. 6）、黄連試料のECISはRISと有意に相関し（RS = 0.987、<strong>P&lt;0.01）（Fig. 6a）、黄連のECIHは1/EC50と有意に相関した（RH = 0.873、</strong>P&lt;0.01）（Fig. 6b）。これは、ECISとECIHがそれぞれある程度、黄連のS. dysenteriaeおよびHepG2細胞に対する抑制効果を代表しうることを示唆する。</p>
+<h3>3.6 ECIと従来の黄連品質評価法との比較</h3>
+<p>官能評価と化学分析は、現在CHMの鑑別・品質評価に適用されている。経験豊富な実務者は、色を観察し、匂いを嗅ぎ、味を確かめ、質感を感じることでCHMの品質を見分ける。黄連の品質評価におけるECIの実現可能性を検証するため、異なるバッチに由来する16の代表的な試料を分析した（原論文Table S4）。マーカー構成成分の含量、デルファイ法による官能評価スコア（Table S4）、そして上記モデルにより算出したECIS・ECIH値をFig. 7・Fig. 8に示す。デルファイ法によれば、黄連試料5・14は官能評価スコア3で形態が「優」と判定され、試料2はスコア2で「良」、残りの試料は「可」の属性でスコア1が付与された。3等級の代表的な試料をFig. 9aに示す。太い根茎・少ない細根・金黄色の断面を持つ黄連が、形態上で最上級（premium）とみなされた。加えて、5つの活性構成成分の含量に基づき黄連試料を分類するクラスター分析を行った（Fig. 9b）。化学分析では、同一産地（Coptis teeta Wall.）の試料10・16は、Coptis chinensis Franchを産地とする他の試料と区別できた。しかし、これらの指標は互いに切り離されているため、どの試料がより良い効果、あるいはより高い活性構成成分レベルを持つかを判断することは困難であった。</p>
+<p>黄連試料の評価結果の精度をさらに評価するため、実際の薬効結果を基準として、これらの手法の一致度を比較した。LDAにより、異なる産地・産地地域の試料を分類した。抗菌効果およびHepG2細胞に対する細胞毒性に基づく散布図を、それぞれFig. 7a・Fig. 8aに示す。図中には重複するクラスターはみられなかった。抗菌活性については、異なるバッチの試料は次の3グレードに分類された: グレード1（S5, S12, S14）、グレード2（S1–4, S7–11, S13）、グレード3（S4, S6, S15–16）（Fig. 7b）。HepG2細胞に対する抑制効果については、黄連試料は次の3グレードに分類された: グレード1（S5, S7, S12, S14）、グレード2（S2, S9–11, S13）、グレード3（S1, S3–4, S6, S8, S15–16）（Fig. 8b）。</p>
+<blockquote>補足（訳者注）: グレード2・3の表記に「S4」が重複して現れる箇所（グレード2の「S1–4」とグレード3の「S4」）は原文の表記通りである（原文ママ）。原文に訂正・注記はなく、本サイトでも独自の解釈による修正は行っていない。</blockquote>
+<p>一部の試料は、ある活性については低い値を示しながら、別の効果については高い値を示した。この結果によれば、官能評価スコアは薬効に基づく品質グレードを完全には判別できず、外観が劣る黄連が必ずしも薬効の弱さを意味しないことが示唆された。また、黄連のマーカー構成成分であるBERの含量は、抗菌効果に基づく品質グレードを判別できなかった（Fig. 7c・Fig. 8c）。対照的に、黄連の3グレードはいずれも、ECIS（Fig. 7d）およびECIH（Fig. 8d）の値により有意に分離できた。</p>
+<p>本研究は、形態学的特徴のみ、あるいは単一のマーカー構成成分または互いに切り離された複数のマーカー構成成分の含量のみを検討することでは、黄連の品質を判断できないことを示している。効果はその統合的な一部であるべきである。生薬中の活性構成成分の含量定量と薬効試験の重み付き解析に基づく手法として、ECIというQ-markerは、黄連の品質と潜在的な臨床効果を関連づけるのに有用である。本研究では黄連の2つの薬効のみを検討した。この生薬の他の効能に関連するさらなる試験、およびin vivoでの薬理学的検証は、今後の研究で実施される予定である。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>無差別的な規格は、臨床用途の異なるCHMの品質を反映することをしばしば困難にし、マーカーの孤立は、評価されたQ-markerによって結果が一致しないことがあるため、実務における使用を妨げる。臨床効能に関連する化学的・生物学的情報の統合に基づき、ECIというQ-markerは、黄連の効果の異なる用途に応じた個別評価を可能にし、両面的な方法で品質規格を向上させる。ECIというQ-markerを用いれば、薬効指標を追加することなく、活性構成成分の含量を検出するだけで黄連の効果を決定できる。したがって、ECIは黄連に対する伝統的・現代的な評価法への有益な補完となりうる。本研究は、臨床効能に対応する薬効・活性構成成分が比較的明確な他のCHMの品質評価の基盤を築くものである。</p>
+<h2>利益相反</h2>
+<p>著者らは、本研究が利害の対立とみなされうる商業的・financial な関係のないもとで実施されたことを宣言する。</p>
+<h2>謝辞</h2>
+<p>著者らは、国家自然科学基金（81660661・81274026）、昆明理工大学（KKSY201526065）、雲南省応用基礎研究重点プロジェクト（2016FD040）に謝意を表する。Yin Xiongはまた、海外留学への財政的支援について中国国家留学基金管理委員会（Chinese Scholarship Council）に感謝する。</p>
+<h2>訳者補足（任意）</h2>
+<ul><li>ECIは「効果構成指数（Effect-constituent Index）」の訳。原文のロジックは、①各活性成分の実測薬効（IC50・EC50の逆数）から重み係数Wiを算出し、②含量Xiとの積の総和として薬効ごとのECIを構築するというもの（多指標総合評価法, MSEの応用）。同じ生薬でも薬効（本研究では抗菌 vs 抗腫瘍）ごとに重み・ECI式が異なる点が本研究の核心であり、「単一のQ-markerで複数の効能を代表させることはできない」という問題提起（序論のEPI/COPの例、および「定規は重さを量れない」という比喩）に対応する。</li><li>本論文の黄連はCoptis chinensis Franch.・Coptis deltoidea C. Y. Cheng et Hsiao・Coptis teeta Wall.（キンポウゲ科）の乾燥根茎。既存の姉妹論文（本サイトの延胡索を扱ったQ-marker新概念総説）とは異なり、本論文はQ-marker新概念（Liu et al., 2017）を「薬効の重み付き統合」という定量モデルに落とし込んだ応用研究にあたる。</li><li>なお、本PDFに含まれる図版（化学構造式・HFP-t曲線・細胞毒性グラフ・PCA/LDA散布図・ヒートマップなど）は、本セッションで取得した画像データが本論文と一致しない不具合が確認されたため、誤った図の混入を避けるためにこの解説では図版を掲載していない（テキストのみで各図の内容を記述した）。数値・図番号への言及は原文に基づく。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="tcm-comprehensive-quality-index.html">化学・生物評価を統合したTCM総合品質評価指標(QCEI)による品質等級化</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">生薬</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hgwd-uplc-dad-spectrum-effect-qmarker.html">UPLC-DAD化学プロファイルと薬効薬理・ケモメトリクスの統合による黄耆桂枝五物湯(HGWD)の包括的品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="ds-cx-network-pharmacology-qmarker.html">抗血栓生薬の品質マーカーに関するネットワーク薬理学的研究——丹参・川芎を例として</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">生薬</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="agarwood-rplc-hilic-nmr-mrm.html">沈香（Chinese agarwood）の多成分定量に基づく品質評価のためのフルソリューション―分取q1H-NMR×RPLC-HILIC直列連結タンデムMSによる標準品フリー定量</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">Q-marker</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">生薬</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="coptidis-eci-qmarker" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

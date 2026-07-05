@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HPLC三波長融合指紋＋電気化学指紋・抗酸化法による明目地黄丸(MMDHP)の品質一貫性評価</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="HPLC三波長融合指紋＋電気化学指紋・抗酸化法による明目地黄丸(MMDHP)の品質一貫性評価">
+<meta property="og:description" content="漢方製剤「明目地黄丸」の6社20バッチを対象に、HPLC三波長融合指紋(TWFFP)・電気化学指紋(ECFP)・ABTS抗酸化試験を組み合わせ、系統定量指紋法(SQFM)とQAMS定量、指紋-薬効相関解析によって品質一貫性を包括的に評価した研究の全訳。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/mmdhp-twffp-ecfp-antioxidant/slide.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="mmdhp-twffp-ecfp-antioxidant"><h1>HPLC三波長融合指紋＋電気化学指紋・抗酸化法による明目地黄丸(MMDHP)の品質一貫性評価</h1><div class="paper-meta"><span class="date">2026-07-05</span> <span class="tag">方剤・中成薬</span> <span class="tag">HPLC・UPLC</span> <span class="tag">指紋分析</span> <span class="tag">QAMS</span> <span class="tag">QC・品質評価</span> <span class="tag">ケモメトリクス</span> <span class="tag">薬効・薬理</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2022.463448" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0021967322006409-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="mmdhp-twffp-ecfp-antioxidant" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="mmdhp-twffp-ecfp-antioxidant" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/mmdhp-twffp-ecfp-antioxidant/slide.png" target="_blank" rel="noopener"><img src="assets/mmdhp-twffp-ecfp-antioxidant/slide.png" alt="明目地黄丸20バッチについて、HPLC三波長融合指紋(TWFFP)と電気化学指紋(ECFP)・ABTS抗酸化試験を統合し「化学組成」と「薬効」の両面から品質一貫性を評価した研究。" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: High performance liquid chromatography three-wavelength fusion fingerprint combined with electrochemical fingerprint and antioxidant method to evaluate the quality consistency of Mingmu Dihuang Pill</li><li>著者・所属: Xiang Li（a）, Dandan Gong（a）, Guoxiang Sun（a、責任著者）, Hong Zhang（b、責任著者）, Wanyang Sun（c、責任著者）</li><li>a 瀋陽薬科大学 薬学院（School of Pharmacy, Shenyang Pharmaceutical University）, 遼寧省瀋陽, 中国</li><li>b 瀋陽薬科大学 生命科学・生物薬学院（School of Lifescience and Biopharmaceutics, Shenyang Pharmaceutical University）, 中国</li><li>c 暨南大学 薬学院（School of Pharmacy, Jinan University）, 広東省広州, 中国</li><li>掲載誌・巻号・DOI: <em>Journal of Chromatography A</em> 1681 (2022) 463448. DOI: 10.1016/j.chroma.2022.463448（ISSN 0021-9673）</li><li>インパクトファクター: 約3.8（<em>Journal of Chromatography A</em>, JCR 2024 / Clarivate。情報源により3.8〜4.2の幅で報告されており、正確な単年値は要確認）</li><li>受理経過 / ライセンス: 受領 2022-04-24 ／ 改訂 2022-08-13 ／ 採録 2022-08-22 ／ オンライン公開 2022-08-28。© 2022 Elsevier B.V. All rights reserved.</li><li>助成: 国家自然科学基金（National Natural Science Foundation of China, No. 81573586）</li></ul>
+<blockquote>補足: MMDHP = 明目地黄丸（Mingmu Dihuang Pill）。TWFFP = 三波長融合指紋（Three-Wavelength Fusion Fingerprint）。ECFP = 電気化学指紋（Electrochemical Fingerprint）。SQFM = 系統定量指紋法（Systematically Quantified Fingerprint Method）。QAMS = 単一マーカーによる多成分同時定量法（Quantitative Analysis of Multi-components by Single Marker）。CCM = 標準曲線法（Calibration Curve Method）。PCA = 主成分分析、HCA = 階層的クラスター分析。本論文は分析法開発（品質一貫性評価）の原著研究論文。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>本論文では、三波長融合指紋（TWFFP）と電気化学指紋（ECFP）、および抗酸化法を組み合わせて、明目地黄丸（MMDHP）の品質一貫性を共同で探索した。TWFFPは複数波長における最大紫外吸収特性を十分に示し、単一波長評価がもたらす欠点を補った。ECFPを確立して特徴パラメータをより深く解析した結果、すべての試料が電気化学振動系に対して抑制効果を示した。2,2′-アジノビス(3-エチルベンゾチアゾリン-6-スルホン酸)（ABTS）抗酸化試験をECFPと組み合わせ、TWFFPのピーク面積との指紋-薬効相関を確立した。その結果、36の共通ピークのうち15ピークが、両方の薬効相関に同時に重要な寄与をしていた。TWFFPとECFPは系統定量指紋法によって評価され、HPLCと電気化学がそれぞれ試料を判別する能力を階層的クラスター分析（HCA）によって検討した。含量パーセンテージ（Pi%）の概念を導入し、マーカー成分の含量とマクロ定量類似度（Pm）との関係を計算した。単一マーカーによる多成分定量法（QAMS）を検討し、マーカー成分の含量評価の正確性を解析した。本研究は、複雑な漢方薬（TCM）とその複方製剤の品質一貫性管理のための、包括的で信頼性の高い方法を提供するものである。</p>
+<p><strong>キーワード</strong>: 明目地黄丸（Mingmu Dihuang Pill）；三波長融合指紋（Three-wavelength fusion fingerprint）；電気化学指紋（Electrochemical fingerprint）；抗酸化試験（Antioxidant test）；品質一貫性（Quality consistency）</p>
+<h2>1. 序論（Introduction）</h2>
+<p>漢方薬（TCM）は国内外で注目と認知が高まりつつあり、臨床応用の過程で大きな発展の機会を得ている。TCMの安全性・有効性は品質・応用価値と直接関わるため、その品質一貫性管理は広く研究の関心を集めてきた。本論文では、明目地黄丸（MMDHP）を例に取り、適切かつ効果的な評価法を論じることで、TCMの安全性・有効性の確保に向けた参考と、さらなる検討を促すことを目指す。</p>
+<p>高速液体クロマトグラフィー（HPLC）指紋技術、抗酸化技術、紫外（UV）およびフーリエ変換赤外（FTIR）技術は、TCMの品質一貫性評価の分野において良好な応用展望を持つ。なかでもHPLCは、TCMおよびその複方製剤の包括的な定性・定量分析に利用できる。通常、異なる種類の化合物は異なる波長で最大紫外吸収を示すため、単一波長では試料の品質を十分に分析できない場合がある[1,2]。そこで本論文では三波長融合指紋（TWFFP）を導入し、3つの波長で最大の信号応答を示すピークを統合して新しいクロマトグラムを構成した。異なる波長での情報を包括的に利用することで、試料をより十分に評価できる[3–5]。</p>
+<p>HPLCの限界（高い実験コストや複雑な前処理工程など）と比較して、本論文ではシンプルで経済的、普及しやすい電気化学指紋（ECFP）技術を導入した[6]。ECFPは全成分指紋という特徴を持ち、実験調製が簡便で、試料は単純に粉砕するだけ、あるいは前処理なしで済む。TCMおよびその製剤の品質管理・評価のための良好な分析法である[7]。得られた結果は、HPLCの評価結果と比較・補完し、MMDHPの品質一貫性を検討するために用いた。</p>
+<p>MMDHPは、地黄（rehmannia glutinosa）、山茱萸（cornus）、牡丹皮（peony bark）、白芍（white peony）、煅制の決明子（calcined cassia）など12種類の生薬から構成される。肝腎を滋養し視力を改善する効能を持ち、臨床では肝腎不足・羞明・視力不明瞭の治療に用いられる[8]。このうち、モロニシド（morroniside）とロガニン（loganin）は山茱萸の主要な薬理成分であり、免疫調節・抗炎症・抗ショック作用を持つ。パエオノール（paeonol）は牡丹皮の活性成分の一つで清熱・活血化瘀の作用を持ち、シャクヤク配糖体（paeoniflorin）は抗心筋虚血・血小板凝集抑制・鎮痛・鎮静などの作用を持つ[9–12]。中国薬局方およびこれら4化合物の性質を参照し、我々はこれらをMMDHPの定量分析のための4つの品質マーカー（Q-marker）として用いた。</p>
+<p>本論文では、抗酸化実験[13]、TWFFP、ECFPを組み合わせ、MMDHPの化学組成と生物活性を包括的に評価した。複雑なMMDHP系を、系統定量指紋法（SQFM）と単一マーカーによる多成分定量法（QAMS）によって解析した。MMDHPの定性・定量スコアは、マクロ定性類似度（<strong>S</strong>m）とマクロ定量類似度（<strong>P</strong>m）の両方を用いて行った。主成分分析（PCA）と階層的クラスター分析（HCA）を用いて、HPLCとECFPがバッチ間の差異を判別する能力を検証した。結論として、MMDHPの品質一貫性は客観的に評価され、TCMおよびその複方製剤の全体的な品質の定量管理のための新規かつ実行可能な方法が提供された。</p>
+<h2>2. 材料と方法（Materials and Methods）</h2>
+<h3>2.1. 試薬・化学物質</h3>
+<p>クロマトグラフィー用グレードのメタノール・アセトニトリル、および分析グレードの濃硫酸（98%）はすべて山東裕王河天下有限公司（Shandong YuwangHeTianxia Co., Ltd.）より購入した。リン酸（クロマトグラフィー用グレード）は四川成都科龍化学試薬工場（Sichuan Chengdu Kelong Chemical Reagent Factory）、ヘプタンスルホン酸ナトリウムは山東中美クロマトグラフィー有限公司（Shandong Zhongmei Chromatography Co., Ltd.）、四水和硫酸第二セリウムアンモニウムは天津博迪化学有限公司（Tianjin Bodi Chemical Co., Ltd.）から購入した。マロン酸・塩化カリウム・臭素酸カリウムはいずれも天津大茂化学試薬工場（Tianjin Damao Chemical Reagent Factory）から入手した。実験には脱イオン水を使用し、すべての試薬・化学物質は分析グレードであった。</p>
+<p>モロニシド（MOR、バッチNo. 25406-64-8、純度＞98.0%）は成都アルファ生物技術有限公司（Chengdu alfa biotechnology Co., Ltd., 四川, 中国）から購入した。ロガニン（LOG、バッチNo. 111640-200503、純度＞98.0%）とパエオノール（PAE、バッチNo. 110708-200506、純度＞99.8%）は中国食品薬品検定研究院（National Institute for the Control of Pharmaceutical and Biological Products, 北京, 中国）から購入した。シャクヤク配糖体（PAEF、バッチNo. 23180-57-6、純度＞98.0%）は成都Biopurify Phytochemicals社から入手した。4つのQ-marker化合物の構造は図2(C)に示した。</p>
+<p>20バッチのMMDHP試料（S1〜S20、濃縮丸）を薬局から収集した（S1〜S7は製造元A、S8〜S10は製造元B、S11〜S13は製造元C、S14・S15は製造元D、S16・S17・S19・S20は製造元E、S18は製造元F）。</p>
+<h3>2.2. 装置と条件</h3>
+<h4>2.2.1. HPLC分析</h4>
+<p>HPLC実験はAgilent 1100 HPLCシリーズ機器（Agilent Technologies, USA）で行った。この機器一式にはオンライン脱気装置、低圧混合四元ポンプ、オートサンプラー、カラムオーブン、フォトダイオードアレイ検出器（DAD）が含まれる。データ取得・解析はOpenLAB CDS ChemStation（Version C.01.07, Agilent Technologies Limited company）で行った。分離にはCosmosil C18カラム（250 mm × 4.6 mm, 5 μm）を用い、カラム温度は35 ℃に保った。移動相はA（水相）が5 mmol/Lヘプタンスルホン酸ナトリウム＋0.2%（v/v）リン酸水溶液、B（有機相）がアセトニトリル-メタノール（9:1, v/v）であった。注入量10 μL、流速1.0 mL/min。直線グラジエント溶出プログラムは以下のとおりであった：94–88%A（0–8分）；88–79%A（8–15分）；79–72%A（15–22分）；72–60%A（22–26分）；60–50%A（26–30分）；50–38%A（30–40分）；38–94%A（40–45分）。クロマトグラムは220 nm、236 nm、274 nm、280 nm、326 nmで抽出・処理した。</p>
+<h4>2.2.2. 電気化学振動解析</h4>
+<p>電気化学実験に使用した機器は、CHI760D電気化学ワークステーション（上海華辰儀器有限公司）、DF-101S集熱式恒温加熱磁力撹拌器（上海力辰邦西儀器科技有限公司）であった。作用電極は白金電極（CHI 115, 上海華辰儀器有限公司）、参照電極は飽和二重塩橋甘汞電極（Leici 217, 上海儀電科学儀器股份有限公司）を用いた。</p>
+<p>測定法は以下のとおりであった：MMDHPの均一微粉末0.15 gをセラミック反応装置に入れ、H2SO4溶液（3.0 mol/L）12 mL、CH2(COOH)2溶液（0.4 mol/L、0.2 mol/L H2SO4溶液で調製）6 mL、(NH4)4Ce(SO4)4溶液（0.02 mol/L、0.2 mol/L H2SO4溶液で調製）3 mLを加えた。次に電極を反応混合溶液に入れ、恒温水浴装置（35 ℃）中で400 r/minの速度で3分間撹拌した後、KBrO3溶液（0.3 mol/L）3 mLを注入した。上記4種の溶液は空白のB-Z振動系であり、電位振動が消失するまで試料の電位-時間（E-t）曲線を収集した。</p>
+<h3>2.3. 試料・標準溶液の調製</h3>
+<p>MMDHP 8丸を秤量し、小さく均一な破片に粉砕した。破片を25 mLメスフラスコに入れ、35 ℃・超音波浴中で80%メタノールにより20分間抽出し、最後に有機フィルターを通してHPLC分析に供した。MMDHP 8試料を乳鉢で均一な微粉末に十分に粉砕し、0.15 gを秤量して電気化学分析に用いた。</p>
+<p>MMDHPの4つのQ-markerを正確に秤量し、メタノールに溶解して原液を得た。最終的に原液を混合し、一連の濃度に希釈して検量線を作成した。</p>
+<h3>2.4. 理論</h3>
+<h4>2.4.1. 系統定量指紋法（SQFM）[14,15]</h4>
+<p>SQFMは、TCM指紋の全体的な定性・定量理論の代表的な方法である。指紋試験において、試料指紋ベクトル（SFV）はX = (x1, x2…xn)、参照指紋ベクトル（RFV）はY = (y1, y2…yn)であり、xi・yiはそれぞれの指紋ピーク面積である。XとYのなす角の余弦値を計算したものが定性類似度<strong>S</strong>Fである。<strong>S</strong>Fは、含量の分布比における試料と標準指紋の化学組成の類似性を明確に反映できる。しかし、大きいピークが小さいピークをマスクしてしまう問題がある。RFV Yを P0=(1,1…1) とし、SFV Xを P0=(x1/y1, x2/y2…xn/yn) とすると、そのなす角の余弦値は「比率定性類似度」<strong>S</strong>′Fとなる。これはすべての指紋ピークに等しい重みを与えるが、大きなピークの変化には鈍感になる。まとめると、この二重定性類似度（<strong>S</strong>Fと<strong>S</strong>′F）の平均値がマクロ定性類似度<strong>S</strong>mと呼ばれる。</p>
+<p><strong>C</strong>は投影含量の類似度であり、XのYへの射影である。その特性は<strong>S</strong>Fと類似しており、すなわち小さいピークが大きいピークに覆われて情報が失われやすい。異なる指紋ピーク面積には相互補償効果があるため、類似度<strong>S</strong>Fを補正して定量類似度<strong>P</strong>を得る必要がある。<strong>P</strong>はすべてのピーク積分値を等しく扱い、小さいピークに対応する化学成分の含量変化を正確に反映できる。まとめると、この二重定量類似度（<strong>C</strong>と<strong>P</strong>）の平均値がマクロ定量類似度<strong>P</strong>mと呼ばれる。</p>
+<p>SQFMは主に<strong>S</strong>mと<strong>P</strong>mから構成され、試料はこれらのパラメータの値に応じて8つの品質グレード（G1–G8）に分類される（表1）。その後、TCMの品質の定性・定量評価が実現される。</p>
+<p>上記パラメータの表現式は以下の式のとおりである（原文の数式は組版の都合上、一部の下付・分数表記がOCR抽出で判読困難であり、正確な数式表記は原文図表を参照されたい）。</p>
+<ul><li>式(1) <strong>S</strong>F ＝ cos<em>θ</em> ＝ Σ(xi・yi) ／ [√Σxi² ・ √Σyi²]</li><li>式(2) <strong>S</strong>′F ＝ 比率定性類似度（Yを(1,1,…,1)、Xを(x1/y1,…,xn/yn)としたときのcosθ。原文参照）</li><li>式(3) <strong>S</strong>m ＝ (1/2)（<strong>S</strong>F ＋ <strong>S</strong>′F）</li><li>式(4) <strong>C</strong> ＝ [Σ(xi・yi) ／ Σyi²] × 100%</li><li>式(5) <strong>P</strong> ＝ 定量類似度（<strong>S</strong>Fを補正した値。原文参照）</li><li>式(6) <strong>P</strong>m ＝ (1/2)（<strong>C</strong> ＋ <strong>P</strong>）</li></ul>
+<h4>2.4.2. 単一マーカーによる多成分定量分析（QAMS）</h4>
+<p>TCMの組成は複雑であり、一部の標準物質は高価または希少であるため、一部成分の定量管理が困難である。本論文ではこの問題に対し、4つのQ-markerの含量測定にQAMSを適用した。1つの成分（内部標準、安価または入手容易なもの）を測定することで、複数成分の同時定量が実現できる[16]。検出器のフローセルが不変という条件下では、一定の直線範囲内で主要指標成分の含量間に一定の関数関係が存在する。したがって、QAMS法は補正係数を用いて化合物の濃度を計算し、含量を求めることが保証される[17–19]。関連する計算式は以下のとおりである。</p>
+<ul><li>式(7) <em><strong>f</strong>si</em> ＝ <em>fs</em>／<em>fi</em> ＝ (<em>As</em>／<em>Cs</em>) ／ (<em>Ai</em>／<em>Ci</em>)</li><li>式(8) <em><strong>C</strong>i</em> ＝ <em><strong>f</strong>si</em> × (<em>Ai</em>／<em>As</em>) × <em>Cs</em>（成分iの濃度＝補正係数×成分iと内部標準のピーク面積比×内部標準の濃度。原文の表記はOCR上一部不明瞭であり、QAMS法の一般式に基づき補って記載）</li></ul>
+<p><em><strong>f</strong>si</em>: 補正係数 <em><strong>A</strong>s</em>: 内部標準対照品（または試験試料）のピーク面積 <em><strong>C</strong>s</em>: 内部標準対照品（または試験試料）の濃度 <em><strong>A</strong>i</em>: 成分対照品（または試験試料）のピーク面積 <em><strong>C</strong>i</em>: 成分対照品（または試験試料）の濃度</p>
+<h4>2.4.3. B-Z振動系のメカニズム</h4>
+<p>本論文で検討した電気化学反応はB-Z振動反応系であり、酸化還元反応である。反応メカニズムは、H2SO4溶液中でCe4+が触媒として働き、BrO3−を介してCH2(COOH)2を酸化するというものである[20]。反応式は図1に示した。</p>
+<p>全体の反応過程はBr−を中心に進行すると考えられる。反応中、Br−には臨界濃度（[Br−]crit）が存在し、系内のBr−濃度が[Br−]critより高い場合は式(a)–(d)に示す反応が起こり、逆にBr−が[Br−]critより低い場合は式(e)–(g)に示す反応が起こる。この過程でBr−の再生が誘発される（式(h)）。上記3つの過程が繰り返されることは、B-Z振動反応が発生していることを示す。</p>
+<p>まとめると、B-Z反応は非平衡閉鎖系である。散逸性物質としてのCH2(COOH)2は、式(d)で表される反応を遅くする。もし速やかに補充されなければ、系の反応速度を直接的・間接的に増大させ、反応は最終的に平衡に達する。生薬材料を添加した後、試料中の還元性成分がBrO3−と反応し、系の正常な動作を妨げ、巨視的には振動を抑制する現象を示す。活性成分含量の異なる試料は異なる程度の抑制をもたらし、その結果異なる電気化学指紋を示す。</p>
+<h4>2.4.4. 4つのQ-markerの含量パーセンテージ（<em>P</em>i%）</h4>
+<p>本論文では、各試料における4つのQ-markerの含量とその合計の<strong>P</strong>i%を計算した。計算式は以下のとおりである。</p>
+<ul><li>式(9) <em><strong>P</strong>i</em>% ＝ <em>mi</em> ／ <em>m</em>RFPi</li><li>式(10) <em><strong>P</strong>i</em>%(SUM) ＝ <em>mi</em>(SUM) ／ <em>m</em>RFPi(SUM)</li></ul>
+<p><em><strong>m</strong>i</em>: 各試料における各マーカーの含量 <em><strong>m</strong></em>RFPi: 生成された参照指紋（RFP）における各マーカーの含量 <em><strong>m</strong>i</em>(SUM): 各試料における4つのマーカーの合計含量 <em><strong>m</strong></em>RFPi(SUM): 生成されたRFPにおける4つのマーカーの合計含量</p>
+<h3>2.5. データ解析</h3>
+<p>クロマトグラフィー指紋の評価は、研究室が開発した「TCM spectral quantum fingerprint consistency digital evaluation system 4.0（TCMスペクトル量子指紋一貫性デジタル評価システム 4.0）」というソフトウェアで行った。データ解析にはOrigin 95、SIMCA 14.1、IBM SPSS Statisticsソフトウェアを用いた。</p>
+<h2>3. 結果と考察（Results and Discussion）</h2>
+<h3>3.1. 方法バリデーション</h3>
+<p>研究したHPLC指紋の適用可能性を確認するため、精度（precision）と繰返し性（repeatability）をそれぞれ検討した。精度は同一試料溶液を6回連続で分析して算出した。繰返し性は同一実験条件下で調製した6つの並行試料溶液を注入して検証した。</p>
+<p>ロガニン（LOG）ピークを参照ピークとし、23の共通ピークの相対保持時間（RRT）と相対ピーク面積（RPA）の相対標準偏差（RSD）を計算して、精度と繰返し性を評価した。4つのQ-markerのRRTおよびRPAについて、精度・繰返し性ともにRSD値はすべてそれぞれ1.46%、3.06%未満であった。標準添加法により回収率を求めて方法の正確性を評価した。その結果、4つのQ-markerの平均回収率は94.0〜104.0%の間で、RSDは1.0%未満であった。ピーク面積を従属変数（Y軸）、溶液濃度を独立変数（X軸）として、4つのQ-markerの検量線を作成した。検出限界（LOD）と定量限界（LOQ）は検量線を用いてそれぞれ推定した。4つのQ-markerの直線性、LOD、LOQの結果を表2に示す。結果から、目標濃度範囲内でピーク面積は成分濃度と良好な直線関係を示し、相関係数<em>r</em>≥0.999であった。結論として、確立されたHPLC指紋は4つのQ-markerの含量を正確に測定でき、方法は正確かつ信頼性が高いことが示された。</p>
+<p><strong>表2. MOR・LOG・PAEF・PAEの直線回帰式・直線性・LOD・LOQ</strong></p>
+<table>
+<thead><tr><th>化合物</th><th>回帰式</th><th><em>r</em></th><th>直線性 (μg/mL)</th><th>LOD (ng)</th><th>LOQ (ng)</th></tr></thead>
+<tbody>
+<tr><td>MOR（モロニシド）</td><td>y = 16608x + 15.458</td><td>0.9998</td><td>4.1–248</td><td>3.07</td><td>9.31</td></tr>
+<tr><td>LOG（ロガニン）</td><td>y = 15475x − 27.968</td><td>0.9992</td><td>2.5–150.6</td><td>4.50</td><td>13.64</td></tr>
+<tr><td>PAEF（シャクヤク配糖体）</td><td>y = 13281x − 17.924</td><td>0.9998</td><td>6.5–390</td><td>5.66</td><td>17.16</td></tr>
+<tr><td>PAE（パエオノール）</td><td>y = 26520x − 3.1866</td><td>1.0000</td><td>2.7–160</td><td>0.45</td><td>1.35</td></tr>
+</tbody></table>
+<p>ECFPについては、試料（S8）を2.2.2節に記載した方法で6回測定して繰返し性を検証した。いくつかの特徴パラメータの相対標準偏差（RSD）を計算し、図1(A)に示した。その結果、誘導時間（<em><strong>t</strong></em>ind）、振動終了時間（<em><strong>t</strong></em>oe）、振動寿命（<em><strong>t</strong></em>ol）、ピークトップ電位（<em><strong>E</strong></em>pt）、振動開始電位（<em><strong>E</strong></em>os）、振動終了電位（<em><strong>E</strong></em>oe）、振動周期（<em><strong>τ</strong></em>op）、最大振幅（<em><strong>E</strong></em>max）のRSDはそれぞれ6.78%、4.50%、4.53%、0.68%、1.53%、0.33%、3.82%、3.69%であった。平均RSDは3.23%であり、この方法が良好な繰返し性を持つことを示している。総じて、本論文で確立したECFPは正確かつ信頼性が高く、20試料の指紋分析に使用できるものであった。</p>
+<figure><img src="assets/mmdhp-twffp-ecfp-antioxidant/fig1.png" alt="図1（原論文Figure 1）. B-Z振動反応のメカニズム（反応式a〜h）、代表的なECFP（S15）とその特徴パラメータの定義（A）、および積分後のECFPと20バッチMMDHP試料のECFP群（B）。" loading="lazy"><figcaption>図1（原論文Figure 1）. B-Z振動反応のメカニズム（反応式a〜h）、代表的なECFP（S15）とその特徴パラメータの定義（A）、および積分後のECFPと20バッチMMDHP試料のECFP群（B）。</figcaption></figure>
+<h3>3.2. HPLC指紋分析</h3>
+<h4>3.2.1. 三波長融合指紋分析</h4>
+<p>3Dスペクトログラムから得られたMMDHP中の対象分析物の吸収極大（図2(A)）に基づき、より多くの成分情報を得るために236 nm・274 nm・326 nmをモニタリング波長として選定した。図2(C)から、各波長で異なる吸収シグナルが示されており、表1でも異なる波長における試料グレードの明確な違いが示された。これは、単一波長で表現される情報が限られており、すべての化学情報の指紋を一般化できないことを示している。本研究では、単一波長指紋の欠点を克服するためにTWFFPを用い、「TCM spectral quantum fingerprint consistency digital evaluation system 4.0」を用いて236・274・326 nmの3つの検出波長における最大スペクトルを構築した。各波長で最大の応答を示すピークを新しいTWFFPのピークとして選定し、より包括的で豊富な試料情報を得た。過去の経験に基づき、融合時間窓を0.1分とし、試料（S1）を代表する新しいクロマトグラムを得た。20のMMDHP試料は、3波長でそれぞれ23（236 nm）、26（274 nm）、22（326 nm）のピークを含み、TWFFPは36ピークを含んでいた（図2(B)）。単一波長のクロマトグラフィーと比較して、新たに生成されたTWFFPは不純物ピークの影響を低減しつつ、有効なピーク情報を十分に保持できた。</p>
+<p><strong>表1. SQFMによるTCM品質グレード分類基準、および236 nm・274 nm・326 nm・TWFFP・ECFP・IC50値に基づく20バッチMMDHPの評価結果</strong></p>
+<p>グレード判定基準:</p>
+<table>
+<thead><tr><th>品質グレード</th><th>G1</th><th>G2</th><th>G3</th><th>G4</th><th>G5</th><th>G6</th><th>G7</th><th>G8</th></tr></thead>
+<tbody>
+<tr><td><strong>S</strong>m ≥</td><td>0.95</td><td>0.90</td><td>0.85</td><td>0.80</td><td>0.70</td><td>0.60</td><td>0.50</td><td>＜0.50</td></tr>
+<tr><td><strong>P</strong>m/%</td><td>95–105</td><td>90–110</td><td>85–115</td><td>80–120</td><td>70–130</td><td>60–140</td><td>50–150</td><td>0〜∞</td></tr>
+</tbody></table>
+<p>20バッチの評価結果（236 nm・274 nm・326 nm・TWFFPは<strong>S</strong>m／<strong>P</strong>m/%／グレード、ECFPは<strong>S</strong>m／<strong>P</strong>m/%、最後にIC50値。IC50は原文に単位の明記がなく「原文参照」とする）:</p>
+<table>
+<thead><tr><th>試料</th><th>236nm Sm</th><th>236nm Pm%</th><th>236nmグレード</th><th>274nm Sm</th><th>274nm Pm%</th><th>274nmグレード</th><th>326nm Sm</th><th>326nm Pm%</th><th>326nmグレード</th><th>TWFFP Sm</th><th>TWFFP Pm%</th><th>TWFFPグレード</th><th>ECFP Sm</th><th>ECFP Pm%</th><th>IC50</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>0.983</td><td>96.8</td><td>1</td><td>0.967</td><td>105.6</td><td>2</td><td>0.924</td><td>129.3</td><td>4</td><td>0.971</td><td>103.6</td><td>1</td><td>0.985</td><td>88.8</td><td>0.0679</td></tr>
+<tr><td>S2</td><td>0.984</td><td>88.7</td><td>2</td><td>0.985</td><td>82.3</td><td>3</td><td>0.953</td><td>92.7</td><td>2</td><td>0.985</td><td>87.1</td><td>2</td><td>0.964</td><td>68.9</td><td>0.1022</td></tr>
+<tr><td>S3</td><td>0.986</td><td>92.3</td><td>2</td><td>0.992</td><td>92.0</td><td>1</td><td>0.974</td><td>102.2</td><td>1</td><td>0.992</td><td>93.6</td><td>2</td><td>0.949</td><td>74.3</td><td>0.1101</td></tr>
+<tr><td>S4</td><td>0.984</td><td>89</td><td>2</td><td>0.995</td><td>83.2</td><td>3</td><td>0.960</td><td>95.0</td><td>1</td><td>0.992</td><td>87.5</td><td>2</td><td>0.959</td><td>51.1</td><td>0.1050</td></tr>
+<tr><td>S5</td><td>0.978</td><td>89.2</td><td>2</td><td>0.969</td><td>76.6</td><td>4</td><td>0.885</td><td>89.9</td><td>3</td><td>0.970</td><td>86.7</td><td>2</td><td>0.983</td><td>102.4</td><td>0.1001</td></tr>
+<tr><td>S6</td><td>0.991</td><td>95.6</td><td>1</td><td>0.991</td><td>95.2</td><td>1</td><td>0.955</td><td>105.4</td><td>2</td><td>0.989</td><td>96.8</td><td>1</td><td>0.962</td><td>75.9</td><td>0.0876</td></tr>
+<tr><td>S7</td><td>0.973</td><td>79.9</td><td>3</td><td>0.961</td><td>92.5</td><td>2</td><td>0.953</td><td>116.7</td><td>3</td><td>0.960</td><td>87.7</td><td>2</td><td>0.994</td><td>93.3</td><td>0.0876</td></tr>
+<tr><td>S8</td><td>0.948</td><td>72.8</td><td>4</td><td>0.884</td><td>90.1</td><td>3</td><td>0.799</td><td>73.7</td><td>5</td><td>0.899</td><td>79.5</td><td>4</td><td>0.997</td><td>117</td><td>0.1281</td></tr>
+<tr><td>S9</td><td>0.933</td><td>61.4</td><td>5</td><td>0.901</td><td>74.2</td><td>4</td><td>0.725</td><td>67.4</td><td>6</td><td>0.926</td><td>64.3</td><td>5</td><td>0.995</td><td>120.9</td><td>0.1811</td></tr>
+<tr><td>S10</td><td>0.945</td><td>62.2</td><td>5</td><td>0.918</td><td>75.4</td><td>4</td><td>0.823</td><td>59.9</td><td>7</td><td>0.922</td><td>66.6</td><td>5</td><td>0.995</td><td>108.7</td><td>0.1562</td></tr>
+<tr><td>S11</td><td>0.954</td><td>142.4</td><td>6</td><td>0.944</td><td>135.5</td><td>5</td><td>0.845</td><td>87.2</td><td>4</td><td>0.964</td><td>136.7</td><td>4</td><td>0.997</td><td>106.9</td><td>0.0884</td></tr>
+<tr><td>S12</td><td>0.960</td><td>132</td><td>5</td><td>0.941</td><td>130.6</td><td>5</td><td>0.867</td><td>77.0</td><td>5</td><td>0.959</td><td>129.0</td><td>4</td><td>0.991</td><td>92.3</td><td>0.0586</td></tr>
+<tr><td>S13</td><td>0.974</td><td>122</td><td>4</td><td>0.967</td><td>111.6</td><td>2</td><td>0.906</td><td>70.3</td><td>5</td><td>0.977</td><td>116.5</td><td>3</td><td>0.994</td><td>87.4</td><td>0.0713</td></tr>
+<tr><td>S14</td><td>0.944</td><td>77.8</td><td>4</td><td>0.950</td><td>81.8</td><td>3</td><td>0.934</td><td>95.4</td><td>2</td><td>0.944</td><td>78.4</td><td>4</td><td>0.995</td><td>109.9</td><td>0.1361</td></tr>
+<tr><td>S15</td><td>0.952</td><td>72.4</td><td>4</td><td>0.935</td><td>66.9</td><td>5</td><td>0.939</td><td>80.8</td><td>3</td><td>0.948</td><td>68.6</td><td>4</td><td>0.996</td><td>109.3</td><td>0.1391</td></tr>
+<tr><td>S16</td><td>0.980</td><td>115.3</td><td>3</td><td>0.985</td><td>113.6</td><td>2</td><td>0.928</td><td>143.2</td><td>7</td><td>0.990</td><td>114.1</td><td>2</td><td>0.997</td><td>122.7</td><td>0.1070</td></tr>
+<tr><td>S17</td><td>0.975</td><td>118.9</td><td>3</td><td>0.989</td><td>126.7</td><td>4</td><td>0.978</td><td>98.5</td><td>1</td><td>0.989</td><td>122.0</td><td>3</td><td>0.996</td><td>114.2</td><td>0.0914</td></tr>
+<tr><td>S18</td><td>0.975</td><td>130.2</td><td>5</td><td>0.949</td><td>111.9</td><td>3</td><td>0.772</td><td>145.0</td><td>7</td><td>0.958</td><td>116.7</td><td>3</td><td>0.998</td><td>107.6</td><td>0.0792</td></tr>
+<tr><td>S19</td><td>0.969</td><td>123.5</td><td>4</td><td>0.949</td><td>103.9</td><td>2</td><td>0.969</td><td>106.3</td><td>2</td><td>0.951</td><td>114.1</td><td>2</td><td>0.997</td><td>121.9</td><td>0.1290</td></tr>
+<tr><td>S20</td><td>0.950</td><td>118.4</td><td>3</td><td>0.945</td><td>107.4</td><td>2</td><td>0.929</td><td>66.9</td><td>6</td><td>0.964</td><td>115.3</td><td>2</td><td>0.994</td><td>122</td><td>0.1039</td></tr>
+</tbody></table>
+<figure><img src="assets/mmdhp-twffp-ecfp-antioxidant/fig2.png" alt="図2（原論文Figure 2）. S6の3Dスペクトル（A）、20バッチMMDHPの三波長融合指紋TWFFP（B）、S6の3波長クロマトグラムと4つのQ-marker成分の構造（モロニシド・ロガニン・シャクヤク配糖体・パエオノール）（C）。" loading="lazy"><figcaption>図2（原論文Figure 2）. S6の3Dスペクトル（A）、20バッチMMDHPの三波長融合指紋TWFFP（B）、S6の3波長クロマトグラムと4つのQ-marker成分の構造（モロニシド・ロガニン・シャクヤク配糖体・パエオノール）（C）。</figcaption></figure>
+<h4>3.2.2. 主成分分析（PCA）</h4>
+<p>TWFFPの品質判別能力を検証するため、多変量データ系の次元削減によって試料と指紋ピークの相関を確立するPCA法を選択した[3,21]。20試料の36共通ピーク面積をOrigin ソフトウェアに取り込み、得られた最初の4主成分でデータ分散の80.55%を説明できた。PC1・PC2をそれぞれ横軸・縦軸として、20観測値×36変数からなる二次元行列を構築した（図3(A)）。これはカラースコアプロットと青色ローディングプロットを含む。カラースコアプロットから、この方法は異なる製造元の試料を明確に区別でき、同一製造元の試料は良好な一貫性を示すことがわかった。同一製造元由来のS1–S7は一つのクラスターに集まり、PC1と負の相関、PC2と正の相関を示した。同一製造元由来のS8–S10、およびS14・S15は、いずれもPC1・PC2の両方と負の相関を示した。S11–S13とS16–S20はPC1と正の相関を示し、同時にS11–S13とS16はPC2と負の相関、S17–S20はPC2と正の相関を示した。青色ローディングプロットからは、元の指紋ピークが複合変数に対して持つ寄与を直感的に理解でき、異なる化合物が全体に与える影響の違いを定性的に解析し、試料間の類似性・差異を判別するのに役立つ主要変数を特定できた。図3(C)から、定量的な観点では、異なる指紋ピークが表す物質は含量の違いにより異なる寄与値を持ち、そのため試料は異なる分類傾向を示す。したがって、以上の2つの図を比較すると、確立されたPCAモデルは試料中の物質含量の違いに応じて20試料を判別できることがわかる。</p>
+<h4>3.2.3. TWFFPの系統定量指紋法による評価</h4>
+<p>20バッチ試料のTWFFPを「TCM Spectral Quantum Fingerprint Consistency Digital Evaluation System 4.0」に取り込み、平均法によりすべての試料の参照指紋（RFP）を生成した。これにより、試料のピーク面積と含量の関係をさらに検証し、試料の定性・定量類似度を解析できた。</p>
+<p><strong>S</strong>mと<strong>P</strong>mの値はRFP（標準として）により計算し、結果を表1に示した。表1から、すべての試料の<strong>S</strong>m値は0.899〜0.992の範囲にあり、すべての試料が類似した化学組成を含んでいることを示す。<strong>P</strong>m値は64.3%〜136.7%の間にあり、大きな差があることから、異なる試料間の化学成分の含量はかなり異なることを示している。図3(B)から、異なる製造元由来の試料のグレードは（1から5の）5段階に分かれることが分かった。同時に、S1–S7のような同一製造元の試料は、<strong>P</strong>mの変化により微妙なグレード変化を示した。全試料を通して、<strong>S</strong>mは緩やかに変動する一方、<strong>P</strong>mは大きく変動しており、これが異なる試料のグレードに影響していた。明らかに、<strong>P</strong>mはすべての試料のグレード評価に対してより大きな寄与を持ち、試料の判別は定量的組成に起因するものであり、定性的組成によるものではなかった。</p>
+<p>さらに、4つのマーカーの含量測定結果とSQFMで得られた<strong>P</strong>m値との関係を検討した。<strong>P</strong>i%と<strong>P</strong>mの相関を図3(D)に示した。結果、MOR・LOG・PAEF・PAEおよびそれらの合計の相関係数はそれぞれ0.7310、0.6871、0.9702、0.6223、0.9392であった。<strong>P</strong>i%と<strong>P</strong>mの間には一定の相関があることがわかる。加えて、PAEFと4つのQ-markerの合計の<strong>P</strong>i%は比較的高かった。したがって、SQFMは試料の含量を正確に解析できると結論づけた。</p>
+<h4>3.2.4. TWFFPの階層的クラスター分析（HCA）[22]</h4>
+<p><strong>S</strong>mと<strong>P</strong>mをSIMCAソフトウェアに取り込み、HCA法を用いて、SQFM法が異なる試料の一貫性・差異を明確に判別できるかを検討した。図4(A)に示すように、この方法は試料を大まかに5つのカテゴリに分類した。S8–S10、S14、S15が1つのカテゴリに、S1–S7が1つのカテゴリに、S19が単独で1つのカテゴリに、4番目のカテゴリにはS11–S13が、5番目のカテゴリにはS16–S18、S20が含まれた。これら5つの分類は各バッチの製造元と良く一致しており、SQFM法が試料の一貫性・差異を解析するうえで信頼できることを示している。同時に、HCAで示された試料のクラスタリングは、PCAモデルにおける試料間の相関結果と一致しており、両方法が試料の性質と含量との相関を正確に記述できることを示している。まとめると、SQFMは各成分がもたらす潜在的な違いと試料全体の品質一貫性を解析でき、TCMとその複方製剤の全体的な品質を管理するための包括的でシンプル、信頼性の高い方法として利用できる。</p>
+<figure><img src="assets/mmdhp-twffp-ecfp-antioxidant/fig3.png" alt="図3（原論文Figure 3）. 20バッチMMDHP試料の36共通ピークに対するPCA解析のカラースコアプロットと青色ローディングプロット（A）。PiとPmの線形回帰プロット（B、図中はSm・Pm・グレードの試料別推移）。4つのQ-marker含量（C）と20バッチMMDHPのSQFM評価結果（D、Pm対Pi%の回帰プロット）。" loading="lazy"><figcaption>図3（原論文Figure 3）. 20バッチMMDHP試料の36共通ピークに対するPCA解析のカラースコアプロットと青色ローディングプロット（A）。PiとPmの線形回帰プロット（B、図中はSm・Pm・グレードの試料別推移）。4つのQ-marker含量（C）と20バッチMMDHPのSQFM評価結果（D、Pm対Pi%の回帰プロット）。</figcaption></figure>
+<figure><img src="assets/mmdhp-twffp-ecfp-antioxidant/fig4.png" alt="図4（原論文Figure 4）. TWFFP（A）およびECFP（B）のHCA結果、ピーク-IC50（C）およびピーク-Pm（D）の指紋-薬効相関の結果。" loading="lazy"><figcaption>図4（原論文Figure 4）. TWFFP（A）およびECFP（B）のHCA結果、ピーク-IC50（C）およびピーク-Pm（D）の指紋-薬効相関の結果。</figcaption></figure>
+<h3>3.3. QAMSによる4つのQ-marker含量の評価</h3>
+<p>本実験では、試料を定量するために4つのQ-markerを検討し、QAMSが標準曲線法（CCM）に代わってMMDHPの含量を測定できるかを検証することを計画した。まず表2に記載の直線回帰式を用いて、CCM法によりMOR・LOG・PAEF・PAEの含量を計算した。次に、2.4.2節で述べたQAMSの計算法に従い、PAEF（ピーク形状が良好・シグナル強度が高い・他のピークとの分離度が高い）を内部標準として用い、他の3つのマーカーの含量を計算した。両方法で得られたマーカーの含量結果を比較し、QAMS法の信頼性を検証した。</p>
+<p>CCMとQAMSで得られた含量の比（rC/Q）を計算し、表3に示した。rC/Qが1に近いほど、両方法の含量結果が類似していることを意味する。同時に、統計解析のために<em><strong>t</strong></em>検定を用い、両分析法で得られた含量値をSPSSソフトウェアに取り込んだ。その結果、他の3つのマーカーの<em><strong>P</strong></em>値はそれぞれ0.920、0.875、0.980であり、いずれも0.05より大きく、有意差は認められなかった。以上の結果はすべて、両方法の間に有意差がないことを示している。したがって、QAMSはMMDHP中の4つのマーカーの含量を同時かつ正確に測定できるといえる。</p>
+<p><strong>表3. CCM法・QAMS法それぞれで算出した4つのQ-marker含量、および両法で得られた含量の比（rC/Q）</strong></p>
+<table>
+<thead><tr><th>試料</th><th>CCM: MOR(mg/g)</th><th>CCM: LOG(mg/g)</th><th>CCM: PAEF(mg/g)</th><th>CCM: PAE(mg/g)</th><th>QAMS: MOR(mg/g)</th><th>QAMS: LOG(mg/g)</th><th>QAMS: PAEF(mg/g)</th><th>QAMS: PAE(mg/g)</th><th>rC/Q: MOR</th><th>rC/Q: LOG</th><th>rC/Q: PAE</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>1.0461</td><td>1.1199</td><td>3.0369</td><td>0.9359</td><td>1.0400</td><td>1.1517</td><td>3.0369</td><td>0.9439</td><td>1.0059</td><td>0.9724</td><td>0.9915</td></tr>
+<tr><td>S2</td><td>1.1017</td><td>1.2471</td><td>2.8433</td><td>0.5970</td><td>1.0951</td><td>1.2868</td><td>2.8433</td><td>0.6017</td><td>1.0060</td><td>0.9691</td><td>0.9922</td></tr>
+<tr><td>S3</td><td>1.1341</td><td>1.3052</td><td>2.9445</td><td>0.7892</td><td>1.1265</td><td>1.3479</td><td>2.9445</td><td>0.7959</td><td>1.0067</td><td>0.9683</td><td>0.9916</td></tr>
+<tr><td>S4</td><td>1.1179</td><td>1.2624</td><td>2.8627</td><td>0.7506</td><td>1.1107</td><td>1.3031</td><td>2.8627</td><td>0.7569</td><td>1.0065</td><td>0.9688</td><td>0.9917</td></tr>
+<tr><td>S5</td><td>1.1687</td><td>1.2035</td><td>3.0992</td><td>0.4895</td><td>1.1598</td><td>1.2400</td><td>3.0992</td><td>0.4926</td><td>1.0077</td><td>0.9706</td><td>0.9937</td></tr>
+<tr><td>S6</td><td>1.0641</td><td>1.1785</td><td>2.9565</td><td>0.9718</td><td>1.0580</td><td>1.2138</td><td>2.9565</td><td>0.9805</td><td>1.0058</td><td>0.9709</td><td>0.9911</td></tr>
+<tr><td>S7</td><td>0.7403</td><td>0.8234</td><td>2.3889</td><td>0.8829</td><td>0.7422</td><td>0.8398</td><td>2.3889</td><td>0.8923</td><td>0.9974</td><td>0.9805</td><td>0.9895</td></tr>
+<tr><td>S8</td><td>0.7477</td><td>0.8964</td><td>2.2627</td><td>0.6660</td><td>0.7501</td><td>0.9174</td><td>2.2627</td><td>0.6729</td><td>0.9968</td><td>0.9771</td><td>0.9897</td></tr>
+<tr><td>S9</td><td>0.8239</td><td>0.7421</td><td>1.7942</td><td>0.6522</td><td>0.8278</td><td>0.7553</td><td>1.7942</td><td>0.6609</td><td>0.9953</td><td>0.9825</td><td>0.9868</td></tr>
+<tr><td>S10</td><td>0.5580</td><td>0.7496</td><td>1.8889</td><td>0.6229</td><td>0.5651</td><td>0.7631</td><td>1.8889</td><td>0.6306</td><td>0.9874</td><td>0.9823</td><td>0.9878</td></tr>
+<tr><td>S11</td><td>1.7502</td><td>1.9147</td><td>5.1323</td><td>1.8196</td><td>1.7274</td><td>1.9828</td><td>5.1323</td><td>1.8323</td><td>1.0132</td><td>0.9657</td><td>0.9931</td></tr>
+<tr><td>S12</td><td>1.5131</td><td>1.7720</td><td>5.5171</td><td>1.6476</td><td>1.4972</td><td>1.8293</td><td>5.5171</td><td>1.6587</td><td>1.0106</td><td>0.9687</td><td>0.9933</td></tr>
+<tr><td>S13</td><td>1.3284</td><td>1.6438</td><td>4.8681</td><td>1.0983</td><td>1.3165</td><td>1.6964</td><td>4.8681</td><td>1.1055</td><td>1.0090</td><td>0.9690</td><td>0.9935</td></tr>
+<tr><td>S14</td><td>1.4686</td><td>1.3228</td><td>2.2546</td><td>1.3078</td><td>1.4641</td><td>1.3660</td><td>2.2546</td><td>1.3258</td><td>1.0031</td><td>0.9684</td><td>0.9864</td></tr>
+<tr><td>S15</td><td>1.5077</td><td>1.2389</td><td>2.3546</td><td>1.1677</td><td>1.5021</td><td>1.2759</td><td>2.3546</td><td>1.1829</td><td>1.0037</td><td>0.9710</td><td>0.9872</td></tr>
+<tr><td>S16</td><td>1.4673</td><td>1.1057</td><td>4.1386</td><td>1.1645</td><td>1.4506</td><td>1.1333</td><td>4.1386</td><td>1.1728</td><td>1.0115</td><td>0.9756</td><td>0.9929</td></tr>
+<tr><td>S17</td><td>1.4166</td><td>0.8977</td><td>4.1605</td><td>1.0816</td><td>1.4012</td><td>0.9135</td><td>4.1605</td><td>1.0891</td><td>1.0110</td><td>0.9827</td><td>0.9931</td></tr>
+<tr><td>S18</td><td>1.3680</td><td>1.3673</td><td>4.5082</td><td>0.9917</td><td>1.3522</td><td>1.4095</td><td>4.5082</td><td>0.9979</td><td>1.0117</td><td>0.9701</td><td>0.9938</td></tr>
+<tr><td>S19</td><td>1.8199</td><td>1.1436</td><td>3.8965</td><td>1.0025</td><td>1.7957</td><td>1.1740</td><td>3.8965</td><td>1.0097</td><td>1.0135</td><td>0.9741</td><td>0.9929</td></tr>
+<tr><td>S20</td><td>2.0326</td><td>1.2004</td><td>4.1917</td><td>0.7706</td><td>2.0026</td><td>1.2337</td><td>4.1917</td><td>0.7753</td><td>1.0150</td><td>0.9730</td><td>0.9939</td></tr>
+</tbody></table>
+<p>PAEFは内部標準として用いたため、QAMS値はCCM値と同一（rC/Q列には含まれない）。補正係数: <em><strong>f</strong>si</em>−MOR = 0.7773、<em><strong>f</strong>si</em>−LOG = 0.9006、<em><strong>f</strong>si</em>−PAE = 0.5024</p>
+<h3>3.4. 電気化学指紋分析</h3>
+<p>表4は、MMDHPのECFPの8つの特徴パラメータを記録したものである。このうち<em><strong>t</strong></em>indは人為的な注入という主観的要因の影響を強く受ける。<em><strong>t</strong></em>oe・<em><strong>E</strong></em>pt・<em><strong>E</strong></em>os・<em><strong>E</strong></em>oe・<em><strong>τ</strong></em>opのRSDはいずれも8未満であり、データからもこれら5パラメータは全バッチ間であまり差がなく、試料間の差異をうまく反映できないことがわかる。したがって、我々は<em><strong>t</strong></em>olと<em><strong>E</strong></em>maxを、試料品質の電気化学評価における主な根拠として用いた。</p>
+<p><strong>表4. 20バッチ試料の特徴パラメータの要約</strong></p>
+<table>
+<thead><tr><th>試料</th><th>tind/s</th><th>toe/s</th><th>tol/s</th><th>Ept/V</th><th>Eos/V</th><th>Eoe/V</th><th>τop/s</th><th>Emax/V</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>26.6</td><td>2322.6</td><td>2296</td><td>1.0260</td><td>0.8457</td><td>0.7065</td><td>23.9</td><td>0.2277</td></tr>
+<tr><td>S2</td><td>47.9</td><td>2380.9</td><td>2333</td><td>0.9260</td><td>0.8225</td><td>0.6397</td><td>25.2</td><td>0.1533</td></tr>
+<tr><td>S3</td><td>55.1</td><td>2425.2</td><td>2370</td><td>0.9180</td><td>0.8088</td><td>0.6431</td><td>23.2</td><td>0.1579</td></tr>
+<tr><td>S4</td><td>43.6</td><td>2373.6</td><td>2330</td><td>0.9295</td><td>0.8527</td><td>0.6518</td><td>25.2</td><td>0.1293</td></tr>
+<tr><td>S5</td><td>41.0</td><td>2365.0</td><td>2324</td><td>0.9741</td><td>0.8079</td><td>0.6641</td><td>24.9</td><td>0.2088</td></tr>
+<tr><td>S6</td><td>47.2</td><td>2473.2</td><td>2426</td><td>0.9509</td><td>0.8344</td><td>0.6544</td><td>26.2</td><td>0.1684</td></tr>
+<tr><td>S7</td><td>39.7</td><td>2599.8</td><td>2560</td><td>0.9852</td><td>0.8156</td><td>0.6734</td><td>25.1</td><td>0.2051</td></tr>
+<tr><td>S8</td><td>16.2</td><td>2482.2</td><td>2466</td><td>1.0340</td><td>0.8343</td><td>0.7084</td><td>26.5</td><td>0.2380</td></tr>
+<tr><td>S9</td><td>10.6</td><td>2502.6</td><td>2492</td><td>1.0600</td><td>0.8915</td><td>0.7557</td><td>23.0</td><td>0.2077</td></tr>
+<tr><td>S10</td><td>11.6</td><td>2460.7</td><td>2449</td><td>1.0620</td><td>0.8908</td><td>0.7605</td><td>24.1</td><td>0.2024</td></tr>
+<tr><td>S11</td><td>23.4</td><td>2489.4</td><td>2466</td><td>1.0545</td><td>0.8677</td><td>0.7416</td><td>22.3</td><td>0.2153</td></tr>
+<tr><td>S12</td><td>25.1</td><td>2295.2</td><td>2270</td><td>1.0513</td><td>0.8835</td><td>0.7498</td><td>26.7</td><td>0.2165</td></tr>
+<tr><td>S13</td><td>48.1</td><td>2538.1</td><td>2490</td><td>1.0226</td><td>0.8742</td><td>0.7594</td><td>27.2</td><td>0.1973</td></tr>
+<tr><td>S14</td><td>17.8</td><td>2281.8</td><td>2264</td><td>1.0494</td><td>0.8729</td><td>0.7541</td><td>25.9</td><td>0.2254</td></tr>
+<tr><td>S15</td><td>15.9</td><td>2388.0</td><td>2372</td><td>1.0632</td><td>0.8735</td><td>0.7510</td><td>23.7</td><td>0.2138</td></tr>
+<tr><td>S16</td><td>25.6</td><td>2856.6</td><td>2831</td><td>1.0424</td><td>0.8570</td><td>0.7214</td><td>24.1</td><td>0.2380</td></tr>
+<tr><td>S17</td><td>25.0</td><td>2790.1</td><td>2765</td><td>1.0528</td><td>0.8785</td><td>0.7387</td><td>28.1</td><td>0.2286</td></tr>
+<tr><td>S18</td><td>24.6</td><td>2291.6</td><td>2267</td><td>1.0404</td><td>0.8495</td><td>0.7245</td><td>23.6</td><td>0.2231</td></tr>
+<tr><td>S19</td><td>35.8</td><td>2799.9</td><td>2764</td><td>1.0348</td><td>0.8457</td><td>0.7918</td><td>24.5</td><td>0.2372</td></tr>
+<tr><td>S20</td><td>25.2</td><td>2851.3</td><td>2826</td><td>1.0318</td><td>0.8570</td><td>0.7249</td><td>23.6</td><td>0.2295</td></tr>
+<tr><td>RSD(%)</td><td>44.34</td><td>7.51</td><td>8.25</td><td>4.84</td><td>3.08</td><td>6.42</td><td>6.17</td><td>14.92</td></tr>
+</tbody></table>
+<p>さらに電気化学データを解析するため、我々は独自に「TCM spectral quantum fingerprint consistency digital evaluation system 4.0」を用いてECFPを積分し、ピーク面積を得たうえで<strong>S</strong>mと<strong>P</strong>mを求めた。図1(B)は、MMDHP試料のB-Z振動系の非線形曲線と積分曲線をプロットしたものである。電気化学は実際には試料中の活性成分がB-Z振動系に与える影響を反映していることに留意すべきである。表1と図1(B)に対応して、<strong>P</strong>m値が大きいほど試料の<em><strong>t</strong></em>olは長くなる、すなわちB-Z振動系への影響が小さいほど、内部活性成分の含量が低いことを反映する。積分によって得られた結果が電気化学ソフトウェアで読み取ったデータと一致するかを検証するため、<em><strong>E</strong></em>maxと<strong>P</strong>mを線形フィットしたところ、線形式はy = 0.0014x + 0.0701、<em><strong>r</strong></em> = 0.8962であった。両方法は良く相関しており、ECFP解析のための本手法は信頼できるものであった。<em><strong>t</strong></em>olと<em><strong>E</strong></em>maxをSIMCAソフトウェアに取り込みHCA解析を行った結果を図4(B)に示す。HPLC法で得られたHCA結果とは一定の差異があった。その理由として、HPLCは試料の一部成分が特定の溶媒に溶解した吸収特性を反映し、特定の波長で特殊な溶出プログラムを通じて検出されたものである一方、電気化学は試料中のすべての活性成分がB-Z振動反応系における化学反応に参加する能力を反映しているためと考えられる。</p>
+<h3>3.5. TWFFPの指紋-薬効相関分析</h3>
+<p>電気化学、HPLC、抗酸化実験[13]の関連性を探索し、試料の品質評価におけるこれら3方法の信頼性を検証するため、TWFFPの36ピークを橋渡しとして、ピークとECFPの<strong>P</strong>mとの相関、およびピークとIC50値との相関を検討した。結果はピアソン相関係数（<em><strong>r</strong></em>）で表され、図4(C)(D)に示した。原理上、IC50値が小さいほど試料の抗酸化能力が強く、ピーク-IC50は負の相関を示すはずである。同様に、試料中の活性成分が多いほどECFPの<strong>P</strong>m値は小さくなるため、ピーク-<strong>P</strong>mも負の相関を示すはずである。ピーク-IC50のグラフでは、36ピーク中29ピークがIC50と負の相関（<em><strong>r</strong></em>＜0）を示しており、試料中のほとんどの化合物が抗酸化実験において役割を果たしていることを示している。ピーク-<strong>P</strong>mのグラフでは、16ピークが<strong>P</strong>mと負の相関（<em><strong>r</strong></em>＜0）を示し、これら16ピークのうち15ピークはIC50とも負の相関を示していた。まとめると、電気化学と抗酸化の評価結果は類似しており、互いに支持し合い、MMDHP中の抗酸化成分を効果的に反映できることが示された。同時に、2つの指紋-薬効相関における負の相関ピークの比率は異なっており、これは電気化学法と抗酸化法の反応系の違いによるものと考えられる。これは、両方法における共通ピークの寄与を客観的かつ包括的に示すものでもある。明らかに、本研究の結果はMMDHPの化学的性質と薬理活性についての参考を提供できるものである。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>本論文では、20のMMDHPのTWFFPを確立することに成功し、従来の単一波長分析の欠点を克服することで、試料の品質を包括的に分析できるようにした。PCAとSQFM法を通じて、試料全体の品質を定性・定量の両面から判別・評価した。次にHCAを行い、SQFM法の信頼性を検証するとともに、PCAの実用性を側面から反映させた。SQFMとQAMSを組み合わせることで、MMDHP中の4つのQ-markerの包括的かつ正確な定量測定を達成した。ECFPは複雑な前処理なしで構築され、TCM複方製剤に対する豊富かつ定量可能な情報を提供した。電気化学の特徴読み取り値を用いてHCA解析を行い、ECFPが試料を判別する能力を検討した。ピーク-IC50およびピーク-<strong>P</strong>mの指紋-薬効相関図を作成し、上記2つの薬効結果を比較し、ABTSとECFPの評価結果に対するTWFFP指紋ピークの寄与を検討した。これらすべての結果は、試料中の有効成分を予測する良好な能力を示し、生物活性化合物の予測に向けた良い方向性を提供した。最も重要な点として、本研究で提案した方法はMMDHPの全体的な化学組成を定性・定量的に評価できるだけでなく、TCMおよびその複方製剤の品質のための革新的な電気化学統合法も提供した。最終的にTCMの品質と薬効の二重管理を実現し、信頼性のある考え方を提供した。</p>
+<h2>利益相反</h2>
+<p>著者らは競合する利益関係がないことを宣言している。</p>
+<h2>著者貢献（CRediT）</h2>
+<p>Xiang Li: 概念設計・データキュレーション・原稿執筆（原案）・形式解析・方法論・ソフトウェア。Dandan Gong: 調査。Guoxiang Sun: 資源・研究資金取得・監修。Hong Zhang: 方法論・概念設計。Wanyang Sun: 形式解析。</p>
+<h2>謝辞</h2>
+<p>本研究は国家自然科学基金（National Natural Science Foundation of China, No. 81573586）の助成を受けた。</p>
+<blockquote>補足（実務的示唆）: 本研究は、①単一波長HPLCの限界を「三波長融合(TWFFP)」で克服する点、②前処理不要・低コストな電気化学指紋(ECFP)をHPLCと相補的に用いる点、③SQFM（定性・定量の二重類似度Sm/Pm）とQAMS（内部標準による多成分同時定量）を組み合わせて「化学的一貫性」を評価する点、④さらにABTS抗酸化試験との指紋-薬効相関により「どのピークが薬効に効いているか」を絞り込む点が特徴である。実務上は、薬局方が定める単一成分（本剤の場合はモロニシド・ロガニン・シャクヤク配糖体・パエオノールの4Q-marker）の含量管理だけでなく、TWFFP＋ECFPのような複数原理を組み合わせた指紋評価と、指紋-薬効相関による「効能に紐づくピーク」の把握が、複方製剤の品質一貫性管理の実行可能な戦略になり得る点が示唆に富む。なお、抗酸化試験(ABTS)自体の実験条件（試薬・反応時間・検出波長等）は本論文の材料と方法セクションには記載がなく、参考文献[13]（同著者らによる関連論文）に譲られていると考えられるため、詳細は原文参照とした。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="qzxf-fingerprint-qams.html">七制香附丸(QZXFPs)のHPLC指紋・ケモメトリクス・QAMS(一マーカー多成分定量)による品質評価</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="yqg-uplc-fingerprint-qams.html">医清顆粒(YiQing granules)の品質評価のためのUPLC指紋分析と単一マーカーによる多成分定量分析(QAMS)の統合</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="clt-fingerprint-ieqfm-fusion.html">指紋技術とスペクトル定量予測に基づく漢方複方の総合品質解析戦略 — 複方甘草片(CLT)を例として</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="mlstp-multistrategy-qmarker-qams.html">脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="mmdhp-twffp-ecfp-antioxidant" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

@@ -19,7 +19,7 @@ summary: 沈香（Aquilaria sinensis由来の香木生薬）の品質評価に�
 ## 書誌情報
 
 - 標題（原題）: A full solution for multi-component quantification-oriented quality assessment of herbal medicines, Chinese agarwood as a case
-- 著者: Huixia Huo, Yao Liu, Wenjing Liu, Jing Sun, Qian Zhang, Yunfang Zhao, Jiao Zheng, Pengfei Tu, Yuelin Song\*, Jun Li\*（\*責任著者）
+- 著者: Huixia Huo, Yao Liu, Wenjing Liu, Jing Sun, Qian Zhang, Yunfang Zhao, Jiao Zheng, Pengfei Tu, Yuelin Song, Jun Li（Yuelin SongとJun Liが責任著者）
 - 所属: Modern Research Center for Traditional Chinese Medicine, School of Chinese Materia Medica, Beijing University of Chinese Medicine（北京中医薬大学 中薬学院 現代中薬研究センター）, Beijing 100029, People's Republic of China
 - 掲載誌・巻号: Journal of Chromatography A, 1558 (2018) 37–49
 - DOI: https://doi.org/10.1016/j.chroma.2018.05.018
@@ -194,7 +194,7 @@ RRCEC照合は、疑似混合標準溶液と抽出物試料の間でRRCECをマ�
 | 1 | ニコチンアミド | 5.13 | 2.06 | 2.48 | 123 > 80 | 30 | 30 |
 | 2 | GABA | 8.57 | 1.56 | 8.05 | 104 > 87 | 40 | 16 |
 | 3 | アデノシン | 8.70 | 2.24 | 5.58 | 268 > 136 | 40 | 30 |
-| 4 | バリン | 7.97* | 1.97* | 7.97 | 118 > 72 | 25 | 18 |
+| 4 | バリン | 8.85 | 1.86 | 7.97 | 118 > 72 | 25 | 18 |
 | 5 | プロリン | 9.48 | 1.67 | 9.13 | 116 > 70 | 50 | 20 |
 | 6 | チロシン | 10.25 | 2.32 | 9.62 | 183 > 136 | 25 | 19 |
 | 7 | フェニルアラニン | 10.35 | 4.24 | 7.21 | 166 > 120 | 50 | 19 |
@@ -221,8 +221,6 @@ RRCEC照合は、疑似混合標準溶液と抽出物試料の間でRRCECをマ�
 | IS2 | リクイリチンアピオシド | 11.79 | 8.10 | 4.73 | 549 > 255 | −150 | −42 |
 
 表中の*印はULOQ拡大のための調整CEを示し、括弧内の値はマニュアルチューニングにより得られた最適CEを示す。
-
-> 補足: No.4「バリン」のtR-RPLC-HILICおよびtR-RPLCの値は、原文の表組みの抽出テキストにおいてtR-HILIC列（7.97）と同一値が重複して読み取れたため、正確な数値を一意に確定できなかった。原論文Table 2を直接参照されたい（本翻訳ではtR-HILIC=7.97 minのみ原文どおり確定できる）。
 
 #### Table 3. 全試料（Asi1–16、Adult. 1–4、果実、茎、葉、カルス、NaCl刺激カルス）における26分析物の含量（mg/g）
 
