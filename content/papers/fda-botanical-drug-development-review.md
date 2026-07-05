@@ -19,7 +19,7 @@ summary: 米国FDAのボタニカルレビューチーム（CDER）が、1984〜
 
 <!--
 方針: 「ほぼ全訳＋必要な補足」。原文の節構成（Introduction→Our Regulatory Drug Application Status Landscape: To Date→FDA Guidance Revised for Botanical Drug Development: Challenges and Success Stories→Future Considerations→Conclusions）に沿って訳した。
-補足: 本PDFはテキスト抽出時に2段組みレイアウトが一部で行単位に混線しており（見出しと隣接段落の語順が入れ替わる等）、文意が通るよう語順を復元して訳している箇所がある（意味内容・数値は原文のまま、创作は一切していない）。
+補足: 本PDFはテキスト抽出時に2段組みレイアウトが一部で行単位に混線しており（見出しと隣接段落の語順が入れ替わる等）、文意が通るよう語順を復元して訳している箇所がある（意味内容・数値は原文のまま、創作は一切していない）。
 -->
 
 ## 書誌情報
