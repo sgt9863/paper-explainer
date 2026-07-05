@@ -3,6 +3,7 @@
 
    仕組み:
    - 認証はメールのマジックリンク（Supabase Auth。追加プロバイダ設定不要）。
+   - ログインUIはヘッダー内のインライン・パネル（prompt はモバイルでブロックされるため使わない）。
    - ユーザーごとに1行の JSONB（public.user_data）へ {notes,status,fav} を保存。RLSで own-row のみ。
    - ログイン時: remote と local を union マージ（衝突は remote 優先）→ local へ反映＆remoteへ push。
    - 以降のローカル変更(noteschange/statuschange/favchange の origin=local)はデバウンスで push。
@@ -14,15 +15,17 @@
   var cfg = window.PAPER_SYNC_CONFIG || {};
   var authBtn = document.getElementById("authBtn");
   if (!cfg.url || !cfg.anonKey) {
-    // 未設定: ログインUIは隠したまま（localStorage 運用）
-    if (authBtn) authBtn.hidden = true;
+    if (authBtn) authBtn.hidden = true; // 未設定: localStorage 運用
     return;
   }
 
-  var sb = null;         // Supabase クライアント
-  var user = null;       // ログイン中ユーザー
+  var sb = null;
+  var user = null;
   var pushTimer = null;
-  var applyingRemote = false;  // remote 反映中は push を抑止
+  var applyingRemote = false;
+  var panel = null;
+  var msgEl = null;
+  var emailInput = null;
 
   function localState() {
     return {
@@ -32,10 +35,8 @@
     };
   }
 
-  // union マージ（衝突は remote 優先）。空値は削除扱い。
   function mergeMap(local, remote) {
-    var out = {};
-    var k;
+    var out = {}, k;
     for (k in (local || {})) if (local[k]) out[k] = local[k];
     for (k in (remote || {})) if (remote[k]) out[k] = remote[k];
     return out;
@@ -64,23 +65,65 @@
     if (!authBtn) return;
     authBtn.hidden = false;
     authBtn.textContent = label;
-    if (title) authBtn.title = title;
+    authBtn.title = title || "";
+  }
+  function setMsg(text) { if (msgEl) msgEl.textContent = text || ""; }
+  function openPanel(open) {
+    if (!panel) return;
+    panel.hidden = !open;
+    if (open && emailInput) { try { emailInput.focus(); } catch (e) {} }
+  }
+
+  // ヘッダー内にログイン用のインライン・パネルを生成
+  function buildPanel() {
+    if (!authBtn || !authBtn.parentNode) return;
+    panel = document.createElement("div");
+    panel.className = "auth-panel";
+    panel.hidden = true;
+    panel.innerHTML =
+      '<p class="auth-title">メールでログイン</p>' +
+      '<input type="email" class="auth-email" placeholder="you@example.com" ' +
+      'autocomplete="email" inputmode="email">' +
+      '<button type="button" class="auth-send">ログインリンクを送る</button>' +
+      '<p class="auth-msg" aria-live="polite"></p>';
+    authBtn.parentNode.appendChild(panel);
+    msgEl = panel.querySelector(".auth-msg");
+    emailInput = panel.querySelector(".auth-email");
+    var sendBtn = panel.querySelector(".auth-send");
+    sendBtn.addEventListener("click", sendLink);
+    emailInput.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") sendLink();
+    });
+  }
+
+  async function sendLink() {
+    var email = (emailInput && emailInput.value || "").trim();
+    if (!email || email.indexOf("@") === -1) { setMsg("メールアドレスを入力してください。"); return; }
+    setMsg("送信中…");
+    try {
+      var res = await sb.auth.signInWithOtp({
+        email: email,
+        options: { emailRedirectTo: location.href }
+      });
+      if (res.error) { setMsg("送信に失敗: " + res.error.message); return; }
+      setMsg("送信しました。メール内のリンクをタップしてください。");
+    } catch (e) {
+      setMsg("送信に失敗: " + (e && e.message ? e.message : e));
+    }
   }
 
   async function pull() {
     var res = await sb.from("user_data").select("data").eq("user_id", user.id).maybeSingle();
-    if (res.error) { console.warn("[sync] pull error", res.error.message); return null; }
+    if (res.error) { console.warn("[sync] pull error", res.error.message); setMsg("同期エラー: " + res.error.message); return null; }
     return (res.data && res.data.data) || {};
   }
-
   async function push(state) {
     var res = await sb.from("user_data").upsert(
       { user_id: user.id, data: state, updated_at: new Date().toISOString() },
       { onConflict: "user_id" }
     );
-    if (res.error) console.warn("[sync] push error", res.error.message);
+    if (res.error) { console.warn("[sync] push error", res.error.message); setMsg("保存エラー: " + res.error.message); }
   }
-
   function schedulePush() {
     if (!user || applyingRemote) return;
     if (pushTimer) clearTimeout(pushTimer);
@@ -88,62 +131,49 @@
   }
 
   async function onLogin() {
+    openPanel(false);
     setBtn("同期中…");
     var remote = await pull();
     var merged = mergeState(localState(), remote || {});
-    applyState(merged);      // local を更新（UIも反映）
-    await push(merged);      // remote に local 由来の追加分を反映
+    applyState(merged);
+    await push(merged);
     setBtn("ログアウト", user.email || "");
-    // 他端末の更新を受信
     sb.channel("user_data_" + user.id)
       .on("postgres_changes",
         { event: "*", schema: "public", table: "user_data", filter: "user_id=eq." + user.id },
-        function (payload) {
-          if (payload.new && payload.new.data) applyState(payload.new.data);
-        })
+        function (payload) { if (payload.new && payload.new.data) applyState(payload.new.data); })
       .subscribe();
   }
-
   function onLogout() {
     user = null;
     setBtn("ログイン", "メールでログインして全端末同期");
   }
 
-  async function doLoginPrompt() {
-    var email = window.prompt("ログイン用のメールアドレスを入力してください。\nログインリンクが届きます（初回はそのメールでアカウント作成されます）。");
-    if (!email) return;
-    var res = await sb.auth.signInWithOtp({
-      email: email.trim(),
-      options: { emailRedirectTo: location.href }
-    });
-    if (res.error) { alert("送信に失敗しました: " + res.error.message); return; }
-    alert("ログインリンクを送信しました。メールを開いてリンクをタップしてください。");
-  }
-
   async function init() {
+    buildPanel();
+    setBtn("読み込み中…");
     var mod;
     try {
       mod = await import("https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm");
     } catch (e) {
       console.warn("[sync] Supabase 読み込み失敗", e);
-      if (authBtn) authBtn.hidden = true;
+      setBtn("ログイン(不可)", "同期ライブラリの読み込みに失敗しました");
       return;
     }
     sb = mod.createClient(cfg.url, cfg.anonKey);
     setBtn("ログイン", "メールでログインして全端末同期");
-    if (authBtn) {
-      authBtn.addEventListener("click", function () {
-        if (user) { sb.auth.signOut(); } else { doLoginPrompt(); }
-      });
-    }
-    // ローカル変更を push（remote 反映由来は無視）
+    authBtn.addEventListener("click", function () {
+      if (user) { sb.auth.signOut(); openPanel(false); }
+      else { openPanel(panel.hidden); }
+    });
+
     ["noteschange", "statuschange", "favchange"].forEach(function (ev) {
       document.addEventListener(ev, function (e) {
         if (e.detail && e.detail.origin === "remote") return;
         schedulePush();
       });
     });
-    // 認証状態
+
     sb.auth.onAuthStateChange(function (_event, session) {
       if (session && session.user) {
         var wasLoggedOut = !user;
