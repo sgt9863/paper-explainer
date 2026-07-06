@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HPLC-DAD＋二次校正（ATLD／ATLD-MCR）による漢方方剤「温清飲」中5成分の同時定量</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="HPLC-DAD＋二次校正（ATLD／ATLD-MCR）による漢方方剤「温清飲」中5成分の同時定量">
+<meta property="og:description" content="中国・湖南大学のケモメトリクス研究室が、漢方方剤「温清飲（Wen-Qing-Yin, 黄連解毒湯＋四物湯）」中の指標5成分（5-ヒドロキシメチルフルフラール, ペオニフロリン, フェルラ酸, バイカリン, ベルベリン）を、HPLC-DAD（10分アイソクラティック）と二次校正アルゴリズム（ATLD／ATLD-MCR）を組み合わせて同時定量した研究（Chemosensors 2022）の全訳。ピークを完全分離せずとも「二次の利点」で数学的に分離できる原理、時間シフトへの対処、性能指標（LOD/LOQ/SEN/SEL）、2手法の比較を扱う。数値・図は原文どおり。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="wqy-hplc-dad-atld-mcr-secondorder"><h1>HPLC-DAD＋二次校正（ATLD／ATLD-MCR）による漢方方剤「温清飲」中5成分の同時定量</h1><div class="paper-meta"><span class="date">2026-07-07</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">HPLC・UPLC</span> <span class="tag">ケモメトリクス</span> <span class="tag">多成分定量</span> &middot; <a href="https://doi.org/10.3390/chemosensors10070238" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">chemosensors-10-00238-v2.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="wqy-hplc-dad-atld-mcr-secondorder" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="wqy-hplc-dad-atld-mcr-secondorder" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">温清飲（黄連解毒湯＋四物湯）の指標5成分を、クロマトで完全に分けきらないまま「数学的に分離」して10分で同時定量する。共溶出・溶媒ピーク・保持時間のズレがあっても二次校正（ATLD／ATLD-MCR）で各成分を解ける</p><div class="digest-stats"><div class="stat"><span class="stat-value">約3.5（Chemosensors・MDPI／JCR目安）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">温清飲(WQY)＝黄連解毒湯＋四物湯</span><span class="stat-label">対象</span></div><div class="stat"><span class="stat-value">5種（HMF・ペオニフロリン・フェルラ酸・バイカリン・ベルベリン）</span><span class="stat-label">定量成分</span></div><div class="stat"><span class="stat-value">10分（アイソクラティック溶出）</span><span class="stat-label">分析時間</span></div><div class="stat"><span class="stat-value">0.9969–0.9996</span><span class="stat-label">検量線の相関r</span></div><div class="stat"><span class="stat-value">ATLD 91.8–112.5%／ATLD-MCR 88.6–101.6%</span><span class="stat-label">回収率</span></div><div class="stat"><span class="stat-value">3社（台湾）</span><span class="stat-label">市販品</span></div></div><ul class="digest-points"><li>温清飲の指標5成分を、クロマトで完全分離せずに二次校正で「数学的に分離」して10分で同時定量する。HMFとペオニフロリン、フェルラ酸とバイカリンが共溶出し、溶媒ピークや未知妨害が重なっても、各成分の純クロマトグラム・純スペクトル・濃度を復元できる（＝二次の利点）</li><li>ベースラインのずれや軽い保持時間シフトはATLDが「妨害因子」として吸収する。最後に溶出するベルベリンで生じた深刻な保持時間シフトはATLD-MCRが解決し、ベルベリンの日間再現性RSDが40.8%から0.9%へ改善した</li><li>予測濃度は標準と一致（対応のあるt検定でHMF・ペオニフロリン・フェルラ酸・バイカリンは有意差なし）。時間シフトが軽ければATLD、深刻ならATLD-MCRと使い分ければ、煩雑な前処理や長い分離時間なしで方剤の品質モニタリングに使える</li></ul></section><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: High-Performance Liquid Chromatography–Diode Array Detection Combined with Chemometrics for Simultaneous Quantitative Analysis of Five Active Constituents in a Chinese Medicine Formula Wen-Qing-Yin</li><li>著者: Jun-Chen Chen, Hai-Long Wu（責任著者）, Tong Wang（責任著者）, Ming-Yue Dong, Yue Chen, Ru-Qin Yu（湖南大学 化学化工学院・化学/生物センシングとケモメトリクス国家重点実験室、中国・長沙）</li><li>掲載: <em>Chemosensors</em> 10 (2022) 238（Article, オープンアクセス CC BY 4.0）. https://doi.org/10.3390/chemosensors10070238</li><li>インパクトファクター: <strong>約3.5</strong>（<em>Chemosensors</em>, MDPI／JCR目安。分析化学・センサー分野）</li><li>受理経過: 受領 2022-05-24 / 受理 2022-06-21 / 公開 2022-06-23</li><li>資金: 中国国家自然科学基金（No. 22174036, 21775039, 21575039）</li></ul>
+<blockquote>補足（この解説の位置づけ）: 本研究の主役は分離カラムではなく<strong>アルゴリズム</strong>です。従来のHPLCが「物理的にピークを完全に分けきる」ことを目指すのに対し、本研究は<strong>わざと分けきらず、重なったデータを数学（二次校正）で解く</strong>という発想を採ります。当サイトの他の解説で扱う PLS・MCR・多変量校正の、クロマトグラフィーへの具体的応用例です。</blockquote>
+<h2>この論文が解く問題</h2>
+<p>漢方（伝統中国医薬, TCM）は多成分の集合体で、有効成分の含量が品質と効果を左右します。したがって有効成分の含量をモニタリングする方法が重要です。ところが従来のHPLCで多成分を「きれいに」定量しようとすると、次の壁にぶつかります。</p>
+<ul><li><strong>完全分離のための煩雑な前処理</strong>と、<strong>長い溶出時間</strong>（既報では1回の分析に30分超）。</li><li>実試料ごとに変わる<strong>未知の妨害（バックグラウンド）</strong>。</li><li><strong>ベースラインのずれ（baseline shift）</strong>と<strong>保持時間のずれ（time shift）</strong>が定量精度を損なう。</li></ul>
+<p>本研究は、HPLC-DAD（ダイオードアレイ検出）で得られる情報豊富なデータに、<strong>二次校正（second-order calibration）</strong>という手法を組み合わせ、これらの問題を「数学的分離」で回避します。狙いは、<strong>完全分離に頼らず・短時間で・妨害があっても</strong>、方剤中の5成分を正確に同時定量することです。</p>
+<h2>対象：温清飲（Wen-Qing-Yin, WQY）と指標5成分</h2>
+<p>温清飲は、<strong>黄連解毒湯（Huang-Lian-Jie-Du-Tang）</strong>と<strong>四物湯（Si-Wu-Tang）</strong>を合わせた方剤で、当帰・白芍・熟地黄・川芎・黄連・黄芩・黄柏・山梔子から構成されます。主要成分はアルカロイド・フラボノイド・テルペン配糖体・イリドイド配糖体で、抗酸化・抗潰瘍・抗炎症・抗菌・抗がん活性が報告され、婦人科出血性疾患・皮膚疾患・再発性アフタ性潰瘍などに用いられます。</p>
+<p>本研究が定量する指標成分は次の5つ（略号は原文どおり）:</p>
+<table>
+<thead><tr><th>略号</th><th>成分名（日本語）</th><th>由来・分類</th></tr></thead>
+<tbody>
+<tr><td>HMF</td><td>5-ヒドロキシメチルフルフラール</td><td>加工・加熱で生成する糖分解物（血虚関連の指標）</td></tr>
+<tr><td>PAE</td><td>ペオニフロリン（芍薬苷）</td><td>白芍由来のモノテルペン配糖体</td></tr>
+<tr><td>FER</td><td>フェルラ酸</td><td>当帰・川芎由来のフェノール酸</td></tr>
+<tr><td>BAI</td><td>バイカリン（黄芩苷）</td><td>黄芩由来のフラボノイド配糖体</td></tr>
+<tr><td>BER</td><td>ベルベリン（小檗鹼）</td><td>黄連・黄柏由来のアルカロイド</td></tr>
+</tbody></table>
+<blockquote>補足: 各成分の物理化学情報は原文の補足資料 Table S1 に、5成分は「多様な化学クラス（フェノール酸・配糖体・アルカロイド）」にまたがるため、1回の分析で同時に測るのは本来難しい対象です。</blockquote>
+<h2>方法</h2>
+<h3>クロマトグラフィー条件</h3>
+<ul><li>装置: 島津 LC-20AT（ダイオードアレイ検出器・四元ポンプ・20 µL ループ）</li><li>カラム: WondaSil™ C18（5 µm, 200 mm × 4.6 mm）、カラム温度 30 ℃、カラム圧 6.7 MPa</li><li>流速: 1.00 mL/min、注入量 20 µL</li><li>移動相: 0.1% ギ酸水溶液（A）／アセトニトリル（B）。<strong>30% B のアイソクラティック（等組成）溶出</strong>で、全成分が<strong>10分以内</strong>に溶出。ギ酸（最適 1.0 mL/L）を水相に加え分離能とピーク対称性を改善。</li></ul>
+<h3>試料</h3>
+<ul><li>実試料: 市販の温清飲3社品（いずれも台湾。Sun Ten・Kaiser・Sheng Chang を Q01〜Q03 と表記）。粉末1.00 gをメタノール10 mLに溶かし、30分超音波抽出→12時間静置→0.22 µm ナイロンフィルターで濾過。</li><li>検量線試料（C01〜C08）: 作業標準液をメタノールで希釈。共線性（成分間の相関）を減らすため**均一計画 U8\*(8⁵)** で濃度を設計。</li><li>添加回収試料（P01〜P06）: 実試料に既知量を添加。実試料中のBAI・BERはHMF・PAE・FERよりずっと高濃度のため、HMF/PAE/FER検出用は20倍希釈（P01–03）、BAI/BER検出用は50倍希釈（P04–06）と2段階で調製。</li></ul>
+<h3>理論：三線成分モデルと「三次元データ」</h3>
+<p>各試料からは、<strong>溶出時間 I 点 × 波長 J 点</strong>の2次元データ行列が得られます。全 K 試料を同条件で測り、試料方向に積み重ねると、<strong>三次元配列 X（I × J × K）</strong>になります。これは次式で表せます。</p>
+<blockquote><code>x(ijk) = Σ[n=1..N] a(in)·b(jn)·c(kn) + e(ijk)</code></blockquote>
+<ul><li>N は因子（factor）の総数＝目的成分＋共溶出する妨害＋バックグラウンド＋ベースラインのずれ＋ノイズ。</li><li>A（I×N）＝正規化クロマトグラム行列、B（J×N）＝正規化UVスペクトル行列、C（K×N）＝相対濃度行列、E＝残差。</li></ul>
+<blockquote>補足（なぜ「三次元」だと強いのか＝二次の利点）: 各成分は「固有のクロマト形状（溶出プロファイル）」と「固有のUVスペクトル」という<strong>2つの指紋</strong>を持ちます。データを時間×波長×試料の三次元にすると、この2指紋の組み合わせが各成分ごとに一意になり、<strong>未知の妨害が混ざっていても目的成分だけを抜き出せます</strong>。これが「二次校正（second-order calibration）」がもつ <strong>二次の利点（second-order advantage）</strong>で、著者らはこれを「数学的分離（mathematical separation）」と呼びます。物理的に分けきれなくても、計算で分けられる、というわけです。</blockquote>
+<h3>アルゴリズム① ATLD（交替三線分解）</h3>
+<p>ATLD（alternating trilinear decomposition, Wu ら 1996/1998）は、<strong>推定因子数に鈍感</strong>で<strong>収束が速い</strong>アルゴリズムです（スライス行列の三線構造を使う）。HPLC-DAD・LC-MS など大規模データの処理に向きます。特長として、</p>
+<ul><li><strong>因子数を増やすことでバックグラウンドを近似</strong>でき、ベースラインのずれを「妨害の一部」として除去できる。</li><li><strong>軽い保持時間シフトは許容</strong>できる（ただし深刻なシフトには不向き）。</li></ul>
+<p>特異値分解に基づくMoore–Penrose一般化逆行列を用いて、3つの目的関数 σ(A)・σ(B)・σ(C) を交互に最小化し、定性行列（A・B）と相対濃度行列（C）を求めます（式2〜4）。</p>
+<h3>アルゴリズム② ATLD-MCR</h3>
+<p>ATLD-MCR（Wang ら 2019）は、<strong>液体クロマトデータの保持時間シフト問題を解ける</strong>新しいアルゴリズムです。手順は、(1) まずATLDでシフトのあるデータを近似し、初期スペクトル行列 B(ini) を得る、(2) MCR（多変量曲線分解）戦略で各試料の保持時間プロファイル行列 A(k) を最小二乗で求める、(3) 定性情報（A(k)・B）と定量情報（C）を得る（式5〜7）。要するに、<strong>試料ごとに少しずつずれるピーク位置を個別に合わせ込みつつ、二次の利点を保つ</strong>手法です。</p>
+<h2>結果と考察</h2>
+<h3>なぜ従来分離では難しいか（Figure 1）</h3>
+<figure><img src="assets/wqy-hplc-dad-atld-mcr-secondorder/fig1-2dcontour-chromatograms.png" alt="Figure 1. (a) 混合標準液（C06）の2次元等高線プロファイル、(b) 8つの検量線試料の260 nm溶出プロファイル、(c) 混合標準液の多波長クロマトグラム、(d) 6つの予測試料の260 nm溶出プロファイル。HMFとPAEは急速溶出時に激しく重なり（見かけ上1本のピーク・溶媒ピークの影響大）、FERとBAIも共溶出する。実試料では未知成分が目的ピークに重なる。" loading="lazy"><figcaption>Figure 1. (a) 混合標準液（C06）の2次元等高線プロファイル、(b) 8つの検量線試料の260 nm溶出プロファイル、(c) 混合標準液の多波長クロマトグラム、(d) 6つの予測試料の260 nm溶出プロファイル。HMFとPAEは急速溶出時に激しく重なり（見かけ上1本のピーク・溶媒ピークの影響大）、FERとBAIも共溶出する。実試料では未知成分が目的ピークに重なる。</figcaption></figure>
+<p>5成分は10分以内に溶出し各ピークは鋭いものの、<strong>HMFとPAEは急速溶出時に激しく重なり</strong>（見かけ上1本のピークにしか見えず、溶媒ピークの影響も大）、<strong>FERとBAIも共溶出</strong>します。実試料（d）では未知成分・妨害が目的ピークに重なります。つまり<strong>古典的HPLCだけでは満足な普遍的分離は難しい</strong>——ここで HPLC-DAD ＋ 二次校正の出番になります。なお同日測定では明瞭なピークずれ・深刻な時間シフトは見られませんでした（b）。</p>
+<p>分析では、無効な情報を除き分解能を上げるため、溶出時間で<strong>2つの部分領域</strong>に分割しています。第1領域にHMF・PAE、第2領域にBAI・FER・BERを置き、各領域で推定因子数 N（目的成分＋妨害信号の数）を設定しました（詳細は補足 Table S3）。</p>
+<h3>2手法による成分の分離復元（Figure 2・3）</h3>
+<figure><img src="assets/wqy-hplc-dad-atld-mcr-secondorder/fig2-atld-resolved.png" alt="Figure 2. ATLDアルゴリズムが2つの三次元部分配列から復元した、正規化クロマトグラム（a1, a2）・正規化スペクトル（b1, b2）・相対濃度プロファイル（c1, c2）。" loading="lazy"><figcaption>Figure 2. ATLDアルゴリズムが2つの三次元部分配列から復元した、正規化クロマトグラム（a1, a2）・正規化スペクトル（b1, b2）・相対濃度プロファイル（c1, c2）。</figcaption></figure>
+<figure><img src="assets/wqy-hplc-dad-atld-mcr-secondorder/fig3-atldmcr-resolved.png" alt="Figure 3. ATLD-MCRアルゴリズムが復元した、正規化クロマトグラム（a1, a2）・正規化スペクトル（b1, b2）・相対濃度プロファイル（c1, c2）。" loading="lazy"><figcaption>Figure 3. ATLD-MCRアルゴリズムが復元した、正規化クロマトグラム（a1, a2）・正規化スペクトル（b1, b2）・相対濃度プロファイル（c1, c2）。</figcaption></figure>
+<p>ATLD・ATLD-MCRのいずれでも、<strong>溶媒ピーク・ピーク重なり・未知成分の共溶出があっても</strong>、情報豊富なHPLC-DADデータ配列から各成分の純クロマトグラム・純スペクトルをうまく抽出でき、復元プロファイルは実際のプロファイルとよく一致しました。特に、保持時間が近く溶媒ピークの妨害を受けるHMFとPAEでも満足な定性結果が得られています。</p>
+<h3>正確さと精度（Table 1）</h3>
+<p>相対濃度 C を実濃度に対して回帰する（擬一変量検量線）ことで、未知試料中の絶対濃度が求まります。</p>
+<p><strong>Table 1. 添加予測試料（P01–06）での5成分の正確さ（ATLD／ATLD-MCR）</strong></p>
+<table>
+<thead><tr><th></th><th>HMF</th><th>PAE</th><th>FER</th><th>BAI</th><th>BER</th></tr></thead>
+<tbody>
+<tr><td><strong>ATLD</strong> 相関 r</td><td>0.9991</td><td>0.9993</td><td>0.9996</td><td>0.9969</td><td>0.9978</td></tr>
+<tr><td>平均回収率±SD (%)</td><td>94.7±2.5</td><td>91.8±5.0</td><td>93.9±3.5</td><td>104.3±9.7</td><td>112.5±5.1</td></tr>
+<tr><td>RMSEP (µg/mL)</td><td>0.20</td><td>2.07</td><td>0.38</td><td>3.94</td><td>4.05</td></tr>
+<tr><td><strong>ATLD-MCR</strong> 相関 r</td><td>0.9992</td><td>0.9995</td><td>0.9993</td><td>0.9985</td><td>0.9973</td></tr>
+<tr><td>平均回収率±SD (%)</td><td>93.3±1.4</td><td>92.4±5.7</td><td>88.6±3.5</td><td>101.6±9.9</td><td>96.8±10.3</td></tr>
+<tr><td>RMSEP (µg/mL)</td><td>0.30</td><td>1.85</td><td>0.69</td><td>3.04</td><td>1.53</td></tr>
+</tbody></table>
+<p>（r＝相関係数、AVG±SD＝平均添加回収率±標準偏差、RMSEP＝予測の相対二乗平均平方根誤差）</p>
+<p>ATLDでは回収率91.8–112.5%（SD&lt;9.7%）、r 0.9969–0.9993、RMSEP&lt;4.05。ATLD-MCRでは r 0.9973–0.9995、RMSEP&lt;3.04、回収率88.6–101.6%（SD&lt;10.3%）。両者は近い結果ですが、<strong>ATLD-MCRのRMSEPは小さく</strong>、いずれの回収率も許容範囲でした。</p>
+<h3>再現性（Table 2）と性能指標</h3>
+<p>同一バッチの実試料を同日3回・連続3日で測り、日内・日間精度（RSD%）を求めました。<strong>日間再現性はATLD-MCRがATLDより良好</strong>でした。とりわけ<strong>ベルベリン（BER）は、ATLDでの日間RSDが40.8%</strong>と大きく悪化——これは連続日測定で生じた深刻な保持時間シフトのためです（補足 Figure S1）。最初の4成分は急速溶出のため軽い時間ドリフトはATLDが妨害として除去できましたが、<strong>最後に溶出するBERのシフトは別アルゴリズム（ATLD-MCR）で解く必要</strong>がありました。ATLD-MCRではBERの日間RSDは0.9%まで改善しています。</p>
+<p>性能指標（Table 2）では、感度 SEN は ATLD で 1.04×10⁴〜1.24×10⁵、ATLD-MCR で 7.74×10³〜7.93×10⁴（mAU·mL/µg）、選択性 SEL は ATLD 0.20–0.56／ATLD-MCR 0.13–0.35。SELが低めなのはピーク重なりと未知妨害の影響が大きいためです。検出限界 LOD は ATLD 0.07–11.67／ATLD-MCR 0.22–4.53（µg/mL）。ATLDのBERのLODは検量線最低濃度を下回っており（時間シフトの影響）、その点でもATLD-MCRの結果の方が妥当でした。</p>
+<h3>2手法の統計的比較</h3>
+<p>対応のある両側t検定では、HMF・PAE・FER・BAIの p 値は 0.358・0.258・0.063・0.332で<strong>有意差なし</strong>。一方 BER は p=0.001 で、保持時間シフトの影響により有意差が出ました。結論として——<strong>溶出時間が十分短く保持時間シフトが軽微なら ATLD を直接使え</strong>、良好な再現性が得られます。<strong>保持時間シフトが深刻なら ATLD-MCR</strong> がその影響をうまく処理し、HPLC-DADによる主要有効成分の正確な定量を助けます。実際、他の2社の市販温清飲品にはATLD-MCRを適用しています（補足 Table S6）。</p>
+<h2>結論</h2>
+<p>HPLC-DAD と二次校正を組み合わせることで、温清飲中の5成分を<strong>同時・迅速</strong>に定量できました。全成分が検量線範囲で良好な直線性を示し、軽い時間シフトを含むデータには高感度・省時間で対応、深刻な時間シフトには ATLD-MCR が適切に対処しました。温清飲を例に、本戦略が<strong>方剤（漢方）の有効成分定量と品質モニタリングの信頼できるツール</strong>になりうることが示されました。</p>
+<h2>訳者補足（要点と漢方QCへの示唆）</h2>
+<ul><li><strong>「分離を計算に肩代わりさせる」発想</strong>: 本研究の核心は、クロマトで<strong>完全分離せず</strong>（10分アイソクラティック）に、重なったデータを<strong>二次校正で数学的に分離</strong>する点です。前処理と分離時間を削れるので、多成分の方剤を数を絞らずに素早く測りたい品質モニタリング用途と相性が良い。当サイトで扱う QAMS（1標準で多成分定量）とは別方向の「省力化」アプローチとして対比すると理解しやすい。</li><li><strong>ATLD と ATLD-MCR の使い分け</strong>が実務メッセージ: 保持時間のずれが軽ければ ATLD（速い・因子数に鈍感）、深刻なら ATLD-MCR（試料ごとにピーク位置を合わせ込む）。<strong>最後に溶出する成分ほど時間シフトの影響を受けやすい</strong>（本例のベルベリン）ため、遅く出る成分がある系では ATLD-MCR を選ぶ、という指針になる。</li><li><strong>統計の読みどころ</strong>: 相関係数 r で直線性、回収率±SD で正確さと分散、RMSEP で予測誤差、LOD/LOQ で検出・定量の下限、SEN/SEL で感度・選択性、RSD% で再現性、対応のあるt検定で2手法の差——と、多変量校正の性能を評価する一式が揃っています。統計検定2級からの橋渡しとしては「単回帰（検量線）＋分散の指標（SD/RSD）＋2群の差の検定（対応のあるt検定）」に、多変量特有の SEN/SEL/二次の利点が乗った構成、と捉えると読みやすい。</li><li><strong>数値の扱い</strong>: 本文・Table 1／2 の値は原文どおり転記。補足資料（Table S1〜S6, Figure S1）は本体PDFに含まれないため、詳細は原文（Supporting Information）参照。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="hugan-capsule-fwfp-ecfp.html">護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qhp-hplc-fingerprint-chemometrics.html">指紋分析・多指標成分定量とケモメトリクスを組み合わせた清胃黄連丸(QHPs)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hgwd-uplc-fingerprint-spectrum-effect-qmarker.html">UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="xiaoyao-wan-orbitrap-gcims-prm.html">逍遥丸（XYW）の多成分包括的解析と品質評価 — UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMSの併用</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="wqy-hplc-dad-atld-mcr-secondorder" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
