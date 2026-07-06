@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>益清顆粒（YQG）のUPLC指紋分析と一点校正多成分定量（QAMS）を組み合わせた品質評価</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="益清顆粒（YQG）のUPLC指紋分析と一点校正多成分定量（QAMS）を組み合わせた品質評価">
+<meta property="og:description" content="咽頭炎・扁桃炎・便秘などに用いる中国の処方薬「益清顆粒（黄連・大黄・黄芩の3生薬）」について、UPLC-PADによる化学指紋（32共通ピーク）と、ベルベリンを唯一の標準品とする一点校正多成分定量（QAMS）で12成分を同時定量する総合品質評価法を確立・バリデーションした論文の全訳。検量線・LOD/LOQ・相対補正係数(RCF)・回収率・17ロットのケモメトリクス判別まで網羅。薬典が指標成分をバイカリン1つしか定めていない現行QCの限界を、指紋＋多成分QAMS＋ケモメトリクスで補う。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="yqg-uplc-fingerprint-qams"><h1>益清顆粒（YQG）のUPLC指紋分析と一点校正多成分定量（QAMS）を組み合わせた品質評価</h1><div class="paper-meta"><span class="date">2026-07-05</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">指紋分析</span> <span class="tag">QAMS</span> <span class="tag">UPLC・HPLC</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.3389/fchem.2025.1632033" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">fchem-13-1632033.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="yqg-uplc-fingerprint-qams" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="yqg-uplc-fingerprint-qams" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">益清顆粒をUPLC指紋(32共通ピーク)＋QAMS(12成分をベルベリン1点校正で定量)＋ケモメトリクスで総合評価し、17ロット・多業者の品質差を可視化</p><div class="digest-stats"><div class="stat"><span class="stat-value">4.2（Frontiers in Chemistry・JCR 2024／Clarivate・Q1）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">益清顆粒(YQG・17ロット)</span><span class="stat-label">対象</span></div><div class="stat"><span class="stat-value">32共通ピーク（類似度&gt;0.9）</span><span class="stat-label">指紋</span></div><div class="stat"><span class="stat-value">12成分をベルベリン内標で定量</span><span class="stat-label">QAMS</span></div><div class="stat"><span class="stat-value">約0.5時間に短縮</span><span class="stat-label">分析時間</span></div><div class="stat"><span class="stat-value">偏差≦5.002%（有意差なし）</span><span class="stat-label">QAMS対ESM</span></div></div><ul class="digest-points"><li>ベルベリンを唯一の内部標準にした一点校正多成分定量（QAMS）で、コプチシン・エピベルベリン・パルマチン・バイカリン・ウォゴノシド・バイカレイン・ウォゴニン・アロエエモジン・レイン・エモジン・クリソファノールの計12成分を同時定量。高価・入手難な標準品への依存を回避</li><li>UPLC-PADで32本の共通ピークを検出し17ロットの類似度は&gt;0.9。ただし相対ピーク面積のRSDは最大5.85%で業者間差があり、HCA/PCA/OPLS-DAでロットを2群に判別</li><li>OPLS-DAでウォゴノシド・バイカリン・アロエエモジン・エモジン・クリソファノールを品質マーカー(VIP&gt;1)として同定。QAMSとESMの偏差は≦5.002%で有意差なし</li></ul></section><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: UPLC fingerprinting combined with quantitative analysis of multicomponents by a single marker for quality evaluation of YiQing granules</li><li>著者: YangHong Li, Bao Yu（第一著者を分担）, Wei Zhao, Xiyu Pu, Xue Zhong, Xingbao Tao, Yunhong Wang, Weiguo Cao（責任著者）, Dan Zhang（責任著者）</li><li>所属: 重慶医科大学 中医学院／重慶中医薬大学 中薬学院／重慶市薬用植物研究所／雲南中医薬大学（中国）</li><li>掲載: <em>Frontiers in Chemistry</em> 13:1632033 (2025). https://doi.org/10.3389/fchem.2025.1632033</li><li>インパクトファクター: <strong>4.2</strong>（<em>Frontiers in Chemistry</em>, JCR 2024 / Clarivate, Q1。2025年6月公表）</li><li>受領 2025-05-20 / 採録 2025-07-17 / 公開 2025-07-28</li><li>ライセンス: オープンアクセス（CC BY）。生成AIの使用なしと著者が宣言。</li></ul>
+<blockquote>補足: 益清顆粒（YiQing granules, YQG）は、<strong>黄連（Coptis chinensis）・大黄（rhubarb）・黄芩（Scutellaria baicalensis／コガネバナ）</strong>の3生薬からなる中国薬典（2020年版）収載の常用薬で、清熱・解毒・涼血・活血の効能により、咽頭痛・咽喉炎・扁桃炎・便秘・歯肉炎・喀血などに臨床で用いられる。本論文の主眼は「薬典が品質指標としてバイカリン1成分しか定めていない現状は不十分」という問題意識であり、UPLC指紋＋QAMS（一点校正多成分定量）＋ケモメトリクスの3技術を組み合わせて総合評価法を確立した点にある。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p><strong>研究背景:</strong> 益清顆粒（YQG）は中国の臨床で常用される特許医薬品である。しかし本製剤の品質管理指標は比較的限られており、製品品質を有効に保証できていない。したがって、YQGの包括的な品質評価が欠けている。</p>
+<p><strong>目的:</strong> 本研究の目的は、超高速液体クロマトグラフィー–フォトダイオードアレイ検出器（UPLC-PAD）による指紋と、一点校正多成分定量（QAMS）を組み合わせて、YQGの定量・定性分析法を確立することであった。</p>
+<p><strong>方法:</strong> UPLC指紋とQAMS、および化学量論的手法（ケモメトリクス）を組み合わせた総合評価法を確立・検証し、異なる製造業者が製造したYQGの総合品質を評価した。ベルベリンを内部標準（内部参照）として選定し、コプチシン・エピベルベリン・バイカリン・ベルベリン・パルマチン・ウォゴノシド・バイカレイン・ウォゴニン・アロエエモジン・レイン・エモジン・クリソファノールの相対補正係数（RCF）を確立した。</p>
+<p><strong>結果:</strong> UPLC-PAD法により、指紋分析の実験時間が約0.5時間まで有意に短縮された。類似度0.9超の<strong>32本の共通ピーク</strong>が同定された。QAMSの正確性を外部標準法（ESM）と比較したところ、両手法間に有意差はなかった。</p>
+<p><strong>結論:</strong> 本研究で確立したUPLC指紋＋QAMS法は実行可能で信頼でき、YQGの総合品質評価に利用できる。また、他の伝統中薬製剤の品質評価の参考にもなる。</p>
+<blockquote>補足: 要旨のRCF成分列挙では「ベルベリン」が内部標準でありながら被検成分としても列挙されているが、本文（3.7節）では内部標準のベルベリンを除く<strong>11成分</strong>についてRCFを算出している。定量対象は一貫して12成分（内部標準ベルベリンを含む）である。</blockquote>
+<p><strong>キーワード:</strong> 益清顆粒／一点校正多成分定量（QAMS）／UPLC／指紋／定量分析／品質管理</p>
+<h2>1. 序論（Introduction）</h2>
+<p>益清顆粒（YQG）は中国薬典（2020年版）に収載された常用の必須医薬品で、<strong>黄連（Coptis chinensis）・大黄（rhubarb）・黄芩（Scutellaria baicalensis）</strong>からなる。現代の研究によれば、黄連の主要活性成分はコプチシン・エピベルベリン・パルマチン・塩酸ベルベリンなどのアルカロイド類、黄芩の主要活性成分はバイカリン・ウォゴノシド・バイカレイン・ウォゴニンなどのフラボノイド類、大黄の主要活性成分はアロエエモジン・レイン・エモジン・クリソファノールなどのアントラキノン類である。YQGの清熱・解毒・涼血・活血の効能により、咽頭痛・咽喉炎・扁桃炎・便秘・歯肉炎・咽喉炎・喀血の治療に臨床で用いられてきた。純度の高い合成医薬品とは異なり、伝統中薬製剤は通常、構成成分が複雑で多成分の相乗効果によって作用する。したがって、より包括的な品質管理・評価法が必要である。</p>
+<p>今日、指紋技術は伝統中薬とその製剤の品質管理に広く用いられている。伝統中薬の指紋は、中薬の化学成分の系統的研究に基づく、定量可能で包括的な定性同定法である。複雑な成分をより包括的に分析でき、中薬の総合的な品質を管理できる。この手法は世界保健機関（WHO）、米国食品医薬品局（FDA）、欧州医薬品庁（EMA）、中国国家食品薬品監督管理局によって承認されている。ただし、中薬やその製剤の品質評価には限界もあり、特徴的な共通ピークが中薬・製剤の品質を代表する情報を反映しない場合がある。近年、化学量論分析法（ケモメトリクス）がクロマト指紋分析に広く用いられており、類似度分析（SA）・階層的クラスター分析（HCA）・主成分分析（PCA）・直交部分最小二乗判別分析（OPLS-DA）などの指紋データ統計解析は、「指紋だけでは中薬の品質管理に代表的な組成情報を提供できない」という問題を効果的に解決できる。</p>
+<p>中国薬典（2020年版）では、益清顆粒の品質管理の指標成分は黄芩由来のバイカリンのみであり、大黄・黄連については対応する含量測定法が開発されていない。中薬とその成分の複雑さのため、単一成分・単一指標での品質評価は困難である。これまでにもHPLCやUPLC-MS/MSでYQGの品質を評価した研究があるが、多くは3つの重要な限界を抱えている：（1）単一指標成分分析への依存（伝統中薬の総合品質を包括的に反映しにくい）、（2）標準品への依存（試験コストが高い）、（3）多次元データ統合能力の欠如（品質マーカー間の関連パターンを十分に活用できない）。多くの研究では、多成分定量分析は主に外部標準法（ESM）で行われてきた。しかし一部の標準品は入手困難で高価である。</p>
+<p>これに対し、<strong>一点校正多成分定量（QAMS: quantitative analysis of multi-components by a single marker）</strong>は、安価で入手容易な1種類の標準品を用いて複数成分を定量できる。QAMSは中薬（TCM）の品質管理に広く用いられ、標準品が入手困難・高価という問題を解決すると同時に、試験コストと時間を大幅に削減する。現在、QAMSは各種の生薬とその製剤（鷹茶（Hawk tea）、茶製品、左金丸など）の活性成分定量に成功裏に応用されている。</p>
+<p>本研究では、3つの重要技術を革新的に統合した：（a）グラジエント溶出手順の最適化によりUPLCで12成分の同時分離を達成し、従来のHPLCの分析時間を短縮した、（b）相対補正係数（RCF）により入手困難な標準品を代替検出するQAMS多指標定量法を確立してコストを削減した、（c）ケモメトリクス分析（PCA・OPLS-DAなど）を導入し、処方中の3対の成分の相乗効果パターンを明らかにした。YQGの品質を包括的かつ科学的に評価することは、製造業者・薬事規制当局にとってYQGの品質一貫性管理の科学的根拠・参考になると同時に、薬品の総合品質評価に対する簡便・迅速・正確・信頼できる試験法を提供する。</p>
+<h2>2. 材料と方法（Materials and Methods）</h2>
+<h3>2.1. 装置</h3>
+<p>定量UPLC分析には、Waters 2998 PDA検出器を備えた Waters e2695 超高速液体クロマトグラフ、および Agilent 1290 Infinity II 液体クロマトグラフを用いた。クロマトカラムは Phenomenex Kinetex C18（2.1 mm × 50 mm, 1.7 µm）、Waters ACQUITY UPLC BEH C18（2.1 mm × 50 mm, 1.7 µm）、Nuovasil SAB C18（2.1 mm × 50 mm, 1.8 µm）。電子天秤は Mettler Toledo 製。SB-5200DT 超音波装置は寧波新芝生物科技製。純水製造装置は Sartorius（ドイツ）製。</p>
+<h3>2.2. 材料・試薬</h3>
+<p>標準品は次のとおり購入した：エモジン（ロット MUST-23112011, 純度98.09%）・クリソファン酸（ロット MUST-23110720, 99.46%）・レイン（ロット MUST-23111012, 99.1%）は成都曼斯特生物科技（四川）；フィスシオン（ロット B20242, ≥98%）・rhabarberone（ロット B20772, ≥98%）・バイカリン（ロット B20570, ≥98%）・ウォゴノシド（ロット B20488, ≥98%）は上海源葉生物科技；バイカレイン（ロット 111595, ≥98%）・ウォゴニン（ロット 111595, ≥98%）・塩酸ベルベリン（ロット 110713, ≥98%）は中国食品薬品検定研究院；エピベルベリン（ロット 130413, ≥98%）・コプチシン（ロット 130809, ≥98%）・塩化パルマチン（ロット 130614, ≥98%）は成都普菲徳生物科技（四川）。アセトニトリル・メタノールは Honeywell International（上海, HPLCグレード）、リン酸は上海阿拉丁生化科技（HPLCグレード）、トリエチルアミンは上海麥克林生化（HPLCグレード）。記載のない試薬は分析用グレード。</p>
+<p><strong>17ロット</strong>のYQG（濃縮顆粒）を次の製造業者から購入した：太極集団（23010002）、重慶培都製薬（230303）、陝西東泰製薬（2L02 0201020）、貴州百霊企業集団正鑫（20230209）、石家荘第四製薬（YQ23060901）、四川迪特製薬（320502）、内蒙古天奇中蒙製薬（22303010）、湖北紐蘭德製薬（20240301）、山西華原薬業生物科技（230105）、陝西医薬控股集団（230201）、吉林敬慧製薬（230303 2025）、吉林敖東集団金海発製薬（230704）、吉林益民堂製薬（240101）、黒龍江林海薬業（20230101）、通化金凱製薬（221212）、鄭州福瑞堂製薬（231207）、中智製薬集団（20240506）。</p>
+<h3>2.3. 混合標準溶液・試料溶液の調製</h3>
+<p><strong>2.3.1. 混合標準溶液:</strong> コプチシン・エピベルベリン・バイカリン・塩酸ベルベリン・パルマチン・ウォゴノシド・バイカレイン・ウォゴニン・アロエエモジン・レイン・エモジン・クリソファノールの適量を精秤し、メタノールに溶解。得られた混合標準品を適切な濃度範囲に希釈した。検量線は横軸（X）に濃度、縦軸（Y）にピーク面積をとって作成。全溶液は −20 ℃ で保存。</p>
+<p><strong>2.3.2. 試料溶液:</strong> YQGを乳鉢で粉砕。YQG微粉末 <strong>1.0000 g</strong> を精秤して50 mLメスフラスコに入れ、メタノール約30 mLを加えた。<strong>30分間超音波抽出</strong>し、冷却後、メタノールで減量分を補い、<strong>0.22 µm メンブレンフィルター</strong>でろ過。ろ液を試料溶液とした。全溶液は −20 ℃ で保存。</p>
+<h3>2.4. クロマトグラフィー条件</h3>
+<p>移動相はアセトニトリル（B）–0.2% リン酸（トリエチルアミンで pH 3 に調整）（A）で、グラジエント溶出を用いた：</p>
+<table>
+<thead><tr><th>時間（min）</th><th>B（アセトニトリル）比</th></tr></thead>
+<tbody>
+<tr><td>0–5</td><td>5% → 10%</td></tr>
+<tr><td>5–11</td><td>10% → 15%</td></tr>
+<tr><td>11–13</td><td>15%</td></tr>
+<tr><td>13–17</td><td>15% → 25%</td></tr>
+<tr><td>17–19</td><td>25% → 27%</td></tr>
+<tr><td>19–21</td><td>27% → 30%</td></tr>
+<tr><td>21–26</td><td>30% → 60%</td></tr>
+<tr><td>26–27</td><td>60% → 90%</td></tr>
+</tbody></table>
+<p>流速 <strong>0.4 mL/min</strong>。検出波長は <strong>254・276・345 nm</strong>。カラム温度 <strong>35 ℃</strong>、注入量 <strong>1 µL</strong>。上記条件下での混合標準溶液のクロマトグラムを Figure 1 に示す。</p>
+<figure><img src="assets/yqg-uplc-fingerprint-qams/fig1-mixed-standard.jpeg" alt="Figure 1. 混合標準溶液のUPLCクロマトグラム。ピーク帰属：8 コプチシン、9 エピベルベリン、12 バイカリン、13 ベルベリン、14 パルマチン、21 ウォゴノシド、24 バイカレイン、26 アロエエモジン、27 レイン、29 ウォゴニン、30 エモジン、31 クリソファノール。" loading="lazy"><figcaption>Figure 1. 混合標準溶液のUPLCクロマトグラム。ピーク帰属：8 コプチシン、9 エピベルベリン、12 バイカリン、13 ベルベリン、14 パルマチン、21 ウォゴノシド、24 バイカレイン、26 アロエエモジン、27 レイン、29 ウォゴニン、30 エモジン、31 クリソファノール。</figcaption></figure>
+<h3>2.5. UPLC法とバリデーション</h3>
+<p>本研究では、回帰式・相関係数・直線範囲・検出限界（LOD）・定量限界（LOQ）・精度・回収率・安定性を検証し、中国薬典の要件を満たすか評価した。異なる濃度の混合標準溶液をUPLCに注入してプロファイルを記録し、被検化合物の濃度（X）に対するピーク面積（Y）で検量線を作成。LOD・LOQ はそれぞれ S/N 比 3・10 に基づいて測定した。</p>
+<p>精度は混合標準溶液を6回連続注入して評価。試験試料には S10 をランダムに選定。安定性は試料溶液を 0・2・4・8・12・24 時間後に逐次注入して測定。併行精度（再現性）は並行抽出した6つの S10 試料溶液を注入して測定。回収率は、既知濃度の試料に等濃度の標準物質を添加して測定した（n = 6）。</p>
+<h3>2.6. 一点校正多成分定量（QAMS）</h3>
+<p>相対補正係数（RCF）の一般的な算出法には、多点補正・スロープ（傾き）補正・線形法がある。本研究では<strong>スロープ法</strong>でRCFを算出した。内部参照物質と各被検成分の間のRCFを式(1)で算出し、得られたRCFを定数として、被検成分量を式(2)(3)で算出した。</p>
+<ul><li>式(1): f_ki = f_k / f_i</li><li>式(2): C_i = f_ki × C_K × A_i / A_k</li><li>式(3): W（mg/g）= C_i × V / m × 1000</li></ul>
+<p>ここで f_i は内部参照標準品の検量線の傾き、f_k は被検成分標準品の検量線の傾き、A_i は試料中の被検成分のピーク面積、C_i は試料中の被検成分濃度、A_k は試料中の参照成分のピーク面積、C_k は試料中の参照成分濃度。W は YQG 中の成分含量（mg/g）、m は YQG の重量、V は YQG 溶液の容量。</p>
+<p>QAMSによるYQGの品質管理では、一定範囲内の各標準品と検出器の比例値に基づいてRCFを算出した。本研究では、クロマトカラム（Phenomenex Kinetex C18、Waters ACQUITY UPLC BEH C18、Nuovasil SAB C18）・カラム温度（33・35・37 ℃）・移動相流速（0.36・0.4・0.44 mL/min）を検討した。内部参照物質は、経済的・安定・低毒性・有効で、適切なクロマト条件下で良好に分離するものであるべきである。</p>
+<h3>2.7. QAMS測定結果と外部標準法（ESM）の比較</h3>
+<p>QAMSの計算結果の正確性を評価するため、QAMSとESMを用いて標準法偏差（SMD）を算出した。</p>
+<ul><li>式(4): SMD（%）=（C_ESM − C_QAMS）/ C_ESM × 100%</li></ul>
+<p>ここで C_ESM と C_QAMS はそれぞれ ESM・QAMS で測定した分析対象物の含量。</p>
+<h3>2.8. UPLC指紋の確立とデータの科学的解析</h3>
+<p>17ロットのYQGを試料溶液調製法に従って調製・測定し、クロマトグラムを記録した。全クロマトグラムを統一積分した後、AIAフォーマットで「伝統中薬クロマト指紋類似度評価システム（2012年版）」ソフトウェアにインポートしてUPLC指紋を確立し、17ロットの指紋類似度を算出した。統計解析には Excel 2019 を用いた。12種化合物の含量を変数として、17ロット試料のクラスター分析を行った。HCA・PCA にはそれぞれ SPSS（27.0.1）・SIMCA（14.0）を用いた。</p>
+<h2>3. 結果と考察（Results and Discussion）</h2>
+<h3>3.1. 線形回帰分析</h3>
+<p>標準品の濃度を横軸（X）、ピーク面積を縦軸（Y）として線形回帰分析を行った。Figure 1 に示すとおり、全ピークは 27 分以内に良好に分離した。試験範囲内で、12成分の検量線の相関係数は <strong>0.9997〜1.0000</strong> の範囲にあり、良好な直線関係を示した（Table 1）。</p>
+<p><strong>Table 1. 12成分の検量線・直線範囲・LOD・LOQ。</strong></p>
+<table>
+<thead><tr><th>成分</th><th>検量線</th><th>R²</th><th>直線範囲（µg/mL）</th><th>LOD（µg/mL）</th><th>LOQ（µg/mL）</th></tr></thead>
+<tbody>
+<tr><td>エピベルベリン</td><td>y = 8486.8x − 3429</td><td>0.9998</td><td>0.403–25.811</td><td>0.499</td><td>1.512</td></tr>
+<tr><td>コプチシン</td><td>y = 7701.8x − 856.94</td><td>0.9999</td><td>0.285–18.22</td><td>0.151</td><td>0.457</td></tr>
+<tr><td>パルマチン</td><td>y = 12038x − 5448.6</td><td>1.0000</td><td>1.186–75.871</td><td>0.747</td><td>2.262</td></tr>
+<tr><td>ベルベリン</td><td>y = 12992x − 1571</td><td>0.9999</td><td>0.400–25.621</td><td>0.373</td><td>1.131</td></tr>
+<tr><td>バイカリン</td><td>y = 11669x + 21286</td><td>0.9999</td><td>4.051–259.243</td><td>4.050</td><td>12.272</td></tr>
+<tr><td>ウォゴノシド</td><td>y = 14441x + 5919.5</td><td>0.9998</td><td>0.793–50.718</td><td>0.949</td><td>2.877</td></tr>
+<tr><td>バイカレイン</td><td>y = 21699x − 2446.9</td><td>0.9997</td><td>0.261–16.670</td><td>0.389</td><td>1.178</td></tr>
+<tr><td>ウォゴニン</td><td>y = 21970x + 510.54</td><td>0.9999</td><td>0.0870–5.570</td><td>0.080</td><td>0.244</td></tr>
+<tr><td>アロエエモジン</td><td>y = 21380x + 67.73</td><td>0.9998</td><td>0.052–3.347</td><td>0.056</td><td>0.171</td></tr>
+<tr><td>レイン</td><td>y = 6932.4x − 871.32</td><td>0.9998</td><td>0.268–17.146</td><td>0.346</td><td>1.050</td></tr>
+<tr><td>エモジン</td><td>y = 12044x + 25.649</td><td>1.0000</td><td>0.031–1.994</td><td>0.089</td><td>0.269</td></tr>
+<tr><td>クリソファノール</td><td>y = 17829x + 341.77</td><td>0.9998</td><td>0.061–3.895</td><td>0.070</td><td>0.212</td></tr>
+</tbody></table>
+<h3>3.2. 方法論の検証（バリデーション）</h3>
+<p>中国薬典の指針に従い、システム精度・併行精度（再現性）・安定性・回収率を測定してUPLC法の妥当性を検証した。各共通ピークの保持時間とピーク面積を用いて精度・再現性・安定性・回収率試験を行った。結果として、<strong>回収率のRSDは 96.86%〜101.05%</strong>、<strong>再現性は 1.21%〜2.35%</strong>、<strong>精度のRSDは 1.47% 未満</strong>、<strong>安定性は 0.78% 未満</strong>であり（Table 2）、確立した手法が選定した12成分の定性・定量分析に十分であることが示された。</p>
+<p><strong>Table 2. UPLC分析法の方法論的検証。</strong>（回収率・RSD は n = 6）</p>
+<table>
+<thead><tr><th>成分</th><th>精度 RSD（%）</th><th>安定性 RSD（%）</th><th>再現性 RSD（%）</th><th>回収率（%）</th><th>回収率 RSD（%）</th></tr></thead>
+<tbody>
+<tr><td>エピベルベリン</td><td>1.08</td><td>0.36</td><td>1.32</td><td>100.05</td><td>3.50</td></tr>
+<tr><td>コプチシン</td><td>1.20</td><td>0.41</td><td>1.25</td><td>101.05</td><td>3.89</td></tr>
+<tr><td>パルマチン</td><td>1.15</td><td>0.23</td><td>1.29</td><td>98.79</td><td>2.16</td></tr>
+<tr><td>ベルベリン</td><td>1.22</td><td>0.74</td><td>1.45</td><td>101.05</td><td>3.28</td></tr>
+<tr><td>バイカリン</td><td>1.19</td><td>0.28</td><td>1.21</td><td>98.41</td><td>1.90</td></tr>
+<tr><td>ウォゴノシド</td><td>1.19</td><td>0.28</td><td>1.24</td><td>98.00</td><td>2.78</td></tr>
+<tr><td>バイカレイン</td><td>1.36</td><td>0.25</td><td>1.51</td><td>96.86</td><td>1.96</td></tr>
+<tr><td>ウォゴニン</td><td>1.47</td><td>0.71</td><td>1.63</td><td>100.56</td><td>2.72</td></tr>
+<tr><td>アロエエモジン</td><td>1.32</td><td>0.46</td><td>1.22</td><td>98.31</td><td>2.82</td></tr>
+<tr><td>レイン</td><td>1.31</td><td>0.47</td><td>1.27</td><td>98.03</td><td>3.65</td></tr>
+<tr><td>エモジン</td><td>0.88</td><td>0.78</td><td>1.46</td><td>100.92</td><td>1.96</td></tr>
+<tr><td>クリソファノール</td><td>1.14</td><td>0.41</td><td>2.35</td><td>100.06</td><td>2.90</td></tr>
+</tbody></table>
+<h3>3.3. UPLC指紋と類似度分析（SA）</h3>
+<p>「伝統中薬クロマト指紋類似度評価システム（2012A版）」を用いて17ロットYQGのUPLCクロマトグラムを生成した。<strong>S8試料を対照指紋</strong>とし、中央値（メジアン）法を採用、時間窓幅 0.1 で、多点補正・自動マッチング後に対照指紋を生成した（Figure 2A）。その後、類似度を算出した。S1〜S17 のYQG試料の指紋は類似していた（Figure 2B）。各共通ピークの<strong>相対保持時間（RRT）のRSDは 0.43% 未満</strong>、<strong>相対ピーク面積のRSDは 5.85% 未満</strong>であった。試料間の<strong>SA値は &gt;0.9</strong>（Table 3）で、異なる製造業者のYQGの化学組成が類似し、試料の総合品質に差がないことを示した。ただし同時に、類似度だけでは異なる業者の試料の差を正確に判定できず、YQGの内部品質をより客観的に反映するにはさらなるケモメトリクス分析が必要であることも示している。分析クロマトグラムに基づいて標準指紋を確立し、<strong>32本の安定・再現性のある共通ピーク</strong>を同定した。標準化合物との保持時間比較および分光分析により、ピーク 8・9・12・13・14・21・24・26・27・29・30・31 の<strong>計12成分</strong>を、コプチシン・エピベルベリン・バイカリン・ベルベリン・パルマチン・ウォゴノシド・バイカレイン・アロエエモジン・レイン・ウォゴニン・エモジン・クリソファノールと同定した。</p>
+<figure><img src="assets/yqg-uplc-fingerprint-qams/fig2-fingerprints.jpeg" alt="Figure 2. 17ロットの益清顆粒（YQG）の254 nmにおける指紋。(A) 化学共通ピークの同定、(B) 17ロットのUPLC指紋と対照指紋（R）。" loading="lazy"><figcaption>Figure 2. 17ロットの益清顆粒（YQG）の254 nmにおける指紋。(A) 化学共通ピークの同定、(B) 17ロットのUPLC指紋と対照指紋（R）。</figcaption></figure>
+<p><strong>Table 3. 17ロットYQGのUPLC指紋の類似度。</strong></p>
+<table>
+<thead><tr><th>ロット</th><th>類似度</th><th>ロット</th><th>類似度</th></tr></thead>
+<tbody>
+<tr><td>S1</td><td>0.997</td><td>S10</td><td>0.985</td></tr>
+<tr><td>S2</td><td>0.903</td><td>S11</td><td>0.983</td></tr>
+<tr><td>S3</td><td>0.921</td><td>S12</td><td>0.997</td></tr>
+<tr><td>S4</td><td>0.947</td><td>S13</td><td>0.997</td></tr>
+<tr><td>S5</td><td>0.972</td><td>S14</td><td>0.917</td></tr>
+<tr><td>S6</td><td>0.901</td><td>S15</td><td>0.983</td></tr>
+<tr><td>S7</td><td>0.990</td><td>S16</td><td>0.993</td></tr>
+<tr><td>S8</td><td>0.973</td><td>S17</td><td>0.922</td></tr>
+<tr><td>S9</td><td>0.966</td><td></td><td></td></tr>
+</tbody></table>
+<blockquote>補足: 「相対保持時間（RRT）はよく揃う（RSD&lt;0.43%）＝ピークの並び順（定性的な指紋パターン）は安定」だが、「相対ピーク面積のRSD（&lt;5.85%）と類似度（0.901〜0.997）にはロット差がある＝各成分の量には業者間差がある」という対比が要点。類似度がいずれも0.9超で「一見そろって見える」ため、量の差を捉えるには次節以降のケモメトリクス（HCA/PCA/OPLS-DA）と多成分定量（QAMS）が必要になる、という論理展開。</blockquote>
+<h3>3.4. 階層的クラスター分析（HCA）</h3>
+<p>SPSS 27.0 を用い、17ロット試料中の32指標成分の共通ピーク面積値を入力指標とした。クラスター分析には Ward 法・ユークリッド距離を用い、縦方向の系統樹を出力した。HCA樹形図で2試料間の距離が短いほど類似度が高く、同一群にクラスターされた試料は最も類似度が高い。17ロットの相関係数によれば、異なる製薬企業の17ロットYQG試料は<strong>2群</strong>に分けられ、<strong>S1・S5・S7・S10 が1群</strong>、残りの製薬企業が別の1群にクラスターされた（Figure 3）。この結果は、異なる業者が製造したYQGが組成・含量で異なることを示す。隣接ロットのYQGは原料・加工法が近く、同じ群にまとまりやすい。異なる業者の製造条件は同一でないため、異なるロット間に一定の品質差があるのは妥当である。さらに、各業者のYQGは処方原料の由来・加工法・製造工程・輸送保存条件の影響を受け、品質差が生じうる。</p>
+<figure><img src="assets/yqg-uplc-fingerprint-qams/fig3-hca.png" alt="Figure 3. YQGの17試料のHCA樹形図。" loading="lazy"><figcaption>Figure 3. YQGの17試料のHCA樹形図。</figcaption></figure>
+<h3>3.5. 主成分分析（PCA）</h3>
+<p>PCAは特徴抽出・次元削減に用いられるケモメトリクス法である。異なる企業の化学組成を合理的に評価・総合分析するため、17試料のデータを SIMCA 14.0 にインポートした。4つの主成分（PC1〜PC4）が全変数の情報の大半を含み、<strong>4成分の累積寄与率は 90.4%</strong> で、指紋中32共通ピークの情報の大半を代表できた。PC1・PC2 の固有値はそれぞれ 10.3・2.62 で、全分散の <strong>60.6%・15.4%</strong> を占めた。Figure 4 に示すとおり、17ロットは2群に分けられ、<strong>S1・S5・S7・S10 と残りのロット</strong>に分かれ、散布図の結果はHCAと一致した。散布図は異なる業者のYQGの品質差を明瞭に示す。これは、業者が選ぶ生薬の収穫期・産地・加工法・生産環境の不確実性に起因しうる。製造業者は原生薬の由来に注意し、製剤の内部管理品質基準を改善して、製剤の品質をより安定・有効にすべきである。</p>
+<p>![Figure 4. 17ロットYQGの指紋の技術的解析（PCAスコアプロット）。緑（群1）：中央にまとまるロット、青（群2）：S1・S5・S7・S10。R2X[1]=0.606、R2X[2]=0.154、楕円はHotelling&#x27;s T2（95%）。](assets/yqg-uplc-fingerprint-qams/fig4-pca.jpeg)</p>
+<h3>3.6. 直交部分最小二乗判別分析（OPLS-DA）</h3>
+<p>17ロットYQG間の差をさらに探るため、PCA結果に基づき、モデルのVIP値に基づくOPLS-DAを行った。OPLS-DAモデルは、独立変数の適合指数（R²X）0.842、従属変数の適合指数（R²Y）0.946、予測指数（Q²）0.609 であった。R²・Q² がともに 0.5 を超え、モデルの信頼性を検証した。OPLS-DAスコアプロット（Figure 5A）で、17ロットは2群に良好に分けられ、HCA・PCAの結果と一致した。200回の順列検定（Figure 5B）の後、右側の高い R²・Q² 値と、<strong>Q²回帰直線の切片が 0 未満（−1.18）</strong>であることが、過学習なしのモデル妥当性を確認し、差異マーカー同定への有用性を保証した。一般に <strong>VIP &gt;1</strong> の変数が分類に重要な役割を果たすと考えられる。Figure 5C から <strong>17個の差異マーカー</strong>（ピーク 1・18・21・31・19・12・20・6・16・26・11・25・7・30・15・2・23）が同定された。うちピーク <strong>21・31・12・26・30</strong> はそれぞれ<strong>ウォゴノシド・クリソファノール・バイカリン・アロエエモジン・エモジン</strong>と同定され、YQGの品質に影響するマーカーとして利用できる。これらは異なる業者のYQG間の差を生む主要な特徴成分であり、試料の識別・分類に極めて重要である。</p>
+<figure><img src="assets/yqg-uplc-fingerprint-qams/fig5-oplsda.jpeg" alt="Figure 5. (A) 異なる業者のYQGのOPLS-DAスコアプロット、(B) 32共通ピークのVIP値、(C) モデルの交差検証プロット。" loading="lazy"><figcaption>Figure 5. (A) 異なる業者のYQGのOPLS-DAスコアプロット、(B) 32共通ピークのVIP値、(C) モデルの交差検証プロット。</figcaption></figure>
+<h3>3.7. RCF（相対補正係数）の測定結果</h3>
+<p>比較の結果、被検成分のうち<strong>ベルベリン</strong>は含量が高く、性質が安定し、クロマトピーク形状が最良で、標準品コストが最も低く、無毒で入手容易であった。したがってベルベリンを<strong>内部標準</strong>に選定した。標準混合品を段階希釈して 1〜7 番の混合標準溶液のグラジエント系列を得た。ベルベリンを参照化合物とし、ベルベリンの検量線の傾きに対する各被検成分の検量線の傾きの正の比をRCF値とした。この比により、<strong>コプチシン・エピベルベリン・パルマチン・バイカリン・ウォゴノシド・バイカレイン・ウォゴニン・アロエエモジン・レイン・エモジン・クリソファノールのRCFはそれぞれ 1.418・1.563・0.927・1.032・0.834・0.555・0.548・0.563・1.736・1.000・0.675</strong> であった。</p>
+<h3>3.8. RCFの堅牢性（durability）</h3>
+<p>RCFに影響する最も本質的な因子は通常、装置・クロマトカラム・温度・流速である。ベルベリンを内部参照として、異なる装置・カラム・温度・流速で他の11成分のRCFを算出した。Table 4 に示すとおり、11成分のRCFの（ベルベリンに対する）<strong>RSDはいずれも 5% 未満</strong>で、良好な再現性と堅牢性を示した。</p>
+<p><strong>Table 4. 各条件下での12成分のRCF算出結果。</strong>（ベルベリンを内部標準とする11成分のRCF）</p>
+<table>
+<thead><tr><th>条件</th><th>コプチシン</th><th>エピベルベリン</th><th>パルマチン</th><th>バイカリン</th><th>ウォゴノシド</th><th>バイカレイン</th><th>ウォゴニン</th><th>アロエエモジン</th><th>レイン</th><th>エモジン</th><th>クリソファノール</th></tr></thead>
+<tbody>
+<tr><td>流速 0.39 mL/min</td><td>1.412</td><td>1.554</td><td>0.926</td><td>1.030</td><td>0.833</td><td>0.553</td><td>0.546</td><td>0.551</td><td>1.729</td><td>0.997</td><td>0.666</td></tr>
+<tr><td>流速 0.4 mL/min</td><td>1.418</td><td>1.563</td><td>0.927</td><td>1.032</td><td>0.834</td><td>0.555</td><td>0.548</td><td>0.563</td><td>1.736</td><td>1.000</td><td>0.675</td></tr>
+<tr><td>流速 0.41 mL/min</td><td>1.429</td><td>1.556</td><td>0.926</td><td>1.030</td><td>0.831</td><td>0.550</td><td>0.547</td><td>0.560</td><td>1.742</td><td>1.001</td><td>0.664</td></tr>
+<tr><td>温度 33 ℃</td><td>1.419</td><td>1.550</td><td>0.922</td><td>1.030</td><td>0.831</td><td>0.550</td><td>0.544</td><td>0.545</td><td>1.778</td><td>0.986</td><td>0.667</td></tr>
+<tr><td>温度 35 ℃</td><td>1.418</td><td>1.563</td><td>0.927</td><td>1.032</td><td>0.834</td><td>0.555</td><td>0.548</td><td>0.563</td><td>1.736</td><td>1.000</td><td>0.675</td></tr>
+<tr><td>温度 37 ℃</td><td>1.418</td><td>1.567</td><td>0.930</td><td>1.033</td><td>0.834</td><td>0.549</td><td>0.550</td><td>0.561</td><td>1.738</td><td>0.996</td><td>0.665</td></tr>
+<tr><td>Waters装置・Nuovasilカラム</td><td>1.411</td><td>1.563</td><td>0.925</td><td>1.073</td><td>0.844</td><td>0.568</td><td>0.544</td><td>0.568</td><td>1.721</td><td>0.985</td><td>0.685</td></tr>
+<tr><td>Waters装置・Kinetexカラム</td><td>1.418</td><td>1.563</td><td>0.927</td><td>1.032</td><td>0.834</td><td>0.555</td><td>0.548</td><td>0.563</td><td>1.736</td><td>1.000</td><td>0.675</td></tr>
+<tr><td>Waters装置・Watersカラム</td><td>1.416</td><td>1.560</td><td>0.923</td><td>1.030</td><td>0.838</td><td>0.563</td><td>0.541</td><td>0.554</td><td>1.731</td><td>0.994</td><td>0.681</td></tr>
+<tr><td>Agilent装置・Nuovasilカラム</td><td>1.418</td><td>1.569</td><td>0.927</td><td>1.022</td><td>0.830</td><td>0.556</td><td>0.545</td><td>0.565</td><td>1.729</td><td>0.996</td><td>0.669</td></tr>
+<tr><td>Agilent装置・Kinetexカラム</td><td>1.416</td><td>1.567</td><td>0.925</td><td>1.023</td><td>0.820</td><td>0.549</td><td>0.547</td><td>0.561</td><td>1.735</td><td>0.992</td><td>0.666</td></tr>
+<tr><td>Agilent装置・Watersカラム</td><td>1.418</td><td>1.562</td><td>0.923</td><td>1.031</td><td>0.829</td><td>0.550</td><td>0.546</td><td>0.562</td><td>1.733</td><td>0.997</td><td>0.661</td></tr>
+<tr><td>平均</td><td>1.418</td><td>1.561</td><td>0.926</td><td>1.033</td><td>0.833</td><td>0.554</td><td>0.546</td><td>0.560</td><td>1.737</td><td>0.995</td><td>0.671</td></tr>
+<tr><td>RSD（%）</td><td>0.310</td><td>0.360</td><td>0.241</td><td>1.260</td><td>0.678</td><td>1.061</td><td>0.440</td><td>1.159</td><td>0.805</td><td>0.534</td><td>1.099</td></tr>
+</tbody></table>
+<h3>3.9. 分析対象物のクロマトピークの位置特定</h3>
+<p>「一回の試験で複数評価（one test, multiple evaluation）」を実現する前提は、有効な手段で被検成分の対応するクロマトピークを正確に位置特定することである。現在、ピーク位置特定には相対保持時間（RRT）または RTT 差がよく用いられる。RTT差は対象と参照の差の範囲が大きくデータの変動が大きいため、本研究では<strong>RRTでピーク位置特定</strong>した。異なる装置・カラムで12成分のRRTを測定し、各成分の RRT・平均RRT・RSD を算出した。Table 5 に示すとおり、異なる装置・カラム間でのRRTの変動は小さく、<strong>12成分のRSDはすべて 5.0% 以下</strong>であった。したがって相対保持値を被検成分のクロマトピーク位置特定に用いることができる。</p>
+<p><strong>Table 5. 異なるカラム・装置における相対保持時間（RRT）。</strong>（左3列＝Waters装置：Nuovasil/Kinetex/Waters、次3列＝Agilent装置：Nuovasil/Kinetex/Waters）</p>
+<table>
+<thead><tr><th>成分</th><th>W-Nuovasil</th><th>W-Kinetex</th><th>W-Waters</th><th>A-Nuovasil</th><th>A-Kinetex</th><th>A-Waters</th><th>平均</th><th>RSD（%）</th></tr></thead>
+<tbody>
+<tr><td>エピベルベリン</td><td>0.732</td><td>0.727</td><td>0.780</td><td>0.726</td><td>0.725</td><td>0.765</td><td>0.743</td><td>3.217</td></tr>
+<tr><td>コプチシン</td><td>0.784</td><td>0.789</td><td>0.834</td><td>0.777</td><td>0.786</td><td>0.816</td><td>0.798</td><td>2.767</td></tr>
+<tr><td>パルマチン</td><td>1.038</td><td>1.052</td><td>1.016</td><td>1.041</td><td>1.059</td><td>1.015</td><td>1.037</td><td>1.742</td></tr>
+<tr><td>バイカリン</td><td>0.971</td><td>0.953</td><td>0.970</td><td>0.958</td><td>0.952</td><td>0.963</td><td>0.961</td><td>0.861</td></tr>
+<tr><td>ウォゴノシド</td><td>1.182</td><td>1.195</td><td>1.116</td><td>1.196</td><td>1.232</td><td>1.117</td><td>1.173</td><td>3.989</td></tr>
+<tr><td>バイカレイン</td><td>1.291</td><td>1.307</td><td>1.245</td><td>1.315</td><td>1.357</td><td>1.253</td><td>1.295</td><td>3.218</td></tr>
+<tr><td>ウォゴニン</td><td>1.508</td><td>1.549</td><td>1.433</td><td>1.544</td><td>1.615</td><td>1.452</td><td>1.517</td><td>4.443</td></tr>
+<tr><td>アロエエモジン</td><td>1.394</td><td>1.405</td><td>1.363</td><td>1.424</td><td>1.461</td><td>1.380</td><td>1.404</td><td>2.471</td></tr>
+<tr><td>レイン</td><td>1.447</td><td>1.427</td><td>1.391</td><td>1.464</td><td>1.482</td><td>1.395</td><td>1.434</td><td>2.562</td></tr>
+<tr><td>エモジン</td><td>1.681</td><td>1.714</td><td>1.557</td><td>1.722</td><td>1.760</td><td>1.580</td><td>1.669</td><td>4.926</td></tr>
+<tr><td>クリソファノール</td><td>1.765</td><td>1.803</td><td>1.647</td><td>1.814</td><td>1.875</td><td>1.674</td><td>1.763</td><td>4.953</td></tr>
+</tbody></table>
+<blockquote>補足: RRTは「ベルベリン（内部標準）の保持時間を基準（=1）とした相対値」。装置・カラムを替えても各成分のRRTが安定（RSD≦5%）なので、標準品を毎回打たなくても、ベルベリンのピークを起点に「このRRTの位置に出るはずのピークがこの成分」と特定できる。これがQAMSで多成分を1つの標準品だけで定量できる仕組みの土台になる。</blockquote>
+<h3>3.10. QAMSとESMの含量測定結果の比較</h3>
+<p>補足表 S1（Supplementary Table S1）に示すとおり、12成分についてQAMSで算出した含量とESMのSMD結果は <strong>5.002% 以下</strong>で、両手法間に有意差はなかった。SMDは式(4)で算出した。したがって、確立したQAMS法は正確で、単一顆粒中の12成分を同時に定量でき、検出コストを大幅に削減し検出効率を向上できる。</p>
+<blockquote>補足: 12成分の各ロット別実測含量（QAMS値・ESM値・SMD）は、本論文では<strong>補足資料（Supplementary Table S1）</strong>にまとめられており、本体PDFには含まれていない。個別成分の絶対含量値（mg/g）は「原文（補足資料）参照」。本文で確認できるのは「QAMSとESMの偏差が全成分で≦5.002%＝両法に有意差なし」という結論のみ。</blockquote>
+<h2>4. 結論（Conclusion）</h2>
+<p>本研究では、移動相として 0.1% ギ酸水溶液–メタノール、0.1% リン酸水溶液–メタノール、0.2% リン酸水溶液–アセトニトリル、0.2% リン酸水溶液–メタノールを検討した。しかしアルカロイド成分がテーリングし分離が悪かった。そこで<strong>トリエチルアミンで移動相 pH を調整</strong>してピーク形状と分離を改善した。結果として、<strong>0.2% リン酸水溶液（トリエチルアミンで pH 3 に調整）–アセトニトリル系</strong>のマップ品質が最良で、ピークのRTTがより適度になった。これが最適クロマト条件である。</p>
+<p>本研究で確立したQAMS法は、同一クロマト条件下で、<strong>4アルカロイド（コプチシン・エピベルベリン・ベルベリン・パルマチン）・4フラボノイド（バイカリン・ウォゴノシド・バイカレイン・ウォゴニン）・4アントラキノン（アロエエモジン・レイン・エモジン・クリソファノール）</strong>の含量を測定できた。ベルベリンを内部標準とし、RCFにより17ロット中12ロットのYQGの活性成分含量を同時測定し、本法の実行可能性を検証した。確立したQAMS法とESMに有意差はなかった。</p>
+<p>QAMSは単一の内部参照標準品を用いて複数の標的化合物を同時に正確に定量する。第一に、従来の外部標準法（各化合物に固有の標準品が必要）と比べ、QAMSは特に高価・希少な標準品でコストを大幅に削減する。第二に、QAMSは分析効率を大幅に向上させ（12のクラス横断的な活性成分を同時検出）、実験工程を簡素化し、分析サイクル時間を短縮する。最後に、「一標準一試験」という従来の限界を突破し、標準品の希少性という問題を効果的に克服し、全標的の純品入手性への依存を打破して、複雑系（伝統中薬・天然物など）における多成分定量分析の実行可能性・実用性を大きく拡張する。</p>
+<p>加えて、YQGのUPLC指紋を確立し（SA・HCA・PCA・OPLS-DA と組み合わせ）、品質を同定・評価した。32共通ピークに基づく一連のケモメトリクス法により、異なる業者のYQGは <strong>S1・S5・S7・S10 と残りのロット</strong>の2群に分けられた。OPLS-DAに基づき、<strong>ウォゴノシド・バイカリン・アロエエモジン・エモジン・クリソファノールの5つの品質マーカー</strong>が同定された。異なる業者のYQGの品質一貫性にはなお差があり、その要因としては、生薬の由来（原生薬の採取時期の適否や加工法）の違いが考えられる。顆粒の製剤工程・保存・輸送条件も、YQGの品質に影響する本質的因子の一つである。</p>
+<p>本研究の多技術連結戦略は、既存手法の限界を解決するだけでなく、より重要なことに「成分検出–品質評価」という品質管理の新パラダイムを確立し、伝統中薬の品質標準化研究に革新的な方法論的参考を提供する。この新手法は、YQGの品質評価に強力な根拠を与え、単一指標評価より包括的な総合品質評価を実現できる。検査・試験担当者の日常検査の効率と正確性を向上させ、異なる業者の異なるロットの品質評価・管理に技術的支援を提供し、規制当局によるロット出荷検査に利用でき、単一成分試験への依存を減らし、他の関連中成薬の迅速評価にも本質的な参考を提供する。</p>
+<h2>訳者補足</h2>
+<blockquote>補足（本稿の位置づけ）: 本論文は2011年の双黄連口服液（SHL）の研究（本サイトに別掲）と同系統の「指紋＋多成分定量」だが、10年以上を経て手法が明確に進化している。相違点は3つ：（1）定量が<strong>外部標準法（ESM）からQAMSへ</strong>移行し、12成分をベルベリン1種類の標準品だけで定量してコストと標準品依存を削減している（RCFを各条件で検証しRSD&lt;5%を確認）、（2）<strong>HPLCからUPLCへ</strong>移行し分析時間を約0.5時間まで短縮、（3）類似度分析だけでなく<strong>HCA・PCA・OPLS-DAのケモメトリクス</strong>でロットを判別し、VIP&gt;1の差異マーカーを抽出している。「類似度は全ロット&gt;0.9で一見そろって見えるが、量には業者差があり、多変量解析で2群に分かれる」という論理は、指紋の限界（並び順は見えるが量の差を捉えにくい）を定量とケモメトリクスで補うという、近年のQC論文の典型的な構成である。</blockquote>
+<blockquote>補足（実務的示唆）: 現行の中国薬典（2020年版）はYQGの指標成分をバイカリン1つしか定めていない。本論文の実データは、黄連由来アルカロイド・大黄由来アントラキノンを含む12成分を横断的に見ると業者間・ロット間に差があることを示しており、単一成分QCでは製品品質を保証しきれないという主張を裏づける。QAMSは、標準品が高価・入手困難な生薬QCの現場で「1つの安価・安定な標準品（ここではベルベリン）を基準に複数成分を定量する」実装例として参考になる。ただしQAMSの前提は「装置・カラム・温度・流速を替えてもRCFとRRTが安定であること」の事前検証であり、本論文はその堅牢性検証（Table 4・Table 5）まで含めている点が実務的に重要。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="mmdhp-twffp-ecfp-antioxidant.html">明目地黄丸（MMDHP）の品質一致性評価 — HPLC三波長融合指紋＋電気化学指紋＋抗酸化法の併用</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qzxf-fingerprint-qams.html">七制香附丸(QZXFPs)のHPLC指紋・ケモメトリクス・QAMS(一マーカー多成分定量)による品質評価</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="clt-fingerprint-ieqfm-fusion.html">指紋技術とスペクトル定量予測に基づく漢方複方の総合品質解析戦略 — 複方甘草片(CLT)を例として</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="fcg-sugarfree-fingerprint-qams.html">無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="yqg-uplc-fingerprint-qams" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

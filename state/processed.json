@@ -321,6 +321,129 @@
       "title": "漢方薬の品質評価と製造工程管理のための品質マーカー（Q-marker）新概念",
       "source_pdf": "1-s2.0-S1674638417600704-main.pdf",
       "date": "2026-07-02"
+    },
+    "1wa1TYsoJ3tFNDS05KHQdWJZcjUakxHJx": {
+      "slug": "qhp-hplc-fingerprint-chemometrics",
+      "title": "指紋分析・多指標成分定量とケモメトリクスを組み合わせた清胃黄連丸(QHPs)の品質評価",
+      "source_pdf": "bmaf018.pdf",
+      "date": "2026-07-05"
+    },
+    "1rOACa_rlpNTtKLnNA9csmrfoDsUkQwAd": {
+      "slug": "yqg-uplc-fingerprint-qams",
+      "title": "益清顆粒（YQG）のUPLC指紋分析と一点校正多成分定量（QAMS）を組み合わせた品質評価",
+      "source_pdf": "fchem-13-1632033.pdf",
+      "date": "2026-07-05"
+    },
+    "17WJzzSi6qphHFsuaEXG4AZ5LwKTH0Att": {
+      "slug": "coptidis-rhizoma-effect-constituent-index-qmarker",
+      "title": "効果-成分指数（ECI）という統合的・薬効指向のQ-markerによる生薬の品質規格の高度化 — 黄連（Coptidis Rhizoma）を例として",
+      "source_pdf": "1-s2.0-S0944711318300485-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1rq9QDU03Y37lpymIcDWGj2WmcQhzRJJt": {
+      "slug": "retention-modeling-lc-review",
+      "title": "液体クロマトグラフィーにおける保持モデリングの最近の応用（総説）",
+      "source_pdf": "JSSC-44-88.pdf",
+      "date": "2026-07-05"
+    },
+    "1m8uoHCjoXgjfOwp2MYLn2zCpOU-_aM5v": {
+      "slug": "hgwd-uplc-fingerprint-spectrum-effect-qmarker",
+      "title": "UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価",
+      "source_pdf": "1-s2.0-S0378874123011959-main.pdf",
+      "date": "2026-07-05"
+    },
+    "10mUjRIYF9BlPpdSPXwpM8E6zhCd-C8H4": {
+      "slug": "agarwood-lcmsms-qnmr-rplc-hilic",
+      "title": "生薬の多成分定量指向型品質評価の「フルソリューション」— 沈香（中国産アガーウッド）を例として",
+      "source_pdf": "1-s2.0-S0021967318305909-main.pdf",
+      "date": "2026-07-05"
+    },
+    "12h4lTsdqn_9AEt-Jv104TMaJHKy5Gjx4": {
+      "slug": "licorice-trinity-fingerprint-hplc-uv-thz-maml",
+      "title": "甘草の「トリニティ（三位一体）」指紋評価系 — HPLC・UV・THz量子指紋とMAML多成分定量による総合品質評価",
+      "source_pdf": "1-s2.0-S0021967322003119-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1lHzZqQg6TxS1jS3IRGCucopsYC68u6Ic": {
+      "slug": "xiaoyao-wan-orbitrap-gcims-prm",
+      "title": "逍遥丸（XYW）の多成分包括的解析と品質評価 — UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMSの併用",
+      "source_pdf": "1-s2.0-S0731708523006799-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1h_mD0T90b4p73Ayy27izNkZkx5E2C7wl": {
+      "slug": "dscx-network-pharmacology-qc-markers",
+      "title": "ネットワーク薬理学に基づく抗血栓生薬の品質管理マーカー探索 — 丹参・川芎（Salvia miltiorrhiza-Ligusticum chuanxiong）を例として",
+      "source_pdf": "1-s2.0-S0378874122002367-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1VYhjOdUvPvU6n43Ys1yVP0un6n0Ftu50": {
+      "slug": "botanical-drug-development-us-fda-perspective",
+      "title": "植物性医薬品（ボタニカルドラッグ）開発への科学的・規制的アプローチ — 米国FDAの視点",
+      "source_pdf": "scientific-regulatory-approach-botanical-drug-development-US-FDA-perspective.pdf",
+      "date": "2026-07-05"
+    },
+    "1TsMDoyXfnTpNQi8YJm3w9jH0Sk8XuWax": {
+      "slug": "fej-tlc-lcms-fusion-entropy-ml",
+      "title": "多次元クロマト指紋の融合と機械学習：エントロピーに基づく特徴評価による漢方Q-marker探索 — 復方阿膠漿（FEJ）を例として",
+      "source_pdf": "1-s2.0-S0039914026001554-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1_aL8qciBJadjPfp8DpUiJZMxMXZSId6j": {
+      "slug": "hugan-capsule-fwfp-ecfp",
+      "title": "護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価",
+      "source_pdf": "1-s2.0-S0003267023002362-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1WGC54yEDxc4EpyNiErMYu6v-KBhG8TZD": {
+      "slug": "mmdhp-twffp-ecfp-antioxidant",
+      "title": "明目地黄丸（MMDHP）の品質一致性評価 — HPLC三波長融合指紋＋電気化学指紋＋抗酸化法の併用",
+      "source_pdf": "1-s2.0-S0021967322006409-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1ThjQlx_haqpjrYeGBLMNllC9SpN_qccI": {
+      "slug": "xzol-ai-spectrum-effect-nir-qc",
+      "title": "AIを活用した漢方の活性成分探索と非破壊品質管理の戦略 — 血府逐瘀口服液（XZOL）を例として",
+      "source_pdf": "1-s2.0-S0039914025001134-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1FnfcjeNIIEzjkz7O-mkn6rYlGjTgcoXr": {
+      "slug": "tcmp-ftnir-visnir-hsi-datafusion",
+      "title": "FT-NIRとVis/NIR-HSIのデータ融合による漢方顆粒(TCMP)の重要品質特性(CQA)の非破壊予測",
+      "source_pdf": "1-s2.0-S0924203125000141-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1xTZTpxCQazkNX6BClGn08I-21MzAiuOA": {
+      "slug": "bzyqt-quantitative-ternary-network-qmarker",
+      "title": "定量的三元ネットワークによる漢方処方のQ-marker探索 — 補中益気湯（BZYQT）を例として",
+      "source_pdf": "1-s2.0-S0944711324005762-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1O01zfhB3DNGrdEpqJMovr3BpT6qj5Vjr": {
+      "slug": "ljf-nir-rtrt-spc-concentrating",
+      "title": "近赤外分光とリアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)による金銀花濃縮工程の工業スケール・オンライン品質管理",
+      "source_pdf": "1-s2.0-S1350449522001165-main.pdf",
+      "date": "2026-07-05"
+    },
+    "1wTMFSmhQFyHNBOPFg7j0w-Z5v7jM9EZT": {
+      "slug": "fcg-sugarfree-fingerprint-qams",
+      "title": "無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価",
+      "source_pdf": "1-s2.0-S0731708526001597-main.pdf",
+      "date": "2026-07-05",
+      "note": "duplicate upload of FCG (same paper as fcg-sugarfree-fingerprint-qams)"
+    },
+    "1-9D2TYKpF1Pa3y6UrLwozKn0YBvg5cF2": {
+      "slug": "shxxd-hplc-fingerprint-qmarker",
+      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
+      "source_pdf": "Biomedical_Chromatography_2026_Fu_Sanhuang_Xiexin_Decoction.pdf",
+      "date": "2026-07-05",
+      "note": "duplicate upload of SHXXD (same paper as shxxd-hplc-fingerprint-qmarker)"
+    },
+    "1DfVkGZD9UlLcDW-2xWybxWQ7RXAdrH9b": {
+      "slug": "mlstp-multistrategy-qmarker-qams",
+      "title": "脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築",
+      "source_pdf": "1-s2.0-S0731708524001109-main.pdf",
+      "date": "2026-07-05",
+      "note": "duplicate upload of MLSTP (same paper as mlstp-multistrategy-qmarker-qams)"
     }
   }
 }
