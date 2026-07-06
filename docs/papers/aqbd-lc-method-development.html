@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展">
+<meta property="og:description" content="分析的品質設計(AQbD)によるLC（HPLC/UPLC)分析法の開発・最適化を、理論と近年の実例で解説した総説の全訳（＋訳者補足）。QbD（2004年FDA導入）の分析法版として、分析目標プロファイル(ATP)の定義、重要メソッド属性(CMA)・パラメータ(CMP)の特定、リスク評価、スクリーニング＋応答曲面のDoEによる最適化、設計空間／メソッド運用可能設計領域(MODR)の確立、制御戦略とライフサイクル管理までを、ICH Q8–Q14・USP〈1220〉の枠組みとともに整理する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/aqbd-lc-method-development/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="aqbd-lc-method-development"><h1>AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</h1><div class="paper-meta"><span class="date">2026-07-03</span> <span class="tag">HPLC・UPLC</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1021/acs.oprd.9b00238" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">9b5ce9ee-development...aqbd.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="aqbd-lc-method-development" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="aqbd-lc-method-development" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/aqbd-lc-method-development/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/aqbd-lc-method-development/ai-infographic.webp" alt="分析法をライフサイクル全体で系統的に設計するAQbD（ATP→リスク評価→DoE→設計空間MODR）を実例で解説" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Development and Optimization of Liquid Chromatography Analytical Methods by Using AQbD Principles: Overview and Recent Advances</li><li>著者: Tim Tome, Nina Žigart, Zdenko Časar, Aleš Obreza（リュブリャナ大学 薬学部／Sandoz Development Center Slovenia (Lek Pharmaceuticals), スロベニア）</li><li>掲載: <em>Organic Process Research &amp; Development</em> 2019, 23, 1784–1802. https://doi.org/10.1021/acs.oprd.9b00238（オープンアクセス, CC BY）</li><li>インパクトファクター: <strong>3.9</strong>（<em>Org. Process Res. Dev.</em>, JCR 2024 / Clarivate）</li><li>受理経過: 受領 2019-05-21 / 公開 2019-08-14</li></ul>
+<blockquote>補足: <strong>AQbD (Analytical Quality by Design, 分析的品質設計)</strong> = 医薬品開発の QbD（品質を“設計で作り込む”考え方)を<strong>分析法</strong>に拡張したもの。「良い分析法は試行錯誤の結果ではなく、目標から逆算して系統的に設計する」という枠組みで、分析法のライフサイクル全体（開発→運用→変更)を管理する。生薬QCの指紋・多成分定量法を<strong>頑健で移管しやすい規格</strong>に育てる設計思想として有用。ATP=分析目標プロファイル、CMA=重要メソッド属性(応答)、CMP=重要メソッドパラメータ(因子)、MODR=メソッド運用可能設計領域、OFAT=1度に1因子。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>本総説は、QbD（2004年に米国FDAが導入、2005年にICHが承認)の拡張である <strong>AQbD</strong> の概念を提示する。AQbDは、分析手順のライフサイクル全段階を制御する系統的なメソッド開発アプローチであり、<strong>分析目標プロファイル(ATP)の定義</strong>、<strong>重要メソッドパラメータ(因子)の特定</strong>、<strong>重要メソッド属性(CMA、応答)の選択</strong>を含む。スクリーニング設計と応答曲面設計により有意因子を認識し、統計解析で最適化する。因子–応答の関係は数理モデルで記述され、最適応答を予測できる。CMA要件を満たす因子の多変量組合せは、<strong>設計空間</strong>あるいは<strong>メソッド運用可能設計領域(MODR)</strong> として提示され、そこでは頑健なメソッド性能が保証される。本総説はAQbDの理論的背景と、その有効性が実証された近年の事例を通じてワークフローを示す。<strong>AQbDで開発した分析法は高い頑健性を持ち、バリデーションが容易で、分析時間が短く、OFAT法より多くの分析対象を1回で定量できる。</strong></p>
+<h2>1. 序論（Introduction）</h2>
+<p>医薬品産業の目標は一定品質の製品を提供すること。分析法は開発・製造・ライフサイクル全体で品質を保証する役割を担う。メソッドの最重要特性の一つが<strong>頑健性</strong>（ICH Q2(R1)：パラメータの小さな意図的変動に対して結果が保たれること)。従来の<strong>OFAT</strong>開発は非最適で頑健性が不明なメソッドを生みがちで、日常使用中の失敗につながる。近年、規制側もQbDの考え方を分析手順の<strong>ライフサイクル管理</strong>へ求めている（2015年のFDAガイダンス、ICH Q8–Q12、Q14、USP〈1220〉「Analytical Procedure Lifecycle」等)。ライフサイクルは「設計・開発／手順性能の適格性確認／継続的な手順性能の検証」の段階からなる。</p>
+<h2>2. AQbDのワークフロー</h2>
+<h3>2.0 分析目標プロファイル(ATP)</h3>
+<p>AQbDは<strong>ATP</strong>の設定から始まる。ATPは分析法の目的（何を・どの範囲で・どの精確さで測るか)を規定する目標の集合で、規制当局に事前規定されるわけではないが、ライフサイクルを通じた柔軟性（＝規定内でのメソッド改良)を可能にする。</p>
+<h3>2.1 スクリーニング設計</h3>
+<p>多数の候補<strong>因子(CMP)</strong>（移動相組成・pH・カラム温度・流速・グラジエント勾配…)から有意なものを、完全/一部実施要因計画やPlackett-Burman等で少ない試行で絞り、<strong>知識空間</strong>を確立する。</p>
+<h3>2.2 応答曲面設計と応答モデリング</h3>
+<p>絞った有意因子について、中心複合計画やBox-Behnken計画などで交互作用・高次項を含めて実験・統計解析し、<strong>因子–応答（CMA）の関係を数理モデル化</strong>（応答モデリング)。最適応答を予測する。</p>
+<h3>2.3 理論モデルベースのLC法開発</h3>
+<p>DoEに加え、<strong>保持モデル(LSS等)ベースのソフト（DryLab等)</strong> を用いる開発も紹介される。少数の実験から保持を予測して条件空間を探索する（本サイト収録の DryLab 原典・保持モデリング総説と地続き)。</p>
+<h3>2.4 設計空間 / MODR</h3>
+<p>CMAの要件（例: 分離度・分析時間・ピーク対称性)をすべて満たす因子の多変量領域を<strong>設計空間＝MODR</strong>として確立する。この領域内なら再バリデーションなしに条件を動かせ、<strong>頑健なメソッド性能</strong>が保証される。最後に<strong>制御戦略</strong>（SST・システム適合性基準等)を定め、ライフサイクルを通じて管理する。</p>
+<h2>3. 事例（Recent Advances）</h2>
+<p>近年の多数の適用事例を通じ、AQbDが信頼性・有効性の高いアプローチであることが示される。事例では、OFATでは1つのHPLC法開発に留まる状況でも、AQbD/DoEにより頑健な条件領域(MODR)を得て、より短時間で多成分を1回で分離・定量できることが繰り返し確認される（各事例で分離度目標、SST基準、設計空間の可視化などが提示される)。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>分析法は医薬品の開発・製造で鍵となる役割を果たす。LC（HPLC/UPLC)が最も一般的に使われ、製品が複雑化するとメソッドも複雑化して開発が難しくなる。最重要特性の一つが<strong>頑健性</strong>で、開発段階で評価すべき。従来の<strong>OFAT</strong>は非最適・頑健性不明のメソッドを生み、日常使用で失敗しがち。<strong>AQbD</strong>は、ATP設定→CMAとその規格の決定→重要メソッドパラメータ(因子)の特定から始まる系統的アプローチ。<strong>DoEがAQbDの中核</strong>で、統計的に実験を設計・数理モデル化する。スクリーニング設計で有意因子を同定して知識空間を作り、応答曲面設計で有意因子・交互作用・高次項を調べて応答モデルを作り、最終的に<strong>設計空間／MODR</strong>を確立して頑健運用と制御戦略・ライフサイクル管理につなげる。</p>
+<blockquote>補足（生薬QC実務への示唆）: AQbDは、生薬の指紋・多成分定量法を「作って終わり」ではなく<strong>頑健で移管しやすい規格として設計・維持する</strong>ための上位の枠組み。実務の流れは——(1) <strong>ATP</strong>で「何を・どの範囲で・どの精確さで測るか」を先に言語化（例: 主要Q-markerを±2%で定量し臨界ペアを分離度1.5以上)。(2) <strong>リスク評価</strong>で効きそうな因子(pH・有機溶媒%・温度・勾配)を洗い出し、(3) <strong>スクリーニングDoE</strong>で有意因子に絞り、(4) <strong>応答曲面DoE</strong>（または DryLab 等モデルベース)で最適化、(5) <strong>設計空間/MODR</strong>を描いてその中で運用（＝多少条件が動いても頑健)、(6) <strong>SST・制御戦略</strong>とライフサイクルで維持する。本サイトの姉妹3本——実験計画法(DoE)総説、保持モデリング総説、DryLab原典——が、それぞれAQbDの「DoEベース」「モデルベース」の道具立てにあたる。OFAT（1因子ずつ)からAQbDへ移すと、頑健性・バリデーションの容易さ・分析時間・同時定量成分数のいずれも改善するというのが本総説の一貫した主張。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbDまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="medicinal-plants-aqbd-review.html">薬用植物の分析法開発への分析的Quality by Design(AQbD)アプローチ（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li><li><a href="tcm-granulation-pat-review.html">伝統中薬の造粒プロセス解析技術(PAT)と応用（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="aqbd-lc-method-development" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

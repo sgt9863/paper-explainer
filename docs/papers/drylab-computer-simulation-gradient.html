@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）">
+<meta property="og:description" content="逆相HPLCのグラジエント分離を最適化するコンピュータシミュレーション（DryLab G）の基礎論文の全訳（＋訳者補足）。勾配の異なる初期グラジエント2回の実験結果から各成分のkw・S（LSSモデル）を逆算し、グラジエント時間・組成・形状・カラム寸法・流速・粒子径を変えたときの保持時間・ピーク幅・分離度を予測。実験の試行錯誤を大幅に減らして最適分離に到達する、計算機支援メソッド開発の礎となった1987年の古典。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/drylab-computer-simulation-gradient/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="drylab-computer-simulation-gradient"><h1>コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）</h1><div class="paper-meta"><span class="date">2026-07-03</span> <span class="tag">HPLC・UPLC</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1007/BF02688488" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">11e1a2b5-BF02688488.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="drylab-computer-simulation-gradient" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="drylab-computer-simulation-gradient" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/drylab-computer-simulation-gradient/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/drylab-computer-simulation-gradient/ai-infographic.webp" alt="たった2回のグラジエント実験から保持・ピーク幅・分離度を予測し最適条件を机上で探すDryLab Gの基礎論文" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。数式は原文の式番号を保持。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Computer Simulation as a Means of Developing an Optimized Reversed-Phase Gradient-Elution Separation</li><li>著者: J. W. Dolan, L. R. Snyder（LC Resources Inc., 米国), M. A. Quarry（Du Pont社 Medical Products Dept., 米国）</li><li>掲載: <em>Chromatographia</em> 24 (1987) 261–276. https://doi.org/10.1007/BF02688488</li><li>インパクトファクター: <strong>1.3</strong>（<em>Chromatographia</em>, JCR 2024 / Clarivate）</li></ul>
+<blockquote>補足: 本論文は、後に広く普及する市販ソフト <strong>DryLab</strong> の基礎を築いた古典（1987年)。「実験を2回だけやれば、あとは計算機上で条件を変えて最適分離を探せる」という<strong>計算機支援メソッド開発</strong>の考え方の原点。生薬QCでも、指紋・多成分定量のグラジエント条件最適化に同種の手法（DryLab等)が今も使われる。$k&#x27;$=保持係数、$\varphi$（原文の $\phi$）=移動相中の有機溶媒体積分率、$k_w$=純水中($\varphi=0$)の保持係数、$S$=溶質固有の定数、$t_G$=グラジエント時間、$t_D$=ドウェル時間。</blockquote>
+<h2>要旨（Summary）</h2>
+<p>逆相グラジエント分離をシミュレートするパソコン用プログラム <strong>DryLab G</strong> を記述する。最初に<strong>2回の実験グラジエント</strong>を行えば、本プログラムでユーザーは、グラジエント条件（グラジエント時間・移動相の初期/最終%有機溶媒・グラジエント形状)・カラム寸法・流速・粒子径を変えて最終分離を作り込める。このアプローチは、等温分離で最近報告された「<strong>溶媒強度選択性</strong>」を活用する。この手順によるメソッド開発は、はるかに少ない労力でより良い分離をもたらす。バリデーションと応用の例を示す。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>グラジエント溶出は多くの試料のHPLC分析に有用。広い保持範囲の混合物は等温では扱えず、狭い保持範囲でもグラジエントの方がよく分離することがある。グラジエント法の一般原理は既知だが、その潜在能力が実務で十分に活かされることは稀。技術本来が複雑で分離変数が多く、条件変更が予想外の結果と追加実験を招きがち。グラジエントを要する試料は成分数も多く、系統的なメソッド開発が難しい。効果的なグラジエント利用は、条件変更で生じる<strong>バンド間隔(選択性 α)の変化</strong>を活かすべきである。</p>
+<p>市販ソフト(DryLab G)は、実験条件の関数として分離を予測できる。分離度の予測には各成分の<strong>保持時間 $t_g$</strong> とバンド幅 $W$ が必要となる。</p>
+<h2>2. 予測の理論</h2>
+<h3>2.1 保持時間 $t_g$ の予測</h3>
+<p>グラジエント溶出の保持時間は積分方程式(式2)で与えられる：</p>
+<p>$$\int_0^{t_g} \frac{F\,dt}{V_m(1 + k&#x27;)} = 1 \tag{2}$$</p>
+<p>$F$=流速、$V_m$=カラム死容積($=F t_0$)、$k&#x27;$=グラジエント中の時刻 $t$ における保持係数。逆相HPLCでは $k&#x27;$ が有機溶媒体積分率 $\varphi$ と近似的に次式(<strong>LSSモデル</strong>)で関係する：</p>
+<p>$$\log k&#x27; = \log k_w - S\varphi \tag{3}$$</p>
+<p>$S$ は溶質固有の定数、$k_w$ は $\varphi=0$ での $k&#x27;$。この式を第一近似とし、$\log k&#x27;$ 対 $\varphi$ の小さな曲率は補正できる。</p>
+<h3>2.2 $k_w$ と $S$ の推定：2回の初期グラジエント</h3>
+<p>従来は $k&#x27;$ 対 $\varphi$ を<strong>等温測定</strong>で求めることが多かったが、グラジエントを要する試料は等温で調べにくく不便。より良い方法は、<strong>勾配の異なる2回の初期グラジエント実験</strong>を行い、そこから $k_w$ と $S$ を求めること。溶質の前溶出・後溶出を無視できる場合、2本のグラジエント($b=b_i, b_j$)の実測保持時間から次の連立方程式(式4a, 4b)を数値的に解く：</p>
+<p>$$(t_g)_i = \frac{t_0}{b_i}\log(2.3\,k_0\,b_i + 1) + t_0 + t_D \tag{4a}$$</p>
+<p>$$(t_g)_j = \frac{t_0}{b_j}\log(2.3\,k_0\,b_j + 1) + t_0 + t_D \tag{4b}$$</p>
+<p>$t_D$=装置のドウェル時間（グラジエントがミキサーからカラム入口へ届くまでの時間)。勾配パラメータ $b$ は：</p>
+<p>$$b = \frac{V_m\,\Delta\varphi\,S}{t_G\,F} \tag{5}$$</p>
+<p>$\Delta\varphi$=グラジエント中の $\varphi$ 変化、$t_G$=グラジエント時間。グラジエント開始時の $k&#x27;$ を $k_0$ とし、$\log k_0 = \log k_w - S\varphi_0$（式6、$\varphi_0$=開始時の $\varphi$)。この手順はパソコン上で短時間に $k_w$・$S$ を与える。</p>
+<h3>2.3 バンド幅 $W$ の予測</h3>
+<p>バンド幅 $W$ も既報の式で予測でき、これと保持時間から<strong>分離度 $R_s$</strong> が計算できる。以上により、任意のグラジエント条件・カラム寸法・流速・粒子径での分離度を机上で予測して最適化できる（この手順が DryLab G に実装されている)。</p>
+<h2>3. バリデーション（予測精度）</h2>
+<p>多数のグラジエント実験データと予測がよく一致した。</p>
+<ul><li><strong>最大精度</strong>（校正に使った $t_G$ 条件付近)では、保持時間 $t_g$ を <strong>±1%（1SD)</strong> で予測。</li><li>その他の $t_G$（5, 10, 160, 320 分)では、保持時間は<strong>平均誤差 ±6%（1SD)</strong>、分離度は <strong>±5%</strong> で予測。これはメソッド開発の目的には十分。</li><li>最高精度を求める場合の手順では、保持時間<strong>平均 ±3%（1SD)</strong>、相対保持($t_2-t_1$)も同程度で予測できた。</li></ul>
+<p>分離度の予測では、絶対保持時間の精度より<strong>相対保持($t_2-t_1$)の精度</strong>の方が重要となる（分離度は隣接ピークの相対位置で決まるため)。</p>
+<h2>4. 結論</h2>
+<p>わずか<strong>2回の初期グラジエント実験</strong>から各成分の $k_w$・$S$ を求め、あとは計算機上でグラジエント時間・組成・形状・カラム寸法・流速・粒子径を変えて分離度を予測・最適化できる。従来の試行錯誤に比べ、はるかに少ない実験でより良い分離に到達できる。バンド間隔（選択性)の変化を活かす「溶媒強度選択性」の利用が鍵。</p>
+<blockquote>補足（生薬QC実務への示唆）: これは現在の DryLab 等「計算機支援メソッド開発」の出発点にあたる論文で、実務上の含意は今も有効。①<strong>指紋・多成分定量のグラジエント最適化を“実験2回＋あとは計算”で進められる</strong>——多成分で試行錯誤が膨れがちな生薬分析で威力を発揮する。②入力は勾配の異なる2グラジエント。ここから各成分の $k_w$・$S$ を逆算し、条件を振って臨界ペアの分離度を予測する。③予測精度は保持で概ね数%・分離度±5%程度と割り切り、<strong>最後は必ず実測で確認</strong>する運用が前提（本サイト収録の保持モデリング総説が指摘する「予測誤差1%以内が理想」という後年の要求水準と読み合わせると、モデルの近似限界も見えてくる)。④$\log k&#x27;$–$\varphi$ の直線(LSS)は近似で、低・高 $\varphi$ 域では曲率が出るため、必要なら二次・NKモデルで補正する（同総説参照)。歴史的な原典だが、「2回測って机上で詰める」という発想は生薬QCの現場でそのまま使える。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="crf-comparison-method-development.html">クロマトグラフィー応答関数(CRF)の普遍的比較研究 — 自動メソッド開発の「良さ」を1数値で測る</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbDまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="drylab-computer-simulation-gradient" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

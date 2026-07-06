@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbDまで</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbDまで">
+<meta property="og:description" content="HPLC/UPLC法の開発とバリデーションにおける実験計画法(DoE)・ケモメトリクスの活用を包括的にまとめた総説の全訳（＋訳者補足）。スクリーニング設計（完全/一部実施要因計画・Plackett-Burman）と応答曲面設計（中心複合・Box-Behnken・Taguchi・Doehlert・D-optimal）を用途と長短で整理し、多項式モデル・ANOVA・頑健性試験、さらにQuality by Design（設計空間）とSix Sigmaへの発展までを解説する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/doe-experimental-designs-hplc/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="doe-experimental-designs-hplc"><h1>HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbDまで</h1><div class="paper-meta"><span class="date">2026-07-03</span> <span class="tag">HPLC・UPLC</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2017.05.006" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">8825810b-1s2.0S0731708517303746main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="doe-experimental-designs-hplc" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="doe-experimental-designs-hplc" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/doe-experimental-designs-hplc/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/doe-experimental-designs-hplc/ai-infographic.webp" alt="HPLC法開発を「1度に1因子(OFAT)」から脱却させる実験計画法(DoE)を体系整理した総説" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: An overview of experimental designs in HPLC method development and validation</li><li>著者: Prafulla Kumar Sahu, Nageswara Rao Ramisetti, Teresa Cecchi, Suryakanta Swain, Chandra Sekhar Patro, Jagadeesh Panda（Raghu College of Pharmacy／CSIR-IICT、インド／ITT Montani、イタリア ほか）</li><li>掲載: <em>Journal of Pharmaceutical and Biomedical Analysis</em> 147 (2018) 590–611. https://doi.org/10.1016/j.jpba.2017.05.006</li><li>インパクトファクター: <strong>3.6</strong>（<em>J. Pharm. Biomed. Anal.</em>, JCR 2024 / Clarivate）</li><li>受理経過: 受領 2017-02-13 / 改訂 2017-05-01 / 採録 2017-05-04</li></ul>
+<blockquote>補足: <strong>DoE (Design of Experiments, 実験計画法)</strong> = 複数の因子を統計的に組んで少ない試行で最適条件・因子影響を突き止める手法。<strong>OFAT (One Factor At A Time)</strong> = 従来の「1度に1因子だけ動かす」やり方（交互作用を見落とす)。生薬QCでも指紋・多成分定量法の条件最適化（移動相組成・pH・温度・流速…)と頑健性試験にそのまま使える方法論。ANOVA=分散分析、RSM=応答曲面法、SST=システム適合性試験、CCD=中心複合計画、BBD=Box-Behnken計画、PBD=Plackett-Burman計画。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>ケモメトリクス的手法は、多数の変数を同時に制御して目的の分離を達成できるため、HPLCの実務に対する貴重な補完とみなされてきた。少ない実験試行で有意因子を効率よく同定・最適化できる。本稿は、高速・超高速LCにおける各種ケモメトリクス手法の有用性を、(i) 溶出試験・前処理から検出（従来検出器のタンデム質量分析への漸進的置換、安定性指示アッセイの重要性を含む)に至るメソッド開発、(ii) スクリーニング・最適化設計によるメソッドバリデーション、について論じる。適切な実験計画の選択（有意因子のスクリーニング／選択因子の組合せ最適化)とケモメトリクスの数理モデルを簡潔に整理し、ケモメトリクス的アプローチの利点を強調する。実験計画からQuality by Designパラダイムへの発展をレビューし、クロマトグラフィーの品質指標としてのSix Sigmaを説明する。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>現象のモデル化には、観測事実に意味を与えるモデルが要る。クロマトグラフィーでは最適化パラメータ空間が広く（pH、添加剤の種類・親油性、有機溶媒濃度、イオン強度、固定相充填…)、分析対象の性質差（非イオン性・イオン化性・イオン性)もあって、最適条件の合理的選択が大きな課題となる。<strong>OFAT（1度に1因子)</strong>は交互作用を捉えられず、非最適・頑健性不明のメソッドに終わりがち。DoE/ケモメトリクスはこれを、少ない試行で有意因子と交互作用を同時評価して克服する。</p>
+<h2>2. 実験計画（Experimental designs）</h2>
+<p>目的により、全設計は<strong>スクリーニング設計</strong>と<strong>応答曲面(最適化)設計</strong>に大別される（Fig. 1、Table 1）。</p>
+<h3>2.1 スクリーニング設計</h3>
+<p>多数の因子から<strong>影響の大きい因子を絞り込む</strong>のが目的。よく使われるのは：</p>
+<ul><li><strong>完全実施要因計画 (FFD)</strong>: 2〜3水準。全因子・全交互作用を評価できるが、因子が増えると試行が急増（16因子超は非現実的)。2〜4因子向き。</li><li><strong>一部実施要因計画 (FrFD)</strong>: 2水準。FFDの一部($1/X^p$、試行数 $X^{n-p}$)。同数因子をより少ない試行で。ただし交互作用情報が不十分で実験誤差を持たないことも。4因子超向き。</li><li><strong>Plackett-Burman計画 (PBD)</strong>: 2水準。$N$（4の倍数)回の試行で最大 $N-1$ 因子を検討。<strong>多数因子から少数の有意主効果を選抜</strong>するのに有効（交互作用は考慮しない)。</li></ul>
+<p>因子影響はANOVAまたは回帰分析で算出。頑健性・ラギッドネス試験にも使う（水準幅が違うだけで手順は同様)。</p>
+<h3>2.2 応答曲面（最適化）設計</h3>
+<p>スクリーニングで選んだ有意因子の<strong>最適設定</strong>を求める。1次モデル（FFD/FrFD、線形仮定)では曲率を捉えられないため、<strong>2次モデル</strong>が必要。多項式モデルの一般形（$2^3$ 要因計画の例)：</p>
+<p>$$Y = B_0 + \sum_i B_i X_i + \sum_{i&lt;j} B_{ij} X_i X_j + \sum_{i&lt;j&lt;k} B_{ijk} X_i X_j X_k \tag{5}$$</p>
+<p>$Y$ は応答、$X$ は符号化因子($\pm1$)、$B$ は係数（RSMで算出)。因子水準の正規化（式4）：$N = (X-L)/(H-L)\times100$（$L$=最低水準、$H$=最高水準)。</p>
+<p>主な応答曲面設計：</p>
+<ul><li><strong>中心複合計画 (CCD, Box-Wilson)</strong>: 3水準。2水準要因計画の核＋中心点＋星型(軸)点($\pm\alpha$)。最小の実験で最大情報。曲率評価に有効。</li><li><strong>Box-Behnken計画 (BBD)</strong>: 3水準。極端な同時条件（全因子が最高/最低)を避けられる。</li><li><strong>Taguchi計画 (TD)</strong>: 直交表(例 L16)。</li><li><strong>Doehlert計画</strong>: 多水準・因子ごとに水準数が違う効率的配置(2因子で7点)。</li><li><strong>D-optimal計画・Hybrid計画</strong>: 制約付き領域や混合系に。</li></ul>
+<p>係数は回帰分析やANOVA、効果・交互作用はコントラスト法やYatesアルゴリズムで計算する。</p>
+<h2>3〜4. ケモメトリクス・モデリングとその応用</h2>
+<p>多重線形回帰(MLR)・PLS等でモデルを作り、応答曲面から最適点を読む。応用例は多岐にわたる（本文では、溶出試験・前処理(SPE/分散液液微量抽出等)・分離条件・検出まで、多数の医薬品・生理活性物質での適用例を紹介)。近年はタンデム質量分析(LC–MS/MS)への移行と、安定性指示アッセイの重要性が高まっている。</p>
+<h2>5. HPLC法バリデーション</h2>
+<h3>5.1 頑健性(Robustness)</h3>
+<p>ICH Q2(R1)に沿い、<strong>手法パラメータを意図的に小さく変動させたときに応答が保たれるか</strong>をDoEで評価。多数の文献が、頑健性試験とシステム適合性試験(SST)基準の設定にスクリーニング設計（PBD・FrFD等)を用いている（本文に文献レビュー表)。少ない試行で「どの因子がどれだけ効くか」を定量でき、SSTの限界値設定の根拠になる。</p>
+<h2>6〜7. DoEからQuality by Designへ</h2>
+<p>DoEは<strong>QbDパラダイム</strong>へ発展する。有意因子を最適化し、<strong>設計空間(design space)</strong> ——CMA（重要メソッド属性)の要件を満たす因子の多変量組合せ領域——を確立すれば、その中では再バリデーションなしに条件を動かせる。さらに<strong>Six Sigma</strong>（工程能力指数などの品質指標)をクロマトグラフィーの品質管理に応用する考え方も紹介される。</p>
+<h2>8〜10. 結論（Conclusions）</h2>
+<p>生データはモデルがあって初めて意味を持つ。クロマトグラフィーの広い最適化パラメータ空間と分析対象の性質差のもとで、合理的に最適条件を選ぶには<strong>実験計画とケモメトリクス</strong>が不可欠。ANOVA・主成分分析・実験計画・多変量解析・人工ニューラルネットワーク・AIがケモメトリクスの一部となり、その利用は急速に広がっている（推定で年約6000編がケモメトリクス的内容を含む)。今後、高感度化した質量分析との連携を軸に、バイオ分析・迅速診断のバイオマーカー探索などで一層重要になる。</p>
+<blockquote>補足（生薬QC実務への示唆）: 生薬の指紋・多成分定量法を作る／移管する現場で、そのまま使える“レシピ集”として読める。実務の型は——(1) <strong>まずスクリーニング</strong>（Plackett-Burman や一部実施要因計画)で、移動相組成・pH・カラム温度・流速・グラジエント勾配など多数の候補因子から「効く因子」を数回の試行で絞る。(2) 次に <strong>応答曲面(CCD や Box-Behnken)</strong> で、絞った2〜3因子を最適化し、分離度・分析時間・ピーク対称性などの応答を同時に満たす条件を探す。(3) 得た多項式モデルから <strong>設計空間(MODR)</strong> を描き、その中で運用すれば頑健性が担保される。(4) <strong>頑健性試験・SST基準</strong>もDoEで定量的に根拠づけできる。OFAT（1因子ずつ)より試行数が少なく、交互作用（例: pHと有機溶媒%の組合せ効果)を見落とさない点が、ロット差の大きい生薬の堅牢な規格づくりに向く。前後の姉妹論文（保持モデリング総説・AQbD総説)と併読すると、モデルベース(DryLab)とDoEベースの2系統の全体像がつかめる。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="medicinal-plants-aqbd-review.html">薬用植物の分析法開発への分析的Quality by Design(AQbD)アプローチ（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li><li><a href="tcm-granulation-pat-review.html">伝統中薬の造粒プロセス解析技術(PAT)と応用（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="doe-experimental-designs-hplc" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
