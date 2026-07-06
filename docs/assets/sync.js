@@ -248,13 +248,19 @@
     });
 
     // フォールバック: INITIAL_SESSION を取りこぼしても既存セッションを反映（loggedIn ガードで二重実行なし）
-    try {
-      var got = await sb.auth.getSession();
-      if (got.data && got.data.session && got.data.session.user && !loggedIn) {
-        user = got.data.session.user;
-        onLogin();
-      }
-    } catch (e) { console.warn("[sync] getSession 失敗", e); }
+    // OAuth 戻り直後はセッション確立が少し遅れることがあるため数回リトライ
+    for (var attempt = 0; attempt < 6 && !loggedIn; attempt++) {
+      try {
+        var got = await sb.auth.getSession();
+        if (got.data && got.data.session && got.data.session.user) {
+          user = got.data.session.user;
+          onLogin();
+          break;
+        }
+      } catch (e) { console.warn("[sync] getSession 失敗", e); }
+      if (!hadAuthParams) break;              // 認証戻りでなければ待つ意味がない
+      await new Promise(function (r) { setTimeout(r, 800); });
+    }
 
     // 認証パラメータ付きで戻ったのに数秒経ってもログインできない＝失敗を通知
     if (hadAuthParams && !authErr) {
