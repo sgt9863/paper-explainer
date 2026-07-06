@@ -210,6 +210,13 @@
     }
     sb = mod.createClient(cfg.url, cfg.anonKey);
     setBtn("ログイン", "メールでログインして全端末同期");
+
+    // ログイン戻りURLにエラーがあれば画面に表示（原因特定用）
+    var authErr = urlAuthError();
+    if (authErr) { openPanel(true); setMsg("ログイン失敗: " + authErr); }
+    // 戻りURLに認証パラメータがあるのに一定時間ログインできなければ知らせる
+    var hadAuthParams = /[?#&](code|access_token|error)=/.test(location.href);
+
     authBtn.addEventListener("click", async function () {
       if (user) {
         setBtn("ログアウト中…");
@@ -248,6 +255,24 @@
         onLogin();
       }
     } catch (e) { console.warn("[sync] getSession 失敗", e); }
+
+    // 認証パラメータ付きで戻ったのに数秒経ってもログインできない＝失敗を通知
+    if (hadAuthParams && !authErr) {
+      setTimeout(function () {
+        if (!loggedIn) {
+          openPanel(true);
+          setMsg("ログインを確認できませんでした。Supabaseの Redirect URLs 設定や user_data テーブルをご確認ください。");
+        }
+      }, 4000);
+    }
+  }
+
+  // 戻りURL(ハッシュ/クエリ)から OAuth エラー文言を取り出す
+  function urlAuthError() {
+    var raw = (location.hash.replace(/^#/, "") + "&" + location.search.replace(/^\?/, ""));
+    var m = /error_description=([^&]+)/.exec(raw) || /error_code=([^&]+)/.exec(raw) || /[?#&]error=([^&]+)/.exec(raw);
+    if (!m) return null;
+    try { return decodeURIComponent(m[1].replace(/\+/g, " ")); } catch (e) { return m[1]; }
   }
 
   if (document.readyState === "loading") {
