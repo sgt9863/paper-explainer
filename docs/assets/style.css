@@ -61,6 +61,19 @@ body {
   flex-direction: column;
   gap: 8px;
 }
+.auth-panel[hidden] { display: none; }
+.auth-google {
+  background: #fff;
+  color: #3c4043;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.auth-google:hover { background: #f6f8fa; }
+.auth-or { text-align: center; font-size: 0.75rem; color: var(--muted); }
 .auth-title { margin: 0; font-weight: 700; font-size: 0.92rem; }
 .auth-email {
   padding: 9px 11px;

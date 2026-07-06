@@ -80,7 +80,12 @@
     panel = document.createElement("div");
     panel.className = "auth-panel";
     panel.hidden = true;
+    var googleHtml = cfg.google
+      ? '<button type="button" class="auth-google">Googleでログイン</button>' +
+        '<div class="auth-or">または</div>'
+      : "";
     panel.innerHTML =
+      googleHtml +
       '<p class="auth-title">メールでログイン</p>' +
       '<input type="email" class="auth-email" placeholder="you@example.com" ' +
       'autocomplete="email" inputmode="email">' +
@@ -94,6 +99,21 @@
     emailInput.addEventListener("keydown", function (e) {
       if (e.key === "Enter") sendLink();
     });
+    var gBtn = panel.querySelector(".auth-google");
+    if (gBtn) gBtn.addEventListener("click", signInWithGoogle);
+  }
+
+  async function signInWithGoogle() {
+    setMsg("Googleへ移動します…");
+    try {
+      var res = await sb.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo: location.href }
+      });
+      if (res.error) setMsg("Googleログイン失敗: " + res.error.message);
+    } catch (e) {
+      setMsg("Googleログイン失敗: " + (e && e.message ? e.message : e));
+    }
   }
 
   async function sendLink() {
@@ -130,22 +150,40 @@
     pushTimer = setTimeout(function () { push(localState()); }, 600);
   }
 
+  var loggedIn = false;   // onLogin の二重実行防止
+  var channel = null;
+
+  function shortEmail(e) {
+    if (!e) return "";
+    return e.length > 22 ? e.slice(0, 20) + "…" : e;
+  }
+
   async function onLogin() {
-    openPanel(false);
-    setBtn("同期中…");
+    if (loggedIn) return;          // getSession と onAuthStateChange の二重発火を防ぐ
+    loggedIn = true;
+    openPanel(false);              // メールフォームを閉じる
+    setMsg("");
+    setBtn("同期中…", user.email || "");
     var remote = await pull();
     var merged = mergeState(localState(), remote || {});
     applyState(merged);
     await push(merged);
-    setBtn("ログアウト", user.email || "");
-    sb.channel("user_data_" + user.id)
-      .on("postgres_changes",
-        { event: "*", schema: "public", table: "user_data", filter: "user_id=eq." + user.id },
-        function (payload) { if (payload.new && payload.new.data) applyState(payload.new.data); })
-      .subscribe();
+    // ログイン中であることを明示（ボタン＝ログアウト操作、メール併記）
+    setBtn("ログアウト（" + shortEmail(user.email) + "）", (user.email || "") + " でログイン中。クリックでログアウト");
+    if (!channel) {
+      channel = sb.channel("user_data_" + user.id)
+        .on("postgres_changes",
+          { event: "*", schema: "public", table: "user_data", filter: "user_id=eq." + user.id },
+          function (payload) { if (payload.new && payload.new.data) applyState(payload.new.data); })
+        .subscribe();
+    }
   }
   function onLogout() {
+    loggedIn = false;
     user = null;
+    if (channel) { try { sb.removeChannel(channel); } catch (e) {} channel = null; }
+    openPanel(false);
+    setMsg("");
     setBtn("ログイン", "メールでログインして全端末同期");
   }
 
