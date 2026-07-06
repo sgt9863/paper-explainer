@@ -200,9 +200,15 @@
     }
     sb = mod.createClient(cfg.url, cfg.anonKey);
     setBtn("ログイン", "メールでログインして全端末同期");
-    authBtn.addEventListener("click", function () {
-      if (user) { sb.auth.signOut(); openPanel(false); }
-      else { openPanel(panel.hidden); }
+    authBtn.addEventListener("click", async function () {
+      if (user) {
+        setBtn("ログアウト中…");
+        try { await sb.auth.signOut({ scope: "local" }); }
+        catch (e) { try { await sb.auth.signOut(); } catch (e2) {} }
+        onLogout();   // onAuthStateChange の発火を待たず確実にUIを更新
+      } else {
+        openPanel(panel.hidden);
+      }
     });
 
     ["noteschange", "statuschange", "favchange"].forEach(function (ev) {
@@ -212,20 +218,17 @@
       });
     });
 
-    sb.auth.onAuthStateChange(function (_event, session) {
+    // onAuthStateChange は購読時に INITIAL_SESSION も発火するので、初期状態もここで拾える
+    // （別途 getSession() で onLogin を呼ぶとログアウト直後に再ログインする競合が起きるため呼ばない）
+    sb.auth.onAuthStateChange(function (event, session) {
+      if (event === "SIGNED_OUT") { onLogout(); return; }
       if (session && session.user) {
-        var wasLoggedOut = !user;
         user = session.user;
-        if (wasLoggedOut) onLogin();
+        onLogin();   // onLogin 内の loggedIn ガードで二重実行を防止
       } else {
         onLogout();
       }
     });
-    var got = await sb.auth.getSession();
-    if (got.data && got.data.session) {
-      user = got.data.session.user;
-      onLogin();
-    }
   }
 
   if (document.readyState === "loading") {
