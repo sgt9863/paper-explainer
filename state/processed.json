@@ -456,6 +456,21 @@
       "title": "ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較",
       "source_pdf": "fphar-17-1843493.pdf",
       "date": "2026-07-07"
+    },
+    "1Hjx3DZS22KknAYFs3Ywrd_Gt2VY52uxI": {
+      "source_pdf": "multibatch-fingerprint-sanhua-decoction.pdf",
+      "slug": "shd-spectrum-effect-fingerprint-ciri",
+      "title": "三化湯(SHD)の効応統合指紋とCIRI作用基盤"
+    },
+    "1SYhpuu_XXiCG-izbE8-TAHu8H9LuK_8L": {
+      "source_pdf": "molecules-28-07011.pdf",
+      "slug": "spectrum-effect-relationships-qc-review",
+      "title": "天然物QCのスペクトル効果関係(総説)"
+    },
+    "18xD0rEii_BZ0jWR4p1hW7zhKP8mVOhg-": {
+      "source_pdf": "1326-article-10.1556-1326.2025.01389.pdf",
+      "slug": "gxn-hplc-cad-saponins-fingerprint",
+      "title": "宮血寧カプセル(GXN)のHPLC-CADサポニン指紋・定量"
     }
   }
 }

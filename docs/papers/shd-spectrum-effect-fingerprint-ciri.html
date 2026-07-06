@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>多バッチ指紋と多指標薬効を統合した三化湯(SHD)の品質評価と脳虚血再灌流傷害への作用基盤</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="多バッチ指紋と多指標薬効を統合した三化湯(SHD)の品質評価と脳虚血再灌流傷害への作用基盤">
+<meta property="og:description" content="脳梗塞（脳虚血再灌流傷害, CIRI)に用いる方剤「三化湯(SHD。大黄・厚朴・羌活・枳実)」12バッチについて、UPLC多波長指紋(33共通ピーク・28成分同定)とラットCIRIモデルの薬効(神経障害スコア・脳梗塞体積・血管新生マーカー)を、スペクトル効果関係の枠組みで灰色関連度分析・OPLS-DAにより結びつけ、薬効に寄与する11の主要活性成分を同定して「効応統合指紋」を構築した研究の全訳（＋訳者補足）。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/shd-spectrum-effect-fingerprint-ciri/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="shd-spectrum-effect-fingerprint-ciri"><h1>多バッチ指紋と多指標薬効を統合した三化湯(SHD)の品質評価と脳虚血再灌流傷害への作用基盤</h1><div class="paper-meta"><span class="date">2026-07-06</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">指紋分析</span> <span class="tag">スペクトル効果</span> <span class="tag">HPLC・UPLC</span> <span class="tag">ケモメトリクス</span> <span class="tag">薬効・薬理</span> &middot; <a href="https://doi.org/10.1021/acsomega.5c08547" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">multibatch-fingerprint-sanhua-decoction.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="shd-spectrum-effect-fingerprint-ciri" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="shd-spectrum-effect-fingerprint-ciri" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/shd-spectrum-effect-fingerprint-ciri/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/shd-spectrum-effect-fingerprint-ciri/ai-infographic.webp" alt="UPLC指紋(33ピーク)＋ラット脳虚血再灌流モデルの薬効を灰色関連度・OPLS-DAで結び「効応統合指紋」を構築" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。表・数値は保持し、全成分リスト等は原文参照とした。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Multibatch Fingerprint Integrated with Multi-Indicator Efficacy for Quality Evaluation of Sanhua Decoction and Investigation of Its Mechanistic Basis against Cerebral Ischemia-Reperfusion Injury</li><li>著者: ... Liu, Kexin Ma, Jinxin Hou, Wei Li, Yi Sui ほか（貴州中医薬大学 中薬学院 ほか, 中国）</li><li>掲載: <em>ACS Omega</em> 2025, 10, 56539–56554. https://doi.org/10.1021/acsomega.5c08547（オープンアクセス）</li><li>インパクトファクター: <strong>4.3</strong>（<em>ACS Omega</em>, JCR 2024 / Clarivate）</li><li>受理経過: 受領 2025-08-26 / 改訂 2025-11-05 / 採録 2025-11-10 / 公開 2025-11-13</li></ul>
+<blockquote>補足: SHD = 三化湯（Sanhua Decoction。大黄 Dahuang・厚朴 Houpo・羌活 Qianghuo・枳実 Zhishi の4生薬)。CIRI = 脳虚血再灌流傷害。<strong>スペクトル効果関係(spectrum-effect relationship)</strong> = 化学指紋(スペクトル)と薬効(効)を統計的に結びつけ、薬効に効く成分を推定する漢方の解析枠組み。GRA=灰色関連度分析、OPLS-DA=直交部分最小二乗判別分析、VEGF=血管内皮増殖因子、ANG=アンジオポエチン。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>漢方のスペクトル効果関係理論に基づき、UPLCで<strong>12バッチ</strong>の三化湯(SHD)の指紋を作成し、薬効との関連を解析して、CIRIに対するSHDの物質基盤解明と薬効評価の新戦略を提示した。UPLC指紋で<strong>33の共通ピーク</strong>を同定し、<strong>28成分</strong>を特性化。ラットCIRIモデルの薬効評価で、SHDは神経障害スコアを有意に改善し脳梗塞体積を縮小、脳組織像を改善し、その効果は血管内皮増殖因子(VEGF)などの主要指標と相関した。灰色関連度分析(GRA)では、33ピーク中<strong>32ピークが薬効と関連度0.706超</strong>で、SHDの抗CIRI作用における多成分の相乗を確認。OPLS-DAで抗CIRI活性と有意に関連する<strong>11の主要活性化合物</strong>を同定。化学指紋と薬効指標を統合した「<strong>効応統合指紋(efficacy-integrated fingerprint)</strong>」を構築し、SHDの内在品質を反映させた。本法はSHDや他の漢方の化学成分探索と薬効物質基盤解明に、科学的で効率的なアプローチを提供する。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>脳卒中は世界の死亡・長期障害の主要因で、障害原因1位・死亡原因2位。脳血管の破裂・閉塞で脳血流が急に途絶え、多系統機能障害を招く。3型（一過性脳虚血発作TIA・出血性・虚血性)のうち<strong>虚血性脳卒中が80〜90%</strong>を占め、血栓・塞栓による血流途絶が主因。虚血ペナンブラへの<strong>血流再開(再灌流)</strong> が最重要治療だが、再灌流は逆に神経損傷を悪化させうる(CIRI)。SHDは大黄・厚朴・羌活・枳実からなり、脳卒中(中風)に用いられてきた。本研究はHPLC/UPLC指紋と薬効の関連を確立し、抗CIRIの物質基盤を明らかにすることを目的とした。</p>
+<h2>2. 材料と方法（Materials and Methods）</h2>
+<h3>試料・試薬</h3>
+<p>SHDは4生薬を<strong>各30.5 g</strong>（大黄・厚朴・羌活・枳実)で煎じて調製。標準品: バイカリン・エモジン誘導体・マグノロール・ホノキオール等(Solarbio)。ラット血管新生マーカーELISA: VEGF・ANG-1・ANG-2(Jiangsu Jingmei)。</p>
+<h3>UPLC条件（指紋）</h3>
+<ul><li>装置: Agilent、ZORBAX Eclipse Plus C18（4.6 × 250 mm, 5 μm)、カラム温度 35 ℃</li><li>検出波長プログラム: 0–17 min <strong>254 nm</strong>／17–38 min <strong>310 nm</strong>／38–55 min <strong>254 nm</strong>、注入量 5 μL</li><li>12バッチの指紋を作成。基準ピークは <strong>peak 12</strong>。</li></ul>
+<h3>バリデーション</h3>
+<p>精度・再現性・安定性いずれも、共通ピークの相対保持時間(RRT)・相対ピーク面積(RPA)の <strong>RSD &lt; 3%（n=6)</strong>（ICH Q2(R1)の許容基準 RSD ≤ 3.0%を満たす)。</p>
+<h3>薬効評価（ラットCIRIモデル）</h3>
+<p>中大脳動脈閉塞・再灌流でCIRIを作成。神経障害スコア、脳梗塞体積(TTC染色)、脳組織像(HE)を評価し、VEGF・ANG-1・ANG-2を投与2時間後に測定。</p>
+<h3>スペクトル効果解析</h3>
+<p>化学指紋(33共通ピーク)と薬効指標を、<strong>灰色関連度分析(GRA)</strong> と <strong>OPLS-DA</strong> で結びつけた。</p>
+<h2>3. 結果（Results）</h2>
+<h3>指紋と成分同定</h3>
+<p>UPLC指紋で<strong>33共通ピーク</strong>を同定し<strong>28成分</strong>を特性化。同定例（一部): (7)マグノリンB・(8)マグノフロリン・(9)ダイジン・(10)マグノリンA・(11)フェルラ酸・(12)アロエエモジン-8-O-β-グルコシド・(13)レイン-8-O-β-グルコシド・(14)デクルシン・(15)ラポンチシン・(16)ケルシトリン等（全同定は原文Table参照。ヘスペリジン・ネオヘスペリジン・エモジン-1-O-グルコシド・クリソファノール-8-O-β-グルコシド・アロエエモジン・レイン・ノビレチン等を含む)。由来生薬（大黄=アントラキノン/スチルベン、厚朴=リグナン/アルカロイド、枳実=フラボノイド、羌活=クマリン)にまたがる。</p>
+<h3>バリデーション</h3>
+<p>精度・再現性・安定性のRRT/RPAはいずれもRSD&lt;3%で、装置精度・方法の再現性が良好。</p>
+<h3>薬効（CIRI）</h3>
+<p>SHDは神経障害スコアを有意に改善、脳梗塞体積を縮小、脳組織像を改善。効果は血管新生マーカー(VEGF等)と相関。神経障害なし(スコア0)を示した対照的なバッチは他バッチより類似度が有意に低く、化学組成の差が薬効差につながることを示唆。</p>
+<h3>スペクトル効果関係</h3>
+<p><strong>GRA</strong>: 33ピーク中<strong>32ピークが薬効との関連度0.706超</strong>で、多成分の相乗効果を確認（GRAは関連の方向〈正/負〉は示せない)。<strong>OPLS-DA</strong>: 抗CIRI活性と有意に関連する<strong>11の主要活性成分</strong>を同定（フェルラ酸・アロエエモジン-8-O-β-グルコシド・クロロゲン酸などを含む)。200回の並べ替え検定で、元のR²・Q²が並べ替えモデルより有意に高く、切片も妥当で過学習なし。OPLS-DAの結論はGRAの結果に支持された。</p>
+<h3>効応統合指紋</h3>
+<p>化学指紋と薬効指標を統合した「<strong>効応統合指紋(efficacy-integrated fingerprint)</strong>」を構築し、SHDの内在品質(化学＋薬効)を1つの枠組みで反映させた。</p>
+<h2>4. 結論（Conclusions）</h2>
+<p>本研究は12バッチのSHDのUPLC指紋(33共通ピーク・28成分同定)を確立し、ラットCIRIモデルの薬効(神経障害スコア・脳梗塞体積・血管新生マーカー)と結びつけた。GRA(32/33ピークが関連度&gt;0.706)とOPLS-DA(11活性成分)により、抗CIRI作用の物質基盤を多成分の相乗として提示し、化学と薬効を統合した「効応統合指紋」を構築。SHDや他の漢方の成分探索・薬効物質基盤解明に科学的・効率的なアプローチを与える。</p>
+<blockquote>補足（実務的示唆）: 「指紋(化学)だけ」でも「薬理(効)だけ」でもなく、<strong>両者を統計で結んで“効く成分”を絞る</strong>スペクトル効果研究の典型例。実務の要点は——①UPLC<strong>多波長指紋</strong>(254/310/254 nm)で由来生薬をまたぐ33ピークを面で捉える、②<strong>同一バッチ</strong>で薬効(CIRIモデル)も測る、③<strong>GRA</strong>で全ピークの薬効寄与を横断的にスクリーニング(32/33が関連度&gt;0.706＝相乗)、④<strong>OPLS-DA</strong>(VIP・並べ替え検定で過学習チェック)で寄与の大きい11成分に絞る、という多段設計。単一マーカー管理では拾えない“薬効連動の品質”を、効応統合指紋という1つの尺度に落とし込む発想が、生薬QCで「規格成分＝薬効成分」を近づける方向性を示す。本サイト収録の他のスペクトル効果論文(五味清濁丸・ReDuNing注射剤)と同じ系統で読める。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="xzol-ai-spectrum-effect-nir-qc.html">AIを活用した漢方の活性成分探索と非破壊品質管理の戦略 — 血府逐瘀口服液（XZOL）を例として</a><span class="rel-tags"><span class="rel-tag">スペクトル効果</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hugan-capsule-fwfp-ecfp.html">護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価</a><span class="rel-tags"><span class="rel-tag">スペクトル効果</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="mmdhp-twffp-ecfp-antioxidant.html">明目地黄丸（MMDHP）の品質一致性評価 — HPLC三波長融合指紋＋電気化学指紋＋抗酸化法の併用</a><span class="rel-tags"><span class="rel-tag">スペクトル効果</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="rdn-uplc-orbitrap-spectrum-effect.html">熱毒寧注射液(RDN)のUPLC-Orbitrap MS/MS＋生物学的力価＋多変量統計による総合的品質評価</a><span class="rel-tags"><span class="rel-tag">スペクトル効果</span><span class="rel-tag">薬効・薬理</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="shd-spectrum-effect-fingerprint-ciri" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

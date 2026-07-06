@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HPLC-CAD(荷電化エアロゾル検出)による宮血寧カプセル(GXN)のサポニン指紋・同時定量</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="HPLC-CAD(荷電化エアロゾル検出)による宮血寧カプセル(GXN)のサポニン指紋・同時定量">
+<meta property="og:description" content="婦人科疾患（不正子宮出血など)に用いる中成薬「宮血寧カプセル(GXN。重楼〈Rhizoma Paridis〉のサポニンが主成分)」について、低波長UVで応答が弱く定量が難しいサポニンを荷電化エアロゾル検出器(CAD)と組み合わせたHPLC-CADで指紋化し、6種の重楼サポニンを同時定量したQC法開発研究の全訳（＋訳者補足）。6バッチで9共通ピーク・類似度&gt;0.960、回収率98.56-101.50%・RSD&lt;2.0%と良好な再現性を示した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/gxn-hplc-cad-saponins-fingerprint/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="gxn-hplc-cad-saponins-fingerprint"><h1>HPLC-CAD(荷電化エアロゾル検出)による宮血寧カプセル(GXN)のサポニン指紋・同時定量</h1><div class="paper-meta"><span class="date">2026-07-06</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">指紋分析</span> <span class="tag">多成分定量</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1556/1326.2025.01389" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1326-article-10.1556-1326.2025.01389.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="gxn-hplc-cad-saponins-fingerprint" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="gxn-hplc-cad-saponins-fingerprint" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/gxn-hplc-cad-saponins-fingerprint/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/gxn-hplc-cad-saponins-fingerprint/ai-infographic.webp" alt="UV応答の弱い重楼サポニンを荷電化エアロゾル検出(CAD)で指紋化＋6サポニンを同時定量した宮血寧カプセルのQC法" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。表・数値は保持。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Simultaneous chemical fingerprint and quantitative analysis of saponins in Gongxuening capsule by HPLC-CAD</li><li>著者: Yang Lou, Yutian Wang, Mengting Lai, Shuyang Li, Mingran Dong, Hongwei Xue, Xi Chen, Juan Lu, Ruiping Chai（中国医学科学院薬用植物研究所／北京協和医学院／Thermo Fisher Scientific 中国, 中国）</li><li>掲載: <em>Acta Chromatographica</em> 2025, オンライン先行公開 (ACHROM-2025.01389). https://doi.org/10.1556/1326.2025.01389</li><li>インパクトファクター: <strong>1.6</strong>（<em>Acta Chromatographica</em>, JCR 2024 / Clarivate。1.55）</li><li>受理経過: 受領 2025-07-03 / 採録 2025-12-30</li></ul>
+<blockquote>補足: GXN = 宮血寧カプセル（Gongxuening capsule。重楼〈Rhizoma Paridis、ツクバネソウ属 <em>Paris</em>〉のステロイドサポニンが主成分。不正子宮出血など婦人科疾患に用いる中成薬)。<strong>CAD (Charged Aerosol Detector, 荷電化エアロゾル検出器)</strong> = 溶出物を噴霧・帯電させ、粒子の電荷を測る<strong>汎用（ユニバーサル)検出器</strong>。発色団やUV吸収に依存せず、揮発性の低い成分を質量に概ね比例して検出できるため、<strong>UV応答が弱いサポニンの定量に有利</strong>。本論文は分析法(QC)開発の研究論文。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p><strong>背景</strong>: 宮血寧カプセル(GXN)は中国で婦人科疾患治療に常用される中成薬。複雑な化学組成のため現行の検出法は制約が多く不十分。サポニン成分は<strong>極性範囲が広く、低波長UV検出で応答が弱く</strong>、干渉ピークも多いため、活性成分の正確な定量が難しい。</p>
+<p><strong>目的</strong>: HPLCと<strong>荷電化エアロゾル検出器(CAD)</strong> を組み合わせたHPLC-CADでGXNのクロマト指紋を作り、主要成分を定量する。</p>
+<p><strong>方法</strong>: Acclaim C30 カラム(3 mm × 250 mm, 3 μm)で、アセトニトリル(A)／水(B)のグラジエント（0–5 min 40% A／5–20 min 40→45%／20–35 min 45→50%／35–45 min 50%)、流速 0.4 mL/min、カラム温度 <strong>10 ℃</strong>、注入量 1 μL。CADはサンプリング5 Hz、フィルタ定数3.6 s、噴霧温度50 ℃。<strong>6バッチ</strong>のGXNで指紋を作り類似度を評価し、主要成分を定量。</p>
+<p><strong>結果</strong>: GXNのHPLC指紋を確立し、<strong>9の共通ピーク</strong>を同定、6バッチの類似度は<strong>0.960超</strong>。ポリフィリンI(PPI)・II(PPII)・VII(PPVII)・D(PPD)・H(PPH)・グラシリン(gracillin)の6サポニンは、対応濃度範囲でピーク面積が良好な直線性（相関係数 <strong>&gt;0.999</strong>)を示し、回収率は <strong>98.56〜101.50%</strong>（RSD <strong>2.0%未満</strong>)。</p>
+<p><strong>結論</strong>: 本法は広い適用性・高感度・優れた再現性・高い信頼性を示し、複雑な重楼(Rhizoma Paridis)サポニンを含むGXNの検出・品質管理に適する。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>GXNは重楼のサポニンを主成分とし、止血・婦人科疾患に用いられる。重楼のステロイドサポニン（ポリフィリン類)は<strong>発色団に乏しく低波長UVで応答が弱い</strong>うえ、極性が広範で干渉ピークが多く、UV検出では正確な定量が困難。CADは、成分のUV吸収に依存せず、非揮発性成分を質量に概ね比例して検出できる汎用検出器で、こうしたサポニンの一斉検出・定量に適する。本研究はHPLC-CADでGXNの指紋と主要サポニン定量を確立する。</p>
+<h2>2. 材料と方法（Materials and Methods）</h2>
+<h3>HPLC-CAD条件</h3>
+<ul><li>カラム: Acclaim C30（3 mm × 250 mm, 3 μm）、カラム温度 <strong>10 ℃</strong>（低温でサポニンの分離を改善)</li><li>移動相: アセトニトリル(A)／水(B)。グラジエント: 0–5 min 40% A／5–20 min 40→45% A／20–35 min 45→50% A／35–45 min 50% A</li><li>流速 0.4 mL/min、注入量 1 μL</li><li>CAD: サンプリング周波数 5 Hz、フィルタ定数 3.6 s、噴霧(atomization)温度 50 ℃</li></ul>
+<h3>試料・定量</h3>
+<p>6バッチのGXNで指紋を作成。標準品: ポリフィリンI・II・VII・D・H、グラシリンの6サポニンで検量線を作成し定量。</p>
+<h2>3. 結果（Results）</h2>
+<h3>指紋と類似度</h3>
+<p>HPLC-CAD指紋で<strong>9共通ピーク</strong>を同定。6バッチの類似度は<strong>0.960超</strong>で、バッチ間の一貫性が高い。</p>
+<h3>6サポニンの定量とバリデーション</h3>
+<p>ポリフィリンI(PPI)・II(PPII)・VII(PPVII)・D(PPD)・H(PPH)・グラシリンの6成分は、対応濃度範囲でピーク面積が良好な直線性（相関係数 <strong>&gt;0.999</strong>)。回収率 <strong>98.56〜101.50%</strong>、RSD <strong>&lt;2.0%</strong> で、確度・再現性が良好。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>HPLC-CADにより、UV応答の弱い重楼サポニンを含むGXNの指紋(9共通ピーク・類似度&gt;0.960)と6サポニンの同時定量法を確立した。本法は広適用性・高感度・優れた再現性・高信頼性を示し、複雑な重楼サポニンを含むGXNの品質管理に適する。</p>
+<blockquote>補足（実務的示唆）: 要点は<strong>検出器の選択</strong>。生薬QCで指紋・定量を組むとき、対象成分に発色団が乏しい（サポニン・糖類・脂質等)と、標準的なUV/DAD検出では応答が弱く・干渉に埋もれて定量できない。ここで <strong>CAD（荷電化エアロゾル検出)</strong> や ELSD（蒸発光散乱)といった<strong>汎用検出器</strong>を使うと、UV吸収に依存せず質量ベースで一斉検出できる。CADはELSDより感度・直線性に優れることが多い。実装のコツは、①<strong>C30カラム＋低カラム温度(10℃)</strong> で広極性サポニンを分離、②CADの噴霧温度・フィルタ定数・サンプリング周波数を最適化、③6サポニン(ポリフィリン類・グラシリン)で検量線を作り回収率98–101%・RSD&lt;2%を確認。UVで“見えない”成分をQC対象にできる点で、本サイト収録の他のサポニン系・多成分定量論文を補完する検出技術の実例として読める。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hugan-capsule-fwfp-ecfp.html">護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qhp-hplc-fingerprint-chemometrics.html">指紋分析・多指標成分定量とケモメトリクスを組み合わせた清胃黄連丸(QHPs)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="xzol-ai-spectrum-effect-nir-qc.html">AIを活用した漢方の活性成分探索と非破壊品質管理の戦略 — 血府逐瘀口服液（XZOL）を例として</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="gxn-hplc-cad-saponins-fingerprint" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
