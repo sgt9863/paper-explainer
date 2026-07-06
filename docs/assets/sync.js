@@ -163,19 +163,29 @@
     loggedIn = true;
     openPanel(false);              // メールフォームを閉じる
     setMsg("");
-    setBtn("同期中…", user.email || "");
-    var remote = await pull();
-    var merged = mergeState(localState(), remote || {});
-    applyState(merged);
-    await push(merged);
-    // ログイン中であることを明示（ボタン＝ログアウト操作、メール併記）
+    // まずログイン状態を即表示（同期の成否に依存させない）
     setBtn("ログアウト（" + shortEmail(user.email) + "）", (user.email || "") + " でログイン中。クリックでログアウト");
+    // 他端末の更新を受信
     if (!channel) {
-      channel = sb.channel("user_data_" + user.id)
-        .on("postgres_changes",
-          { event: "*", schema: "public", table: "user_data", filter: "user_id=eq." + user.id },
-          function (payload) { if (payload.new && payload.new.data) applyState(payload.new.data); })
-        .subscribe();
+      try {
+        channel = sb.channel("user_data_" + user.id)
+          .on("postgres_changes",
+            { event: "*", schema: "public", table: "user_data", filter: "user_id=eq." + user.id },
+            function (payload) { if (payload.new && payload.new.data) applyState(payload.new.data); })
+          .subscribe();
+      } catch (e) { console.warn("[sync] realtime 失敗", e); }
+    }
+    // 同期は裏で実行。失敗してもログイン表示は保つ
+    try {
+      setMsg("同期中…");
+      var remote = await pull();
+      var merged = mergeState(localState(), remote || {});
+      applyState(merged);
+      await push(merged);
+      setMsg("");
+    } catch (e) {
+      console.warn("[sync] 同期エラー", e);
+      setMsg("同期エラー（ログインは継続）");
     }
   }
   function onLogout() {
@@ -229,6 +239,15 @@
         onLogout();
       }
     });
+
+    // フォールバック: INITIAL_SESSION を取りこぼしても既存セッションを反映（loggedIn ガードで二重実行なし）
+    try {
+      var got = await sb.auth.getSession();
+      if (got.data && got.data.session && got.data.session.user && !loggedIn) {
+        user = got.data.session.user;
+        onLogin();
+      }
+    } catch (e) { console.warn("[sync] getSession 失敗", e); }
   }
 
   if (document.readyState === "loading") {
