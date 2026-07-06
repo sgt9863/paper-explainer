@@ -6,7 +6,7 @@
 <title>コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）</title>
 <meta property="og:type" content="article">
 <meta property="og:title" content="コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）">
-<meta property="og:description" content="逆相HPLCのグラジエント分離を最適化するコンピュータシミュレーション（DryLab G）の基礎論文の全訳（＋訳者補足）。勾配の異なる初期グラジエント2回の実験結果から各成分のkw・S（LSSモデル）を逆算し、グラジエント時間・組成・形状・カラム寸法・流速・粒子径を変えたときの保持時間・ピーク幅・分離度を予測。実験の試行錯誤を大幅に減らして最適分離に到達する、計算機支援メソッド開発の礎となった1987年の古典。">
+<meta property="og:description" content="逆相HPLCのグラジエント分離を最適化するコンピュータシミュレーション（DryLab G）の基礎論文の全訳（＋訳者補足）。勾配の異なる初期グラジエント2回の実験結果から各成分のkw・S（LSSモデル）を逆算し、グラジエント時間・組成・形状・カラム寸法・流速・粒子径を変えたときの保持時間・ピーク幅・分離度を予測。フタル酸エステル・ステロイド・OPAアミノ酸22成分などで検証し、実験の試行錯誤を大幅に減らして最適分離に到達する、計算機支援メソッド開発の礎となった1987年の古典。">
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/drylab-computer-simulation-gradient/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
@@ -20,18 +20,18 @@
 <div class="layout"><main class="container">
 <article class="paper" data-slug="drylab-computer-simulation-gradient"><h1>コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）</h1><div class="paper-meta"><span class="date">2026-07-03</span> <span class="tag">HPLC・UPLC</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1007/BF02688488" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">11e1a2b5-BF02688488.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="drylab-computer-simulation-gradient" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="drylab-computer-simulation-gradient" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/drylab-computer-simulation-gradient/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/drylab-computer-simulation-gradient/ai-infographic.webp" alt="たった2回のグラジエント実験から保持・ピーク幅・分離度を予測し最適条件を机上で探すDryLab Gの基礎論文" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。数式は原文の式番号を保持。 --&gt;</p>
 <h2>書誌情報</h2>
-<ul><li>原題: Computer Simulation as a Means of Developing an Optimized Reversed-Phase Gradient-Elution Separation</li><li>著者: J. W. Dolan, L. R. Snyder（LC Resources Inc., 米国), M. A. Quarry（Du Pont社 Medical Products Dept., 米国）</li><li>掲載: <em>Chromatographia</em> 24 (1987) 261–276. https://doi.org/10.1007/BF02688488</li><li>インパクトファクター: <strong>1.3</strong>（<em>Chromatographia</em>, JCR 2024 / Clarivate）</li></ul>
-<blockquote>補足: 本論文は、後に広く普及する市販ソフト <strong>DryLab</strong> の基礎を築いた古典（1987年)。「実験を2回だけやれば、あとは計算機上で条件を変えて最適分離を探せる」という<strong>計算機支援メソッド開発</strong>の考え方の原点。生薬QCでも、指紋・多成分定量のグラジエント条件最適化に同種の手法（DryLab等)が今も使われる。$k&#x27;$=保持係数、$\varphi$（原文の $\phi$）=移動相中の有機溶媒体積分率、$k_w$=純水中($\varphi=0$)の保持係数、$S$=溶質固有の定数、$t_G$=グラジエント時間、$t_D$=ドウェル時間。</blockquote>
+<ul><li>原題: Computer Simulation as a Means of Developing an Optimized Reversed-Phase Gradient-Elution Separation</li><li>著者: J. W. Dolan, L. R. Snyder（LC Resources Inc., 米国), M. A. Quarry（Du Pont社 Medical Products Dept., 米国）</li><li>掲載: <em>Chromatographia</em> 24 (1987) 261–276. https://doi.org/10.1007/BF02688488</li><li>インパクトファクター: <strong>1.3</strong>（<em>Chromatographia</em>, JCR 2024 / Clarivate）</li><li>キーワード: グラジエント溶出／逆相／メソッド開発／コンピュータシミュレーション／保持予測</li></ul>
+<blockquote>補足: 本論文は、後に広く普及する市販ソフト <strong>DryLab</strong> の基礎を築いた古典（1987年)。「実験を2回だけやれば、あとは計算機上で条件を変えて最適分離を探せる」という<strong>計算機支援メソッド開発</strong>の考え方の原点。生薬QCでも、指紋・多成分定量のグラジエント条件最適化に同種の手法（DryLab等)が今も使われる。用語: $k&#x27;$=保持係数、$\varphi$（原文 $\phi$)=移動相中の有機溶媒体積分率、$k_w$=純水中($\varphi=0$)の $k&#x27;$、$S$=溶質固有の定数、$t_g$=グラジエント保持時間、$t_G$=グラジエント時間、$t_D$=ドウェル時間、$t_0$=カラム死時間、$b$=グラジエント勾配パラメータ、$\bar{k}$=バンドがカラム中点にあるときの実効 $k&#x27;$、$N$=理論段数、$\alpha$=分離係数（選択性)。</blockquote>
 <h2>要旨（Summary）</h2>
 <p>逆相グラジエント分離をシミュレートするパソコン用プログラム <strong>DryLab G</strong> を記述する。最初に<strong>2回の実験グラジエント</strong>を行えば、本プログラムでユーザーは、グラジエント条件（グラジエント時間・移動相の初期/最終%有機溶媒・グラジエント形状)・カラム寸法・流速・粒子径を変えて最終分離を作り込める。このアプローチは、等温分離で最近報告された「<strong>溶媒強度選択性</strong>」を活用する。この手順によるメソッド開発は、はるかに少ない労力でより良い分離をもたらす。バリデーションと応用の例を示す。</p>
 <h2>1. 序論（Introduction）</h2>
-<p>グラジエント溶出は多くの試料のHPLC分析に有用。広い保持範囲の混合物は等温では扱えず、狭い保持範囲でもグラジエントの方がよく分離することがある。グラジエント法の一般原理は既知だが、その潜在能力が実務で十分に活かされることは稀。技術本来が複雑で分離変数が多く、条件変更が予想外の結果と追加実験を招きがち。グラジエントを要する試料は成分数も多く、系統的なメソッド開発が難しい。効果的なグラジエント利用は、条件変更で生じる<strong>バンド間隔(選択性 α)の変化</strong>を活かすべきである。</p>
-<p>市販ソフト(DryLab G)は、実験条件の関数として分離を予測できる。分離度の予測には各成分の<strong>保持時間 $t_g$</strong> とバンド幅 $W$ が必要となる。</p>
+<p>グラジエント溶出は多くの試料のHPLC分析に有用。広い保持範囲の混合物は等温では効果的に扱えず、狭い保持範囲でもグラジエントの方がよく分離することがある。かつては様々な理由からグラジエントを敬遠する人が多かったが、状況は変わりつつあり、将来はほとんどのラボで日常的に使われると期待される。</p>
+<p>グラジエント法の開発・最適化の一般原理は既知だが、その潜在能力が実務で十分に活かされることは稀。技術本来が複雑で分離変数が多く、条件変更が予想外の結果と追加実験を招きがち。グラジエントを要する試料は成分数も多く、系統的なメソッド開発が難しい。効果的なグラジエント利用は、条件変更で生じる<strong>バンド間隔(選択性 $\alpha$)の変化</strong>を活かすべきである。市販ソフト DryLab G は、実験条件の関数として分離（各成分の保持時間 $t_g$ とバンド幅 $W$、そこから分離度)を予測できる。</p>
 <h2>2. 予測の理論</h2>
 <h3>2.1 保持時間 $t_g$ の予測</h3>
 <p>グラジエント溶出の保持時間は積分方程式(式2)で与えられる：</p>
 <p>$$\int_0^{t_g} \frac{F\,dt}{V_m(1 + k&#x27;)} = 1 \tag{2}$$</p>
-<p>$F$=流速、$V_m$=カラム死容積($=F t_0$)、$k&#x27;$=グラジエント中の時刻 $t$ における保持係数。逆相HPLCでは $k&#x27;$ が有機溶媒体積分率 $\varphi$ と近似的に次式(<strong>LSSモデル</strong>)で関係する：</p>
+<p>$F$=流速、$V_m$=カラム死容積($=F t_0$)、$k&#x27;$=グラジエント中の時刻 $t$ における保持係数。複数区間のグラジエント（初期移動相での前溶出・最終移動相での後溶出を含む)では、各区間に式(2)の別形を適用して合成する。逆相HPLCでは $k&#x27;$ が有機溶媒体積分率 $\varphi$ と近似的に次式(<strong>LSSモデル</strong>)で関係する：</p>
 <p>$$\log k&#x27; = \log k_w - S\varphi \tag{3}$$</p>
 <p>$S$ は溶質固有の定数、$k_w$ は $\varphi=0$ での $k&#x27;$。この式を第一近似とし、$\log k&#x27;$ 対 $\varphi$ の小さな曲率は補正できる。</p>
 <h3>2.2 $k_w$ と $S$ の推定：2回の初期グラジエント</h3>
@@ -40,16 +40,37 @@
 <p>$$(t_g)_j = \frac{t_0}{b_j}\log(2.3\,k_0\,b_j + 1) + t_0 + t_D \tag{4b}$$</p>
 <p>$t_D$=装置のドウェル時間（グラジエントがミキサーからカラム入口へ届くまでの時間)。勾配パラメータ $b$ は：</p>
 <p>$$b = \frac{V_m\,\Delta\varphi\,S}{t_G\,F} \tag{5}$$</p>
-<p>$\Delta\varphi$=グラジエント中の $\varphi$ 変化、$t_G$=グラジエント時間。グラジエント開始時の $k&#x27;$ を $k_0$ とし、$\log k_0 = \log k_w - S\varphi_0$（式6、$\varphi_0$=開始時の $\varphi$)。この手順はパソコン上で短時間に $k_w$・$S$ を与える。</p>
+<p>$\Delta\varphi$=グラジエント中の $\varphi$ 変化、$t_G$=グラジエント時間。グラジエント開始時の $k&#x27;$ を $k_0$ とし：</p>
+<p>$$\log k_0 = \log k_w - S\varphi_0 \tag{6}$$</p>
+<p>$\varphi_0$=開始時の $\varphi$。この手順はパソコン上で短時間に $k_w$・$S$ を与える（初期グラジエントで前溶出があるとより複雑になる)。</p>
 <h3>2.3 バンド幅 $W$ の予測</h3>
-<p>バンド幅 $W$ も既報の式で予測でき、これと保持時間から<strong>分離度 $R_s$</strong> が計算できる。以上により、任意のグラジエント条件・カラム寸法・流速・粒子径での分離度を机上で予測して最適化できる（この手順が DryLab G に実装されている)。</p>
-<h2>3. バリデーション（予測精度）</h2>
-<p>多数のグラジエント実験データと予測がよく一致した。</p>
-<ul><li><strong>最大精度</strong>（校正に使った $t_G$ 条件付近)では、保持時間 $t_g$ を <strong>±1%（1SD)</strong> で予測。</li><li>その他の $t_G$（5, 10, 160, 320 分)では、保持時間は<strong>平均誤差 ±6%（1SD)</strong>、分離度は <strong>±5%</strong> で予測。これはメソッド開発の目的には十分。</li><li>最高精度を求める場合の手順では、保持時間<strong>平均 ±3%（1SD)</strong>、相対保持($t_2-t_1$)も同程度で予測できた。</li></ul>
-<p>分離度の予測では、絶対保持時間の精度より<strong>相対保持($t_2-t_1$)の精度</strong>の方が重要となる（分離度は隣接ピークの相対位置で決まるため)。</p>
-<h2>4. 結論</h2>
-<p>わずか<strong>2回の初期グラジエント実験</strong>から各成分の $k_w$・$S$ を求め、あとは計算機上でグラジエント時間・組成・形状・カラム寸法・流速・粒子径を変えて分離度を予測・最適化できる。従来の試行錯誤に比べ、はるかに少ない実験でより良い分離に到達できる。バンド間隔（選択性)の変化を活かす「溶媒強度選択性」の利用が鍵。</p>
-<blockquote>補足（生薬QC実務への示唆）: これは現在の DryLab 等「計算機支援メソッド開発」の出発点にあたる論文で、実務上の含意は今も有効。①<strong>指紋・多成分定量のグラジエント最適化を“実験2回＋あとは計算”で進められる</strong>——多成分で試行錯誤が膨れがちな生薬分析で威力を発揮する。②入力は勾配の異なる2グラジエント。ここから各成分の $k_w$・$S$ を逆算し、条件を振って臨界ペアの分離度を予測する。③予測精度は保持で概ね数%・分離度±5%程度と割り切り、<strong>最後は必ず実測で確認</strong>する運用が前提（本サイト収録の保持モデリング総説が指摘する「予測誤差1%以内が理想」という後年の要求水準と読み合わせると、モデルの近似限界も見えてくる)。④$\log k&#x27;$–$\varphi$ の直線(LSS)は近似で、低・高 $\varphi$ 域では曲率が出るため、必要なら二次・NKモデルで補正する（同総説参照)。歴史的な原典だが、「2回測って机上で詰める」という発想は生薬QCの現場でそのまま使える。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="crf-comparison-method-development.html">クロマトグラフィー応答関数(CRF)の普遍的比較研究 — 自動メソッド開発の「良さ」を1数値で測る</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbDまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+<p>グラジエント溶出のバンド幅は次式で与えられる：</p>
+<p>$$W = t_0(1 + k_f)\,J\,G\,N^{-1/2} \tag{7}$$</p>
+<p>$k_f$=バンドがカラムを出る時点の $k&#x27;$、$N$=段数、$G$=グラジエント「圧縮係数」、$J$=急峻なグラジエントで生じる異常なバンド拡がりの補正係数。実験の $J$ と計算の $G$ の積は、$b$ の全域で $JG \approx 1.1 \pm 0.1$（式8)となるため、式(7)は近似的に：</p>
+<p>$$W \approx 1.1\,t_0(1 + k_f)\,N^{-1/2} \tag{9}$$</p>
+<p>と書ける（他者の実験データとも概ね一致)。バンドがカラムを出る時の $k_f$ は：</p>
+<p>$$k_f = \frac{1}{2.3b + (1/k_0)} \tag{10}$$</p>
+<p>式(9)の $N$ は、グラジエントの実効 $k&#x27;$（バンドがカラム中点にあるときの $\bar{k}$)が等温 $k&#x27;$ に等しい「対応する等温系」で測った段数で、条件と各溶質の分子量から予測できる。</p>
+<h3>2.4 グラジエント溶出の分離度制御</h3>
+<p>グラジエントの分離度も、等温と同じ因子（保持係数 $\bar{k}$・段数 $N$・分離係数 $\alpha$)の関数で表せる：</p>
+<p>$$R_s = \frac{1}{4}(\alpha - 1)\,N^{1/2}\left[\frac{\bar{k}}{1+\bar{k}}\right] \tag{11}$$</p>
+<p>従来の議論は $N$ と実効 $\bar{k}$ の重要性を強調してきた（グラジエント条件を系統的に変えて $N$・$\bar{k}$ を動かし、ピーク容量と全体分離度を最大化する)。しかし著者らは、<strong>バンド間隔（$\alpha$ の値)の変化も分離最適化で同等に重要</strong>と考える。等温で $\alpha$ を制御する全変数（有機溶媒の種類、pH、温度、固定相の変更など)はグラジエントでも同様に使える。メソッド開発の初期段階では、グラジエント条件を変えて $\bar{k}$ を変えることで $\alpha$ を都合よく変えられる。実効保持は：</p>
+<p>$$\bar{k} = \frac{1}{1.15\,b} \tag{12}$$</p>
+<p>流速やグラジエント時間だけでなく、$\varphi$ の変更や<strong>複雑なグラジエント（勾配の異なる直線区間の組合せ)</strong> でも同様のバンド間隔変化が得られ、これがグラジエントにおけるバンド間隔の大きな制御余地を与える。</p>
+<h2>3. 実験（Experimental）</h2>
+<ul><li><strong>装置</strong>: DuPont 8800 液体クロマトグラフ、Model 860 固定波長(254 nm)検出器、カラムオーブン。</li><li><strong>試料</strong>: 多環芳香族炭化水素混合物(Supelco)、除草剤混合物(DuPont農薬部門。一部は組成非開示)、およびフタル酸エステル・ステロイド・OPAアミノ酸（後述)。</li><li><strong>シミュレーション</strong>: すべて IBM XT パソコン上で DryLab G ソフト(LC Resources)を使用。</li></ul>
+<h2>4. 結果と考察（Results and Discussion）</h2>
+<h3>4.1 グラジエント保持予測の精度</h3>
+<p>本研究は、<strong>初期グラジエント2回</strong>から導いた $k_w$・$S$ による $t_g$ 予測の精度に注目する。これらは主に分離度予測(式1)に使うため、個々の $t_g$ より<strong>相対保持 $(t_2-t_1)$ の精度</strong>が重要。DryLab G は (a) $k_w$・$S$ 導出に使うグラジエントデータ、(b) 予測する $t_g$ の双方について前溶出効果を補正する。</p>
+<p><strong>フタル酸エステル試料</strong>: 文献の5種のC1–C5ジアルキルフタル酸エステルのデータから、$t_G=20$ 分と80分の2ランを入力に選んだ（最大精度には2つの $t_G$ を<strong>3倍以上</strong>離すのが望ましい)。他の $t_G$ での計算結果(Table I)は、ほぼ理想的条件（1溶質1ランを除き全バンドがグラジエント中に溶出、前溶出寄与ほぼ無視)。<strong>補間条件($20&lt;t_G&lt;80$、例 $t_G=40$分)では、保持時間・分離度とも 約 ±1%（1SD)</strong> で予測。その他の $t_G$（5, 10, 160, 320分)では、保持時間は<strong>平均 ±6%（1SD)</strong>、分離度は <strong>±5%</strong> で予測。メソッド開発で実グラジエントの代わりに使うには十分。なおこの一致は、同じグラジエントデータから予測した等温値より良く、<strong>グラジエントデータはグラジエント保持の予測に向く</strong>（逆に等温データは等温予測に向く。最高精度が要るなら、入力実験を予測手法(等温/グラジエント)に合わせるべき)。</p>
+<p><strong>ステロイド試料</strong>: 6成分（prednisone・cortisone・hydrocortisone・dexamethasone・corticosterone・cortexolone。Zorbax ODS 25×0.46 cm、5–100% メタノール/水、流速 2 mL/min、ドウェル容積 $V_D=5.5$ mL)。Fig. 1 の $t_G=30$・90分を入力とし、グラジエント時間だけでなく初期/最終 $\varphi$ も変えて、<strong>大きな前溶出</strong>（例: バンド#3は初期移動相55%MeOH中でカラムの79%を移動、#4は46%・#5は40%・#6は35%)がある場合を試験(Table II)。$t_g$ は<strong>平均 ±3%（1SD)</strong>、分離度$(t_2-t_1)$ は<strong>平均 ±7%（1SD)</strong> で予測。</p>
+<p>実務上の注意: 入力実験には<strong>大きめの $t_G$（大きめの $\bar{k}$)</strong> を使う方がよい。Table II の15分・45分ランを入力にすると、残りの予測分離度の誤差は <strong>±11%（1SD)</strong>（Table II比で50%増)に悪化する。このとき $t_g$ の誤差は ±2% と小さいが、これは単独で見ると誤解を招く——分離度予測の精度を決めるのは $(t_2-t_1)$ の精度だからである。</p>
+<h3>4.2 コンピュータシミュレーションに基づく系統的メソッド開発</h3>
+<p>計算機シミュレーションが試行錯誤の実ランに代わることで、条件変更に対する分離を評価しながら、従来と同じ流儀でグラジエント分離を開発・改良できる。しかもシミュレーションは実ランのごく一部の時間で済むため、はるかに多くの可能性を探索できる。DryLab G の経験から進化した系統的手順(Table III の6ステップ)を、例で示す。</p>
+<p><strong>OPAアミノ酸混合物の例</strong>: Eslami らの、逆相HPLC(17–55% アセトニトリル/水 直線グラジエント)による22種の o-フタルアルデヒド(OPA)アミノ酸の分離データ（$t_G$ とカラム長を変えた32ラン／5カラム長)を DryLab G で評価。最適法開発を想定し、Table III の6ステップに従う。<strong>ステップ1</strong>: まず2グラジエント($t_G=15$分・35分)を実行(Fig. 2a/b)。各クロマトグラムに22の明瞭なバンド（未分離ペアなし)。2回目のランの各バンドを1回目のバンド順に対応づけて番号付けする（同一化合物が同じ番号になるように)。以降のステップで、$t_G$・カラム長・流速・グラジエント範囲・複雑グラジエントなどを机上で変えて分離度を最大化し、最後に最適条件を実測で確認する（本文にさらに $t_g$ 予測精度の例が続く)。</p>
+<h2>5. 結論</h2>
+<p>わずか<strong>2回の初期グラジエント実験</strong>から各成分の $k_w$・$S$ を求め、あとは計算機上でグラジエント時間・組成・形状・カラム寸法・流速・粒子径を変えて保持時間・バンド幅・分離度を予測・最適化できる。従来の試行錯誤に比べ、はるかに少ない実験でより良い分離に到達できる。<strong>バンド間隔（選択性 $\alpha$)の変化を活かす</strong>「溶媒強度選択性」の利用が鍵。予測精度は、補間条件で保持・分離度とも約±1%、外挿・前溶出を含む条件でも保持±3〜6%・分離度±5〜7%で、メソッド開発の実用に十分である。</p>
+<blockquote>補足（生薬QC実務への示唆）: これは現在の DryLab 等「計算機支援メソッド開発」の出発点にあたる論文で、実務上の含意は今も有効。①<strong>指紋・多成分定量のグラジエント最適化を“実験2回＋あとは計算”で進められる</strong>——多成分で試行錯誤が膨れがちな生薬分析で威力を発揮する。②入力は勾配の異なる2グラジエント（<strong>$t_G$ を3倍以上離し、大きめの $t_G$ を選ぶ</strong>と分離度予測が安定)。ここから各成分の $k_w$・$S$ を逆算し、条件を振って臨界ペアの分離度を予測する。③予測で見るべきは個々の保持時間より<strong>相対保持 $(t_2-t_1)$</strong>——分離度の精度を決めるのはこちら。④精度は補間条件で±1%、外挿・前溶出込みでも数%〜±7%程度と割り切り、<strong>最後は必ず実測で確認</strong>する運用が前提（本サイト収録の保持モデリング総説が指摘する「手法開発は予測誤差1%以内が理想」という後年の要求水準と読み合わせると、モデルの近似限界も見えてくる)。⑤$\log k&#x27;$–$\varphi$ の直線(LSS)は近似で、低・高 $\varphi$ 域では曲率が出るため、必要なら二次・NKモデルで補正する。⑥ピーク数の多いアミノ酸22成分の例のように、<strong>各バンドの対応づけ(ピークトラッキング)</strong> が前提になる点は、生薬の複雑指紋でも同じ実務課題である。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="crf-comparison-method-development.html">クロマトグラフィー応答関数(CRF)の普遍的比較研究 — 自動メソッド開発の「良さ」を1数値で測る</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbD・Six Sigmaまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <aside class="notes" id="notesPanel" data-slug="drylab-computer-simulation-gradient" aria-label="この論文のメモ">
   <div class="notes-head">
