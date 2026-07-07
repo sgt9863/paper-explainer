@@ -145,65 +145,89 @@
     setupResize(panel);
   }
 
-  // メモパネルの幅をドラッグで調整（保存して全論文ページで共有）
+  // メモパネルの幅・高さをドラッグで調整（保存して全論文ページで共有）
   function setupResize(panel) {
     var WKEY = "paperExplainer.notesWidth.v1";
-    var handle = document.getElementById("notesResize");
-    var MIN = 300, MAX = Math.min(1000, Math.round(window.innerWidth * 0.75));
+    var HKEY = "paperExplainer.notesHeight.v1";
+    var wHandle = document.getElementById("notesResize");
+    var hHandle = document.getElementById("notesResizeV");
+    var WMIN = 300, WMAX = Math.min(1000, Math.round(window.innerWidth * 0.75));
+    var HMIN = 180, HMAX = window.innerHeight - 32;
 
     function applyWidth(w) {
-      w = Math.max(MIN, Math.min(MAX, w));
+      w = Math.max(WMIN, Math.min(WMAX, w));
       panel.style.flex = "0 0 " + w + "px";
     }
-    var saved = parseInt(localStorage.getItem(WKEY), 10);
-    if (saved) applyWidth(saved);
+    function applyHeight(h) {
+      h = Math.max(HMIN, Math.min(window.innerHeight - 32, h));
+      panel.style.maxHeight = "none";
+      panel.style.height = h + "px";
+    }
+    var savedW = parseInt(localStorage.getItem(WKEY), 10);
+    if (savedW) applyWidth(savedW);
+    var savedH = parseInt(localStorage.getItem(HKEY), 10);
+    if (savedH) applyHeight(savedH);
 
-    if (!handle) return;
-    var dragging = false;
+    // 汎用ドラッグ（vertical=true なら高さ、false なら幅）
+    function makeDrag(handle, vertical) {
+      if (!handle) return;
+      var cls = vertical ? "notes-resizing-v" : "notes-resizing";
+      var key = vertical ? HKEY : WKEY;
+      var dragging = false;
+      function move(e) {
+        if (!dragging) return;
+        var pt = e.touches ? e.touches[0] : e;
+        var r = panel.getBoundingClientRect();
+        if (vertical) applyHeight(pt.clientY - r.top);
+        else applyWidth(r.right - pt.clientX);
+        e.preventDefault();
+      }
+      function up() {
+        if (!dragging) return;
+        dragging = false;
+        panel.classList.remove(cls);
+        var r = panel.getBoundingClientRect();
+        try { localStorage.setItem(key, String(Math.round(vertical ? r.height : r.width))); } catch (e) {}
+        document.removeEventListener("mousemove", move);
+        document.removeEventListener("mouseup", up);
+        document.removeEventListener("touchmove", move);
+        document.removeEventListener("touchend", up);
+      }
+      function down(e) {
+        dragging = true;
+        panel.classList.add(cls);
+        document.addEventListener("mousemove", move);
+        document.addEventListener("mouseup", up);
+        document.addEventListener("touchmove", move, { passive: false });
+        document.addEventListener("touchend", up);
+        e.preventDefault();
+      }
+      handle.addEventListener("mousedown", down);
+      handle.addEventListener("touchstart", down, { passive: false });
+      handle.addEventListener("keydown", function (e) {
+        var r = panel.getBoundingClientRect();
+        if (vertical) {
+          if (e.key === "ArrowUp") applyHeight(r.height - 20);
+          else if (e.key === "ArrowDown") applyHeight(r.height + 20);
+          else return;
+        } else {
+          if (e.key === "ArrowLeft") applyWidth(r.width + 20);
+          else if (e.key === "ArrowRight") applyWidth(r.width - 20);
+          else return;
+        }
+        var nr = panel.getBoundingClientRect();
+        try { localStorage.setItem(key, String(Math.round(vertical ? nr.height : nr.width))); } catch (ex) {}
+        e.preventDefault();
+      });
+      handle.addEventListener("dblclick", function () {
+        if (vertical) { panel.style.height = ""; panel.style.maxHeight = ""; }
+        else { panel.style.flex = ""; }
+        try { localStorage.removeItem(key); } catch (e) {}
+      });
+    }
 
-    function onMove(e) {
-      if (!dragging) return;
-      var x = (e.touches ? e.touches[0].clientX : e.clientX);
-      var right = panel.getBoundingClientRect().right;
-      applyWidth(right - x);
-      e.preventDefault();
-    }
-    function onUp() {
-      if (!dragging) return;
-      dragging = false;
-      panel.classList.remove("notes-resizing");
-      var w = Math.round(panel.getBoundingClientRect().width);
-      try { localStorage.setItem(WKEY, String(w)); } catch (e) {}
-      document.removeEventListener("mousemove", onMove);
-      document.removeEventListener("mouseup", onUp);
-      document.removeEventListener("touchmove", onMove);
-      document.removeEventListener("touchend", onUp);
-    }
-    function onDown(e) {
-      dragging = true;
-      panel.classList.add("notes-resizing");
-      document.addEventListener("mousemove", onMove);
-      document.addEventListener("mouseup", onUp);
-      document.addEventListener("touchmove", onMove, { passive: false });
-      document.addEventListener("touchend", onUp);
-      e.preventDefault();
-    }
-    handle.addEventListener("mousedown", onDown);
-    handle.addEventListener("touchstart", onDown, { passive: false });
-    // キーボードでも微調整（左右矢印）
-    handle.addEventListener("keydown", function (e) {
-      var cur = panel.getBoundingClientRect().width;
-      if (e.key === "ArrowLeft") { applyWidth(cur + 20); }
-      else if (e.key === "ArrowRight") { applyWidth(cur - 20); }
-      else return;
-      try { localStorage.setItem(WKEY, String(Math.round(panel.getBoundingClientRect().width))); } catch (ex) {}
-      e.preventDefault();
-    });
-    // ダブルクリックで既定幅に戻す
-    handle.addEventListener("dblclick", function () {
-      panel.style.flex = "";
-      try { localStorage.removeItem(WKEY); } catch (e) {}
-    });
+    makeDrag(wHandle, false);
+    makeDrag(hHandle, true);
   }
 
   if (document.readyState === "loading") {
