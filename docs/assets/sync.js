@@ -29,12 +29,24 @@
   var emailInput = null;
   function setSyncStatus(t) { if (statusEl) statusEl.textContent = t || ""; }
 
+  // 各モジュールの localStorage キー。モジュール未読み込みのページ（例: 一覧ページには
+  // notes.js が無い）でも、ここから直接読み書きして同期を成立させる。
+  var LS = {
+    notes: "paperExplainer.notes.v1",
+    status: "paperExplainer.status.v1",
+    fav: "paperExplainer.fav.v1",
+    highlights: "paperExplainer.highlights.v1"
+  };
+  function lsGet(key) { try { return JSON.parse(localStorage.getItem(key)) || {}; } catch (e) { return {}; } }
+  function lsSet(key, val) { try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {} }
+
   function localState() {
+    // API があればそれを、無ければ localStorage を直接読む（ページ非依存で全データを拾う）。
     return {
-      notes: (window.PaperNotes && window.PaperNotes.getAll()) || {},
-      status: (window.PaperRead && window.PaperRead.getAll()) || {},
-      fav: (window.PaperFav && window.PaperFav.getAll()) || {},
-      highlights: (window.PaperHighlights && window.PaperHighlights.getAll()) || {}
+      notes: (window.PaperNotes && window.PaperNotes.getAll()) || lsGet(LS.notes),
+      status: (window.PaperRead && window.PaperRead.getAll()) || lsGet(LS.status),
+      fav: (window.PaperFav && window.PaperFav.getAll()) || lsGet(LS.fav),
+      highlights: (window.PaperHighlights && window.PaperHighlights.getAll()) || lsGet(LS.highlights)
     };
   }
 
@@ -73,10 +85,11 @@
   function applyState(state) {
     applyingRemote = true;
     try {
-      if (window.PaperNotes) window.PaperNotes.replaceAll(state.notes || {});
-      if (window.PaperRead) window.PaperRead.replaceAll(state.status || {});
-      if (window.PaperFav) window.PaperFav.replaceAll(state.fav || {});
-      if (window.PaperHighlights) window.PaperHighlights.replaceAll(state.highlights || {});
+      // API があればイベント付きで反映、無ければ localStorage に直接書く（次に該当ページを開くと反映）。
+      if (window.PaperNotes) window.PaperNotes.replaceAll(state.notes || {}); else lsSet(LS.notes, state.notes || {});
+      if (window.PaperRead) window.PaperRead.replaceAll(state.status || {}); else lsSet(LS.status, state.status || {});
+      if (window.PaperFav) window.PaperFav.replaceAll(state.fav || {}); else lsSet(LS.fav, state.fav || {});
+      if (window.PaperHighlights) window.PaperHighlights.replaceAll(state.highlights || {}); else lsSet(LS.highlights, state.highlights || {});
     } finally {
       applyingRemote = false;
     }
