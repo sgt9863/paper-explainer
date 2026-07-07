@@ -336,8 +336,9 @@ figcaption {
   box-sizing: border-box;
   cursor: pointer;
 }
-.index-meta .pubyear, .index-meta .ifval { margin-left: 8px; }
-.index-meta .ifval { font-variant-numeric: tabular-nums; }
+.index-meta .pubyear, .index-meta .ifval, .index-meta .cites { margin-left: 8px; }
+.index-meta .ifval, .index-meta .cites { font-variant-numeric: tabular-nums; }
+.sort-note { color: var(--muted); font-size: 0.72rem; margin: 4px 0 0; }
 
 /* ------- 本文引用 [N] と参考文献リスト ------- */
 a.cite { text-decoration: none; font-weight: 600; }

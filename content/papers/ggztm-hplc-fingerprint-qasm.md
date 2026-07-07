@@ -5,6 +5,7 @@ source_pdf: Separation_Science_Plus_2024_Xin_Gegen_Zhitong_Mixture.pdf
 drive_file_id: 12FnCfsks2pqHbE6M-OhJ40TTN-dL5KHn
 drive_url: https://drive.google.com/file/d/12FnCfsks2pqHbE6M-OhJ40TTN-dL5KHn/view
 doi: https://doi.org/10.1002/sscp.202400184
+cited_by: 1
 level: practitioner
 date: 2026-07-01
 published: 2025

@@ -2,6 +2,7 @@
 title: 桑枝アルカロイド錠（2型糖尿病）の規制的視点 — 中薬「三結合」審査承認エビデンス体系
 slug: sangzhi-alkaloids-diabetes-regulatory
 doi: https://doi.org/10.1016/j.fitote.2023.105444
+cited_by: 10
 source_pdf: 1-s2.0-S0367326X23000199-main.pdf
 drive_file_id: 1yhPrqrsbYR6Mf1lzlXWMLFE-zsArLHHN
 level: practitioner

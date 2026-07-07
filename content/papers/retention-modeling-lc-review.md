@@ -2,6 +2,7 @@
 title: 液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー
 slug: retention-modeling-lc-review
 doi: https://doi.org/10.1002/jssc.202000905
+cited_by: 125
 source_pdf: JSSC4488.pdf
 level: practitioner
 date: 2026-07-03

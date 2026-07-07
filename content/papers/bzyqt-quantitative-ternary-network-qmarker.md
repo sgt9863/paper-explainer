@@ -3,6 +3,7 @@ title: 定量的三元ネットワークによる漢方処方のQ-marker探索 �
 slug: bzyqt-quantitative-ternary-network-qmarker
 source_pdf: 1-s2.0-S0944711324005762-main.pdf
 doi: https://doi.org/10.1016/j.phymed.2024.155918
+cited_by: 15
 drive_file_id: 1xTZTpxCQazkNX6BClGn08I-21MzAiuOA
 drive_url: https://drive.google.com/file/d/1xTZTpxCQazkNX6BClGn08I-21MzAiuOA/view
 level: practitioner

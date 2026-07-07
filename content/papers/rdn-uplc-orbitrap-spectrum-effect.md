@@ -2,6 +2,7 @@
 title: 熱毒寧注射液(RDN)のUPLC-Orbitrap MS/MS＋生物学的力価＋多変量統計による総合的品質評価
 slug: rdn-uplc-orbitrap-spectrum-effect
 doi: https://doi.org/10.1016/j.jpba.2024.116407
+cited_by: 5
 source_pdf: 1-s2.0-S0731708524004473-main.pdf
 drive_file_id: 1ICGmrHqr44ToNaJsbe-fGDtETqhVp4Hx
 drive_url: https://drive.google.com/file/d/1ICGmrHqr44ToNaJsbe-fGDtETqhVp4Hx/view

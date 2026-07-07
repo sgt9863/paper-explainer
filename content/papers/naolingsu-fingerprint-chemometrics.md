@@ -2,6 +2,7 @@
 title: 脳霊素カプセル(NLSC)のHPLC指紋・多成分定量・ケモメトリクスによる中薬処方の品質評価
 slug: naolingsu-fingerprint-chemometrics
 doi: https://doi.org/10.1155/2022/1429074
+cited_by: 14
 source_pdf: JAMC-2022-1429074-Naolingsu.pdf
 drive_file_id: 1fQFrTtRNmvmh_kKtjeWMs-07D8n_QyyF
 drive_url: https://drive.google.com/file/d/1fQFrTtRNmvmh_kKtjeWMs-07D8n_QyyF/view

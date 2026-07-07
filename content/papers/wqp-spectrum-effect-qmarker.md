@@ -5,6 +5,7 @@ source_pdf: JChromatogrB_2026_Shi_Wuwei_Qingzhuo_Pill.pdf
 drive_file_id: 1MuUXH8IDqqxvVsXst7oRWfs6aCoCgzM9
 drive_url: https://drive.google.com/file/d/1MuUXH8IDqqxvVsXst7oRWfs6aCoCgzM9/view
 doi: https://doi.org/10.1016/j.jchromb.2025.124876
+cited_by: 2
 level: practitioner
 date: 2026-07-01
 published: 2026

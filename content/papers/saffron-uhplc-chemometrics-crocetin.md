@@ -2,6 +2,7 @@
 title: サフラン(Crocus sativus)のUHPLC分離を応答曲面法で最適化 — 微量クロセチンエステルの検出
 slug: saffron-uhplc-chemometrics-crocetin
 doi: https://doi.org/10.3390/molecules23081851
+cited_by: 27
 source_pdf: molecules-23-01851.pdf
 drive_file_id: 15Z5YH9FR4WZuzdUPZfeVD6-Q51KcWevs
 level: practitioner

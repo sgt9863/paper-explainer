@@ -2,6 +2,7 @@
 title: コンピュータシミュレーションによる逆相グラジエント分離の最適化（DryLab Gの原典）
 slug: drylab-computer-simulation-gradient
 doi: https://doi.org/10.1007/BF02688488
+cited_by: 92
 source_pdf: 11e1a2b5-BF02688488.pdf
 level: practitioner
 date: 2026-07-03

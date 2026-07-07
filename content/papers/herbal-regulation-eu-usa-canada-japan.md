@@ -2,6 +2,7 @@
 title: EU・米国・カナダ・日本における生薬製品の薬事規制（比較レビュー）
 slug: herbal-regulation-eu-usa-canada-japan
 doi: https://doi.org/10.2478/AMB-2023-0034
+cited_by: 9
 source_pdf: AMB-2023-0034-herbal-regulation.pdf
 drive_file_id: 1bd3HpiNp8YEYQq9dlSxSxbsj69_ApRDX
 drive_url: https://drive.google.com/file/d/1bd3HpiNp8YEYQq9dlSxSxbsj69_ApRDX/view

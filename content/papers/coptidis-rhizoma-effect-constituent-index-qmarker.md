@@ -3,6 +3,7 @@ title: 効果-成分指数（ECI）という統合的・薬効指向のQ-marker�
 slug: coptidis-rhizoma-effect-constituent-index-qmarker
 source_pdf: 1-s2.0-S0944711318300485-main.pdf
 doi: https://doi.org/10.1016/j.phymed.2018.03.013
+cited_by: 27
 drive_file_id: 17WJzzSi6qphHFsuaEXG4AZ5LwKTH0Att
 drive_url: https://drive.google.com/file/d/17WJzzSi6qphHFsuaEXG4AZ5LwKTH0Att/view
 level: practitioner

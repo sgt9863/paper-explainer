@@ -3,6 +3,7 @@ title: 護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化
 slug: hugan-capsule-fwfp-ecfp
 source_pdf: 1-s2.0-S0003267023002362-main.pdf
 doi: https://doi.org/10.1016/j.aca.2023.341015
+cited_by: 28
 drive_file_id: 1_aL8qciBJadjPfp8DpUiJZMxMXZSId6j
 drive_url: https://drive.google.com/file/d/1_aL8qciBJadjPfp8DpUiJZMxMXZSId6j/view
 level: practitioner

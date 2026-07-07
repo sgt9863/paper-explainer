@@ -3,6 +3,7 @@ title: FT-NIRとVis/NIR-HSIのデータ融合による漢方顆粒(TCMP)の重�
 slug: tcmp-ftnir-visnir-hsi-datafusion
 source_pdf: 1-s2.0-S0924203125000141-main.pdf
 doi: https://doi.org/10.1016/j.vibspec.2025.103780
+cited_by: 10
 drive_file_id: 1FnfcjeNIIEzjkz7O-mkn6rYlGjTgcoXr
 drive_url: https://drive.google.com/file/d/1FnfcjeNIIEzjkz7O-mkn6rYlGjTgcoXr/view
 level: practitioner

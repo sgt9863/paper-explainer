@@ -3,6 +3,7 @@ title: 生薬の多成分定量指向型品質評価の「フルソリューシ�
 slug: agarwood-lcmsms-qnmr-rplc-hilic
 source_pdf: 1-s2.0-S0021967318305909-main.pdf
 doi: https://doi.org/10.1016/j.chroma.2018.05.018
+cited_by: 23
 drive_file_id: 10mUjRIYF9BlPpdSPXwpM8E6zhCd-C8H4
 drive_url: https://drive.google.com/file/d/10mUjRIYF9BlPpdSPXwpM8E6zhCd-C8H4/view
 level: researcher

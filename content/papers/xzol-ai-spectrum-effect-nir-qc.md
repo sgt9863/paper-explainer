@@ -3,6 +3,7 @@ title: AIを活用した漢方の活性成分探索と非破壊品質管理の�
 slug: xzol-ai-spectrum-effect-nir-qc
 source_pdf: 1-s2.0-S0039914025001134-main.pdf
 doi: https://doi.org/10.1016/j.talanta.2025.127627
+cited_by: 17
 drive_file_id: 1ThjQlx_haqpjrYeGBLMNllC9SpN_qccI
 drive_url: https://drive.google.com/file/d/1ThjQlx_haqpjrYeGBLMNllC9SpN_qccI/view
 level: practitioner

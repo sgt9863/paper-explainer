@@ -2,6 +2,7 @@
 title: AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展
 slug: aqbd-lc-method-development
 doi: https://doi.org/10.1021/acs.oprd.9b00238
+cited_by: 213
 source_pdf: 9b5ce9ee-development...aqbd.pdf
 level: practitioner
 date: 2026-07-03

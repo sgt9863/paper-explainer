@@ -3,6 +3,7 @@ title: 植物性医薬品（ボタニカルドラッグ）開発への科学的�
 slug: botanical-drug-development-us-fda-perspective
 source_pdf: scientific-regulatory-approach-botanical-drug-development-US-FDA-perspective.pdf
 doi: https://doi.org/10.1021/acs.jnatprod.9b00949
+cited_by: 117
 drive_file_id: 1VYhjOdUvPvU6n43Ys1yVP0un6n0Ftu50
 drive_url: https://drive.google.com/file/d/1VYhjOdUvPvU6n43Ys1yVP0un6n0Ftu50/view
 level: practitioner

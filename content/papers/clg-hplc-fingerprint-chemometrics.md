@@ -2,6 +2,7 @@
 title: 通便顆粒(Congelex Laxative Granules)のHPLC指紋・多成分定量・ケモメトリクスによる品質評価
 slug: clg-hplc-fingerprint-chemometrics
 doi: https://doi.org/10.1016/j.jpba.2024.116636
+cited_by: 4
 source_pdf: 1-s2.0-S0731708524006782-main.pdf
 drive_file_id: 1YZ2cpnfHpo45hNV2SNUYmq8Bzx9LJVp2
 drive_url: https://drive.google.com/file/d/1YZ2cpnfHpo45hNV2SNUYmq8Bzx9LJVp2/view
