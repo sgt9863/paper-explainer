@@ -306,6 +306,11 @@ figcaption {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  /* サイドバーが画面より高いとき、内部だけを縦スクロール（下のタグまで届く） */
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 6px;
 }
 .index-main { flex: 1 1 auto; min-width: 0; }
 .index-main .count { margin-top: 0; }
@@ -430,6 +435,9 @@ ol.references li:target { background: rgba(255, 214, 0, 0.18); border-radius: 4p
     flex-direction: row;
     flex-wrap: wrap;
     gap: 12px 20px;
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
   }
   .filter-group { border-top: none; padding-top: 0; }
   .index-sidebar #indexSearch { flex: 1 1 100%; }
