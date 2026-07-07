@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>単一標準品による多成分定量(SSDMC/QAMS)の相対応答係数を安定させる — UV波長と標準液濃度の設計（虎杖）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="単一標準品による多成分定量(SSDMC/QAMS)の相対応答係数を安定させる — UV波長と標準液濃度の設計（虎杖）">
+<meta property="og:description" content="標準品1つで複数成分を定量するSSDMC（＝QAMS）の要である相対応答係数(RRF)を、異なる装置間で再現性よく得るための2つの設計因子——UV検出波長と標準液濃度——を系統的に検討した研究論文の全訳（＋訳者補足）。UV波長は「内標／被験成分のピーク面積比 対 波長」曲線の平坦部を選ぶODWP法を提案し、虎杖(Polygonum cuspidatum)の4成分（エモジン・レスベラトロール・エモジン-8-O-β-D-グルコピラノシド・ポリダチン）で実証。300nmでRSD0.38%（最大吸収290nmでは2.80%）。標準液濃度は単一点法(OSP)で閾値49b/k以上が必要（エモジンで7μg/mL超）。10ロットで外標準法と偏差0.2%未満の一致を確認。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/huzhang-ssdmc-rrf-uv-wavelength/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="huzhang-ssdmc-rrf-uv-wavelength"><h1>単一標準品による多成分定量(SSDMC/QAMS)の相対応答係数を安定させる — UV波長と標準液濃度の設計（虎杖）</h1><div class="paper-meta"><span class="date">2026-07-07</span> <span class="tag">QAMS</span> <span class="tag">HPLC・UPLC</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">生薬</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2015.05.028" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0731708515300091-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="huzhang-ssdmc-rrf-uv-wavelength" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="huzhang-ssdmc-rrf-uv-wavelength" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/huzhang-ssdmc-rrf-uv-wavelength/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/huzhang-ssdmc-rrf-uv-wavelength/ai-infographic.webp" alt="標準品1つで多成分を定量するSSDMC/QAMSの要「相対応答係数(RRF)」を、装置間でブレさせないためのUV波長選択(ODWP)と標準液濃度の設計指針を実証した研究" loading="lazy"></a><p>&lt;!-- 方針: 全訳＋必要に応じた補足。原文構成に沿って全節を訳出。式番号・図表番号は原文準拠。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Design of ultraviolet wavelength and standard solution concentrations in relative response factors for simultaneous determination of multi-components with single reference standard in herbal medicines</li><li>著者: Ting-Wen Yang, Chao Zhao, Yong Fan, Lian-Wen Qi<em>, Ping Li</em>（中国薬科大学 天然薬物国家重点実験室, 南京）</li><li>掲載: <em>Journal of Pharmaceutical and Biomedical Analysis</em> 114 (2015) 280–287. https://doi.org/10.1016/j.jpba.2015.05.028（研究論文）</li><li>キーワード: Single standard to determine multi-components（単一標準品での多成分定量）/ Relative response factor（相対応答係数）/ Ultraviolet detection wavelength（UV検出波長）/ Standard solution concentration（標準液濃度）/ <em>Polygonum cuspidatum</em>（虎杖）</li><li>インパクトファクター: <strong>3.1</strong>（<em>J Pharm Biomed Anal</em>・JCR2024／Clarivate・Q2）</li><li>受理経過: 受領 2015-02-25 / 改訂 2015-05-21 / 採録 2015-05-28 / オンライン公開 2015-06-03</li></ul>
+<blockquote>補足: 本論文は、本サイト収録のQAMS総説（単一マーカー多成分定量）の「実務でつまずく部分」を正面から潰した研究。SSDMC＝SDMC＝QAMSは同じ手法の別名で、<strong>標準品1つ＋相対応答係数(RRF)で他成分を定量</strong>する。その最大の弱点は「RRFが装置や日によってブレる」こと。本研究は、そのブレの主因を <strong>①UV検出波長 ②標準液濃度</strong> の2つに絞り、それぞれに具体的な設計法（波長は&quot;平坦部&quot;を選ぶODWP法、濃度は閾値 $49b/k$ 以上)を与えた。用語: RRF=相対応答係数（reference standard の応答係数÷被験成分の応答係数)、RF=応答係数（ピーク面積÷濃度、または検量線の傾き)、OSP=単一点法(one single point)、LRE=検量線回帰式(line regression equation)、ODWP=最適検出波長予測(optimum detection wavelength prediction)、IS=内部標準。指標成分は虎杖(こじょう／Hu Zhang)の エモジン(E)・レスベラトロール(R)・エモジン-8-O-β-D-グルコピラノシド(EG)・ポリダチン(P)。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>単一標準品による多成分定量(SSDMC)は、生薬(HM)の品質評価に実用的な方式である。しかし、装置が異なると<strong>相対応答係数(RRF)</strong> が一致しない恐れがあり、依然として難しい。本研究では、RRFの再現性に対する2つの鍵——<strong>UV波長</strong>と<strong>標準液濃度</strong>——の効果を検討した。UV波長の効果は、（内部標準 対 被験成分の)<strong>ピーク面積比 対 波長</strong>の関係をプロットして調べた。好ましい波長は曲線の<strong>平坦部</strong>に設定すべきである。最適化した300 nmは、5台の装置でエモジン／エモジン-8-O-β-D-グルコピラノシドについて <strong>RSD 0.38%</strong> を与え、最大吸収波長290 nmで得た2.80%より大幅に低かった。次に、エモジンの標準液濃度が応答係数(RF)に与える効果を調べた。単一点法(OSP)では、$49b/k$ 未満の低濃度でRFに有意な変動が生じた。エモジンでは、濃度が <strong>7.00 μg mL⁻¹</strong> より高いとき低いSD(0.13)が得られ、それ未満では高いSD(3.71)となった。開発したSSDMC法を虎杖(<em>Polygonum cuspidatum</em>)10試料の対象成分定量に適用し、従来の検量線法と偏差1%未満で同等の正確さを示した。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>生薬製品の世界的需要の増加に伴い、品質管理は重要な課題になった。単一実体の化学薬品と違い、生薬は多様な植物化学成分からなり、多くの場合その効能は<strong>多成分の相乗作用</strong>から生じる。近年の明確な傾向は、単一マーカー化合物の定量から<strong>多成分の定量</strong>への移行である。生薬製品でできるだけ多くの化合物を定量する方法が数多く開発されてきたが、これらは<strong>大半の標準化合物が市販されておらず</strong>、実務上コストが高いため、いまだ実験室段階に留まっている。</p>
+<p><strong>単一標準品による多成分定量(SSDMC)</strong> は、1つを単一の参照標準として複数成分を同時に定量する代替法である。研究機関や薬局方が、複雑な植物製品の品質管理のために多成分定量に頻用している。この方法は<strong>多成分同時定量(SDMC)</strong> や<strong>単一マーカーによる多成分定量(QAMS)</strong> とも呼ばれる。SSDMCは、生薬製品の品質を包括的に管理する簡便で安価な手段だが、装置が異なると<strong>RRFが一致しない恐れ</strong>があるため、依然として難しい。</p>
+<p>RRFはSSDMCの礎で、<strong>参照化合物のRFを被験成分のRFで割った比</strong>として計算される。UV検出付きHPLCアッセイで、薬物本体の応答に対し関連化合物を定量するのに広く使われる。試料不純物の標準化合物が入手できないことがあるため、不純物試験でよく使われる代替手段でもあり、生薬製品の多成分同時定量に適用できる可能性を与える。</p>
+<p>薬物本体の不純物の多くは薬物自身の誘導体で、<strong>UVスペクトルがかなり似ている</strong>。注意すべきは、生薬製品の二次代謝物は、<strong>同じ骨格でも精緻な化学構造の違いによりUVスペクトルが異なる</strong>点である。この問題への注意不足は、生薬分析でSSDMCを使う際の偏差を招きうる。RRFの安定性に影響しうる因子（環境パラメータ・操作パラメータ・ピーク測定パラメータ)が検討され、<strong>RRFはUV検出器に最も敏感</strong>と観察されている。しかしUV検出波長の最適化は重視されてこなかった。多くの場合、検出波長は<strong>内部標準の最大UV吸収波長</strong>に基づいて選ばれるが、これは精度評価で常にうまくいくわけではない。SSDMCでRRFの精度・正確さを高める好ましいUV波長の選び方は未解決のままである。もう1つの注目因子は<strong>標準液濃度の選択</strong>で、単一点法(OSP)でRRFを計算するとき、RRFは低濃度より高濃度でより安定に見えた。</p>
+<p>本研究は、RRFの変動に対する2つの鍵——UV波長と標準液濃度——の効果を調べることを目的とした。<strong>エモジンとレスベラトロールを内部標準</strong>とし、それぞれエモジン-8-O-β-D-グルコピラノシドとポリダチンの濃度を算出した。この4化合物は虎杖(<em>Polygonum cuspidatum</em>)の主要成分である。UV波長の効果は、内部標準と被験成分の<strong>ピーク面積比</strong>（RRF = 面積_内標／面積_被験成分)を異なる波長で計算して調べた。次にエモジンの標準液濃度がRFに与える効果を調べ、検量線回帰式(LRE)法とOSP法を比較した。開発したSSDMC法を虎杖10試料の対象成分定量に適用し、従来の標準検量線法と比較した。</p>
+<h2>2. 実験（Experimental）</h2>
+<h3>2.1 試薬・材料</h3>
+<p>エモジン・レスベラトロール・エモジン-8-O-β-D-グルコピラノシド・ポリダチン・バイカリン・バイカレイン(原文 Fig.1)は、中国食品薬品検定研究院(北京)から入手した（純度いずれも98%超)。分析グレードのエタノール・メタノールはSinopharm社(上海)、HPLCグレードのアセトニトリル・ギ酸はTEDIA社(米国)から入手。精製水はMilliporeの純水装置で調製した。虎杖の代表的10ロットは、中国の四川・江蘇・湖北・安徽・江西の各省から採取し、すべてLian-Wen Qi 教授が同定した。証拠標本は中国薬科大学に保管した。</p>
+<h3>2.2 装置</h3>
+<ul><li><strong>装置1</strong>: Shimadzu LC-20AT（四元送液系＋ダイオードアレイ検出器(DAD))</li><li><strong>装置2</strong>: Shimadzu LC-20AT（四元送液系＋可変波長検出器(VWD))</li><li><strong>装置3</strong>: Agilent 1260（二元送液系＋VWD)</li><li><strong>装置4</strong>: Waters 2996（四元送液系＋VWD)</li><li><strong>装置5</strong>: Thermo Ultimate 3000（＋VWD)</li></ul>
+<p>各装置はオンライン脱気装置とオートサンプラーを備える。分離は<strong>3ロット</strong>のAgilent Eclipse Plus-C18カラム(3.5 μm, 4.6 mm × 100 mm)で行った。</p>
+<blockquote>補足: メーカー・検出器・カラムロットをわざと分散させているのは、「RRFが装置をまたいで頑健か」を厳しく検証するため。SSDMCの成否はまさにこの装置間再現性にかかる。</blockquote>
+<h3>2.3 クロマトグラフィー条件</h3>
+<p>移動相は 0.05%ギ酸水(A) とアセトニトリル(B) のグラジエント: B濃度を 0–2分で5→15%、2–11分で15→32%、11–15分で32→58%、15–22分で58%保持、22–23分で58→100%、23–24分で100→5%、24–30分で5%保持。流量 1.0 mL/min、注入量 10 μL、UV波長 300 nm、カラム温度 30 ℃。</p>
+<h3>2.4 溶液の調製</h3>
+<ul><li><strong>標準液</strong>: 精秤したエモジン・レスベラトロール・EG・ポリダチンを10 mL褐色メスフラスコでメタノールに溶かし定容。混合原液をメタノールで段階希釈し検量線用標準液とした。</li><li><strong>試料液</strong>: 虎杖粉末400 mgを100 mL共栓三角フラスコにとり、65%エタノール40 mLを加えて50分間超音波抽出。50 mL褐色メスフラスコへ濾過した。</li></ul>
+<h3>2.5 RRFの計算</h3>
+<p>RRFは参照物質と被験成分のRFの比($RF_{RS}/RF_A$)。RRFを得るには、原液を適切な濃度に希釈して検量線を作りRFを算出する。4参照物質の検量線を作りそのRF（＝検量線の傾き)を得て、エモジン／EG と レスベラトロール／ポリダチン の傾きの比としてRRFを求めた。</p>
+<h3>2.6 RRFのラギッドネス・ロバストネス</h3>
+<p><strong>ラギッドネス</strong>（頑健性)は、併行精度・異なる分析者・異なるカラムロット・日間・日内・異なる装置で試験した。<strong>ロバストネス</strong>試験は流量とカラム温度の効果を調べた。</p>
+<h3>2.7 UV波長選択（ODWP）</h3>
+<p>UV波長選択は4段階からなる。(1) エモジン(E)・レスベラトロール(R)・EG・ポリダチン(P)を含む混合標準液を調製し、HPLC-UVで200–400 nmを分析。(2) 200→400 nmで2 nmごとに $A_E/A_{EG}$ と $A_R/A_P$ のピーク面積比を計算。(3) 比を縦軸・UV波長を横軸として、$A_E/A_{EG}$・$A_R/A_P$ 対 UV波長をプロット。(4) <strong>UV吸収が比較的高い平坦部</strong>を好ましい検出波長として選ぶ。</p>
+<h3>2.8 分析法バリデーション</h3>
+<p>SSDMC法を、選択性・LOD・LOQ・正確さ・直線性・精度（日内／日間変動・異なる分析者・異なる装置・異なるカラムロット)・安定性についてバリデートし、結果を従来の<strong>外標準法</strong>と比較した。</p>
+<h2>3. 結果と考察（Results and discussion）</h2>
+<h3>3.1 UV波長選択</h3>
+<p>内部標準と被験成分のスペクトルによっては、<strong>波長のわずかなずれ</strong>が日ごと・装置ごとにRRFを変動させる。通常、UV波長精度の規格は <strong>±2.0 nm</strong>。RRFが検出波長にかなり敏感だと、わずかな波長ずれが応答に明白な変化を生み、装置間でRRFの再現性が低下する。</p>
+<p>RRFが公称波長付近の波長のわずかな変動に敏感かどうかは、公称波長の両側の狭い波長範囲でRRFを比較して予測できる。また、内部標準と被験成分のUVスペクトルの検討からも予測できる。例えば多くの化合物のスペクトルは、狭い波長範囲では式(1)のように線形近似できる。公称検出波長 $\lambda_0$ を横軸の0とすれば、公称波長での参照標準物質($R_{RS}$)と被験成分($R_A$)の応答比($R_0$)、および1 nm大きい波長での比($R_{0+1}$)は式(2)(3)で計算できる。</p>
+<p>$$A = S\lambda + I \tag{1}$$</p>
+<p>$$R_0 = \frac{I_{RS}}{I_A} \tag{2} \qquad\qquad R_{0+1} = \frac{S_{RS}+I_{RS}}{S_A+I_A} \tag{3}$$</p>
+<p>$S_{RS}, I_{RS}$ は参照標準物質スペクトルの傾きと切片、$S_A, I_A$ は被験成分スペクトルの対応値である。<strong>1 nmの波長変化の効果</strong>は式(4)で計算できる。</p>
+<p>$$\text{1nm変化の効果} = \frac{R_{0+1}}{R_0} = \frac{S_{RS}+I_{RS}}{S_A+I_A} \times \frac{I_A}{I_{RS}} \tag{4}$$</p>
+<p>$$RRF_{RS/A} = \frac{RF_{RS}}{RF_A} = \frac{A_{RS}/C_{RS}}{A_A/C_A} = \frac{A_{RS}}{A_A} \times \frac{C_A}{C_{RS}} \tag{5}$$</p>
+<p>式(4)から、小さな波長変化に対する応答の頑健性についてスペクトルが及ぼす影響に関する一般的結論が導かれる。<strong>(1)</strong> 参照標準物質と被験成分のスペクトルの傾きが小さい（＝対象範囲でスペクトルが平坦)なら、1 nm変化の効果は1に近づき、結果は再現性が高い。<strong>(2)</strong> 傾きが同方向で似ているほど再現性が高い。<strong>(3)</strong> 傾きの符号が逆だと再現性が悪い。これらは本研究が提案する<strong>最適検出波長予測(ODWP)法</strong>の結果とよく一致する。RRFが波長で変わるのは、参照標準物質と被験成分の応答が異なるため（式5)であり、RRFの波長変化は $A_{RS}/A_A$ の波長変化で表せる。</p>
+<p>原文 Fig.2 は $A_E/A_{EG}$ と $A_R/A_P$ の波長変化を示し、上記結論と対応する。<strong>$A_R/A_P$ は平坦</strong>——レスベラトロールとポリダチンのスペクトルがほぼ同じだからである。一方 <strong>$A_E/A_{EG}$ には4つの平坦部</strong>がある（エモジンとEGのスペクトルがこれら4部で似た傾向をもつため)。(1) 212–228 nmは末端吸収に近く干渉が大きい。(2) レスベラトロールは虎杖中で含量が比較的低く、246–250 nmと272–276 nmで吸収が低いため、この2部は最適でない。(3) 294–302 nm部はエモジン・EGの最大吸収ではないが、試料中の含量が比較的高いため検出感度に影響しない。最終的に<strong>300 nm</strong>を検出波長に選んだ。</p>
+<p>エモジン／EGのRRFの安定性を、300 nmと290 nm（参照物質エモジンの最大吸収)で異なる装置間で比較したところ、<strong>前者(300 nm)がより安定</strong>であった(Table 1)。最適化した300 nmはエモジン・EGについて5台で <strong>RSD 0.38%</strong> を与え、常用される最大吸収290 nmの2.80%より大幅に低い。レスベラトロール／ポリダチンのRRFは、両者のUV吸収の類似性のため、波長ずれの有意な影響を受けなかった。</p>
+<p><strong>Table 1. 異なる装置でのRRF安定性（300 nm vs 290 nm）</strong></p>
+<table>
+<thead><tr><th>波長</th><th>項目</th><th>装置1</th><th>装置2</th><th>装置3</th><th>装置4</th><th>装置5</th><th>RSD</th></tr></thead>
+<tbody>
+<tr><td>300 nm</td><td>RF: E</td><td>27.39</td><td>29.25</td><td>26.94</td><td>27.82</td><td>—</td><td>0.49%</td></tr>
+<tr><td></td><td>RF: EG</td><td>15.54</td><td>16.67</td><td>15.30</td><td>15.91</td><td>—</td><td>0.28%</td></tr>
+<tr><td></td><td><strong>RRF: E/EG</strong></td><td>1.76</td><td>1.75</td><td>1.76</td><td>1.75</td><td>1.77</td><td><strong>0.38%</strong></td></tr>
+<tr><td></td><td>RRF: R/P</td><td>1.75</td><td>1.78</td><td>1.79</td><td>1.79</td><td>1.79</td><td>0.84%</td></tr>
+<tr><td>290 nm</td><td>RF: E</td><td>41.09</td><td>42.28</td><td>40.04</td><td>40.50</td><td>—</td><td>0.72%</td></tr>
+<tr><td></td><td>RF: EG</td><td>26.26</td><td>27.33</td><td>25.65</td><td>26.86</td><td>—</td><td>0.44%</td></tr>
+<tr><td></td><td><strong>RRF: E/EG</strong></td><td>1.56</td><td>1.55</td><td>1.56</td><td>1.51</td><td>1.63</td><td><strong>2.80%</strong></td></tr>
+<tr><td></td><td>RRF: R/P</td><td>1.75</td><td>1.79</td><td>1.79</td><td>1.79</td><td>1.79</td><td>0.97%</td></tr>
+</tbody></table>
+<p>（RF=応答係数, RRF=相対応答係数。E=エモジン, R=レスベラトロール, EG=エモジン-8-O-β-D-グルコピラノシド, P=ポリダチン。300 nmではE/EGのRSDが0.38%に対し290 nmでは2.80%と大差)</p>
+<p><strong>エモジン1成分だけ</strong>で4成分を定量しようとすると、300 nmで E/R・E/P のRSDは5台で 4.32%・5.11%（Table S1)と<strong>不満足</strong>だった。これは主にエモジンと、レスベラトロールまたはポリダチンのUVスペクトルが大きく異なるため。ODWP法で平坦部が予測されないときはSSDMCは推奨されない。</p>
+<p>最後に、予測戦略を検証するため、別の典型的2化合物<strong>バイカリン(B)・バイカレイン(BE)</strong> を調べた(Fig. S1)。$A_B/A_{BE}$ には262–278 nmに平坦部がある。代表4波長（最大吸収244・276・316 nm、平坦部264 nm)を検出波長として同時に選び、5台でRRF安定性を比較した(Table S2)。バイカリン・バイカレインの244・316 nmでのRSDは3.14%・3.10%と、平坦部264〜276 nmで得た <strong>0.62%・0.59%</strong> より大幅に高かった。<strong>RRF安定性と検出波長付近のUV吸収の類似性の相関</strong>が証明され、ODWP法が適切な検出波長選択に有用であることが示された。</p>
+<blockquote>補足（ODWP法の一言まとめ）: 「内標と被験成分のピーク面積比を波長軸でプロットし、<strong>傾きがほぼ0＝平坦な帯</strong>を検出波長に選ぶ」。最大吸収に飛びつくのではなく&quot;平坦部&quot;を選ぶのがコツ。2成分のスペクトル形が似ていれば波長ずれに強く、装置が違ってもRRFがブレない。</blockquote>
+<h3>3.2 標準液濃度が応答係数に与える効果</h3>
+<p>生薬でRRFを計算する方法は2つ。<strong>LRE法</strong>（検量線回帰)と<strong>OSP法</strong>（単一点)である。Gao らはLRE法でアロエエモジンのRRFをエモジン基準で計算し、Hou らはOSP法でタンシノンI・クリプトタンシノンのRRFをタンシノンIIA基準で計算した。両者とも、<strong>標準液の濃度がRRFの安定性に影響</strong>すると観察している。</p>
+<p>RRFは参照標準物質と被験成分のRFの比で、RRFの一貫性はRFの一貫性に依存する。OSP法ではRFは<strong>ピーク面積÷濃度</strong>の平均比(式6)、LRE法ではRFは<strong>検量線の傾き</strong>(式7)を指す。式(6)は式(8)に変形でき、切片 $b$ は分析システムのノイズを表す。濃度 $C$ が大きくなると $b/C$ は0に近づき、OSP法のRFはLRE法のRFに等しくなる(式9)。</p>
+<p>$$RF = \frac{A}{C} \tag{6} \qquad A = kC + b \tag{7}$$</p>
+<p>$$RF = \frac{kC+b}{C} = k + \frac{b}{C} \tag{8} \qquad RF = \frac{kC+b}{C} = k + \frac{b}{C} \xrightarrow{\;b \ll C\;} k \tag{9}$$</p>
+<p>エモジンのRFを上記2法で計算した(Table 2)。Fig.3(A) は濃度がRFに与える影響を明確に示し、<strong>特に低濃度でOSPのRFが大きく変動</strong>する(Fig.3(B))。LRE法のRFは直線範囲内で安定だが、OSP法のRFは直線範囲内でも<strong>濃度が閾値以上のときだけ</strong>安定である。</p>
+<p>医薬品GMP指針(2010年版)は、HPLC-UVアッセイの検量線切片が、方法ノイズの影響を抑えるため<strong>表示量濃度の応答の2%未満</strong>であることを求める(式10・11)。これは表示量濃度が <strong>$49b/k$ より高い</strong>ことを要する(式12)。すなわち、濃度が $49b/k$ より高ければ $b/C$ は無視できる。</p>
+<p>$$b \le A_{\text{表示量}} \times 2\% = (kC_{\text{表示量}} + b) \times 2\% \tag{11}$$</p>
+<p>$$C_{\text{表示量}} \ge \frac{49b}{k} \tag{12}$$</p>
+<p>エモジンでは、OSP法のRFは濃度が理論上 <strong>7 μg mL⁻¹</strong> より高いとより安定になる。この結果はTable 2の実測データと一致する。濃度の下限は被験成分の微量濃度を判断する指針となり、正確な結果には被験成分濃度をこの下限より高くすべきである。下限より低ければ、試料を濃縮する必要がある。</p>
+<p><strong>Table 2（抜粋）. OSP法とLRE法によるエモジンのRF</strong></p>
+<table>
+<thead><tr><th>濃度 (μg mL⁻¹)</th><th>OSP法 RF (n=3)</th><th>備考</th></tr></thead>
+<tbody>
+<tr><td>241.56</td><td>29.96 ± 0.01</td><td>高濃度域は安定</td></tr>
+<tr><td>65.88</td><td>30.24 ± 0.01</td><td></td></tr>
+<tr><td>21.96</td><td>30.27 ± 0.01</td><td></td></tr>
+<tr><td>10.98</td><td>30.39 ± 0.02</td><td></td></tr>
+<tr><td>8.78</td><td>30.36 ± 0.02</td><td>閾値7 μg/mL付近</td></tr>
+<tr><td>6.59ᵃ</td><td>30.41 ± 0.03</td><td>↓ 閾値未満で不安定</td></tr>
+<tr><td>2.20ᵃ</td><td>30.63 ± 0.03</td><td></td></tr>
+<tr><td>0.44ᵃ</td><td>33.34 ± 0.03</td><td></td></tr>
+<tr><td>0.11ᵃ</td><td>37.04 ± 0.04</td><td>大きく上振れ</td></tr>
+<tr><td>0.09ᵃ</td><td>41.97 ± 0.04</td><td></td></tr>
+</tbody></table>
+<p>（ᵃ=閾値7 μg mL⁻¹未満。LRE法のRFは広範囲で $\approx$ 30.0（$R^2=1$)と安定。閾値以上の平均SDは0.13、閾値未満では3.71と大差)</p>
+<h3>3.3 RRFのラギッドネス・ロバストネス</h3>
+<p>RRFのラギッドネス・ロバストネス試験を行った(Table S3-1〜S3-7)。併行精度(n=6)のRRFは、EG・ポリダチンでRSDが<strong>0.07%・0.20%</strong>と小さな変動だった(S3-1)。中間精度(S3-2〜S3-7)は、異なる分析者(n=3)・異なるカラムロット(n=3)・異なるカラム温度(28・30・32 ℃)・日内(n=3)・日間(n=3)・異なる流量(0.8・1.0・1.2 mL min⁻¹)で試験し、EG・ポリダチンについてすべて<strong>RSD 1%未満</strong>の良好な精度を示した。</p>
+<h3>3.4 実生薬試料へのSSDMCの適用</h3>
+<p>虎杖の乾燥根は中国薬局方に収載され、世界に広く分布する。近年の薬理・臨床研究は、この生薬が高血圧・高脂血症・心血管・神経変性疾患に効果をもつことを示している。エモジン・レスベラトロール・EG・ポリダチンは虎杖の4主要成分で、その品質管理の化学マーカーに使える。実試料への適用では、SSDMC法でEG・ポリダチンの濃度を、それぞれエモジン・レスベラトロールから計算したRRFに対して測定し、真正標準品とも比較した。</p>
+<p>Fig.4 は標準液と虎杖抽出物のHPLCプロファイルを示す。最適化条件下で4被験成分は干渉なくベースライン分離した。バリデーション(Table S4)では、良好な直線性($r^2 &gt; 0.999$)、<strong>LOD 7.9–28.86 ng mL⁻¹</strong>、<strong>LOQ 27.65–115.44 ng mL⁻¹</strong>、回収率 <strong>97.62–99.37%</strong>、併行精度 RSD 0.40–1.77%、安定性 RSD 0.16–0.25%、採取精度 RSD 0.05–0.26% を4被験成分で示した。バリデーション後、10ロットをSSDMC法と標準検量線法の両方で分析した(Table 3)。両法によるEG・ポリダチンの含量偏差は<strong>0.2%未満</strong>だった。</p>
+<p><strong>Table 3（抜粋）. SSDMC法 vs 外標準法の再現性（10ロット中の代表）</strong></p>
+<table>
+<thead><tr><th>ロット</th><th>成分</th><th>SSDMC法 含量(%)</th><th>外標準法 含量(%)</th><th>偏差</th><th>A−B</th><th>/(A+B)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>ポリダチン(P)</td><td>1.389</td><td>1.388</td><td>0.036%</td></tr>
+<tr><td>1</td><td>EG</td><td>0.870</td><td>0.871</td><td>0.057%</td></tr>
+<tr><td>6</td><td>ポリダチン(P)</td><td>2.640</td><td>2.638</td><td>0.038%</td></tr>
+<tr><td>6</td><td>EG</td><td>1.697</td><td>1.700</td><td>0.088%</td></tr>
+<tr><td>8</td><td>EG</td><td>0.987</td><td>0.989</td><td>0.101%</td></tr>
+</tbody></table>
+<p>（全10ロットでSSDMC法と外標準法の偏差は0.2%未満。エモジン(E)・レスベラトロール(R)は内部標準なので偏差計算の対象外)</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>市販の標準化合物1つの相対応答係数に対して複数成分を定量することは、生薬の品質管理の一般的戦略である。本研究では、<strong>UV波長と標準液濃度の選択が、RRFの良好なラギッドネスを得る鍵</strong>となった。内部標準と関与化合物のスペクトルによっては、波長のわずかなずれがRRFの変動を招きうる。（内部標準 対 被験成分の)<strong>ピーク面積比 対 UV波長</strong>の関係をプロットすることが、波長が応答の頑健性に与える効果を予測する手段として提案された。RRF決定に用いる参照標準液の濃度は、OSP法を使う場合、直線範囲内であるだけでなく<strong>適切な量(閾値)以上</strong>であるべきである。本研究の知見は、波長・標準液濃度の頑健性が再現性の問題となりうる状況への指針として一般化できる。</p>
+<blockquote>補足（生薬QC実務への示唆）: QAMS/SSDMCは「標準品1つで多成分を定量できる」魅力的な手法だが、&quot;RRFが装置でブレる&quot;という実務上の壁がある。本研究の処方箋は明快で、実装時のチェックリストになる——<strong>①波長</strong>: 内標と被験成分の「ピーク面積比 対 波長」を描き、最大吸収ではなく<strong>平坦部</strong>を検出波長に選ぶ（2成分のスペクトル形が似ている帯ほど装置間再現性が高い。虎杖では300 nmでRSD 0.38%）。<strong>②濃度</strong>: 単一点法(OSP)で相対応答係数を決めるなら、標準液を<strong>閾値 $49b/k$ 以上</strong>（切片ノイズが2%未満になる濃度)で使う。低濃度でOSPのRFが暴れるのはこの切片項 $b/C$ のせい。検量線回帰(LRE)法を使えば濃度依存は避けられる。<strong>③検証</strong>: それでも異なる装置・分析者・カラム・温度・流量でRRFのラギッドネスを確認する。本サイトのQAMS総説（原理)と併読すると、&quot;なぜQAMSがブレるのか・どう設計すれば実務で使えるのか&quot;が具体的な数値付きでつながる。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="fcg-sugarfree-fingerprint-qams.html">無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="licorice-trinity-fingerprint-hplc-uv-thz-maml.html">甘草の「トリニティ（三位一体）」指紋評価系 — HPLC・UV・THz量子指紋とMAML多成分定量による総合品質評価</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">生薬</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="ggztm-hplc-fingerprint-qasm.html">HPLC化学指紋＋QASM(一マーカー多成分定量)による葛根止痛合剤(GGZTM)の品質評価</a><span class="rel-tags"><span class="rel-tag">QAMS</span><span class="rel-tag">生薬</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="agarwood-lcmsms-qnmr-rplc-hilic.html">生薬の多成分定量指向型品質評価の「フルソリューション」— 沈香（中国産アガーウッド）を例として</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">生薬</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="huzhang-ssdmc-rrf-uv-wavelength" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
