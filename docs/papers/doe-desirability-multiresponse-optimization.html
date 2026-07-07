@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）">
+<meta property="og:description" content="分析法開発で複数の応答（分離度・分析時間・回収率・感度など）を同時に最適化するための「実験計画法＋応答曲面法(RSM)＋満足度関数(desirability)」を包括的にまとめた総説の全訳（＋訳者補足）。実験計画の進め方（応答・因子・設計の選択）、スクリーニング／最適化設計、最小二乗・人工ニューラルネットによるモデル化と評価・応答変換、そして中核である満足度関数（各応答を0〜1の個別満足度に変換し重み付き幾何平均で全体満足度Dを最大化）による多重応答最適化を、抽出・分離の応用例とともに解説する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/doe-desirability-multiresponse-optimization/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="doe-desirability-multiresponse-optimization"><h1>実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</h1><div class="paper-meta"><span class="date">2026-07-07</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> <span class="tag">HPLC・UPLC</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1016/j.talanta.2014.01.034" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0039914014000459-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="doe-desirability-multiresponse-optimization" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="doe-desirability-multiresponse-optimization" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/doe-desirability-multiresponse-optimization/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/doe-desirability-multiresponse-optimization/ai-infographic.webp" alt="複数の応答(分離度・分析時間・回収率…)を同時最適化する「満足度関数(Derringer-Suich)」を軸に実験計画法と応答曲面法を体系化した総説" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。式番号は原文準拠。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Experimental design and multiple response optimization. Using the desirability function in analytical methods development</li><li>著者: Luciana Vera Candioti, María M. De Zan, María S. Cámara, Héctor C. Goicoechea（リトラル国立大学 分析開発・ケモメトリクス研究室(LADAQ)／医薬品品質管理研究室(LCCM)／CONICET, アルゼンチン）</li><li>掲載: <em>Talanta</em> 123 (2014) 123–138. https://doi.org/10.1016/j.talanta.2014.01.034（総説）</li><li>インパクトファクター: <strong>6.1</strong>（<em>Talanta</em>, JCR 2024 / Clarivate）</li><li>受理経過: 受領 2013-11-06 / 改訂 2014-01-21 / 採録 2014-01-23</li></ul>
+<blockquote>補足: 本論文は、分析法開発で<strong>複数の目標(応答)を同時に最良にする</strong>ための方法論レビュー。中核は <strong>満足度関数(desirability function)</strong>——「分離度は高く、分析時間は短く、回収率は100%に、…」といった相反しがちな複数目標を、各々0〜1の点数に直して1つの総合点(D)にまとめ、それを最大化する手法。用語: RSM=応答曲面法、DoE=実験計画法、FFD=完全実施要因計画、P-B=Plackett-Burman、CCD=中心複合計画、BBD=Box-Behnken計画、ANN=人工ニューラルネット、$\hat{y}$=モデルの予測応答。本サイト収録のDoE総説・AQbD総説・保持モデリング総説・CRF比較と同じ「メソッド開発の道具」系列。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>分析法開発において、<strong>複数の応答を同時に最適化</strong>する必要がある場合の応答曲面法(RSM)の適用についてレビューする。応答変換、多重応答最適化、最小二乗および人工ニューラルネット(ANN)によるモデル化といった重要論点を論じる。最新の分析応用例を、特に<strong>満足度関数を用いた多重応答最適化</strong>の文脈で提示する。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>規制当局の品質要求の高まり、試薬の高コスト、分析プロセスに影響する多数の変数のため、分析法の開発・バリデーションは単純な作業ではない。1因子ずつ動かす従来法(OFAT)は非効率で交互作用を捉えられない。<strong>実験計画法(DoE)</strong> と<strong>応答曲面法(RSM)</strong> は、少ない実験で因子効果・交互作用を把握し最適条件を得る体系的手段である。多くの分析法では<strong>応答が1つでない</strong>（例: 分離度・分析時間・ピーク対称性・回収率・感度）。本総説は、こうした<strong>多重応答</strong>を同時に最適化する枠組み、とりわけ<strong>満足度関数</strong>に焦点を当てる。</p>
+<h2>2. 実験計画の目的と方法論</h2>
+<p>実験計画は次の手順で進める。</p>
+<h3>2.1 問題へのアプローチ</h3>
+<p>最適化の目的（何を良くしたいか）と制約（コスト・時間・装置）を明確化する。</p>
+<h3>2.2 応答変数の選択</h3>
+<p>最適化したい測定量(応答)を選ぶ。応答は「最大化（分離度・回収率・感度）」「最小化（分析時間・溶媒量・ピーク幅）」「目標値（対称係数=1、pH=一定）」のいずれかの型を持つ。</p>
+<h3>2.3 因子とその水準の選択</h3>
+<p>応答に影響する因子（移動相組成・pH・温度・流速・抽出時間・試薬量…）と、その検討範囲(水準)を選ぶ。数値因子・カテゴリ因子の両方を扱える。</p>
+<h3>2.4 実験計画の選択</h3>
+<p>目的に応じて設計を選ぶ（screening か optimization か。次章）。</p>
+<h3>2.5 実験の実行と応答の測定</h3>
+<p>計画に従って実験し、各条件で応答を測定する。ランダム化・反復・中心点でノイズと曲率を評価する。</p>
+<h2>3. 実験計画（Designs）</h2>
+<h3>3.1 スクリーニング設計</h3>
+<p>多数の因子から<strong>有意な因子を選抜</strong>する。主効果を少ない実験で評価:</p>
+<ul><li><strong>2水準完全実施要因計画(2-FFD)</strong>: $2^k$ 回。主効果＋交互作用（2元・3元…）を評価。因子数 $2\le k\le5$ 程度。</li><li><strong>Plackett-Burman(P-B)</strong>: $N$（4の倍数)回で最大 $N-1$ 因子。主効果が2元以上の交互作用と交絡するが、多数因子の一次スクリーニングに有効。</li></ul>
+<h3>3.2 最適化（応答曲面）設計</h3>
+<p>選んだ有意因子について<strong>曲率を含むモデル</strong>を作る（3水準以上）:</p>
+<ul><li><strong>3水準完全実施要因計画(3-FFD)</strong>: $3^k$ 回、完全直交。因子数が増えると実験数が急増。</li><li><strong>中心複合計画(CCD)</strong>: 要因点(Fp)＋軸(星)点(±α)＋中心点(Cp)。各因子5水準。球状「近回転可能(near-rotatable)」設計で、二次モデルを効率よく推定。</li><li><strong>Box-Behnken計画(BBD)</strong>: $2k(k-1)+C_p$ 回、3水準。要因点と軸点の<strong>極端な同時条件（全因子が最高/最低)を避ける</strong>ため、実験が実行しにくい/危険な領域を回避できる。</li><li><strong>Doehlert行列(DMD)</strong>: $k^2+k+C_p$ 回。因子ごとに水準数が異なる（ある因子は多水準、別は少水準)効率的な充填。既存点を再利用して探索領域を拡張しやすい。</li><li><strong>D-Optimal</strong>: モデルと制約に応じてアルゴリズムが点を選ぶ不規則配置。<strong>制約付き領域・カテゴリ因子・非標準モデル</strong>に有効。</li></ul>
+<p><strong>主な設計の比較（原文 Table 1 の要約）</strong></p>
+<table>
+<thead><tr><th>設計</th><th>型</th><th>水準</th><th>実験回数(目安)</th><th>主な用途</th></tr></thead>
+<tbody>
+<tr><td>2水準完全実施要因(2-FFD)</td><td>数値/カテゴリ</td><td>2</td><td>$2^k$</td><td>スクリーニング（主効果＋交互作用)</td></tr>
+<tr><td>一部実施要因(FrFD)</td><td>数値/カテゴリ</td><td>2</td><td>$2^{k-p}$</td><td>多因子スクリーニング（交互作用は交絡)</td></tr>
+<tr><td>Plackett-Burman(P-B)</td><td>数値/カテゴリ</td><td>2</td><td>$N$（4の倍数)</td><td>多因子から主効果を選抜</td></tr>
+<tr><td>3水準完全実施要因(3-FFD)</td><td>数値/カテゴリ</td><td>3</td><td>$3^k$</td><td>最適化（完全直交・曲率)</td></tr>
+<tr><td>中心複合(CCD)</td><td>数値</td><td>5</td><td>$2^k+2k+C_p$</td><td>最適化（二次モデル・回転可能)</td></tr>
+<tr><td>Box-Behnken(BBD)</td><td>数値</td><td>3</td><td>$2k(k-1)+C_p$</td><td>最適化（極端条件を回避)</td></tr>
+<tr><td>Doehlert(DMD)</td><td>数値</td><td>因子ごと</td><td>$k^2+k+C_p$</td><td>最適化（効率的充填・領域拡張)</td></tr>
+<tr><td>D-Optimal</td><td>数値/カテゴリ</td><td>モデル依存</td><td>可変</td><td>制約領域・カテゴリ因子</td></tr>
+</tbody></table>
+<h2>4. モデル化（Modeling）</h2>
+<h3>4.1 スクリーニングのモデル化</h3>
+<p>一次モデル（主効果・交互作用）を最小二乗で当てはめ、効果の有意性を評価（Pareto図・正規確率プロット等）。</p>
+<h3>4.2 RSMのモデル化</h3>
+<p>最適化には<strong>二次多項式モデル</strong>を当てはめる。</p>
+<ul><li><strong>4.2.1 モデルの評価</strong>: 分散分析(ANOVA)でモデルの妥当性を評価する。</li><li><strong>回帰の有意性</strong>: $F_{model}=MS_{regression}/MS_{residual}$ が臨界F値を超えれば、モデルは応答を有意に説明する。</li><li><strong>適合欠如(lack-of-fit)</strong>: 反復（中心点の繰返し等)から純粋誤差を分離し、$F_{LoF}=MS_{LoF}/MS_{pure\ error}$ を評価。<strong>適合欠如が有意ならモデルは不適</strong>（項の追加や変換が必要)。</li><li><strong>決定係数</strong>: $R^2$・<strong>調整$R^2$</strong>（項数で補正)・<strong>予測$R^2$</strong>（PRESSに基づく)。調整と予測が乖離すると過剰適合や外れ値を疑う。</li><li><strong>4.2.2 応答変換(Response transformation)</strong>: 応答の分布が偏る・分散が不均一(不等分散)のとき、<strong>Box-Cox変換</strong>（$\lambda$ を最適化する冪変換。$\lambda=0$ は対数変換)などで正規性・等分散性を回復し、最小二乗の前提を満たしてモデルの妥当性を高める。<strong>本総説が特に強調する論点</strong>で、変換を怠るとモデル評価・最適化が誤る。</li><li><strong>4.2.3 個々の係数の評価</strong>: 各項（主効果・交互作用・二次項)の係数の有意性(t検定/F検定)を見て、<strong>非有意項を除いてモデルを簡約</strong>（parsimonious model)し、予測性能を高める。</li><li><strong>4.2.4 人工ニューラルネット(ANN)</strong>: 多項式で表せない<strong>強い非線形</strong>の因子–応答関係には、多層パーセプトロン(MLP)や<strong>動径基底関数(RBF)ネットワーク</strong>を用いる。RBFでは、出力ノードへの入力が隠れノード出力の<strong>重み付き和</strong>で、出力は入力に線形対応する。柔軟だが<strong>多くのデータと過学習対策(検証)</strong> を要する。</li><li><strong>4.2.5 最適位置(Optimal location)</strong>: 当てはめたモデル上で応答が最良となる因子の組合せを求める（単一応答なら偏微分=0や数値探索、多重応答なら第5章の手法)。応答曲面の<strong>停留点(最大・最小・鞍点)</strong> を正準分析で判定する。</li></ul>
+<h2>5. 多重応答最適化（Multiple response optimization）</h2>
+<h3>5.1 グラフィカル最適化</h3>
+<p>各応答の<strong>等高線図を重ね合わせ(overlaid contour)</strong>、すべての応答が許容域に入る因子領域（＝実行可能領域）を視覚的に見つける。因子が2〜3個で応答が少数なら有効だが、応答・因子が多いと限界がある。</p>
+<h3>5.2 満足度関数（Desirability function）</h3>
+<p>多重応答最適化の中核。<strong>Harrington(1965)</strong> が提唱し、<strong>Derringer と Suich(1980)</strong> が発展させた。手順:</p>
+<ol><li><strong>個別満足度</strong> $d_i(\hat{y}_i)$ を各応答について作る。当てはめたモデルの予測 $\hat{y}_i$ を、最適化基準に応じて <strong>0（全く受容できない)〜1（完全に望ましい)</strong> に写像する:</li></ol>
+<ul><li><strong>最大化型</strong>: 下限 $L$ 未満で $d=0$、目標 $T$ 以上で $d=1$、その間は $d=\left(\dfrac{\hat{y}-L}{T-L}\right)^{s}$。</li><li><strong>最小化型</strong>: 目標 $T$ 以下で $d=1$、上限 $U$ 以上で $d=0$、その間は $d=\left(\dfrac{U-\hat{y}}{U-T}\right)^{s}$。</li><li><strong>目標値型(two-sided)</strong>: 目標 $T$ で $d=1$、両側へ離れるほど $d$ を下げる。</li></ul>
+<p>指数 $s$（重み)で「目標にどれだけ厳しく寄せるか」を調整する（$s&gt;1$ で厳格、$s&lt;1$ で緩やか)。</p>
+<ol><li><strong>全体満足度</strong> $D$ を、個別満足度の<strong>重み付き幾何平均</strong>として求める（式14）:</li></ol>
+<p>$$D = \left( d_1^{\,r_1} \cdot d_2^{\,r_2} \cdots d_n^{\,r_n} \right)^{1/\sum r_i} = \left( \prod_{i=1}^{n} d_i^{\,r_i} \right)^{1/\sum r_i} \tag{14}$$</p>
+<p>$r_i$ は各応答の相対的重要度。<strong>幾何平均</strong>なので、<strong>どれか1つの応答が $d_i=0$ になると $D=0$</strong>（＝1つでも受容不可なら全体も不可)——これが「全応答を同時に満たす」ことを保証する要。</p>
+<ol><li>$D$ を因子空間で<strong>最大化</strong>する点が、多重応答の最適条件。</li></ol>
+<blockquote>補足（$s$ と $r$ の違い）: 指数 $s$ は<strong>個別満足度 $d_i$ の“カーブの形”</strong>（目標にどれだけ急に寄せるか)を決め、重み $r_i$ は<strong>全体満足度 $D$ における応答間の相対的重要度</strong>を決める。$s$ は応答ごと・$D$ の外側の $r_i$ は応答間の優先度、という役割分担。</blockquote>
+<p>（個別満足度の下限 $L$・目標 $T$・上限 $U$ と指数 $s$、重要度 $r_i$ の設定は原文 Fig./式で図示されている。多くの統計ソフト——Design-Expert・MODDE・Statistica 等——がこの満足度関数を実装している。）</p>
+<h2>6. 応用（Applications）</h2>
+<p>多重応答最適化＋満足度関数の分析化学での適用例を、3領域に分けて紹介する。</p>
+<ul><li><strong>6.1 抽出手順(Extraction procedures)</strong>: 固相抽出(SPE)・分散/単滴液液微量抽出(DLLME/SDME)・超音波/マイクロ波支援抽出・QuEChERSなどで、<strong>抽出溶媒の種類と量・抽出時間・温度・pH・塩析(塩濃度)・撹拌</strong>などの因子を、<strong>回収率(最大)・濃縮係数(最大)・抽出時間や溶媒量(最小)</strong> といった多重応答で最適化。相反する目標（回収率↑と溶媒量↓)を満足度関数 $D$ で両立させる例が多い。</li><li><strong>6.2 分析分離(Analytical separations)</strong>: HPLC・UHPLC・キャピラリー電気泳動(CE)・GCなどの分離条件（<strong>移動相組成・pH・緩衝液濃度・グラジエントプログラム・カラム温度・流速</strong>）を、<strong>臨界ペアの分離度(最大)・分析時間(最小)・ピーク対称性(目標=1)・理論段数(最大)</strong> の多重応答で最適化。生薬の多成分分離にも直結する典型例。</li><li><strong>6.3 その他の応用(Other applications)</strong>: 誘導体化反応・検出(蛍光/MS)条件・電気化学測定・センサー開発など。いずれも複数目標を<strong>満足度関数</strong>で1つの尺度に統合して最適化している。</li></ul>
+<h2>7. 結論（Conclusions）</h2>
+<p>RSMと満足度関数は、分析法開発で相反する複数目標を同時に最適化する強力な枠組みである。応答変換で統計的前提を満たし、非線形にはANNを用い、満足度関数で複数応答を1つの尺度Dに統合して最適化する。今後、規制のQuality by Design要求の高まりとともに、これらの多変量最適化はいっそう標準的になる。</p>
+<blockquote>補足（生薬QC実務への示唆）: 生薬の指紋・多成分定量法の開発では「<strong>分離度は上げたい・分析時間は短くしたい・ピークは対称に・主要成分の感度は確保</strong>」など、目標が同時に複数あるのが普通。この論文の核心は、それらを<strong>満足度関数Dという1つの点数</strong>にまとめて最適化する考え方。実務の型は——①各目標を「最大化／最小化／目標値」に分類し、②それぞれ<strong>個別満足度 $d_i$（0〜1)</strong> の下限・目標・上限と重み $s$ を決め、③重要度 $r_i$ で重み付き幾何平均して $D$ を作り、④DoE(CCD/BBD等)で応答曲面を張って $D$ が最大の条件を探す。<strong>幾何平均なので“1つでも致命的にダメな条件”は自動的に0点</strong>になり、バランスの良い条件が選ばれる。前提が崩れる応答は<strong>Box-Cox変換</strong>で整え、多項式で足りない非線形は<strong>ANN</strong>で補う、という判断も示される。本サイトのDoE総説・AQbD総説（設計空間/MODR)・保持モデリング総説（LSS/NK）・CRF比較（採点関数）と併読すると、「①条件を設計し(DoE) → ②応答をモデル化し(RSM/ANN) → ③複数目標を1点に統合して最適化する(desirability)」という分析法開発の全体像が完成する。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="crf-comparison-method-development.html">クロマトグラフィー応答関数(CRF)の普遍的比較研究 — 自動メソッド開発の「良さ」を1数値で測る</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbD・Six Sigmaまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="doe-desirability-multiresponse-optimization" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
