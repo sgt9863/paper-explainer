@@ -519,6 +519,18 @@
       "title": "Dive into Time-Series Anomaly Detection: A Decade Review",
       "date": "2026-07-07",
       "note": "out of scope (漢方・生薬QC/分析化学と無関係の時系列異常検知MLレビュー)。ユーザー確認のうえスキップ。再処理しないための記録。"
+    },
+    "1NCEd6YCxwuM5vPpGVElobzumiSvMByXb": {
+      "source_pdf": "d5cs00962f.pdf",
+      "slug": "bayesian-optimization-chemical-reactions-review",
+      "title": "化学反応のためのベイズ最適化（BO）— サロゲートモデル・獲得関数から実装・応用・転移学習まで（総説）",
+      "date": "2026-07-07"
+    },
+    "1EMc-MIiGmz4nSfWn7rkWdU6fRECHE3_Y": {
+      "source_pdf": "1-s2.0-S0021967321007524-main.pdf",
+      "slug": "lcxlc-bayesian-optimization-method-development",
+      "title": "包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化",
+      "date": "2026-07-07"
     }
   }
 }
