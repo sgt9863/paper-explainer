@@ -217,6 +217,14 @@
   }
 
   async function init() {
+    // 戻りURL(ハッシュ/クエリ)を supabase が消す前に退避（診断＋手動セッション確立に使う）
+    var initialHash = location.hash || "";
+    var initialSearch = location.search || "";
+    var lastErr = "";
+    function hashParam(name) {
+      var m = new RegExp("[#&?]" + name + "=([^&]+)").exec(initialHash + "&" + initialSearch);
+      return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+    }
     buildPanel();
     setBtn("読み込み中…");
     var mod;
@@ -287,18 +295,39 @@
           onLogin();
           break;
         }
-      } catch (e) { console.warn("[sync] getSession 失敗", e); }
+      } catch (e) { lastErr = "getSession: " + (e && e.message ? e.message : e); console.warn("[sync] getSession 失敗", e); }
       if (!hadAuthParams) break;              // 認証戻りでなければ待つ意味がない
       await new Promise(function (r) { setTimeout(r, 800); });
     }
 
-    // 認証パラメータ付きで戻ったのに数秒経ってもログインできない＝失敗を通知
+    // フォールバック: detectSessionInUrl が取りこぼしても、戻りURLの #access_token から
+    // 直接セッションを確立する（implicit フローの最終手段）。
+    if (!loggedIn) {
+      var at = hashParam("access_token"), rt = hashParam("refresh_token");
+      if (at) {
+        try {
+          var sres = await sb.auth.setSession({ access_token: at, refresh_token: rt });
+          if (sres.data && sres.data.session && sres.data.session.user) {
+            user = sres.data.session.user;
+            onLogin();
+          } else if (sres.error) {
+            lastErr = "setSession: " + sres.error.message;
+          }
+        } catch (e) { lastErr = "setSession例外: " + (e && e.message ? e.message : e); }
+      }
+    }
+
+    // 認証パラメータ付きで戻ったのに数秒経ってもログインできない＝失敗を通知（原因を画面に出す）
     if (hadAuthParams && !authErr) {
       setTimeout(function () {
-        if (!loggedIn) {
-          openPanel(true);
-          setMsg("ログインを確認できませんでした。Supabaseの Redirect URLs 設定や user_data テーブルをご確認ください。");
-        }
+        if (loggedIn) return;
+        openPanel(true);
+        var d = [];
+        if (hashParam("access_token")) d.push("戻りURL: #access_token あり(implicit)");
+        else if (/[?&]code=/.test(initialSearch)) d.push("戻りURL: ?code あり(古いJSがキャッシュ？スーパーリロードを)");
+        else d.push("戻りURL: トークンなし(Supabaseがトークンを付けず戻した＝Site URL/Redirect設定を確認)");
+        if (lastErr) d.push("詳細: " + lastErr);
+        setMsg("ログイン未確立 — " + d.join(" / "));
       }, 4000);
     }
   }
