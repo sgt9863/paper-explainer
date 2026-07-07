@@ -157,17 +157,19 @@
     }
   }
 
+  // 成否を呼び出し元に返す（エラーは握りつぶさず onLogin で画面表示する）。
   async function pull() {
     var res = await sb.from("user_data").select("data").eq("user_id", user.id).maybeSingle();
-    if (res.error) { console.warn("[sync] pull error", res.error.message); setMsg("同期エラー: " + res.error.message); return null; }
-    return (res.data && res.data.data) || {};
+    if (res.error) { console.warn("[sync] pull error", res.error.message); return { error: res.error.message }; }
+    return { data: (res.data && res.data.data) || {} };
   }
   async function push(state) {
     var res = await sb.from("user_data").upsert(
       { user_id: user.id, data: state, updated_at: new Date().toISOString() },
       { onConflict: "user_id" }
     );
-    if (res.error) { console.warn("[sync] push error", res.error.message); setMsg("保存エラー: " + res.error.message); }
+    if (res.error) { console.warn("[sync] push error", res.error.message); return res.error.message; }
+    return null;
   }
   function schedulePush() {
     if (!user || applyingRemote) return;
@@ -206,18 +208,26 @@
           .subscribe();
       } catch (e) { console.warn("[sync] realtime 失敗", e); }
     }
-    // 同期は裏で実行。失敗してもログイン表示は保つ
-    try {
-      setMsg("同期中…");
-      var remote = await pull();
-      var merged = mergeState(localState(), remote || {});
-      applyState(merged);
-      await push(merged);
-      setMsg("");
-    } catch (e) {
-      console.warn("[sync] 同期エラー", e);
-      setMsg("同期エラー（ログインは継続）");
+    // 同期は裏で実行。失敗してもログイン表示は保つが、エラーは必ず画面に出す。
+    setMsg("同期中…");
+    var pr = await pull();
+    if (pr.error) {
+      openPanel(true);
+      setMsg("同期エラー(読込): " + pr.error + " — Supabaseの user_data テーブル/RLS を確認してください");
+      return;
     }
+    var merged = mergeState(localState(), pr.data || {});
+    applyState(merged);
+    var perr = await push(merged);
+    if (perr) {
+      openPanel(true);
+      setMsg("同期エラー(保存): " + perr + " — Supabaseの user_data テーブル/RLS を確認してください");
+      return;
+    }
+    // 成功: 件数を出してから消す
+    var n = Object.keys((merged && merged.notes) || {}).length;
+    setMsg("同期しました（メモ " + n + " 件）");
+    setTimeout(function () { if (loggedIn) setMsg(""); }, 2500);
   }
   function onLogout() {
     loggedIn = false;
