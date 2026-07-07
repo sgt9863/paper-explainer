@@ -374,6 +374,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 {chat_scripts}
 <script src="{rel_root}/assets/read.js" defer></script>
 <script src="{rel_root}/assets/fav.js" defer></script>
+<script src="{rel_root}/assets/highlight.js" defer></script>
 {notes_scripts}
 <script src="{rel_root}/assets/sync-config.js" defer></script>
 <script src="{rel_root}/assets/sync.js" defer></script>

@@ -31,7 +31,8 @@
     return {
       notes: (window.PaperNotes && window.PaperNotes.getAll()) || {},
       status: (window.PaperRead && window.PaperRead.getAll()) || {},
-      fav: (window.PaperFav && window.PaperFav.getAll()) || {}
+      fav: (window.PaperFav && window.PaperFav.getAll()) || {},
+      highlights: (window.PaperHighlights && window.PaperHighlights.getAll()) || {}
     };
   }
 
@@ -41,12 +42,29 @@
     for (k in (remote || {})) if (remote[k]) out[k] = remote[k];
     return out;
   }
+  // ハイライトは slug -> 配列。id で和集合マージ（重複除去）。
+  function mergeHighlights(local, remote) {
+    local = local || {}; remote = remote || {};
+    var out = {}, k, seen, arr;
+    var slugs = {};
+    for (k in local) slugs[k] = 1;
+    for (k in remote) slugs[k] = 1;
+    for (k in slugs) {
+      seen = {}; arr = [];
+      (local[k] || []).concat(remote[k] || []).forEach(function (h) {
+        if (h && h.id && !seen[h.id]) { seen[h.id] = 1; arr.push(h); }
+      });
+      if (arr.length) out[k] = arr;
+    }
+    return out;
+  }
   function mergeState(local, remote) {
     remote = remote || {};
     return {
       notes: mergeMap(local.notes, remote.notes),
       status: mergeMap(local.status, remote.status),
-      fav: mergeMap(local.fav, remote.fav)
+      fav: mergeMap(local.fav, remote.fav),
+      highlights: mergeHighlights(local.highlights, remote.highlights)
     };
   }
 
@@ -56,6 +74,7 @@
       if (window.PaperNotes) window.PaperNotes.replaceAll(state.notes || {});
       if (window.PaperRead) window.PaperRead.replaceAll(state.status || {});
       if (window.PaperFav) window.PaperFav.replaceAll(state.fav || {});
+      if (window.PaperHighlights) window.PaperHighlights.replaceAll(state.highlights || {});
     } finally {
       applyingRemote = false;
     }
@@ -228,7 +247,7 @@
       }
     });
 
-    ["noteschange", "statuschange", "favchange"].forEach(function (ev) {
+    ["noteschange", "statuschange", "favchange", "highlightschange"].forEach(function (ev) {
       document.addEventListener(ev, function (e) {
         if (e.detail && e.detail.origin === "remote") return;
         schedulePush();
