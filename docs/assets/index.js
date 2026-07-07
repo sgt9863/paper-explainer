@@ -46,6 +46,10 @@
           return cmpNum(numAttr(a, "data-if"), numAttr(b, "data-if"), 1);
         case "if-desc":
           return cmpNum(numAttr(a, "data-if"), numAttr(b, "data-if"), -1);
+        case "cited-asc":
+          return cmpNum(numAttr(a, "data-cited"), numAttr(b, "data-cited"), 1);
+        case "cited-desc":
+          return cmpNum(numAttr(a, "data-cited"), numAttr(b, "data-cited"), -1);
         case "title-asc":
           return (a.getAttribute("data-title") || "").localeCompare(
             b.getAttribute("data-title") || "", "ja");

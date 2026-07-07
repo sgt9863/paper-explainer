@@ -490,6 +490,13 @@ def pub_year(meta):
     return int(m.group()) if m else None
 
 
+def citation_count(meta):
+    """front matter の citations（被引用数・整数）を返す。無ければ None。"""
+    v = str(meta.get("citations", "")).strip()
+    m = re.search(r"\d+", v)
+    return int(m.group()) if m else None
+
+
 def related_papers(target, papers, tag_counts, k=4):
     """共通タグの多さ（希少タグほど高評価）で関連論文を選ぶ。
 
@@ -688,11 +695,13 @@ def main():
             blob = " ".join([p.get("title", ""), summary, " ".join(tags), src]).lower()
             iff = parse_impact_factor(p)
             year = pub_year(p)
+            cited = citation_count(p)
             title = p.get("title", p["slug"])
             meta = (
                 f'<div class="index-meta"><span class="date">追加 {html.escape(p.get("date", ""))}</span>'
                 + (f' <span class="pubyear">発行 {year}</span>' if year else "")
                 + (f' <span class="ifval">IF {iff:g}</span>' if iff is not None else "")
+                + (f' <span class="citedval">被引用 {cited}</span>' if cited is not None else "")
                 + (f' <span class="src">{html.escape(src)}</span>' if src else "")
                 + "</div>"
             )
@@ -702,6 +711,7 @@ def main():
                 f'data-added="{html.escape(p.get("date", ""))}" '
                 f'data-published="{year if year else ""}" '
                 f'data-if="{iff if iff is not None else ""}" '
+                f'data-cited="{cited if cited is not None else ""}" '
                 f'data-title="{html.escape(title)}" '
                 f'data-tags="{html.escape(",".join(tags))}">'
                 f'{fav_toggle(p["slug"])}'
@@ -735,6 +745,8 @@ def main():
             '<option value="published-asc">発行年（古い順）</option>'
             '<option value="if-desc">IF（高い順）</option>'
             '<option value="if-asc">IF（低い順）</option>'
+            '<option value="cited-desc">被引用数（多い順）</option>'
+            '<option value="cited-asc">被引用数（少ない順）</option>'
             '<option value="title-asc">タイトル（あいうえお順）</option>'
             '</select></div>'
             '<div class="filter-group"><div class="filter-title">ステータス</div>'
