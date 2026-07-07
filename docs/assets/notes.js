@@ -141,6 +141,69 @@
         if (panel.classList.contains("notes-open")) editor.focus();
       });
     }
+
+    setupResize(panel);
+  }
+
+  // メモパネルの幅をドラッグで調整（保存して全論文ページで共有）
+  function setupResize(panel) {
+    var WKEY = "paperExplainer.notesWidth.v1";
+    var handle = document.getElementById("notesResize");
+    var MIN = 300, MAX = Math.min(1000, Math.round(window.innerWidth * 0.75));
+
+    function applyWidth(w) {
+      w = Math.max(MIN, Math.min(MAX, w));
+      panel.style.flex = "0 0 " + w + "px";
+    }
+    var saved = parseInt(localStorage.getItem(WKEY), 10);
+    if (saved) applyWidth(saved);
+
+    if (!handle) return;
+    var dragging = false;
+
+    function onMove(e) {
+      if (!dragging) return;
+      var x = (e.touches ? e.touches[0].clientX : e.clientX);
+      var right = panel.getBoundingClientRect().right;
+      applyWidth(right - x);
+      e.preventDefault();
+    }
+    function onUp() {
+      if (!dragging) return;
+      dragging = false;
+      panel.classList.remove("notes-resizing");
+      var w = Math.round(panel.getBoundingClientRect().width);
+      try { localStorage.setItem(WKEY, String(w)); } catch (e) {}
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseup", onUp);
+      document.removeEventListener("touchmove", onMove);
+      document.removeEventListener("touchend", onUp);
+    }
+    function onDown(e) {
+      dragging = true;
+      panel.classList.add("notes-resizing");
+      document.addEventListener("mousemove", onMove);
+      document.addEventListener("mouseup", onUp);
+      document.addEventListener("touchmove", onMove, { passive: false });
+      document.addEventListener("touchend", onUp);
+      e.preventDefault();
+    }
+    handle.addEventListener("mousedown", onDown);
+    handle.addEventListener("touchstart", onDown, { passive: false });
+    // キーボードでも微調整（左右矢印）
+    handle.addEventListener("keydown", function (e) {
+      var cur = panel.getBoundingClientRect().width;
+      if (e.key === "ArrowLeft") { applyWidth(cur + 20); }
+      else if (e.key === "ArrowRight") { applyWidth(cur - 20); }
+      else return;
+      try { localStorage.setItem(WKEY, String(Math.round(panel.getBoundingClientRect().width))); } catch (ex) {}
+      e.preventDefault();
+    });
+    // ダブルクリックで既定幅に戻す
+    handle.addEventListener("dblclick", function () {
+      panel.style.flex = "";
+      try { localStorage.removeItem(WKEY); } catch (e) {}
+    });
   }
 
   if (document.readyState === "loading") {

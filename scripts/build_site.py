@@ -281,6 +281,7 @@ def notes_panel_html(slug: str) -> str:
     s = html.escape(slug)
     return f"""
 <aside class="notes" id="notesPanel" data-slug="{s}" aria-label="この論文のメモ">
+  <div class="notes-resize" id="notesResize" title="ドラッグで幅を調整" role="separator" aria-orientation="vertical" tabindex="0"></div>
   <div class="notes-head">
     <span class="notes-title">メモ</span>
     <span class="notes-status" id="notesStatus" aria-live="polite"></span>
