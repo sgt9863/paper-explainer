@@ -506,6 +506,19 @@
       "slug": "alectinib-hplc-bbd-uncertainty-greenness",
       "title": "ケモメトリクス支援によるアレクチニブと関連不純物のHPLC分析法の最適化・バリデーション — 測定不確かさ評価とホワイトネス/ブルーネス/グリーンネス評価",
       "date": "2026-07-07"
+    },
+    "1OgqvOeHXIuI_POyW6rW31mZSQF85u7z5": {
+      "source_pdf": "in-silico-high-performance-liquid-chromatography-method-development-via-machine-learning.pdf",
+      "slug": "insilico-hplc-qspr-lser-lss-retention",
+      "title": "機械学習によるin silico HPLC分析法開発 — SMILESから移動相組成依存の保持因子を予測する（QSPR＋LSER＋LSS）",
+      "date": "2026-07-07"
+    },
+    "1zPH3gEd06bZB-z5AOHmN8Fx7Gu_uOp-c": {
+      "source_pdf": "2412.20512v1.pdf",
+      "slug": null,
+      "title": "Dive into Time-Series Anomaly Detection: A Decade Review",
+      "date": "2026-07-07",
+      "note": "out of scope (漢方・生薬QC/分析化学と無関係の時系列異常検知MLレビュー)。ユーザー確認のうえスキップ。再処理しないための記録。"
     }
   }
 }
