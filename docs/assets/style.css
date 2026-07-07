@@ -462,6 +462,9 @@ ol.references li:target { background: rgba(255, 214, 0, 0.18); border-radius: 4p
   max-width: min(1840px, 97vw);
   margin: 0 auto;
   align-items: flex-start;
+  /* 本文＋メモを枠の中で中央寄せし、余白を左右へ均等に振り分ける
+     （メモを広げると余白が詰まり、狭めると左右が均等に空く）。 */
+  justify-content: center;
 }
 .layout .container { margin: 0; flex: 1 1 auto; min-width: 0; }
 
