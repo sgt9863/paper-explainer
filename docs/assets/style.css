@@ -613,7 +613,8 @@ ol.references li:target { background: rgba(255, 214, 0, 0.18); border-radius: 4p
   flex: 0 0 460px;
   position: sticky;
   top: 16px;
-  max-height: calc(100vh - 32px);
+  /* 画面いっぱい（下端まで）の固定サイズ */
+  height: calc(100vh - 32px);
   display: flex;
   flex-direction: column;
   border: 1px solid var(--border);
@@ -622,52 +623,6 @@ ol.references li:target { background: rgba(255, 214, 0, 0.18); border-radius: 4p
   overflow: hidden;
   margin: 16px 0;
 }
-/* 幅調整スライダー（左端をドラッグ） */
-.notes-resize {
-  position: absolute;
-  left: -5px;
-  top: 0;
-  bottom: 0;
-  width: 10px;
-  cursor: col-resize;
-  z-index: 5;
-}
-.notes-resize::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 46px;
-  border-radius: 3px;
-  background: var(--border);
-}
-.notes-resize:hover::before, .notes.notes-resizing .notes-resize::before { background: var(--accent); }
-.notes.notes-resizing { user-select: none; }
-/* 高さ調整スライダー（下端をドラッグ） */
-.notes-resize-v {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -5px;
-  height: 10px;
-  cursor: row-resize;
-  z-index: 5;
-}
-.notes-resize-v::before {
-  content: "";
-  position: absolute;
-  bottom: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 46px;
-  height: 3px;
-  border-radius: 3px;
-  background: var(--border);
-}
-.notes-resize-v:hover::before, .notes.notes-resizing-v .notes-resize-v::before { background: var(--accent); }
-.notes.notes-resizing-v { user-select: none; }
 .notes-head {
   display: flex;
   align-items: center;
@@ -765,7 +720,6 @@ ol.references li:target { background: rgba(255, 214, 0, 0.18); border-radius: 4p
   }
   .notes.notes-open { transform: translateX(0); }
   .notes-fab { display: flex; align-items: center; justify-content: center; }
-  .notes-resize, .notes-resize-v { display: none; }
 }
 
 /* ------- 本文マーカー（highlight.js） ------- */

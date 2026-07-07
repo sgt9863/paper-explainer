@@ -52,7 +52,6 @@
 <blockquote>補足（生薬QC実務への示唆）: AQbDは、生薬の指紋・多成分定量法を「作って終わり」ではなく<strong>頑健で移管しやすい規格として設計・維持する</strong>ための上位の枠組み。実務の流れは——(1) <strong>ATP</strong>で「何を・どの範囲で・どの精確さで測るか」を先に言語化（例: 主要Q-markerを±2%で定量し臨界ペアを分離度 $R_s\ge2.0$〈目標2.5〉で分離)。(2) <strong>リスク評価</strong>（石川図で装置・材料・方法・測定・環境・人を洗い出し、FMEAで優先順位付け)で効きそうな因子(pH・有機溶媒%・温度・勾配)を特定。(3) <strong>スクリーニングDoE</strong>で有意因子に絞って知識空間を作り、(4) <strong>応答曲面DoE</strong>（または DryLab 等モデルベース)で最適化——多項式をMLRで当てはめ、ANOVA（F検定・適合欠如検定)でモデルの有意性・当てはまりを確認する。(5) <strong>設計空間/MODR</strong>を多応答の等高線重ね合わせで描き、モンテカルロで「99%の確実性でCMAを満たす」領域を求めて、その中で運用（＝多少条件が動いても頑健、再バリデーション不要)。(6) <strong>SST・制御戦略</strong>とライフサイクルで維持する。本サイトの姉妹論文——実験計画法(DoE)総説、保持モデリング総説、DryLab原典、CRF比較——が、それぞれAQbDの「DoEベース」「モデルベース」「最適化の採点基準」の道具立てにあたる。OFAT（1因子ずつ)からAQbDへ移すと、頑健性・バリデーションの容易さ・分析時間・同時定量成分数のいずれも改善するというのが本総説の一貫した主張で、ロット差の大きい生薬の堅牢な規格づくりにそのまま通じる。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="doe-desirability-multiresponse-optimization.html">実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbD・Six Sigmaまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="medicinal-plants-aqbd-review.html">薬用植物の分析法開発への分析的Quality by Design(AQbD)アプローチ（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <aside class="notes" id="notesPanel" data-slug="aqbd-lc-method-development" aria-label="この論文のメモ">
-  <div class="notes-resize" id="notesResize" title="ドラッグで幅を調整" role="separator" aria-orientation="vertical" tabindex="0"></div>
   <div class="notes-head">
     <span class="notes-title">メモ</span>
     <span class="notes-status" id="notesStatus" aria-live="polite"></span>
@@ -73,7 +72,6 @@
   <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
        data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
   <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
-  <div class="notes-resize-v" id="notesResizeV" title="ドラッグで高さを調整" role="separator" aria-orientation="horizontal" tabindex="0"></div>
 </aside>
 <button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
 </div>

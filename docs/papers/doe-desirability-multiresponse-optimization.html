@@ -86,7 +86,6 @@
 <blockquote>補足（生薬QC実務への示唆）: 生薬の指紋・多成分定量法の開発では「<strong>分離度は上げたい・分析時間は短くしたい・ピークは対称に・主要成分の感度は確保</strong>」など、目標が同時に複数あるのが普通。この論文の核心は、それらを<strong>満足度関数Dという1つの点数</strong>にまとめて最適化する考え方。実務の型は——①各目標を「最大化／最小化／目標値」に分類し、②それぞれ<strong>個別満足度 $d_i$（0〜1)</strong> の下限・目標・上限と重み $s$ を決め、③重要度 $r_i$ で重み付き幾何平均して $D$ を作り、④DoE(CCD/BBD等)で応答曲面を張って $D$ が最大の条件を探す。<strong>幾何平均なので“1つでも致命的にダメな条件”は自動的に0点</strong>になり、バランスの良い条件が選ばれる。前提が崩れる応答は<strong>Box-Cox変換</strong>で整え、多項式で足りない非線形は<strong>ANN</strong>で補う、という判断も示される。本サイトのDoE総説・AQbD総説（設計空間/MODR)・保持モデリング総説（LSS/NK）・CRF比較（採点関数）と併読すると、「①条件を設計し(DoE) → ②応答をモデル化し(RSM/ANN) → ③複数目標を1点に統合して最適化する(desirability)」という分析法開発の全体像が完成する。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="crf-comparison-method-development.html">クロマトグラフィー応答関数(CRF)の普遍的比較研究 — 自動メソッド開発の「良さ」を1数値で測る</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-experimental-designs-hplc.html">HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbD・Six Sigmaまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <aside class="notes" id="notesPanel" data-slug="doe-desirability-multiresponse-optimization" aria-label="この論文のメモ">
-  <div class="notes-resize" id="notesResize" title="ドラッグで幅を調整" role="separator" aria-orientation="vertical" tabindex="0"></div>
   <div class="notes-head">
     <span class="notes-title">メモ</span>
     <span class="notes-status" id="notesStatus" aria-live="polite"></span>
@@ -107,7 +106,6 @@
   <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
        data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
   <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
-  <div class="notes-resize-v" id="notesResizeV" title="ドラッグで高さを調整" role="separator" aria-orientation="horizontal" tabindex="0"></div>
 </aside>
 <button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
 </div>
