@@ -2,7 +2,7 @@
 title: UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価
 slug: hgwd-uplc-fingerprint-spectrum-effect-qmarker
 doi: https://doi.org/10.1016/j.jep.2023.117325
-cited_by: 17
+citations: 17
 source_pdf: 1-s2.0-S0378874123011959-main.pdf
 drive_file_id: 1m8uoHCjoXgjfOwp2MYLn2zCpOU-_aM5v
 drive_url: https://drive.google.com/file/d/1m8uoHCjoXgjfOwp2MYLn2zCpOU-_aM5v/view

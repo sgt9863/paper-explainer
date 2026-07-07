@@ -2,7 +2,7 @@
 title: 薬用植物の分析法開発への分析的Quality by Design(AQbD)アプローチ（総説）
 slug: medicinal-plants-aqbd-review
 doi: https://doi.org/10.3390/plants11212960
-cited_by: 45
+citations: 45
 source_pdf: plants-11-02960.pdf
 drive_file_id: 1PT-VjyYw2uorFZCwfBAhjkRG_cVfUVIo
 level: practitioner

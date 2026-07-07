@@ -2,7 +2,7 @@
 title: 化学・生物評価を統合したTCM総合品質評価指標(QCEI)による品質等級化
 slug: tcm-comprehensive-quality-index
 doi: https://doi.org/10.1186/s13020-023-00782-0
-cited_by: 27
+citations: 27
 source_pdf: s13020-023-00782-0.pdf
 drive_file_id: 1dioFuhdmRhkhkPyGIvJ8uC8k8TXThfm_
 level: practitioner

@@ -2,7 +2,7 @@
 title: 七制香附丸(QZXFPs)のHPLC指紋・ケモメトリクス・QAMS(一マーカー多成分定量)による品質評価
 slug: qzxf-fingerprint-qams
 doi: https://doi.org/10.1093/chromsci/bmae005
-cited_by: 2
+citations: 2
 source_pdf: bmae005.pdf
 drive_file_id: 1JnJ1rd7YLlV5vGK9Xxm4qmzjrpSUI08_
 drive_url: https://drive.google.com/file/d/1JnJ1rd7YLlV5vGK9Xxm4qmzjrpSUI08_/view

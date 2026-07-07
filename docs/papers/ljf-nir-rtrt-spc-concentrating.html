@@ -7,6 +7,8 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="近赤外分光とリアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)による金銀花濃縮工程の工業スケール・オンライン品質管理">
 <meta property="og:description" content="中薬「金銀花（Lonicerae Japonicae Flos, LJF）」の工業濃縮工程を、オンライン近赤外分光(NIR)とPLS回帰でリアルタイム監視し、リアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)管理図で最終濃縮液の合否を判定する品質管理戦略を確立した論文の全訳。気泡・不純物・液流の影響を除く自動NIR検出(AND)装置を新設計し、NCA・CA・CCA・密度・水分の5つの重要品質特性(CQA)をオンライン定量。ShewhartとSPE管理図で正常/異常バッチを識別し、具体的なリリース基準値を提示する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/ljf-nir-rtrt-spc-concentrating/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
@@ -16,7 +18,7 @@
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
 <div class="layout"><main class="container">
-<article class="paper" data-slug="ljf-nir-rtrt-spc-concentrating"><h1>近赤外分光とリアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)による金銀花濃縮工程の工業スケール・オンライン品質管理</h1><div class="paper-meta"><span class="date">2026-07-05</span> <span class="tag">生薬</span> <span class="tag">QC・品質評価</span> <span class="tag">分光法</span> <span class="tag">ケモメトリクス</span> <span class="tag">製造法</span> <span class="tag">規制・薬事</span> &middot; <a href="https://doi.org/10.1016/j.infrared.2022.104135" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S1350449522001165-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="ljf-nir-rtrt-spc-concentrating" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="ljf-nir-rtrt-spc-concentrating" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">金銀花の工業濃縮工程を近赤外(NIR)でオンライン監視し、リアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)で正常バッチのみを合格判定する</p><div class="digest-stats"><div class="stat"><span class="stat-value">3.8（Infrared Physics &amp; Technology・JCR2024／Clarivate）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">金銀花(LJF)濃縮液</span><span class="stat-label">対象</span></div><div class="stat"><span class="stat-value">オンラインNIR＋PLS＋SPC管理図</span><span class="stat-label">手法</span></div><div class="stat"><span class="stat-value">NCA・CA・CCA・密度・水分の5項目</span><span class="stat-label">定量CQA</span></div><div class="stat"><span class="stat-value">13バッチ・209工程内試料</span><span class="stat-label">校正/検証</span></div><div class="stat"><span class="stat-value">RSEP≦1.31%（密度・水分）</span><span class="stat-label">予測精度</span></div></div><ul class="digest-points"><li>気泡・不純物・液流の影響を消す自動NIR検出(AND)装置を設計し、静的スペクトル収集で工業スケールのオンライン測定を実現</li><li>フェノール酸3種(NCA・CA・CCA)と密度・水分をPLS回帰で同時オンライン定量。全モデルr&gt;0.98</li><li>ShewhartとSPE(二乗予測誤差)管理図を併用してRTRTを構築。正常(NOC)バッチのみ合格、異常(AOC)9バッチはすべて不合格に判定</li></ul></section><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<article class="paper" data-slug="ljf-nir-rtrt-spc-concentrating"><h1>近赤外分光とリアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)による金銀花濃縮工程の工業スケール・オンライン品質管理</h1><div class="paper-meta"><span class="date">2026-07-05</span> <span class="tag">生薬</span> <span class="tag">QC・品質評価</span> <span class="tag">分光法</span> <span class="tag">ケモメトリクス</span> <span class="tag">製造法</span> <span class="tag">規制・薬事</span> &middot; <a href="https://doi.org/10.1016/j.infrared.2022.104135" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S1350449522001165-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="ljf-nir-rtrt-spc-concentrating" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="ljf-nir-rtrt-spc-concentrating" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/ljf-nir-rtrt-spc-concentrating/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/ljf-nir-rtrt-spc-concentrating/ai-infographic.webp" alt="金銀花の工業濃縮工程を近赤外(NIR)でオンライン監視し、リアルタイムリリース試験(RTRT)＋統計的工程管理(SPC)で正常バッチのみを合格判定する" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>原題: Application of near infrared spectroscopy and real time release testing combined with statistical process control charts for on-line quality control of industrial concentrating process of traditional Chinese medicine &quot;Jinyinhua&quot;</li><li>著者: Ye Jin（麗水学院 生態学院）、Wenjun Du（金華市中心医院）、Xuesong Liu、Yongjiang Wu（責任著者。いずれも浙江大学 薬学院）（中国）</li><li>掲載: <em>Infrared Physics &amp; Technology</em> 123 (2022) 104135. https://doi.org/10.1016/j.infrared.2022.104135</li><li>インパクトファクター: <strong>3.8</strong>（<em>Infrared Physics &amp; Technology</em>, JCR 2024 / Clarivate。※IF 2024 の値は出典により 3.4〜3.83 と幅がある。ここでは JCR 2024 の代表値 3.83 を丸めて 3.8 とした）</li><li>受領 2021-12-24 / 改訂 2022-03-15 / 採録 2022-03-15 / オンライン公開 2022-03-18</li><li>ライセンス: © 2022 Elsevier B.V. All rights reserved.</li></ul>
 <blockquote>補足: 金銀花（きんぎんか、Lonicerae Japonicae Flos, LJF, 中国名「金銀花」）は、スイカズラ <em>Lonicera japonica</em> Thunb. の乾燥花蕾。清熱解毒の生薬で、熱・炎症の治療に古くから用いられる。主要活性成分はフェノール酸類で、本論文が定量対象とする<strong>ネオクロロゲン酸（NCA）・クロロゲン酸（CA）・クリプトクロロゲン酸（CCA）</strong>の3種。金銀花は熱毒寧注射液や双黄連錠などの中成薬（中国の承認済み漢方製剤）の原料でもある。  本論文のテーマは「成分の分析法開発」ではなく、<strong>製造工程（濃縮）そのものをオンラインでリアルタイムに監視し、最終品を試験なしで出荷判定する（＝リアルタイムリリース試験, RTRT）ための品質管理戦略</strong>である。キーワードとなる略語を先に整理する:  - <strong>NIR</strong>（近赤外分光）… 光を当てて反射／透過スペクトルから成分量・物性を非破壊・迅速に推定する分光法。PAT の代表的ツール。 - <strong>PAT</strong>（Process Analytical Technology, プロセス解析工学）… 製造工程を測定・解析しながら品質を作り込む考え方（FDA が2004年に提唱）。 - <strong>RTRT</strong>（Real Time Release Testing, リアルタイムリリース試験）… 工程中に集めたデータに基づいて最終品の品質を保証し、従来の「完成品を抜き取って試験する」工程を置き換えられるという考え方（ICH Q8(R2)）。 - <strong>PLS</strong>（Partial Least Squares, 部分最小二乗回帰）… NIRスペクトルから目的の成分量・物性を予測する多変量回帰モデル。 - <strong>SPC / MSPC</strong>（統計的工程管理／多変量統計的工程管理）… 工程が「統計的管理状態」にあるかを管理図で監視する手法。単変量の <strong>Shewhart 管理図</strong>と、多変量の <strong>Hotelling T²</strong>・<strong>SPE</strong>（squared prediction error, 二乗予測誤差）を用いる。 - <strong>CQA</strong>（Critical Quality Attribute, 重要品質特性）／<strong>NOC</strong>（Normal Operating Condition, 正常運転条件）／<strong>AOC</strong>（Abnormal Operating Condition, 異常運転条件）／<strong>AND装置</strong>（Automatic NIR Detection device, 自動NIR検出装置。本研究の自作装置）。</blockquote>
@@ -172,7 +174,21 @@
     <span class="notes-title">メモ</span>
     <span class="notes-status" id="notesStatus" aria-live="polite"></span>
   </div>
-  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
   <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
 </aside>
 <button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
@@ -183,6 +199,7 @@
 
 <script src="../assets/read.js" defer></script>
 <script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
 <script src="../assets/notes.js" defer></script>
 <script src="../assets/sync-config.js" defer></script>
 <script src="../assets/sync.js" defer></script>

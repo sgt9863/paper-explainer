@@ -3,7 +3,7 @@ title: ネットワーク薬理学に基づく抗血栓生薬の品質管理マ�
 slug: dscx-network-pharmacology-qc-markers
 source_pdf: 1-s2.0-S0378874122002367-main.pdf
 doi: https://doi.org/10.1016/j.jep.2022.115197
-cited_by: 35
+citations: 35
 drive_file_id: 1h_mD0T90b4p73Ayy27izNkZkx5E2C7wl
 drive_url: https://drive.google.com/file/d/1h_mD0T90b4p73Ayy27izNkZkx5E2C7wl/view
 level: practitioner

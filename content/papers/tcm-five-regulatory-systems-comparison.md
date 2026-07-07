@@ -2,7 +2,7 @@
 title: 長い使用歴を持つ伝統・補完医薬品(TM/CM)の規制 — 5規制システム（中国・香港・台湾・日本・韓国）の比較
 slug: tcm-five-regulatory-systems-comparison
 doi: https://doi.org/10.1155/2021/5833945
-cited_by: 28
+citations: 28
 source_pdf: eCAM-2021-5833945.pdf
 drive_file_id: 138LmDxWLVa9NHMGZHDSF183hdTs5gUYD
 level: practitioner

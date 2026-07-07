@@ -3,7 +3,7 @@ title: 明目地黄丸（MMDHP）の品質一致性評価 — HPLC三波長融�
 slug: mmdhp-twffp-ecfp-antioxidant
 source_pdf: 1-s2.0-S0021967322006409-main.pdf
 doi: https://doi.org/10.1016/j.chroma.2022.463448
-cited_by: 19
+citations: 19
 drive_file_id: 1WGC54yEDxc4EpyNiErMYu6v-KBhG8TZD
 drive_url: https://drive.google.com/file/d/1WGC54yEDxc4EpyNiErMYu6v-KBhG8TZD/view
 level: practitioner

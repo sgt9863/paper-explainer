@@ -2,7 +2,7 @@
 title: 丹参(Danshen)の産地別品質評価・モニタリング — HPLC-DAD＋NIR＋ケモメトリクス統合
 slug: danshen-hplc-nir-chemometrics
 doi: https://doi.org/10.3389/fpls.2022.932855
-cited_by: 29
+citations: 29
 source_pdf: fpls-13-932855.pdf
 drive_file_id: 1utJJUrkSVINlcl6Wvvm5g7mYNB0EnDA9
 level: practitioner

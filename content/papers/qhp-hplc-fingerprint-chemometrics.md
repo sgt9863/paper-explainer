@@ -3,7 +3,7 @@ title: 指紋分析・多指標成分定量とケモメトリクスを組み合�
 slug: qhp-hplc-fingerprint-chemometrics
 source_pdf: bmaf018.pdf
 doi: https://doi.org/10.1093/chromsci/bmaf018
-cited_by: 1
+citations: 1
 drive_file_id: 1wa1TYsoJ3tFNDS05KHQdWJZcjUakxHJx
 drive_url: https://drive.google.com/file/d/1wa1TYsoJ3tFNDS05KHQdWJZcjUakxHJx/view
 level: practitioner

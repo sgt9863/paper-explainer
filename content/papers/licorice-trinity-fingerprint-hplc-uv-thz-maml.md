@@ -3,7 +3,7 @@ title: 甘草の「トリニティ（三位一体）」指紋評価系 — HPLC�
 slug: licorice-trinity-fingerprint-hplc-uv-thz-maml
 source_pdf: 1-s2.0-S0021967322003119-main.pdf
 doi: https://doi.org/10.1016/j.chroma.2022.463118
-cited_by: 31
+citations: 31
 drive_file_id: 12h4lTsdqn_9AEt-Jv104TMaJHKy5Gjx4
 drive_url: https://drive.google.com/file/d/12h4lTsdqn_9AEt-Jv104TMaJHKy5Gjx4/view
 level: practitioner

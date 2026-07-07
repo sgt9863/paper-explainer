@@ -3,7 +3,7 @@ title: 逍遥丸（XYW）の多成分包括的解析と品質評価 — UPLC-Q-O
 slug: xiaoyao-wan-orbitrap-gcims-prm
 source_pdf: 1-s2.0-S0731708523006799-main.pdf
 doi: https://doi.org/10.1016/j.jpba.2023.115910
-cited_by: 20
+citations: 20
 drive_file_id: 1lHzZqQg6TxS1jS3IRGCucopsYC68u6Ic
 drive_url: https://drive.google.com/file/d/1lHzZqQg6TxS1jS3IRGCucopsYC68u6Ic/view
 level: practitioner

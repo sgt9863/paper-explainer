@@ -3,7 +3,7 @@ title: 近赤外分光とリアルタイムリリース試験(RTRT)＋統計的�
 slug: ljf-nir-rtrt-spc-concentrating
 source_pdf: 1-s2.0-S1350449522001165-main.pdf
 doi: https://doi.org/10.1016/j.infrared.2022.104135
-cited_by: 11
+citations: 11
 drive_file_id: 1O01zfhB3DNGrdEpqJMovr3BpT6qj5Vjr
 drive_url: https://drive.google.com/file/d/1O01zfhB3DNGrdEpqJMovr3BpT6qj5Vjr/view
 level: practitioner

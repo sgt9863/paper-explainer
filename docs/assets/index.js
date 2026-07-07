@@ -20,9 +20,8 @@
   var sortSelect = document.getElementById("sortSelect");
   var activeTags = [];
 
-  // 並び替え: data-added（追加日 YYYY-MM-DD）・data-published（発行年）・data-if（IF）・
-  //   data-cites（被引用数）・data-title。
-  // 値が無い項目（IF/発行年/被引用数 未設定）は常に末尾へ。
+  // 並び替え: data-added（追加日 YYYY-MM-DD）・data-published（発行年）・data-if（IF）・data-title。
+  // 値が無い項目（IF/発行年 未設定）は常に末尾へ。
   function numAttr(li, name) {
     var v = li.getAttribute(name);
     if (v === null || v === "") return null;
@@ -47,10 +46,10 @@
           return cmpNum(numAttr(a, "data-if"), numAttr(b, "data-if"), 1);
         case "if-desc":
           return cmpNum(numAttr(a, "data-if"), numAttr(b, "data-if"), -1);
-        case "cites-asc":
-          return cmpNum(numAttr(a, "data-cites"), numAttr(b, "data-cites"), 1);
-        case "cites-desc":
-          return cmpNum(numAttr(a, "data-cites"), numAttr(b, "data-cites"), -1);
+        case "cited-asc":
+          return cmpNum(numAttr(a, "data-cited"), numAttr(b, "data-cited"), 1);
+        case "cited-desc":
+          return cmpNum(numAttr(a, "data-cited"), numAttr(b, "data-cited"), -1);
         case "title-asc":
           return (a.getAttribute("data-title") || "").localeCompare(
             b.getAttribute("data-title") || "", "ja");

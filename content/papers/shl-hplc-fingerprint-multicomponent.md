@@ -2,7 +2,7 @@
 title: 双黄連口服液（SHL）のHPLC指紋分析と11成分同時定量を組み合わせた品質評価法
 slug: shl-hplc-fingerprint-multicomponent
 doi: https://doi.org/10.1016/j.talanta.2011.04.059
-cited_by: 90
+citations: 90
 source_pdf: 1-s2.0-S0039914011003882-main.pdf
 drive_file_id: 1FlyWkwjMsSnTNbGn-cKT5rj9aH2noyHG
 drive_url: https://drive.google.com/file/d/1FlyWkwjMsSnTNbGn-cKT5rj9aH2noyHG/view

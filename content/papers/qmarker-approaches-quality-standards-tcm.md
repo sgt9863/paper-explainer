@@ -2,7 +2,7 @@
 title: 伝統中薬の品質規格のためのQ-marker(品質マーカー)確立アプローチ（総説）
 slug: qmarker-approaches-quality-standards-tcm
 doi: https://doi.org/10.1016/j.apsb.2017.04.012
-cited_by: 247
+citations: 247
 source_pdf: 1-s2.0-S2211383517300734-main.pdf
 drive_file_id: 1hh3QcjJaqscXmN27lD8H3HzW2OqNL7KP
 drive_url: https://drive.google.com/file/d/1hh3QcjJaqscXmN27lD8H3HzW2OqNL7KP/view

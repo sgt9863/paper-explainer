@@ -285,7 +285,21 @@ def notes_panel_html(slug: str) -> str:
     <span class="notes-title">メモ</span>
     <span class="notes-status" id="notesStatus" aria-live="polite"></span>
   </div>
-  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
   <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
 </aside>
 <button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
@@ -374,6 +388,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 {chat_scripts}
 <script src="{rel_root}/assets/read.js" defer></script>
 <script src="{rel_root}/assets/fav.js" defer></script>
+<script src="{rel_root}/assets/highlight.js" defer></script>
 {notes_scripts}
 <script src="{rel_root}/assets/sync-config.js" defer></script>
 <script src="{rel_root}/assets/sync.js" defer></script>
@@ -475,14 +490,9 @@ def pub_year(meta):
     return int(m.group()) if m else None
 
 
-# 被引用数スナップショットの取得時点（OpenAlex 由来）。front matter の cited_by は
-# この時点の値。更新時はこの定数と各 md の cited_by を合わせて更新する。
-CITES_ASOF = "2026-07-08"
-
-
-def cited_by(meta):
-    """front matter の cited_by（被引用数, OpenAlex スナップショット）を int で返す。無ければ None。"""
-    v = str(meta.get("cited_by", "")).strip()
+def citation_count(meta):
+    """front matter の citations（被引用数・整数）を返す。無ければ None。"""
+    v = str(meta.get("citations", "")).strip()
     m = re.search(r"\d+", v)
     return int(m.group()) if m else None
 
@@ -685,13 +695,13 @@ def main():
             blob = " ".join([p.get("title", ""), summary, " ".join(tags), src]).lower()
             iff = parse_impact_factor(p)
             year = pub_year(p)
-            cites = cited_by(p)
+            cited = citation_count(p)
             title = p.get("title", p["slug"])
             meta = (
                 f'<div class="index-meta"><span class="date">追加 {html.escape(p.get("date", ""))}</span>'
                 + (f' <span class="pubyear">発行 {year}</span>' if year else "")
                 + (f' <span class="ifval">IF {iff:g}</span>' if iff is not None else "")
-                + (f' <span class="cites" title="被引用数（{CITES_ASOF}時点・OpenAlex）">被引用 {cites}</span>' if cites is not None else "")
+                + (f' <span class="citedval">被引用 {cited}</span>' if cited is not None else "")
                 + (f' <span class="src">{html.escape(src)}</span>' if src else "")
                 + "</div>"
             )
@@ -701,7 +711,7 @@ def main():
                 f'data-added="{html.escape(p.get("date", ""))}" '
                 f'data-published="{year if year else ""}" '
                 f'data-if="{iff if iff is not None else ""}" '
-                f'data-cites="{cites if cites is not None else ""}" '
+                f'data-cited="{cited if cited is not None else ""}" '
                 f'data-title="{html.escape(title)}" '
                 f'data-tags="{html.escape(",".join(tags))}">'
                 f'{fav_toggle(p["slug"])}'
@@ -735,11 +745,10 @@ def main():
             '<option value="published-asc">発行年（古い順）</option>'
             '<option value="if-desc">IF（高い順）</option>'
             '<option value="if-asc">IF（低い順）</option>'
-            '<option value="cites-desc">被引用数（多い順）</option>'
-            '<option value="cites-asc">被引用数（少ない順）</option>'
+            '<option value="cited-desc">被引用数（多い順）</option>'
+            '<option value="cited-asc">被引用数（少ない順）</option>'
             '<option value="title-asc">タイトル（あいうえお順）</option>'
-            '</select>'
-            f'<p class="sort-note">被引用数は {CITES_ASOF} 時点（OpenAlex）</p></div>'
+            '</select></div>'
             '<div class="filter-group"><div class="filter-title">ステータス</div>'
             '<div class="statusfilter" id="statusFilter" role="radiogroup">'
             '<label><input type="radio" name="statusf" value="all" checked> すべて</label>'

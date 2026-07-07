@@ -2,7 +2,7 @@
 title: クロマトグラフィー応答関数(CRF)の普遍的比較研究 — 自動メソッド開発の「良さ」を1数値で測る
 slug: crf-comparison-method-development
 doi: https://doi.org/10.1016/j.chroma.2014.08.014
-cited_by: 28
+citations: 28
 source_pdf: dbac7497-1s2.0S0021967314012448main.pdf
 level: practitioner
 date: 2026-07-03

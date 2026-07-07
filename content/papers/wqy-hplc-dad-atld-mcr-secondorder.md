@@ -3,7 +3,7 @@ title: HPLC-DAD＋二次校正（ATLD／ATLD-MCR）による漢方方剤「温�
 slug: wqy-hplc-dad-atld-mcr-secondorder
 source_pdf: chemosensors-10-00238-v2.pdf
 doi: https://doi.org/10.3390/chemosensors10070238
-cited_by: 6
+citations: 6
 drive_file_id: 1u0VZvzHz0NJB2cdD1X9ufgZbQvtZvtuQ
 drive_url: https://drive.google.com/file/d/1u0VZvzHz0NJB2cdD1X9ufgZbQvtZvtuQ/view
 level: practitioner

@@ -2,7 +2,7 @@
 title: HPLC法の開発とバリデーションにおける実験計画法(DoE)の総説 — スクリーニング設計から応答曲面・QbD・Six Sigmaまで
 slug: doe-experimental-designs-hplc
 doi: https://doi.org/10.1016/j.jpba.2017.05.006
-cited_by: 389
+citations: 389
 source_pdf: 8825810b-1s2.0S0731708517303746main.pdf
 level: practitioner
 date: 2026-07-03

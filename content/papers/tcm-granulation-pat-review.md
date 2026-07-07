@@ -2,7 +2,7 @@
 title: 伝統中薬の造粒プロセス解析技術(PAT)と応用（総説）
 slug: tcm-granulation-pat-review
 doi: https://doi.org/10.1097/HM9.0000000000000015
-cited_by: 10
+citations: 10
 source_pdf: granulation-process-pat-tcm.pdf
 drive_file_id: 1MrjQvRT-3tLASg5PsQeBu3f7HNARJlym
 level: practitioner

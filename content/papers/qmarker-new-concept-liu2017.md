@@ -5,7 +5,7 @@ source_pdf: 1-s2.0-S1674638417600704-main.pdf
 drive_file_id: 10OZi-kWiDp6ZeiVgyqTxqJfgu-fz07ng
 drive_url: https://drive.google.com/file/d/10OZi-kWiDp6ZeiVgyqTxqJfgu-fz07ng/view
 doi: https://doi.org/10.1016/S1674-6384(17)60070-4
-cited_by: 127
+citations: 127
 level: practitioner
 date: 2026-07-02
 tags: [生薬, 方剤・中成薬, QC・品質評価, Q-marker, 指紋分析, 薬効・薬理, レビュー]

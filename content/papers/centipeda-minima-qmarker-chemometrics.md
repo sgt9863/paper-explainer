@@ -2,7 +2,7 @@
 title: ケモメトリクス・ネットワーク薬理・分子ドッキングに基づく漢方のQ-marker探索 — 鵝不食草(Centipeda minima)を例として
 slug: centipeda-minima-qmarker-chemometrics
 doi: https://doi.org/10.1002/pca.3173
-cited_by: 19
+citations: 19
 source_pdf: Phytochemical_Analysis_2022_Liu_Centipeda_minima.pdf
 level: practitioner
 date: 2026-06-29

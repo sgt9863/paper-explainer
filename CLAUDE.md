@@ -75,11 +75,14 @@ python3 -m http.server 8000 --directory docs
   既定は localStorage 保存（`paperExplainer.notes.v1`）。`window.PaperNotes`（get/set/getAll/replaceAll）と `noteschange` イベントを公開し、
   将来のクラウド同期（ログイン）モジュールが `replaceAll()` で他端末のメモを流し込み、`noteschange` を購読して push できる設計。
   メモパネルは build_site.py の `notes_panel_html` が出力し、`page_template(notes_slug=...)` で有効化する。
+- 各論文ページの本文に **マーカー（ハイライト）**（`docs/assets/highlight.js`）が付く。本文をドラッグ選択→色パレットで着色、マーク再タップで削除。
+  保存は「本文ブロック index ＋ ブロック内の文字オフセット(start,end)」でアンカーし、テキストノードだけ `<mark class="hl">` で囲む（strong/em/リンク等の構造は壊さない）。
+  既定は localStorage 保存（`paperExplainer.highlights.v1` ＝ `{slug: [{id,b,s,e,t,c}]}`）。`window.PaperHighlights`（getAll/get/replaceAll）と `highlightschange` イベント(origin付き)を公開。
 - **クラウド同期（ログイン）**は任意機能（`docs/assets/sync.js`＋`sync-config.js`。Supabase）。`sync-config.js` に `url`/`anonKey`
-  を入れると全ページのヘッダーに「ログイン」ボタンが出て、メモ/読書ステータス/お気に入りを端末間同期する（未設定なら localStorage のみ）。
-  認証はメールのマジックリンク。ユーザーごとに `public.user_data(user_id, data jsonb)` の1行へ `{notes,status,fav}` を保存し RLS で own-row 限定。
-  ログイン時に remote と local を union マージ（衝突は remote 優先）→ 反映＆push、以降のローカル変更(origin=local)をデバウンス push、Realtime で他端末の更新を pull。
-  スキーマは `supabase/schema.sql`。read.js/fav.js/notes.js は `getAll()`/`replaceAll()` と変更イベント(origin付き)を公開して sync.js が利用する。
+  を入れると全ページのヘッダーに「ログイン」ボタンが出て、メモ/読書ステータス/お気に入り/**マーカー**を端末間同期する（未設定なら localStorage のみ）。`google:true` で「Googleでログイン」も表示。
+  認証はメールのマジックリンク（＋任意でGoogle OAuth）。ユーザーごとに `public.user_data(user_id, data jsonb)` の1行へ `{notes,status,fav,highlights}` を保存し RLS で own-row 限定。
+  ログイン時に remote と local を union マージ（衝突は remote 優先。highlights は id で和集合）→ 反映＆push、以降のローカル変更(origin=local)をデバウンス push、Realtime で他端末の更新を pull。
+  スキーマは `supabase/schema.sql`。read.js/fav.js/notes.js/highlight.js は `getAll()`/`replaceAll()` と変更イベント(origin付き)を公開して sync.js が利用する。
   `anonKey` は RLS 前提の公開キーなのでリポジトリ公開でも可（`service_role` キーは置かない）。
 - 各論文ページには **AI質問サイドバー**（`docs/assets/chat.js`）が付く。論文本文を JSON で埋め込み、
   ブラウザから直接 Anthropic API を呼ぶ（APIキーは利用者の localStorage 保存・リポジトリには持たない）。

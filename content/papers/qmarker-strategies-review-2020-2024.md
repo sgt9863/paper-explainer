@@ -2,7 +2,7 @@
 title: 伝統中薬のQ-marker(品質マーカー)同定戦略：2020–2024年研究の系統的レビュー
 slug: qmarker-strategies-review-2020-2024
 doi: https://doi.org/10.3389/fmed.2025.1709969
-cited_by: 6
+citations: 6
 source_pdf: fmed-12-1709969.pdf
 drive_file_id: 1tMaNlzfgM2DR51a9vVoynBQ3ONIxmon4
 drive_url: https://drive.google.com/file/d/1tMaNlzfgM2DR51a9vVoynBQ3ONIxmon4/view

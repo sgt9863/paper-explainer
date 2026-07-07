@@ -59,14 +59,28 @@
 <p><strong>Six Sigma</strong>（工程能力指数などの品質指標)をクロマトグラフィーの品質管理に応用する考え方が説明される。<strong>DMAIC</strong>（定義・測定・分析・改善・管理)原則を、問題解決・根本原因調査・リスク管理・メソッド性能改善に用いる。目標は、望ましい分離が<strong>一貫して</strong>達成されることを保証する工程能力の確保。</p>
 <h2>10. 結論（Conclusions）</h2>
 <p>生データはモデルがあって初めて意味を持つ。クロマトグラフィーの広い最適化パラメータ空間と分析対象の性質差のもとで、合理的に最適条件を選ぶには<strong>実験計画とケモメトリクス</strong>が不可欠。ANOVA・主成分分析・実験計画・多変量解析・人工ニューラルネットワーク・AIがケモメトリクスの一部となり、その利用は急速に広がっている（推定で年約6000編がケモメトリクス的内容を含む)。今後、高感度化した質量分析との連携を軸に、バイオ分析・迅速診断のバイオマーカー探索などで一層重要になる。</p>
-<blockquote>補足（生薬QC実務への示唆）: 生薬の指紋・多成分定量法を作る／移管する現場で、そのまま使える“レシピ集”として読める（本総説自体、丹参・三七人参・黄連など漢方の適用例を多数収録)。実務の型は——(1) <strong>まずスクリーニング</strong>（Plackett-Burman や一部実施要因計画)で、移動相組成・pH・カラム温度・流速・グラジエント勾配など多数の候補因子から「効く因子」を数回の試行で絞る。(2) 次に <strong>応答曲面(CCD や Box-Behnken)</strong> で、絞った2〜3因子を最適化し、分離度・分析時間・ピーク対称性・理論段数などの応答を同時に満たす条件を探す（多項式＝式7で応答曲面を作り、等高線図で読む)。(3) 得たモデルから <strong>設計空間</strong> を描き、その中で運用すれば頑健性が担保され、承認後変更も減らせる。(4) <strong>頑健性・ラギッドネス試験・SST基準</strong>もDoEで定量的に根拠づけできる（分析者・装置・カラムロット差を入れ子型で評価)。OFAT（1因子ずつ)より試行数が少なく、交互作用（例: pHと有機溶媒%の組合せ効果)を見落とさない点が、ロット差の大きい生薬の堅牢な規格づくりに向く。姉妹論文（保持モデリング総説・DryLab原典・AQbD総説・CRF比較)と併読すると、モデルベース(DryLab)とDoEベースの2系統、および最適化の“採点基準(CRF)”までの全体像がつかめる。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="medicinal-plants-aqbd-review.html">薬用植物の分析法開発への分析的Quality by Design(AQbD)アプローチ（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li><li><a href="tcm-granulation-pat-review.html">伝統中薬の造粒プロセス解析技術(PAT)と応用（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+<blockquote>補足（生薬QC実務への示唆）: 生薬の指紋・多成分定量法を作る／移管する現場で、そのまま使える“レシピ集”として読める（本総説自体、丹参・三七人参・黄連など漢方の適用例を多数収録)。実務の型は——(1) <strong>まずスクリーニング</strong>（Plackett-Burman や一部実施要因計画)で、移動相組成・pH・カラム温度・流速・グラジエント勾配など多数の候補因子から「効く因子」を数回の試行で絞る。(2) 次に <strong>応答曲面(CCD や Box-Behnken)</strong> で、絞った2〜3因子を最適化し、分離度・分析時間・ピーク対称性・理論段数などの応答を同時に満たす条件を探す（多項式＝式7で応答曲面を作り、等高線図で読む)。(3) 得たモデルから <strong>設計空間</strong> を描き、その中で運用すれば頑健性が担保され、承認後変更も減らせる。(4) <strong>頑健性・ラギッドネス試験・SST基準</strong>もDoEで定量的に根拠づけできる（分析者・装置・カラムロット差を入れ子型で評価)。OFAT（1因子ずつ)より試行数が少なく、交互作用（例: pHと有機溶媒%の組合せ効果)を見落とさない点が、ロット差の大きい生薬の堅牢な規格づくりに向く。姉妹論文（保持モデリング総説・DryLab原典・AQbD総説・CRF比較)と併読すると、モデルベース(DryLab)とDoEベースの2系統、および最適化の“採点基準(CRF)”までの全体像がつかめる。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="doe-desirability-multiresponse-optimization.html">実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="aqbd-lc-method-development.html">AQbD原則によるLC分析法の開発と最適化 — 概観と最近の進展</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="medicinal-plants-aqbd-review.html">薬用植物の分析法開発への分析的Quality by Design(AQbD)アプローチ（総説）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">レビュー</span><span class="rel-tag">ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <aside class="notes" id="notesPanel" data-slug="doe-experimental-designs-hplc" aria-label="この論文のメモ">
   <div class="notes-head">
     <span class="notes-title">メモ</span>
     <span class="notes-status" id="notesStatus" aria-live="polite"></span>
   </div>
-  <textarea id="notesText" class="notes-text" placeholder="この論文についてのメモを書く…（自動保存）"></textarea>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
   <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
 </aside>
 <button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
@@ -77,6 +91,7 @@
 
 <script src="../assets/read.js" defer></script>
 <script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
 <script src="../assets/notes.js" defer></script>
 <script src="../assets/sync-config.js" defer></script>
 <script src="../assets/sync.js" defer></script>

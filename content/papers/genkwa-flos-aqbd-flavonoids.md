@@ -2,7 +2,7 @@
 title: 芫花(Genkwa Flos)フラボノイドのAQbD(分析的Quality by Design)によるLC分析法開発
 slug: genkwa-flos-aqbd-flavonoids
 doi: https://doi.org/10.1038/s41598-021-91341-w
-cited_by: 16
+citations: 16
 source_pdf: s41598-021-91341-w.pdf
 drive_file_id: 194SfBhehyrXdiaAPHGN9p6f-4VhTldkV
 level: practitioner

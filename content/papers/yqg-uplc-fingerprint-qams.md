@@ -3,7 +3,7 @@ title: 益清顆粒（YQG）のUPLC指紋分析と一点校正多成分定量（
 slug: yqg-uplc-fingerprint-qams
 source_pdf: fchem-13-1632033.pdf
 doi: https://doi.org/10.3389/fchem.2025.1632033
-cited_by: 3
+citations: 3
 drive_file_id: 1rOACa_rlpNTtKLnNA9csmrfoDsUkQwAd
 drive_url: https://drive.google.com/file/d/1rOACa_rlpNTtKLnNA9csmrfoDsUkQwAd/view
 level: practitioner

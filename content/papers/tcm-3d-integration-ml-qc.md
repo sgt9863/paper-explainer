@@ -2,7 +2,7 @@
 title: 三次元(3D)積分と機械学習による中薬(黄芩)のHPLC-DAD品質評価法
 slug: tcm-3d-integration-ml-qc
 doi: https://doi.org/10.1016/j.chroma.2025.465826
-cited_by: 4
+citations: 4
 source_pdf: 1-s2.0-S0021967325001748-main.pdf
 drive_file_id: 12evDsBDpM_3QA2cDXGeLLC6naeb9PFWi
 drive_url: https://drive.google.com/file/d/12evDsBDpM_3QA2cDXGeLLC6naeb9PFWi/view

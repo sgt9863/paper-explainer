@@ -3,7 +3,7 @@ title: ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（�
 slug: grg-dac-tlc-qams-hplc-fingerprint
 source_pdf: fphar-17-1843493.pdf
 doi: https://doi.org/10.3389/fphar.2026.1843493
-cited_by: 0
+citations: 0
 drive_file_id: 1TxY4tvbiF2DjNF2XGZQr0cH72tVPNfGs
 drive_url: https://drive.google.com/file/d/1TxY4tvbiF2DjNF2XGZQr0cH72tVPNfGs/view
 level: practitioner
