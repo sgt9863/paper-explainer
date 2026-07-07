@@ -457,7 +457,9 @@ ol.references li:target { background: rgba(255, 214, 0, 0.18); border-radius: 4p
 .layout {
   display: flex;
   gap: 24px;
-  max-width: 1240px;
+  /* 本文(最大820px)＋メモを収める。メモを広げたぶんは画面右の余白へ伸ばし、
+     本文をできるだけ圧迫しない。画面が広いほど上限も広がる（最大は 97vw まで）。 */
+  max-width: min(1840px, 97vw);
   margin: 0 auto;
   align-items: flex-start;
 }
