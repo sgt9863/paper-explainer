@@ -227,7 +227,18 @@
       setBtn("ログイン(不可)", "同期ライブラリの読み込みに失敗しました");
       return;
     }
-    sb = mod.createClient(cfg.url, cfg.anonKey);
+    // flowType: "implicit" … OAuth 戻りをハッシュ(#access_token)方式にする。
+    // 静的サイト(GitHub Pages)では PKCE(?code) のコード交換が失敗しやすく、
+    // 「Supabase側にユーザーは作られるがブラウザはログインにならない」症状が出るため、
+    // メールのマジックリンクと同じハッシュ方式に統一して確実にセッションを確立する。
+    sb = mod.createClient(cfg.url, cfg.anonKey, {
+      auth: {
+        flowType: "implicit",
+        detectSessionInUrl: true,
+        persistSession: true,
+        autoRefreshToken: true
+      }
+    });
     setBtn("ログイン", "メールでログインして全端末同期");
 
     // ログイン戻りURLにエラーがあれば画面に表示（原因特定用）
