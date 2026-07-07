@@ -93,6 +93,8 @@ body {
 }
 .auth-send:hover { filter: brightness(1.08); }
 .auth-msg { margin: 0; font-size: 0.8rem; color: var(--muted); min-height: 1em; }
+/* ヘッダー内・常時表示の同期ステータス（ログイン後パネルが閉じても見える） */
+.auth-status { margin-left: 8px; font-size: 0.8rem; color: #fff; opacity: 0.95; white-space: nowrap; }
 
 .container {
   max-width: 820px;
@@ -311,7 +313,18 @@ figcaption {
   overflow-y: auto;
   overscroll-behavior: contain;
   padding-right: 6px;
+  /* オーバーフロー時にスクロールバーをはっきり見せる（Mac の自動非表示対策） */
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
 }
+.index-sidebar::-webkit-scrollbar { width: 10px; }
+.index-sidebar::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.index-sidebar::-webkit-scrollbar-track { background: transparent; }
 .index-main { flex: 1 1 auto; min-width: 0; }
 .index-main .count { margin-top: 0; }
 

@@ -25,7 +25,9 @@
   var applyingRemote = false;
   var panel = null;
   var msgEl = null;
+  var statusEl = null;   // ヘッダー内・常時表示の同期ステータス（パネルが閉じていても見える）
   var emailInput = null;
+  function setSyncStatus(t) { if (statusEl) statusEl.textContent = t || ""; }
 
   function localState() {
     return {
@@ -111,6 +113,10 @@
       '<button type="button" class="auth-send">ログインリンクを送る</button>' +
       '<p class="auth-msg" aria-live="polite"></p>';
     authBtn.parentNode.appendChild(panel);
+    statusEl = document.createElement("span");
+    statusEl.className = "auth-status";
+    statusEl.setAttribute("aria-live", "polite");
+    authBtn.parentNode.insertBefore(statusEl, authBtn.nextSibling);
     msgEl = panel.querySelector(".auth-msg");
     emailInput = panel.querySelector(".auth-email");
     var sendBtn = panel.querySelector(".auth-send");
@@ -209,9 +215,11 @@
       } catch (e) { console.warn("[sync] realtime 失敗", e); }
     }
     // 同期は裏で実行。失敗してもログイン表示は保つが、エラーは必ず画面に出す。
-    setMsg("同期中…");
+    // ステータスはヘッダー(常時表示)に出す＝パネルが閉じていても見える。
+    setSyncStatus("同期中…");
     var pr = await pull();
     if (pr.error) {
+      setSyncStatus("同期エラー");
       openPanel(true);
       setMsg("同期エラー(読込): " + pr.error + " — Supabaseの user_data テーブル/RLS を確認してください");
       return;
@@ -220,14 +228,15 @@
     applyState(merged);
     var perr = await push(merged);
     if (perr) {
+      setSyncStatus("同期エラー");
       openPanel(true);
       setMsg("同期エラー(保存): " + perr + " — Supabaseの user_data テーブル/RLS を確認してください");
       return;
     }
-    // 成功: 件数を出してから消す
+    // 成功: メモ件数を出してから薄く消す
     var n = Object.keys((merged && merged.notes) || {}).length;
-    setMsg("同期しました（メモ " + n + " 件）");
-    setTimeout(function () { if (loggedIn) setMsg(""); }, 2500);
+    setSyncStatus("同期OK・メモ " + n + " 件");
+    setTimeout(function () { if (loggedIn) setSyncStatus(""); }, 6000);
   }
   function onLogout() {
     loggedIn = false;
@@ -235,6 +244,7 @@
     if (channel) { try { sb.removeChannel(channel); } catch (e) {} channel = null; }
     openPanel(false);
     setMsg("");
+    setSyncStatus("");
     setBtn("ログイン", "メールでログインして全端末同期");
   }
 
