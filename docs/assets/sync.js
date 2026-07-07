@@ -122,12 +122,18 @@
     if (gBtn) gBtn.addEventListener("click", signInWithGoogle);
   }
 
+  // 戻り先はハッシュ/クエリを除いた素のページURL。location.href を使うと
+  // 既存の #access_token が積み重なり URL が壊れる（トークン継ぎ足し・古いerror残留）。
+  function redirectTarget() {
+    return location.origin + location.pathname;
+  }
+
   async function signInWithGoogle() {
     setMsg("Googleへ移動します…");
     try {
       var res = await sb.auth.signInWithOAuth({
         provider: "google",
-        options: { redirectTo: location.href }
+        options: { redirectTo: redirectTarget() }
       });
       if (res.error) setMsg("Googleログイン失敗: " + res.error.message);
     } catch (e) {
@@ -142,7 +148,7 @@
     try {
       var res = await sb.auth.signInWithOtp({
         email: email,
-        options: { emailRedirectTo: location.href }
+        options: { emailRedirectTo: redirectTarget() }
       });
       if (res.error) { setMsg("送信に失敗: " + res.error.message); return; }
       setMsg("送信しました。メール内のリンクをタップしてください。");
@@ -182,6 +188,12 @@
     loggedIn = true;
     openPanel(false);              // メールフォームを閉じる
     setMsg("");
+    // 戻りURLのトークン(＋古いerror)をアドレスバーから消す。残すと次回ログインで積み重なる。
+    try {
+      if (location.hash || location.search) {
+        history.replaceState(null, "", location.origin + location.pathname);
+      }
+    } catch (e) {}
     // まずログイン状態を即表示（同期の成否に依存させない）
     setBtn("ログアウト（" + shortEmail(user.email) + "）", (user.email || "") + " でログイン中。クリックでログアウト");
     // 他端末の更新を受信
@@ -221,9 +233,13 @@
     var initialHash = location.hash || "";
     var initialSearch = location.search || "";
     var lastErr = "";
-    function hashParam(name) {
-      var m = new RegExp("[#&?]" + name + "=([^&]+)").exec(initialHash + "&" + initialSearch);
-      return m ? decodeURIComponent(m[1].replace(/\+/g, " ")) : "";
+    var _rawUrl = initialHash + "&" + initialSearch;
+    // 値は & と # の両方で区切る（壊れたURLでは #access_token が # で連結されるため）。
+    // 同名が複数あるとき最後（＝最新の戻り）の値を返す。
+    function lastParam(name) {
+      var re = new RegExp("[#&?]" + name + "=([^&#]+)", "g"), m, v = "";
+      while ((m = re.exec(_rawUrl)) !== null) v = m[1];
+      return v ? decodeURIComponent(v.replace(/\+/g, " ")) : "";
     }
     buildPanel();
     setBtn("読み込み中…");
@@ -249,11 +265,29 @@
     });
     setBtn("ログイン", "メールでログインして全端末同期");
 
-    // ログイン戻りURLにエラーがあれば画面に表示（原因特定用）
+    // 戻りURLの最新トークン（壊れて積み重なっていても最後のものを採用）
+    var urlAccessToken = lastParam("access_token");
+    var urlRefreshToken = lastParam("refresh_token");
+    // ログイン戻りURLにエラーがあれば表示。ただし有効トークンがあれば無視して確立を優先。
     var authErr = urlAuthError();
-    if (authErr) { openPanel(true); setMsg("ログイン失敗: " + authErr); }
+    if (authErr && !urlAccessToken) { openPanel(true); setMsg("ログイン失敗: " + authErr); }
     // 戻りURLに認証パラメータがあるのに一定時間ログインできなければ知らせる
     var hadAuthParams = /[?#&](code|access_token|error)=/.test(location.href);
+
+    // 戻りURLにトークンがあれば、detectSessionInUrl を待たず即セッション確立を試みる。
+    async function establishFromUrl() {
+      if (loggedIn || !urlAccessToken) return;
+      try {
+        var sres = await sb.auth.setSession({ access_token: urlAccessToken, refresh_token: urlRefreshToken });
+        if (sres.data && sres.data.session && sres.data.session.user) {
+          user = sres.data.session.user;
+          onLogin();   // onLogin が URL を掃除する
+        } else if (sres.error) {
+          lastErr = "setSession: " + sres.error.message;
+        }
+      } catch (e) { lastErr = "setSession例外: " + (e && e.message ? e.message : e); }
+    }
+    await establishFromUrl();
 
     authBtn.addEventListener("click", async function () {
       if (user) {
@@ -300,32 +334,19 @@
       await new Promise(function (r) { setTimeout(r, 800); });
     }
 
-    // フォールバック: detectSessionInUrl が取りこぼしても、戻りURLの #access_token から
-    // 直接セッションを確立する（implicit フローの最終手段）。
-    if (!loggedIn) {
-      var at = hashParam("access_token"), rt = hashParam("refresh_token");
-      if (at) {
-        try {
-          var sres = await sb.auth.setSession({ access_token: at, refresh_token: rt });
-          if (sres.data && sres.data.session && sres.data.session.user) {
-            user = sres.data.session.user;
-            onLogin();
-          } else if (sres.error) {
-            lastErr = "setSession: " + sres.error.message;
-          }
-        } catch (e) { lastErr = "setSession例外: " + (e && e.message ? e.message : e); }
-      }
-    }
+    // まだ確立できていなければ、退避したトークンでもう一度だけ試す。
+    await establishFromUrl();
 
     // 認証パラメータ付きで戻ったのに数秒経ってもログインできない＝失敗を通知（原因を画面に出す）
-    if (hadAuthParams && !authErr) {
+    if (hadAuthParams) {
       setTimeout(function () {
         if (loggedIn) return;
         openPanel(true);
         var d = [];
-        if (hashParam("access_token")) d.push("戻りURL: #access_token あり(implicit)");
+        if (urlAccessToken) d.push("戻りURL: #access_token あり(implicit)");
         else if (/[?&]code=/.test(initialSearch)) d.push("戻りURL: ?code あり(古いJSがキャッシュ？スーパーリロードを)");
-        else d.push("戻りURL: トークンなし(Supabaseがトークンを付けず戻した＝Site URL/Redirect設定を確認)");
+        else d.push("戻りURL: トークンなし(Site URL/Redirect設定を確認)");
+        if (authErr) d.push("Supabaseからのエラー: " + authErr);
         if (lastErr) d.push("詳細: " + lastErr);
         setMsg("ログイン未確立 — " + d.join(" / "));
       }, 4000);
