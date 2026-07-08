@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標">
+<meta property="og:description" content="クロマトグラフィーの自動メソッド開発（Drylab・Simplex・遺伝的アルゴリズム等）を最適解へ効率的に導くには、分離全体の良さを1つの数値で表す「クロマトグラフィー応答関数（CRF）」が不可欠である。1975年のMorgan-Deming以来50を超えるCRFが提案され、どれが最適かの論争が続いている。本研究は、線形溶媒強度（LSS）モデルと指数修飾ガウス（EMG）で計算機模擬（in silico）した多数のクロマトグラム（5・10・15成分×10サブカテゴリ×各10試料）を用い、文献既存＋新規の50超のCRFを大規模に総当たり比較した。とくに①試料の成分数が事前に未知、②スペクトル情報のない1次データ（単一波長UV等）という難しい条件に焦点を当てる。結論として、観測ピーク数nobsとともに単調増加するCRF（サブカテゴリB）が、そうでないもの（A）より有意に優れる。判別因子d0やKaiserのピーク谷比f/gに基づくCRFはピーク非対称性にSnyder分離度Rsより強いが、ノイズが有意になると優位を失う。多くのCRFは、試料をベースライン分離するのにちょうど必要な（あるいはやや不足する）効率のカラムで探索するとき最も良く機能し、観測成分数を優先してから分離度・分析時間で条件を順位づけるCRFが全効率範囲で最良の結果を与えた。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="chromatographic-response-functions-universal-comparison"><h1>クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> <span class="tag">HPLC・UPLC</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2014.08.014" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">dbac7497-1s2.0S0021967314012448main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="chromatographic-response-functions-universal-comparison" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="chromatographic-response-functions-universal-comparison" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">文献＋新規の50超のCRF（分離の良さを1数値化する指標）をin silicoで大規模比較――観測ピーク数とともに単調増加するCRFが有意に優れると結論</p><div class="digest-stats"><div class="stat"><span class="stat-value">3.8（J. Chromatogr. A・JCR2024・Q1）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">クロマトグラフィー応答関数（CRF）の網羅比較</span><span class="stat-label">主題</span></div><div class="stat"><span class="stat-value">LSSモデル＋EMGでin silicoクロマトグラム生成</span><span class="stat-label">手法</span></div><div class="stat"><span class="stat-value">5/10/15成分×10サブカテゴリ×各10試料</span><span class="stat-label">試料</span></div><div class="stat"><span class="stat-value">37×37グラジエント格子の総当たり</span><span class="stat-label">探索</span></div></div><ul class="digest-points"><li>自動メソッド開発を最適解へ導くには「分離の良さ」を1数値化するCRFが必要――1975年Morgan-Deming以来50超が提案され本研究はin silico（計算機模擬）で大規模比較</li><li>CRFを時間最適化なし/あり（カテゴリI/II）と観測ピーク数nobsとともに単調増加する/しない（サブカテゴリB/A）に分類しAのCRFをnobs加算でB化した新規CRFも提案</li><li>成分数未知・1次データ（単一検出器）という難条件で観測ピーク数とともに単調増加するB型CRFがA型より有意に優れ・判別因子d0やピーク谷比f/gはピーク非対称性にSnyder Rsより強いがノイズが増すと優位を失うと結論</li></ul></section><p>&lt;!-- Tyteca E, Desmet G. A universal comparison study of chromatographic response functions. J Chromatogr A 1361 (2014) 178-190. doi:10.1016/j.chroma.2014.08.014 の全訳密度日本語版。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は生薬そのものを扱う研究ではなく、<strong>クロマトグラフィーの自動メソッド開発（automated method development）で「分離条件の良し悪し」を1つの数値でスコア化する指標——クロマトグラフィー応答関数（CRF）——を50種以上、計算機模擬で徹底比較した基盤研究</strong> である。当サイトが扱う生薬・漢方の指紋分析や多成分定量メソッドは、いずれも「多数のピークをいかに分離するか」という共通課題を抱えており、その最適化を自動化・数値化するには CRF のような客観的スコアが要る。本論文の核心的な教訓——「観測できたピーク数とともに単調に増える CRF でないと、成分数が事前にわからない試料（＝生薬エキスのような複雑試料の典型）では最適化が迷走する」——は、生薬の未知多成分プロファイルを扱う分析法開発にそのまま効く。当サイトで既に扱った「in silico HPLC のML保持予測」「望ましさ関数による多応答最適化」の議論と地続きの、メソッド開発を自動化・客観化するための理論的裏付けとして読める。やや専門性が高いが、生薬指紋分析の「なぜこの分離条件を選ぶのか」を根本から支える文献である。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> A universal comparison study of chromatographic response functions</li><li><strong>和題（本稿）:</strong> クロマトグラフィー応答関数（CRF）の網羅的比較研究</li><li><strong>著者:</strong> Eva Tyteca（責任著者）, Gert Desmet</li><li><strong>所属:</strong> ブリュッセル自由大学（Vrije Universiteit Brussel）化学工学科（CHIS-IR）, B-1050 Elsene, ベルギー</li><li><strong>責任著者:</strong> E. Tyteca（eva.tyteca@vub.ac.be）</li><li><strong>掲載誌:</strong> Journal of Chromatography A, 1361 (2014) 178–190</li><li><strong>DOI:</strong> 10.1016/j.chroma.2014.08.014</li><li><strong>受理経緯:</strong> 2014年7月4日受付 / 2014年8月4日改訂受付 / 2014年8月5日受理 / 2014年8月13日オンライン公開</li><li><strong>© 2014 Elsevier B.V.</strong></li><li><strong>キーワード:</strong> クロマトグラフィー応答関数（CRF）／自動メソッド開発／クロマトグラム模擬（simulation）</li><li><strong>雑誌インパクトファクター:</strong> 3.8（Journal of Chromatography A・JCR2024・Q1）</li></ul>
+<hr>
+<h1>要旨（Abstract）</h1>
+<p>いわゆる <strong>クロマトグラフィー応答関数（chromatographic response functions, CRF）</strong> の大規模な計算機模擬（in silico）比較研究を報告する。CRF は分離の質を1つの数値で表す記述子であり、クロマトグラフィー分離の探索ベース最適化を導くのに用いられる。文献既存＋新規の包括的な CRF 群を、<strong>1次クロマトグラフィーデータ</strong>（＝スペクトル情報がない）に基づく探索を導く能力、および <strong>試料成分数が事前に未知</strong> の場合について比較した。結果は利用可能な分離能（separation power）に基づいて論じる。</p>
+<p>主要な発見：</p>
+<ul><li><strong>観測ピーク数とともに単調に増加する CRF は、この性質をもたない CRF より有意に優れて機能する。</strong></li><li><strong>判別因子（discrimination factor）やピーク谷比（peak-to-valley ratio）に基づく CRF は、Snyder 分離度 Rs に基づく CRF よりピーク非対称性にうまく対処できる。</strong> ただし、ノイズ水準が有意になると、前者はその優位を失う。</li><li>ほとんどの CRF は、試料をベースライン分離するのに <strong>ちょうど必要な（あるいはやや不足する）効率</strong> を提供するカラムで探索するとき最良に機能する。</li><li>可能な全効率範囲で最良の結果は、<strong>観測化合物数を優先し、その後に達成分離度や必要分析時間で条件を順位づける CRF</strong> で得られる。</li><li>カラム効率が不十分な状態で探索すると、最良の CRF でさえ試料に関する不完全な情報に悩まされ、試料のスペクトル情報に頼らない限り探索の逸脱は避けられない。</li></ul>
+<hr>
+<h1>1. 序論（Introduction）</h1>
+<p>クロマトグラフィーのメソッド開発（method development, MD）は、調整可能なパラメータが多く（有機修飾剤・固定相の種類、温度、グラジエントプロファイル、pH、イオン強度など）、ピーク重なりの確率が高いため、通常は多くの試行錯誤を伴う[1]。この探索を促進するため、過去に多様な自動 MD 戦略が提案されてきた。自動 MD 戦略は、<strong>保持モデルベース</strong>（Drylab, Chromsword）、<strong>探索ベース</strong>（Simplex, 遺伝的アルゴリズム GA）、または両者の組合せ（実験計画法 DoE, 予測溶出窓シフト・ストレッチ PEWS²）に分けられる[2–9]。</p>
+<p>変数の数が多すぎて全設計パラメータを単純に走査できない複雑な設計問題では、分離全体の質を1つの数値で記述する数値基準が、自動 MD 戦略を可能な限り効率的に最適解へ導くために必要となる。文献ではこの品質基準を一般に <strong>クロマトグラフィー応答関数（CRF）</strong> と呼ぶ。この概念は 1975年に Morgan と Deming が導入した[10]。以来、多様な CRF が提案され、どの CRF が最も適切かの論争が今なお続いている[11–26]。良い CRF を設計することは、<strong>試料中の成分数が未知の場合、または二次目標（例：分析時間も最小化）を満たす必要がある場合</strong> にとくに難しい。</p>
+<p>本研究では、文献で最も広く使われる CRF と、いくつかの新規提案の CRF をグローバルに比較した。結論を、組成が大きく異なる十分多数の試料に基づかせるため、<strong>in silico 試料</strong>（＝計算機模擬。ただし現実的な入力パラメータを用いる）を使った数値研究で比較を行う。この手法には、<strong>最良解が常に既知</strong> であるため、その解を見つける能力を明確に判定できる利点もある。</p>
+<p><strong>成分数が未知の場合</strong> に重点を置く（全成分既知の場合よりも一般的かつ難しい問題のため）。同じ理由で、<strong>1次クロマトグラフィーデータ</strong>[27, 28]（単一検出器信号のみ、例：単一波長 UV/vis トレース）の場合に焦点を当てる。これは、完全に重なったピークの出現が検出できず、部分的に重なったピークの分離度が定量できないことを仮定する。全ピークが常に見える（スペクトル検出やモデリング等のケモメトリクス技術[29, 30]による）なら、最も臨界なピーク対の分離度やピーク純度が常に最も直接的で正しい基準となるため、CRF 選択問題は自明になり興味を失う[24, 31]。</p>
+<p>採用した探索法は単純な総当たり探索（探索格子の全点走査）である。既存の多くの「賢い」探索法（Simplex, GA, PEWS²）ではなく総当たりを選んだのは、研究結果が探索アルゴリズムの特異な性質に依存しないようにするためである。</p>
+<blockquote><strong>訳者補足（CRF とは何か）:</strong> クロマトグラムには通常たくさんのピークがあり、「どの分離条件が一番良いか」を機械（自動最適化）に判断させるには、クロマトグラム全体を1つのスコアに要約する関数が要る。それが CRF（クロマトグラフィー応答関数）である。たとえば「全ピークの分離度を足し合わせる」「見えたピークの数を加える」「分析時間が長いほど減点する」といった式を組み合わせて、良い分離ほど大きな（または小さな）値になるよう設計する。本論文の問いは「そういう式が何十種類も提案されているが、実際どれが一番うまく最適条件へ導くのか？」である。</blockquote>
+<hr>
+<h1>2. 理論と採用した数値手順</h1>
+<h2>2.1. クロマトグラム模擬（Chromatogram simulation）</h2>
+<p>簡単のため、試料成分の保持特性の実装には <strong>線形溶媒強度（linear solvent strength, LSS）モデル</strong>[32, 33]を採用した：</p>
+<p>$$ \ln(k) = \ln(k_w) - S \cdot \varphi \tag{1} $$</p>
+<p>kw＝φ=0（純水）での k の外挿値、S＝溶媒強度パラメータ（与えられたカラム・化合物・有機溶媒で一定）、φ＝有機修飾剤の分率。</p>
+<p>クロマトグラムは異なる試料カテゴリ（それぞれ 5・10・15成分＝nc = 5, 10, 15）で生成した。各試料は、規定区間から LSS モデルの kw・S 値の nc 通りの組合せを Matlab の rand 関数でランダムに選んで作成。十分な変動性を得るため、異なる kw・S 範囲および濃度比をもつ <strong>10のサブカテゴリ</strong>（Table 2 参照）を考え、各サブカテゴリで10試料を選んだ。</p>
+<p>ランダムに選んだ kw・S 値を、カラム体積 V0・カラム効率 N・グラジエントパラメータ φ0（初期移動相濃度）・βt0（グラジエント勾配 β=(φe−φ0)·t0/tG、φe＝終了時有機分率、t0＝カラム死時間）とともに用い、期待されるピークプロファイルを Matlab プログラムで模擬した。ピークプロファイルは、<strong>完全ガウスピーク</strong> と <strong>歪んだ（skewed）ピーク</strong> の両方を考えた。</p>
+<p>純ガウスピーク[34]：</p>
+<p>$$ c\left(\frac{t}{t_0}\right) = c_0 \cdot \frac{\sqrt{N}}{(1+k_e)\cdot G}\exp\!\left[-N\frac{((t/t_0)-1-k)^2}{2(1+k_e)^2 G^2}\right], \quad c_0 = \frac{M}{\sqrt{2\pi}\,V_0} \tag{2} $$</p>
+<p>t＝時間、c0＝注入濃度、ke＝溶出時（カラム末端）の保持係数、k＝有効保持係数（k=(tR−t0)/t0）、G＝グラジエント圧縮係数[35]、M＝注入質量、V0＝カラム死体積。ke・k は φ0・βt0 と既知の kw・S から、Schoenmakers らの線形グラジエント式[36]で計算した。</p>
+<p>歪んだピークには、確立された <strong>指数修飾ガウス（exponentially modified Gaussian, EMG）関数</strong>[38]を用いた（多項式修飾ガウスの方が正確だが、EMG の方が広く知られ多くの読者に良い参照となるため）。EMG ピークは緩和時間パラメータ τ を含む式(3)で模擬。2種の EMG ピークを考えた：<strong>EMG1 型</strong>（0.5 ≤ τ ≤ 1.5）と <strong>EMG2 型</strong>（0.5 ≤ τ ≤ 2.5、より強く歪む）。</p>
+<h3>原著 Table 2：10サブカテゴリを定義する kw・S・c0 範囲</h3>
+<table>
+<thead><tr><th>カテゴリ</th><th>kw</th><th>S</th><th>c0</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>[200,1000]</td><td>[8,15]</td><td>[1,10]</td></tr>
+<tr><td>2</td><td>[500,1000]</td><td>[10,20]</td><td>[1,10]</td></tr>
+<tr><td>3</td><td>[1000,2000]</td><td>[5,15]</td><td>[1,100]</td></tr>
+<tr><td>4</td><td>[200,1000]</td><td>[15,20]</td><td>[1,100]</td></tr>
+<tr><td>5</td><td>[10,2000]</td><td>[5,10]</td><td>[1,100]</td></tr>
+<tr><td>6</td><td>[200,1000]</td><td>[8,15]</td><td>[1,50]</td></tr>
+<tr><td>7</td><td>[500,2500]</td><td>[10,20]</td><td>[1,10]</td></tr>
+<tr><td>8</td><td>[1000,3000]</td><td>[5,15]</td><td>[1,100]</td></tr>
+<tr><td>9</td><td>[200,700]</td><td>[15,25]</td><td>[1,100]</td></tr>
+<tr><td>10</td><td>[1000,2000]</td><td>[5,20]</td><td>[1,10]</td></tr>
+</tbody></table>
+<h2>2.2. クロマトグラムの読み取り（Read-out）</h2>
+<p>模擬クロマトグラムは、各ピーク（またはピークショルダー）の開始・終了・最大の水平/垂直位置を決定する自作 Matlab ルーチンで読み取った。この情報から、各ピーク対 i（ピーク i と i+1）の分離度、El Fallah・Martin の <strong>判別因子（discrimination factor）d0,i</strong>[39, 40]、Kaiser の <strong>ピーク谷比（peak-to-valley ratio）fi/gi</strong>[41–43]を計算：</p>
+<p>$$ R_{s,i} = \frac{t_{R,i+1} - t_{R,i}}{\frac{1}{2}(w_{p,i+1} + w_{p,i})} \tag{4} $$</p>
+<p>$$ d_{0,i} = 1 - \frac{h_{valley}}{h_{peak,min}}, \qquad \frac{f_i}{g_i} = 1 - \frac{h_{valley}}{\frac{1}{2}(h_{peak,min} + h_{peak,max})} \tag{5} $$</p>
+<p><strong>Rs は水平方向、d0 と f/g は垂直方向に読み取る</strong> 点が主な違い。後者はベースラインノイズ関連の誤差を受けやすい。もう一つの違いは、Rs はピークが分離するほど増え続けるが、d0・f/g は2ピークが完全分離すると <strong>限界値1に達する</strong> こと。これは、必要最小分離度 Rs,req を超える無駄な分離度が品質数値に含まれない利点をもつ。分離度で同様の効果を得るため、一部の著者[11]は <strong>Rs</strong>* を導入した：</p>
+<p>$$ R_s^<em> = R_s \ (R_s &lt; R_{s,req}) \quad \text{または} \quad R_s^</em> = R_{s,req} \ (R_s \ge R_{s,req}) \tag{6} $$</p>
+<p>全研究を通じ Rs,req = 1.6 を用いた。d0・f/g ベースの CRF には2つの読み取りモードを考えた：①常に真値を与える（絶対分離度 ~1×10⁻⁵ で決定可能）、②実務的にずっと重要な、値を最大 <strong>0.99</strong> に制限するモード。後者はベースラインノイズの発生を模す（d0・f/g が1に近づくとき有効数字を区別できないのがノイズの主問題）。判別因子 d0 は、ピーク高さが大きく変動するとき f/g より読み取り誤差が小さいと期待される[40]。</p>
+<p>さらに、新規 CRF の一部を if 関数で拡張し（CRF50–CRF53）、連続する2つの完全分離ピーク間の距離も含めた。頂点間距離 D1・ピーク裾-ピーク前縁間距離 D2 から、無次元距離指標 δ1,i・δ2,i を定義（式7, 8。kav＝2ピークの平均保持係数）。</p>
+<h2>2.3. CRF 比較手順</h2>
+<p>与えられた CRF が最良グラジエントプログラムの探索をどれだけうまく導けるかを評価するには、まずこの最良プログラムを不偏に決定する必要がある。これは、各グラジエント条件で臨界対の d0 = 0.9999 を達成するのに必要な <strong>最小理論段数（Nreq,min）</strong> または <strong>最小保持時間（treq,min）</strong> を決定して行った。φ0（0.025〜0.975 を等間隔）と βt0（10⁻³〜1 を対数等間隔）の <strong>37×37 格子</strong> の各条件で、二分探索法により（初期下限 N=2×10⁴・上限 N=2×10⁷）目標 d0=0.9999 に収束させた。</p>
+<p>これにより「絶対真実（absolute truth）」等高線プロット（原著 Fig.2a・3a）が得られる。Nreq・treq が最小のグラジエント条件領域を濃赤（白矢印）で示す。青領域は N=2×10⁷ 段でも完全分離に不十分な条件、白領域は有効保持係数の上限（kupper=25）までに最終成分を溶出できない条件。この上限設定は MD で一般的（過大な保持へ探索を広げるより別感度のカラムに切り替える方が現実的）で、kupper の値や上限の有無は主結論に影響しないことを検証済み。</p>
+<p>単一最良解だけでなく、確立した絶対真実プロット上で <strong>上位 x%（通常 x=2 または 10）</strong> の φ0・βt0 の組合せ領域を決定した。上位 x% に注目する方が比較が滑らか（格子粗さへの依存が小さい）で、実務的にも妥当（MD では通常「唯一の」最良条件ではなく、許容範囲で試料が完全分離すれば満足するため）。</p>
+<hr>
+<h1>3. CRF の分類と定義（Table 1）</h1>
+<p>CRF は、<strong>理論段数の最小化を目指すもの（カテゴリ I）</strong> と <strong>分析時間の最小化を目指すもの（カテゴリ II）</strong> に区別される。さらにサブカテゴリ <strong>A・B</strong> を導入し、<strong>観測化合物数 nobs とともに単調増加しないもの（A）</strong> と <strong>する（B）</strong> を区別する。文献 CRF の大半はカテゴリ A に属するが、成分数が未知の探索では成分数への依存性が本質的と予想されるため、多くの文献 A 型 CRF を、元の CRF 式を正規化して <strong>観測ピーク数を加算</strong> することで B 型 CRF に変換した（新規 CRF 群、3.1節）。</p>
+<p><strong>主な CRF の例（Table 1 より抜粋）:</strong></p>
+<ul><li><strong>カテゴリ I-A（時間最適化なし・非単調）:</strong></li><li>CRF1 = Σ Rs,i*（分離度の和）[11]</li><li>CRF2 = nobs·x + Σ Rs,i*[11]</li><li>CRF3 = Σ log(fi/gi) または Σ ln(fi/gi)[10, 13]</li><li>CRF4 = Π (Rs,i/Rs,req)ⁿ / (1+(Rs,i/Rs,req)ⁿ)[14]</li><li>CRF5 = Π (fi/gi)[15]</li><li>CRF6 = nobs + Rs,crit/Rs,req</li><li><strong>カテゴリ II-A（時間最適化あり・非単調）:</strong></li><li>CRF11 = nobs·x + Σ Rs,i* − a|tmax−tR,last| + b(tmin−tR,first)[11]</li><li>CRF12 = Σ Rs,i*·Pen（Pen＝時間ペナルティ係数）[16]</li><li>CRF13 = Σ ln(fi/gi) − α·tlast[13]</li><li>CRF16 = [Σ(1−e^(a(Rs,opt−Rs,i)))²+1]·(1+tR,last/tmax)[17]</li><li>CRF18 = Σ [a·ln(Rs,i/Rs,req)+b·(tmax−tR,last)][19]</li><li>CRF19 = tR,n/tR,opt + Σ e^(−Rs,i/Rs,req)[20]</li><li><strong>カテゴリ I-B（時間最適化なし・単調＝nobs 加算型・多くが新規）:</strong></li><li>CRF23 = Nreq（if nobs=max(nobs)）または nobs + 1/Nreq</li><li>CRF24 = nobs + Σ Rs,i* / (1.6·(nobs−1))</li><li>CRF26 = nobs + Π (fi/gi)</li><li>CRF31 = nobs + d0,min（最小判別因子）</li><li>CRF32 = nobs + Rs,min*</li><li><strong>カテゴリ II-B（時間最適化あり・単調）:</strong></li><li>CRF34 = treq（if nobs=max(nobs)）または nobs + 1/treq</li><li>CRF35 = nobs + Σ (fi/gi) − (tR,last−t0)/tR,last[22]</li><li>CRF40 = nobs + (1/tR,last)·Π (fi/gi)</li><li>CRF43 = nobs + Rs,min*/(2·tR,last)</li><li>CRF50–53 = 完全分離ピーク間距離（δ1/δ2）も考慮する if 関数拡張型</li></ul>
+<p>（凡例：nobs＝観測ピーク数、Rs,crit＝臨界対の分離度、Rs,req=1.6＝必要最小分離度、Pen＝時間ペナルティ、tR,opt=15 min＝最適滞留時間、tmin/tmax=0/25 min、Nreq/treq＝必要理論段数/必要分析時間。）</p>
+<hr>
+<h1>4. 結果と考察（要点）</h1>
+<ul><li><strong>単調性（サブカテゴリ B）が決定的:</strong> 観測ピーク数 nobs とともに単調増加する CRF（B 型）は、そうでない A 型より <strong>有意に優れて</strong> 探索を最適解へ導く。成分数が未知の1次データ探索では、まず「見えたピークの数」を最優先し、その後に分離度・分析時間で微調整する構造が本質的だからである。CRF23（Nreq 最小化）や、観測成分数を優先してから分離度/時間で順位づける CRF が、<strong>可能な全効率範囲で最良</strong> の結果を与えた。</li><li><strong>d0・f/g（垂直読み取り）vs Rs（水平読み取り）:</strong> 判別因子 d0 や Kaiser のピーク谷比 f/g に基づく CRF は、ピーク非対称性（テーリング）に Snyder 分離度 Rs ベースの CRF より <strong>うまく対処</strong> する（EMG 歪みピークで有利）。しかし d0・f/g は垂直方向読み取りのため <strong>ベースラインノイズに弱く</strong>、ノイズ水準が有意になると（値を最大0.99 に制限した現実的モードで）その優位を失う。</li><li><strong>カラム効率との関係:</strong> ほとんどの CRF は、試料をベースライン分離するのに <strong>ちょうど必要な、あるいはやや不足する効率</strong> のカラムで探索するとき最良に機能する。過剰な効率のカラムでは、無駄な分離度が品質数値を歪めうる（Rs* や f/g の限界値1で緩和されるが完全ではない）。</li><li><strong>効率不足時の限界:</strong> カラム効率が不十分な状態で探索すると、最良の CRF でさえ試料に関する情報が不完全（重なったピークが見えない）なため探索が逸脱し、これは <strong>スペクトル情報に頼らない限り回避できない</strong>。これは1次データの本質的限界である。</li></ul>
+<blockquote><strong>訳者補足（生薬指紋分析への含意）:</strong> 生薬エキスは成分数が事前にわからず、単一波長 UV 等の1次データで指紋を取ることが多い。本研究の結論は「そういう状況では、見えたピーク数を最優先に評価する CRF を使い、かつ試料を分離しきれる（ちょうど十分な）効率のカラム/条件で最適化せよ」という実務指針になる。効率が足りないと『そもそも見えていないピーク』が最適化を狂わせるため、条件探索の前にカラム効率の底上げ（UPLC 化・カラム長延長など）が重要という示唆でもある。</blockquote>
+<hr>
+<h1>5. 結論（Conclusions）</h1>
+<p>CRF の大規模 in silico 比較により、以下が明らかになった：</p>
+<ol><li><strong>観測ピーク数とともに単調増加する CRF（B 型）が、そうでないもの（A 型）より有意に優れる。</strong> 成分数未知・1次データという一般的かつ困難な条件で、これは決定的である。</li><li><strong>判別因子 d0・ピーク谷比 f/g ベースの CRF はピーク非対称性に強い</strong> が、ノイズが有意になると Snyder Rs ベースに対する優位を失う。</li><li>ほとんどの CRF は、ベースライン分離にちょうど足りる（かやや不足する）効率のカラムで探索するとき最良。</li><li>全効率範囲で最良なのは、<strong>観測化合物数を優先してから分離度・分析時間で順位づける CRF</strong>。</li><li>効率不足のカラムでの探索では、最良の CRF でも不完全情報に悩み、スペクトル情報なしには逸脱を避けられない。</li></ol>
+<p>これらの結論は、自動メソッド開発における CRF 選択の実務的指針を提供する。</p>
+<hr>
+<h1>主要記号・パラメータ</h1>
+<ul><li><strong>k</strong>＝有効保持係数（k=(tR−t0)/t0）、<strong>ke</strong>＝溶出時保持係数、<strong>kw</strong>＝純水での外挿保持係数、<strong>S</strong>＝溶媒強度パラメータ</li><li><strong>φ0</strong>＝初期有機修飾剤分率、<strong>βt0</strong>＝グラジエント勾配、<strong>N</strong>＝理論段数、<strong>V0</strong>＝カラム死体積、<strong>G</strong>＝グラジエント圧縮係数</li><li><strong>Rs</strong>＝分離度、<strong>Rs</strong>*＝上限 Rs,req で頭打ちにした分離度、<strong>Rs,req=1.6</strong>＝必要最小分離度、<strong>Rs,crit</strong>＝臨界対分離度</li><li><strong>d0</strong>＝判別因子（1−hvalley/hpeak,min）、<strong>f/g</strong>＝Kaiser のピーク谷比、<strong>nobs</strong>＝観測ピーク数</li><li><strong>Nreq/treq</strong>＝必要理論段数/必要分析時間、<strong>tR,opt=15 min</strong>＝最適滞留時間、<strong>kupper=25</strong>＝有効保持係数上限</li><li><strong>EMG</strong>＝指数修飾ガウス（τ＝緩和時間パラメータ。EMG1: 0.5≤τ≤1.5、EMG2: 0.5≤τ≤2.5）</li></ul>
+<hr>
+<h1>主要参考文献（抜粋）</h1>
+<ul><li>[10] Morgan SL, Deming SN.（1975）CRF 概念の原典。</li><li>[11] 分離度 Rs* と nobs 重み付け CRF（CRF1, 2, 11）。</li><li>[13] ln(f/g) ベースの時間最適化 CRF（CRF13, 14, 15）。</li><li>[17] 指数型分離度 CRF（CRF16）。</li><li>[32, 33] 線形溶媒強度（LSS）モデル。</li><li>[36] Schoenmakers et al. 線形グラジエント保持式。</li><li>[38] 指数修飾ガウス（EMG）関数。</li><li>[39, 40] El Fallah, Martin 判別因子 d0。</li><li>[41–43] Kaiser ピーク谷比 f/g。</li></ul>
+<p>（全44文献。詳細は原著参照。）</p><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="doe-desirability-function-multiple-response-optimization-review.html">実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-prediction-lc-perspective-gritti.html">液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-desirability-multiresponse-optimization.html">実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="chromatographic-response-functions-universal-comparison" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
