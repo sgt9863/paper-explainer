@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AHP-CRITIC法による抗うつ方剤「周天方（ZTF）」の抽出プロセス最適化とHPLC指紋に基づく主要成分の移行効率解析</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="AHP-CRITIC法による抗うつ方剤「周天方（ZTF）」の抽出プロセス最適化とHPLC指紋に基づく主要成分の移行効率解析">
+<meta property="og:description" content="抗うつ漢方方剤「周天方（10生薬）」の抽出工程を、主観的AHPと客観的CRITICを融合したAHP-CRITIC重み付け法＋L9直交表で最適化。さらに煎液→エキス末→顆粒の3状態での5指標成分（フェルラ酸・プエラリン・ミリフィシン・イソフェルラ酸・カリコシン）の移行効率を定量化し、15バッチ×3状態のHPLC指紋とケモメトリクス（HCA/PCA/OPLS-DA）で品質のばらつき要因を特定した。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="zhoutian-formula-ahp-critic-extraction-transfer"><h1>AHP-CRITIC法による抗うつ方剤「周天方（ZTF）」の抽出プロセス最適化とHPLC指紋に基づく主要成分の移行効率解析</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">製造法</span> <span class="tag">指紋分析</span> <span class="tag">HPLC・UPLC</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1002/pca.3334" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Phytochemical_Analysis__2024__Ma__Optimization_of_the_Zhou_Tian_Formula_extraction_technology_based_on_AHP_CRITIC_method.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="zhoutian-formula-ahp-critic-extraction-transfer" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="zhoutian-formula-ahp-critic-extraction-transfer" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">AHP-CRITIC重み付け×L9直交表で10味方剤の抽出を最適化し、煎液→エキス末→顆粒の3工程で指標成分の移行効率を追跡</p><div class="digest-stats"><div class="stat"><span class="stat-value">2.9（Phytochemical Analysis・JCR2024・Q2）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">抗うつ10生薬方剤（周天方）</span><span class="stat-label">方剤</span></div><div class="stat"><span class="stat-value">10倍量水・40分・3回（A2B1C3）</span><span class="stat-label">最適抽出</span></div><div class="stat"><span class="stat-value">5成分平均 煎液→エキス末56.45%／エキス末→顆粒64.66%</span><span class="stat-label">移行効率</span></div><div class="stat"><span class="stat-value">煎液0.890-1.000・顆粒0.929-0.994</span><span class="stat-label">指紋類似度</span></div></div><ul class="digest-points"><li>主観的AHPと客観的CRITICを融合したAHP-CRITIC法で6指標の重み係数を科学的に決定しL9直交表で抽出条件を最適化</li><li>プエラリン・ミリフィシンは移行効率が高くカリコシンが最低——3工程を通した指標成分の移行則を定量化</li><li>OPLS-DAでカリコシン・フェルラ酸・プエラリンがバッチ品質差の主因＝黄耆と葛根の厳格な品質管理が必要</li></ul></section><p>&lt;!-- Ma et al., Phytochemical Analysis 2024;35:873-888 の全訳密度日本語版。 漢方方剤の抽出最適化・品質管理の実験論文。practitioner レベル。 表1-6（直交表・成分同定・移行効率）は全数値を表で保持。図（Fig.1-6）は原文参照。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Optimization of the Zhou Tian Formula extraction technology based on AHP-CRITIC method and analysis of transfer efficiency of key components based on HPLC fingerprinting</li><li>著者: Yi-feng Ma, Yang Feng, Li-li Yao, Pei-shi Feng, Wei-kang Zhou, Le-xuan Fang, Yi Tao, Ping Wang（責任著者）</li><li>所属: 浙江工業大学 薬学院（中国・杭州）／浙江省TCM革新R&amp;D・デジタルインテリジェント製造重点実験室</li><li>掲載誌・巻号・DOI: Phytochemical Analysis, 2024;35(4):873–888. DOI: 10.1002/pca.3334</li><li>インパクトファクター: 2.9（Phytochemical Analysis, JCR 2024 / Clarivate。Q2）</li><li>受理経過: 2023年11月23日受領／2024年1月19日改訂／1月20日受理。© 2024 John Wiley &amp; Sons Ltd</li><li>資金: 浙江省「リーディンググース」R&amp;Dプログラム／金華市科技計画プロジェクト</li><li>データ公開: 責任著者へ要請で提供</li></ul>
+<blockquote>補足: 周天方（Zhou Tian Formula, ZTF）は臨床で広く使われる抗うつ作用の伝統中医薬（TCM）方剤で、10味の生薬（炒黄耆・葛根・熟地黄・沙苑子・当帰・炒白朮・柴胡・柏子仁・升麻・桂枝）から成る。本論文は、この10味方剤の「抽出条件の最適化」と「煎じ液→エキス末→顆粒という製造3工程での成分の残り方（移行効率）」を定量的に追跡し、品質管理の枠組みを作った研究。日本の漢方エキス製剤（煎液を濃縮乾燥して顆粒化する）の製造工程管理にも通じる内容で、本文にツムラ（Tsumura And Co.）からのダウンロード記録がある。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p><strong>序論</strong>: 周天方（ZTF）はうつ病患者の治療に臨床で広く使われる抗うつTCMである。しかし、その抽出技術と品質管理には依然として不足がある。</p>
+<p><strong>目的</strong>: 本研究は、階層分析法（AHP）–基準間相関による基準重要度（CRITIC）法に基づくZTF抽出技術の方法論を提案し、指標成分の効率的移行のための品質管理枠組みを確立することを目的とした。</p>
+<p><strong>方法</strong>: まずZTFの化学成分を分析し最適抽出技術を決定。次に、水煎液からエキス末へ、続いて顆粒への変換における指標成分の移行効率を計算。第三に、15バッチのZTF水煎液・エキス末・顆粒のHPLC指紋を確立。SIMCAソフトで異なるバッチのZTF顆粒の品質変動に責任を持つ化学物質を解析した。</p>
+<p><strong>結果</strong>: 最適抽出プロセスを決定した。水煎液→エキス末→顆粒の変換における、フェルラ酸・プエラリン・ミリフィシン・イソフェルラ酸・カリコシンの平均移行効率は41%を超えた。ZTFのHPLC指紋は0.890を超える類似度を示した。VIP値は、カリコシン・フェルラ酸・プエラリンが品質変動の主要寄与因子であることを示した。</p>
+<p><strong>結論</strong>: AHP-CRITIC法を直交配列設計と組み合わせて抽出技術の探索に使える。加えて、水煎液→エキス末→顆粒への指標成分移行を統べる法則は、ZTFの評価と品質評価に適用できる。</p>
+<p><strong>キーワード</strong>: AHP-CRITIC、HPLC指紋、品質管理と品質保証、伝統中医薬方剤、移行効率</p>
+<h2>1. 序論（Introduction）</h2>
+<p>うつ病は、低い気分・認知機能障害・発話と運動活動の減少といった症状を特徴とする精神疾患である。個人の生活・生産性に大きく影響し、家族・社会に相当な負担を課す。世界で約3億人がうつ病に苦しみ、最新の世界疾病負担研究によれば、うつ病は世界の全障害調整生存年数（DALY）の1.85%に寄与した。しかし多くの既存抗うつ薬は、低い寛解率・高い再発率・頭痛・胃腸障害・体重増加といった潜在的副作用などの欠点を示す。したがって、副作用が少なくより安全で効果的な抗うつ薬の開発が共通の願望である。この文脈で、補完代替医療と伝統中医薬（TCM）がうつ病の治療・予防の潜在的戦略として注目を集めている。顕著な例が漢方処方「逍遥散」で、広範な基礎科学実験と臨床研究を通じて抗うつ・抗不安効果を示している。TCM方剤は、複数成分を含み・様々な側面を標的とし・複数の効果を生み・副作用が少ないという利点を、複雑疾患の治療で提供する。</p>
+<p>周天方（ZTF）は、肝関連問題の緩和とうつの軽減、肝脾機能の調和、臓器の虚の補充を含む複数機能を持つ。ZTFは10味の生薬から成る: 炒黄耆・葛根・熟地黄・沙苑子・当帰・炒白朮・柴胡・柏子仁・升麻・桂枝。TCM原理によれば、ZTFはこれら生薬の作用を次のように組み合わせる: 炒黄耆は肺の気（気は体内を出入りし生命活動の促進・調節に役立つ微細な物質）を強め、柏子仁は心の気を高め、炒白朮は脾の気を高め、当帰は肝血を養い、沙苑子は腎陽（主に温め気化を促す）を補い、熟地黄は腎陰（主に体を養う）を補う。これら6味が臓器の虚に対処する。加えて、葛根と柴胡が肝の気を上げ、升麻と桂枝がそれぞれ肺と心の気を上げる。これら4味が臓器の気を相乗的に上げる。TCM原理に従ったこれら生薬の賢明な組み合わせで、ZTFは臓器の気を高め、抗うつ効果を最適化する。現代薬理学研究は、ZTFの様々なTCM成分が抗うつ効果を示すことを明らかにした: 炒黄耆のアストラガロシドIV・黄耆多糖、葛根のプエラリン、当帰のフェルラ酸、柴胡のサイコサポニンなど。これらは炎症反応の調節・細胞アポトーシスの低減・活性酸素種生成の調節・うつ関連経路でのAKT1（プロテインキナーゼB）・FOS（AP-1転写因子サブユニット）タンパク質発現の増加・腸内細菌叢組成への影響を示し、抗うつ効果を発揮する。</p>
+<p>本研究では、TCM方剤の新規品質管理システムを確立し、バッチ間変動に寄与する主要物質を同定した。この方法はTCM成分の品質の動的監視を可能にし、用いる工程の適切性を保証する。ZTFを起点に、TCM成分の包括的品質管理システムを確立した。TCM成分の品質管理は、水煎液の品質または最終製品のいずれかを重視して広く研究されてきたが、中間体から最終製品までの全工程を研究した研究者は少ない。ここでは水煎液・エキス末・顆粒を研究し、水煎液→エキス末→顆粒の変換における移行品質を統べる原理の探索を目的とした。エキス末は水煎液を凍結乾燥で乾燥濃縮したものである。調製過程の3状態にわたる指標成分の移行効率を評価することで、医薬品中間体の品質管理領域の研究ギャップに貢献した。水煎液・顆粒の個別評価と比べ、本アプローチはより系統的な品質評価を可能にし、調製過程全体で大きな時間・資源の節約をもたらす。ただし、本論文の抽出技術・品質管理法は実験室環境でのみ行われ、実際の工場生産とは規模が異なる。大規模生産の温度・時間・空気条件が結果に影響しうるため、大規模生産の実現可能性は慎重に検討する必要がある。それでも本研究は、ZTFの大規模生産・商業化の堅牢な基盤を築き、大規模生産の抽出技術・品質管理の指針を提供する。</p>
+<h2>2. 実験（Experimental）</h2>
+<h3>2.1 装置と材料</h3>
+<p>HPLC（Wu Feng Instruments）、UPLC-Q-TOF-MS（SCIEX X500R）、Shim-pack VP-ODS逆相C18カラム（Shimadzu）、電子天秤・超音波洗浄機・高速冷凍遠心機・ロータリーエバポレーター・凍結乾燥機を使用。</p>
+<p>標準品（フェルラ酸・プエラリン・ミリフィシン・イソフェルラ酸・カリコシン、いずれも純度≥98%）は上海源葉生物から購入。HPLCグレードのメタノール・アセトニトリルはMacklin、超純水はWahaha。全生薬は薬局から購入し、Wang Ping教授（浙江工業大学中薬研究所副所長）が中国薬典2020年版第1部の規格に適合すると検証。黄耆は Astragalus membranaceus var. mongholicus の乾燥根の加工品、葛根は Pueraria lobata の乾燥根、沙苑子は Astragalus complanatus の乾燥成熟種子、熟地黄は Rehmannia glutinosa の乾燥根の加工品、当帰は Angelica sinensis の乾燥根、白朮は Atractylodes macrocephala の乾燥根茎の加工品、柴胡は Bupleurum chinense の乾燥根、柏子仁は Platycladus orientalis の乾燥成熟核、升麻は Cimicifuga heracleifolia または C. dahurica の乾燥根の加工品、桂枝は Cinnamomum cassia の乾燥新芽。</p>
+<h3>2.2 試験溶液・標準溶液の調製</h3>
+<p><strong>2.2.1 初期水煎液</strong>: 炒黄耆30.00 g・葛根15.00 g・熟地黄15.00 g・沙苑子15.00 g・当帰12.00 g・炒白朮12.00 g・柏子仁10.00 g・柴胡10.00 g・升麻5.00 g・桂枝5.00 g をビーカーで1時間浸漬。陶製鍋に移し10倍量の水を加え、強火で沸騰後とろ火で45分煎じる。80℃に冷却後、二層の300メッシュ篩で濾過。2回繰り返して濾液を合わせ、水で3000 mLに調整してZTF初期水煎液を得た。</p>
+<p><strong>2.2.2 標準溶液</strong>: フェルラ酸・プエラリン・ミリフィシン・イソフェルラ酸・カリコシンを50%メタノールに溶解し10 mLに定容（濃度それぞれ0.32, 1.23, 1.13, 0.19, 0.017 mg/mL）。4℃保存、分析前に0.22 μmナイロン膜で濾過。</p>
+<p><strong>2.2.3 試験溶液</strong>: (1) 個別生薬: 各生薬15 gを100 mL脱イオン水に60分浸漬、150 mLに調整、陶製鍋で沸騰後40分とろ火、80℃冷却後300メッシュ濾過を2回、300 mLに定容、0.22 μm濾過。(2) ZTF水煎液: 2 mLを0.22 μm濾過。(3) ZTFエキス末: 水煎液をロータリーエバポレーションし凍結乾燥してエキス末を得る。0.050 gを10 mL純水に加え密封して20分超音波、重量補償後10,000 rpmで5分遠心、上清を0.22 μm濾過。(4) ZTF顆粒: 顆粒0.100 gを10 mL純水に加え同様に処理。</p>
+<h3>2.3 HPLC・UPLC-Q-TOF-MS分析</h3>
+<p>HPLC条件: Shim-pack VP-ODS C18（5 μm, 4.6×250 mm）、移動相アセトニトリル（A）・超純水（B）、勾配: 0–5分 10.5%A；5–10分 10.5→14%A；10–33分 14→18%A；33–35分 18→43%A；35–48分 43→45%A；48–55分 45→90%A；55–60分 90→10.5%A。検出波長240 nm、注入量10 μL、流速0.8 mL/min、カラム温度30℃。UPLC-Q-TOF-MS（SCIEX X500R、ESI、MQ4アルゴリズム）で保持時間・MS2データを文献と比較し成分同定。</p>
+<h3>2.4 ZTF5成分の定量</h3>
+<p><strong>2.4.1 HPLC条件</strong>: 上記と同じ（定量用に Wu Feng システムを使用）。</p>
+<p><strong>2.4.2 方法バリデーション</strong>: 7濃度で検量線（y=ax+b）を作成。精度（6連続注入）、安定性（0, 1, 2, 4, 8, 12, 18, 24時間）、再現性（同一手順6反復）、回収率（既知量添加）。プエラリン（ピーク15）を参照ピークとし、共通ピークの相対保持時間（RRT）・相対ピーク面積（RPA）のRSDを算出。</p>
+<h3>2.5 最適抽出プロセスの決定</h3>
+<p><strong>2.5.1 重み係数の計算</strong>: AHP（階層分析法）は影響因子の重みの定量分析法。CRITIC（基準間相関による基準重要度）法は、対比強度と対立に基づいて評価指標の重み係数を計算し、標準偏差の計算でこれらを定量化する客観的手法。AHP-CRITIC法で各指標成分の重み係数を決定し科学的妥当性を確保。統合指標重み係数 WAHP-CRITIC-ij を次式で計算:</p>
+<p>$$W_{AHP\text{-}CRITIC\text{-}ij} = \frac{W_{AHP\text{-}ij} \times W_{CRITIC\text{-}ij}}{\sum W_{AHP\text{-}ij} \times W_{CRITIC\text{-}ij}}$$</p>
+<p><strong>2.5.2 AHP-CRITIC法による最適抽出決定</strong>: L9(3⁴)直交実験を実施。指標成分（プエラリン・ミリフィシン・フェルラ酸・イソフェルラ酸・カリコシン）と水煎液の乾燥エキス率（原生薬総重量に対する乾燥エキス末の割合）を性能指標とした。3因子を調査: 加水量（溶媒体積/材料重量比, 因子A）、抽出時間（因子B）、抽出回数（因子C）。</p>
+<p><strong>Table 1. 直交設計の因子と水準</strong></p>
+<table>
+<thead><tr><th>水準</th><th>A（加水量, 倍）</th><th>B（抽出時間, 分）</th><th>C（抽出回数）</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>8</td><td>40</td><td>1</td></tr>
+<tr><td>2</td><td>10</td><td>45</td><td>2</td></tr>
+<tr><td>3</td><td>12</td><td>50</td><td>3</td></tr>
+</tbody></table>
+<h3>2.6 3状態（煎液・エキス末・顆粒）にわたる移行則の確立</h3>
+<p>最適抽出後、水煎液をロータリーエバポレーション・凍結乾燥して乾燥エキス末を得た。顆粒は次のように調製: 乾燥エキス末・スクロース・デンプンを5:3:3で配合、混合し、90%エタノール（エキス末＋賦形剤の15%）を湿潤剤として添加。十分混合後14メッシュ篩過、60℃で4時間乾燥。TCM色譜指紋類似度評価システム（2012年版）で15バッチのZTFの類似度を評価。フェルラ酸・プエラリン・ミリフィシン・イソフェルラ酸・カリコシンを指標成分に選択し、15バッチの煎液・エキス末・顆粒での含量を測定、各変換での定量移行パターンを調査。</p>
+<h3>2.7 HPLC指紋の確立とデータ解析</h3>
+<p>10生薬各5バッチを異なる地域・バッチから収集し乱数表法でランダム組み合わせ。15バッチの煎液・エキス末のHPLC指紋を生成し類似度評価。顆粒も同様に指紋化し、HCA・PCA・OPLS-DAで化学解析。ソフト: TCM色譜指紋類似度評価システム2012、SPSS 26.0（直交実験）、SIMCA 14.1（HCA/PCA/OPLS-DA）。</p>
+<h2>3. 結果と考察（Results and Discussion）</h2>
+<h3>3.1 UPLC-Q-TOF-MSによるZTF成分同定</h3>
+<p>UPLC-Q-TOF-MS/MSと文献データでZTFの化学組成を系統解析。<strong>35化合物を同定</strong>（Table 2）。標準品比較で5指標成分（フェルラ酸・プエラリン・ミリフィシン・イソフェルラ酸・カリコシン）を同定。</p>
+<p><strong>Table 2. UPLC-Q-TOF-MS/MSで同定したZTFの化学成分（抜粋）</strong></p>
+<table>
+<thead><tr><th>No.</th><th>保持時間</th><th>分子式</th><th>質量誤差(ppm)</th><th>成分名</th></tr></thead>
+<tbody>
+<tr><td>5</td><td>3.14</td><td>C6H12O6</td><td>2.6</td><td>グルコース</td></tr>
+<tr><td>10</td><td>15.02</td><td>C9H8O4</td><td>2.3</td><td>カフェ酸</td></tr>
+<tr><td>11</td><td>15.58</td><td>C16H18O9</td><td>0.3</td><td>クロロゲン酸</td></tr>
+<tr><td>13</td><td>16.48</td><td>C21H20O10</td><td>1.4</td><td>3&#x27;-ヒドロキシプエラリン</td></tr>
+<tr><td>14</td><td>17.51</td><td>C26H28O13</td><td>3</td><td>ミリフィシン</td></tr>
+<tr><td>16</td><td>17.76</td><td>C21H20O9</td><td>3</td><td>プエラリン</td></tr>
+<tr><td>17</td><td>18.22</td><td>C22H22O10</td><td>1.4</td><td>カリコシングルコシド</td></tr>
+<tr><td>20/21</td><td>18.91</td><td>C10H10O4</td><td>1.5</td><td>フェルラ酸／イソフェルラ酸</td></tr>
+<tr><td>23</td><td>20.41</td><td>C15H10O4</td><td>0.5</td><td>ダイゼイン</td></tr>
+<tr><td>27</td><td>40.15</td><td>C16H12O5</td><td>0.5</td><td>カリコシン</td></tr>
+<tr><td>30</td><td>45.26</td><td>C48H78O17</td><td>4.4</td><td>サイコサポニンc</td></tr>
+<tr><td>31</td><td>48.26</td><td>C43H70O15</td><td>0.9</td><td>アストラガロシド</td></tr>
+<tr><td>33</td><td>52.97</td><td>C15H20O3</td><td>0.1</td><td>アトラクチレノリド</td></tr>
+</tbody></table>
+<h3>3.2 5指標成分の方法論的検討</h3>
+<p>最小二乗回帰による直線性評価（Table 3）。相関係数は0.9991超で、比較的広い濃度範囲で濃度とピーク面積の堅牢な相関。精度・安定性・再現性のRSDは全て2.0%未満。平均回収率91.31–98.89%、RSD&lt;2.0%。</p>
+<p><strong>Table 3. ZTF指標成分の方法論的検討</strong></p>
+<table>
+<thead><tr><th>指標成分</th><th>回帰式</th><th>直線範囲（μg/mL）</th><th>R²</th><th>平均回収率(%)</th></tr></thead>
+<tbody>
+<tr><td>フェルラ酸</td><td>y=3.2074x−5.6272</td><td>2.512–160.768</td><td>0.9991</td><td>91.31</td></tr>
+<tr><td>プエラリン</td><td>y=55.931x−162.03</td><td>9.620–615.680</td><td>0.9997</td><td>98.89</td></tr>
+<tr><td>ミリフィシン</td><td>y=2.9786x−1.2354</td><td>8.800–563.200</td><td>0.9995</td><td>94.26</td></tr>
+<tr><td>イソフェルラ酸</td><td>y=6.9005x−7.1904</td><td>1.4933–95.5712</td><td>0.9997</td><td>91.93</td></tr>
+<tr><td>カリコシン</td><td>y=52.579x−2.6694</td><td>0.1402–8.9728</td><td>0.9997</td><td>93.64</td></tr>
+</tbody></table>
+<h3>3.3 最適抽出プロセスの決定</h3>
+<p><strong>3.3.1 AHP</strong>: 指標を6段階に分類し優先順位を設定: プエラリン &gt; ミリフィシン &gt; 乾燥エキス率 &gt; フェルラ酸 &gt; イソフェルラ酸 &gt; カリコシン。基本重み係数: プエラリン(1.000)・ミリフィシン(0.500)・乾燥エキス率(0.333)・フェルラ酸(0.250)・イソフェルラ酸(0.200)・カリコシン(0.167)。</p>
+<p><strong>3.3.2 CRITIC重み付け</strong>: 正規化後SPSSで解析。CRITIC重み係数: プエラリン0.1063・ミリフィシン0.1121・乾燥エキス率0.2290・フェルラ酸0.1989・イソフェルラ酸0.2444・カリコシン0.1092。</p>
+<p><strong>3.3.3 AHP-CRITIC混合重み付け</strong>: AHPは主観的評価（TCM成分の有効性・乾燥エキス率の重要性）で重みを決定、CRITICは指標の内部変化で重みを割り当てる。最終AHP-CRITIC重み係数: プエラリン0.3042・ミリフィシン0.1603・乾燥エキス率0.1866・フェルラ酸0.1423・イソフェルラ酸0.0902・カリコシン0.1165。</p>
+<p><strong>3.3.4 総合評価の結果</strong>: 3手法（AHP/CRITIC/AHP-CRITIC）の総合スコアのPearson相関: AHP vs CRITIC=0.997、AHP vs AHP-CRITIC=1、CRITIC vs AHP-CRITIC=0.998（P&lt;0.01で有意）で3手法の結果が一致。ただし重み係数自体はAHPとCRITICで−0.524の負相関（非有意）で、両手法の情報は累積的でない。主観的・客観的評価の両面で、AHP-CRITIC混合法が個別法より優れた科学的厳密性・合理性・安定性を示した。</p>
+<p><strong>3.3.5 AHP-CRITICに基づく直交試験結果</strong>: 混合重み係数で総合スコアを算出（Table 4）。因子CがA・Bより有意な影響。分散分析では統計的有意差はないものの影響順は <strong>C &gt; A &gt; B</strong>。抽出法 <strong>A2B1C3（固液比1:10・抽出時間40分・抽出3回）</strong> を選択。検証で信頼性・再現性を確認。</p>
+<p><strong>Table 4. L9(3⁴)直交実験結果</strong></p>
+<table>
+<thead><tr><th>No.</th><th>A</th><th>B</th><th>C</th><th>総合スコア</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td><td>49.83</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>3</td><td>79.29</td></tr>
+<tr><td>3</td><td>1</td><td>3</td><td>2</td><td>61.71</td></tr>
+<tr><td>4</td><td>2</td><td>1</td><td>3</td><td>99.69</td></tr>
+<tr><td>5</td><td>2</td><td>2</td><td>2</td><td>81.05</td></tr>
+<tr><td>6</td><td>2</td><td>3</td><td>1</td><td>52.70</td></tr>
+<tr><td>7</td><td>3</td><td>1</td><td>2</td><td>82.51</td></tr>
+<tr><td>8</td><td>3</td><td>2</td><td>1</td><td>24.16</td></tr>
+<tr><td>9</td><td>3</td><td>3</td><td>3</td><td>52.65</td></tr>
+<tr><td>R（範囲）</td><td>24.706</td><td>21.658</td><td>34.982</td><td>—</td></tr>
+</tbody></table>
+<p>（k値: 因子A: k1=63.609, k2=77.814, k3=53.108／因子C: k1=42.228, k2=75.092, k3=77.211。Cの範囲Rが最大＝最も影響）</p>
+<h3>3.4 3工程での指標成分の移行効率</h3>
+<p><strong>煎液→エキス末</strong>（Table 5）: 平均移行効率 フェルラ酸45.33%・プエラリン79.79%・ミリフィシン68.60%・イソフェルラ酸46.67%・カリコシン41.85%。プエラリン・ミリフィシンが高く、カリコシンが最低。5成分平均56.45%。良好な移行効率で濃縮・乾燥工程の妥当性を検証。ただし一部バッチでフェルラ酸・ミリフィシン・イソフェルラ酸・カリコシンが平均範囲70–130%を超え、この変換がエキス末品質に影響しうる。</p>
+<p><strong>エキス末→顆粒</strong>（Table 6）: 平均移行効率 フェルラ酸58.55%・プエラリン80.83%・ミリフィシン70.27%・イソフェルラ酸59.18%・カリコシン54.45%。プエラリンが最高、カリコシンが最低。5成分平均64.66%で煎液→エキス末より高い。全体に満足で工程の信頼性を裏付け。</p>
+<p>移行効率の変動要因を2つ推測: (1) 異なる産地・バッチのTCM自体の品質変動、(2) 黄耆に多く含まれる多糖が濃縮・乾燥中に溶液粘度を上げ組成の不均一分布を招く。指標成分の移行効率を定量化することで、既存調製法を効率的に通過するかを評価し、方法の長所・短所を同定できる。</p>
+<h3>3.5 煎液・エキス末のHPLC指紋類似度</h3>
+<p><strong>3.5.1 方法バリデーション</strong>: 精度・再現性・安定性のRRT・RPAのRSDは全て2.0%未満で、HPLC指紋法の安定性・信頼性を検証。</p>
+<p><strong>3.5.2 類似度解析</strong>: S8を参照スペクトル（メジアン法・時間窓0.1分）とし37共通ピークで対照指紋（R）を形成。15バッチの煎液の類似度は0.890–1.000。具体的類似度: 0.998, 0.982, 0.995, 0.890, 0.992, 0.998, 0.996, 0.976, 0.996, 0.998, 0.987, 0.995, 0.996, 0.994, 0.997。S4・S8が他より低い類似度で、バッチ211201の炒黄耆を共有したことによる品質低下の可能性。エキス末の類似度は0.908超（0.908–0.995）。</p>
+<h3>3.6 顆粒のHPLC指紋</h3>
+<p>15バッチの顆粒の類似度は0.929超（0.929–0.994）。煎液・エキス末より高く、バッチ間変動の減少を示唆。</p>
+<p><strong>3.6.1 HCAとPCA</strong>: 37共通ピークでHCA・PCA。HCA（単連結法）で5カテゴリーに分類: ①S1,S3,S8,S9,S13-S15；②S6,S7,S10-S12；③S2；④S4；⑤S5。PCAは3カテゴリーに分類（S2を除きHCAと一致）。カテゴリー1は共通ピーク面積が高くカテゴリー2は低い、S4・S5は最高でHCAとの分類差の要因。両者は概ね一致し相互確認。</p>
+<p><strong>3.6.2 OPLS-DA</strong>: 37共通ピークでOPLS-DA。15バッチは3カテゴリーに分類（HCAと一致）。VIP&gt;1を差異成分の基準とし20成分を同定。上位3ピーク: ピーク33（VIP=1.359）・ピーク32（VIP=1.348）・ピーク4（VIP=1.339）。指標成分では ピーク32=カリコシン（1.348）・ピーク14=フェルラ酸（1.236）・ピーク15=プエラリン（1.118）・ピーク21=イソフェルラ酸（1.106）・ピーク16=ミリフィシン（1.052）。顆粒中の平均含量: カリコシン0.79・フェルラ酸4.50・プエラリン53.63・イソフェルラ酸5.16・ミリフィシン204.11 μg/mL。プエラリン・ミリフィシンのピーク面積が最大で品質管理上の重要性を示す。カリコシンは黄耆の成分、プエラリン・ミリフィシンは葛根の重要成分——<strong>炒黄耆と葛根の厳格な品質管理がZTF顆粒の安定に必要</strong>。</p>
+<p>モデル適合性（R²・Q²とも&gt;0.5が許容）: 200回並べ替え検定でQ²回帰線と縦軸の交点が0未満。R²X=0.509、R²Y=0.891、Q²=0.541で過学習なし。15バッチの類似度差は主にカリコシン・フェルラ酸・プエラリンの存在による。</p>
+<h2>訳者補足</h2>
+<ul><li><strong>周天方（ZTF）とは</strong>: 10味の生薬から成る抗うつ漢方方剤。本論文はこの方剤を「①どう抽出すれば良いか（条件最適化）」「②煎じ液を濃縮・乾燥・顆粒化する各工程で有効成分がどれだけ残るか（移行効率）」の2点を定量的に追った品質管理研究。日本の漢方エキス製剤も同じ「煎液→濃縮乾燥→顆粒」という工程を踏むため、実務的に参考になる。</li></ul>
+<ul><li><strong>AHP-CRITIC法の意味</strong>: 複数の指標成分（プエラリン・カリコシン等）を1つの総合スコアにまとめる際の「重み」を決める方法。<strong>AHP＝人の判断（どの成分が薬効上重要か）で重みを決める主観的手法、CRITIC＝データのばらつき（どの指標が情報量を持つか）で決める客観的手法</strong>。両者を掛け合わせて融合（AHP-CRITIC）することで、主観と客観のバランスを取る。本研究では両者が実は負相関（−0.524）＝別々の情報を持つと確認され、融合の意義が裏付けられた。本サイトのイチジク論文で使われた「エントロピー重み法」も同じ客観的重み付けの一種。</li></ul>
+<ul><li><strong>「移行効率」という発想の新規性</strong>: 従来のTCM品質研究は「煎じ液」か「最終製品」のどちらかだけを見ることが多かった。本論文は中間体（エキス末）も含めた3状態を通して成分の残り方を追い、「どの工程で・どの成分が失われやすいか」を可視化した。結果、カリコシン（黄耆由来）が最も失われやすく（移行効率41.85%）、プエラリン（葛根由来）は残りやすい（79.79%）と分かった。多糖の多い黄耆が濃縮時に粘度を上げて不均一化する、という機序も示唆されている。</li></ul>
+<ul><li><strong>OPLS-DAが示したこと</strong>: バッチ品質のばらつきの主因はカリコシン・フェルラ酸・プエラリン。これらは黄耆・当帰・葛根に由来するので、この3生薬（特に黄耆と葛根）の原料品質管理が方剤全体の安定の鍵、という実務的結論に落ちる。</li></ul>
+<ul><li>図（Fig.1〜6）と補足表（Table S1〜S7）の詳細は原文参照。データは責任著者へ要請で入手可能。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="xecq-qbd-fullchain-machinevision-qc.html">小児赤翹清熱顆粒（XECQ）のデータ駆動型フルチェーン品質管理 — 工程リスク管理から知能的製品検査まで</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="fcg-sugarfree-fingerprint-qams.html">無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="tcm-granulation-pat-review.html">伝統中薬の造粒プロセス解析技術(PAT)と応用（総説）</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span></span></li><li><a href="qmarker-approaches-quality-standards-tcm.html">伝統中薬の品質規格のためのQ-marker(品質マーカー)確立アプローチ（総説）</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">指紋分析</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="zhoutian-formula-ahp-critic-extraction-transfer" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
