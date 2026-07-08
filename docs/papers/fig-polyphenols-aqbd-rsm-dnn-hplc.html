@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AQbD枠組みでの応答曲面法（RSM）と深層ニューラルネット（DNN）によるイチジク・ポリフェノールHPLC法の開発と最適化</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="AQbD枠組みでの応答曲面法（RSM）と深層ニューラルネット（DNN）によるイチジク・ポリフェノールHPLC法の開発と最適化">
+<meta property="og:description" content="イチジク（無花果）ポリフェノールの多成分HPLC法を、分析的QbD（AQbD）の枠組みでエントロピー重み付き総合評価指標（CE）・応答曲面法（RSM）・深層ニューラルネット（DNN）を統合して開発・最適化。DNN（R²=0.9843）はRSM（R²=0.9723）よりわずかに高精度で、モンテカルロで構築した堅牢操作領域（MODR）ではパラメータ変動への耐性が広かった。緑色度評価・指紋分析による産地判別まで実施。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="fig-polyphenols-aqbd-rsm-dnn-hplc"><h1>AQbD枠組みでの応答曲面法（RSM）と深層ニューラルネット（DNN）によるイチジク・ポリフェノールHPLC法の開発と最適化</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">生薬</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">機械学習・データ処理</span> <span class="tag">指紋分析</span> &middot; <a href="https://doi.org/10.1016/j.microc.2026.118797" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1s2.0S0026265X2602000Xmain.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="fig-polyphenols-aqbd-rsm-dnn-hplc" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="fig-polyphenols-aqbd-rsm-dnn-hplc" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">エントロピー重み付き総合評価指標×RSM×DNNでAQbD設計空間（MODR）を構築し、イチジク多成分HPLCを堅牢に最適化</p><div class="digest-stats"><div class="stat"><span class="stat-value">5.4（Microchemical Journal・JCR2024・Q1）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">AQbD＋Box-Behnken RSM＋深層NN（DNN）</span><span class="stat-label">手法</span></div><div class="stat"><span class="stat-value">DNN R²=0.9843 vs RSM R²=0.9723</span><span class="stat-label">モデル精度</span></div><div class="stat"><span class="stat-value">直線性3.00-21.00 μg/mL・回収率91.07-104.55%</span><span class="stat-label">検証</span></div><div class="stat"><span class="stat-value">AGREE 0.79</span><span class="stat-label">緑度</span></div></div><ul class="digest-points"><li>没食子酸・プロトカテク酸・クロロゲン酸・ソラレンの分離度と共通ピーク数をエントロピー重み法で1つの総合評価指標（CE）に統合</li><li>RSMで設計空間を粗く描きDNNで非線形関係を高精度モデル化しモンテカルロで堅牢な操作領域（MODR）を構築</li><li>DNNはパラメータ変動下でもCEを高く保ち（設計空間外でCE 3.94）RSM（同3.61）より広い堅牢操作範囲を示した</li></ul></section><p>&lt;!-- Pang et al., Microchemical Journal (2026) 118797（Journal Pre-proof）の全訳密度日本語版。 practitioner レベル（AQbD実務手順が中心）。表1（ANOVA）・表2（検証）は全数値を表で保持。 数式（エントロピー重み法・RSM回帰式）は本文の通り復元。図（Fig.1–8）とSI表（S1–S13）は原文参照。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Application of Response Surface Methodology and Deep Neural Networks Based on the AQbD Framework in the Development and Optimization of an HPLC Method for Fig Polyphenols</li><li>著者: Tuxia Pang, Wenhuan Ding, Juan Zhang, Xiaoyan Ma, Chunzi Zhang, Mihriban Arken, Shihao Yuan, Xiaoli Ma（責任著者）, Junmin Chang（責任著者）</li><li>所属: 新疆医科大学 薬学院（中国・ウルムチ）／新疆天然薬物有効成分・薬物放出技術重点実験室</li><li>掲載誌・巻号・DOI: Microchemical Journal (2026) 118797. DOI: 10.1016/j.microc.2026.118797（Journal Pre-proof）</li><li>インパクトファクター: 5.4（Microchemical Journal, JCR 2024 / Clarivate。Q1）</li><li>受理経過: 2026年4月2日受領／5月31日改訂／6月19日受理。© 2026 Elsevier B.V.</li><li>資金: 自治区科技合作計画（2025B04044-003）</li><li>データ公開: 要請に応じて提供</li></ul>
+<blockquote>補足: イチジク（Ficus carica L.、クワ科）は新疆の特色ある果樹資源で、食品・健康食品・民族医薬に用いられる。没食子酸・カフェ酸・ルチン・ケルセチンなどのポリフェノールに富み、抗炎症・抗菌・腸内細菌叢調節・糖代謝改善などの生物活性を持つ。本論文は、これら多成分を「分析的QbD（AQbD）」の考え方で堅牢にHPLC分離する方法を、応答曲面法（RSM）と深層ニューラルネット（DNN）を組み合わせて開発した事例。生薬・天然物の品質評価に直結する手法論である。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>本研究は、分析的Quality by Design（AQbD）の概念に基づき、イチジク・ポリフェノールの多成分HPLC分析法を開発した。重要方法パラメータ（Critical Method Parameters, CMPs）の同定に基づき、エントロピー重み法（Entropy Weighting Method）を用いて総合評価指標（Comprehensive Evaluation Index, CE）を構築した。応答曲面法（RSM）と深層ニューラルネット（DNN）モデルを統合することで、総合評価の高精度予測を達成し、方法操作可能設計領域（Method Operable Design Region, MODR）を確立した。</p>
+<p>結果は、DNNモデル（R² = 0.9843）が予測精度と堅牢性においてRSMモデル（R² = 0.9723）を上回ることを示した。DNNモデルは総合評価値4.190を予測し、RSMの4.187より高く、パラメータ摂動下でも高いCE水準を維持し、より広い堅牢操作空間に対応した。確立したHPLC法は、直線範囲（3.00–21.00 μg/mL）、感度（LOD: 0.31–1.09 μg/mL；LOQ: 0.62–1.89 μg/mL）、精度（RSD &lt; 2%）、回収率（91.07%–104.55%）の要件を満たした。緑色度評価の結果は、本法の環境親和性を示した。さらに本法をイチジク・ポリフェノールの指紋分析に応用することで、異なる産地の試料を効果的に判別でき、ポリフェノール組成の化学的差異が明らかになった。提案法は、イチジク・ポリフェノールおよび他の天然ポリフェノール化合物の系統的分析・同定に有望な方法論的アプローチを提供する。</p>
+<p><strong>キーワード</strong>: イチジク；AQbD；DNN；緑色開発；指紋分析</p>
+<h2>1. 序論（Introduction）</h2>
+<p>分析的Quality by Design（AQbD）は Quality by Design（QbD）の重要な一分野であり、分析ターゲットプロファイル（Analytical Target Profile, ATP）の達成を強く重視した分析法開発に焦点を当てる。その核心は、重要方法パラメータ（CMPs）を同定・制御し、実験計画（DoE）を用いて設計空間（Design Space）または堅牢な方法操作可能設計領域（MODR）を構築することにある。このアプローチは開発段階での分析法の堅牢性と一貫性を高める。2025年版中国薬典はプロセス指向の品質管理と科学的設計を強調し、伝統中医薬・天然物でのAQbD推進の政策的基盤を提供している。現在、AQbDの枠組み下で、魚腥草（ドクダミ）と黄芩の複方煎じ液の水抽出濃縮物中7ポリフェノール成分のHPLC定量法が開発・検証され、方法の安定性と実現可能性が確認されている。ただし、移動相pH・有機相比・カラム温度といった分析パラメータの最適化にはDoEの実装が必要である。</p>
+<p>DoEが提供する統計的枠組みは、1つまたは複数の因子の効果を包括的に解析でき、製薬業界と植物多成分系の分析で大きな注目を集めてきた。Singhらは、AQbDの枠組み内でDoEを用いてスイカズラ（Lonicera japonica）の8化学成分の抽出効率とクロマト分離を最適化し、異なる種とその潜在的偽和試料の判別に成功裏に応用した。続いてChen Jingらは、伝統的な単因子実験とBox-Behnken設計を組み合わせて、ウツボグサ（Prunella vulgaris）水抽出物中3ポリフェノールのHPLC分析条件を最適化した。しかし現行のAQbDベースDoE応用は主に伝統的な単因子実験とRSMのような統計モデルに依存する。それらの多項式仮定に基づくモデリング手法は、クロマト系の高度に非線形なパラメータ-応答関係を扱う際、予測精度と外挿能力に限界がある。</p>
+<p>近年、深層ニューラルネット（DNN）は、非線形写像と高次元データフィッティングの利点により、多変数非線形問題のプロセス最適化で従来モデルより優れた予測性能を示している。Pangらは、メギ種子からのポリフェノール抽出プロセスのモデリングにRSMとDNNの双方を用いた。彼らの知見では、実験サンプルサイズの制約により、DNNモデルの予測性能はRSMを有意には上回らなかった。これを踏まえ、DNNとRSMの組み合わせが有望なモデリング戦略とされる。このアプローチは、パラメータ影響解析でのRSMの高い解釈性を保ちつつ、複雑な非線形関係を捉える限界に対処する。この限界を克服するため、Suらは仮想サンプル拡張を用いて実験データセットを29から174サンプルに拡張し、DNNモデルの予測精度を大幅に改善しRSMを上回らせた。しかし仮想サンプルのみに依拠したモデル予測は、モデルの汎化能力とデータの信頼性に影響しうる。DNNはポリフェノール抽出などのプロセス最適化研究に応用されてきたが、それらをAQbDの枠組みに統合し、DoEと組み合わせて設計空間構築と堅牢性評価を行う系統的研究はまだ乏しい。</p>
+<p>イチジク（Ficus carica L.）はクワ科の重要な経済植物である。新疆の特色ある森林果実資源として、その果実は食品・健康製品・伝統民族医薬に広く応用される。現代研究は、イチジクが没食子酸・カフェ酸・ルチン・ケルセチンなどのポリフェノール化合物に富み、抗炎症・抗菌・腸内細菌叢調節・糖代謝改善など多様な生物活性を示すことを示している。しかしイチジクは化学組成が複雑で地理的変動の影響が大きい。先行研究は、異なる産地のイチジク間でポリフェノール組成と相対分布パターンに系統的差異があることを実証している。これにより、ポリフェノール指紋に基づく全体論的分析が、産地判別と品質評価の重要なアプローチとなる。HPLCは高い分離効率と広い適用性により、イチジク・ポリフェノールの分離・定量分析の中核技術となっている。Qinらは HPLC-UV で没食子酸・クロロゲン酸・ルチンなどを分析したが、少数の標的化合物の定量に焦点を当て、ポリフェノール全体の組成特性を系統的に反映するのは困難だった。続いてSabirらはより高感度な HPLC-DAD を導入して没食子酸・カフェ酸・ケルセチン・レゾルシノールなどを同定したが、確立された条件下での分離は限定的なままだった。共溶出に対処するため、KebalらはHPLC条件を調整して3,4-ジヒドロキシ安息香酸・バニリン酸・ルチン・ケルセチンの分離を改善した。しかし既存研究の条件最適化は主に伝統的な単因子・応答曲面法に依存し、系統的な設計枠組みを欠く。したがって、AQbDにRSMとDNNモデルを組み合わせて多成分分離効率・指紋の完全性・方法の堅牢性を高めることが重要な研究方向である。</p>
+<p>以上の背景に基づき、本研究はイチジク・ポリフェノールに焦点を当て、AQbDとRSM・DNNを統合したHPLC法を確立した。総合評価指標（CE）をエントロピー重み法で構築し、没食子酸・プロトカテク酸・クロロゲン酸・ソラレンの分離効率と指紋スペクトルの全体情報量を同時に定量化した。AQbDの枠組み内でCMA（重要方法属性）とCMPを同定。RSMを用いてMODRを予備的に画定し、続いてDNNでクロマトパラメータとCEの非線形関係を高精度モデル化してデータ駆動型の堅牢操作領域を確立した。同時に確立法の緑色度を評価し、持続可能な分析開発の要件を満たした。この方法を異なる産地のイチジク試料の分析・判別に応用した。</p>
+<h2>2. 材料と方法（Materials and Methods）</h2>
+<h3>2.1 材料</h3>
+<p><strong>生薬材料</strong>: イチジク生薬は新疆医科大学薬学院 天然薬物化学教室のCong Yuanyuan教授が同定し、同薬学院に保管。試料S1–S4は新疆アトシュ、S5–S7はアクス、S8–S10はカシュガル、S11はホータン産。</p>
+<p><strong>試薬</strong>: 全標準品は純度≥98%、化学試薬は分析グレード。没食子酸・プロトカテク酸・シアニジン-3-O-ルチノシド塩化物・クロロゲン酸・p-クマル酸・ルチン・ケルセチンは上海源葉生物、ソラレンは上海麦克林生化、ミリセチンは北京ソラビオ、カフェ酸・クロロゲン酸・レスベラトロールは成都曼思生物から購入。ペクチナーゼとセルラーゼは福建福大百特生物から購入。クロマトグラフィーグレードのメタノール・アセトニトリルは Thermo Fisher Scientific（米国）、ギ酸は天津大茂化学試薬廠から購入。</p>
+<h3>2.2 装置</h3>
+<p>高速液体クロマトグラフ Agilent 1260（米国）；カラム INERTSIL ODS-3 C18（250 mm × 4.6 mm, 5 µm, GL Sciences 上海）；電子天秤 LE104E（Mettler Toledo）；超音波洗浄機 KQ5200DE（昆山超音波）。</p>
+<h3>2.3 溶液調製</h3>
+<p><strong>2.3.1 標準溶液</strong>: 100%エタノールに溶解（没食子酸・プロトカテク酸・シアニジン-3-O-ルチノシド・クロロゲン酸・クリプトクロロゲン酸・カフェ酸・p-クマル酸・ルチン・ミリセチン・レスベラトロール・ケルセチン・ソラレン）。各をHPLCグレードメタノール5 mLに溶かし褐色メスフラスコで定容し、2 mg/mLストック溶液を調製。</p>
+<p><strong>2.3.2 試料溶液</strong>: イチジク粉末1 gに脱イオン水10 mLを加え、ペクチナーゼ（0.6% w/v）とセルラーゼ（2.5% w/v）を加え、50℃で30分振とう酵素分解。8000 rpmで10分遠心し、上清を0.22 μmフィルターに通して溶液を得る。</p>
+<h3>2.4 HPLC条件</h3>
+<p>ポリフェノールは210–372 nmで強吸収を示し、本研究は検出波長280 nmを選択。カラム INERTSIL ODS-3 C18（250×4.6 mm, 5 µm）；移動相 A=0.15%ギ酸水、B=アセトニトリル；勾配条件（Radwanらより適応）: 0–35分 A: 98%→80%、35–55分 A: 80%→65%、55–60分 A: 65%→40%、60–65分 A: 40%→10%、65–67分 A: 10%→98%、67–70分 A: 98%（平衡化）。カラム温度25℃、流速1 mL/min、注入量10 μL。</p>
+<h3>2.5 ATP・CMA・CMPの決定とリスク評価</h3>
+<p>植物抽出物の複雑組成を考え、正確な成分同定に十分なクロマトピーク分離度を確保し、分離度（Rs）を主要評価指標とした。変動源（方法パラメータ・装置・試料・操作者）をフィッシュボーン図で同定し、故障モード影響解析（FMEA）でリスクを定量化。基準: (1) 標的成分間の分離度 Rs ≥ 1.2；(2) 総ラン時間 ≤ 70分；(3) 総ピーク数 ≥ 12；(4) 安定なベースライン。これらに基づきCMAとCMPを決定。</p>
+<h3>2.6 DoEと方法最適化</h3>
+<p><strong>2.6.1 CE値の計算</strong>: エントロピー重み法は各指標の結果への影響に基づいて重みを割り当て、主観的偏りを最小化する客観的重み付けを提供する。各指標が提供する情報を考慮し、変動が小さい指標は情報量が少なく、対応する重みも低くなる。本研究は没食子酸・プロトカテク酸・クロロゲン酸の分離度と12成分間の共通ピーク数を評価指標に選び、各成分の重み係数（Wj）を算出。CE指標は各指標成分を重み付けして形成される尺度である。CE値は次式で算出:</p>
+<p>CE = 没食子酸分離度 × Wj1 + プロトカテク酸分離度 × Wj2 + クロロゲン酸分離度 × Wj3 + ソラレン分離度 × Wj4 + 共通ピーク数 × Wj5</p>
+<p>情報エントロピー値（Ej）が小さいほど、エントロピー重み係数は大きくなる。これは、エントロピー重みが小さい指標ほど情報量が多く影響が大きく、高い重み値を得ることを示す。</p>
+<p>データ標準化（式1）:</p>
+<p>$$y_{ij} = \frac{x_{ij} - \min x_{ij}}{\max x_{ij} - \min x_{ij}} \tag{1}$$</p>
+<p>確率行列 Pij を得る（式2）:</p>
+<p>$$P_{ij} = \frac{y_{ij}}{\sum_{i=1}^{m} y_{ij}} \tag{2}$$</p>
+<p>各指標成分の情報エントロピー Eij を算出（式3、k は定数）:</p>
+<p>$$E_{ij} = -k \sum_{i=1}^{m} P_{ij} \ln P_{ij} \tag{3}$$</p>
+<p>各指標のエントロピー重み係数 Wj を算出（式4）:</p>
+<p>$$W_j = \frac{1 - E_{ij}}{\sum_{j=1}^{n} (1 - E_{ij})} \tag{4}$$</p>
+<p><strong>2.6.2 単因子実験</strong>: フィッシュボーン図とFMEAの結果に基づき、ギ酸濃度・第1勾配時間・第1勾配有機相比・カラム温度を影響因子に選択。条件: ギ酸濃度（0.05, 0.1, 0.15, 0.2, 0.25%）、第1勾配時間（25, 30, 35, 40, 45分）、第1勾配有機相比（16, 18, 20, 22, 24%）、カラム温度（20, 25, 30, 35, 40℃）。没食子酸・プロトカテク酸・クロロゲン酸・ソラレンのピーク分離度と総ピーク数に基づき最適条件を決定。</p>
+<p><strong>2.6.3 RSM設計</strong>: 予備単因子実験の結果に基づき、Box-Behnken設計を採用。独立変数はギ酸濃度・第1勾配時間・第1勾配有機相比・カラム温度、応答変数は没食子酸・プロトカテク酸・クロロゲン酸・ソラレンの分離度。Design-Expert 11のBox-Behnken組み合わせ試験でイチジク注入条件を最適化し応答曲面モデルを確立（因子・水準設計はTable S1）。</p>
+<p><strong>2.6.4 RSM-MODRの確立</strong>: RSMの最適化結果に基づき、モンテカルロ法でクロマト条件の不確かさを定量化しMODRを決定。RSMモデルが予測した最適条件を基準点として、主要パラメータの合理的変動範囲内で一様分布ランダムサンプリング。具体的にはギ酸濃度（0.1–0.2%）・第1勾配時間（30–40分）・第1勾配有機相比（18–22%）・カラム温度（20–30℃）の範囲で計10,000パラメータ組み合わせを生成。RSM二次回帰モデルが各組み合わせのCEを予測し、許容範囲を最適CE値の±5%と定義。この閾値はICH Q2(R1)の分析法堅牢性要件を参照し、本研究の反復実験のCEのRSD（&lt;2%）を取り込んで設定。</p>
+<p><strong>2.6.5 DNN設計</strong>: TensorFlowでDNN回帰モデル（Figure S2）を構築しCE指標を予測。完全結合フィードフォワード構造を採用。入力層は4プロセスパラメータ（ギ酸濃度A%・第1勾配時間B分・第1勾配有機相比C%・カラム温度D℃）。隠れ層は128・256・256・128ニューロンの4つの完全結合ネットワークから成り、各層はLeakyReLU活性化関数を用い、過学習リスク軽減のため0.1のドロップアウト率を導入。出力層は単一ニューロンでCE予測値を直接生成。</p>
+<p>実験データはBox-Behnken応答曲面設計の29実験サンプル群に由来。限られた実験条件下でのデータ不足緩和と過学習軽減のため、Mixup補間とガウスノイズ摂動を組み合わせたデータ拡張戦略を訓練データセットにのみ適用し、検証・テストデータセットは全過程を通じて不変とし客観的なモデル評価を確保。各元訓練サンプルにつき15の拡張サンプルを生成。Mixupでは2つの訓練サンプルをランダム選択し、0–1で一様サンプリングした補間係数λで線形補間。補間した特徴ベクトルに、各特徴次元の訓練データセット標準偏差の2%を標準偏差とする平均ゼロの正規分布からサンプリングしたガウスノイズを加え、元訓練データと結合してモデル訓練に用いた。</p>
+<p><strong>2.6.6 DNN-MODRの確立</strong>: DNNの最適化結果に基づき、モンテカルロ法でクロマト条件の不確かさを定量解析しMODRを決定。ギ酸濃度・第1勾配時間・第1勾配有機相比・カラム温度をDNN最適値に固定。ギ酸濃度（0.1–0.2%）・第1勾配時間（30–40分）・第1勾配有機相比（18–22%）・カラム温度（20–30℃）で一様ランダムサンプリングして10,000組み合わせを生成、DNNが各CEを予測し最適CE値の±5%を許容品質区間と定義。</p>
+<p><strong>2.6.7 RSMとDNNの最適条件・実現可能空間の検証</strong>: イチジク試料溶液で、RSM範囲内・RSM範囲外・DNN範囲内・DNN範囲外の各1セットの因子パラメータで検証実験を実施。没食子酸・プロトカテク酸・クロロゲン酸・ソラレンの分離効率と共溶出ピーク数を測定しCE値を算出。</p>
+<h3>2.7 緑色度評価</h3>
+<p>確立した分析法の環境親和性を、3つの緑色分析化学評価ツール（GAPI＝Green Analytical Procedure Index、C-GAPI＝Composite GAPI、AGREE＝Analytical GREEnness metric approach）で系統評価。GAPIは試料前処理・試薬使用・機器分析・廃棄物処理に定性スコアを与え、色分け（緑・黄・赤）で環境影響を反映。C-GAPIはさらに有機溶媒消費・水相比などの定量データを統合して複合緑色指数を生成。AGREEは12の緑色分析化学原則に基づき単一緑色値（0–1）を生成。</p>
+<h3>2.8 方法論</h3>
+<p><strong>2.8.1 指紋分析</strong>: 精度（12標準を0.05 mg/mLで6連続注入）、再現性（同一バッチ6反復注入）、安定性（同一試料を0, 2, 4, 6, 8, 10, 12時間で注入）。</p>
+<p><strong>2.8.2 定量分析</strong>: 直線性（没食子酸・プロトカテク酸・クロロゲン酸を3, 6, 9, 12, 15, 18, 21 μg/mLで注入）、精度（0.05 mg/mL混合標準を6連続注入）、再現性（同一試料6反復）、安定性（12時間内）、添加回収率（試料の80%・100%・120%を添加、各濃度3並行＝計9群、回収率とRSDを算出）。</p>
+<h3>2.9 応用</h3>
+<p>最適化法で11バッチのイチジクをクロマト分析。指紋データを「中薬色譜指紋類似度評価システム」ソフトに取り込み、参照スペクトルを生成し類似度を計算。続いて主成分分析（PCA）とクラスター分析を実施。</p>
+<h3>2.10 データ解析</h3>
+<p>全実験3回反復、平均±標準偏差で表現。統計差は一元配置分散分析（ANOVA）で評価。解析・作図は GraphPad Prism 8, Origin 2024, Design Expert 13 を使用。</p>
+<h2>3. 結果と考察（Results and Discussion）</h2>
+<h3>3.1 分析ターゲットとCMAの同定</h3>
+<p>まずイチジク抽出物中の既知12化合物をHPLCで同定（混合標準・試料のクロマトはFigure 1A-B、構造式はFigure 3）。続いて同一濃度条件下でこれら12化合物のDPPHラジカル消去活性を比較。抗酸化力と抽出物中の相対存在量に基づき、没食子酸・プロトカテク酸・クロロゲン酸と12成分間の共通ピーク数を標的化合物に選択。加えてイチジク特徴成分のソラレンを標的アナライトに含めた。</p>
+<p>植物抽出物の複雑組成では、クロマト分離度が標的化合物の信頼できる同定と正確な定量に影響する重要因子である。したがって没食子酸・プロトカテク酸・クロロゲン酸・ソラレン間の分離度と、12成分間の共通ピーク数を主要方法属性（CMA）に選択。なお本研究のHPLC-DAD法は12主要ポリフェノール成分の定性・定量分析に信頼でき適しており、全て真正標準品で確認済み。開発法は主に保持挙動とUVスペクトル特性に基づくイチジク試料の指紋特性化と日常的品質評価を意図。ただし複雑な植物マトリックス中の未知・微量成分の構造解明・同定には質量分析がより高い特異性と信頼性を提供するため、将来研究ではより包括的な指紋検証と微量成分特性化のためLC-MS/MSの応用を推奨。</p>
+<h3>3.2 CMPの同定とリスク評価</h3>
+<p>方法開発中の潜在的重要方法パラメータをフィッシュボーン図で系統同定。ICH Q9リスク管理ガイドラインに従い、QbD枠組み内でリスクは重大度（S）・発生頻度（O）・検出性（D）で決まる（リスク = S × O × D）。したがってFMEAで半定量的リスク評価を実施。各パラメータのS・O・Dを1–5で採点（高得点ほど高リスク）、リスク優先数（RPN = S × O × D）を算出。RPN値を低リスク（≤18）・中リスク（18&lt;RPN≤30）・中高リスク（30&lt;RPN&lt;45）・高リスク（≥45）に分類。</p>
+<p>RPN評価に基づき高リスクパラメータをCMPと同定。Table S2の評価結果と組み合わせ、最終選択CMPは水相ギ酸濃度・第1勾配時間・第1勾配有機相比・カラム温度・注入量。流速は初期リスク評価で高リスクと同定されたが、予備スクリーニング段階で検証済み操作範囲内に固定され、主に分析効率に影響し分離選択性には影響しないため、後続の最適化では独立変数として検討しなかった。</p>
+<h3>3.3 CE指標</h3>
+<p>25セットの単因子実験データに基づき、エントロピー重み法で各評価指標の重み係数を算出。没食子酸・プロトカテク酸・クロロゲン酸・ソラレン間の分離度と共溶出ピーク数の重み係数はそれぞれ <strong>0.33, 0.20, 0.16, 0.14, 0.17</strong>。これに基づきCEを構築:</p>
+<p><strong>CE = 0.33 × 没食子酸分離度 + 0.20 × プロトカテク酸分離度 + 0.16 × クロロゲン酸分離度 + 0.14 × ソラレン分離度 + 0.17 × 共通ピーク数</strong></p>
+<p>CE値は異なるクロマト条件下での標的化合物の分離効率と全体クロマト情報量を同時に特性化し、後続の方法最適化に統合的定量基盤を提供。</p>
+<p>エントロピー重み付きCEの堅牢性をさらに評価するため、各エントロピー重みを±10%摂動し正規化（総和1を維持）する局所感度分析を実施。再計算CE値は元CE値と高い一致を示し、ピアソン相関係数0.999054–0.999691、スピアマン相関係数0.996154–1.000000。全摂動シナリオでTop-5重複は5/5を維持し、実験条件の全体順位が高度に安定。最適単一条件はいくつかの摂動シナリオで上位2条件間でわずかに切り替わったが、全体最適化傾向と高CE領域は本質的に不変。これらはCE定式が個別エントロピー重みの中程度の摂動に過度に敏感でなく、検討実験範囲内で許容できる堅牢性を示すことを示唆（詳細はTable S3）。</p>
+<h3>3.4 単因子実験</h3>
+<p>主要方法パラメータの影響を決定するため、ギ酸濃度・注入量・第1勾配時間・第1勾配有機相比・カラム温度のクロマト分離度への効果を単因子実験で調査。各因子は0.15%・10 μL・35分・20%・25℃に固定し、一度に1因子のみ変更。</p>
+<p><strong>3.4.1 ギ酸濃度</strong>（Figure 2A）: 0.05%→0.15%で分離ピーク数が漸増し、0.10–0.15%で比較的高水準に到達。適度な酸濃度増加は、アナライトと固定相の残存シラノール基との望ましくない相互作用を抑制してピーク形状を改善し分離効率を高める。しかし0.20–0.25%まで増やすと総ピーク数が顕著に減少。強酸性下の共溶出効果に加え、ポリフェノールのイオン化状態変化とも関連しうる。過度に低いpHはアナライトのイオン化を抑制し固定相との疎水性相互作用を変え、逆相での選択性を低下させる。高酸濃度は検出器応答に影響しイオン抑制効果に寄与しうる。CE値は0.15%付近で比較的高水準。総合的に<strong>0.15%を最適ギ酸濃度</strong>と決定。</p>
+<p><strong>3.4.2 注入量</strong>（Figure 2B）: 4–12 μLの範囲で共溶出ピーク数とCE値への影響は限定的。共溶出ピーク数は一貫して12を維持。CE値は6 μLでわずかに低下したが全体変動は軽微で注入量増加で漸次安定。低注入量では低存在量成分のピーク応答が弱くS/N比が低い。12 μLでは隣接ピークにわずかなベースライン変動と軽度のピーク広がり傾向。10 μLが感度と満足なS/N比を提供しつつ安定なベースライン・良好なピーク形状を維持。したがって<strong>10 μLを最適</strong>とした。</p>
+<p><strong>3.4.3 第1勾配時間</strong>（Figure 2C）: 25分→35分で総ピーク数が実質的に増加し35分でピーク。緩やかな勾配変化が複雑成分の段階溶出を促し分離度を高める。しかし40–45分に延長するとピーク数が減少（ピーク拡散と部分共溶出の増加による）。過度に長い勾配時間は縦方向拡散を増やしピーク容量を減らす。CE値は勾配時間増加で緩やかに上昇（2.85→3.79、約33.0%増）。分離効率と分析時間を考慮し<strong>35分を最適</strong>と決定。</p>
+<p><strong>3.4.4 第1勾配有機相比</strong>（Figure 2D）: 16%→20%でピーク数が漸増し20%で最大12ピーク。22–24%まで増やすとピーク数は10・11に減少。過度な有機相比は弱保持化合物の溶出を加速し隣接アナライト間の保持差を減らしピーク重複の可能性を高める。CE値は20%の3.85から24%の4.09へ緩上昇（約6.1%増）だが、高有機相比はピーク数・容量・分離度をさらに高めなかった。CE値・ピーク数・容量・分離度・ピーク分布を総合評価し<strong>20%を最適条件</strong>に選択。</p>
+<p><strong>3.4.5 カラム温度</strong>（Figure 2E）: 20℃→25℃でピーク数が顕著に増加し25℃で最大。適度な温度上昇は物質移動を改善し分離挙動を高める（移動相粘度低下・アナライト拡散加速）。しかし30–40℃に上げるとピーク数が漸減（固定相での保持弱化とピーク広がり効果）。CE値は温度上昇で連続上昇。分離効率と方法安定性を考慮し<strong>25℃を最適カラム温度</strong>と決定。</p>
+<h3>3.5 応答曲面解析</h3>
+<p><strong>3.5.1 モデル構築</strong>: 単因子実験に基づき、0.15%ギ酸・約35分・約20%有機相・25℃で高CE値と多数ピークを達成。これらを応答曲面最適化の中心水準に選択。Design-Expert 13でBox-Behnken設計に基づく4因子3水準応答曲面実験を構築（CEを応答値）。独立変数はギ酸濃度A・第1勾配時間B・第1勾配有機相比C・カラム温度D（実験設計と結果はTable S5）。回帰解析でCEと各因子の二次多項式回帰モデルを確立:</p>
+<p><strong>CE = −66.0807 + 66.69·A + 0.417267·B + 4.61167·C + 0.856333·D + 1.78·A·B − 1.475·A·C − 1.1·A·D + 0.0185·B·C − 0.0017·B·D − 0.00875·C·D − 245.8·A² − 0.01438·B² − 0.117062·C² − 0.00953·D²</strong></p>
+<p>CEへの影響順は <strong>ギ酸濃度（A）&gt; 第1勾配有機相比（C）&gt; カラム温度（D）&gt; 第1勾配時間（B）</strong>。本研究範囲でギ酸濃度が全体分離性能に最も有意な影響を及ぼす。</p>
+<p><strong>3.5.2 分散分析</strong>: モデル全体は高度有意（P &lt; 0.0001）。R²=0.9723、調整R²=0.9446、予測R²=0.9006で高い適合度と予測能。線形項Cは極めて有意（P&lt;0.0001）。二次項A²・B²・C²・D²は全て高度有意（P&lt;0.0001）で顕著な非線形関係。交互作用項AB・AC・AD・BCは有意（P&lt;0.05）、BD・CDは非有意。誤差項（Lack of Fit）は非有意（P&gt;0.05）で良好な適用性。</p>
+<p><strong>Table 1. 重回帰モデルの分散分析（ANOVA）</strong></p>
+<table>
+<thead><tr><th>変動要因</th><th>平方和</th><th>df</th><th>平均平方</th><th>F値</th><th>p値</th><th>有意性</th></tr></thead>
+<tbody>
+<tr><td>モデル</td><td>6.01</td><td>14</td><td>0.4289</td><td>35.11</td><td>&lt; 0.0001</td><td>有意（R²=0.9723）</td></tr>
+<tr><td>A</td><td>0.0919</td><td>1</td><td>0.0919</td><td>7.52</td><td>0.0159</td><td>*</td></tr>
+<tr><td>B</td><td>0.008</td><td>1</td><td>0.008</td><td>0.6555</td><td>0.4317</td><td>ns</td></tr>
+<tr><td>C</td><td>0.8965</td><td>1</td><td>0.8965</td><td>73.38</td><td>&lt; 0.0001</td><td>****</td></tr>
+<tr><td>D</td><td>0.116</td><td>1</td><td>0.116</td><td>9.5</td><td>0.0081</td><td>**</td></tr>
+<tr><td>AB</td><td>0.7921</td><td>1</td><td>0.7921</td><td>64.83</td><td>&lt; 0.0001</td><td>****</td></tr>
+<tr><td>AC</td><td>0.087</td><td>1</td><td>0.087</td><td>7.12</td><td>0.0183</td><td>*</td></tr>
+<tr><td>AD</td><td>0.3025</td><td>1</td><td>0.3025</td><td>24.76</td><td>0.0002</td><td>***</td></tr>
+<tr><td>BC</td><td>0.1369</td><td>1</td><td>0.1369</td><td>11.21</td><td>0.0048</td><td>**</td></tr>
+<tr><td>BD</td><td>0.0072</td><td>1</td><td>0.0072</td><td>0.5914</td><td>0.4547</td><td>ns</td></tr>
+<tr><td>CD</td><td>0.0306</td><td>1</td><td>0.0306</td><td>2.51</td><td>0.1357</td><td>ns</td></tr>
+<tr><td>A²</td><td>2.45</td><td>1</td><td>2.45</td><td>200.48</td><td>&lt; 0.0001</td><td>****</td></tr>
+<tr><td>B²</td><td>0.8383</td><td>1</td><td>0.8383</td><td>68.62</td><td>&lt; 0.0001</td><td>****</td></tr>
+<tr><td>C²</td><td>1.42</td><td>1</td><td>1.42</td><td>116.41</td><td>&lt; 0.0001</td><td>****</td></tr>
+<tr><td>D²</td><td>0.3682</td><td>1</td><td>0.3682</td><td>30.14</td><td>&lt; 0.0001</td><td>****</td></tr>
+<tr><td>残差</td><td>0.171</td><td>14</td><td>0.0122</td><td></td><td></td><td></td></tr>
+<tr><td>Lack of Fit</td><td>0.0825</td><td>10</td><td>0.0083</td><td>0.3729</td><td>0.9062</td><td>非有意</td></tr>
+<tr><td>純誤差</td><td>0.0885</td><td>4</td><td>0.0221</td><td></td><td></td><td></td></tr>
+<tr><td>全体</td><td>6.18</td><td>28</td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+<p>（P&lt;0.0001**<strong>, P&lt;0.001</strong>*, P&lt;0.01**, P&lt;0.05*）</p>
+<p><strong>3.5.3 交互作用解析</strong>: 3次元応答曲面と等高線図（Figure 3）を生成。AC・AD間の応答曲面は顕著に変化し等高線は典型的な楕円分布を示し、これらの組み合わせがCEに有意な交互作用を及ぼし、パラメータ変動に高感度であることを確認。対照的にBと他因子の交互作用は比較的弱い。CE値は各因子の中程度値付近で高水準に到達。RSMが予測した最適条件は <strong>ギ酸濃度0.150%・第1勾配時間35.721分・第1勾配有機相比20.691%・カラム温度23.576℃、予測CE値4.187</strong>。実験実現性を考慮し0.15%・36分・21%・24℃に調整して検証。</p>
+<h3>3.6 RSM-MODR確立の結果</h3>
+<p>応答曲面回帰モデルとモンテカルロシミュレーションに基づき、パラメータ不確かさ摂動下のクロマト条件の堅牢性を系統評価。単一パラメータを予測最適水準に固定し、残り3主要パラメータにランダム摂動サンプリング。第1勾配時間（B=35.721分）・有機相比（C=20.691%）・カラム温度（D=23.576℃）を最適値に固定した際、残りパラメータ空間に楕円体分布の連続実現可能領域を観測。これは上記組み合わせ近傍でクロマト法がプロセス変動に良好な耐性を持ち、CE値が許容範囲（最適CEの±5%）内で安定維持されることを示す。高CE領域は設計空間中央に集中。検証点（○）と外部検証点（△）をMODRに重ねると、全検証点が堅牢設計領域内の高CE域に位置。</p>
+<h3>3.7 DNNモデルの結果</h3>
+<p>応答曲面法はクロマトパラメータとその交互作用を効果的に明らかにし統計的基盤を提供するが、二次多項式に制約され複雑な非線形関係の記述に柔軟性の限界がある。潜在的非線形特性を探るためDNNモデルを導入。DNNの損失関数は訓練初期に急減し約300エポック後に漸次安定し、モデルパラメータの収束と安定な訓練過程を示した。現行の検証戦略下で明白な過学習挙動は示さず。訓練・検証・テストデータの予測結果は予測値と実験値の良好な一致を示し、DNNはテストセット決定係数 <strong>R²=0.9843</strong> を達成、RSMと同程度。</p>
+<p>DNNが予測した最適条件は <strong>ギ酸濃度0.150%・第1勾配時間36.051分・有機相比20.240%・カラム温度24.864℃、予測CE値4.190</strong>。実験検証では0.15%・36分・20%・25℃に調整。RSMとDNNの予測最適条件は高度に一致し、応答曲面モデルが既に良好な安定性・信頼性を持つことを示す。本研究ではRSMが機構解釈とパラメータ交互作用解析により適し、DNNは非線形予測と設計空間探索の探索的補完ツールとして機能しうる。ただし実験データセットが限られるためDNNの予測性能は慎重に解釈すべきで、将来はより大きなデータセットと厳密な統計評価が必要。</p>
+<h3>3.8 DNN-MODR確立の結果</h3>
+<p>確立・検証したDNNモデルに基づき、モンテカルロで堅牢性を評価。単一パラメータを予測最適水準に固定し残り3パラメータに高密度ランダムサンプリングしてDNNベースの堅牢MODRを構築。RSM-MODRと比べ、DNN-MODRは全体形態でより滑らかで柔軟な境界特性を示し、明確な規則的幾何形状を持たない。これはCEの多パラメータ摂動への複雑な非線形応答を反映。高CE領域は設計空間中央に集中し、DNNがパラメータ変動に伴うCE傾向を連続的に特性化。この連続性は設計空間の端で特に顕著で、DNNが高次元パラメータ空間の非線形挙動記述で従来の二次回帰を上回ることを示す。内部検証点（○）は堅牢設計領域内の高CE値に位置し、外部検証点（△）は堅牢設計境界外でCE値が許容品質範囲を大きく下回った。RSMとDNNのMODRは全体的に良好な一致を示す。RSM-MODRは解釈性が良く機構解析と予備設計空間の画定に適し、DNN-MODRは高次元非線形モデリングと設計空間境界の精密特性化で明確な優位を示す。</p>
+<h3>3.9 RSMとDNN最適化条件の実験検証</h3>
+<p>RSMモデルの予測CE値は4.187、実験検証値は <strong>4.118 ± 0.023</strong> で予測とよく一致。しかし設計空間外では <strong>3.606 ± 0.027</strong> に有意に低下し、モデルのパラメータ変動耐性が限定的で堅牢性がやや制約されることを示す。対照的にDNNは予測CE値4.190、実験検証値 <strong>4.090 ± 0.240</strong> で良好な一致。設計空間外でもCE値は <strong>3.940 ± 0.178</strong> を維持し、RSMシナリオより有意に小さい低下を示した。総合すると両モデルとも各設計空間内でCEをよく予測するが、DNNはパラメータ変動下でより高いCE水準を維持し、より広い操作範囲を示した。</p>
+<p><strong>Table 2. 最適条件での応答変数の実測値と予測値</strong>（A: ギ酸濃度%、B: 第1勾配時間min、C: 第1勾配有機相比%、D: カラム温度℃）</p>
+<table>
+<thead><tr><th>モデル</th><th>条件</th><th>A</th><th>B</th><th>C</th><th>D</th><th>予測CE</th><th>実測CE</th></tr></thead>
+<tbody>
+<tr><td>RSM</td><td>最適条件</td><td>0.150</td><td>35.721</td><td>20.691</td><td>23.576</td><td>4.187</td><td>−</td></tr>
+<tr><td></td><td>実現可能設計空間</td><td>0.122–0.179</td><td>32.124–39.326</td><td>19.583–21.797</td><td>20.298–27.850</td><td>3.978–4.396</td><td></td></tr>
+<tr><td></td><td>設計空間内</td><td>0.150</td><td>36</td><td>21</td><td>24</td><td>−</td><td>4.118 ± 0.023</td></tr>
+<tr><td></td><td>設計空間外</td><td>0.15</td><td>38</td><td>22</td><td>24</td><td>−</td><td>3.606 ± 0.027</td></tr>
+<tr><td>DNN</td><td>最適条件</td><td>0.150</td><td>36.051</td><td>20.240</td><td>24.864</td><td>4.190</td><td>−</td></tr>
+<tr><td></td><td>実現可能設計空間</td><td>0.134–0.164</td><td>33.165–37.900</td><td>19.448–20.729</td><td>23.241–26.379</td><td>3.980–4.400</td><td>−</td></tr>
+<tr><td></td><td>設計空間内</td><td>0.150</td><td>36.000</td><td>20.000</td><td>25.000</td><td>−</td><td>4.090 ± 0.240</td></tr>
+<tr><td></td><td>設計空間外</td><td>0.15</td><td>37</td><td>21</td><td>25</td><td>−</td><td>3.940 ± 0.178</td></tr>
+</tbody></table>
+<h3>3.10 緑色度評価</h3>
+<p>GAPI・C-GAPI・AGREEの3ツールで緑色性能を評価（Figure 7）。GAPI（Figure 7A）では大半の評価単位が緑・黄ゾーンに入り、赤ゾーンは主にクロマト分離中の有機溶媒使用に関連（従来型LC分析で共通の環境負荷）。C-GAPI（Figure 7B）で移動相組成を定量評価すると、全ラン平均で約76.49%水相・23.51%アセトニトリルの高い水相比を維持。アセトニトリル消費は1ランあたり約16.5 mLで、50%アセトニトリルの従来アイソクラティック法と比べ約53%の有機溶媒削減。勾配プログラムは最初の55分間高水相比（≥65%）を維持。AGREE（Figure 7C）は複合スコア <strong>0.79</strong> で良好な緑色性能を示し、大半の評価単位が緑。試料前処理の簡素化・試薬毒性の制御・廃棄物削減で明確な優位を反映。有機溶媒消費と機器エネルギー使用にはさらなる最適化余地。GAPI・C-GAPI・AGREEを総合し、確立法は満足な分析性能・堅牢性を維持しつつ良好な緑色分析特性を示す。</p>
+<h3>3.11 HPLC方法論の検証</h3>
+<p><strong>3.11.1 指紋分析の検証</strong>: 注入精度・再現性条件で全ピークの相対保持時間RSDは1%未満、相対ピーク面積RSDは2.0%未満。溶液安定性（室温12時間内）では相対保持時間RSDが0.1%未満、相対ピーク面積RSDが5%未満で、試料溶液が12時間の分析期間中に許容できる安定性を維持（詳細はTable S6–S8）。</p>
+<p><strong>3.11.2 定量分析法バリデーション</strong>:</p>
+<ul><li>直線性: 没食子酸・プロトカテク酸・クロロゲン酸とも3–21 μg/mLで良好な直線性（Table S9）。</li><li>精度: 3化合物ともRSD&lt;2%（Table S10）。</li><li>再現性: 3化合物ともRSD&lt;2%（Table S11）。</li><li>安定性: 12時間内でRSD&lt;5%、指紋プロファイル・ピーク分布・保持挙動に明白な変化なし（Table S12）。</li><li>添加回収率（Table S13）: 没食子酸 92.65–97.72%（平均RSD 1.02%）、プロトカテク酸 91.07–94.92%（平均RSD 1.27%）、クロロゲン酸 97.69–104.55%（平均RSD 1.12%）。</li></ul>
+<p>ICH Q2(R2)と一般的バリデーション基準に従い、許容限界: 直線性（R²≥0.999）・精度（RSD≤2.0%）・LOD（S/N≥3）・LOQ（S/N≥10）を採用。試料マトリックスの複雑性を考慮し正確性の許容回収率範囲を90–110%に設定。全バリデーションパラメータが基準を満たした。</p>
+<h3>3.12 開発法の応用</h3>
+<p>最適化法で新疆産11バッチのイチジク試料を分析。2012年版「中薬色譜指紋類似度評価システム」でS1を標準に参照指紋を生成。計13共通ピークを較正し12化学成分を同定（没食子酸・プロトカテク酸・菊-3-O-ルチノシド・クロロゲン酸・クリプトクロロゲン酸・カフェ酸・p-クマル酸・ルチン・ミリセチン・レスベラトロール・ケルセチン・ソラレン）。S1–S11の指紋類似度係数はそれぞれ 0.982, 0.933, 0.947, 0.945, 0.851, 0.857, 0.793, 0.963, 0.963, 0.915, 0.902。全体類似度は高いが試料間に明確な差異が持続。</p>
+<p>PCA（Figure 8B）ではPC1・PC2で累積67.4%の分散を説明。カシュガル産（S9）はPC1軸で有意に偏り明確な化学的特徴。アクス産（S5–S7）は主成分空間で近接クラスターし比較的安定な化学組成。アトシュ産（S1–S4）は主にPC2の負方向に分布。階層クラスター分析（Figure 8C）ではクラスタリング距離約0.7–0.8で2大分類に明確に分割。PCAの分布パターンと一致。</p>
+<p><strong>限界</strong>: (1) 単一の市販INERTSIL ODS-3 C18カラムで最適化・MODR構築を行い、カラム間・バッチ間変動を系統評価していない。(2) DNNモデルは限られたBox-Behnken実験データに基づき、データ拡張を用いたものの小サンプル条件下の予測能は慎重に解釈すべき。将来はより大きなデータセット・複数カラム・追加検証が必要。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>AQbDベースのイチジク・ポリフェノール分析HPLC法を、RSMとDNNの組み合わせで成功裏に開発・最適化した。RSMはクロマトパラメータの効果理解に良好な解釈性を提供し、DNNは複雑な非線形関係のモデリングで優れた予測能と堅牢性を示した。構築したMODRは最適化条件の信頼性と実用性を確認。開発法は主要イチジク・ポリフェノールの満足なクロマト分離・指紋特性化・定量性能を達成。緑色分析評価は本法が分析堅牢性・再現性を保ちつつ許容できる環境性能を維持することを示した。比較的長いラン時間は限界として残るが、提案したAQbD-RSM-DNN統合枠組みは複雑天然物系のクロマト法の系統的最適化に有用な戦略を提供する。将来はより高速・緑色な分析法の開発と、未知・微量成分のより包括的な特性化のためのLC-MS/MS応用に焦点を当てるべき。</p>
+<p><strong>ハイライト</strong>: (1) イチジク・ポリフェノール分析用のAQbDベースHPLC法を開発。(2) DNNモデルはRSMより良い予測性能を示した。(3) 優れた感度・精度・回収率。(4) 緑色評価で環境親和性を確認。(5) ポリフェノール指紋で産地の異なるイチジクを判別。</p>
+<h2>訳者補足</h2>
+<ul><li><strong>AQbD（分析的QbD）の流れ</strong>: 本論文は「①ATP（何を達成すべきか＝標的成分をRs≥1.2で分けたい）→②フィッシュボーン＋FMEAでリスクの高いパラメータ（CMP）を洗い出す→③単因子実験で各因子の当たりを付ける→④Box-Behnken（RSM）で交互作用込みの最適点を出す→⑤モンテカルロで『多少ずれても品質を保てる範囲（MODR＝設計空間）』を描く」という、QbD式の教科書的な進め方を丁寧に踏んでいる。生薬・方剤の多成分HPLC条件を「点」でなく「面（許容範囲）」で決める考え方の実例として参考になる。</li></ul>
+<ul><li><strong>エントロピー重み法によるCEの意味</strong>: 複数の分離度（没食子酸・プロトカテク酸・クロロゲン酸・ソラレン）と共通ピーク数という「異なる物差し」を1つの総合スコア（CE）にまとめるための客観的な重み付け。「ばらつきが大きい＝情報量が多い指標ほど重く」評価する。ここでは没食子酸の分離度が最大の重み（0.33）を持った。人が恣意的に重みを決めないので再現性・説明性が高い。</li></ul>
+<ul><li><strong>RSM vs DNN の実務的な結論</strong>: 両者の最適条件はほぼ同じ（ギ酸0.15%・第1勾配36分・有機相20–21%・カラム24–25℃）で、精度も僅差（DNN R²=0.984 vs RSM R²=0.972）。差が出たのは「設計空間の外に出たときの粘り強さ」で、DNNの方がCEの落ち込みが小さかった（3.94 vs 3.61）。ただしDNNは29点＋データ拡張という小データなので、著者自身が「慎重に解釈せよ」と釘を刺している。実務的には「解釈はRSM、堅牢な設計空間の輪郭はDNN」という役割分担が現実的。</li></ul>
+<ul><li><strong>緑色度</strong>: 水相主体の勾配（最初の55分は水相≥65%）でアセトニトリル消費を従来比約53%削減、AGREEスコア0.79。長いラン時間（70分）が唯一の弱点。</li></ul>
+<ul><li>図（Fig.1〜8）とSI表（Table S1〜S13, Figure S2）の詳細は原文・SIを参照。データは要請に応じて提供。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="xecq-qbd-fullchain-machinevision-qc.html">小児赤翹清熱顆粒（XECQ）のデータ駆動型フルチェーン品質管理 — 工程リスク管理から知能的製品検査まで</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="assisted-active-learning-lc-method-development.html">液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-prediction-lc-perspective-gritti.html">液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="rphplc-bayesian-doptimal-design-retention-prediction.html">事前知識を活用した逆相HPLC保持予測の改善 — ベイズD最適設計と多階層モデルで多様な分析対象に効く実験計画を作る</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="fig-polyphenols-aqbd-rsm-dnn-hplc" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
