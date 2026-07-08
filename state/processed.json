@@ -552,6 +552,20 @@
       "title": "液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。b17fa658は同一論文の重複。"
+    },
+    "upload-76b3b7f0-aal-lc-method-dev": {
+      "source_pdf": "assistedactivelearningformodelbasedmethoddevelopmentinliquidchromatography.pdf",
+      "slug": "assisted-active-learning-lc-method-development",
+      "title": "液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Anal Chem 2024, 96, 13699."
+    },
+    "upload-4082bb03-qsrr-ml-collinearity": {
+      "source_pdf": "1s2.0S1570023222000368main.pdf",
+      "slug": "qsrr-machine-learning-collinearity-lc-hrms",
+      "title": "機械学習によるLC-HRMS保持予測のためのQSRRモデリング — 4アルゴリズムの比較と「共線性」の影響評価",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。J Chromatogr B 1191 (2022) 123132."
     }
   }
 }
