@@ -545,6 +545,13 @@
       "title": "事前知識を活用した逆相HPLC保持予測の改善 — ベイズD最適設計と多階層モデルで多様な分析対象に効く実験計画を作る",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。"
+    },
+    "upload-97dbcbb0-gritti-retention-perspective": {
+      "source_pdf": "perspectiveonthefutureapproachestopredictretentioninliquidchromatography.pdf",
+      "slug": "retention-prediction-lc-perspective-gritti",
+      "title": "液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。b17fa658は同一論文の重複。"
     }
   }
 }
