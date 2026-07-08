@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）">
+<meta property="og:description" content="分析法開発において複数の応答（分離度・分析時間・ピーク面積・回収率など）を同時に最適化する必要がある場面での応答曲面法（RSM）の適用を体系的に解説したTalantaの総説。一度に1因子を動かすOVAT法の限界（因子間相互作用を見逃す・局所最適・実験数増大）を示し、多変量実験計画法（DOE）の利点を整理する。スクリーニング設計（完全/一部実施要因・Plackett-Burman）と最適化設計（中心複合CCD・Box-Behnken・Doehlert・D-optimal・3水準完全実施要因）の特徴を対比し、応答のモデル化を最小二乗（2次多項式）と人工ニューラルネットワーク（MLP・RBF）で説明。モデル診断プロット・Box-Cox応答変換・残差の正規性/等分散の検定・個別係数のANOVA評価まで踏み込む。中核はDerringer &amp; Suich（1980）の望ましさ関数——各応答を0～1の個別望ましさdiに変換し、それらの（重み付き）積として全体望ましさDを最大化することで多応答を単一応答化する手法——であり、抽出（丹参のMAE・水環境農薬のMSPE・ブドウ皮のSCFEなど）と分析分離（HPLC/CE/MEKCの多成分定量）の豊富な実例で解説する。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="doe-desirability-function-multiple-response-optimization-review"><h1>実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> <span class="tag">HPLC・UPLC</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1016/j.talanta.2014.01.034" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">e12d274d-1s2.0S0039914014000459main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="doe-desirability-function-multiple-response-optimization-review" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="doe-desirability-function-multiple-response-optimization-review" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">スクリーニング設計→応答曲面設計→最小二乗/ANNモデル化→Derringerの望ましさ関数による複数応答の同時最適化を体系化した分析化学の定番総説</p><div class="digest-stats"><div class="stat"><span class="stat-value">6.7（Talanta・JCR2024・Q1）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">実験計画法（DOE）と応答曲面法（RSM）</span><span class="stat-label">主題</span></div><div class="stat"><span class="stat-value">Derringerの望ましさ関数（1980）による多応答最適化</span><span class="stat-label">中核</span></div><div class="stat"><span class="stat-value">完全/一部実施要因・P-B・CCD・Box-Behnken・Doehlert・D-optimal</span><span class="stat-label">設計</span></div><div class="stat"><span class="stat-value">抽出・分離・生物プロセスの多応答最適化事例を網羅</span><span class="stat-label">応用</span></div></div><ul class="digest-points"><li>一度に1因子を変えるOVAT法の限界（相互作用を見ない・局所最適に陥る）を示し多変量DOEの利点を整理――スクリーニング設計（Table1）と最適化設計（Table2）を用途別に対比</li><li>応答のモデル化を最小二乗（2次多項式）とANN（MLP/RBF）で解説しBox-Cox変換・モデル診断プロット（Table3）・残差正規性/等分散の検定まで踏み込む</li><li>複数応答はDerringerの望ましさ関数di（0-1）を積で束ねた全体望ましさD（式14）で単一応答化し重み・重要度で優先順位を付与――丹参MAEや水環境農薬MSPE等の実例で解説</li></ul></section><p>&lt;!-- Vera Candioti L, De Zan MM, Cámara MS, Goicoechea HC. Experimental design and multiple response optimization. Using the desirability function in analytical methods development. Talanta 124 (2014) 123-138. doi:10.1016/j.talanta.2014.01.034 の全訳密度日本語版。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は特定の生薬を扱う研究ではなく、<strong>分析法開発の最適化に用いる実験計画法（DOE）・応答曲面法（RSM）・望ましさ関数（desirability function）の理論と実務を体系化した「教科書的総説」</strong> である。当サイトが扱う漢方・生薬 QC 論文の多く——たとえば参芪扶正注射液の QbD（Plackett-Burman＋Box-Behnken＋モンテカルロ）、サフランの ANN 応答曲面法、周天方の AHP-CRITIC 抽出最適化——は、いずれも本総説が整理する枠組みの上に立っている。とくに本論文は応用例として <strong>丹参（Salviae Miltiorrhizae radix・タンジン）のマイクロ波抽出（MAE）で水溶性フェノール酸と脂溶性タンシノンを同時抽出し、9成分の抽出収率を望ましさ関数で一括最適化した事例</strong> を明示的に取り上げており（クリプトタンシノン・タンシノンI・タンシノンIIA の応答曲面まで図示）、生薬の抽出条件最適化に望ましさ関数がどう使われるかの直接的な手本になる。生薬 QC のメソッド開発論文を読むうえで「なぜ Box-Behnken なのか」「望ましさ D とは何か」「重み s/t と重要度 r の違い」を押さえる基礎文献として位置づけられる。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> Experimental design and multiple response optimization. Using the desirability function in analytical methods development</li><li><strong>和題（本稿）:</strong> 実験計画法と多応答最適化——分析法開発における望ましさ関数の活用</li><li><strong>著者:</strong> Luciana Vera Candioti, María M. De Zan（責任著者）, María S. Cámara, Héctor C. Goicoechea（責任著者）</li><li><strong>所属:</strong> アルゼンチン・リトラル国立大学 生化学・生物科学部（分析開発・ケモメトリクス研究室 LADAQ／医薬品品質管理研究室 LCCM, Santa Fe）／CONICET（国立科学技術研究会議, Buenos Aires）</li><li><strong>責任著者:</strong> M. M. De Zan（mmdezan@fbcb.unl.edu.ar）, H. C. Goicoechea（hgoico@fbcb.unl.edu.ar）</li><li><strong>掲載誌:</strong> Talanta 124 (2014) 123–138</li><li><strong>DOI:</strong> 10.1016/j.talanta.2014.01.034</li><li><strong>受理経緯:</strong> 2013年11月6日受付 / 2014年1月21日改訂受付 / 2014年1月23日受理 / 2014年2月12日オンライン公開</li><li><strong>© 2014 Elsevier B.V.</strong></li><li><strong>キーワード:</strong> 実験計画法（experimental design）／応答変換（response transformation）／多応答最適化（multiple response optimization）／望ましさ関数（desirability function）</li><li><strong>雑誌インパクトファクター:</strong> 6.7（Talanta・JCR2024・Q1。出典により6.1とも記載）</li></ul>
+<hr>
+<h1>要旨（Abstract）</h1>
+<p>分析法開発の分野で複数の応答を同時に最適化しなければならない場合の応答曲面法（RSM）の適用に関する総説を提示する。応答変換（response transformation）、多応答最適化（multiple response optimization）、最小二乗（least squares）・人工ニューラルネットワーク（ANN）によるモデル化などのいくつかの重要な論点を論じる。分析法開発、とくに望ましさ関数を用いた多応答最適化手順の文脈で、最新の分析応用を提示する。</p>
+<hr>
+<h1>1. 序論（Introduction）</h1>
+<p>規制当局の品質要求の高まり、試薬の高コスト、分析プロセスに影響する変数の多さから、分析法の開発・バリデーション手順は単純な作業とはみなせない。この文脈で「最適化（optimization）」という語は、分析プロセスの性能改善、すなわち最良の応答が得られる条件の発見を指すと考えられる[1]。分析化学において最適化は、可能な限り最良の応答を生じるために各因子がとるべき値を見出す重要な段階である。実験室で開発中の、あるいは公定法・標準法から改変した、あるいは科学文献から得た分析法において、良好な性能を保証しつつ行わねばならない。</p>
+<p>この文脈で、<strong>多変量実験計画法（design of experiments, DOE）</strong> は重要な論点である。一変量手順（驚くべきことに今なおルーチンのメソッド開発で使われている）より時間・労力・資源が少なく、実験数を最小化しつつ大量の情報収集を容易にするからである[2]。DOE と応答曲面法（RSM）はプロセスの開発・改善・最適化に有用であることが証明され[3]、分析応用[4–7]・工業[8–12]・生物プロセス[13–16]で広く用いられてきた。</p>
+<p>原著 Fig. 1 のフローチャートに見られるように、DOE と RSM は主に <strong>分析分離（analytical separations）と抽出手順（extraction procedures）</strong> に適用される。最初のスクリーニング研究の後、応答曲面設計を構築してデータを得、それを一般に最小二乗フィッティング（例外的に ANN）でモデル化する。多数の応答を最適化する場合（適切な基準に従い）、<strong>望ましさ関数（desirability function）が最も普及した道具</strong> である[17]。本総説では、応答変換と多応答最適化という、これまでの総説で広くは扱われてこなかった論点を中心に、分析法最適化段階における DOE の役割を分析する。</p>
+<hr>
+<h1>2. 実験計画の目的と方法論</h1>
+<p>分析化学における実験計画の主要な役割はメソッド最適化に関わり、その主目的は可能な限り最良の分析性能を生じる実験条件を発見することである[1]。メソッド最適化には2段階がある：<strong>(a) スクリーニング段階</strong>（多数の因子を調べ、重要変数に有意な効果をもつものを特定）、<strong>(b) 最適化段階</strong>（因子をさらに調べ最良の分析条件を決定）。加えて、実験計画はメソッドバリデーションにおける頑健性評価（分析条件の小変化が応答に及ぼす効果の検討）や、較正・バリデーションセットの構築にも用いられる[18]。</p>
+<p>2つの最適化戦略が区別される：<strong>一変量（univariate）</strong> と <strong>多変量（multivariate）</strong>。前者は一度に1因子のみを変え（OVAT: one variable at a time）、他因子を一定に保つ。この古典的手順は因子間の相互作用を考慮せず、因子数が増えると実験数が問題になり、探索する実験ドメインも多変量法より狭い。</p>
+<p>多変量戦略は、あらかじめ定めた数の実験で複数因子を同時に調べ、関与する全因子の水準を同時に変える。Leardi の優れたチュートリアル[19]で論じられた多変量法の利点：</p>
+<ul><li><strong>(a)</strong> 実験ドメイン全体で系を大局的に把握でき、応答と実験条件を関係づける数学モデルを構築できる。モデル係数の推定後、実験ドメインの任意点の応答を予測できる。</li><li><strong>(b)</strong> OVAT 法より実験数が少なく、コスト・労力・時間を削減。</li><li><strong>(c)</strong> 因子間の相互作用と応答との非線形関係を調べられる。</li><li><strong>(d)</strong> 一般に研究ドメインの絶対的最適を見出せる（OVAT は初期条件に依存する局所最大しか見つけられない）。</li><li><strong>(e)</strong> 各実験点で収集した情報の質を <strong>てこ比（leverage）</strong> で把握できる。</li></ul>
+<p>正しい実験計画のため、多くの著者は以下のステップを推奨する[3, 20]：</p>
+<h2>2.1. 問題へのアプローチ</h2>
+<p>扱う課題と最適化目的を明確にする。実験計画は適切に定義された分析問題の解を見出す道具である。研究目的を明確に特定・規定し、実験の時間・コストも評価する。</p>
+<h2>2.2. 応答変数の選択</h2>
+<p>メソッドの分析性能評価に必要な情報を提供できる変数を最適化対象に選ぶ。この変数を <strong>応答（response）</strong> と呼び、目的により複数の応答を観察する必要がありうる。応答の例：分析対象回収率（真度）、濃縮係数、ピーク面積（感度）、ピークテーリング、クロマトグラフィー分離度（選択性）、相対標準偏差（精度）、移動/保持時間（効率）など。</p>
+<h2>2.3. 因子とその水準の選択</h2>
+<p>プロセスに影響しうる全因子を注意深く検出・検討する。各因子の実験ドメインを定義し、制御・測定の方法を確立する。因子は量的・質的・混合関連（溶媒量など）に分けられる。因子数が多くなりうるため、1つ以上の応答に有意な影響をもつ実験変数・相互作用を決定するスクリーニング実験が必要。スクリーニング設計では通常、因子を2水準（−1, +1）で調べる。水準間の範囲は、研究対象系で因子を変えられる最も広い区間で、文献情報や先行知識に基づき選ぶ。</p>
+<h2>2.4. 実験計画の選択</h2>
+<p>各段階に最良の実験計画を選ぶ際の考慮点：(a) 目的（問題の種類・既知情報）、(b) 調べる因子・相互作用の数、(c) 各設計の統計的妥当性・有効性、(d) 操作・コスト・時間の制約、(e) 各設計の理解しやすさ・実装の複雑さ。</p>
+<h3>原著 Table 1：スクリーニング段階で用いる設計</h3>
+<table>
+<thead><tr><th>設計</th><th>因子の種類</th><th>因子数</th><th>分解能</th><th>実験数</th><th>推定できる効果</th><th>直交性</th><th>回転可能性</th></tr></thead>
+<tbody>
+<tr><td>2水準完全実施要因（2-FFD）</td><td>数値/カテゴリ</td><td>2≤k≤5</td><td>–</td><td>2ᵏ（複製込みで 2ᵏ+1）</td><td>主効果・相互作用（2次・3次・k因子）</td><td>あり</td><td>あり</td></tr>
+<tr><td>2水準一部実施要因</td><td>数値/カテゴリ</td><td>&gt;4</td><td>III または &gt;IV</td><td>2ᵏ⁻ᵖ</td><td>R=III（主効果が2因子交互作用と交絡）／R=IV（主効果が3因子交互作用と交絡、2因子交互作用同士が交絡）／R=V（主効果が4因子交互作用と、2因子交互作用が3因子交互作用と交絡）</td><td>あり</td><td>あり</td></tr>
+<tr><td>Plackett–Burman（P–B）</td><td>数値/カテゴリ</td><td>N−1</td><td>III</td><td>N（4の倍数）</td><td>主効果が2次以上の交互作用の（分数）と交絡</td><td>あり</td><td>あり</td></tr>
+</tbody></table>
+<p>（k＝因子数、p＝独立生成子の数。）</p>
+<h2>2.5. 実験の実施と応答の決定</h2>
+<p>考慮点：(a) 観測と誤差は独立な確率変数であるべき、(b) 1日/1作業列でできる量を超える実験はブロック化（各ブロックが別の日/作業列に対応、ブロック効果を考慮）、(c) まず因子効果の推定に計算を適用。推定には常に誤差が伴い、効果が有意か決めるには効果の標準偏差（効果の標準誤差）を知る必要がある。</p>
+<p><strong>ランダム誤差</strong> はプロセスの共通原因によるもので、研究因子で説明できない応答の観測ばらつきを表す。非研究因子の効果や操作者誤差を含みうる。後2者のばらつきが大きいと真の因子効果を区別できないため、操作者誤差は小さく保つべき。ランダム誤差の推定法：①設計の中心点等を複製して分散推定（中間精度条件下で測定。併行精度条件だと実験誤差を過小評価し、多くの効果を誤って有意とみなす恐れ）、②あらかじめ無視できると宣言した効果（ダミー因子・因子交互作用の効果）から推定、③事後に無視できると宣言した効果から（Dong や Lenth のアルゴリズム。非有意効果の分布に基づく）[21]。</p>
+<hr>
+<h1>3. 設計（Designs）</h1>
+<h2>3.1. スクリーニング設計</h2>
+<p>完全実施要因・一部実施要因・Plackett–Burman 設計（いずれも各因子2水準）が、経済的かつ効率的なため因子選択段階で最も広く使われる（Table 1）。一部実施要因設計は、完全実施要因 2ᵏ を 2ᵏ⁻ᵖ に分割（p＝独立設計生成子数）して、少ない実験で比較的多くの因子を評価できる。例：6因子なら、半分割 2⁶⁻¹=32、1/4分割 2⁶⁻²=16、1/8分割 2⁶⁻³=8 実験が可能。ただし一部実施要因設計では主効果と交互作用の一部が交絡して別々に推定できない。</p>
+<h2>3.2. 最適化設計</h2>
+<p>2次応答曲面をモデル化できる。最も広く使われるのは3水準完全実施要因・中心複合・Box–Behnken・D-optimal・Doehlert 設計。</p>
+<h3>原著 Table 2：最適化段階で最も一般的な応答曲面設計</h3>
+<table>
+<thead><tr><th>設計</th><th>因子の種類</th><th>因子水準</th><th>実験数</th><th>直交性</th><th>回転可能性</th></tr></thead>
+<tbody>
+<tr><td>中心複合（CCD）</td><td>数値/カテゴリ</td><td>5</td><td>2ᵏ+2k+Cp</td><td>あり/なし</td><td>あり/なし</td></tr>
+<tr><td>Box–Behnken（BBD）</td><td>数値/カテゴリ</td><td>3</td><td>2k(k−1)+Cp</td><td>あり</td><td>あり</td></tr>
+<tr><td>3水準完全実施要因（3-FFD）</td><td>数値/カテゴリ</td><td>3</td><td>3ᵏ</td><td>完全直交</td><td>なし</td></tr>
+<tr><td>Doehlert 行列（DMD）</td><td>数値/カテゴリ</td><td>因子ごとに異なる</td><td>k²+k+Cp</td><td>なし</td><td>なし</td></tr>
+<tr><td>D-Optimal</td><td>数値/カテゴリ</td><td>モデルごとに異なる（不規則な実験ドメイン）</td><td>全組合せから選んだ部分集合</td><td>なし</td><td>あり</td></tr>
+</tbody></table>
+<p>（CCD は α=(f)^(1/4)〔f＝要因点数〕なら回転可能、Cp≈a√f+4−f なら直交。k＝因子数。）</p>
+<p><strong>中心複合設計（CCD）</strong> は、2水準（−1, +1）要因点（Fp）、軸上「星」点（Sp）、全因子0の中心点（Cp）からなる。Sp は1因子のみ ±α、他は0。α 値が Sp の位置を決め、通常1〜√k で変わる。α=1 は面心中心複合設計、α=√k は超立方体ドメイン内に点を配置。<strong>回転可能設計</strong> は α=(f)^(1/4)（f＝Fp数）で達成され、実験者が事前に望ましい応答の位置を知らないため有用（予測分散が設計空間全体で安定）。ただし k&gt;3 では回転可能設計は大きな α を要し実務的でないため、より狭く許容可能な領域で分散を安定させる「準回転可能」な球面設計が好ましい。3因子の球面 CCD では、2次項を効率的に推定するモデル構築に最低15実験を要する。</p>
+<p><strong>混合物設計（mixture design）:</strong> 因子が混合物の成分でその水準が互いに独立でない場合に使う。ドメインは成分数と同数の頂点をもつ正則図形（次元＝成分数−1）。3成分なら正三角形（頂点＝単一成分100%、辺＝2成分混合、内部点＝3成分混合）。simplex 格子・simplex 重心設計を選び、通常は内部に追加点で拡張。モデルは独立変数用の多項式と異なり <strong>Scheffé 多項式</strong>（線形・2次・完全3次・特殊3次）を使う[22]。</p>
+<hr>
+<h1>4. モデル化（Modeling）</h1>
+<h2>4.1. スクリーニングのモデル構築</h2>
+<p>各応答の統計解析の一般手順：(1) 因子効果を推定し符号・大きさを検討、(2) 初期モデル構築〔式(1)〕、(3) 統計検定、(4) 非有意変数を除いてモデル精緻化、(5) 残差解析でモデル妥当性・仮定を確認[22]。各因子の効果は、正符号実験の平均応答と負符号実験の平均応答の差として推定（符号化設計で）。応答 y は線形統計モデルで記述できる：</p>
+<p>$$ y = \beta_0 + \sum_{i=1}^{k} \beta_i x_i + \sum_{1 \le i \le j}^{k} \beta_{ij} x_i x_j + \varepsilon \tag{1} $$</p>
+<p>β₀＝全体平均効果、βi＝因子 xi の効果、βij＝xi・xj の ij 交互作用効果、ε＝ランダム誤差成分（測定誤差・装置背景ノイズ・非研究変数の効果など。平均0・分散 σ² の正規分布と仮定、複製実験で推定）。</p>
+<p>効果の有意性評価には <strong>正規/半正規確率プロット</strong> が普及。無視できる効果は平均0・分散 σ² の正規分布で直線上に並び、有意効果は非ゼロ平均で直線から外れる。選んだ変数を分散分析（ANOVA）で検討し、必要なら非有意変数を除去してモデルを縮小[22]。ANOVA はモデル評価の仮説を検定：</p>
+<p>$$ H_0: \beta_i = \beta_{ij} = \dots = \beta_k = 0 \qquad H_1: \beta_k \ne 0 \text{（少なくとも1つの } k \text{ で）} \tag{2} $$</p>
+<p>H₀ 棄却は、回帰変数の少なくとも1つがモデルに有意に寄与することを意味。ANOVA は総平方和 SST を、モデル由来 SSR と残差/誤差由来 SSE に分割。モデルの統計的有意性は F 検定で判定（F₀ &gt; F(α,k,n−k−1) なら H₀ 棄却）。因子数が多すぎる場合は経験・知識で各因子を適切に選ぶ。例：白ワイン香気中の硫黄化合物を超音波支援乳化-分散液液マイクロ抽出＋GC-MS で分析するメソッド開発[24]では、6因子中の相互作用のため、1因子のみ固定でき他は次の最適化手順に持ち越された。</p>
+<h2>4.2. RSM のモデル構築</h2>
+<p>最適化段階の応答データ収集後、各応答に2次多項式を当てはめる：</p>
+<p>$$ y = \beta_0 + \sum_{i=1}^{k} \beta_i x_i + \sum_{i=1}^{k} \beta_{ii} x_i^2 + \sum_{1 \le i \le j}^{k} \beta_{ij} x_i x_j + \varepsilon \tag{3} $$</p>
+<p>β₀＝定数項/切片、βi・βii・βij＝1次・2次・交互作用項の係数。一般に高次交互作用は非有意で主効果と混同しうるため、2次交互作用のみ考慮。モデル式は通常 <strong>最小二乗（LS）法</strong> で当てはめ（残差 ε を最小化する係数を見出す）。<strong>ANN</strong> は非線形多変量モデル化のもう一つの知的道具[25]。2因子最適化なら RSM は3次元空間の立体曲面として応答を可視化でき、3因子以上なら2因子で描画し他は一定（曲面の一部のみ表示）。等高線マップも可視化に有用。</p>
+<h3>4.2.1. モデルの評価</h3>
+<p>LS 回帰では、誤差の期待値が0近傍・独立・等分散・近似正規と仮定するが、応答は常に誤差を伴い測定されるため、パラメータ推定 β̂ と予測応答 ŷ(x) は実験選択に依存するランダム変動をもつ。これらの仮定は確認すべき[23]。2次モデルの多重回帰当てはめが有意かを ANOVA で検定（H₀: 全係数=0）。回帰が有意かつ選んだ信頼水準で適合欠如が非有意なとき、モデルは満足とされる。</p>
+<p>ただし有意モデルでもデータ変動を正しく説明するとは限らないため、残差プロット・決定係数 R²・自由度調整済み R²adj（モデルが説明する分散の割合）の評価が必要。</p>
+<h4>原著 Table 3：モデル診断プロット</h4>
+<table>
+<thead><tr><th>プロット</th><th>評価対象</th><th>期待される応答</th><th>不適切な結果</th><th>推奨対応</th></tr></thead>
+<tbody>
+<tr><td>正規確率</td><td>残差の正規分布</td><td>直線</td><td>S字曲線</td><td>応答変換</td></tr>
+<tr><td>残差 vs 予測値</td><td>範囲内で分散一定</td><td>ランダム散布</td><td>分散拡大</td><td>応答変換</td></tr>
+<tr><td>残差 vs 実施順</td><td>実験中に応答に影響した変数</td><td>ランダム散布</td><td>トレンド</td><td>実験のランダム化・ブロック化</td></tr>
+<tr><td>残差 vs 因子</td><td>モデル未説明の分散の因子水準依存</td><td>ランダム散布</td><td>顕著な曲率</td><td>新しい回帰モデル</td></tr>
+<tr><td>外部スチューデント化残差</td><td>異常ランの同定</td><td>外部残差 ≤3.5 S</td><td>外部残差 &gt;3.5 S</td><td>特別原因があれば外れ値を棄却可</td></tr>
+<tr><td>てこ比（leverage）</td><td>モデル当てはめへの大きな影響点</td><td>点てこ比 &lt;2×平均</td><td>点てこ比=1</td><td>点/複製の追加</td></tr>
+<tr><td>DFFITS</td><td>各点の予測値への影響</td><td>&lt;2√(P/N)</td><td>&gt;2√(P/N)</td><td>点/複製の追加</td></tr>
+<tr><td>DFBETAS</td><td>各点の回帰係数への影響</td><td>&lt;2/√N</td><td>&gt;2/√N</td><td>点/複製の追加</td></tr>
+<tr><td>Cook&#x27;s 距離（CD）</td><td>当該ケース除外時の回帰変化量</td><td>点CD &lt;2×平均CD</td><td>点CD &gt;2×平均CD</td><td>特別原因があれば外れ値を棄却可</td></tr>
+</tbody></table>
+<p>（P＝モデルパラメータ数、N＝実験数。）高てこ比・高 Cook&#x27;s 距離の外れ値は、より良い当てはめのため除去が推奨される。残差の非正規性・不等分散を軽減する3法：(a) ノンパラメトリック法、(b) 一般化線形モデル（GLM）、(c) 正規性要件を満たす変換応答の解析。本総説は入手・実用性から (c) に焦点。</p>
+<h3>4.2.2. 応答変換（Response transformation）</h3>
+<p>提案モデルの一般評価後、データ変換で系への当てはめが改善する場合がある。典型的に（a）応答範囲がかなり大きい、（b）モデル仮定（正規性・等分散性）が満たされない場合。応答がポアソン・二項・ガンマ分布に従い分散が平均に依存する場合、「角型」「S字型」の異常な残差グラフを生じる。変換は全応答データに数学関数を適用し、ANOVA を妥当にする新データ y&#x27; を生成。</p>
+<p><strong>Box-Cox 変換</strong>[27]（べき乗変換ファミリー）：</p>
+<p>$$ y&#x27; = \frac{y^\lambda - 1}{\lambda} \quad (\lambda \ne 0) \tag{4} $$ $$ y&#x27; = \log_{10} y \text{ または } \ln y \quad (\lambda = 0) \tag{5} $$</p>
+<p>λ は特定の変換を定義するスカラーパラメータ。データは正値である必要があり、そうでなければ定数 c を加えて (y+c)&gt;0 とする。最良の λ は、残差平方和の自然対数が生成する曲線の最小点（残差の散らばりが最小のデータセットを生む λ）で見出す（原著 Fig. 4）。この λ 周りの95%信頼区間が1を含めば特定の変換は不要。この手順は区間 [−3, +3] の連続スペクトルを許す。例（Fig. 4）：クロマトグラフィー分離度をカラム温度・緩衝剤濃度・有機溶媒比・移動相 pH の4変数の関数としてモデル化。残差正規プロットが S字を示したため、λ=−3〜3 で変換を評価し、最良 λ=−0.83（95%CI −0.25〜−1.44）→ 実務的に λ=−1（逆数変換）を採用[28]。変換応答にモデルを当てはめた場合、予測値は正しい解釈のため逆変換すべき。</p>
+<h3>4.2.3. モデルの個別係数の評価</h3>
+<p>各モデルで各項の有意性を ANOVA で評価（変数水準の組合せ変化による応答変動 vs ランダム誤差の変動）。非有意項を除去して系を記述する最簡モデルを得る。戦略は3つ：<strong>後退消去（backward elimination）</strong>（完全モデルから最も非有意な項を逐次除去。最も安全）、<strong>前進選択（forward selection）</strong>（応答と最高相関の項から追加。共線性が高いと問題）、<strong>ステップワイズ回帰</strong>（前進・後退の組合せ）。Leardi のチュートリアル[19]の、信頼区間ブラケット付き棒グラフで各項の相対的有意性を視覚化する方法も簡便。適合欠如を再度 ANOVA で評価。最終モデルは線形・線形＋交互作用・2次・3次のいずれか。</p>
+<h3>4.2.4. 人工ニューラルネットワーク（ANN）</h3>
+<p>ANN は非線形情報のモデル化に特化した情報処理ケモメトリクス手法。<strong>多層フィードフォワード網（MLP）</strong>[30, 31]が予測・分類に多用される。3層構成：入力層（研究因子数と同数のニューロン）、隠れ層（可変数、最適化対象）、出力層（各応答に1ユニット）。隠れ層でシグモイド関数 f(x)=1/(1+e⁻ˣ) が一般的で、隠れニューロン j の出力 Oj：</p>
+<p>$$ O_j = f\!\left[\sum_{i=1}^{m}(s_i w_{ij} + w_{bj})\right] \tag{6} $$</p>
+<p>si＝上位層ニューロン i からの入力、wij＝結合重み、wbj＝バイアス、m＝上位層ニューロン総数。入力・出力層は一般に線形関数。ANN の利点は、モデルの構築に必要な解析関数の正確な形を知る必要がなく、関数型もパラメータ数も与える必要がないこと（LS 回帰との主要な違い）。原著 Fig. 5 は3因子 CCD データのモデル化 MLP（隠れ4ニューロン）の例。</p>
+<p><strong>RBF（動径基底関数）網</strong>[34]：単一隠れ層にガウス伝達関数、線形活性化出力層。MLP に比べノイズデータへの頑健性・高速学習が利点[35]。近赤外での土壌有機物・血中グルコース・魚製品水分の解析[36–38]、毛状根バイオマス収量の最適培養条件予測[39]に応用。m 番目隠れニューロンの出力：</p>
+<p>$$ \text{out}_m = \exp\!\left(-\frac{1}{2s^2}\|s_i - c_m\|^2\right) \tag{7} $$</p>
+<p>RBF 網の出力：</p>
+<p>$$ \text{out}_i = w_0 + \sum_{m=1}^{M} w_m \exp\!\left(-\frac{1}{2s^2}\|s_i - c_m\|^2\right) \tag{8} $$</p>
+<p>w₀＝バイアス、wm＝重み。重みは出力の平均二乗誤差最小化で調整。RBF は収束保証があり、重みは w = (HᵀH)⁻¹Hᵀr〔式(9)〕で与えられ、設計行列 H の要素は H(i,m)=exp(−‖si−cm‖²/2s²)〔式(10)〕。</p>
+<h3>4.2.5. 最適位置（Optimal location）</h3>
+<p>最適位置はモデルの図的表現で見出す：(a) 3次元空間の応答曲面、(b) 等高線グラフ（一定応答線）。応答は2因子の関数として表される。最適値は最大・最小・特定値のいずれかで、視察で見出す。3因子超では非描画因子を一定にするため実験ドメインの一部しか見えず最適が図に見えないため、固定変数の値を慎重に選ぶ。等高線プロットの重ね合わせで妥協領域を視覚探索するが、3因子超では困難。より形式的には、当てはめ多項式を各因子で微分し導関数を0とおいて <strong>停留点（stationary point）</strong> を見出す（最大・最小・鞍点）。停留点が望む最適でないなら <strong>稜線解析（ridge analysis）</strong>（制約付き最適化）が有効。低次元（4パラメータ以下）ならグリッド探索も可能。停留点の信頼領域を計算すべき（推定の質の目安。応答を損なわず因子水準を変えられる範囲がわかる）[41]。</p>
+<hr>
+<h1>5. 多応答最適化（Multiple response optimization）</h1>
+<p>最適化が複数応答を含む場合、各応答を別々に最適化することはできない（変数数と同数の解が集まってしまう）。プロセス/分析法の最適化では、全体解を最適領域に含め、各変数の基準への一定の適合をもたらす <strong>妥協解（compromise solution）</strong> を見出さねばならない。</p>
+<h2>5.1. 図的最適化</h2>
+<p>各応答の等高線プロットを重ね合わせて共同解を推定（応答・因子数が多くなければ）。2因子×2応答でのみ有用。応答が3以上だと等高線プロット法は解釈困難で適用不可。各応答の最適が異なる領域にあると、全応答を同時に満たす条件を図的に見出すのは厄介（最適領域が離れ交差しないほど困難）[3, 4]。代替は多応答問題を単一応答問題に変換すること。</p>
+<h2>5.2. 望ましさ関数（Desirability function）</h2>
+<p>1980年、Derringer と Suich が <strong>望ましさ関数</strong>[17]を開発し、多応答最適化の解の一つを提示（以降、産業界で広く使用）。多くの特性をもつ製品/プロセスの品質は、1つでも「望ましい」限度外なら完全に許容不可、という考えに基づく。全応答の基準適合を保証しつつ、望ましい共同応答で最良の妥協値を提供する条件を見出すことが目的。多応答を単一応答に変換し、個別応答を合成関数に束ねて最適化する。</p>
+<p>まず、当てはめモデルと最適化基準を用い、各応答 ŷi に個別望ましさ関数 di(ŷi) を作る。di は常に0〜1（0＝望ましくない応答、1＝完全に望ましい理想応答、中間値＝より/より少なく望ましい応答）。許容応答範囲 (Ui−Li)（Ui＝上限、Li＝下限）内で、採用する最適化基準により異なる関数を構築。</p>
+<p><strong>最大化する場合:</strong></p>
+<p>$$ d_i(\hat{y}_i(x)) = \begin{cases} 0 &amp; \hat{y}_i(x) &lt; L_i \\[4pt] \left(\dfrac{\hat{y}_i(x) - L_i}{U_i - L_i}\right)^s &amp; L_i \le \hat{y}_i(x) \le U_i \\[4pt] 1 &amp; \hat{y}_i(x) &gt; U_i \end{cases} \tag{11} $$</p>
+<p>s は「重み（weight）」と呼ぶべき乗値で、ŷi が最大に近いことの重要度を決める。</p>
+<p><strong>最小化する場合:</strong></p>
+<p>$$ d_i(\hat{y}_i(x)) = \begin{cases} 1 &amp; \hat{y}_i(x) &lt; L_i \\[4pt] \left(\dfrac{U_i - \hat{y}_i(x)}{U_i - L_i}\right)^t &amp; L_i \le \hat{y}_i(x) \le U_i \\[4pt] 0 &amp; \hat{y}_i(x) &gt; U_i \end{cases} \tag{12} $$</p>
+<p>t は最小への近さの重要度の重み。</p>
+<p><strong>目標値 Ti が最も望ましい場合:</strong></p>
+<p>$$ d_i(\hat{y}_i(x)) = \begin{cases} 0 &amp; \hat{y}_i(x) &lt; L_i \\[4pt] \left(\dfrac{\hat{y}_i(x) - L_i}{T_i - L_i}\right)^s &amp; L_i &lt; \hat{y}_i(x) &lt; T_i \\[4pt] 1 &amp; \hat{y}_i(x) = T_i \\[4pt] \left(\dfrac{\hat{y}_i(x) - U_i}{T_i - U_i}\right)^t &amp; T_i &lt; \hat{y}_i(x) &lt; U_i \\[4pt] 0 &amp; \hat{y}_i(x) &gt; U_i \end{cases} \tag{13} $$</p>
+<p>因子水準も最適化手順に含められ、実験領域内の適切な条件を優先できる。原著 Fig. 6 は各最適化基準の望ましさ関数と s/t による変化を図示。<strong>重みが小さいと応答が目標近傍に厳密である必要がなく広範囲で満足な望ましさに達し、大きな s/t は応答が目標に非常に近くない限り望ましさが極めて低くなる。</strong></p>
+<p>n 変数（因子・応答水準）を望ましさ関数に変換後、それらを <strong>全体望ましさ（Global Desirability, D）</strong> に束ねる：</p>
+<p>$$ D = \left(d_1^{r_1} \times d_2^{r_2} \times \dots \times d_n^{r_n}\right)^{\frac{1}{\sum r_i}} = \left(\prod_{i=1}^{n} d_i^{r_i}\right)^{\frac{1}{\sum r_i}} \tag{14} $$</p>
+<p>ri＝各変数の他に対する <strong>重要度（importance）</strong>。Design Expert ソフト[42]では、重要度は最も重要でない変数の1から最も重要な5まで。D が0以外なら全変数が望ましい値をもつとみなせ、1応答でも完全に望ましくない（di=0）と D=0。最適化は D の最大化を意味。</p>
+<blockquote><strong>訳者補足（重み s/t と重要度 r の違い）:</strong> 混同しやすいが、<strong>重み s/t</strong> は「個々の応答」内で「目標にどれだけ厳密に近づけたいか」を決める形状パラメータ（式11-13の指数）、<strong>重要度 r</strong> は「複数の応答どうし」で「どの応答を優先するか」を決める式14の指数である。前者は1つの di 曲線の反り具合、後者は D への各 di の寄与度を制御する。</blockquote>
+<p>D=1 を目指すのではなく、全目標を満たす良い条件集合を見出すのが目的（D は Li/Ui 限度の設定と重み/優先度に完全依存）。D は実験空間でグリッド計算により図示でき、応答が許容される因子水準組合せが複数見つかると D 曲面の平坦な頂上として表れ、この場合「頑健な解が得られた」といえる[47]。最終ステップは、当てはめモデルで最適因子組合せの各応答値を予測し、分析ランで検証すること。</p>
+<p><strong>実例（著者らの研究）:</strong> 7種の非ステロイド性抗炎症薬（ピロキシカム・スリンダク・ケトプロフェン・ナプロキセン・ジフルニサル・インドメタシン・ジクロフェナクナトリウム）と抗痙攣薬カルバマゼピンの同時定量法開発で、SPME による前濃縮・クリーンアップ工程を最適化[48]。20実験の CCD を構築、全分析対象のピーク面積（感度指標）と分析時間を多項式に当てはめ ANOVA で検証。9応答を望ましさ関数で同時最適化（分析時間最小化＋ピーク面積最大化、小面積の分析対象〔カルバマゼピン・ピロキシカム〕を優先）。全体望ましさ0.941 に到達。</p>
+<p>望ましさ関数アプローチの成功は用いるモデルの質に完全依存し、統計的に検証済み（適合欠如検定の確率 &gt;0.05）のモデルのみを使うべき。留意点：(a) D は1次元最適化だが D の最大探索が常に容易とは限らない、(b) D は微分不可能なので代替アルゴリズムが必要。許容/目標の臨界値・関数形・相対重みはユーザーが「先験的」に（多少恣意的に）定義し、これらをわずかに変えるだけで D の様相は全く変わる。また D は個別望ましさの積で各々が誤差をもつため D の信頼区間は非常に大きくなりうる。したがって「D の数値が最大だから最良」と選んだ設定が、低い D 値で無視された他領域より有意に良いとは限らない。</p>
+<hr>
+<h1>6. 応用（Applications）</h1>
+<p>DOE は多様な分析技術に広く適用され、多くは分離技術の欠点解決を目的とした。Dejaegher と Vander Heyden の総説[7]に、多様な分析技術への設計種別の完全なリストがある。本節は多応答最適化、とくに多数応答の最適化問題の解決に焦点。</p>
+<h2>6.1. 抽出手順</h2>
+<p>最新の抽出応用には SPME・中空糸 SPME（HF-SPME）・亜臨界流体抽出（SCFE）・マイクロ波支援抽出（MAE）など。</p>
+<ul><li><strong>Lu ら:</strong> エタノール修飾亜臨界 1,1,1,2-テトラフルオロエタンで Laminaria japonica（コンブ）からカロテノイド・クロロフィルを SCFE。Box-Behnken＋RSM で3変数（圧力・温度・共溶媒量）の収率への有意性を望ましさ関数で評価[49]。</li><li><strong>Fang ら:</strong> MAE で丹参（Salviae Miltiorrhizae radix・タンジン、TCM 頻用）の水溶性フェノール酸と脂溶性タンシノンを同時抽出。溶媒種・温度・マイクロ波出力・溶媒対材料比・抽出時間を検討。まず一変量法で80%含水メタノールを抽出溶媒に選び温度・出力の水準を設定。次に CCD（13実験）で抽出時間と溶媒対材料比の関数として9成分の最大抽出収率を多変量最適化。9収率に2次モデルを当てはめ、原著 Fig.7（A-C）はクリプトタンシノン・タンシノン I・タンシノン IIA 3種の収率における溶媒比×抽出時間の相互作用を示す。Derringer の望ましさ関数で9収率を同時最適化（主要活性成分に重要度5、最重要でない成分に3）。水溶性・脂溶性成分の同時抽出が MAE で実現可能と実証[50]。</li><li><strong>炭素被覆 Fe₃O₄ 磁性ナノ粒子</strong> を吸着剤に、環境水中の微量有機リン系農薬を磁性固相抽出（MSPE）→ HPLC-UV。CCD で4因子（pH・イオン強度・吸着剤量・平衡時間）を最適化。星点 ±2、29実験（中心点5複製）。望ましさ関数で目的成分シグナル最大化＋平衡時間短縮も同時に。最適条件：pH 9.16・吸着剤 97.4 mg・平衡時間0分・NaCl 10 mmol/L[51]。</li><li><strong>Ghafoor ら:</strong> ブドウ皮から有価成分を SCFE。直交配列16実験、独立変数は温度・圧力・修飾剤濃度。応答は抽出収率・総フェノール・抗酸化活性・総アントシアニン。4応答の最適条件を望ましさ関数で予測[52]。</li><li><strong>Es&#x27;haghi ら:</strong> 環境廃水・毛髪中の BTEX を SPME で前濃縮・定量。直交配列4因子4水準、各応答をグラフで最適化、ANOVA で主要因子推定、最終最適を OVAT で算出[53]。</li><li><strong>Prakash ら:</strong> ウチワサボテン果実からベタライン色素・色を抽出。Box-Behnken（29実験）で温度・時間・質量・pH の色素濃度・色への効果を解析。Derringer 望ましさ関数（全体0.936）で最適化[54]。</li></ul>
+<h3>原著 Table 4・5（MSPE 最適化の例）</h3>
+<p>Table 4 は CCD の因子水準（A: pH 4/6/8/10/12、B: イオン強度 NaCl 0/100/200/300/400 mmol/L、C: 吸着剤量 5/28.8/52.5/76.3/100 mg、D: 平衡時間 0/15/30/45/60 min、星点 ±2）。Table 5 は最適化の制約（pH・NaCl・吸着剤量は範囲内、平衡時間は最小化、4農薬シグナル RMala/RDiaz/RPhos/RChlor は最大化・重み1・重要度5）。</p>
+<h2>6.2. 分析分離</h2>
+<p>HPLC・GC・キャピラリー電気泳動（CE）では、複数応答（ピーク間分離・分析時間・ピーク幅/対称性/理論段数）が関心事のため多応答最適化を要する。ただし <strong>最小分離度の最大化が不都合な場合</strong> の注意[55]：</p>
+<ul><li><strong>(1)</strong> 2ピーク（A・B）が AB・BA で溶出しても分離が同じなら Rs は同値（例：2）。しかしモデル化には有害（異なる状況が同じ応答を与える。本来一方は Rs=2、他方は Rs=−2 とすべき）。実務では各最適化クロマトグラムで最近接ピーク間の Rs を計算する[28]。</li><li><strong>(2)</strong> 最適分離は最小分離度が最大になる条件（最悪分離ピーク対が最良に分離）だが、条件により臨界分離度を担うピーク対が変わる。5ピークなら 4+3+2+1=10 個の分離度をモデル化すべきだが各条件で関連するのは4個のみ。代替として5物質の保持時間 tr（等溶媒最適化ではピーク幅 w も）をモデル化し、グリッド各点で tr・w を予測、tr をソートして関連ピーク対の Rs を計算し最小を選び、それが最大になる条件を最適とする。</li></ul>
+<p>主な事例：Bruns らの食品中糖類の MEKC 分離（CCD 17実験、隣接ピーク分離度・分析時間・S/N を Derringer 法で）[56]、エキストラバージンオリーブ油中13フェノール化合物のCE（全体望ましさ約0.2＝厳しい基準、14分以下で全ピーク分離）[57]、チョコレート中セロトニンと前駆体の capillary LC-MS（D=0.7）[58]、De Zan らのニカルバジン2成分のイオンペア HPLC（5応答を2次多項式・後退回帰 α=0.10、HDP 容量係数・ピークテーリングに重要度5、保持時間に1、塩濃度も最小化しコスト・カラム寿命を配慮）[29]、8種重質多環芳香族炭化水素（PAH）のCE-LIF（4応答、分析時間の重み20、7分未満で全8 PAH 分離）[59]、ペリンドプリルと4不純物のマイクロエマルション LC[60]、アセチルサリチル酸・サリチル酸・アスコルビン酸の HILIC（Box-Behnken、保持は親水性分配とイオン相互作用の妥協）[61]、ラミブジン・テノホビル・エファビレンツの逆相 HPLC[62]、5フラボノイドのミセル LC[63]、血漿中プロトンポンプ阻害薬＋ドンペリドンの逆相 HPLC（COF＝クロマトグラフィー最適化関数を定義、R²&gt;0.92、約9分）[64]、7フラボノイドの逆相 LC で分離度と分析時間を CRF（クロマトグラフィー応答関数）で妥協[65]、乳中抗生物質残留のCE[66]、カプトプリルの HPLC-電気化学検出[67]。</p>
+<h2>6.3. その他の応用</h2>
+<p>生産プロセス分野（本総説の対象外だが）の多応答最適化の最近例を原著 Table 6 に要約：バイオ水素生産（Box-Behnken、3因子2応答[68]／4因子2応答[70]）、組換えタンパク質生産（P-B＋CCD、4因子2応答、多項式＋ANN[69]）、Tuber melanosporum 発酵培地（P-B＋Draper-Lin 小複合設計、4因子3応答[71]）、アボカド油生産（2水準完全実施要因、4因子5応答[72]）。</p>
+<hr>
+<h1>7. 結論（Conclusions）</h1>
+<p>実験計画と最適化は、新しい分析法の開発・バリデーション手順で重要な役割を果たす。分析法は複雑な品質要件を満たさねばならず、プロセスは多数の変数（因子）に影響される。RSM の適用は分析法開発分野で重要な論点だが、残念ながら新規メソッドを提示する報告で多変量戦略の適用を示すものは今なお少ない。RSM を行う際の重要論点は、最も便利な実験計画の選択、実験データの（優先的に最小二乗による）モデル化、最適の位置づけである。</p>
+<p>現代の装置・分析問題の複雑化の結果、とくに分析分離・試料前処理の分野で複数応答を同時に最適化すべき場面が一般的になった。この状況で Derringer と Suich の望ましさ関数は多くの研究者の選択肢となり、近年この主題で発表される論文数の多さからわかるように、実験計画・最適化の世界で重要な役割を果たしている。</p>
+<hr>
+<h1>謝辞</h1>
+<p>著者らはリトラル国立大学（CAI+D 2011 プロジェクト）、CONICET（PIP-2012 No 455）、ANPCyT（PICT 2011-0005）の財政支援に感謝する。</p>
+<hr>
+<h1>主要参考文献（抜粋）</h1>
+<ul><li>[3] Myers RH, Montgomery DC. Response Surface Methodology: Process and Product Optimization Using Designed Experiments. Wiley, 2009.</li><li>[4] Bezerra MA, Santelli RE, Oliveira EP, Villar LS, Escaleira LA. Talanta 76 (2008) 965–977.（RSM 総説）</li><li>[7] Dejaegher B, Vander Heyden Y. J Pharm Biomed Anal 56 (2011) 141–158.</li><li>[17] Derringer G, Suich R. J Qual Technol 12 (1980) 214–219.（望ましさ関数の原典）</li><li>[19] Leardi R. Anal Chim Acta 652 (2009) 161–172.（DOE チュートリアル）</li><li>[27] Box GEP, Cox DR. J R Stat Soc Ser B 26 (1964) 211–252.（Box-Cox 変換）</li><li>[28] De Zan MM, Teglia CM, Robles JC, Goicoechea HC. Talanta 85 (2011) 142–150.</li><li>[48] Vera Candioti L, Gil García MD, Martínez Galera M. J Chromatogr A 1211 (2008) 22–32.（NSAIDs の SPME-LC 例）</li><li>[50] Fang X, Wang J, Zhang S, Zhao Q, Zheng Z, Song Z. Sep Purif Technol 86 (2012) 149–156.（丹参 MAE の例）</li><li>[55] Breitkreitz MC, Jardim ISSF, Bruns RE. J Chromatogr A 1216 (2009) 1439–1449.</li><li>[65] Hadjmohammadi MR, Sharifi V. J Chromatogr B 880 (2012) 34–41.（CRF の例）</li></ul>
+<p>（全72文献。詳細は原著参照。）</p><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="retention-prediction-lc-perspective-gritti.html">液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-desirability-multiresponse-optimization.html">実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modeling-lc-review.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）レビュー</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="bayesian-optimization-chemical-reactions-review.html">化学反応のためのベイズ最適化（BO）— サロゲートモデル・獲得関数から実装・応用・転移学習まで（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="doe-desirability-function-multiple-response-optimization-review" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

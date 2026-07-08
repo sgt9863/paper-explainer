@@ -713,6 +713,20 @@
       "title": "食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。You H et al. J AOAC Int 2020;103(1):124-131."
+    },
+    "upload-e12d274d-doe-desirability-review": {
+      "source_pdf": "1s2.0S0039914014000459main.pdf",
+      "slug": "doe-desirability-function-multiple-response-optimization-review",
+      "title": "実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Vera Candioti L et al. Talanta 124 (2014) 123-138. ※f18ff612は同一PDFの重複アップロードのため同一解説に集約。"
+    },
+    "upload-f18ff612-doe-desirability-review-dup": {
+      "source_pdf": "1s2.0S0039914014000459main.pdf",
+      "slug": "doe-desirability-function-multiple-response-optimization-review",
+      "title": "（重複アップロード）実験計画法と多応答最適化・望ましさ関数の活用（総説）",
+      "date": "2026-07-08",
+      "note": "e12d274d と同一PDFの重複アップロード。解説は doe-desirability-function-multiple-response-optimization-review に集約済み。"
     }
   }
 }
