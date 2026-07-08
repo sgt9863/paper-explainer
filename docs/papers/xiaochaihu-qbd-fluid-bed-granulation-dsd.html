@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QbD主導のTCM製造プロセス — 小柴胡湯（ショウサイコトウ）カプセルの流動層造粒・乾燥プロセスの開発と最適化</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="QbD主導のTCM製造プロセス — 小柴胡湯（ショウサイコトウ）カプセルの流動層造粒・乾燥プロセスの開発と最適化">
+<meta property="og:description" content="漢方方剤「小柴胡湯（7生薬）」カプセルの製造を、QbD（Quality by Design）の考え方で近代化。従来の湿式造粒＋オーブン乾燥＋篩過を流動層造粒（FBG）1工程に統合し、結合剤を85%エタノールから水に置換。決定的スクリーニング設計（DSD）で6つの重要工程パラメータを19実験で評価し、収率&gt;90%・原料利用率&gt;90%・水分&lt;4%を満たす設計空間（MODR）を構築・検証した。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="xiaochaihu-qbd-fluid-bed-granulation-dsd"><h1>QbD主導のTCM製造プロセス — 小柴胡湯（ショウサイコトウ）カプセルの流動層造粒・乾燥プロセスの開発と最適化</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">製造法</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1208/s12249-023-02663-z" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">s1224902302663z.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="xiaochaihu-qbd-fluid-bed-granulation-dsd" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="xiaochaihu-qbd-fluid-bed-granulation-dsd" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">85%エタノールを水に替え、造粒と乾燥を流動層1工程に統合——決定的スクリーニング設計（DSD）で小柴胡湯カプセルを最適化</p><div class="digest-stats"><div class="stat"><span class="stat-value">4.0（AAPS PharmSciTech・JCR2024・Q1）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">小柴胡湯（7生薬）カプセル</span><span class="stat-label">方剤</span></div><div class="stat"><span class="stat-value">流動層造粒（FBG）＋乾燥＋DSD（6因子19実験）</span><span class="stat-label">手法</span></div><div class="stat"><span class="stat-value">収率&gt;90%・原料利用率&gt;90%・水分&lt;4%</span><span class="stat-label">品質達成</span></div><div class="stat"><span class="stat-value">バイカリン含量31.81-34.10 mg/g（薬典5 mg/g以上）</span><span class="stat-label">API</span></div></div><ul class="digest-points"><li>従来の湿式造粒＋オーブン乾燥＋篩過を流動層1工程に統合し結合剤を85%エタノールから水に替えてコスト・安全・環境を改善</li><li>決定的スクリーニング設計（DSD）で6因子（噴霧温度・霧化圧・結合剤噴霧速度など）をわずか19実験で交絡なく評価しCPPを特定</li><li>モンテカルロ法で「収率&gt;90%・原料利用率&gt;90%・水分&lt;4%」を90%以上の確率で満たす設計空間を構築し検証実験で妥当性を確認</li></ul></section><p>&lt;!-- Teng et al., AAPS PharmSciTech (2023) 24:210 の全訳密度日本語版。 漢方カプセル製造工程のQbD最適化の実験論文。practitioner レベル。 表I（因子水準）・表II（DSD実験）・表III（回帰係数）を保持。回帰式（Eq.3-8）は本文の通り。図（Fig.1-8）は原文参照。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: QbD-Guided Traditional Chinese Medicine Manufacturing Process: Development and Optimization of Fluid-Bed Granulation and Drying Processes for Xiaochaihu Capsules</li><li>著者: Kaixuan Teng, Hao Fu, Gelin Wu, Ping Gong, Yongjian Xie, Peng Zhou, Xingchu Gong, Haibin Qu（責任著者）</li><li>所属: 浙江大学 薬学院 製薬情報学研究所／浙江大学 医療AI革新研究所／浙江プラライフ製薬</li><li>掲載誌・巻号・DOI: AAPS PharmSciTech, 2023;24:210. DOI: 10.1208/s12249-023-02663-z</li><li>インパクトファクター: 4.0（AAPS PharmSciTech, JCR 2024 / Clarivate。Q1）</li><li>受理経過: 2023年6月28日受領／9月19日受理／10月11日オンライン公開。© American Association of Pharmaceutical Scientists 2023</li><li>資金: 国家中医薬管理局 革新チーム・人材育成プログラム（ZYYCXTD-D-202002）</li></ul>
+<blockquote>補足: 小柴胡湯（しょうさいことう、Xiaochaihu [XCH]）は張仲景が創方した古典的漢方方剤で、柴胡・（生姜・ミョウバンで加工した）半夏・黄芩・党参（人参の代用）・甘草・生姜・大棗の7味から成る。日本でもツムラなどが医療用漢方製剤として製造する著名方剤。本論文は「化学（成分）」ではなく「製造工程」のQbD論文で、小柴胡湯カプセルの造粒・乾燥をいかに効率的・環境配慮的に近代化するかを扱う。従来の湿式造粒＋オーブン乾燥を流動層1工程に統合し、結合剤の85%エタノールを水に替えた点が要。日本の漢方エキス製剤の造粒工程管理にも直結する内容で、本文にツムラ（Tsumura And Co.）のダウンロード記録はないが浙江大学＋製薬企業の産学連携研究。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>伝統中医薬（TCM）である小柴胡湯（XCH）カプセルの従来の製造法は、時間・コスト・労力がかかり、TCMの近代化に不利である。この課題に対処するため、本研究ではQuality by Design（QbD）の原則に導かれ、水を結合剤とする新しい流動層造粒・乾燥プロセスを開発・最適化した。石川図（Ishikawa diagram）で予備的リスク評価を行い、続いてQbD統計ツールとしての6因子の決定的スクリーニング設計（DSD）で新プロセスを開発・最適化した。DSDを用いて少数の実験で複数の潜在因子と交互作用を研究した。本研究は重要工程パラメータ（CPP）を特定し、DSD枠組み内でCPP-重要品質特性（CQA）の関係を明らかにする二次回帰モデルを確立し、信頼できる設計空間を定義した。設計空間内のパラメータ組み合わせで実施したプロセスは、生産収率・原料利用率が90%超、水分含量4%未満の適格な顆粒を製造した。さらに全顆粒のバイカリンの定量分析が、有効成分（API）の適格な含量を保証した。新たに開発した小柴胡湯カプセルのプロセスは、短時間・環境親和性・低コストの利点を持ち、TCM製造プロセスの近代化におけるQbDと実験計画（DoE）手法の効果的応用を例示する。</p>
+<p><strong>キーワード</strong>: 決定的スクリーニング設計（DSD）、流動層造粒（FBG）、Quality by Design（QbD）、伝統中医薬（TCM）、小柴胡湯（XCH）</p>
+<h2>序論（Introduction）</h2>
+<p>小柴胡湯（XCH）方剤は張仲景が創方した古典的TCM方剤で、柴胡・（生姜とミョウバンで加工した）半夏（姜半夏）・黄芩・党参・甘草・生姜・大棗から成り、発汗解熱・疏肝・和胃の作用を持つ。多数の研究がXCH方剤の抗炎症・肝保護・免疫調節・抗アレルギー・抗腫瘍効果を強調してきた。当初XCHの剤形は煎じ液で、吸収しやすく効果の速さ・強さを調整できるが、保存期間が短い・量が多い・その都度煎じる必要・苦味・患者コンプライアンス不良などの欠点がある。</p>
+<p>最新版の中国薬典にはXCHの4剤形（錠剤・発泡錠・顆粒・カプセル）が収載される。うちシェル付きXCHカプセルは外観が滑らかで清潔で服用に便利、コンプライアンスを高める。保存・輸送の利便性から広く採用され、成熟した商業薬として広く使われる。薬典の調製ではXCHエキス粉末を85%エタノールと混合して顆粒にする。所望のXCH顆粒を得るには、製薬業界で湿式造粒・オーブン乾燥・篩過の従来法が一般に使われる。この調製過程は乾燥・篩過の前に溶媒調製・移送ステップを要し時間・労力がかかる。さらに移送中の非密閉操作が粉塵を生じ、粉塵汚染・不利な生産環境・医薬品汚染の可能性を招く。したがってXCH生産の近代化には、時間・労力を減らし・コストを下げ・効率を高める変更が不可欠である。</p>
+<p>流動層造粒（FBG）は、混合・凝集・乾燥を1ステップに統合する製薬生産で広く使われるプロセスで、労力コスト・移送損失・時間を節約し、良好な流動性・圧縮性の顆粒を製造する。しかし気-液-固三相系の熱・物質移動の複雑さと、給気温度・霧化圧・結合剤噴霧速度・給気流量・給気湿度など造粒過程と最終顆粒特性に影響する複数の工程パラメータが、全過程を複雑にする。したがって新FBG過程の開発ではFBG製品・過程の理解が必要だが困難である。</p>
+<p>古典的な一因子ずつ（one-variable-at-a-time）法や試行錯誤法は、しばしば不完全な製品・過程理解を招き、再現性の欠如・高コストなどの問題で、固定的・硬直的な製造過程に至る。これを克服するため、QbDアプローチの信頼できる統計要素である実験計画（DoE）が導入された。QbDは「事前定義された目標から始まり、健全な科学と品質リスク管理に基づいて製品・過程理解と過程管理を強調する体系的開発アプローチ」と定義される。製薬QbDは製品・製造過程の設計・開発とCQA・CPPの同定を導く。DoEを統計ツールとして、複数のCPPを同時に考慮しCQAへの効果を調べられる。スクリーニング・最適化・堅牢性がDoEの基本目標。CQAとCPPの多次元的組み合わせ・交互作用を含む設計空間（DS）を決定し最終顆粒の品質を保証する。</p>
+<p>FBG過程は通常、水分含量・密度・Hausner指数・安息角・生産収率などの生産特性で評価される。Box-Behnken設計（BBD）・分数要因設計・決定的スクリーニング設計（DSD）などのDoE法が先行研究で使われ、パラメータの生産特性・交互作用への効果を明らかにしてきた。うちDSDはJonesとNachtsheimが提唱した新規で高効率な小型3水準実験設計技術で、交絡バイアスなく因子の主効果と2因子交互作用を評価する能力が高く、因子の純二次効果の推定も提供する。DSDは複数因子考慮時に必要な実験ランが少なく、製薬開発の時間・資源・コストを大幅に削減する点で魅力的。</p>
+<p>先行研究はDoEで過程の顆粒品質への効果を理解してきたが、DoEをTCM FBG過程の開発・最適化に応用することはほとんど未探索だった。XCH生産の既存課題に関し、本研究の目的はDSDを用いてXCHカプセルの従来の湿式造粒・オーブン乾燥に代わる高効率で安全なFBG・乾燥過程を開発することである。生産収率・原料利用率・生産水分含量で開発過程を評価。信頼できる数理モデルと設計空間を得て検証した。開発過程では<strong>水を85%エタノールの代わりに結合剤とする</strong>（結合剤コスト削減・過程安全性向上のため）。新過程は流動層内で造粒・乾燥を達成し、移送ステップ・処理時間を減らし生産効率を大幅に高める。密閉流動層装置内で行うため移送ステップが減り粉塵汚染の可能性を最小化——新過程の環境親和性を示す。</p>
+<h2>材料と方法（Materials and Methods）</h2>
+<h3>試薬と材料</h3>
+<p>バイカリン標準品（94.2%, 中国食品薬品検定研究院）、リン酸（85%, 国薬）、メタノール（HPLCグレード, Merck）、エタノール（分析グレード）、原料（小柴胡湯エキス粉末, 浙江プラライフ製薬提供）、XCH顆粒試料（FBG・乾燥過程で製造）。</p>
+<h3>トップスプレー流動層造粒</h3>
+<p>多機能ラボ流動層造粒機（FLZB-3.0, HANSE Technology）で全実験。各バッチはXCHエキス粉末559 gを固体粉末、脱イオン水115.4 gを結合剤とした。予熱した製品容器に固体粉末を投入し、30秒後に結合剤をポンプ注入。流動化空気流量を調整し過流動化・脱流動化のリスクを回避。全液量を使い切ると乾燥過程を開始し、給気温度を指定乾燥温度に速やかに調整し所定時間持続。乾燥終了時にハロゲン迅速水分計（HE-83, Mettler-Toledo）で水分測定後、流動化を停止。振動フィルターバッグを振って付着粒子を回収、篩過（850 μm）前に総質量測定。</p>
+<h3>工程評価指標（CQA）の同定</h3>
+<p>製薬業界の製造経験とXCHカプセル製造過程の目標に従いCQAを同定:</p>
+<ul><li><strong>生産収率 Y1</strong>: 篩分析（0〜850 μm範囲の顆粒の総質量に対する質量分率）。</li><li><strong>原料利用率 Y2</strong>: 0〜850 μm範囲の顆粒の原料質量に対する質量分率。高いほど同一生産コストでより多くの製品＝利益増。</li><li><strong>生産水分含量 Y3</strong>: ハロゲン迅速水分計（105℃）で測定。製造要求により4%を超えるべきでない。</li></ul>
+<h3>工程のリスク評価</h3>
+<p>石川図（Ishikawa diagram）で予備リスク評価（Fig.1）。環境・人員・方法・材料・装置の因子を図式化。予備実験と文献調査に基づき、噴霧・乾燥の2段階の6パラメータ——噴霧給気温度(X1)・霧化圧(X2)・結合剤噴霧速度(X3)・結合剤温度(X4)・乾燥給気温度(X5)・乾燥時間(X6)——を潜在的CPPと同定（Table I）。</p>
+<p><strong>Table I. DSDの独立変数と水準</strong></p>
+<table>
+<thead><tr><th>独立変数</th><th>最小(−1)</th><th>中央(0)</th><th>最大(+1)</th></tr></thead>
+<tbody>
+<tr><td>X1: 噴霧給気温度(℃)</td><td>50</td><td>60</td><td>70</td></tr>
+<tr><td>X2: 霧化圧(bar)</td><td>1</td><td>1.5</td><td>2</td></tr>
+<tr><td>X3: 結合剤噴霧速度(r/min)</td><td>5</td><td>12.5</td><td>20</td></tr>
+<tr><td>X4: 結合剤温度(℃)</td><td>25</td><td>40</td><td>55</td></tr>
+<tr><td>X5: 乾燥給気温度(℃)</td><td>60</td><td>65</td><td>70</td></tr>
+<tr><td>X6: 乾燥時間(min)</td><td>5</td><td>17.5</td><td>30</td></tr>
+</tbody></table>
+<h3>DSDの実装</h3>
+<p>DSDで6因子の効果を調査。二次回帰（式1）で造粒・乾燥過程への効果を計算:</p>
+<p>$$Y = b_0 + \sum b_i X_i + \sum\sum b_{ik} X_i X_k + \sum b_{ii} X_i^2 \tag{1}$$</p>
+<p>異なる次元の影響を除くため、ゼロ平均正規化で[−1, 1]に変換（式2）:</p>
+<p>$$x_i = \frac{X_i - X_{i,0}}{\Delta X_i} \tag{2}$$</p>
+<p>Design Expert 11.0で2つの追加仮想因子を用いたDSDにより、ランダム順の3中心点を含む19実験を設計。</p>
+<h3>設計空間の計算</h3>
+<p>標準到達確率（網羅的探索——モンテカルロ法）で設計空間を計算。3次元プロットで図示。許容確率90%。MATLAB R2021bで計算。</p>
+<h3>API定量</h3>
+<p>過程の信頼性評価のためAPI含量を検出。中国薬典によればバイカリン含量がXCHカプセルの品質管理基準。Agilent 1260でHPLC定量。試料を70%エタノールに懸濁し30分超音波、0.22 μm濾過。Zorbax SB-C18（4.6×250 mm, 5 µm, 30℃）。移動相メタノール:水:リン酸（47:53:0.2, V/V）、流速0.7 mL/min、注入量10 µL、検出315 nm。直線性（14.15–566.14 µg/mL）・精度・正確性・安定性（48時間）を検証。</p>
+<h2>結果と考察（Results and Discussion）</h2>
+<h3>モデルへのデータ適合</h3>
+<p>Table IIIに生産収率・原料利用率・生産水分含量の6因子・交互作用モデルのANOVA結果をまとめる。p値前進回帰で非有意項を除去（有意水準0.1）。回帰モデル（式3-8）は良好に機能し、決定係数R²は0.87超（Table III）。予測R²（&gt;0.5）は調整R²（&gt;0.8）とよく一致し、新観測への良好な予測とデータ適合を示す。</p>
+<p><strong>Table II. DSD実験計画と応答（抜粋）</strong></p>
+<table>
+<thead><tr><th>Run</th><th>X1</th><th>X2</th><th>X3</th><th>X4</th><th>X5</th><th>X6</th><th>Y1(収率%)</th><th>Y2(利用率%)</th><th>Y3(水分%)</th></tr></thead>
+<tbody>
+<tr><td>2</td><td>70</td><td>2</td><td>5</td><td>25</td><td>65</td><td>30</td><td>99.76</td><td>90.04</td><td>0.98</td></tr>
+<tr><td>6</td><td>50</td><td>1</td><td>20</td><td>25</td><td>70</td><td>30</td><td>73.43</td><td>71.65</td><td>4.47</td></tr>
+<tr><td>7</td><td>60</td><td>2</td><td>20</td><td>55</td><td>70</td><td>30</td><td>99.41</td><td>97.03</td><td>1.46</td></tr>
+<tr><td>9</td><td>50</td><td>1</td><td>20</td><td>55</td><td>65</td><td>5</td><td>65.68</td><td>64.97</td><td>4.02</td></tr>
+<tr><td>14</td><td>70</td><td>2</td><td>5</td><td>55</td><td>60</td><td>5</td><td>99.91</td><td>94.79</td><td>1.34</td></tr>
+<tr><td>17</td><td>60</td><td>1.5</td><td>12.5</td><td>40</td><td>65</td><td>17.5</td><td>99.74</td><td>95.90</td><td>2.09</td></tr>
+</tbody></table>
+<p><strong>Table III. 回帰係数とp値（R²）</strong></p>
+<table>
+<thead><tr><th>応答</th><th>R²</th><th>調整R²</th><th>予測R²</th></tr></thead>
+<tbody>
+<tr><td>Y1: 生産収率</td><td>0.9334</td><td>0.8911</td><td>0.7020</td></tr>
+<tr><td>Y2: 原料利用率</td><td>0.8757</td><td>0.8135</td><td>0.5526</td></tr>
+<tr><td>Y3: 生産水分含量</td><td>0.9359</td><td>0.8952</td><td>0.7527</td></tr>
+</tbody></table>
+<h3>生産収率への因子の効果</h3>
+<p>生産収率は65〜99.9%で変動。回帰式（正規化式3、復元式4）:</p>
+<p>$$Y_1 = 98.01 + 3.39x_1 + 4.89x_2 - 5.40x_3 - 2.27x_1x_2 + 2.89x_1x_3 + 4.73x_2x_3 - 3.28x_3^2 \tag{3}$$</p>
+<p>主要パラメータは噴霧給気温度(X1)・霧化圧(X2)・結合剤噴霧速度(X3)。影響順は <strong>X3&gt;X2&gt;X1</strong>、因子間に交互作用。交互作用項（X1X2, X1X3, X2X3）と二次項（X3²）が寄与。X3の主項・二次項とも収率に負の影響（X3増で収率減）、X1・X2増で収率増。低温はより大きくふわふわで密な顆粒、高給気温度は結合剤の急速蒸発で小さく脆い顆粒を生む。低霧化圧・高噴霧速度で大きな噴霧液滴が生じ固体粉末と衝突して過大粒子を形成——規格外で収率低下。低噴霧速度・高霧化圧では微細液滴が生じ、高霧化圧の剪断力が小さな湿潤域とより多くの微粉を生み流動空気で吹き飛ばされ収率低下。実生産では霧化圧を過度に高くしなかった。</p>
+<h3>原料利用率への因子の効果</h3>
+<p>回帰式（正規化式5、復元式6）:</p>
+<p>$$Y_2 = 91.37 + 3.53x_1 + 3.65x_2 - 3.36x_3 - 2.58x_1x_2 + 2.89x_1x_3 + 4.96x_2x_3 \tag{5}$$</p>
+<p>主要パラメータはX1・X2・X3で効果係数は類似。<strong>交互作用項X2X3が正に最も有意</strong>。X3増で明確に低下、X1・X2増で上昇。高X2・低X3では小さな液滴・活性湿潤域で凝集が少なく微粉が多く利用率が低下、逆に低X2・高X3では反対。高噴霧給気温度が他因子のどの水準でも利用率向上に寄与。</p>
+<h3>生産水分含量への因子の効果</h3>
+<p>回帰式（正規化式7、復元式8）:</p>
+<p>$$Y_3 = 2.25 - 0.47x_1 - 0.42x_2 + 0.60x_3 - 0.13x_4 - 0.26x_6 + 0.15x_1x_3 - 0.25x_2x_3 \tag{7}$$</p>
+<p>主要パラメータはX1・X2・X3・X4・X6。影響順は <strong>X3&gt;X1&gt;X2&gt;X6&gt;X4</strong>。X1・X2・X4・X6が負、X3が正の効果。高噴霧速度・低霧化圧で大液滴・遅い蒸発が粒子内の水蓄積を招く。乾燥時間が水分に影響するが、乾燥給気温度(X5)は有意な効果なし（設定範囲が狭くバイカリン安定性確保のため低温維持）。噴霧・乾燥終了時の材料温度差は噴霧終了時17.08℃から乾燥終了時10.66℃に縮小し、温度の水分への影響を弱めた。</p>
+<h3>設計空間の開発と検証</h3>
+<p>設計空間はDoEデータ解析の直接的成果で品質を保証し、設計空間内のパラメータ移動は届出対象の変更とみなされない。生産収率・原料利用率の下限を90%、水分含量の上限を4%に設定（Table IV）。設計空間計算法で、標準到達確率90%超のパラメータ組み合わせを設計空間内で達成（Fig.6、不規則形状）。</p>
+<p>検証実験3件（設計空間内2・外1、Table V）。平均絶対誤差（MAE, 式9）で実験値と予測値の偏差を表現。実験値(y)と予測値(ŷ)は概ね一致（Table VI）——モデルの予測性能が良好。<strong>設計空間外の検証点は規格を満たさず、設計空間内の点は適格製品を製造</strong>。ただし高霧化圧・高噴霧速度などの極端条件は乱流・過湿潤を招き堅牢性を保証できないため、実応用では設計空間内のパラメータ選択時に過程堅牢性を考慮すべき。</p>
+<h3>APIの定量</h3>
+<p>バイカリン含量をHPLC分析。検量線R²&gt;0.9998（14.15–566.14 µg/mL）で優れた直線性。精度・試料安定性のRSD&lt;1%。バイカリン平均回収率98.04±3.34%（RSD 3.41%）で良好な正確性。DSD・検証実験で製造した顆粒のバイカリン含量は<strong>31.81〜34.10 mg/g（平均32.94 mg/g）</strong>。原料のバイカリン含量に対し偏差1.35 mg/gは許容範囲——造粒・乾燥過程での有効成分の安定性を実証。全試料が薬典基準（下限5 mg/g）のバイカリン含量を満たし、開発過程の製品が薬典の品質要求を満たすことを示した。</p>
+<h2>結論（Conclusions）</h2>
+<p>本ケーススタディはQbD主導のTCM製造過程の開発・最適化を提示する。TCMエキス粉末を固体粉末、水を85%エタノールの代わりに結合剤とし、小柴胡湯カプセルの安全で実現可能なFBG・乾燥過程を成功裏に開発・最適化。造粒・乾燥をFBG過程に統合することで、より安全・高効率な新結合剤・新過程を確立。生産環境の改善・結合剤コスト削減・乾燥時間短縮による過程時間節約・移送ステップ削減が、従来法に対する明確な利点。DSDを統計ツールとして、CPP（噴霧給気温度・霧化圧・結合剤噴霧速度・結合剤温度・乾燥給気温度・乾燥時間）のCQA（生産収率・原料利用率・生産水分含量）への効果を、最小限の実験ランと高い統計効率で研究。数理モデルとモデル主導設計空間の精度・信頼性を実験で検証。本研究はTCM製造過程の開発・最適化にQbDを活用する概念を例示し、DoEアプローチの大きな潜在力を強調し、商業製造の継続的改善支援に価値あるツールを提供する。</p>
+<h2>訳者補足</h2>
+<ul><li><strong>この論文は「成分」でなく「製造」のQbD</strong>: 本サイトの他のQbD論文（イチジク・黄連など）が「分析法」や「成分」を対象にするのに対し、本論文は<strong>製造工程（造粒・乾燥）</strong>をQbDで最適化する。小柴胡湯エキス粉末を顆粒（カプセル用）にする工程で、①従来バラバラだった湿式造粒＋オーブン乾燥＋篩過を<strong>流動層1工程に統合</strong>、②結合剤を<strong>85%エタノールから水に置換</strong>（防爆・コスト・環境）。この2つが実務的な改善の柱。日本の漢方エキス製剤メーカーの造粒工程にも通じる。</li></ul>
+<ul><li><strong>DSD（決定的スクリーニング設計）の利点</strong>: 6因子を普通にBox-Behnkenで調べると実験数が膨大になる。DSDは「主効果＋2因子交互作用＋純二次効果」を<strong>交絡なく・わずか19実験で</strong>評価できる新しい実験計画法。「因子が多いけど実験回数は절約したい」製造現場に向く。本研究はこれで「収率にはX3（噴霧速度）が最も効き、増やすと収率が下がる」等の関係を効率的に突き止めた。</li></ul>
+<ul><li><strong>設計空間（MODR）の意味</strong>: 「収率&gt;90%・原料利用率&gt;90%・水分&lt;4%」を90%以上の確率で満たすパラメータの組み合わせ範囲を、モンテカルロ法で3次元的に描いた。この範囲内なら多少パラメータがずれても品質が保てる＝規制上「届出不要の変更」にできる。検証実験で、設計空間内は適格・外は不適格と確認され、モデルの実用性が裏付けられた。前掲のイチジク・黄連論文のMODRと同じ考え方を「製造工程」に適用した例。</li></ul>
+<ul><li><strong>バイカリンで品質確認</strong>: 小柴胡湯の薬典品質管理指標はバイカリン（黄芩由来のフラボノイド配糖体、下限5 mg/g）。新工程で造った顆粒も31.81〜34.10 mg/gと十分で、造粒・乾燥中に有効成分が壊れないことを確認。乾燥温度を低く抑えた（X5の範囲を狭く）のもバイカリンの熱安定性に配慮したため。</li></ul>
+<ul><li><strong>小柴胡湯（ショウサイコトウ）とは</strong>: 柴胡・半夏・黄芩・党参（人参）・甘草・生姜・大棗の7味から成る張仲景の古典方剤で、少陽病（往来寒熱など）に用いる代表的な和解剤。日本でも医療用漢方として広く使われる。</li></ul>
+<ul><li>図（Fig.1 石川図、Fig.2-4 応答等高線、Fig.6 設計空間、Fig.7-8 HPLC・含量）と検証データ（Table V-VII）の詳細は原文参照。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="zhoutian-formula-ahp-critic-extraction-transfer.html">AHP-CRITIC法による抗うつ方剤「周天方（ZTF）」の抽出プロセス最適化とHPLC指紋に基づく主要成分の移行効率解析</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="xecq-qbd-fullchain-machinevision-qc.html">小児赤翹清熱顆粒（XECQ）のデータ駆動型フルチェーン品質管理 — 工程リスク管理から知能的製品検査まで</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="fcg-sugarfree-fingerprint-qams.html">無糖型 復方刺五加顆粒(FCG)の製造と品質管理の統合戦略 — 指紋とQAMSによる総合品質評価</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="tcm-granulation-pat-review.html">伝統中薬の造粒プロセス解析技術(PAT)と応用（総説）</a><span class="rel-tags"><span class="rel-tag">製造法</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">方剤・中成薬</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="xiaochaihu-qbd-fluid-bed-granulation-dsd" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
