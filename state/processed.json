@@ -531,6 +531,20 @@
       "slug": "lcxlc-bayesian-optimization-method-development",
       "title": "包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化",
       "date": "2026-07-07"
+    },
+    "upload-e5ea7686-coptis-qbd-bayesian": {
+      "source_pdf": "1s2.0S1875536416300838main.pdf",
+      "slug": "coptis-alkaloids-qbd-bayesian-design-space",
+      "title": "ベイズ法による黄連（Coptis chinensis）6アルカロイドHPLC分析の設計空間構築と信頼性評価 — QbDによる頑健なRP-HPLC法開発",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。"
+    },
+    "upload-df2e55f8-wiczling-doptimal": {
+      "source_pdf": "1s2.0S0021967325001359main.pdf",
+      "slug": "rphplc-bayesian-doptimal-design-retention-prediction",
+      "title": "事前知識を活用した逆相HPLC保持予測の改善 — ベイズD最適設計と多階層モデルで多様な分析対象に効く実験計画を作る",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。"
     }
   }
 }
