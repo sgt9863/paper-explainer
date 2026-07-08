@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略">
+<meta property="og:description" content="鎮咳去痰の中成薬「複方甘草片」の品質を、HPLC・GC・UVの3種の指紋を統合して総合評価する戦略。ピーク面積と保持時間を両制御する積分効率定量指紋法（IEQFM）で類似度を精密化し、単一標準多マーカー法（SAM）で11成分を効率的に定量、UV連続スペクトルを特徴連結法＋PLSRで含量予測。3手法の指紋をCRITIC重み付けで融合し、単一手法の片手落ちを避ける多次元品質管理の枠組みを35バッチで実証した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic"><h1>指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">多成分定量</span> <span class="tag">指紋分析</span> <span class="tag">ケモメトリクス</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1016/j.talanta.2025.127661" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1s2.0S003991402500147Xmain.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp" alt="HPLC＋GC＋UVの3指紋を、ピーク面積と保持時間の両制御（IEQFM）で評価し、CRITIC重み付けで融合する多次元品質戦略" loading="lazy"></a><p>&lt;!-- Cai et al., Talanta 287 (2025) 127661 の全訳密度日本語版。 多手法融合のTCM品質戦略の実験論文。researcher レベル（IEQFM・SAM・CCM・PLSR・CRITICが中心）。 数式（IEQFM・SAM・CRITIC）は概念を訳出。表・図は原文参照。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Comprehensive analysis strategy of quality for traditional Chinese medicine compound based on fingerprint technology and quantitative prediction of spectra</li><li>著者: Ming Cai, Siqi Wang, Jiayi Jiang, Kai Gao（責任著者）, Guoxiang Sun（責任著者）</li><li>所属: 瀋陽薬科大学 薬学院／広州粤華製薬（広州）</li><li>掲載誌・巻号・DOI: Talanta, 287 (2025) 127661. DOI: 10.1016/j.talanta.2025.127661</li><li>インパクトファクター: 6.7（Talanta, JCR 2024 / Clarivate。Q1）</li><li>受理経過: 2024年9月6日受領／2025年1月18日改訂／1月26日受理／1月27日オンライン公開。© 2025 Elsevier B.V.</li></ul>
+<blockquote>補足: 複方甘草片（ふくほうかんぞうへん、Compound Liquorice Tablets, CLT）は、鎮咳・去痰に使われる代表的な中成薬（OTC薬）で、甘草エキス・アヘンチンキ・安息香酸ナトリウム・樟脳・八角茴香油などから成る。本論文の技術的核心は、<strong>1つの分析手法では複雑な中成薬の品質を測りきれない</strong>という問題に対し、<strong>HPLC（不揮発性成分）＋GC（揮発性成分の樟脳・アネトール）＋UV（全体スペクトル）の3種の指紋を、客観的重み付け（CRITIC）で融合する</strong>という多次元戦略を提案した点。IEQFM（面積＋保持時間の両制御）・SAM（単一標準多マーカー）・CCM+PLSR（UV量子化予測）といった独自の手法を組み合わせている。researcherレベル。本文にツムラ（Tsumura And Co.）のダウンロード記録はないが瀋陽薬科大学の最新研究。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>漢方複方（TCMC）は起源が多様で化学組成が複雑なため品質に差が生じる。品質評価基準の改善はその開発・応用の焦点かつ難点である。従来の指紋分析法はTCMCの品質評価・優劣判定に一定の限界がある。したがって、指紋の類似度評価法をどう最適化し、指紋に基づいて試料データをどう掘り下げてTCMC品質の本質的差異を十分反映するかが本論文の焦点。</p>
+<p>本論文では、ピーク面積と保持時間の両方を用いる積分効率定量指紋法（IEQFM）を提案して類似度評価を最適化。35バッチの複方甘草片（CLT）のHPLC・GC・UV指紋を例に評価した。オフライン波長切替法を探索して多波長データ処理を簡素化。次に、単一標準多マーカー法（SAM）と標準曲線法でCLT中の11成分を正確に定量。直交部分最小二乗判別分析（OPLS-DA）で品質差に影響する特徴成分を発見。UVスペクトルは特徴連結法で前処理して量子指紋を得て、部分最小二乗回帰（PLSR）モデルで定量予測（p&gt;0.7）。最後に、基準間相関による基準重要度（CRITIC）法で各評価法に重みを割り当てて3指紋を融合・評価。TCMCの発展に適応するため、方法最適化は品質評価基準改善に大きな意義を持つ。本研究はTCMCの品質分析の探索的方法を提供する。</p>
+<p><strong>キーワード</strong>: 複方甘草片、定量予測、積分効率定量指紋法、単一標準多マーカー法、漢方複方</p>
+<h2>1. 序論（Introduction）</h2>
+<p>漢方複方（TCMC）は多様な薬から成り化学組成が複雑・多様。その品質評価は安全で効果的な臨床応用の前提。各化合物間の相互作用がTCMC品質評価により高い要求を課す。品質管理分析法は単一化学評価から全体制御モードへ変わった。指紋構築は化学成分の同定・品質管理を実現する効果的方法で、国際的に認知された品質評価法として広く使われる。</p>
+<p>指紋と多指標定量の組み合わせが最も一般的な品質管理法。標準品は定性・定量の参照だが、複数標準品の使用はコスト・入手性・不安定性で困難。<strong>単一標準多マーカー法（SAM）</strong> はこれらに対処でき、参照と測定化合物の比例関係で正確に含量を計算でき、検出コストを大幅削減。品質評価では複雑な化学データの処理・解析が優先。類似度分析は指紋データ評価の効果的方法だが、現行の類似度理論の多くはクロマトピーク面積を主パラメータとし保持時間の影響を無視する。本研究は面積と保持時間の両方を類似度分析に用いる<strong>積分効率定量指紋法（IEQFM）</strong> を提案し、より正確な指紋評価を実現。</p>
+<p>液相分析では、従来は多波長を単純融合・タンデムで解析することが多く、有効情報を統合する一方で冗長情報変数を増幅していた。<strong>波長切替法</strong>は優位情報を効果的に集められTCMの定性・定量に広く応用。本論文はオフライン波長切替法で2波長の最大吸収を収集して指紋を確立し、重要でない情報の干渉を効果的に回避。UVスペクトルは分析物質が似ると吸収が重なりがちなため、<strong>特徴連結法（CCM）</strong> で連続スペクトル信号を量子ピークに変換することを提案——線変化の過程であるだけでなく、連続信号プロファイルを生む物質基盤に反映される物理情報の統合・簡素化。UV分光は高速・低コストで複雑系分析に利点があり、ケモメトリクスの助けで多成分含量と多変量スペクトルデータの関係を表現し、全波長スキャンで複数物質の含量を同時予測できる。</p>
+<p>複数の試験技術を組み合わせた総合分析は品質評価の新たな発展傾向。従来は複数分析法の相互影響・重要性を判断せず単純平均融合を行い評価結果に干渉をもたらしていた。本論文は<strong>CRITIC（基準間相関による基準重要度）法</strong>を初めて評価系に導入し、評価指標の変動性と指標間相関を考慮して異なる手法の重みを計算。</p>
+<p>咳と痰は呼吸器疾患の典型的臨床症状で通常炎症に関連。複方甘草片（CLT）は典型的TCMCで、様々な原因（特に呼吸器感染）による咳・痰の臨床治療に主に使われる。中国薬典ではCLTの品質基準はグリチルリチン酸とモルヒネのみで決定され、一部の報告は定量成分が少なく揮発成分を管理していなかった。<strong>CLTの去痰効果は主に揮発成分（樟脳・トランスアネトールが不可欠な役割）に依存</strong>。したがってHPLC指紋のみの評価は不完全で、GC研究を補完すべき。</p>
+<p>本論文は「指紋-含量予測-データマイニング」の品質管理分析法を開発。35バッチのCLTのHPLC・GC・UV指紋をIEQFMで評価。11成分を標準曲線法（SCM）・SAM・UV予測法で定量。ケモメトリクスで複雑データから有効な化学情報を抽出。</p>
+<h2>2. 材料と方法（Materials and methods）</h2>
+<h3>試薬・材料</h3>
+<p>3メーカーの35バッチのCLT（S1〜S8＝A社の期限切れ試料、S9〜S23＝B社、S24〜S35＝C社）。標準品: リクイリチゲニン（LG）・イソリクイリチゲニン（ILG）・グリチルリチン酸（GA）・モルヒネ（MP）・リン酸コデイン（CP）・安息香酸ナトリウム（SB）・樟脳（CMP）・トランスアネトール（TA）・イソリクイリチンアピオシド（ILA）ほか。</p>
+<h3>2.2 HPLC条件</h3>
+<p>Agilent 1100。注入量10 μL、検出波長220 nmと260 nm。</p>
+<h3>2.3 GC条件</h3>
+<p>Agilent 6890N GC-FID、HP-5キャピラリーカラム（30 m×0.32 mm）。30℃/minで220℃まで昇温し22分保持、2 μLスプリットレス注入。CMP・TAを測定。</p>
+<h3>2.4 UV条件</h3>
+<p>Agilent 1200でフローインジェクション分析。CLT粉末約0.013 gを0.5%リン酸含有80%メタノール25 mLで超音波抽出。60%メタノール溶出、注入5 μL、流速0.5 mL/min。190–400 nmを1.2分で全波長スキャン。</p>
+<h3>2.5 理論</h3>
+<p><strong>2.5.1 積分効率定量指紋法（IEQFM）</strong>: 試料指紋ベクトル X⃗=(A1·tS1, A2·tS2, ..., Ai·tSi)、標準指紋ベクトル Y⃗=(A1·tR1, ...)（A=各ピーク面積、t=各ピーク保持時間）。SF（式1）はX⃗とY⃗のなす角の余弦で、分布比の観点で試料と標準指紋の化学組成の類似度を示す。<strong>定性類似度Se</strong>（式2）は化学指紋成分の量・分布の特徴を反映、<strong>定量類似度Pe</strong>（式3）は化学指紋成分の全体含量を測る。Se・Peを用いる定量評価をIEQFMと呼ぶ。<strong>8段階の品質格付け</strong>: 等級1（Se≥0.95, 95%≤Pe&lt;105%）、等級2（Se≥0.90, 90%≤Pe&lt;110%）、等級3（Se≥0.85, ...）...と続く。</p>
+<p><strong>2.5.x SAM（単一標準多マーカー法）</strong>: 相対補正係数（fsi）で1つの参照から複数成分を定量。相対誤差Re&gt;95.5%なら標準曲線法（SCM）の代替として正確定量可能。</p>
+<p><strong>CCM（特徴連結法）</strong>: 連続スペクトルを量子ピークに変換。p=qのとき各点が量子指紋ピークとなり全情報スペクトルを得る。</p>
+<h2>3. 結果と考察（Results and discussion）</h2>
+<h3>3.1 定量分析</h3>
+<p><strong>3.1.1 11成分の測定</strong>: 220 nmクロマトとUVスペクトルで9化合物を保持時間で同定。GCでCMP・TAを同定。計11化合物。HPLCで9化合物の面積-濃度検量線、GCでCMP・TAを相対面積Ar（=A対照/A_IS）で検量。標準曲線法（SCM）で35バッチの11成分の含量（mg/錠）を計算。含量順は <strong>GA &gt; SB &gt; CMP &gt; LA &gt; TA &gt; LQ &gt; ILA &gt; MP &gt; LG &gt; ILG &gt; CP</strong>。MP・SB・GA・TAに外れ値が多く、ILA・LG・ILGは安定。3メーカーの平均含量では、A社は全体的に少なく（期限切れ試料のため）、B・C社は比較的高い。GA含量の大きな変動は原料産地の生育年数・標高（生育年数増でGA増、標高高でGA増）や保存条件・製法の複合要因による。</p>
+<p><strong>3.1.2 SAM定量分析</strong>: SAMは複数成分の同時定量に適する。GCでは2成分のみ検出されたためHPLCに焦点。<strong>LQ（リクイリチン）を参照物質</strong>とし、SCMでCs決定、相対補正係数（fsi）で他成分を計算。SCMとSAMの結果は強く相関——<strong>LQ 1つの標準品から8成分を正確に定量でき、複数成分同時定量のコストを削減しSCMより高効率</strong>。</p>
+<h3>3.2 HPLC指紋分析</h3>
+<p>機器精度・方法再現性・試料安定性を検証（面積・保持時間のRSD良好）。オフライン波長切替法で220 nmと260 nmの2波長の優位情報を統合。</p>
+<h3>3.x OPLS-DA・UV予測</h3>
+<p>OPLS-DAで品質差に影響する特徴成分を発見。UVスペクトルはCCMで量子指紋化しPLSRモデルで定量予測（p&gt;0.7で良好）。</p>
+<h3>3.7 CRITIC重み付けによる融合</h3>
+<p><strong>3.7.1 CRITIC重み計算</strong>: CRITIC法で指標の変動性・対立に基づき客観的重みを計算。HPLC・GC・UVは異なる視点から指紋情報を提供しSe・Peで評価。定性・定量データの性質が異なってもCRITICは変動係数・相関行列で両方を同時処理して客観重み付け。<strong>Se指標の重み: HPLC 43.81%・GC 55.48%・UV 0.91%</strong>（HPLC・GCの変動が大きく情報量多、UVは他2法と対立が少ない）。<strong>Pe指標の重み: HPLC 19.87%・GC 58.48%・UV 21.66%</strong>（GCが高強度評価で全体品質評価への影響大）。</p>
+<p><strong>3.7.2 融合指紋評価</strong>: 融合定性類似度Sf・定量類似度Pfを計算。SfはSf 0.931〜0.994、Pfは78.0〜139.4%、格付けは6等級内。3手法のデータ融合でより良い品質評価を達成し単一技術の片手落ちを回避。<strong>例: S24を単純平均融合するとSf 0.973・Pf 96.0%で等級1（偽陽性で実態と不一致）だが、CRITIC融合ではSf 0.961・Pf 83.4%で等級4（真の結果に近い）</strong>。CRITICは同一技術内の変動と異なる分析法間の相互影響の双方を反映。CRITICに基づく3指紋の融合でTCMCの多次元制御を実現。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>本研究では、HPLC・GC・UV指紋データと複数の数理モデル・処理戦略を組み合わせてCLTの品質を総合評価した。オフライン波長切替法の導入で多波長指紋の有効情報を統合し冗長情報処理能力を高めつつ重要波長情報を保持、高次元複雑データ分析の新たな発想を提供。CRITIC法が多源データ重み計算でSe・Peを合理的に統合し複雑試料の総合評価に科学的分析を提供。CLTを研究対象に方法の信頼性・適用性を検証したが、適用範囲はこれに限らず、より複雑な系（TCMC・植物抽出物・機能性食品）に拡張できる。面積と保持時間に基づくIEQFMはクロマトピークの差・変動に対し良好な安定性・適用性を維持、CCM・PLSRモデルのUVスペクトル処理結果も複雑試料の品質差の迅速スクリーニング・評価に一般化できることを示す。異なる分析プラットフォームのデータ融合でのCRITIC法の性能は食品安全・TCMC品質モニタリングに重要な応用参照を提供。将来は機械学習など高度データ処理技術との組み合わせで多次元データ分析の効率・精度をさらに最適化できる。本研究はCLTの品質評価の参照を提供するだけでなく、多成分試料の総合評価の分析枠組みを確立し品質管理研究の深化の方向を示す。</p>
+<h2>訳者補足</h2>
+<ul><li><strong>1手法では足りない、を解決する戦略</strong>: 複方甘草片は「不揮発性成分（甘草のグリチルリチン酸・フラボノイド、アヘンのモルヒネ・コデイン）」と「揮発性成分（樟脳・トランスアネトール＝去痰効果の主役）」が混在する。HPLCは不揮発性、GCは揮発性、UVは全体像——と得意分野が違う。中国薬典はグリチルリチン酸とモルヒネの2成分しか規定しておらず、去痰の主役である揮発成分が管理されていない。本論文は<strong>3手法の指紋を1つの品質スコアに統合</strong>することでこの片手落ちを埋める。</li></ul>
+<ul><li><strong>IEQFM（面積＋保持時間の両制御）</strong>: 従来の指紋類似度は「ピーク面積」だけで比べるが、それだと保持時間がずれても（＝別の成分でも）面積が同じなら似ていると誤判定しうる。IEQFMは<strong>面積と保持時間の両方</strong>を使うので、「同じ成分が同じ量ある」ときだけ高類似度になる。定性類似度Se（何がどう分布するか）と定量類似度Pe（全体量）の2軸で8段階に格付けする。</li></ul>
+<ul><li><strong>SAM（単一標準多マーカー法）の実利</strong>: 11成分を測るのに11個の標準品を買うのは高コスト・入手困難。SAMは<strong>1つの標準品（ここではリクイリチン LQ）</strong> から、成分間の応答比（相対補正係数）を使って8成分を計算する。標準曲線法（全部標準品を使う）と強く相関することを確認済みで、コストを大幅に削減できる。本サイトのQAMS（一標多評）論文と同じ発想。</li></ul>
+<ul><li><strong>CRITICで融合する意味</strong>: 3手法をただ平均するのは危険。本論文の実例では、劣化した試料S24を単純平均すると「等級1（優良）」と誤判定（偽陽性）してしまうが、<strong>CRITIC重み付け</strong>（各手法の情報量と手法間の相関を考慮）で融合すると「等級4」と正しく格付けできた。GCの寄与が大きく（揮発成分の変動が品質差をよく反映）、UVは他と重複が多いので重みが小さい、という客観的な配分が自動的に決まる。本サイトの周天方（AHP-CRITIC）・イチジク（エントロピー重み）論文と同じ「客観的重み付け」の系譜。</li></ul>
+<ul><li><strong>複方甘草片（CLT）とは</strong>: 甘草・アヘン・安息香酸ナトリウム・樟脳・八角茴香油から成る鎮咳去痰のOTC中成薬。日本の一般的漢方ではないが、「複数の性質の異なる成分をどう総合的に品質管理するか」の方法論モデルとして価値が高い。</li></ul>
+<ul><li>数式（IEQFM式1-3、SAM、CCM、CRITIC式18-23）の詳細、35バッチの全定量データ・格付け（Table 2-3）、図（Fig.1：クロマト・バイオリンプロット）は原文を参照。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hugan-capsule-fwfp-ecfp.html">護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qhp-hplc-fingerprint-chemometrics.html">指紋分析・多指標成分定量とケモメトリクスを組み合わせた清胃黄連丸(QHPs)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hgwd-uplc-fingerprint-spectrum-effect-qmarker.html">UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

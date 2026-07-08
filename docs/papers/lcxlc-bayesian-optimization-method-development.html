@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化">
+<meta property="og:description" content="包括的二次元液体クロマトグラフィー（LC×LC）の分析法開発を、ガウス過程ベイズ最適化（BO）で加速する方法を示したチュートリアル論文（J. Chromatogr. A 2021）。分離の質を「グラフの連結成分数（＝互いに分離できたピーク数）」で測る新規クロマト応答関数を提案し、Neue-Kuss保持モデル＋ピーク幅圧縮モデルで50成分×4サンプルをin silico生成。8つの勾配パラメータを最適化し、グリッド探索（11664実験）・乱択探索とベンチマーク。予算100反復のBOは乱択に概ね勝ち、グリッド探索を上回る解（あるサンプルで104実験で39連結成分 vs グリッド11664実験で35）を、グリッド比16〜100倍少ない実験数で発見。BO・保持モデリング・実験計画を結ぶ、閉ループ自動法開発への道を開く。全訳＋訳者補足。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/lcxlc-bayesian-optimization-method-development/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="lcxlc-bayesian-optimization-method-development"><h1>包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化</h1><div class="paper-meta"><span class="date">2026-07-07</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">機械学習・データ処理</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2021.462628" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0021967321007524-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="lcxlc-bayesian-optimization-method-development" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="lcxlc-bayesian-optimization-method-development" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/lcxlc-bayesian-optimization-method-development/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/lcxlc-bayesian-optimization-method-development/ai-infographic.webp" alt="手間のかかるLC×LC(二次元LC)の分析法開発を、ガウス過程ベイズ最適化＋グラフ連結成分に基づく新規クロマト応答関数で加速——グリッド探索(11664実験)を104実験で上回る" loading="lazy"></a><p>&lt;!-- 方針: 11ページのJ. Chromatogr. Aチュートリアル論文の全訳密度版。原文構成(1序論→2理論(保持モデル/BO)→3材料と方法→4結果と考察(応答関数/グリッド/BO/比較/収束)→5結論)に忠実。数式(Neue-Kuss式1・GP式17-22・EI式25-26・分離度式28)と数値(11664実験・連結成分数など)を保持。元PDFが画像取得で一部数式OCRが崩れていたため、原文が明示する標準式(Neue-Kuss/GP/EI)は正しい標準形で再掲した。対象は合成試料のLC×LCだが、保持モデリング・メソッド開発・BOの実装例として収録。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Bayesian optimization of comprehensive two-dimensional liquid chromatography separations</li><li>著者・所属: Jim Boelrijk, Bob Pirok, Bernd Ensing, Patrick Forré（アムステルダム大学 AI4Science Lab／分析化学グループ／計算化学グループ／情報学研究所、オランダ）</li><li>掲載誌・巻号・DOI: J. Chromatogr. A, 2021, 1659, 462628. https://doi.org/10.1016/j.chroma.2021.462628</li><li>インパクトファクター: 4.0（Journal of Chromatography A, Q1・2024 JCR。分離科学の代表誌）</li><li>受理経過 / ライセンス: Received 2021-05-25 / Accepted 2021-10-13。CC BY 4.0（Tutorial Article、オープンアクセス）</li></ul>
+<blockquote>補足（この論文の位置づけ）: <strong>ベイズ最適化（BO）を実際のクロマトグラフィー法開発に応用</strong>した好例で、本サイトのBO総説（<code>bayesian-optimization-chemical-reactions-review</code>）と保持モデリング総説（<code>retention-modeling-lc-review</code>）、in silico HPLC法開発（<code>insilico-hplc-qspr-lser-lss-retention</code>）を橋渡しする。対象は合成試料の二次元LC（LC×LC）だが、「多数の装置パラメータを、少ない実験で賢く最適化する」枠組みは生薬の多成分HPLC/UPLC法開発にそのまま応用できる。特に<strong>「分離の良さをどう1つの数値（目的関数）で測るか」</strong>という問題に、グラフ理論（連結成分＝互いに分離できたピーク群）で答えを与えた点が実務的に示唆に富む。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>包括的二次元液体クロマトグラフィー（LC×LC）は分析化学における強力で新興の分離手法である。しかし調整すべき装置パラメータが多く、分析法開発が長期化するという難点を抱える。これを加速するため、本研究は<strong>ベイズ最適化（BO）アルゴリズム</strong>を適用した。本アルゴリズムは、<strong>グラフの連結成分（connected components）</strong>の概念に基づく新規クロマト応答関数を最大化することで LC×LC の法パラメータを最適化する。50成分の4種類のサンプルに対し8つの勾配パラメータを最適化する問題で、<strong>グリッド探索（11,664実験）</strong>と乱択探索に対しベンチマークした。最悪ケース性能は、ランダムな開始実験とシードで最適化ループを100実験繰り返して調べた。100実験の最適化予算では、BO は概して乱択探索を上回り、しばしばグリッド探索も改善した。さらに BO は、グリッド探索と同等の最適解を<strong>はるかに少ない実験（16〜100分の1）</strong>で見つけ、グリッド探索に比べ格段にサンプル効率的な代替となった。初期化実験の選択を（分析者の経験や賢い手続きで）より工夫すればさらに改善しうる。本手法は温度・流速など他パラメータへの拡張が可能で、閉ループの自動法開発への道を開く。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>LC×LC の法開発・最適化は多数の設計判断を要し、日常分析ラボへの導入コストを高くしている。まず、直交する2つの分離機構と、試料非依存の物理パラメータ（カラム寸法・粒径・流速・モジュレーション時間）を決める必要がある。次に化学パラメータ（移動相の種類・組成・時間変化のプログラム、温度・pH・緩衝液強度）で各次元の選択性を最適化する。全ての物理・化学パラメータを精緻に調整する必要があるため、優れた LC×LC 応用も達成されてはいるが、法開発は概して煩雑・長期・高コストで、一部の専門家に限られ、工業応用はまだ稀である。</p>
+<p>これを緩和する研究がある。一つは<strong>保持モデリング</strong>——勾配スキャン技術で、勾配傾斜を変えた少数のクロマトグラムを記録し、成分の保持時間をクロマト間で対応づけて保持モデルに当てはめる（Neue-Kuss 等）。得たモデルで多くの化学パラメータの保持を予測でき、法の質を評価するクロマト応答関数と併せて法最適化ができる。最適化にはグリッド探索（パラメータ格子の網羅探索、DryLab や MOREPEAKS などに実装）、あるいは進化的アルゴリズム（多パラメータに強い）などが使われる。Hao らは遺伝的手法で 1D-LC の多線形勾配を最適化（保持時間予測誤差 &lt;0.82%）、Huygens らは遺伝的アルゴリズムで 1D/2D-LC を最適化し、100成分の LC×LC 分離を625実験のグリッドより100実験未満で改善した（ただし条件を大きく簡略化し総理論段数2000万を仮定）。</p>
+<p>ただし保持モデリングは少数の化学パラメータの効果しか捉えられず、シミュレーションは当てはめデータの質次第で実測と一致しないことがある。勾配スキャンで同定されない成分はモデルに入らず、提案最適法が実は準最適なこともある。もう一つのアプローチが<strong>直接的な実験最適化</strong>（試行錯誤）で、解析的記述が無いパラメータにも適用できるが、実験数がずっと少なく制限される（例: 100）。よって直接実験最適化では、最適法に到達するのに要する<strong>サンプル効率（実験数）</strong>が最重要となる。</p>
+<p>本研究は逐次的大域最適化戦略である<strong>ベイズ最適化</strong>を探る。導関数や解析形など目的関数への仮定がほとんど不要で柔軟であり、進化的アルゴリズムより概してサンプル効率が良い——多パラメータの保持モデリングにも、単純〜中程度の分離問題の直接実験最適化にも魅力的なツールである。理論（保持モデリングと BO）を第2章で、新規クロマト応答関数を第4.1節で導入し、線形勾配プログラムの8つの勾配パラメータの最適化に適用する。全実験は<strong>in silico</strong>（4サンプルをランダム成分で保持モデリング生成）で行い、グリッド探索・乱択探索の2ベースラインと比較する。単純化（ガウスピーク・等濃度）した一方、応答関数はアンダーサンプリングを考慮した現実的なピークキャパシティを用いる。</p>
+<h2>2. 理論（Theory）</h2>
+<h3>2.1 クロマト分離の予測</h3>
+<p>保持予測には <strong>Neue-Kuss モデル</strong>、ピーク形状には Neue らのピーク幅モデルを用いる。</p>
+<p><strong>2.1.1 勾配溶出の保持モデリング（Neue-Kuss）</strong>:</p>
+<blockquote>式(1) <em>k</em>(φ) = <em>k</em>₀ · (1 + <em>S</em>₂φ)² · exp[ −<em>S</em>₁φ / (1 + <em>S</em>₂φ) ]。ここで φ は勾配組成、<em>k</em>₀ は φ=0 に外挿した保持因子、<em>S</em>₁・<em>S</em>₂ は式の傾きと曲率を表す係数。</blockquote>
+<p>勾配開始前に溶出する成分の保持時間は 式(2) <em>t</em>_{R,before} = <em>t</em>₀(1 + <em>k</em>_init)（<em>t</em>₀=カラム死時間、<em>k</em>_init=勾配開始時の保持因子）。時刻 τ = <em>t</em>₀ + <em>t</em>_init + <em>t</em>_D（<em>t</em>_init=初期アイソクラティック時間、<em>t</em>_D=システムドウェル時間）に組成 φ_init から始まり、勾配時間 <em>t</em>_G で φ_final へ変化。勾配中の組成は 式(3) φ(<em>t</em>_R)=φ_init + <em>B</em>(<em>t</em>_R − τ)、勾配の傾き 式(4) <em>B</em> = (φ_final − φ_init)/<em>t</em>_G。線形勾配の一般式（式5）から勾配中に溶出する成分の保持時間が計算でき、式(1) を代入・積分して勾配中の保持時間 式(7)（因子 <em>F</em> は式8）、勾配後に溶出する成分は 式(9)（因子 <em>H</em> は式10）で与えられる。</p>
+<p><strong>2.1.2 ピーク幅モデル</strong>: 保持モデルはピーク頂点の位置を与えるがピーク幅は与えない。Snyder らのピーク圧縮モデルで、アイソクラティックのピーク幅は 式(11) <em>W</em>_iso = 4<em>N</em>^{−1/2}·<em>t</em>₀(1 + <em>k</em>(φ))（<em>N</em>=理論段数）。勾配では勾配圧縮を補正する因子 <em>G</em>（式12、<em>p</em>=式13、<em>b</em>=式14）を導入し、勾配溶出のピーク幅は 式(15) <em>W</em>_grad = 4<em>G</em>·<em>N</em>^{−1/2}·<em>t</em>₀(1 + <em>k</em>_e)（<em>k</em>_e=溶出時の保持因子）。全ピークはガウス・等濃度と仮定。</p>
+<h3>2.2 ベイズ最適化</h3>
+<p>未知の目的関数 <em>f</em>(<strong>x</strong>) の最大化問題（式16）。液体クロマトへの BO ループ:</p>
+<ol><li>入力空間 <em>X</em>（最適化する法パラメータと上下限）を定義。</li><li>初期パラメータ値（ランダムまたは均等）を選び実験。</li><li>全既往実験で目的関数の確率モデルを当てはめ。</li><li>獲得関数を最大化して次に最も有望な点を見つける。</li><li>その点で実験。</li><li>停止条件を計算、満たせば停止、否ならステップ3へ。</li></ol>
+<p>確率モデルは予測平均（任意点の <em>f</em> を近似）と予測分散（不確実性）を与える。本研究は柔軟なカーネル設計と扱いやすい不確実性定量ゆえ<strong>ガウス過程（GP）</strong>を用いる。獲得関数は活用（予測平均が高い領域）と探索（分散が高い領域）を釣り合わせ、本研究は<strong>期待改善（EI）</strong>を用いる。</p>
+<p><strong>2.2.1 ガウス過程</strong>: GP は任意有限個が同時ガウス分布に従う確率変数の集まりで、平均関数 μ(<strong>x</strong>) と共分散関数（カーネル）κ(<strong>x</strong>,<strong>x</strong>′) で完全に特徴づけられる。ノイズ付き観測 <strong>y</strong> = <strong>f</strong> + ε（ε は平均0・分散σ²の i.i.d. ガウスノイズ）に対し、<strong>f</strong> は式(17) の多変量正規、<strong>y</strong> は 式(18) <strong>y</strong> ～ 𝒩(μ(<strong>X</strong>), K(<strong>X</strong>,<strong>X</strong>) + σ²<strong>I</strong>)。観測出力は平均0・単位分散に標準化し、入力は0〜1に正規化するため、平均関数は μ(<strong>X</strong>)=<strong>0</strong>（一般的選択）とし、GP はカーネルで記述される。テスト入力 <strong>X</strong>\* での予測は同時分布（式19）とガウスの条件付けから閉形式の事後予測分布（式20）で、</p>
+<blockquote>式(21) μ\<em> = μ(<strong>X</strong>\</em>) + K(<strong>X</strong>\<em>,<strong>X</strong>)ᵀ [K(<strong>X</strong>,<strong>X</strong>)+σ²<strong>I</strong>]⁻¹ (<strong>y</strong> − μ(<strong>X</strong>)) 式(22) Σ\</em> = K(<strong>X</strong>\<em>,<strong>X</strong>\</em>) − K(<strong>X</strong>\<em>,<strong>X</strong>) [K(<strong>X</strong>,<strong>X</strong>)+σ²<strong>I</strong>]⁻¹ K(<strong>X</strong>,<strong>X</strong>\</em>)</blockquote>
+<p><strong>ARD 二乗指数カーネル</strong>を共分散関数に用いる（式23: κ_SE(<strong>x</strong>,<strong>x</strong>′) = θ₀·exp[ −½ Σ_d (x_d − x′_d)²/θ_d² ]。θ₀=スケール、θ_d=各次元の長さスケール）。パラメータ θ とノイズ σ は<strong>対数周辺尤度</strong>（式24: データ適合項＋複雑さペナルティ〔長い長さスケール＝滑らかを好み過学習を抑制〕＋定数）の最大化で推定。</p>
+<p><strong>2.2.2 期待改善（EI）獲得関数</strong>: 既往最良 <em>f</em>\<em> を改善しそうな点を選ぶ。改善関数 式(25) </em>I<em>(<strong>x</strong>) := (</em>f<em>(<strong>x</strong>) − </em>f<em>\</em>)·𝟙(<em>f</em>(<strong>x</strong>) &gt; <em>f</em>\<em>)。</em>f*(<strong>x</strong>) は GP ゆえガウス確率変数で、期待値は解析的に:</p>
+<blockquote>式(26) α_EI(<strong>x</strong>) = (μ(<strong>x</strong>) − <em>f</em>\<em>)·Φ((μ(<strong>x</strong>) − </em>f<em>\</em>)/σ(<strong>x</strong>)) + σ(<strong>x</strong>)·φ((μ(<strong>x</strong>) − <em>f</em>\*)/σ(<strong>x</strong>))  （σ&gt;0 のとき、σ=0 なら 0）</blockquote>
+<p>（Φ・φ は標準正規の累積・確率密度）。α_EI を最大化すると改善量が考慮され、探索と活用が自然に釣り合う。</p>
+<h3>2.3 グリッド探索（ベンチマーク）</h3>
+<p>手動選択した間隔のパラメータ部分集合の全組合せを網羅計算。並列だが次元の呪いに苦しみ、格子を細かく/パラメータを増やすと組合せ爆発し、大域/局所最適を見落としうる。</p>
+<h3>2.4 乱択探索（ベンチマーク）</h3>
+<p>連続範囲から指定回数ランダムに選ぶ。BO も連続範囲から選ぶため離散のグリッドを補完する。少数のパラメータのみが性能に効く場合はグリッドを上回りうるため、最適化機構への洞察も与える。</p>
+<h2>3. 材料と方法（Materials and methods）</h2>
+<p><strong>3.1 計算手順</strong>: 保持予測は Python 自作シミュレータ（SciPy/NumPy）で、2.1.1 の式を用いる。固定装置パラメータは Table 1（Schoenmakers らに着想、2D-LC 機の現実的設定）。ピーク幅は Neue のピーク圧縮モデル。BO は BoTorch＋GPyTorch、ベースラインは NumPy 実装。</p>
+<p><strong>Table 1. 保持モデリングに採用した装置パラメータ</strong></p>
+<table>
+<thead><tr><th>名称</th><th>値</th><th>単位</th></tr></thead>
+<tbody>
+<tr><td>1次元 ドウェル時間</td><td>19.6</td><td>min</td></tr>
+<tr><td>1次元 死時間</td><td>40</td><td>min</td></tr>
+<tr><td>1次元 理論段数 N</td><td>100</td><td>–</td></tr>
+<tr><td>2次元 ドウェル時間</td><td>1.8</td><td>s</td></tr>
+<tr><td>2次元 死時間</td><td>15.6</td><td>s</td></tr>
+<tr><td>2次元 理論段数 N</td><td>100</td><td>–</td></tr>
+</tbody></table>
+<p><strong>3.2 化合物ジェネレータ</strong>: 「スカウティング/スキャニング」実験で保持パラメータの上下限を定めた知見を用い、保持パラメータ（<em>k</em>₀・<em>S</em>₁・<em>S</em>₂）を各分布からサンプルして in silico 生成。文献の2手続きを2D分離向けに微調整し、計4戦略（A-D）で各50成分のサンプルA-Dを生成（Table 2）:</p>
+<ul><li><strong>戦略A</strong>（Desmet ら）: ln <em>k</em>₀ ～ U(3.27, 11.79)、ln <em>k</em>_M ～ U(−2.38, −1.03)、<em>S</em>₂ ～ U(−0.24, 2.51)、<em>S</em>₁ は式(27) で計算。両次元を独立にサンプル＝完全直交を仮定（現実にはまず達成されない）。</li><li><strong>戦略B</strong>: 1次元はAと同様、2次元は 2<em>S</em>₂ = 1<em>S</em>₂ + U(−<em>c</em>₁,<em>c</em>₁)、2ln<em>k</em>₀ = 1ln<em>k</em>₀ + U(−<em>c</em>₂,<em>c</em>₂)、2ln<em>k</em>_M = 1ln<em>k</em>_M + U(−<em>c</em>₃,<em>c</em>₃)（相関定数 <em>c</em>₁=2, <em>c</em>₂=1, <em>c</em>₃=1）で次元間に相関を導入。</li><li><strong>戦略C</strong>（Kensert ら、57実測成分に基づく）: <em>S</em>₁ ～ U(10^0.8, 10^1.6)、<em>S</em>₂ = 2.501·log<em>S</em>₁ − 2.0822 + <em>r</em>₁（<em>r</em>₁ ～ U(−0.35,0.35)）、<em>k</em>₀ = 10^(0.0839·<em>S</em>₁+0.5054)+<em>r</em>₂（<em>r</em>₂ ～ U(−1.2,1.2)）。両次元独立＝完全直交。</li><li><strong>戦略D</strong>: 1次元はC、2<em>S</em>₁ = 1<em>S</em>₁ + U(−<em>c</em>₄,<em>c</em>₄)（<em>c</em>₄=20）で次元間を結合、残りはCと同関係で2<em>S</em>₁から計算。</li></ul>
+<h2>4. 結果と考察（Results and discussion）</h2>
+<h3>4.1 目的関数（新規クロマト応答関数）</h3>
+<p>クロマト応答関数は分離の質（分離度・谷/ピーク比・直交性）と分離時間の指標で性能を評価する。本研究は<strong>グラフ理論の連結成分</strong>（各対のノードが経路で連結された無向グラフの成分）に基づく新規応答関数を提案。手順:</p>
+<ol><li>両次元に時間制限を設け、それ以降に溶出する成分は除外。</li><li>時間内に溶出する各ピークをノードとし、ピーク間の分離度に応じて辺で結ぶ。分離度は 式(28) <em>RS</em>_{i,j} = √[ δ_x²/(σ_{i,x}+σ_{j,x})² + δ_y²/(σ_{i,y}+σ_{j,y})² ]（δ_x/δ_y=各次元の保持時間差、σ=ガウスピークの標準偏差）。</li><li><strong>分離度 &gt;1 なら分離可能とみなし辺を引かない（disconnected）、&lt;1 なら重なりありとみなし辺を引く（connected）</strong>。全ペアで繰り返し、<strong>連結成分の数を数える</strong>（孤立した分離ピークも1連結成分）。</li></ol>
+<p>この応答関数を最大化すると、時間制約内でできるだけ多くのピークを分離する法パラメータが見つかる。実験でのピーク検出による分離ピーク計数に相当し、近接ピークで幅（＝分離度）が正確に測れない・1ピーク下の成分数が分からないといった実務的困難を捉える。<strong>例</strong>（Fig. 1、50成分）: 時間内に48成分が見え、うち21ピークは全隣接から分離度&gt;1で分離（21連結成分）、他27ピークは10連結成分にクラスタ化——スコアは 21+10 = <strong>31連結成分</strong>。</p>
+<h3>4.2 グリッド探索</h3>
+<p>8勾配パラメータを Table 3 の格子で探索。粗い格子でも<strong>11,664実験</strong>に達し、パラメータ増で非現実的になることを裏づける。影響の小さいパラメータ（初期時間 <em>t</em>_init）は粗く、大きいパラメータ（勾配時間 <em>t</em>_G）は細かくして情報量を高めた。理論段数は両次元100（アンダーサンプリング・注入量を考慮した現実的値）。</p>
+<p><strong>Table 3. 最適化対象パラメータとグリッド探索の範囲・刻み</strong></p>
+<table>
+<thead><tr><th>パラメータ</th><th>最小</th><th>最大</th><th>ステップ数</th><th>刻み</th></tr></thead>
+<tbody>
+<tr><td>1次元 初期時間 1<em>t</em>_init</td><td>0</td><td>10</td><td>3</td><td>5</td></tr>
+<tr><td>1次元 勾配時間 1<em>t</em>_G</td><td>30</td><td>200</td><td>6</td><td>34</td></tr>
+<tr><td>1次元 初期組成 1φ_init</td><td>0.1</td><td>0.5</td><td>3</td><td>0.2</td></tr>
+<tr><td>1次元 最終組成 1φ_final</td><td>0.6</td><td>1</td><td>3</td><td>0.2</td></tr>
+<tr><td>2次元 初期時間 2<em>t</em>_init</td><td>0</td><td>0.2</td><td>2</td><td>0.2</td></tr>
+<tr><td>2次元 勾配時間 2<em>t</em>_G</td><td>10</td><td>20</td><td>4</td><td>5</td></tr>
+<tr><td>2次元 初期組成 2φ_init</td><td>0.1</td><td>0.5</td><td>3</td><td>0.2</td></tr>
+<tr><td>2次元 最終組成 2φ_final</td><td>0.6</td><td>1</td><td>3</td><td>0.2</td></tr>
+</tbody></table>
+<p>結果（Fig. 2）: 全サンプル（A-D）でグリッド探索は50成分すべての分離解を見つけられず、<strong>最大連結成分数は A=32・B=23・C=38・D=35</strong>。多くのパラメータ組合せは連結成分が少なく（分離が悪く）、良い分離につながるのは格子のごく一部——良い分離を与えるのはパラメータ空間の非常に狭い領域だけで、最適化ランドスケープは狭い山と広いプラトーを持つ可能性が示唆された（Huygens らは1D-LCでランドスケープが非凸で局所最適が多いことを可視化）。</p>
+<h3>4.3 ベイズ最適化</h3>
+<p>8勾配パラメータ（グリッドと同じ）を50成分サンプルで最適化。<strong>4つのランダム実験で初期化＋100反復＝計104実験</strong>。結果（Fig. 3）: <strong>わずか42反復でグリッド最大（35）を上回る37連結成分の法を発見</strong>。さらに探索を続け、<strong>74反復で最良スコア39連結成分</strong>に到達（2次元勾配パラメータはグリッド最大とほぼ同値、1次元勾配時間も近いが、1次元初期時間・初期/最終組成は大きく異なり、より良い分離を与えた）。</p>
+<p>グリッド最良（11,664実験中）と BO 最良（104実験中）のクロマトグラム比較（Fig. 4）: グリッド最良は時間制約内（200, 2.26）に<strong>48/50成分</strong>を溶出、うち21ピークが8クラスタに集中し<strong>35連結成分</strong>。BO 最良は<strong>全50成分</strong>を溶出、19ピークが8クラスタで<strong>39連結成分</strong>。伸ばした初期時間＋高い初期/最終組成が1次元を圧縮し、未分離成分を増やさず2ピーク多く時間内に溶出させた。一部のクラスタ（グリッドの160分・BOの150分付近）は変わらず——単純な勾配では保持パラメータが似すぎて分離できない可能性（カラム効率・実験時間・勾配複雑さの増加で解決しうる）。</p>
+<h3>4.4 ベンチマークとの比較（最悪ケース性能）</h3>
+<p>初期反復では BO はほぼランダムに動く（パラメータ間関係の知識がまだ無い）ため、乱数シードと初期化実験の選択に依存する。直接実験最適化のように実験が高コストな状況では複数シードや多数の初期実験を試す余裕が無いため、最悪ケースが重要。各サンプルで異なるシードの<strong>100試行</strong>（4初期＋100反復＝104実験）を行い、乱択探索も同条件で比較（Fig. 5）:</p>
+<ul><li>BO は概して<strong>乱択探索を上回り</strong>、乱択が104反復で BO より良い最大を見つけたのは<strong>5%未満</strong>の散発的ケースのみ。</li><li>乱択がグリッド最大に達したのは稀（<strong>C ~10%、A 0%、B 3%、D 2%</strong>）。104反復の乱択が11,664実験のグリッドに劣るのは驚きでないが、「少数パラメータのみ効く場合は乱択がグリッドを上回りうる」ことから、本研究の勾配パラメータの有用性がある程度裏づけられる（BO が乱択と同性能なら、BO が正しく動いていないか、問題が易しすぎるかを疑うべき——ベースライン比較が肝要）。</li><li>BO は<strong>全サンプル（A-D）でグリッド最大を上回る</strong>法を発見（104実験 vs 11,664実験を考えれば顕著）。ただし100試行・104反復で常にグリッドを上回るわけではなく、グリッドと同等以上だったのは <strong>A=29%・B=85%・C=99%・D=84%</strong>。サンプルAが有意に難しい理由は不明（鋭く狭い最適を BO が通り過ぎ検出に多反復を要する可能性。実際スコア29には速く到達〔&lt;150反復で約85%〕するが、それ以上の改善に時間がかかる）。</li></ul>
+<h3>4.5 グリッド最大に到達するのに要する反復数</h3>
+<p>各サンプルでグリッド最大が観測されるまで BO を100回実行（Fig. 6、累積分布 CDF）: <strong>B ~85%・C ~95%・D ~82% が100反復以下で収束</strong>、残りは 100〜204(B)/230(C)/231(D) 反復。サンプルAはやはり本質的に難しいが、<strong>700反復で全100試行がグリッド最大に到達</strong>（それでも11,664実験よりはるかに少ない。80%は&lt;300反復）。直接実験最適化には多い実験数とも言えるが、本研究はランダム初期化——より洗練された初期化や専門知識による狭いパラメータ範囲でさらに改善しうる。</p>
+<h2>5. 結論（Conclusion）</h2>
+<p>BO を適用し、新規クロマト応答関数を最大化して LC×LC の8勾配パラメータを最適化できることを示した。50成分×4サンプルで異なるシードの100試行により最悪ケース性能を評価し、グリッド探索（11,664実験）・乱択探索とベンチマーク。100反復の予算で BO は概して乱択を上回り、しばしばグリッドを改善。<strong>全試行でグリッド最大に達するのに A例で700反復・B-D例で250反復未満</strong>（グリッド比10〜100倍の高速化）で、多くはさらに速い（B-D は80%以上が&lt;100反復で収束）。初期化実験の選択を工夫すればさらに改善しうる。BO は多パラメータの保持モデリング最適化、ひいては単純〜中程度の分離問題の直接実験最適化に有効な手法である。本研究は単純化したクロマト（ガウスピーク・等濃度・生成成分）で行ったため、続報では非理想性の影響を本結果を基準に評価する必要がある。直接実験最適化への適用には、ピーク検出・ピークトラッキング等のデータ処理アルゴリズムが分離の質の正確・一貫した評価に不可欠。とはいえ BO が自動の直接実験最適化で重要な役割を果たしうることは明らかである。</p>
+<h2>訳者補足（実務者向けの読みどころ）</h2>
+<blockquote>以下は原文に無い、生薬・漢方QC実務の観点からの補足である（本文の訳と混ぜない）。</blockquote>
+<ul><li><strong>「分離の良さ」を1つの数値にする発明</strong>: 多成分クロマトの最適化で最も難しいのは「良い分離とは何か」を目的関数化すること。本研究の「<strong>分離度&lt;1のピークは同じ塊、&gt;1なら別物とみなし、区別できたピーク（連結成分）の数を数える</strong>」という応答関数は、実際のピーク検出で「いくつのピークが見分けられるか」に対応し、直感的で頑健。生薬指紋の多ピーク分離の最適化にも応用しやすい発想。</li><li><strong>BO は「グリッド/DoE の次」の最適化</strong>: 8パラメータの網羅グリッドは11,664実験に膨れ上がるが、BO は104実験で同等以上に到達（16〜100倍効率的）。生薬HPLC/UPLCの勾配・温度・pH・流速などを多変数同時に最適化する際、DoE で当たりを付けてから BO で精緻化、という流れが有効。</li><li><strong>ベースライン比較の重要性</strong>: 「BO が乱択と同性能なら、問題が易しすぎるか BO が壊れている」という指摘は、最適化を導入する誰もが心得るべき検証観点。自社で最適化ツールを評価する際、必ず乱択・グリッドと比べること。</li><li><strong>限界（正直に）</strong>: 本研究は in silico（ガウスピーク・等濃度・シミュレーション成分）で、実試料の非理想性（テーリング・共溶出・濃度差）は未評価。実機適用にはピーク検出・トラッキングの精度が鍵。</li><li><strong>用語</strong>: LC×LC＝包括的二次元液体クロマトグラフィー、勾配パラメータ＝初期時間/勾配時間/初期・最終有機溶媒比など溶出プログラムの変数、Neue-Kussモデル＝保持因子の勾配組成依存を表す経験式、連結成分＝グラフで互いに繋がったノード群（ここでは分離しきれず塊になったピーク群、または孤立した分離ピーク）、分離度Rs＝隣接ピークの分離の指標、ガウス過程(GP)＝BOのサロゲート、期待改善(EI)＝獲得関数、ARD＝各入力次元の重要度を自動で学習するカーネル形式。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="chromatographic-response-functions-universal-comparison.html">クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-desirability-function-multiple-response-optimization-review.html">実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-modelling-liquid-chromatography-review-2021.html">液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-prediction-lc-perspective-gritti.html">液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="lcxlc-bayesian-optimization-method-development" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

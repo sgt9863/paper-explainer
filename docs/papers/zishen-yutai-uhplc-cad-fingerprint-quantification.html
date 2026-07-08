@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UHPLC-CAD指紋分析と多成分定量を組み合わせた中成薬「滋腎育胎丸（ZYP）」の総合的品質評価</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="UHPLC-CAD指紋分析と多成分定量を組み合わせた中成薬「滋腎育胎丸（ZYP）」の総合的品質評価">
+<meta property="og:description" content="習慣性流産の予防・切迫流産治療に使われる中成薬「滋腎育胎丸（ZYP、15生薬）」の品質を、UHPLC-CAD指紋分析（52共通ピーク・16バッチ）＋LTQ-Orbitrap高分解能MSによる281成分同定＋UPLC-MS/MS（正負イオン切替MRM）による18マーカー同時定量の3手法を統合して総合評価。UV検出では見えにくい複雑成分をCADで捉え、中成薬の品質管理の参照モデルを示した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/zishen-yutai-uhplc-cad-fingerprint-quantification/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="zishen-yutai-uhplc-cad-fingerprint-quantification"><h1>UHPLC-CAD指紋分析と多成分定量を組み合わせた中成薬「滋腎育胎丸（ZYP）」の総合的品質評価</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">指紋分析</span> <span class="tag">多成分定量</span> <span class="tag">質量分析</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2020.113570" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1s2.0S0731708520314564main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="zishen-yutai-uhplc-cad-fingerprint-quantification" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="zishen-yutai-uhplc-cad-fingerprint-quantification" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/zishen-yutai-uhplc-cad-fingerprint-quantification/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/zishen-yutai-uhplc-cad-fingerprint-quantification/ai-infographic.webp" alt="15生薬の中成薬をUHPLC-CAD指紋＋Orbitrapで281成分同定＋UPLC-MS/MSで18マーカー同時定量する三位一体のQC戦略" loading="lazy"></a><p>&lt;!-- Cao et al., J. Pharm. Biomed. Anal. 191 (2020) 113570 の全訳密度日本語版。 中成薬の総合的品質評価（指紋＋同定＋定量）の実験論文。practitioner レベル。 表1（18分析種のMRM）・表3（バリデーション）・表4（含量）を保持。281成分表（Table A.1）は原文参照。図（Fig.1-2, A.1-9）は原文参照。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Development of a comprehensive method combining UHPLC-CAD fingerprint, multi-components quantitative analysis for quality evaluation of Zishen Yutai Pills: A step towards quality control of Chinese patent medicine</li><li>著者: Jiliang Cao, Ting Lei（共同筆頭）, Sijia Wu, Hongyi Li, Yun Deng, Ruizhen Lin, Na Ning, Chunxian Geng, Shengpeng Wang, Xu Wu（責任著者）, Peng Li（責任著者）, Yitao Wang</li><li>所属: マカオ大学 中医薬質量研究国家重点実験室／成都中医薬大学／広州白雲山中一薬業／西南医科大学ほか</li><li>掲載誌・巻号・DOI: Journal of Pharmaceutical and Biomedical Analysis, 191 (2020) 113570. DOI: 10.1016/j.jpba.2020.113570</li><li>インパクトファクター: 3.1（J. Pharm. Biomed. Anal., JCR 2024 / Clarivate。Q2）</li><li>受理経過: 2020年6月24日受領／8月10日改訂／8月12日受理／8月23日オンライン公開。© 2020 Elsevier B.V.</li></ul>
+<blockquote>補足: 滋腎育胎丸（Zishen Yutai Pills, ZYP）は、Luo Yuankai教授が創方した中成薬（中国の承認済み伝統薬）で、子宮内膜の受容性を高め習慣性流産の予防・切迫流産・黄体機能不全・卵巣機能不全の治療に使われる。<strong>菟絲子・人参・続断・杜仲・桑寄生・巴戟天・鹿茸・党参・白朮・阿膠・枸杞子・地黄・何首烏・艾葉・砂仁の15生薬</strong>から成る大型複方。本論文の要点は、こうした「成分が多く・性質もバラバラな複方」を、①指紋（CAD）②成分同定（高分解能MS）③定量（MS/MS）の3手法で立体的に品質評価した点。本文にツムラ（Tsumura And Co.）からのダウンロード記録がある。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>滋腎育胎丸（ZYP）は、中国で習慣性流産の予防と切迫流産の治療に使われてきた著名な中成薬である。本研究では、超高速液体クロマトグラフィー–荷電化エアロゾル検出器（UHPLC-CAD）指紋分析と多成分定量分析を組み合わせた総合戦略を、ZYPの品質評価のために開発・検証した。</p>
+<p>指紋分析では、計52の特徴ピークを選択して16バッチのZYPの類似度を評価した。加えて、化学指紋プロファイルを先進的なハイブリッドLTQ-Orbitrap質量分析計と組み合わせ、化学標準品・精密質量・フラグメント情報に基づいてZYPから281化合物を同定または推定同定した。さらに、正負イオン切替多重反応モニタリング（+/-MRM）技術を用いたUPLC-MS/MSにより、18の化学マーカーを13分以内で同時定量した。この方法は検証され、満足な感度・精度・再現性・正確性を示した。検証済み定量法は16バッチのZYP試料の分析に成功裏に適用された。UHPLC-CAD指紋と多成分定量の組み合わせは、ZYPの品質管理の効率的で信頼できる戦略であり、中成薬の品質評価の参照とみなせる。</p>
+<p><strong>キーワード</strong>: 化学指紋、多成分定量分析、化学特性評価、品質評価、滋腎育胎丸</p>
+<h2>1. 序論（Introduction）</h2>
+<p>滋腎育胎丸（ZYP）はLuo Yuankai教授が初めて紹介した著名な中成薬である。薬理研究と臨床実践は、ZYPが子宮内膜受容性を高め、習慣性流産を予防し、切迫流産・黄体期欠陥月経障害・卵巣機能不全を治療できることを示した。ZYPには15の生薬（CHM）が含まれる: 菟絲子（Cuscuta chinensis）・人参（Panax ginseng）・続断（Dipsacus asper）・杜仲（Eucommia ulmoides）・桑寄生（Taxillus chinensis）・巴戟天（Morinda officinalis）・鹿茸（Cervus nippon）・党参（Codonopsis pilosula）・白朮（Atractylodes macrocephala）・阿膠（Asini Corii Colla）・枸杞子（Lycium barbarum）・地黄（Rehmannia glutinosa）・何首烏（Polygonum multiflorum）・艾葉（Artemisia argyi）・砂仁（Amomum villosum）。</p>
+<p>ZYPの複雑な組成のため、異なる植物起源・気候・加工条件などの因子がバッチ間の品質一貫性に大きく影響しうる。現在まで、その品質管理に適用された効率的な文書化された方法はない。したがってZYPの品質評価には信頼できる系統的品質基準が緊急に必要である。</p>
+<p>知られる通り、生薬（CHM）の品質管理は通常、単一または限られた数の生物活性・特徴化合物の測定に焦点を当ててきた。CHM方剤は多成分・多標的の薬剤で、より全体論的に治療機能を発揮すると考えられる。したがってZYPの品質管理には、主要生物活性成分の測定だけでなく、CHM方剤の化学的完全性と特徴も考慮する、より包括的で全体的な戦略が必要である。</p>
+<p>化学指紋はCHMの評価・品質管理の効果的技術で、複雑マトリックスの全体的化学特性評価を定量的信頼度で強調する。WHO・米国FDA・中国SFDAに採用され広く使われる。現在、クロマト指紋（特にHPLC/UHPLC指紋分析）はCHM方剤の化学プロファイル・品質評価に広く使われる。指紋情報は質量分析（MS/MSや高分解能MS）と組み合わせてさらに同定できる。</p>
+<p>しかし主要な欠点として、化学指紋は試料と参照指紋の類似度しか提供できず、類似試料のクロマトグラム間の微小な差は正確に定量できない。したがって本研究では多成分定量分析を総合品質管理戦略の一部として考慮した。ZYPの複数生物活性成分の同時定量法はこれまで報告がない。本研究では、UHPLC-CAD指紋と、正負イオン切替MRM（+/-MRM）技術に基づく18化合物の同時定量を組み合わせた総合戦略を、中成薬ZYPの品質管理のために確立した。加えて、クロマト指紋プロファイルをハイブリッドLTQ-Orbitrap質量分析計と組み合わせ、ZYPから計281化合物を同定・推定同定した。</p>
+<h2>2. 材料と方法（Materials and methods）</h2>
+<h3>2.1 化学薬品と材料</h3>
+<p>標準品（ロガン酸・ロガニン・クロロゲン酸・スウェロシド・ピノレシノールジグルコシド・ヒペロシド・2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド・ベルバスコシド・アストラガリン・ヤセオシジン・アスペロサポニンVI・オイパチリン・ナイストース・エモジン・エモジン-3-メチルエーテル・クリソファノール・β-カロテン・ジンセノシド(G)Rg1/Re/Rb1/Rc/Rb2/Rd）はMUST Biotechnologyから購入（純度98%超）。HPLCグレードのアセトニトリル・メタノール・ギ酸はMerck、超純水はMilli-Q。16バッチの市販ZYP（ロット番号違い、S1–S16）は広州白雲山中一薬業が提供。</p>
+<h3>2.2 試料前処理と標準溶液調製</h3>
+<p>粉末試料2 gをメタノール20 mLで超音波抽出（Branson 5510, 135W, 42kHz, 室温60分）。15,800×gで10分遠心し、上清をHPLCバイアルに移して指紋・定量分析に用いた。各標準品はメタノールにストック溶液として溶解し4℃保存、使用前に50%メタノールで希釈。</p>
+<h3>2.3 UHPLC-CAD指紋分析</h3>
+<p>Dionex UltiMate 3000 RS二元系（Corona Veo RS CAD搭載）。Hypersil gold C18（150 mm×2.1 mm, 1.9 μm, Thermo Fisher）で分離。移動相0.1%ギ酸(A)・アセトニトリル(B)、勾配: 0–10分 5%B；10–20分 5–10%B；20–40分 10–25%B；40–60分 25–30%B；60–75分 30–40%B；75–90分 40–75%B；90–120分 75–90%B；120–140分 90–100%B；140–190分 100%B。流速0.4 mL/min。CADパラメータ: べき関数1.00、データ収集10 Hz、フィルタ5.0、蒸発温度35℃。カラム温度40℃、注入量4 μL。</p>
+<h3>2.4 LTQ-Orbitrap質量分析</h3>
+<p>定性分析にThermo Fisher LTQ-Orbitrap XL（ESIソース）を指紋クロマト条件でUPLCに接続。正負両ESIモードで分析。イオンスプレー電圧5.0/−4.5 kV、キャピラリー温度380/380℃。質量スペクトルm/z 100-1500。フルスキャン（Orbitrap分解能15,000@m/z 400）＋6回のデータ依存取得（DDA）。最も強い2イオンからMSⁿ（n=2–4）をリニアイオントラップで取得（CID正規化衝突エネルギー35%）。動的排除を有効化。元素組成条件: 炭素≤90・水素≤150・酸素≤60・窒素なし、前駆質量許容10 ppm。</p>
+<h3>2.5 UPLC-MS/MS定量分析</h3>
+<p>ACQUITY I-Class UPLC＋Xevo TQD三連四重極（正負イオンESI）。ACQUITY BEH C18（100 mm×2.1 mm, 1.7 μm, 40℃）。移動相0.1%ギ酸(A)・アセトニトリル(B)、流速0.3 mL/min、勾配: 0–1.5分 2%B；1.5–6分 2–40%B；6–9.5分 40–100%B；9.5–11.5分 100%B；11.5–11.6分 100–2%B；11.6–13分 2%B。注入量3 μL。キャピラリー電圧3.0/−2.5 kV。MRMモードで定量。</p>
+<p><strong>Table 1. ZYP中18分析種のRT・イオンモード・MRM遷移・CV・CE（抜粋）</strong></p>
+<table>
+<thead><tr><th>No.</th><th>分析種</th><th>RT(分)</th><th>イオン</th><th>遷移(m/z)</th><th>CE(V)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>ナイストース</td><td>0.91</td><td>+</td><td>689.1→347.0</td><td>42</td></tr>
+<tr><td>2</td><td>ロガン酸</td><td>3.92</td><td>−</td><td>374.9→213.0</td><td>16</td></tr>
+<tr><td>3</td><td>クロロゲン酸</td><td>4.15</td><td>−</td><td>352.8→191.0</td><td>30</td></tr>
+<tr><td>4</td><td>ロガニン</td><td>4.51</td><td>+</td><td>413.0→219.0</td><td>24</td></tr>
+<tr><td>5</td><td>ピノレシノールジグルコシド</td><td>4.60</td><td>−</td><td>681.0→357.0</td><td>24</td></tr>
+<tr><td>6</td><td>スウェロシド</td><td>4.64</td><td>+</td><td>380.9→218.9</td><td>20</td></tr>
+<tr><td>7</td><td>ヒペロシド</td><td>5.07</td><td>−</td><td>462.9→300.0</td><td>28</td></tr>
+<tr><td>8</td><td>ベルバスコシド</td><td>5.13</td><td>−</td><td>623.1→160.9</td><td>36</td></tr>
+<tr><td>9</td><td>2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド</td><td>5.13</td><td>−</td><td>404.9→243.0</td><td>18</td></tr>
+<tr><td>10</td><td>G-Re</td><td>5.86</td><td>+</td><td>969.5→789.5</td><td>46</td></tr>
+<tr><td>11</td><td>G-Rg1</td><td>5.89</td><td>+</td><td>823.4→203.0</td><td>44</td></tr>
+<tr><td>12</td><td>アスペロサポニンVI</td><td>6.76</td><td>+</td><td>951.5→347.1</td><td>56</td></tr>
+<tr><td>13</td><td>G-Rb1</td><td>6.93</td><td>+</td><td>1131.6→365.0</td><td>54</td></tr>
+<tr><td>14</td><td>ヤセオシジン</td><td>7.14</td><td>−</td><td>328.9→314.0</td><td>18</td></tr>
+<tr><td>15</td><td>G-Rd</td><td>7.43</td><td>+</td><td>969.5→789.5</td><td>46</td></tr>
+<tr><td>16</td><td>オイパチリン</td><td>7.74</td><td>−</td><td>342.9→313.0</td><td>24</td></tr>
+<tr><td>17</td><td>エモジン</td><td>8.65</td><td>−</td><td>268.8→224.9</td><td>26</td></tr>
+<tr><td>18</td><td>エモジン-3-メチルエーテル</td><td>9.59</td><td>−</td><td>282.8→239.9</td><td>26</td></tr>
+</tbody></table>
+<h3>2.6–2.8 バリデーションとデータ解析</h3>
+<p>指紋分析: 精度（同一試料6連続注入）・再現性（6並行調製）・安定性（0/3/6/9/12/24時間）を、参照ピークに対する各特徴ピークのRRT・RPAのRSDで評価。UPLC-MS/MS: 直線性・LLOD・LLOQ、精度（1日7反復）・再現性（6独立調製）・安定性（0/2/4/8/16/24時間）・正確性（回収率、5添加試料）。回収率(%) = 100×(検出量−元の量)/添加量。指紋データ解析はTCM色譜指紋類似度評価システム（2004A版）。</p>
+<h2>3. 結果と考察（Results and discussion）</h2>
+<h3>3.1 抽出条件の最適化</h3>
+<p>抽出溶媒（10/40/70/100%メタノール）を検討し、メタノール濃度増加でより多くのピーク・高信号（特に疎水性成分）が得られ<strong>100%メタノール</strong>を選択。抽出時間（10/30/60/90分）で60分後は有意な改善なく<strong>60分超音波</strong>を採用。</p>
+<h3>3.2 クロマト指紋条件の最適化</h3>
+<p>カラム3種を評価しHypersil gold C18が高信号・良選択性で選択。移動相はアセトニトリル-水がメタノール-水より高感度・安定ベースライン・短時間。ギ酸濃度0.1/0.2/0.4%を検討し<strong>0.1%ギ酸</strong>で50–70分域のピーク強度が最高。</p>
+<p>検出器: まずDADを254/281 nmで検討したが、両波長とも限られたピークしか検出できず、主に0–60分域（アセトニトリル30%未満で溶出）に限られた。ZYPは15生薬から成り個々の成分濃度が単一生薬試料よりはるかに低く、低感度UV検出と相まってピークが限られLODが低い。次にエアロゾルベースのCADを検討——DADより多くのピークを検出（特に高アセトニトリル域）、全分析時間で均一分布・安定ベースライン・良感度。したがって<strong>CADをZYP指紋分析の最適検出器</strong>に選択。</p>
+<h3>3.3 クロマト指紋分析</h3>
+<p>最適化UHPLC-CAD法で16バッチを190分で分析。TCM色譜指紋類似度評価システムで評価し、<strong>全試料で計52共通ピークを認識</strong>、16バッチの平均クロマトグラムを参照指紋とした。共通ピークのうち、RT 52.97分のピーク10（アスペロサポニンVI、良分離・高含量）を参照ピークとしRRT・RPAを算出。他13共通ピークも標準品比較で確認: クロロゲン酸(2)・スウェロシド(3)・ロガニン(4)・アストラガリン(5)・G-Rg1(6)・G-Re(7)・G-Rb1(13)・G-Rc(14)・G-Rb2(17)・G-Rd(21)・クリソファノール(30)・エモジン-3-メチルエーテル(32)・β-カロテン(36)。</p>
+<p>52共通ピークで指紋法を検証: 精度のRSDはRRT&lt;0.5%・RPA&lt;4.4%、再現性はRRT&lt;5.0%・RPA&lt;0.3%、安定性（24時間内）はRRT&lt;4.5%・RPA&lt;0.4%。16バッチの類似度（相関係数）は<strong>全て0.929〜0.983</strong>で高い類似度（Table 2）。</p>
+<h3>3.4 ZYP成分の特性評価</h3>
+<p>LTQ-Orbitrap XLで定性分析。正負両ESIモードで相補的構造情報（Orbitrapの精密質量＋リニアイオントラップのMSⁿ）を取得。DDAで動的排除を有効化し低存在量の共溶出イオンもMSⁿ断片化。成分は正モードで[M+H]⁺/[M+Na]⁺、負モードで[M−H]⁻/[M+HCOO]⁻の分子付加イオンを生成。精密質量・MSⁿ断片を標準品・文献と比較し、<strong>計281化合物を同定・推定同定</strong>（Table A.1）。</p>
+<h3>3.5 定量分析</h3>
+<p>より包括的な品質評価のため多成分定量を指紋と組み合わせた。中国薬典（2015年版）や文献に基づき18化学マーカーを選択。一部成分（ロガン酸・クロロゲン酸）はDAD検出範囲内でCADも微量成分に良好だが、DAD/CADで18標的を正確に定量するにはベースライン分離が必要で複雑・長時間・誤検出リスクを伴う。一方、MS/MSは遷移対・CV・CEの最適化だけでよく複雑なクロマト分離が不要。したがってUPLC-MS/MS法を採用。</p>
+<p><strong>3.5.1 UPLC-MS/MS条件の最適化</strong>: アセトニトリル-0.1%ギ酸を移動相に採用。標的の広い極性範囲のため勾配溶出。正負両モードを検討し、8標的が正モード・10標的が負モードで高感度。MRMモードで感度向上。<strong>18標的を13分以内で同時分離</strong>。</p>
+<p><strong>Table 3. 18分析種のバリデーション（抜粋）</strong></p>
+<table>
+<thead><tr><th>No.</th><th>分析種</th><th>r</th><th>直線範囲(ng/mL)</th><th>回収率(%)</th><th>精度RSD(%)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>ナイストース</td><td>0.996</td><td>416.3–13320</td><td>96.2±4.0</td><td>4.8</td></tr>
+<tr><td>3</td><td>クロロゲン酸</td><td>0.993</td><td>1106.3–35400</td><td>101.0±4.5</td><td>2.7</td></tr>
+<tr><td>8</td><td>ベルバスコシド</td><td>0.999</td><td>195.0–6240</td><td>97.3±2.4</td><td>3.2</td></tr>
+<tr><td>12</td><td>アスペロサポニンVI</td><td>0.990</td><td>18.1–1160</td><td>104.3±3.7</td><td>4.5</td></tr>
+<tr><td>13</td><td>G-Rb1</td><td>0.997</td><td>21.6–693.1</td><td>95.9±4.9</td><td>4.8</td></tr>
+<tr><td>14</td><td>ヤセオシジン</td><td>0.994</td><td>51.6–1650</td><td>102.2±5.0</td><td>3.2</td></tr>
+<tr><td>17</td><td>エモジン</td><td>0.992</td><td>42.2–2700</td><td>98.6±3.6</td><td>4.8</td></tr>
+</tbody></table>
+<p>全18分析種で r≥0.990、回収率95.9–104.3%、精度・安定性・再現性のRSDは概ね良好。</p>
+<p><strong>3.5.2 16バッチの含量（Table 4、μg/g、抜粋）</strong>: クロロゲン酸177.8–257.7、ロガン酸98.0–183.5、スウェロシド15.6–52.5、ナイストース7.4–48.2、アスペロサポニンVI 8.2–14.1、G-Rb1 3.0–4.4など。多くの成分でバッチ間差が見られ（例: ベルバスコシドは2.2–11.5と5倍以上）、原料の産地・加工の違いが品質に影響することを示す。</p>
+<h2>4. 結論（Conclusion）</h2>
+<p>本研究で初めて、UHPLC-CAD指紋と多成分定量分析を組み合わせた総合戦略を開発し、中成薬ZYPの品質評価に適用した。一般的なDAD検出と比べ、CADはより高い感度でより多くのピークを提供し、ZYPの複雑成分の指紋分析に適した。計52の特徴指紋ピークで16バッチの類似度を評価。加えて先進的ハイブリッドLTQ-Orbitrap MSと組み合わせ、化学標準品・精密質量・MSⁿ断片データに基づいてZYPから計281化合物を同定・推定同定。さらに±MRMで18マーカーを13分で同時定量。UHPLC-CAD指紋と多成分定量の組み合わせは、ZYPの効率的で信頼できる品質管理戦略であり、中成薬の品質評価の参照となる。</p>
+<h2>訳者補足</h2>
+<ul><li><strong>「三位一体」のQC戦略</strong>: 本論文の設計思想は、1つの手法では複雑な15生薬複方を評価しきれないので、役割の異なる3手法を組み合わせる点にある。①<strong>UHPLC-CAD指紋</strong>＝「全体像（52ピークのパターンが揃っているか＝類似度）」を見る、②<strong>LTQ-Orbitrap高分解能MS</strong>＝「そのピークが何なのか（281成分の同定）」を突き止める、③<strong>UPLC-MS/MS（±MRM）</strong>＝「重要な18成分が何μg/gあるか（定量）」を測る。指紋は&quot;似ているか&quot;しか言えず微小差を定量できない、という弱点を定量が補う関係。</li></ul>
+<ul><li><strong>なぜCADがDADに勝ったか</strong>: ZYPは15生薬の混合物なので、各成分の濃度が「単一生薬を測るとき」よりずっと薄い。UV検出（DAD）はそもそも発色団のある成分しか見えず、薄い＋発色団なしのダブルパンチでピークがほとんど拾えなかった（しかも前半0–60分に偏る）。CADは質量ベースの万能検出なので、後半の疎水性成分も含めて均一に多数のピークを検出できた。前掲の補腎活血方のCAD論文と合わせて読むと「複方＝CADが効く」という一貫した教訓が見える。</li></ul>
+<ul><li><strong>±MRMという工夫</strong>: 18マーカーは極性も酸塩基性もバラバラ（糖のナイストース〜アントラキノンのエモジンまで）。正イオンで感度が出る成分（8つ）と負イオンで出る成分（10）を、1回のランの中でイオン化極性を切り替えながら測る（positive-negative conversion MRM）ことで、13分という短時間で全部を高感度定量した。ベースライン分離が不要なMS/MSの強みを活かしている。</li></ul>
+<ul><li><strong>滋腎育胎丸（ZYP）とは</strong>: 習慣性流産の予防・切迫流産治療に使われる中成薬（15生薬の大型複方）。菟絲子・人参・杜仲・鹿茸・阿膠など補腎・安胎の生薬が中心。日本の一般的な漢方方剤ではないが、「多生薬・多成分の中成薬をどう品質管理するか」の方法論モデルとして価値が高い。</li></ul>
+<ul><li>281成分の完全表（Table A.1）、類似度マトリクス全体（Table 2）、含量全表（Table 4）、各種最適化図（Fig.A.1–9）は原文・補足資料を参照。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="hgwd-uplc-fingerprint-spectrum-effect-qmarker.html">UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価</a><span class="rel-tags"><span class="rel-tag">質量分析</span><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="bzyqt-quantitative-ternary-network-qmarker.html">定量的三元ネットワークによる漢方処方のQ-marker探索 — 補中益気湯（BZYQT）を例として</a><span class="rel-tags"><span class="rel-tag">質量分析</span><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span></span></li><li><a href="xiaoyao-wan-orbitrap-gcims-prm.html">逍遥丸（XYW）の多成分包括的解析と品質評価 — UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMSの併用</a><span class="rel-tags"><span class="rel-tag">質量分析</span><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="shenxiao-granules-2dlc-ms-qmarker-mdf.html">直交HILIC×RP 二次元LC/MSと質量欠損フィルタリングによる腎消顆粒（シェンシャオ顆粒）の包括的化学プロファイリングと品質マーカー発見</a><span class="rel-tags"><span class="rel-tag">質量分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">指紋分析</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="zishen-yutai-uhplc-cad-fingerprint-quantification" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

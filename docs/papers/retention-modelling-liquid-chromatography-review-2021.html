@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用">
+<meta property="og:description" content="液体クロマトグラフィー（LC）における保持モデリング（retention modelling）の最近（2015–2020）の応用を包括的にレビューした、den Uijl・Schoenmakers（DryLabの保持理論を築いた研究室系譜）らによるJ Sep Sci総説。保持モデリングは、保持因子kを移動相組成（有機溶媒分率φ）等の関数で記述し、少数の実験から任意条件の保持を予測してメソッド開発を高速化する技術である。本稿は最も広く使われる5つの経験モデル——線形溶媒強度（LSS/log-linear）モデル、二次（Q）モデル、吸着（ADS/log-log/Snyder-Soczewinski）モデル、混合モード（MM）モデル、Neue-Kuss（NK）モデル——を式とともに整理し、DryLab・PEWS2・MOREPEAKS等の最適化ソフトの基盤であることを示す。等溶媒データとグラジエント（スキャニング）データによるパラメータ決定、必要データ点数、モデル選択（AIC・回帰のF検定による過剰適合の抑制）を論じ、応用を①メソッド最適化（1次元・2次元LC）②メソッド移管③固定相の特性評価・比較（HSM・AbrahamのLFER）④保持機構の理解⑤親油性（オクタノール-水分配係数log Kow）測定の5領域に整理して、HILIC・SFCを含めて俯瞰する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/retention-modelling-liquid-chromatography-review-2021/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="retention-modelling-liquid-chromatography-review-2021"><h1>液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">機械学習・データ処理</span> <span class="tag">ケモメトリクス</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1002/jssc.202000905" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">ac8a4c9c-JSSC4488.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="retention-modelling-liquid-chromatography-review-2021" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="retention-modelling-liquid-chromatography-review-2021" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/retention-modelling-liquid-chromatography-review-2021/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/retention-modelling-liquid-chromatography-review-2021/ai-infographic.webp" alt="LC保持を移動相組成の関数で記述する5大モデル（LSS・二次・吸着・混合モード・Neue-Kuss）を体系整理し、メソッド最適化・移管・固定相評価・親油性測定への応用をレビュー" loading="lazy"></a><p>&lt;!-- den Uijl MJ, Schoenmakers PJ, Pirok BWJ, van Bommel MR. Recent applications of retention modelling in liquid chromatography. J Sep Sci 2021;44:88-114. doi:10.1002/jssc.202000905 の全訳密度日本語版。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は生薬研究ではなく、<strong>LC の保持（retention）を数式モデルで記述・予測する「保持モデリング」の最近5年（2015–2020）を俯瞰した総説</strong> である。当サイトで直前に扱った Dolan-Snyder-Quarry 1987（DryLab の原典、log k&#x27;=log kw−Sφ の LSS モデル）の、30余年後の到達点にあたる。生薬・漢方の指紋分析や多成分定量はグラジエント LC/UPLC・HILIC を多用し、その分離条件を合理的に決めるには保持予測が要る。本総説は、①どの保持モデル（LSS・二次・吸着・混合モード・Neue-Kuss）をどのモード（逆相・HILIC・SFC・2D-LC）で使うか、②何点のデータで／等溶媒かグラジエントか、③モデルの当てはまりをどう検証するか（AIC・F検定）、④それをメソッド最適化・移管・固定相評価・親油性測定にどう活かすか、を体系的に示す。とくに HILIC（親水性相互作用）は生薬の極性成分（配糖体・アミノ酸・糖）の分析で重要で、混合モードモデルの解説は生薬メソッド開発に直結する。当サイトの「in silico HPLC の機械学習」「DryLab 原典」「実験計画法・望ましさ関数」と一続きの、保持予測の現在地を示す文献。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> Recent applications of retention modelling in liquid chromatography</li><li><strong>和題（本稿）:</strong> 液体クロマトグラフィーにおける保持モデリングの最近の応用</li><li><strong>著者:</strong> Mimi J. den Uijl（責任著者）, Peter J. Schoenmakers, Bob W. J. Pirok, Maarten R. van Bommel</li><li><strong>所属:</strong> アムステルダム大学 van &#x27;t Hoff 分子科学研究所 分析化学グループ／アムステルダム分析科学センター（CASA）／アムステルダム大学 人文学部 文化遺産保存・修復（オランダ）</li><li><strong>責任著者:</strong> M. J. den Uijl（M.J.denUijl@uva.nl）</li><li><strong>掲載誌:</strong> Journal of Separation Science 2021, 44(1), 88–114（レビュー論文）</li><li><strong>DOI:</strong> 10.1002/jssc.202000905</li><li><strong>受理経緯:</strong> 2020年8月20日受付 / 2020年10月2日改訂受付 / 2020年10月12日受理</li><li><strong>資金:</strong> オランダ科学研究機構（NWO, 助成番号15506）</li><li><strong>ライセンス:</strong> © 2020 The Authors。Journal of Separation Science（Wiley-VCH GmbH）。CC BY オープンアクセス</li><li><strong>キーワード:</strong> 親油性測定／メソッド最適化／メソッド移管／固定相特性評価／保持機構</li><li><strong>雑誌インパクトファクター:</strong> 3.22（Journal of Separation Science・JCR2024・Q2。出典により2.9とも記載）</li></ul>
+<p><strong>主要略号:</strong> ADS（吸着）、AIC（赤池情報量規準）、ANN（人工ニューラルネットワーク）、GA（遺伝的アルゴリズム）、HILIC（親水性相互作用クロマトグラフィー）、HSM（疎水性減算モデル）、IEX（イオン交換）、LFER（線形自由エネルギー関係）、LSS（線形溶媒強度）、MM（混合モード）、NK（Neue-Kuss）、NPLC（順相 LC）、PAH（多環芳香族炭化水素）、Q（二次）、QSRR（定量的構造-保持相関）。</p>
+<hr>
+<h1>要旨（Abstract）</h1>
+<p>液体クロマトグラフィー（LC）における保持モデリングの最近（2015–2020）の応用を包括的にレビューする。より長い歴史をもつ本分野の基礎を要約する。保持モデリングは、保持機構研究、親油性（lipophilicity）などの物理パラメータ決定、そしてメソッド開発・最適化・移管、固定相の特性評価・比較など、より実務的な目的に用いられる。本総説は移動相組成が保持に及ぼす影響に焦点を当てるが、他の変数やその影響を記述する新しいモデルも考慮する。最も一般的な5つのモデル——<strong>log-linear（線形溶媒強度, LSS）モデル、二次（quadratic）モデル、log–log（吸着）モデル、混合モード（mixed-mode）モデル、Neue-Kuss モデル</strong>——を詳細に扱う。モデルパラメータ決定のための等溶媒法・グラジエント溶出法を検討し、当てはめモデルの評価・検証を論じる。1次元・2次元 LC 分離の開発・最適化に保持モデルを適用する戦略を議論し、全体的結論といくつかの具体的推奨で締めくくる。</p>
+<hr>
+<h1>1. 序論（Introduction）</h1>
+<p>LC は分析化学者の道具箱で最も本質的で普及した技術の一つ。保持モデリングは、迅速なメソッド開発に利用できる有用な技術である。LC では、分析対象が非移動固定相と移動相の間に分配され、カラムを移動する時間が <strong>保持時間 tR</strong> と呼ばれる：</p>
+<p>$$ t_R = t_0(1 + k) \tag{1} $$</p>
+<p>t0＝カラムの死時間（hold-up time）、k＝保持因子。k は分配係数 K と次式で関係する：</p>
+<p>$$ k = \frac{q_s}{q_m} = \frac{c_s}{c_m}\frac{V_s}{V_m} = K\frac{V_s}{V_m} \tag{2} $$</p>
+<p>qm・qs＝移動相・固定相中の分析対象総質量、cm・cs＝両相の濃度、Vm・Vs＝カラム内各相の総体積。k は pH・温度・移動相組成（強溶媒の体積分率 φ）など多数のパラメータに依存する。k をこれらパラメータに関係づける式が <strong>保持モデル（retention models）</strong> であり、保持モデリングとはそのモデルを実験データに当てはめる過程である。</p>
+<p>LC は等溶媒（isocratic）またはグラジエント（gradient）モードで行える。等溶媒では移動相組成がラン中一定で保持因子も一定。グラジェントでは移動相強度をラン中上げるため、移動相中の分析対象総質量が増え保持因子が下がる。グラジエント溶出で k を溶媒強度に関係づけるにはグラジエント方程式を使う。成分がグラジエント開始前に溶出するなら tR は式(1)（k は初期有機修飾剤濃度での保持因子）で計算。グラジエント中に溶出するなら直線グラジエントの一般式[1]：</p>
+<p>$$ \frac{1}{B}\int_{\varphi_{init}}^{\varphi_{init}+B(t_R-\tau)}\frac{d\varphi}{k(\varphi)} = t_0 - t_{init} + \frac{t_D}{k_{init}} \tag{3} $$</p>
+<p>k(φ)＝保持モデル、B＝グラジエントの傾き（φ=φinit+Bt）、τ＝dwell time tD・グラジエント開始前時間 tinit・死時間 t0 の和。グラジエント後に溶出する場合は式(4)（tG＝グラジエント時間）。</p>
+<p>保持モデリングは、多くの LC・超臨界流体クロマトグラフィー（SFC）モードで迅速・効率的なメソッド開発を助ける。応用領域は：新規固定相の特性評価と保持機構の確立、メソッド最適化（より良い分離）、メソッド移管（異なる装置間の調和）、保持のより正確な記述、そしてクロマトグラフィー外（医薬・環境科学）でのオクタノール-水分配係数（log Kow）測定や汚染物質の生態系残留性決定[2, 3]。</p>
+<p>保持モデルの一般形は「保持パラメータ」と「系パラメータ・分析対象パラメータを組み合わせた関数」の関係として記述できる。特定のモデル群 <strong>線形自由エネルギー関係（LFER）</strong> では、関数が少数（通常5個）の積項の和からなり、各項は系パラメータ si と分析対象パラメータ ai からなる：</p>
+<p>$$ \log k_{i,s} = \sum_{i=1}^{n} a_i s_i \tag{5} $$</p>
+<p>各項は分析対象と固定相の特定相互作用に緩く対応。例：Snyder の <strong>疎水性減算モデル（HSM）</strong>[4, 5]（固定相パラメータ＝疎水性・立体障害・水素結合酸性/塩基性・陽イオン交換活性）、Abraham のモデル[6, 7]（モル屈折・溶質分極率・有効水素結合酸性/塩基性・McGowan 特性体積）。これらの目的は保持予測でなく <strong>固定相の特性評価・分類</strong> で、移動相組成の影響は記述しない。</p>
+<p>保持モデリングの別角度は <strong>定量的構造-保持相関（QSRR）</strong>[10]（分析対象の構造記述子と保持の統計的関係。構造パラメータが計算できれば新化合物の保持を予測。QSAR/QSPR と類似）。第3のアプローチは <strong>人工ニューラルネットワーク（ANN）</strong>[12]（大規模データが必要[13]）。最後のアプローチは <strong>（半）経験モデル</strong>（保持を記述する抽象パラメータを含む。少ない入力データで内挿/外挿でき、LC メソッド開発支援に極めて有用[14–17]）——<strong>本総説は以降これらに絞る</strong>。</p>
+<p>経験的保持モデルは、化学の特定相互作用/機構に結びつかない抽象パラメータをもち、分析対象・測定パラメータ（有機修飾剤分率・塩濃度・pH 等）を k に関係づける。通常 log10 k または ln k を用いる。モデルに含まれない変数（固定相・温度）は妥当性のため一定に保つ。計算資源の増大に伴い、in silico 技法は徹底的な試行錯誤実験より魅力的になった。</p>
+<hr>
+<h1>2. 背景理論（Background Theory）</h1>
+<p>多くの場合、修飾剤の体積分率 φ が最重要変数である。広く使われるのは2〜3パラメータの少数モデル——<strong>線形溶媒強度（LSS）・二次（Q）・吸着（ADS）・混合モード（MM）・Neue-Kuss（NK）</strong>。DryLab[18]・PEWS2[19]・MOREPEAKS[20] などの最適化プログラムはこれらのモデル（すべて φ ベース、2〜3パラメータ）に依拠する。</p>
+<h2>2.1. モデル</h2>
+<h3>2.1.1. 線形溶媒強度（LSS）モデル</h3>
+<p>逆相 LC の log-linear モデルは Snyder らが移動相組成 φ の関数として保持を記述するために導入[21]。<strong>LSS モデル</strong>（分配モデルとも）：</p>
+<p>$$ \ln k = \ln k_0 - S_{LSS}\varphi \tag{6} $$</p>
+<p>ln k0（ln kw とも表記）＝純水中の等溶媒保持因子、φ＝有機修飾剤の体積分率、傾き S_LSS＝溶質と有機修飾剤の相互作用に関係。パラメータは異なる φ の2等溶媒ランから計算できる。過去6年（2015–2020）で見つかった LSS モデルの90文献のうち55%が1次元逆相 LC（RPLC）、残りは 2D-LC・HILIC・SFC など（原著 Fig. 1A）。</p>
+<h3>2.1.2. 二次（Q）モデル</h3>
+<p>Schoenmakers らが導入した二次モデルは log-linear モデルに1パラメータ加えた拡張で、ln k と φ の関係を線形でなく凸にする[22]：</p>
+<p>$$ \ln k = \ln k_0 + S_1\varphi + S_2\varphi^2 \tag{7} $$</p>
+<p>S1・S2＝有機修飾剤の影響を記述する経験係数。過去6年の45文献の主用途は RPLC（47%）、HILIC 記述（23%）も（Fig. 1B）。</p>
+<h3>2.1.3. 吸着（ADS）モデル</h3>
+<p>1960–70年代に複数研究者（Soczewinski[23]・Jandera[24]・Snyder[25]）が順相 LC（NPLC）・TLC で提示。吸着を説明する <strong>log–log モデル / Snyder-Soczewinski モデル</strong>[23–26]：</p>
+<p>$$ \ln k = \ln k_0 - n\ln\varphi \tag{8} $$</p>
+<p>n＝溶媒和数（強溶離液成分と分析対象の吸着分子が占める表面積比）。LSS と対照的に ln k は ln φ に線形。当初 NPLC 用（12%）だが、今は主に HILIC（35%）・RPLC（30%）で使用（Fig. 1C）。</p>
+<h3>2.1.4. 混合モード（MM）モデル</h3>
+<p>Jin らが HILIC の保持記述に開発。HILIC と RPLC の両保持モードを説明でき、LSS と ADS の組合せ[27]：</p>
+<p>$$ \ln k = \ln k_0 + S_1\varphi + S_2\ln\varphi \tag{9} $$</p>
+<p>S1＝溶質と溶媒の相互作用、S2＝溶質と固定相の相互作用。主用途は HILIC（69%、Fig. 1D）。</p>
+<h3>2.1.5. Neue-Kuss（NK）モデル</h3>
+<p>5大モデルで最新の3パラメータモデル（Nikitas ら[28, 29]の別モデルに基づく）：</p>
+<p>$$ \ln k = \ln k_0 - \ln(1 + S_1\varphi) - \frac{\varphi S_2}{1 + S_1\varphi} \tag{10} $$</p>
+<p>S1＝ln k vs φ プロットの傾き、S2＝曲率。グラジエント溶出保持時間を得る積分で厳密解が得られる。Neue と Kuss は2010年に別バージョンを発表[31]：</p>
+<p>$$ \ln k = \ln k_0 + 2\ln(1 + S_1\varphi) - \frac{\varphi S_2}{1 + S_1\varphi} \tag{11} $$</p>
+<p>（式10と11の違いは第2項の符号と因子2のみ。）NK はグラジエント RPLC 用に開発され（応用の45%）、HILIC（25%）にもよく適用（Fig. 1E）。</p>
+<h2>2.2. データの測定と使用</h2>
+<h3>2.2.1. 等溶媒データかグラジエントデータか</h3>
+<p>本総説の全経験モデルは等溶媒・直線グラジエント両分離の最適化に使われてきた。<strong>等溶媒データ点</strong> は異なる有機修飾剤濃度で収集する必要があり、全成分が各 φ で妥当な時間に溶出するわけでないため面倒。<strong>グラジエント溶出</strong> は全分析対象を1ランで妥当な時間に溶出できる。グラジエント溶出保持時間や溶出時の修飾剤濃度を計算するには、保持モデルをグラジエント方程式（式3, 4）に数値積分する。グラジエント実験（<strong>スキャニンググラジエント</strong>）でパラメータを決めるには逆順で行い、実験間で <strong>有効勾配（effective steepness）b</strong> を変える必要がある：</p>
+<p>$$ b_{LSS} = S_{LSS}Bt_0 = S_{LSS}B\frac{V_0}{F} \tag{12} $$</p>
+<p>B＝グラジエントの傾き（Δφ/Δt）、V0＝hold-up 体積、F＝流速。有効勾配は (i) グラジエントの傾き B、(ii) カラム体積、(iii) 流速 のいずれかで変えられる。</p>
+<p>予測精度は選ぶ溶出モードに影響される。Vivó-Truyols らの誤差解析[32]は、<strong>等溶媒実験で得た入力データが最も正確な予測を与える</strong> と結論。グラジエント実験に基づくモデルでも等溶媒溶出を予測できるが、溶媒組成の限られた範囲でのみ正確[32–35]。グラジエント保持はグラジエントスキャニング実験から予測できる[36–38]が、実験データ要件の研究は少ない。予測精度は、予測グラジエントの傾きとスキャニンググラジェントの傾きの近さ、内挿か外挿か、実験精度などに依存する[39]。</p>
+<h3>2.2.2. 入力データ点数とモデル評価</h3>
+<p>経験モデルのパラメータ（保持パラメータ）計算には最小データ点数の制約がある。<strong>2パラメータモデル（ADS・LSS）は成分ごと最低2点、3パラメータモデル（MM・NK・Q）は最低3点</strong> が必要。NK 等はより多くのデータで使われることが多い[31]。</p>
+<p>パラメータを増やすと過剰適合（overfitting）のリスクが増す。複数モデルを比較する際、パラメータ数が真のモデル品質を欺きうる。この偏りを補正するため <strong>赤池情報量規準（AIC）</strong>（パラメータ追加を罰する）：</p>
+<p>$$ AIC = 2p + n\left[\ln\left(\frac{2\pi \cdot SSE}{n}\right) + 1\right] \tag{13} $$</p>
+<p>SSE＝残差平方和、p＝パラメータ数、n＝観測数。低い（より負の）値ほど良い当てはめで、正しいモデル選択を助ける[15, 41–45]。もう一つは <strong>回帰の F 検定</strong>（第3項の追加が有意かを調べる。当てはめの良さでなく3パラメータモデルとその縮約形の差を評価）。5モデルでは (i) Q と LSS、(ii) MM と LSS、(iii) MM と ADS の組合せで F 検定可能。</p>
+<blockquote><strong>訳者補足（どのモデルをいつ使うか）:</strong> ざっくり言うと、逆相の穏やかな範囲では <strong>LSS（直線）</strong> で足り、曲率が出るなら <strong>二次（Q）</strong> や <strong>Neue-Kuss（NK）</strong>、HILIC のような吸着支配や両モード併存では <strong>吸着（ADS）</strong> や <strong>混合モード（MM）</strong> が合う。パラメータを増やせば当てはまりは良くなるが過剰適合の危険があるので、AIC や F 検定で「3パラメータ目を足す価値があるか」を客観的に判定する——これが生薬の極性成分（HILIC）や多成分グラジエント分離のメソッド開発でモデルを選ぶ実務指針になる。</blockquote>
+<hr>
+<h1>3. 方法（応用領域）</h1>
+<p>文献レビューから、保持モデリングが適用される <strong>5つの主要領域</strong> を特定した（原著 Fig. 2 にワークフロー要約）。</p>
+<h2>3.1. メソッド最適化（Method optimization）</h2>
+<h3>3.1.1. 1次元分離の最適化</h3>
+<p>移動相成分と固定相を選んだ後、保持モデリングで分離を最適化できる。例：</p>
+<ul><li><strong>Zhang ら[47]:</strong> 多孔質グラファイトカーボンカラムでの植物油分離を、イソプロパノール-トルエングラジエントで LSS モデルで最適化。トルエン分率のトリアシルグリセロール保持への効果（S_LSS）が全成分で類似 → 全トルエン濃度で同じ選択性。逆に S_LSS の差は選択性最適化に修飾剤濃度がどれだけ使えるかを示す。</li><li><strong>Fekete ら[48]:</strong> タンパク質で非常に大きな S_LSS 値（2スキャニンググラジエントから算出）、有機修飾剤を0.8%増やすと保持が10分の1に。こうした高 S_LSS がタンパク質 RPLC でグラジエント溶出が不可欠な理由。保持能の増す複数カラムを直列連結し多段グラジエントで選択性改善[49, 50]。</li><li><strong>試料溶媒の考慮:</strong> 溶離液と試料溶媒の溶出強度差が大きいとブレークスルーやピーク変形が起こりうる[51, 52]。Jeong ら[51]は高溶出強度溶媒の弱溶離液への注入効果を LSS・NK モデルでシミュレーション（局所保持因子・ピーク幅を予測、実測と一致）。</li><li><strong>Boateng ら[53]:</strong> メトキシフェニジンの3位置異性体分離を温度・pH・有機修飾剤濃度で最適化。pH に ADS、φ に LSS/Q、温度に van&#x27;t Hoff 式を当てはめ、3因子×3水準（3×3 データ）で予測誤差5%未満の最適分離。</li><li><strong>ピーク圧縮:</strong> Vaňková ら[54]は LSS モデルでグラジエント勾配のピーク圧縮への効果を検討（溶出時の φe・ke を決定、ke をピーク幅に関係づけ）。グラジエント時間/カラム死時間比 = 12 が小分子で最良の速度論性能。Gritti[55]は NK モデルに基づく新式で複雑グラジエントのピーク広がりを予測（線形・非線形モデルで有意差なし）。</li></ul>
+<h3>3.1.2. 2次元分離（2D-LC）の最適化</h3>
+<p>2次元 LC では両次元の直交性・保持を保持モデルで最適化し、ピーク容量を最大化する。</p>
+<h3>3.1.3. 精緻な戦略と最適化パッケージ</h3>
+<p>DryLab・PEWS2・MOREPEAKS 等のソフトが複数モデルを用いて自動最適化する。</p>
+<h2>3.2. メソッド移管（Method transfer）</h2>
+<p>異なる装置（dwell 体積・カラム寸法が異なる）間でメソッドを調和させる。保持モデルで一方の装置の条件を他方に翻訳し、同等の分離を再現する。</p>
+<h2>3.3. 固定相の特性評価・比較</h2>
+<p>LFER（HSM・Abraham）で固定相を疎水性・水素結合性・イオン交換活性などのパラメータで数値化し、多数の固定相を表化して比較・分類できる[8, 9]。HILIC の混合モードモデル（3.3.2節）で固定相の RPLC/HILIC 両保持機構の寄与を評価。</p>
+<h2>3.4. 保持の理解と記述</h2>
+<p>保持機構研究で、どのモデルが実測をよく記述するかから保持機構（分配 vs 吸着 vs 混合）を推論する。</p>
+<h2>3.5. 親油性（lipophilicity）測定</h2>
+<p>医薬・環境科学で、RPLC 保持（log kw 等）から化合物のオクタノール-水分配係数（log Kow）を推定する。新規合成品の親油性や汚染物質の生態系残留性の指標となる[2, 3]。</p>
+<hr>
+<h1>4. 全体的結論と推奨（Conclusions &amp; Recommendations）</h1>
+<ul><li><strong>モデル選択:</strong> 逆相の穏やかな範囲では LSS で十分だが、曲率がある場合は Q・NK、HILIC や吸着支配系では ADS・MM を選ぶ。過剰適合を避けるため AIC・F 検定でパラメータ数の妥当性を客観評価する。</li><li><strong>入力データ:</strong> 最高精度が必要なら、シミュレーションで想定するモードに合った実験（等溶媒/等溶媒、グラジエント/グラジエント）を使う。等溶媒データが一般に最も正確な予測を与えるが、グラジエント（スキャニング）は全成分を1ランで測れる利点がある。有効勾配 b を実験間で十分変える。</li><li><strong>応用の広がり:</strong> 保持モデリングはメソッド開発・最適化だけでなく、メソッド移管・固定相評価・保持機構解明・親油性測定へと広がり、1D/2D-LC・HILIC・SFC を横断する汎用ツールとなっている。</li><li>計算資源の増大により in silico 保持モデリングは試行錯誤に代わる標準になりつつあり、モデル・データ要件・検証法の標準化が今後の課題である。</li></ul>
+<hr>
+<h1>主要記号・モデル一覧</h1>
+<table>
+<thead><tr><th>モデル</th><th>式</th><th>パラメータ数</th><th>主用途</th></tr></thead>
+<tbody>
+<tr><td>線形溶媒強度（LSS）</td><td>ln k = ln k0 − S_LSS·φ</td><td>2</td><td>RPLC</td></tr>
+<tr><td>二次（Q）</td><td>ln k = ln k0 + S1·φ + S2·φ²</td><td>3</td><td>RPLC・HILIC</td></tr>
+<tr><td>吸着（ADS, log-log）</td><td>ln k = ln k0 − n·ln φ</td><td>2</td><td>HILIC・RPLC・NPLC</td></tr>
+<tr><td>混合モード（MM）</td><td>ln k = ln k0 + S1·φ + S2·ln φ</td><td>3</td><td>HILIC</td></tr>
+<tr><td>Neue-Kuss（NK）</td><td>ln k = ln k0 + 2ln(1+S1·φ) − φS2/(1+S1·φ)</td><td>3</td><td>グラジエント RPLC・HILIC</td></tr>
+</tbody></table>
+<ul><li><strong>k</strong>＝保持因子、<strong>k0/kw</strong>＝純水中の等溶媒保持因子、<strong>φ</strong>＝有機修飾剤体積分率、<strong>t0</strong>＝死時間、<strong>tR</strong>＝保持時間、<strong>tD</strong>＝dwell time、<strong>tG</strong>＝グラジエント時間、<strong>B</strong>＝グラジエントの傾き、<strong>b</strong>＝有効勾配、<strong>AIC</strong>＝赤池情報量規準、<strong>SSE</strong>＝残差平方和。</li></ul>
+<hr>
+<h1>主要参考文献（抜粋）</h1>
+<ul><li>[1] 直線グラジエントの一般式（グラジエント方程式）。</li><li>[4, 5] Snyder の疎水性減算モデル（HSM）。</li><li>[6, 7] Abraham の LFER モデル。</li><li>[18] DryLab（最適化プログラム）。[19] PEWS2。[20] MOREPEAKS。</li><li>[21] Snyder et al. LSS モデルの導入。</li><li>[22] Schoenmakers et al. 二次モデル。</li><li>[23–26] Soczewinski・Jandera・Snyder 吸着（log-log）モデル。</li><li>[27] Jin et al. 混合モードモデル。</li><li>[28–31] Nikitas・Neue・Kuss モデル。</li><li>[32] Vivó-Truyols et al. 等溶媒/グラジエント予測の誤差解析。</li><li>[40] 赤池情報量規準（AIC）。</li></ul>
+<p>（全参考文献は原著参照。）</p><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="chromatographic-response-functions-universal-comparison.html">クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-desirability-function-multiple-response-optimization-review.html">実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="retention-prediction-lc-perspective-gritti.html">液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-desirability-multiresponse-optimization.html">実験計画法と多重応答最適化 — 分析法開発における満足度関数(desirability)の利用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">レビュー</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="retention-modelling-liquid-chromatography-review-2021" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

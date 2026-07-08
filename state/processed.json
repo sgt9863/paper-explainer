@@ -481,6 +481,294 @@
       "source_pdf": "1-s2.0-S0731708515300091-main.pdf",
       "slug": "huzhang-ssdmc-rrf-uv-wavelength",
       "title": "単一標準品による多成分定量(SSDMC/QAMS)のRRFを安定させる — UV波長と標準液濃度の設計(虎杖)"
+    },
+    "1rAw9BH9JI7gFY6RfVQ0N0AFzSv2LaeGE": {
+      "source_pdf": "Botanical+Drugs+2026.1.02+Luo.pdf",
+      "slug": "botanical-drug-cmc-four-approved-review",
+      "title": "植物性医薬品（ボタニカルドラッグ）のIND・NDA開発におけるCMCの課題と解決策 — FDA承認4製品から得られた教訓",
+      "date": "2026-07-07"
+    },
+    "1K6UuBrdyPgMFtTVPq7RvpEQozIaougAq": {
+      "source_pdf": "fmed-12-1709969 (1).pdf",
+      "slug": "qmarker-strategies-review-2020-2024",
+      "title": "伝統中薬のQ-marker同定戦略：2020–2024年研究の系統的レビュー",
+      "date": "2026-07-07",
+      "note": "duplicate upload of fmed-12-1709969.pdf (same paper as qmarker-strategies-review-2020-2024)"
+    },
+    "1anHXjrQaDx6iwf_oDH3dxx7jJ-KdmJTb": {
+      "source_pdf": "s13020-026-01414-z.pdf",
+      "slug": "xecq-qbd-fullchain-machinevision-qc",
+      "title": "小児赤翹清熱顆粒（XECQ）のデータ駆動型フルチェーン品質管理 — 工程リスク管理から知能的製品検査まで",
+      "date": "2026-07-07"
+    },
+    "1GMkQ3CMCht4_RyOg8CsESRmoOTJnpHmY": {
+      "source_pdf": "s13065-025-01509-y.pdf",
+      "slug": "alectinib-hplc-bbd-uncertainty-greenness",
+      "title": "ケモメトリクス支援によるアレクチニブと関連不純物のHPLC分析法の最適化・バリデーション — 測定不確かさ評価とホワイトネス/ブルーネス/グリーンネス評価",
+      "date": "2026-07-07"
+    },
+    "1OgqvOeHXIuI_POyW6rW31mZSQF85u7z5": {
+      "source_pdf": "in-silico-high-performance-liquid-chromatography-method-development-via-machine-learning.pdf",
+      "slug": "insilico-hplc-qspr-lser-lss-retention",
+      "title": "機械学習によるin silico HPLC分析法開発 — SMILESから移動相組成依存の保持因子を予測する（QSPR＋LSER＋LSS）",
+      "date": "2026-07-07"
+    },
+    "1zPH3gEd06bZB-z5AOHmN8Fx7Gu_uOp-c": {
+      "source_pdf": "2412.20512v1.pdf",
+      "slug": null,
+      "title": "Dive into Time-Series Anomaly Detection: A Decade Review",
+      "date": "2026-07-07",
+      "note": "out of scope (漢方・生薬QC/分析化学と無関係の時系列異常検知MLレビュー)。ユーザー確認のうえスキップ。再処理しないための記録。"
+    },
+    "1NCEd6YCxwuM5vPpGVElobzumiSvMByXb": {
+      "source_pdf": "d5cs00962f.pdf",
+      "slug": "bayesian-optimization-chemical-reactions-review",
+      "title": "化学反応のためのベイズ最適化（BO）— サロゲートモデル・獲得関数から実装・応用・転移学習まで（総説）",
+      "date": "2026-07-07"
+    },
+    "1EMc-MIiGmz4nSfWn7rkWdU6fRECHE3_Y": {
+      "source_pdf": "1-s2.0-S0021967321007524-main.pdf",
+      "slug": "lcxlc-bayesian-optimization-method-development",
+      "title": "包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化",
+      "date": "2026-07-07"
+    },
+    "upload-e5ea7686-coptis-qbd-bayesian": {
+      "source_pdf": "1s2.0S1875536416300838main.pdf",
+      "slug": "coptis-alkaloids-qbd-bayesian-design-space",
+      "title": "ベイズ法による黄連（Coptis chinensis）6アルカロイドHPLC分析の設計空間構築と信頼性評価 — QbDによる頑健なRP-HPLC法開発",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。"
+    },
+    "upload-df2e55f8-wiczling-doptimal": {
+      "source_pdf": "1s2.0S0021967325001359main.pdf",
+      "slug": "rphplc-bayesian-doptimal-design-retention-prediction",
+      "title": "事前知識を活用した逆相HPLC保持予測の改善 — ベイズD最適設計と多階層モデルで多様な分析対象に効く実験計画を作る",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。"
+    },
+    "upload-97dbcbb0-gritti-retention-perspective": {
+      "source_pdf": "perspectiveonthefutureapproachestopredictretentioninliquidchromatography.pdf",
+      "slug": "retention-prediction-lc-perspective-gritti",
+      "title": "液体クロマトグラフィーにおける保持予測の将来アプローチ（展望） — 逆法・直接法・QSRR/AI・分子動力学まで",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。b17fa658は同一論文の重複。"
+    },
+    "upload-76b3b7f0-aal-lc-method-dev": {
+      "source_pdf": "assistedactivelearningformodelbasedmethoddevelopmentinliquidchromatography.pdf",
+      "slug": "assisted-active-learning-lc-method-development",
+      "title": "液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Anal Chem 2024, 96, 13699."
+    },
+    "upload-4082bb03-qsrr-ml-collinearity": {
+      "source_pdf": "1s2.0S1570023222000368main.pdf",
+      "slug": "qsrr-machine-learning-collinearity-lc-hrms",
+      "title": "機械学習によるLC-HRMS保持予測のためのQSRRモデリング — 4アルゴリズムの比較と「共線性」の影響評価",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。J Chromatogr B 1191 (2022) 123132."
+    },
+    "upload-e64ab084-fig-polyphenols-aqbd": {
+      "source_pdf": "1s2.0S0026265X2602000Xmain.pdf",
+      "slug": "fig-polyphenols-aqbd-rsm-dnn-hplc",
+      "title": "AQbD枠組みでの応答曲面法（RSM）と深層ニューラルネット（DNN）によるイチジク・ポリフェノールHPLC法の開発と最適化",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Microchem J 2026, 118797."
+    },
+    "upload-91f74166-ich-q14-framework": {
+      "source_pdf": "amodernframeworkforanalyticalproceduredevelopmentandlifecyclemanagementbasedonichq14principles.pdf",
+      "slug": "ich-q14-aqbd-lifecycle-framework",
+      "title": "ICH Q14原則に基づく分析法開発とライフサイクル管理の近代的フレームワーク（Perspective）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Anal Chem 2025, 97, 12."
+    },
+    "upload-6dea4b32-aqbd-q14-review": {
+      "source_pdf": "s0076902401587w.pdf",
+      "slug": "aqbd-ich-q14-analytical-procedure-review",
+      "title": "分析法開発におけるICH Q14ガイドラインの分析的QbD（AQbD）（レビュー）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Accred Qual Assur 2025, 30:1."
+    },
+    "upload-10ce32f1-sanhuang-xiexin-qmarker": {
+      "source_pdf": "Biomedical_Chromatography__2026__Fu__Fingerprint_Analysis_and_Quality_Marker_Identification_of_Sanhuang_Xiexin_Decoction.pdf",
+      "slug": "sanhuang-xiexin-decoction-fingerprint-qmarker",
+      "title": "植物化学とケモメトリクスの統合による三黄瀉心湯（サンオウシャシントウ）の指紋分析と品質マーカー（Q-marker）同定",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Biomed Chromatogr 2026, 40:e70477."
+    },
+    "upload-60472095-zhoutian-ahp-critic": {
+      "source_pdf": "Phytochemical_Analysis__2024__Ma__Optimization_of_the_Zhou_Tian_Formula_extraction_technology_based_on_AHP_CRITIC_method.pdf",
+      "slug": "zhoutian-formula-ahp-critic-extraction-transfer",
+      "title": "AHP-CRITIC法による抗うつ方剤「周天方（ZTF）」の抽出プロセス最適化とHPLC指紋に基づく主要成分の移行効率解析",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Phytochem Anal 2024, 35:873."
+    },
+    "upload-e5352970-bushen-huoxue-cad": {
+      "source_pdf": "1s2.0S0731708521001989main.pdf",
+      "slug": "bushen-huoxue-hplc-cad-six-components",
+      "title": "HPLC-CAD（荷電化エアロゾル検出器）による補腎活血方（BHP）中6成分の同時定量",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。JPBA 201 (2021) 114087."
+    },
+    "upload-54acc090-zishen-yutai-uhplc-cad": {
+      "source_pdf": "1s2.0S0731708520314564main.pdf",
+      "slug": "zishen-yutai-uhplc-cad-fingerprint-quantification",
+      "title": "UHPLC-CAD指紋分析と多成分定量を組み合わせた中成薬「滋腎育胎丸（ZYP）」の総合的品質評価",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。JPBA 191 (2020) 113570."
+    },
+    "upload-b8283069-centipeda-qmarker": {
+      "source_pdf": "Phytochemical_Analysis__2022__Liu__Discovery_of_potential_Q_marker_of_traditional_Chinese_medicine_based_on_chemical.pdf",
+      "slug": "centipeda-minima-qmarker-chemometrics-network",
+      "title": "化学プロファイリング・ケモメトリクス・ネットワーク薬理・分子ドッキングを統合した生薬の品質マーカー（Q-marker）発見 — 鵝不食草（Centipeda minima）を例に",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Phytochem Anal 2022, 33:1225."
+    },
+    "upload-dbaebc2b-chuanxiong-eci": {
+      "source_pdf": "1s2.0S0731708523002248main.pdf",
+      "slug": "chuanxiong-effect-constituent-index-bioassay",
+      "title": "効果-成分指数（ECI）バイオアッセイによる川芎（センキュウ）の品質基準の改善",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。JPBA 233 (2023) 115455."
+    },
+    "upload-6f25bc65-xiaochaihu-qbd-fbg": {
+      "source_pdf": "s1224902302663z.pdf",
+      "slug": "xiaochaihu-qbd-fluid-bed-granulation-dsd",
+      "title": "QbD主導のTCM製造プロセス — 小柴胡湯（ショウサイコトウ）カプセルの流動層造粒・乾燥プロセスの開発と最適化",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。AAPS PharmSciTech 2023, 24:210."
+    },
+    "upload-d298b781-tcm-granules-extraction-review": {
+      "source_pdf": "Phytochemical_Analysis__2024__Zhang__Analysis_of_the_Impact_of_Extraction_Processes_on_the_Quality_of_Traditional.pdf",
+      "slug": "tcm-granules-extraction-process-quality-review",
+      "title": "抽出プロセスが漢方（TCM）顆粒剤の品質に与える影響の分析（レビュー）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Phytochem Anal 2025, 36:903."
+    },
+    "upload-86ed31be-cad-pfv-powerlaw": {
+      "source_pdf": "J_of_Separation_Science__2024__Wu__An_optimization_strategy_for_charged_aerosol_detection_to_linearize_the_detector.pdf",
+      "slug": "cad-pfv-powerlaw-linearization-qishen-yiqi",
+      "title": "荷電化エアロゾル検出（CAD）の応答を線形化する最適化戦略 — 芪参益気滴丸の糖類多成分定量",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。J Sep Sci 2024, 47:2300784."
+    },
+    "upload-9b5ce9ee-aqbd-lc-overview-review": {
+      "source_pdf": "developmentandoptimizationofliquidchromatographyanalyticalmethodsbyusingaqbdprinciplesoverviewandrecent.pdf",
+      "slug": "aqbd-lc-method-development-overview-review",
+      "title": "分析的QbD（AQbD）原則による液体クロマトグラフィー分析法の開発と最適化 — 概観と最近の進歩（レビュー）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Org Process Res Dev 2019, 23, 1784."
+    },
+    "upload-59ed5bba-folin-ciocalteu-review": {
+      "source_pdf": "1s2.0S0039914024001504main.pdf",
+      "slug": "folin-ciocalteu-total-polyphenols-critical-review",
+      "title": "総ポリフェノール量を測る「標準化されていない」Folin-Ciocalteu法の包括的・批判的レビュー — 実験因子と方法バリデーションの難問",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Talanta 272 (2024) 125771."
+    },
+    "upload-9cf9b9d6-shenxiao-2dlc-qmarker": {
+      "source_pdf": "s00216025061809.pdf",
+      "slug": "shenxiao-granules-2dlc-ms-qmarker-mdf",
+      "title": "直交HILIC×RP 二次元LC/MSと質量欠損フィルタリングによる腎消顆粒（シェンシャオ顆粒）の包括的化学プロファイリングと品質マーカー発見",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Anal Bioanal Chem 2025, 417:6915."
+    },
+    "upload-b2566714-clt-fingerprint-critic": {
+      "source_pdf": "1s2.0S003991402500147Xmain.pdf",
+      "slug": "compound-liquorice-tablets-fingerprint-spectra-critic",
+      "title": "指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Talanta 287 (2025) 127661."
+    },
+    "upload-cd337163-siegesbeckia-ratio-qc": {
+      "source_pdf": "1s2.0S0021967325006570main.pdf",
+      "slug": "siegesbeckiae-herba-ratio-fingerprint-antioxidant-qc",
+      "title": "HPLC比率定量指紋・スペクトル量子化指紋・抗酸化活性を統合した生薬（豨薟草）の包括的品質管理システム",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Yan et al., J. Chromatogr. A 1760 (2025) 466313."
+    },
+    "upload-e898a04f-shenqi-fuzheng-qbd": {
+      "source_pdf": "s0021601693163.pdf",
+      "slug": "shenqi-fuzheng-injection-spe-hplc-qbd",
+      "title": "QbD原理に基づく参芪扶正注射液（SFI）9成分同時定量のためのSPE-HPLC-UV/ELSD法の開発と最適化",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Wang L, Qu HB. Anal Bioanal Chem (2016) 408:2133-2145."
+    },
+    "upload-8ab6cfb9-saffron-uhplc-ann": {
+      "source_pdf": "molecules2301851.pdf",
+      "slug": "saffron-uhplc-ann-rsm-crocin-separation",
+      "title": "サフラン（Crocus sativus L.）のUHPLC分析：ケモメトリクス（ANN応答曲面法）による分離最適化とマイナークロセチンエステルの検出",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。D'Archivio AA et al. Molecules 2018, 23, 1851."
+    },
+    "upload-d0ccabc4-usp-botanical-specs": {
+      "source_pdf": "1s2.0S0944711318301144main.pdf",
+      "slug": "usp-quality-specifications-botanical-articles",
+      "title": "米国薬局方（USP）による生薬（植物由来品）の品質規格：モノグラフ7セクションの技術要件と実例",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Ma C et al. Phytomedicine 45 (2018) 105-119."
+    },
+    "upload-c6055278-aoac-ginger-lcuv": {
+      "source_pdf": "jaoacint.190004.pdf",
+      "slug": "aoac-2018-04-ginger-nonvolatile-constituents-lc-uv",
+      "title": "食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。You H et al. J AOAC Int 2020;103(1):124-131."
+    },
+    "upload-e12d274d-doe-desirability-review": {
+      "source_pdf": "1s2.0S0039914014000459main.pdf",
+      "slug": "doe-desirability-function-multiple-response-optimization-review",
+      "title": "実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Vera Candioti L et al. Talanta 124 (2014) 123-138. ※f18ff612は同一PDFの重複アップロードのため同一解説に集約。"
+    },
+    "upload-f18ff612-doe-desirability-review-dup": {
+      "source_pdf": "1s2.0S0039914014000459main.pdf",
+      "slug": "doe-desirability-function-multiple-response-optimization-review",
+      "title": "（重複アップロード）実験計画法と多応答最適化・望ましさ関数の活用（総説）",
+      "date": "2026-07-08",
+      "note": "e12d274d と同一PDFの重複アップロード。解説は doe-desirability-function-multiple-response-optimization-review に集約済み。"
+    },
+    "upload-dbac7497-crf-comparison": {
+      "source_pdf": "1s2.0S0021967314012448main.pdf",
+      "slug": "chromatographic-response-functions-universal-comparison",
+      "title": "クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Tyteca E, Desmet G. J Chromatogr A 1361 (2014) 178-190."
+    },
+    "upload-daf20216-ssdmc-rrf-uv-wavelength": {
+      "source_pdf": "1s2.0S0731708515300091main.pdf",
+      "slug": "ssdmc-rrf-uv-wavelength-concentration-polygonum-cuspidatum",
+      "title": "生薬の一標準多成分定量（SSDMC/QAMS）における相対応答係数（RRF）のためのUV波長と標準液濃度の設計——虎杖（Polygonum cuspidatum）への応用",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Yang TW et al. J Pharm Biomed Anal 114 (2015) 280-287."
+    },
+    "upload-8825810b-doe-hplc-overview": {
+      "source_pdf": "1s2.0S0731708517303746main.pdf",
+      "slug": "experimental-designs-hplc-method-development-validation-overview",
+      "title": "HPLCメソッド開発・バリデーションにおける実験計画法の総覧——スクリーニング設計・応答曲面法からQbD・シックスシグマまで",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Sahu PK et al. J Pharm Biomed Anal 147 (2018) 590-611."
+    },
+    "upload-11e1a2b5-drylab-gradient-simulation": {
+      "source_pdf": "BF02688488.pdf",
+      "slug": "drylab-computer-simulation-reversed-phase-gradient-elution",
+      "title": "逆相グラジエント溶出分離の最適化開発の手段としてのコンピュータシミュレーション（DryLab G）——Dolan・Snyder・Quarry 1987",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Dolan JW, Snyder LR, Quarry MA. Chromatographia 24 (1987) 261-276."
+    },
+    "upload-ac8a4c9c-retention-modelling-review": {
+      "source_pdf": "JSSC4488.pdf",
+      "slug": "retention-modelling-liquid-chromatography-review-2021",
+      "title": "液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。den Uijl MJ et al. J Sep Sci 2021;44:88-114."
+    },
+    "upload-b17fa658-perspective-retention-dup": {
+      "source_pdf": "perspectiveonthefutureapproachestopredictretentioninliquidchromatography_1.pdf",
+      "slug": "(重複アップロード)",
+      "title": "（重複アップロード）97dbcbb0 と同一PDF（保持予測の将来アプローチ展望）",
+      "date": "2026-07-08",
+      "note": "97dbcbb0-perspectiveonthefutureapproachestopredictretentioninliquidchromatography.pdf と同一PDFの重複アップロード。解説は既存ページに集約済み。"
     }
   }
 }

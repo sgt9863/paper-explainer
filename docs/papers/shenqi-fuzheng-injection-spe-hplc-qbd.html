@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QbD原理に基づく参芪扶正注射液（SFI）9成分同時定量のためのSPE-HPLC-UV/ELSD法の開発と最適化</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="QbD原理に基づく参芪扶正注射液（SFI）9成分同時定量のためのSPE-HPLC-UV/ELSD法の開発と最適化">
+<meta property="og:description" content="免疫賦活・抗腫瘍作用をもつ植物薬「参芪扶正注射液（SFI・党参＋黄芪由来）」の9生物活性成分を同時定量するSPE-HPLC-UV/ELSD法を、QbD（Quality by Design）原理に沿って開発。リスクアセスメントとPlackett-Burman設計で11因子から6有意因子を抽出し、Box-Behnken設計＋応答曲面法で4因子（流速・カラム温度・ELSD蒸発器温度・ガス流量）を精密化、モンテカルロ確率マップ（1万回シミュレーション・確率≥0.90）で分析デザインスペース（MODR）を構築した。前処理・分離・検出を一体で最適化し、システム適合性・頑健性・精度・直線性・感度・併行精度・真度・安定性の8項目で検証。複雑マトリックス試料に対するQbD準拠定量法開発の手順書（チュートリアル）を提示する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/shenqi-fuzheng-injection-spe-hplc-qbd/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="shenqi-fuzheng-injection-spe-hplc-qbd"><h1>QbD原理に基づく参芪扶正注射液（SFI）9成分同時定量のためのSPE-HPLC-UV/ELSD法の開発と最適化</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">多成分定量</span> &middot; <a href="https://doi.org/10.1007/s00216-016-9316-3" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">e898a04f-s0021601693163.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="shenqi-fuzheng-injection-spe-hplc-qbd" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="shenqi-fuzheng-injection-spe-hplc-qbd" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/shenqi-fuzheng-injection-spe-hplc-qbd/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/shenqi-fuzheng-injection-spe-hplc-qbd/ai-infographic.webp" alt="リスクアセスメント→Plackett-Burman→Box-Behnken→モンテカルロで前処理・分離・検出を一体最適化し「分析デザインスペース（MODR）」を構築" loading="lazy"></a><p>&lt;!-- Wang L, Qu HB. Development and optimization of SPE-HPLC-UV/ELSD for simultaneous determination of nine bioactive components in Shenqi Fuzheng Injection based on Quality by Design principles. Anal Bioanal Chem (2016) 408:2133-2145. DOI 10.1007/s00216-016-9316-3 の全訳密度日本語版。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は漢方・生薬そのものの品質評価論文ではなく、<strong>分析法そのものの開発・最適化に QbD（Quality by Design）を適用する方法論</strong>を、党参（トウジン）と黄芪（オウギ）から作られる中成薬注射剤「参芪扶正注射液」を題材に示したチュートリアル的研究である。生薬・漢方製剤は「多成分・複雑マトリックス」であり、単一の純粋化合物と違って分析条件のわずかな変動に定量結果が敏感に反応する。本論文が示す「リスクアセスメント→スクリーニング設計（Plackett-Burman）→応答曲面設計（Box-Behnken）→モンテカルロによる分析デザインスペース（MODR）構築」という枠組みは、当サイトが扱う生薬QC・指紋分析・多成分定量のメソッド開発すべてに直結する基盤技術である。とくに <strong>SPE 前処理・HPLC 分離・UV/ELSD 検出という「異なる工程」を切り離さず一体で最適化する</strong>という発想は、複雑マトリックス試料の頑健なメソッド開発における要点であり、後続の AQbD/ICH Q14 系の議論の実践例として読める。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> Development and optimization of SPE-HPLC-UV/ELSD for simultaneous determination of nine bioactive components in Shenqi Fuzheng Injection based on Quality by Design principles</li><li><strong>和題（本稿）:</strong> QbD原理に基づく参芪扶正注射液（SFI）9成分同時定量のためのSPE-HPLC-UV/ELSD法の開発と最適化</li><li><strong>著者:</strong> Lu Wang, Haibin Qu（王璐・瞿海斌）</li><li><strong>所属:</strong> 浙江大学 薬学院 製薬情報学研究所（Pharmaceutical Informatics Institute, College of Pharmaceutical Sciences, Zhejiang University, 杭州 310058, 中国）</li><li><strong>責任著者:</strong> Haibin Qu（quhb@zju.edu.cn）</li><li><strong>掲載誌:</strong> Analytical and Bioanalytical Chemistry（Anal Bioanal Chem）2016年, 408巻, 2133–2145頁</li><li><strong>DOI:</strong> 10.1007/s00216-016-9316-3</li><li><strong>投稿/改訂/受理:</strong> 2015年10月25日投稿 / 2015年12月24日改訂 / 2016年1月5日受理 / 2016年1月29日オンライン公開</li><li><strong>© Springer-Verlag Berlin Heidelberg 2016</strong></li><li><strong>キーワード:</strong> 高速液体クロマトグラフィー（HPLC）／固相抽出（SPE）／Quality by Design（QbD）／デザインスペース／メソッド頑健性</li><li><strong>電子補足資料（ESM）:</strong> オンライン版に補足資料あり（doi:10.1007/s00216-016-9316-3）。本文中の Table S1・Table S2 は ESM に収載。</li><li><strong>雑誌インパクトファクター:</strong> 4.19（Analytical and Bioanalytical Chemistry・JCR2024・Q2。出典により2025年値を 3.8 と記載するものもある。要確認）</li></ul>
+<hr>
+<h1>要旨（Abstract）</h1>
+<p>固相抽出（solid phase extraction, SPE）、高速液体クロマトグラフィー（high performance liquid chromatography, HPLC）、および紫外・蒸発光散乱検出（ultraviolet/evaporative light scattering detection, UV/ELSD）を組み合わせた手法（SPE-HPLC-UV/ELSD）を、Quality by Design（QbD）原理に従って開発し、植物薬（botanical drug）である参芪扶正注射液（Shenqi Fuzheng Injection, SFI）中の9つの生物活性化合物の定量に用いた。</p>
+<p><strong>リスクアセスメント</strong>と <strong>Plackett–Burman 設計</strong> を用い、クロマトグラフィーピークの分離度（resolution）とシグナル対ノイズ比（signal-to-noise, S/N）に対する <strong>11因子</strong> の影響を評価した。多重回帰分析と Pareto ランキング分析の結果、吸着剤量（sorbent mass）、試料量（sample volume）、流速（flow rate）、カラム温度（column temperature）、蒸発器温度（evaporator temperature）、ガス流量（gas flow rate）が統計的に有意（p &lt; 0.05）であることが示された。</p>
+<p>さらに <strong>Box–Behnken 設計</strong> と <strong>応答曲面分析（response surface analysis）</strong> を組み合わせ、SPE-HPLC-UV/ELSD 分析の品質と4つの有意因子（流速、カラム温度、蒸発器温度、ガス流量）との関係を検討した。次に、<strong>モンテカルロ確率（Monte Carlo probability）</strong> の計算によって SPE-HPLC-UV/ELSD の <strong>分析デザインスペース（analytical design space）</strong> を構築した。</p>
+<p>提示した手法では、試料前処理・クロマトグラフィー分離・化合物検出の操作パラメータを同時に検討した。選定した作業点（working point）において、システム適合性試験、メソッド頑健性/堅牢性（robustness/ruggedness）、感度、精度、併行精度（repeatability）、直線性、真度、安定性の <strong>8項目のメソッドバリデーション</strong> を実施した。</p>
+<p>これらの結果は、複雑マトリックス中の試料に対する分析法開発において QbD 原理が有用であることを明らかにした。また、分析品質とメソッド頑健性は分析デザインスペースによって検証された。本手法は、複雑マトリックス中の試料に対する頑健で QbD 準拠の定量法を開発するためのチュートリアルを提供する。</p>
+<hr>
+<h1>序論（Introduction）</h1>
+<p>分析法（analytical procedures）は、医薬品の研究開発だけでなく医薬品製造においても決定的な役割を果たす[1]。分析法は、詳細な基礎知識、工業的製造のノウハウ、そして医薬品製品の品質保証を提供する。特定の分析法を科学的に応用する前には、バリデーション手順が必要である[2, 3]。</p>
+<p><strong>メソッド頑健性（method robustness）</strong> は、メソッド開発に続く分析法バリデーションにおける重要なステップであり、試料材料・被験物質・保存・試料前処理条件などを含む実験条件の変化に対する分析プロセスの感受性（susceptibility）として定義される[4]。従来、頑健性試験はメソッド開発の最後、あるいはメソッドバリデーションの最初に実施されてきた。メソッド頑健性やバリデーション結果が不十分な場合には、パラメータ範囲の絞り込み、適応（adaptation）、メソッドの再開発などが通常採られる対応である[5]。さらに、多数の実験が必要となるため、頑健性試験は時間と消耗品を非常に多く要求する。したがって、メソッド頑健性を改善するには、<strong>リスクアセスメントをメソッド開発に統合</strong>し、メソッド最適化の過程で分析品質を作り込む（built during）ことが不可欠である。</p>
+<p><strong>Quality by Design（QbD）</strong> の取り組みは米国食品医薬品局（FDA）によって開始され、医薬品開発・製造における重要なパラダイムとなった。それ以降、同様のアプローチに従った分析法開発の機会が探究されてきた[6–8]。QbD を用いたメソッド開発における重要な手順は、測定の不確かさ（measurement uncertainty）が問題となる場合でも分析品質が保証される <strong>分析デザインスペース（analytical design space）</strong> を導出することである[9, 10]。さらに、分析デザインスペースはメソッド頑健性の尺度でもあり、適切なシステム適合性パラメータで検証できる[11]。</p>
+<p>分析デザインスペースを工程（プロセス）のデザインスペースと区別するために、多くの科学者が <strong>メソッド操作可能デザイン領域（method operable design region, MODR）</strong> という用語を作り出して間もなく[12]、MODR は規制当局によって認知されるに至った[13]。QbD 原理を分析測定に適用した多数の論文が報告されている[14–16]。</p>
+<p>一方、化学薬品（合成医薬品）は通常、単純な構造・低分子量・高純度をもち、さらには定量的構造–保持相関（quantitative structure–retention relationship, QSRR）モデルによる裏付けもあるため、これら既知化合物のクロマトグラフィー保持はかなり予測可能である[17]。結果として、化学薬品のクロマトグラフィー分離に関する公表手法の圧倒的多数は高速/超高速液体クロマトグラフィー（HPLC/UPLC）を用いてきた[18]。しかし、<strong>複雑マトリックス中の試料に対する QbD 準拠の定量分析</strong> に関する研究は依然として不足している。</p>
+<p>天然物から作られる植物薬（botanical drugs）は、多成分・多素材の製剤であり、構造や性質が不明な多数の組成をもつことでよく知られている。満足なクロマトグラフィー性能を得るには、任意の試料に対して、液–液抽出（LLE）、固相抽出（SPE）、濃縮、沈殿などの <strong>頑健な試料前処理法</strong> が必要である[19, 20]。すべての成分の化学的性質が異なる結果として、より多くの化合物情報を捉えるために、紫外（UV）、蒸発光散乱検出（ELSD）、質量分析（MS）など様々な検出手法も適用されてきた[21]。化学薬品と比較して、植物製剤中の生物活性化合物の同定は、類似構造の不純物によって常に複雑化する。多くの場合、こうした天然試料の分析法の性能は実験条件に極めて敏感であり、したがってメソッド頑健性の改善が重要である。</p>
+<p>本研究では、植物薬中の9つの生物活性成分を同時定量する QbD 準拠の SPE-HPLC-UV/ELSD 法を開発する戦略を提示する。リスクアセスメントと Plackett–Burman 実験計画を用いて因子をスクリーニングする[7]。続いて応答曲面分析と Box–Behnken 実験計画を組み合わせて、実験条件とメソッド性能との関係を理解する[14]。最終的にモンテカルロ確率マップを用いて SPE-HPLC-UV/ELSD 法の分析デザインスペースを導出する[9]。</p>
+<hr>
+<h1>材料と方法（Materials and methods）</h1>
+<h2>試薬と化学物質（Reagents and chemicals）</h2>
+<p>HPLC グレードのアセトニトリル、メタノール、ギ酸は Merck（Darmstadt, ドイツ）から供給された。超純水は Milli-Q 水精製システム（Molsheim, フランス）を用いて実験室で製造した。</p>
+<p>標準物質として、以下の9成分と内標準1成分を用いた（Shanghai Winherb Medical Technology Co., Ltd（上海, 中国）より購入）：</p>
+<ol><li><strong>シリンギン（syringin）</strong>（成分1）</li><li><strong>カリコシン-7-O-β-D-グルコピラノシド（calycosin-7-O-β-D-glucopyranoside）</strong>（成分2）</li><li><strong>ロベチオリン（lobetyolin）</strong>（成分3）</li><li><strong>オノニン（ononin）</strong>（成分4）</li><li><strong>9,10-ジメトキシプテロカルパン-3-O-β-D-グルコピラノシド（9,10-dimethoxyptercarpan-3-O-β-D-glucopyranoside）</strong>（成分5）</li><li><strong>2&#x27;-ヒドロキシ-3&#x27;,4&#x27;-ジメトキシイソフラバン-7-O-β-D-グルコピラノシド（2&#x27;-hydroxy-3&#x27;,4&#x27;-dimethoxyisoflavan-7-O-β-D-glucopyranoside）</strong>（成分6）</li><li><strong>アストラガロシド IV（astragaloside IV）</strong>（成分7）</li><li><strong>アストラガロシド II（astragaloside II）</strong>（成分8）</li><li><strong>アストラガロシド I（astragaloside I）</strong>（成分9）</li></ol>
+<ul><li>内標準（internal standard）：<strong>ジゴキシン（digoxin, S）</strong></li></ul>
+<p>10種の標準物質の化学構造は原著 Fig. 1 に示されている。すべての標準物質は 50% メタノール/水（v/v）に溶解し、分析前は 4 °C で保存した。</p>
+<blockquote><strong>訳者補足:</strong> 成分1・3（シリンギン、ロベチオリン）は党参（Radix Codonopsis, RC）由来のマーカー、成分2・4–9（カリコシン配糖体、オノニン、プテロカルパン/イソフラバン配糖体、アストラガロシド類）は黄芪（Radix Astragali, RA）由来のマーカーである。とくにアストラガロシド類（7–9）は <strong>紫外吸収をほとんど持たないトリテルペンサポニン</strong> であり、UV では検出しにくいため ELSD（蒸発光散乱検出：溶媒を蒸発させて残った溶質粒子に光を当て散乱光を測る、発色団のない化合物も検出できる万能型検出器）を併用する。これが本論文で UV と ELSD を <strong>同一クロマトグラム上で切り替え併用</strong> する理由である。</blockquote>
+<h2>試料前処理（Sample preparation）</h2>
+<p>本研究を通じて用いた試料は、参芪扶正注射液（Shenqi Fuzheng Injection, SFI）という液状生薬製剤である。SFI は良好な <strong>免疫賦活作用（immuno-enhancement）</strong> と <strong>抗腫瘍活性（anticancer activity）</strong> をもつ[22, 23]。SFI は一般に <strong>党参（Dangshen, Radix Codonopsis, RC）</strong> と <strong>黄芪（Huangqi, Radix Astragali, RA）</strong> の水抽出物から製造される。近年、SFI の各生薬の主要成分が研究されてきた。党参にはシリンギンとロベチオリン（成分1と3）が、黄芪には主として各種のイソフラボノイドとトリテルペンサポニン（成分2および4–9）が含まれる[22]。</p>
+<p>医薬品製剤は Livzon Pharmaceutical Group Inc.（広東, 中国）より提供された。Oasis HLB 抽出カラム（30 μm, 1 mL/10 mg または 60 μm, 3 mL/60 mg; Waters Corporation, Milford, Massachusetts, 米国）を用い、メタノールと水で順次洗浄した。</p>
+<p>SPE-HPLC 工程を開始する前に、100 μL の内標準（ジゴキシン, 0.27 mmol/L）を 10 mL（または 5 mL）の SFI に添加した。混合溶液を抽出カラムに注入し、0.2 または 1.0 mL/min の固定流速で 10 mL の水で洗浄した。続いて、抽出カラムを 1.0 または 2.0 mL のメタノールで溶出した。溶出液を回収し、SpeedVac 濃縮システム（SPD121P-115, Thermo Scientific, Waltham, Massachusetts, 米国）で室温にて 3 時間置いた。乾燥した抽出物を 1 mL の水に再溶解し、分析前は 4 °C で保存した。</p>
+<h2>装置とクロマトグラフィー条件（Instrumentation and chromatographic conditions）</h2>
+<p>HPLC-UV/ELSD 分析は、Agilent 1260 Infinity シリーズ HPLC システム（Agilent Technologies, Palo Alto, California, 米国）を用いて実施した。システムは以下から構成される：</p>
+<ul><li>G1311B シリーズ 四元ポンプ（quaternary pump）</li><li>G1367E シリーズ 恒温自動注入装置（thermostated automated injector）</li><li>G1316A シリーズ 恒温カラムコンパートメント（thermostated column compartment）</li><li>G1314F シリーズ UV 検出器</li><li>G4260B ELSD システム</li></ul>
+<p>クロマトグラフィー分離は Zorbax Eclipse Plus C18 分析カラム（1.8 μm, 4.6 × 100 mm, Agilent Technologies）で達成した。データ収集と解析は ChemStation ソフトウェア（Agilent Technologies）で行った。</p>
+<p>移動相は、溶媒 A（水 または 0.1% ギ酸/水）と溶媒 B（アセトニトリル または 0.1% ギ酸/アセトニトリル）からなるグラジエント溶出系を用いた。溶媒グラジエントは以下の通り：</p>
+<table>
+<thead><tr><th>時間（min）</th><th>B%</th></tr></thead>
+<tbody>
+<tr><td>0–5</td><td>10% B</td></tr>
+<tr><td>5–15</td><td>10→11% B</td></tr>
+<tr><td>15–45</td><td>11→23% B</td></tr>
+<tr><td>45–60</td><td>23→32% B</td></tr>
+<tr><td>60–65</td><td>32→40% B</td></tr>
+<tr><td>65–70</td><td>40→60% B</td></tr>
+<tr><td>70–80</td><td>60→70% B</td></tr>
+</tbody></table>
+<p>UV 検出波長は以下の通り設定した：0–42 min は 270 nm、42–80 min は 220 nm。</p>
+<p>実験計画に従い、各因子は以下の水準で変化させた：</p>
+<ul><li><strong>流速（flow rate）:</strong> 0.20, 0.30, または 0.40 mL/min</li><li><strong>カラム温度（column temperature）:</strong> 30, 35, 37, または 40 °C</li><li><strong>ELSD 蒸発器温度（evaporator temperature）:</strong> 60.0, 85.0, 100.0, または 110.0 °C</li><li><strong>ネブライザー温度（nebulizer temperature）:</strong> 50.0 または 80.0 °C</li><li><strong>N₂ ガス流量（gas flow rate）:</strong> 1.00, 1.10, 1.50, または 2.00 L/min</li><li><strong>ELSD の PMT ゲイン（PMT gain）:</strong> 2 または 4</li></ul>
+<p>同定されたすべての化合物は、標準物質と内標準に対する検量線を参照して定量した。同定された生物活性成分と混合標準溶液のそれぞれのクロマトグラムは原著 Fig. 2 に示されている。</p>
+<hr>
+<h1>方法（Methods）</h1>
+<h2>重要メソッド特性（CMA）とモデル化した応答（responses）</h2>
+<p><strong>重要メソッド特性（critical method attributes, CMA）</strong>、たとえば分離度（resolution, R）または分離基準（separation criteria, S）、シグナル対ノイズ比（S/N）、分析の実行時間（run time）、精度（precision）は、開発された分析法の性能を評価するために測定される応答である。クロマトグラフィー法では、CMA はメソッドの選択性（selectivity）、感度（sensitivity）、真度（accuracy）に関連づけられる[24]。既存の論文では、通常の主要 CMA は臨界ペア（critical pair）の分離度（R）であり、本稿では <strong>R = 1.5 を良好な選択性の主要指標</strong> とする。</p>
+<p>さらに、ELSD をアストラガルスサポニン（黄芪サポニン）の検出に用いたので、指定したクロマトグラフィーピークの S/N も検討した。したがって、以下がモデル化した応答（responses）である：</p>
+<ul><li>各クロマトグラフィーピークとその隣接クロマトグラフィーシグナルの分離度（<strong>R1–R6</strong>）</li><li>アストラガロシド IV の S/N（<strong>S1</strong>）</li><li>アストラガロシド II の S/N（<strong>S2</strong>）</li><li>アストラガロシド I の S/N（<strong>S3</strong>）</li></ul>
+<p>R には <strong>Derringer の望ましさ関数（desirability function）</strong> を導入して、望ましい値と許容値を割り当てた[25]。望ましさ（desirability）のスケールは、完全に不満足な応答に対する d = 0 から、極めて望ましい応答に対する d = 1 までの範囲をとり、以下の式に従う：</p>
+<p>$$ d_{R_i} = \begin{cases} 0 &amp; R_i \le 1.0 \\[4pt] \dfrac{R_i - 1.0}{1.5 - 1.0} &amp; 1.0 &lt; R_i &lt; 1.5 \\[4pt] 1 &amp; R_i \ge 1.5 \end{cases} \tag{1} $$</p>
+<p>ここで $R_i$ はクロマトグラム中の i 番目の化合物とその隣接クロマトグラフィーシグナルの分離度、1.0 は R の最小許容値、1.5 はこれを超えると R の改善がもはや重要でなくなる値である。</p>
+<blockquote><strong>訳者補足:</strong> 望ましさ関数は、「分離度 1.0 未満はダメ（d=0）」「1.5 以上は十分（d=1）」「その間は線形に評価」という形で、複数の応答を 0–1 の共通スケールに正規化する道具である。これにより、単位の異なる応答（分離度と S/N など）を統一的に扱い、多目的最適化に載せられる。</blockquote>
+<h2>リスクアセスメントと因子分析（Risk assessment and factorial analysis）</h2>
+<p>試料の精製と濃縮も分析法開発における2つの重要な工程であるため、<strong>試料前処理とクロマトグラフィー分離を組み合わせて検討</strong>した。原著 Table 1 は、試料前処理・分離手順のメソッド開発において検討した潜在的因子をまとめている。これらの因子のリスクは、事前に実施した予備実験と関連データを組み合わせて決定した。</p>
+<p>次に、<strong>Plackett–Burman 実験計画</strong> を用いて、モデル化した応答に対する <strong>11 個の独立因子</strong>（Table 1 で太字）の影響を推定した。11 因子の範囲は予備実験で定め、Plackett–Burman 設計で用いた水準と因子は Table 2 に示す。多重回帰と Pareto ランキング分析はいずれも Design-Expert v8.0.6 ソフトウェア（Minnesota, 米国）で実施した。</p>
+<h3>原著 Table 1：試料前処理・分離手順のメソッド開発とリスクアセスメントで検討した潜在的因子</h3>
+<p><strong>影響（Impact）</strong> は各因子がメソッド特性に及ぼす影響、<strong>リスク（Risk）</strong> は「–（有意な効果なし）」「+（わずかな効果）」「++（有意な効果）」を表す。Plackett–Burman 設計に用いた11個の独立因子を <strong>太字</strong>（★印）で示す。</p>
+<table>
+<thead><tr><th>工程</th><th>因子</th><th>影響</th><th>リスク</th></tr></thead>
+<tbody>
+<tr><td>SPE</td><td>吸着剤の種類（Sorbent type）</td><td>回収率</td><td>–</td></tr>
+<tr><td>SPE</td><td>吸着剤の製造元（Sorbent manufacturer）</td><td>回収率</td><td>+</td></tr>
+<tr><td>SPE</td><td>★吸着剤量（Sorbent mass）</td><td>回収率, 分離度</td><td>++</td></tr>
+<tr><td>SPE</td><td>★試料の質量または量（Sample mass or volume）</td><td>回収率, 分離度</td><td>++</td></tr>
+<tr><td>SPE</td><td>洗浄溶媒（Wash solvent）</td><td>回収率</td><td>–</td></tr>
+<tr><td>SPE</td><td>★溶出量（Elution volume）</td><td>回収率, 分離度</td><td>++</td></tr>
+<tr><td>SPE</td><td>★溶出速度（Elution speed）</td><td>回収率, 分離度</td><td>+</td></tr>
+<tr><td>SPE</td><td>蒸発温度（Evaporation temperature）</td><td>回収率</td><td>+</td></tr>
+<tr><td>SPE</td><td>試料の pH（pH of sample）</td><td>回収率</td><td>–</td></tr>
+<tr><td>SPE</td><td>溶媒中緩衝成分の pH（pH of buffer constituents in solvent）</td><td>回収率</td><td>+</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>移動相成分（Mobile phase constituents）</td><td>分離度</td><td>+</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>★移動相 pH（Mobile phase pH）</td><td>分離度, S/N</td><td>++</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>有機修飾剤%（Organic modifier %）</td><td>分離度</td><td>+</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>緩衝剤濃度・塩濃度・イオン強度</td><td>分離度</td><td>–</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>添加剤（イオンペア試薬）の濃度</td><td>分離度</td><td>–</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>★移動相の流速（Flow rate of mobile phase）</td><td>分離度, S/N</td><td>++</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>★カラム温度（Column temperature）</td><td>分離度, S/N</td><td>++</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>カラム固定相（Column stationary phase）</td><td>分離度</td><td>+</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>カラム製造元（Column manufacturer）</td><td>分離度</td><td>+</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>UV 検出波長（Wavelength of UV detection）</td><td>ピーク1–6のS/N</td><td>+</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>★ELSD 蒸発器温度（Evaporator temperature of ELSD）</td><td>ピーク7–9のS/N</td><td>++</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>★ELSD ネブライザー温度（Nebulizer temperature of ELSD）</td><td>ピーク7–9のS/N</td><td>++</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>★ELSD ガス流量（Gas flow rate of ELSD）</td><td>ピーク7–9のS/N</td><td>++</td></tr>
+<tr><td>HPLC-UV/ELSD</td><td>ELSD の PMT ゲイン（PMT gain of ELSD）</td><td>ピーク7–9のS/N</td><td>+</td></tr>
+</tbody></table>
+<p>（注：★＝Plackett–Burman 実験計画で用いた11個の独立因子。ただし後述のとおり、Plackett–Burman 設計の Table 2 では因子 F1–F11 として、吸着剤量・試料量・溶出量・溶出速度・移動相ギ酸%・流速・カラム温度・蒸発器温度・ネブライザー温度・ガス流量・PMT ゲインの11因子が割り付けられている。）</p>
+<h2>応答曲面分析（Response surface analysis）</h2>
+<p>3つの中心点（center points）をもつ <strong>Box–Behnken 設計</strong> を用いて、有意因子とモデル化した応答との関係を理解した。水準と選定因子は原著 Table 3 にまとめている。その他の副次的な条件パラメータは一定に保った。実験計画と応答曲面分析も Design-Expert v8.0.6 ソフトウェア（Minnesota, 米国）で実施した。</p>
+<h2>分析デザインスペースとメソッドバリデーション（Analytical design space and method validation）</h2>
+<p>SPE-HPLC-UV/ELSD 法の分析デザインスペースは、応答曲面分析の結果と、Matlab 8.3 ソフトウェア（Massachusetts, 米国）で計算した <strong>モンテカルロ確率マップ（Monte Carlo probability map）</strong> から導出した[26]。</p>
+<p>モンテカルロシミュレーションでは、各操作パラメータのステップ長（step length）を 0.05 とした。すべての実験結果について、モデル化した応答の相対標準偏差（relative standard deviations, RSD）は中心点の RSD 値と同じとみなした。各シミュレーションで正規分布に従う乱数データを生成し、これらのシミュレーションを <strong>10,000 回繰り返して</strong>、各作業点が分析基準を満たす確率を計算した。分析デザインスペースの許容確率水準は <strong>0.90</strong> に設定した。</p>
+<p>最後に、1つの操作作業点（operating work point）において、8項目のメソッドバリデーション、すなわち <strong>システム適合性試験、メソッド頑健性/堅牢性、分析精度、直線性、感度、併行精度、真度、安定性</strong> を実施した。</p>
+<blockquote><strong>訳者補足:</strong> モンテカルロ法とは、乱数で条件のばらつきを何万回も仮想的に振って「どのくらいの確率で規格を満たすか」を数値的に求める手法。ここでは、応答曲面モデル（後述の式2–5）が予測する分離度や S/N に、実測で見られた程度のばらつき（RSD）を乱数で加えたうえで、その作業点が「dR1・dR2 &gt; 1.0、S2 &gt; 50、S3 &gt; 30」という基準を満たす確率を1万回試行で推定する。確率が 0.90 以上の領域が <strong>分析デザインスペース（MODR）</strong> ＝「条件が多少ぶれても品質が保証される安全な操作範囲」となる。</blockquote>
+<hr>
+<h1>結果と考察（Results and discussion）</h1>
+<h2>Plackett–Burman 実験計画</h2>
+<p>すべての測定応答について多重回帰分析を実施した。<strong>dR1、dR2、S2、S3 のモデルが統計的に有意</strong>であり、その他は有意でなかった。これらの応答のうち：</p>
+<ul><li><strong>dR1</strong>：シリンギンとその隣接クロマトグラフィーシグナルの分離度について計算した望ましさ</li><li><strong>dR2</strong>：カリコシン-7-O-β-D-グルコピラノシドとその隣接シグナルの分離度について計算した望ましさ</li><li><strong>S2</strong>：クロマトグラム中のアストラガロシド II の S/N</li><li><strong>S3</strong>：クロマトグラム中のアストラガロシド I の S/N</li></ul>
+<p>原著 Fig. 3a–d は、それぞれ応答 dR1、dR2、S2、S3 の Pareto チャートを示す。</p>
+<ul><li><strong>dR1</strong>（Fig. 3a）：蒸発器温度、カラム温度、吸着剤量、ガス流量、移動相流速 が統計的に有意な因子（p &lt; 0.05）。</li><li><strong>dR2</strong>（Fig. 3b）：移動相流速、蒸発器温度、試料量 がモデル応答に有意な影響（p &lt; 0.05）。</li><li><strong>S2</strong>（Fig. 3c）：蒸発器温度、移動相流速、ガス流量、吸着剤量 が統計的に有意な因子（p &lt; 0.05）。</li><li><strong>S3</strong>（Fig. 3d）：移動相流速、試料量 が統計的に有意な因子（p &lt; 0.05）。</li></ul>
+<p>4つのモデルの決定係数 R² はそれぞれ 0.92、0.98、0.95、0.98 と計算され、調整済み R²（adjusted R²）はそれぞれ 0.86、0.93、0.85、0.92 であった。</p>
+<h3>各因子の物理的解釈</h3>
+<p><strong>溶出速度（elution speed）:</strong> 様々な溶出速度の下でクロマトグラムに大きな差は認められなかった。この知見は、溶出速度の低下が被験物質と吸着剤の接触・相互作用を増加させる一方、低い溶出速度は SPE 工程を長時間化させることを示す。溶出速度、洗浄溶媒、SPE の移送時間（transfer time）は実験計画（DoE）によって最適化され、分散分析（ANOVA）は溶出速度が被験物質の回収に有意な影響を及ぼさないことを示した[27]。被験物質の保持と回収は SPE カートリッジを流れる試料量に依存し、溶出溶媒は標的化合物をすべて溶出できるほど強くあるべきことが認められている[28, 29]。本研究では、溶出溶媒の因子は有意でなかったが、これはおそらく完全抽出（complete extraction）によるものと推察される。</p>
+<p><strong>移動相 pH:</strong> 様々な移動相 pH 値は、イオン性化合物のクロマトグラフィーピークの改善に有効であると報告されている[30, 31]。しかし、測定したすべての化合物が配糖体（glycosides）であったため、移動相 pH はクロマトグラムに有意な影響を及ぼさなかった。</p>
+<p><strong>ネブライザー温度:</strong> 移動相の噴霧化（nebulization）は ELSD の第1段階で生じ、ネブライザーは移動相の流速に合わせて設計されるべきである。低流速では小さな液滴が形成できるため、低温でも移動相の蒸発に十分である[32]。本研究では移動相流速が現状 0.30 mL/min のみであるため、ネブライザー温度は有意な因子ではない。</p>
+<p><strong>ELSD の PMT ゲイン:</strong> 検出シグナルの高感度に影響する。PMT ゲインを増加させるとシグナルは有意に増加するが、ノイズも同時に増加する。望ましい感度を得るには低ゲインが有効である[32]。報告されている観察結果は今回の実験結果とよく一致する。</p>
+<p><strong>結論として</strong>、SPE-HPLC-UV/ELSD のメソッド性能に影響した因子のうち、有意因子は <strong>吸着剤量、試料量、流速、カラム温度、蒸発器温度、ガス流量</strong> であった。HLB カートリッジのサイズは離散変数（discontinuous variable）であるため、応答曲面分析では吸着剤量を一定に保った。</p>
+<h3>原著 Table 2：Plackett–Burman 実験計画（応答 dR1・dR2・S2・S3 を伴う）</h3>
+<p>因子：F1 吸着剤量（mg）、F2 試料量（mL）、F3 溶出量（mL）、F4 溶出速度（mL/min）、F5 移動相中ギ酸（%）、F6 移動相流速（mL/min）、F7 カラム温度（°C）、F8 蒸発器温度（°C）、F9 ネブライザー温度（°C）、F10 ガス流量（L/min）、F11 PMT ゲイン。</p>
+<table>
+<thead><tr><th>Run</th><th>F1</th><th>F2</th><th>F3</th><th>F4</th><th>F5</th><th>F6</th><th>F7</th><th>F8</th><th>F9</th><th>F10</th><th>F11</th><th>dR1</th><th>dR2</th><th>S2</th><th>S3</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>60</td><td>10</td><td>1</td><td>1.0</td><td>0.1</td><td>0.40</td><td>30</td><td>60.0</td><td>50.0</td><td>2.00</td><td>2</td><td>0.81</td><td>1.00</td><td>18.0</td><td>10.5</td></tr>
+<tr><td>2</td><td>10</td><td>5</td><td>2</td><td>0.2</td><td>0.1</td><td>0.40</td><td>30</td><td>110.0</td><td>80.0</td><td>2.00</td><td>2</td><td>0.99</td><td>1.00</td><td>12.2</td><td>8.2</td></tr>
+<tr><td>3</td><td>60</td><td>10</td><td>1</td><td>0.2</td><td>0</td><td>0.40</td><td>30</td><td>110.0</td><td>80.0</td><td>1.00</td><td>4</td><td>0.11</td><td>0.83</td><td>56.1</td><td>29.1</td></tr>
+<tr><td>4</td><td>10</td><td>10</td><td>1</td><td>1.0</td><td>0.1</td><td>0.20</td><td>40</td><td>110.0</td><td>80.0</td><td>1.00</td><td>2</td><td>0.23</td><td>1.00</td><td>43.7</td><td>20.8</td></tr>
+<tr><td>5</td><td>60</td><td>5</td><td>1</td><td>0.2</td><td>0.1</td><td>0.20</td><td>40</td><td>110.0</td><td>50.0</td><td>2.00</td><td>4</td><td>0.00</td><td>1.00</td><td>24.3</td><td>13.5</td></tr>
+<tr><td>6</td><td>60</td><td>5</td><td>2</td><td>1.0</td><td>0.1</td><td>0.20</td><td>30</td><td>60.0</td><td>80.0</td><td>1.00</td><td>4</td><td>0.80</td><td>0.73</td><td>29.8</td><td>11.1</td></tr>
+<tr><td>7</td><td>10</td><td>5</td><td>1</td><td>1.0</td><td>0</td><td>0.40</td><td>40</td><td>60.0</td><td>80.0</td><td>2.00</td><td>4</td><td>0.96</td><td>0.29</td><td>15.6</td><td>9.0</td></tr>
+<tr><td>8</td><td>60</td><td>5</td><td>2</td><td>1.0</td><td>0</td><td>0.40</td><td>40</td><td>110.0</td><td>50.0</td><td>1.00</td><td>2</td><td>0.00</td><td>1.00</td><td>42.0</td><td>22.8</td></tr>
+<tr><td>9</td><td>10</td><td>10</td><td>2</td><td>0.2</td><td>0.1</td><td>0.40</td><td>40</td><td>60.0</td><td>50.0</td><td>1.00</td><td>4</td><td>0.36</td><td>0.00</td><td>41.1</td><td>14.7</td></tr>
+<tr><td>10</td><td>10</td><td>5</td><td>1</td><td>0.2</td><td>0</td><td>0.20</td><td>30</td><td>60.0</td><td>50.0</td><td>1.00</td><td>2</td><td>0.96</td><td>0.66</td><td>34.4</td><td>19.3</td></tr>
+<tr><td>11</td><td>60</td><td>10</td><td>2</td><td>0.2</td><td>0</td><td>0.20</td><td>40</td><td>60.0</td><td>80.0</td><td>2.00</td><td>2</td><td>0.49</td><td>1.00</td><td>60.1</td><td>37.9</td></tr>
+<tr><td>12</td><td>10</td><td>10</td><td>2</td><td>1.0</td><td>0</td><td>0.20</td><td>30</td><td>110.0</td><td>50.0</td><td>2.00</td><td>4</td><td>0.57</td><td>0.53</td><td>49.0</td><td>28.1</td></tr>
+</tbody></table>
+<h2>Box–Behnken 設計と応答曲面分析</h2>
+<p>因子分析の結果に基づき、<strong>吸着剤量は SPE-HPLC-UV/ELSD 性能と負の相関</strong> をもっていた。したがって、応答曲面分析における SPE 手順は吸着剤量 10 mg を用いて実施した。加えて、被験物質の保持・回収に有意な影響が示されなかったため、SPE 手順における試料量は、同定成分のクロマトグラフィー応答を増加させるために 10 mL に設定した。</p>
+<p>望ましい分析効率と経済性のため、溶出速度を除く他の有意でない因子はすべて低水準に固定した。結果として、SPE-HPLC-UV/ELSD は以下の条件で操作した：試料 10 mL、Oasis HLB 抽出カラム 30 μm・1 mL/10 mg、溶出量 1 mL、溶出速度 1.0 mL/min、移動相は水とアセトニトリル、ネブライザー温度 50.0 °C、PMT ゲイン 2。</p>
+<p>一方、移動相流速（<strong>A</strong>）、カラム温度（<strong>B</strong>）、蒸発器温度（<strong>C</strong>）、ガス流量（<strong>D</strong>）を応答曲面法（response surface methodology, RSM）を用いて最適化した。</p>
+<p>多重回帰分析を導入した後、4つの二次多項式（second-order polynomial）フィット式が得られた。原著 Table 4 は、有意でない項を除去して調整した回帰モデルの係数に関する有意性検定結果をまとめている。単純化した二次多項式モデルへの当てはまりの良さは、モデルの決定係数 R² で評価した。モデルの「適合性（fitness）」は確率値（p = 0.0000 &lt; 0.05）と適合欠如検定（lack-of-fit test, p &gt; 0.05）で評価し、応答変数を正確に予測するのに適切なモデルであることが示された。</p>
+<p>コード化データ（coded data）に対する単純化二次多項式モデルは以下の通り：</p>
+<p>$$ d_{R_1} = 2.88 + 0.15B - 0.26AC - 0.80A^2 - 1.47B^2 - 1.10C^2 - 1.08D^2 \tag{2} $$</p>
+<p>$$ d_{R_2} = 2.46 + 0.40B - 0.35AB - 0.46AD - 0.69A^2 - 0.72B^2 - 0.82C^2 - 0.51D^2 \tag{3} $$</p>
+<p>$$ S_2 = 16.09 - 4.57A + 4.81C - 5.88D + 3.75AD - 5.03CD \tag{4} $$</p>
+<p>$$ S_3 = 9.25 + 3.09C - 3.68D + 2.05AD + 1.82BC - 3.05CD + 1.45B^2 \tag{5} $$</p>
+<p>（A＝流速、B＝カラム温度、C＝蒸発器温度、D＝ガス流量）</p>
+<h3>応答曲面（等高線プロット）の解釈</h3>
+<p>二次多項式モデルの2つの独立変数間の平面等高線プロット（planar contour plots）は原著 Fig. 4 に示される。</p>
+<ul><li><strong>Fig. 4a</strong>：流速と蒸発器温度の相互作用がシリンギンとその隣接シグナルの分離度に有意な影響。流速が 0.20→0.30 mL/min、蒸発器温度が 60.0→85.0 °C に増加すると、<strong>dR1 は急速に増加</strong>。しかし、流速と蒸発器温度がそれぞれ 0.30 mL/min と 85.0 °C を同時に超えると、dR1 は下降傾向に転じる。</li><li><strong>Fig. 4b</strong>：流速とカラム温度の相互作用がカリコシン-7-O-β-D-グルコピラノシドとその隣接シグナルの分離度に有意な影響。流速が 0.20→0.30 mL/min、カラム温度が 30→37 °C に増加すると <strong>dR2 は急速に増加</strong>。しかし、カラム温度が 37 °C、流速が 0.30 mL/min を超えると dR2 は有意に下降。</li><li><strong>Fig. 4c・4d</strong>：蒸発器温度が 60.0→110.0 °C に増加し、ガス流量が 2.00→1.00 L/min に減少すると、<strong>S2・S3 はそれぞれ急速に増加</strong>。</li><li><strong>Fig. 4e・4f</strong>：移動相流速と N₂ ガス流量を同時に減少させると S2・S3 が増加。</li></ul>
+<p><strong>物理的解釈:</strong> 低いカラム温度では固定相からの被験物質の脱離（desorption）が遅く、逆に高すぎる温度では類似被験物質の分離が不十分になる[33]。より速い流速は脱離とクロマトグラフィー分離の動的過程を加速し、被験物質の定量を助ける[34]。水系移動相を適用すると、高い蒸発器温度と低いガス流量が噴霧化液滴からの移動相除去を促進し、それによってクロマトグラフィーシグナルの高い S/N（感度）に到達できる[35]。</p>
+<h3>原著 Table 3：Box–Behnken 実験計画（応答 dR1・dR2・S2・S3 を伴う）</h3>
+<p>因子：A 流速（mL/min）、B カラム温度（°C）、C 蒸発器温度（°C）、D ガス流量（L/min）。</p>
+<table>
+<thead><tr><th>Run</th><th>A</th><th>B</th><th>C</th><th>D</th><th>dR1</th><th>dR2</th><th>S2</th><th>S3</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>0.20</td><td>35</td><td>85.0</td><td>1.00</td><td>0.84</td><td>1.00</td><td>79.1</td><td>42.6</td></tr>
+<tr><td>2</td><td>0.30</td><td>35</td><td>85.0</td><td>1.50</td><td>1.00</td><td>1.00</td><td>27.8</td><td>19.1</td></tr>
+<tr><td>3</td><td>0.40</td><td>35</td><td>60.0</td><td>1.50</td><td>1.00</td><td>0.76</td><td>20.0</td><td>13.8</td></tr>
+<tr><td>4</td><td>0.20</td><td>35</td><td>110.0</td><td>1.50</td><td>0.80</td><td>1.00</td><td>57.3</td><td>23.9</td></tr>
+<tr><td>5</td><td>0.30</td><td>30</td><td>85.0</td><td>2.00</td><td>0.13</td><td>0.99</td><td>25.1</td><td>13.6</td></tr>
+<tr><td>6</td><td>0.20</td><td>35</td><td>85.0</td><td>2.00</td><td>0.89</td><td>1.00</td><td>31.5</td><td>14.3</td></tr>
+<tr><td>7</td><td>0.40</td><td>30</td><td>85.0</td><td>1.50</td><td>0.67</td><td>0.90</td><td>37.0</td><td>25.5</td></tr>
+<tr><td>8</td><td>0.30</td><td>40</td><td>85.0</td><td>2.00</td><td>1.00</td><td>1.00</td><td>19.1</td><td>12.7</td></tr>
+<tr><td>9</td><td>0.30</td><td>35</td><td>85.0</td><td>1.50</td><td>1.00</td><td>1.00</td><td>38.2</td><td>22.5</td></tr>
+<tr><td>10</td><td>0.30</td><td>40</td><td>85.0</td><td>1.00</td><td>0.50</td><td>1.00</td><td>52.2</td><td>35.0</td></tr>
+<tr><td>11</td><td>0.30</td><td>35</td><td>110.0</td><td>2.00</td><td>0.61</td><td>0.86</td><td>28.1</td><td>17.3</td></tr>
+<tr><td>12</td><td>0.30</td><td>30</td><td>85.0</td><td>1.00</td><td>0.06</td><td>0.54</td><td>58.4</td><td>33.1</td></tr>
+<tr><td>13</td><td>0.20</td><td>40</td><td>85.0</td><td>1.50</td><td>0.69</td><td>1.00</td><td>49.2</td><td>21.9</td></tr>
+<tr><td>14</td><td>0.40</td><td>40</td><td>85.0</td><td>1.50</td><td>1.00</td><td>0.83</td><td>29.9</td><td>20.7</td></tr>
+<tr><td>15</td><td>0.30</td><td>35</td><td>110.0</td><td>1.00</td><td>0.94</td><td>0.89</td><td>68.8</td><td>42.3</td></tr>
+<tr><td>16</td><td>0.20</td><td>35</td><td>60.0</td><td>1.50</td><td>0.80</td><td>1.00</td><td>42.3</td><td>16.3</td></tr>
+<tr><td>17</td><td>0.30</td><td>30</td><td>110.0</td><td>1.50</td><td>0.04</td><td>0.77</td><td>53.6</td><td>27.1</td></tr>
+<tr><td>18</td><td>0.40</td><td>35</td><td>85.0</td><td>2.00</td><td>1.00</td><td>0.67</td><td>19.8</td><td>13.6</td></tr>
+<tr><td>19</td><td>0.30</td><td>35</td><td>60.0</td><td>1.00</td><td>0.91</td><td>1.00</td><td>15.9</td><td>8.7</td></tr>
+<tr><td>20</td><td>0.40</td><td>35</td><td>110.0</td><td>1.50</td><td>0.53</td><td>0.60</td><td>39.1</td><td>29.2</td></tr>
+<tr><td>21</td><td>0.30</td><td>35</td><td>60.0</td><td>2.00</td><td>0.93</td><td>0.87</td><td>21.4</td><td>11.7</td></tr>
+<tr><td>22</td><td>0.40</td><td>35</td><td>85.0</td><td>1.00</td><td>0.70</td><td>1.00</td><td>32.9</td><td>23.0</td></tr>
+<tr><td>23</td><td>0.30</td><td>40</td><td>110.0</td><td>1.50</td><td>0.41</td><td>1.00</td><td>59.1</td><td>38.9</td></tr>
+<tr><td>24</td><td>0.30</td><td>30</td><td>60.0</td><td>1.50</td><td>0.09</td><td>0.56</td><td>40.3</td><td>23.9</td></tr>
+<tr><td>25</td><td>0.20</td><td>30</td><td>85.0</td><td>1.50</td><td>0.61</td><td>0.29</td><td>45.3</td><td>23.9</td></tr>
+<tr><td>26</td><td>0.30</td><td>40</td><td>60.0</td><td>1.50</td><td>0.29</td><td>1.00</td><td>33.4</td><td>18.9</td></tr>
+<tr><td>27</td><td>0.30</td><td>35</td><td>85.0</td><td>1.50</td><td>0.46</td><td>1.00</td><td>32.9</td><td>20.7</td></tr>
+</tbody></table>
+<h3>原著 Table 4：応答曲面二次モデルの分散分析（ANOVA）</h3>
+<p>（DF＝自由度、Seq SS＝逐次平方和、Adj MS＝調整済み平均平方、A 流速・B カラム温度・C 蒸発器温度・D ガス流量）</p>
+<p><strong>応答 dR1</strong>（モデルの決定係数 R² = 0.95）：</p>
+<table>
+<thead><tr><th>Source</th><th>DF</th><th>Seq SS</th><th>Adj MS</th><th>F 値</th><th>p 値</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td>6</td><td>15.5</td><td>2.58</td><td>56.33</td><td>0.0000</td></tr>
+<tr><td>B</td><td>1</td><td>0.27</td><td>0.27</td><td>5.89</td><td>0.0248</td></tr>
+<tr><td>AC</td><td>1</td><td>0.28</td><td>0.28</td><td>6.09</td><td>0.0227</td></tr>
+<tr><td>A²</td><td>1</td><td>3.45</td><td>3.45</td><td>75.31</td><td>0.0000</td></tr>
+<tr><td>B²</td><td>1</td><td>11.45</td><td>11.45</td><td>249.72</td><td>0.0000</td></tr>
+<tr><td>C²</td><td>1</td><td>6.43</td><td>6.43</td><td>140.09</td><td>0.0000</td></tr>
+<tr><td>D²</td><td>1</td><td>6.22</td><td>6.22</td><td>135.57</td><td>0.0000</td></tr>
+<tr><td>Residual</td><td>20</td><td>0.92</td><td>0.046</td><td></td><td></td></tr>
+<tr><td>Lack of fit</td><td>18</td><td>0.89</td><td>0.050</td><td>4.17</td><td>0.2108</td></tr>
+</tbody></table>
+<p><strong>応答 dR2</strong>（モデルの決定係数 R² = 0.83）：</p>
+<table>
+<thead><tr><th>Source</th><th>DF</th><th>Seq SS</th><th>Adj MS</th><th>F 値</th><th>p 値</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td>7</td><td>8.65</td><td>1.24</td><td>10.40</td><td>0.0000</td></tr>
+<tr><td>B</td><td>1</td><td>1.90</td><td>1.90</td><td>15.96</td><td>0.0008</td></tr>
+<tr><td>AB</td><td>1</td><td>0.49</td><td>0.49</td><td>4.12</td><td>0.0565</td></tr>
+<tr><td>AD</td><td>1</td><td>0.86</td><td>0.86</td><td>7.25</td><td>0.0144</td></tr>
+<tr><td>A²</td><td>1</td><td>2.54</td><td>2.54</td><td>21.36</td><td>0.0002</td></tr>
+<tr><td>B²</td><td>1</td><td>2.74</td><td>2.74</td><td>23.05</td><td>0.0001</td></tr>
+<tr><td>C²</td><td>1</td><td>3.60</td><td>3.60</td><td>30.32</td><td>0.0000</td></tr>
+<tr><td>D²</td><td>1</td><td>1.38</td><td>1.38</td><td>11.65</td><td>0.0029</td></tr>
+<tr><td>Residual</td><td>19</td><td>2.26</td><td>0.12</td><td></td><td></td></tr>
+<tr><td>Lack of fit</td><td>17</td><td>2.23</td><td>0.13</td><td>8.88</td><td>0.1058</td></tr>
+</tbody></table>
+<p><strong>応答 S2</strong>（モデルの決定係数 R² = 0.88）：</p>
+<table>
+<thead><tr><th>Source</th><th>DF</th><th>Seq SS</th><th>Adj MS</th><th>F 値</th><th>p 値</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td>5</td><td>1100.31</td><td>220.06</td><td>24.59</td><td>0.0000</td></tr>
+<tr><td>A</td><td>1</td><td>250.25</td><td>250.25</td><td>27.96</td><td>0.0000</td></tr>
+<tr><td>C</td><td>1</td><td>277.44</td><td>277.44</td><td>31.00</td><td>0.0000</td></tr>
+<tr><td>D</td><td>1</td><td>415.36</td><td>415.36</td><td>46.42</td><td>0.0000</td></tr>
+<tr><td>AD</td><td>1</td><td>56.25</td><td>56.25</td><td>6.29</td><td>0.0205</td></tr>
+<tr><td>CD</td><td>1</td><td>101.00</td><td>101.00</td><td>11.29</td><td>0.0030</td></tr>
+<tr><td>Residual</td><td>21</td><td>187.93</td><td>8.95</td><td></td><td></td></tr>
+<tr><td>Lack of fit</td><td>19</td><td>177.80</td><td>9.36</td><td>1.85</td><td>0.4092</td></tr>
+</tbody></table>
+<p><strong>応答 S3</strong>（モデルの決定係数 R² = 0.86）：</p>
+<table>
+<thead><tr><th>Source</th><th>DF</th><th>Seq SS</th><th>Adj MS</th><th>F 値</th><th>p 値</th></tr></thead>
+<tbody>
+<tr><td>Model</td><td>6</td><td>358.77</td><td>59.79</td><td>20.00</td><td>0.0000</td></tr>
+<tr><td>C</td><td>1</td><td>114.70</td><td>114.70</td><td>38.37</td><td>0.0000</td></tr>
+<tr><td>D</td><td>1</td><td>162.80</td><td>162.80</td><td>54.47</td><td>0.0000</td></tr>
+<tr><td>AD</td><td>1</td><td>16.81</td><td>16.81</td><td>5.62</td><td>0.0279</td></tr>
+<tr><td>BC</td><td>1</td><td>13.32</td><td>13.32</td><td>4.46</td><td>0.0475</td></tr>
+<tr><td>CD</td><td>1</td><td>37.21</td><td>37.21</td><td>12.45</td><td>0.0021</td></tr>
+<tr><td>B²</td><td>1</td><td>13.92</td><td>13.92</td><td>4.66</td><td>0.0433</td></tr>
+<tr><td>Residual</td><td>20</td><td>59.78</td><td>2.99</td><td></td><td></td></tr>
+<tr><td>Lack of fit</td><td>18</td><td>58.65</td><td>3.26</td><td>5.78</td><td>0.1574</td></tr>
+</tbody></table>
+<p>（すべてのモデルで適合欠如検定 p &gt; 0.05＝適合欠如が有意でない＝モデルは妥当。）</p>
+<h2>分析デザインスペース（Analytical design space）</h2>
+<p>先行研究で、<strong>dR1・dR2 が 1.0 超、S2 が 50 超、S3 が 30 超</strong> であれば優れた SPE-HPLC-UV/ELSD 性能が得られることが認められている。モンテカルロ確率マップと分析法の操作性を組み合わせ、SPE-HPLC-UV/ELSD の分析デザインスペース（原著 Fig. 5）を以下のように確立した：</p>
+<ul><li><strong>流速：0.26 〜 0.34 mL/min</strong></li><li><strong>カラム温度：35 〜 37 °C</strong></li><li><strong>蒸発器温度：98.5 〜 102.5 °C</strong></li><li><strong>ガス流量：1.02 〜 1.12 L/min</strong></li></ul>
+<p>生成した分析デザインスペースの真度と頑健性を検査するために検証試験を実施した[36]。分析デザインスペースの <strong>内側の点</strong> と <strong>外側の点</strong> について、それぞれ3反復を実行した。2つの作業点の計算モンテカルロ確率は、それぞれ <strong>0.94</strong> と <strong>0.57</strong> であった。</p>
+<ul><li><strong>デザインスペース内側:</strong> 各測定化合物とその隣接シグナルの分離度は 1.54 超、アストラガロシド II（S2）と I（S3）の S/N はそれぞれ 60.2 と 31.7。</li><li><strong>デザインスペース外側:</strong> カリコシン-7-O-β-D-グルコピラノシドとその隣接シグナルの分離度は 1.33（R2）、ロベチオリンとその隣接シグナルの分離度は 1.26（R3）、アストラガロシド II の S/N（S2）は 18.5、アストラガロシド I の S/N（S3）は 6.3。</li></ul>
+<p>これらの検証結果は、導出した分析デザインスペースが SPE-HPLC-UV/ELSD 分析に良好な分析品質保証を提供することを示す。</p>
+<h2>作業点の選定とメソッドバリデーション（Working point selection and method validation）</h2>
+<p>構築した分析デザインスペースには通常、多数の潜在的作業点が含まれる。分析の柔軟性のため、本研究では分析デザインスペースの中間点（intermediate point）を作業点として選定した。SPE-HPLC-UV/ELSD は以下に調整した：カラム温度 35 °C、流速 0.30 mL/min、蒸発器温度 100.0 °C、ガス流量 1.10 L/min。この点の計算モンテカルロ確率は <strong>0.92</strong> であった。</p>
+<h3>システム適合性試験（System-suitability tests）</h3>
+<p>システム適合性試験のため、混合標準溶液と SFI の6反復を SPE-HPLC-UV/ELSD 法で分析した。分離度値、理論段数（theoretical plates）、テーリング係数（tailing factors）などのパラメータを計算した。これらパラメータの信頼区間（α = 0.05）は原著 Table 5 にまとめている。示されるとおり：</p>
+<ul><li>各ピークの分離度値は 1.50 超</li><li>各ピークのテーリング係数は 1.00〜1.50 の範囲</li><li>各ピークの理論段数は 1.20 × 10⁴ より高い</li><li>6回注入で生成したピーク面積と保持時間の RSD は 2.00% 未満</li></ul>
+<h3>原著 Table 5：システム適合性パラメータの信頼区間（α = 0.05）と相対標準偏差（n = 6）</h3>
+<p>成分：1 シリンギン、2 カリコシン-7-O-β-D-グルコピラノシド、3 ロベチオリン、4 オノニン、5 9,10-ジメトキシプテロカルパン-3-O-β-D-グルコピラノシド、6 2&#x27;-ヒドロキシ-3&#x27;,4&#x27;-ジメトキシイソフラバン-7-O-β-D-グルコピラノシド、7 アストラガロシド IV、8 アストラガロシド II、9 アストラガロシド I。</p>
+<table>
+<thead><tr><th>No.</th><th>理論段数</th><th>分離度（前ピーク）</th><th>分離度（次ピーク）</th><th>テーリング係数</th><th>RSD% ピーク面積</th><th>RSD% 保持時間</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1.20×10⁴–1.22×10⁴</td><td>1.65–1.81</td><td>1.82–1.99</td><td>1.48–1.52</td><td>0.84</td><td>0.34</td></tr>
+<tr><td>2</td><td>1.37×10⁵–1.38×10⁵</td><td>2.24–2.36</td><td>2.55–2.69</td><td>1.13–1.14</td><td>0.23</td><td>0.15</td></tr>
+<tr><td>3</td><td>1.81×10⁵–1.81×10⁵</td><td>1.53–1.64</td><td>1.83–1.88</td><td>1.18–1.21</td><td>0.72</td><td>0.07</td></tr>
+<tr><td>4</td><td>3.56×10⁵–3.62×10⁵</td><td>2.04–2.78</td><td>2.67–2.75</td><td>1.16–1.17</td><td>0.93</td><td>0.06</td></tr>
+<tr><td>5</td><td>3.27×10⁵–3.30×10⁵</td><td>1.82–1.89</td><td>2.18–2.22</td><td>1.10–1.12</td><td>1.09</td><td>0.06</td></tr>
+<tr><td>6</td><td>3.89×10⁵–3.95×10⁵</td><td>2.21–2.28</td><td>2.33–2.53</td><td>1.11–1.14</td><td>0.98</td><td>0.05</td></tr>
+<tr><td>7</td><td>1.61×10⁶–1.64×10⁶</td><td>6.80–6.87</td><td>7.92–8.17</td><td>1.28–1.30</td><td>1.74</td><td>0.03</td></tr>
+<tr><td>8</td><td>1.56×10⁶–1.58×10⁶</td><td>7.92–8.17</td><td>3.99–4.07</td><td>1.27–1.29</td><td>2.20</td><td>0.02</td></tr>
+<tr><td>9</td><td>1.41×10⁶–1.48×10⁶</td><td>2.41–2.45</td><td>–</td><td>1.28–1.30</td><td>1.40</td><td>0.03</td></tr>
+</tbody></table>
+<h3>メソッド頑健性/堅牢性（Method robustness/ruggedness）</h3>
+<p>次に、実験条件の微小変化に対する開発メソッドの非感受性（insensitivity）を検討した。同一ベンダーの異なる C18 クロマトグラフィーカラム、同一サイズの HLB 抽出カラム、異なる保存条件の試料バッチを用い、実験計画を原著 Table 6 に示す。SFI の1バッチを分析してシステム適合性パラメータを評価した。</p>
+<p>これらの実験条件で生成した同定化合物の保持時間と相対ピーク面積の RSD は <strong>3.00% 以内</strong> であった。さらに、標的クロマトグラフィーピークの分離度と S/N は分析基準とよく一致した。テーリングや理論段数などのシステム適合性パラメータは規定限界内であった。各クロマトグラフィーピークとその隣接シグナルの分離度（R1–R6）とアストラガルスサポニンの S/N（S1–S3）は ESM の Table S1 に示される。加えて、2つのそれぞれの HPLC システムでのメソッド性能を比較し、すべての同定クロマトグラフィーシグナルのピーク面積・分離度・S/N に有意差は認められなかった。これらの結果は、開発した SPE-HPLC-UV/ELSD 法が実験条件の微小変化に対して頑健であることを示す。</p>
+<h3>原著 Table 6：分析デザインスペース内でのメソッド頑健性を試験する実験計画</h3>
+<p>（因子：試料バッチ、HLB カラム、試料量、溶出速度、溶出量、C18 カラム、カラム温度、流速、蒸発器温度、ネブライザー温度、ガス流量。試料 1/2＝SFI（Lot: 1305413）を室温／4 °C で別々に保存。HLB カラムは同一サイズの2つの異なるパッケージ。C18 カラムのシリアル番号は 504＝USUYD02504、445＝USUYD02445。）</p>
+<table>
+<thead><tr><th>Run</th><th>試料</th><th>HLB</th><th>試料量(mL)</th><th>溶出速度(mL/min)</th><th>溶出量(mL)</th><th>C18</th><th>カラム温(°C)</th><th>流速(mL/min)</th><th>蒸発器温(°C)</th><th>ネブライザー温(°C)</th><th>ガス流量(L/min)</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>2</td><td>2</td><td>8</td><td>1.2</td><td>1.2</td><td>504</td><td>35</td><td>0.26</td><td>98.5</td><td>52.0</td><td>1.02</td></tr>
+<tr><td>2</td><td>1</td><td>1</td><td>12</td><td>0.8</td><td>1.2</td><td>504</td><td>35</td><td>0.34</td><td>102.5</td><td>52.0</td><td>1.02</td></tr>
+<tr><td>3</td><td>2</td><td>2</td><td>8</td><td>0.8</td><td>0.8</td><td>504</td><td>35</td><td>0.34</td><td>102.5</td><td>48.0</td><td>1.12</td></tr>
+<tr><td>4</td><td>1</td><td>2</td><td>8</td><td>1.2</td><td>1.2</td><td>445</td><td>37</td><td>0.34</td><td>102.5</td><td>48.0</td><td>1.02</td></tr>
+<tr><td>5</td><td>2</td><td>1</td><td>8</td><td>0.8</td><td>1.2</td><td>445</td><td>37</td><td>0.34</td><td>98.5</td><td>52.0</td><td>1.12</td></tr>
+<tr><td>6</td><td>2</td><td>1</td><td>12</td><td>1.2</td><td>1.2</td><td>445</td><td>35</td><td>0.26</td><td>102.5</td><td>48.0</td><td>1.12</td></tr>
+<tr><td>7</td><td>1</td><td>1</td><td>8</td><td>1.2</td><td>0.8</td><td>504</td><td>37</td><td>0.26</td><td>102.5</td><td>52.0</td><td>1.12</td></tr>
+<tr><td>8</td><td>2</td><td>1</td><td>12</td><td>1.2</td><td>0.8</td><td>504</td><td>37</td><td>0.34</td><td>98.5</td><td>48.0</td><td>1.02</td></tr>
+<tr><td>9</td><td>1</td><td>2</td><td>12</td><td>0.8</td><td>1.2</td><td>504</td><td>37</td><td>0.26</td><td>98.5</td><td>48.0</td><td>1.12</td></tr>
+<tr><td>10</td><td>1</td><td>1</td><td>8</td><td>0.8</td><td>0.8</td><td>445</td><td>35</td><td>0.26</td><td>98.5</td><td>48.0</td><td>1.02</td></tr>
+<tr><td>11</td><td>2</td><td>2</td><td>12</td><td>0.8</td><td>0.8</td><td>445</td><td>37</td><td>0.26</td><td>102.5</td><td>52.0</td><td>1.02</td></tr>
+<tr><td>12</td><td>1</td><td>2</td><td>12</td><td>1.2</td><td>0.8</td><td>445</td><td>35</td><td>0.34</td><td>98.5</td><td>52.0</td><td>1.12</td></tr>
+</tbody></table>
+<h3>精度（Precision）</h3>
+<p>SPE-HPLC-UV/ELSD 法の分析精度は、日内（intraday）と日間（interday）の精度を別々にサンプリングして試験し、6回注入で生成した相対ピーク面積の RSD で調べた。すべての同定化合物の分析精度は ESM の Table S2 にまとめている。RSD の大部分は 3.00% 以内であり、分析法の満足な精度を示す。</p>
+<h3>真度（Accuracy）</h3>
+<p>SPE-HPLC-UV/ELSD 法の真度は、同定成分の回収率（recovery）を測定して評価した。混合標準溶液を、試料濃度の 80〜120% の3水準で試料に添加した（n = 9）。各成分の回収率のそれぞれの RSD と信頼区間（α = 0.05）は ESM の Table S2 に示される。すべての回収率は <strong>95.85 〜 105.51%</strong> の範囲であり、開発メソッドの優れた真度を示す。</p>
+<h3>直線性と感度（Linearity and sensitivity）</h3>
+<p>直線性試験のため、異なる濃度の混合標準溶液を調製した（n = 7）。クロマトグラム中の成分 1–6 については、相対ピーク面積を濃度に対してプロットして得た検量線が直線関係を示した。一方、クロマトグラム中の成分 7–9 については、相対ピーク面積の自然対数と濃度の自然対数から直線関係を導いた。</p>
+<p>ESM の Table S2 は、開発した SPE-HPLC-UV/ELSD 法で行った9つの測定化合物の範囲・回帰式・相関係数を示す。決定係数 r &gt; 0.9995 は、検討した化合物の濃度とその相対クロマトグラフィーピーク面積の間の適切な相関を示した。さらに、成分 1–6 の検出限界（LOD）と定量限界（LOQ）はそれぞれ 0.233 ng 未満と 0.665 ng 未満、成分 7–9 の LOD と LOQ はそれぞれ 95.4 ng 未満と 190.8 ng 未満であった。これらの結果は、開発メソッドが SFI の定量分析に高感度であることを示唆する。</p>
+<blockquote><strong>訳者補足:</strong> 成分 7–9（アストラガロシド類）で対数–対数の検量線を用いるのは、ELSD の応答が濃度に対して非線形（べき乗則的）だからである。ELSD の応答は一般に A = a·mᵇ（m は溶質質量、b はおよそ 1 前後の指数）で表され、両辺の対数をとると ln A = ln a + b·ln m と直線化される。UV 検出の成分 1–6 が通常の線形検量線でよいのと対照的で、UV と ELSD を併用する多成分定量に特有の扱いである。</blockquote>
+<h3>併行精度と安定性（Repeatability and stability）</h3>
+<p>開発メソッドの併行精度は、指定試料を用いた SPE-HPLC-UV/ELSD 分析の6反復で検証した。安定性試験は、試料が 4 ± 1 °C で保存したとき 24 時間安定であることを示した。併行精度・安定性試験の結果は ESM の Table S2 に示される。含量測定データの RSD はいずれも許容値 3.00% 以内であり、開発メソッドの良好な安定性と併行精度を示した。</p>
+<hr>
+<h1>結論（Conclusion）</h1>
+<p>植物注射剤の9つの生物活性成分を定量するための SPE-HPLC-UV/ELSD の分析デザインスペースを定義する体系的戦略を提示した。QbD 原理の導入によってメソッドを開発し、分析品質とメソッド頑健性を大幅に改善した。</p>
+<p>この手法では、試料前処理・クロマトグラフィー分離・化合物検出の操作パラメータを <strong>同時に検討</strong> した。リスクアセスメントと因子分析を用いて、クロマトグラフィーピークの分離度と S/N に最大の効果をもつ因子のスクリーニングに成功した。<strong>6因子</strong> がメソッド性能への効果の点で統計的に有意であり、そのうち <strong>4因子（カラム温度、流速、蒸発器温度、ガス流量）</strong> を Box–Behnken 設計と応答曲面分析でさらに検討した。モンテカルロ確率マップを適用して SPE-HPLC-UV/ELSD の分析デザインスペースを構築し、分析品質への保証を提供した。</p>
+<p>選定作業点での検証・頑健性評価は、開発メソッドが選択性と感度の点で優れた性能をもつことを示した。QbD 原理が、分析法開発だけでなく、複雑マトリックス中の試料に対する分析品質の改善においても大きな応用可能性をもつことが実証された。</p>
+<hr>
+<h1>謝辞・利益相反（Acknowledgments / Compliance with ethical standards）</h1>
+<p>本研究は中国国家重点基礎研究発展計画（National Key Basic Research Program of China, No. 2012CB518405）の財政的支援を受けた。<strong>利益相反:</strong> 著者らは利益相反がないことを宣言する。</p>
+<hr>
+<h1>参考文献（References）</h1>
+<ol class="references"><li id="ref-1">Raman NVVSS, Mallu UR, Bapatu HR. J Chem. 2015;2015:8. doi:10.1155/2015/435129.</li><li id="ref-2">ICH (2005) ICH harmonised tripartite guideline. Validation of analytical procedures: text and methodology Q2(R1). International Conference on Harmonisation.</li><li id="ref-3">Bonfilio R, Cazedey ECL, Araújo MB, Salgado HRN. Crit Rev Anal Chem. 2012;42:87–100.</li><li id="ref-4">Karageorgou E, Samanidou V. J Chromatogr A. 2014;1353:131–9.</li><li id="ref-5">Dejaegher B, Heyden YV. Acta Chromatogr. 2009;21:161–201.</li><li id="ref-6">Borman P, Chatfield M, Nethercote P, Thompson D, Truman K. Pharm Tech. 2007;31:142–52.</li><li id="ref-7">Vogt FG, Kord AS. J Pharm Sci. 2011;100:797–812.</li><li id="ref-8">Pohl M, Smith K, Schweitzer M, Hanna-Brown M, Larew J, Hansen G, et al. Pharm Technol. 2010;34:52–9.</li><li id="ref-9">Rozet E, Lebrun P, Debrus B, Boulanger B, Hubert P. TRAC-Trend Anal Chem. 2013;42:157–67.</li><li id="ref-10">Wang L, Chen T, Zeng SS, Qu HB. J Am Soc Mass Spectrom. 2014;25:278–85.</li><li id="ref-11">Ermer J, Nethercote P. Pharm Technol. 2012;36:74–9.</li><li id="ref-12">Hanna-Brown M, Borman P, Bale S, Szucs R, Roberts J, Jones C. Sep Sci. 2010;2:12–20.</li><li id="ref-13">European Medicines Agency (2013) Human medicines development and evaluation.</li><li id="ref-14">Orlandini S, Pinzauti S, Furlanetto S. Anal Bioanal Chem. 2013;405:443–50.</li><li id="ref-15">Debrus B, Lebrun P, Ceccato A, Caliaro G, Rozet E, Nistor I, et al. Anal Chim Acta. 2011;691:33–42.</li><li id="ref-16">Borman PJ, Roberts J, Jones C, Hanna-Brown M, Szucs R, Bale S. Sep Sci. 2010;2:2–8.</li><li id="ref-17">Muteki K, Morgado JE, Reid GL, Wang J, Xue G, Riley FW, et al. Ind Eng Chem Res. 2013;52:12269–84.</li><li id="ref-18">Debrus B, Lebrun P, Kindenge JM, Lecomte F, Ceccato A, Caliaro G, et al. J Chromatogr A. 2011;1218:5205–15.</li><li id="ref-19">Wang Y, Gao S, Zang X, Li J, Ma J. Anal Chim Acta. 2012;716:112–8.</li><li id="ref-20">Shamsipur M, Fattahi N, Assadi Y, Sadeghi M, Sharafi K. Talanta. 2014;130:26–32.</li><li id="ref-21">Tan T, Lai CJS, Zeng SL, Liu EH, Li P. Anal Bioanal Chem. 2014;406:4921–9.</li><li id="ref-22">Liu MH, Tong X, Wang JX, Zou W, Gao H, Su WW. J Pharmaceut Biomed Anal. 2013;74:141–55.</li><li id="ref-23">Wang J, Tong X, Li P, Liu M, Peng W, Cao H, et al. J Ethnopharmacol. 2014;155:405–15.</li><li id="ref-24">Rozet E, Lebrun P, Michiels JF, Sondag P, Scherder T, Boulanger B. J Biopharm Stat. 2015;25:260–8.</li><li id="ref-25">Jimidar M, Bourguignon B, Massart DL. J Chromatogr A. 1996;740:109–17.</li><li id="ref-26">Gong XC, Li Y, Guo ZT, Qu HB. Sep Purif Technol. 2014;132:126–37.</li><li id="ref-27">Liu L, Wen YB, Liu KN, Sun L, Wu M, Han GF, et al. J Chromatogr B. 2013;923–924:8–15.</li><li id="ref-28">Kouzayha A, Iskandarani MA, Mokh S, Rabaa AR, Budzinski H, Jaber F. J Agric Food Chem. 2011;59:7592–600.</li><li id="ref-29">Zander Å, Findlay P, Renner T, Sellergren B. Anal Chem. 1998;70:3304–14.</li><li id="ref-30">Cavazzini A, Marchetti N, Guzzinati R, Pasti L, Ciogli A, Gasparrini F, et al. Anal Chem. 2014;86:4919–26.</li><li id="ref-31">Wu AB, Huang MC, Ho HO, Yeh GC, Sheu MT. Biomed Chromatogr. 2004;18:443–9.</li><li id="ref-32">Froehlich P, Pennanec R (2004) American Laboratory.</li><li id="ref-33">Afsah-Hejri L, Jinap S, Arzandeh S, Mirhosseini H. Food Control. 2011;22:381–8.</li><li id="ref-34">Sistla R, Tata VSSK, Kashyap YV, Chandrasekar D, Diwan PV. J Pharmaceut Biomed Anal. 2005;39:517–22.</li><li id="ref-35">Wan JB, Li P, Li S, Wang Y, Dong TTX, Tsim KWK. J Sep Sci. 2006;29:2190–6.</li><li id="ref-36">Monks K, Molnár I, Rieger HJ, Bogáti B, Szabó E. J Chromatogr A. 2012;1232:218–30.</li></ol><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aoac-2018-04-ginger-nonvolatile-constituents-lc-uv.html">食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）——LC-UV法とSMPR 2017.012適合の検証</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="ssdmc-rrf-uv-wavelength-concentration-polygonum-cuspidatum.html">生薬の一標準多成分定量（SSDMC/QAMS）における相対応答係数（RRF）のためのUV波長と標準液濃度の設計——虎杖（Polygonum cuspidatum）への応用</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="agarwood-lcmsms-qnmr-rplc-hilic.html">生薬の多成分定量指向型品質評価の「フルソリューション」— 沈香（中国産アガーウッド）を例として</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="bushen-huoxue-hplc-cad-six-components.html">HPLC-CAD（荷電化エアロゾル検出器）による補腎活血方（BHP）中6成分の同時定量</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="shenqi-fuzheng-injection-spe-hplc-qbd" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

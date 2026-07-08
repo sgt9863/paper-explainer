@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」">
+<meta property="og:description" content="過去の測定データと分子記述子をベイズ事前分布に取り込んで初期保持モデルを作り、「不確かさ低減」と「良分離追求」を天秤にかける獲得関数で次の1実験を自律的に選ぶ、LC勾配法開発の支援付き能動学習（AAL）。2つの実試料で少数実験の最適化を実証した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/assisted-active-learning-lc-method-development/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="assisted-active-learning-lc-method-development"><h1>液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">機械学習・データ処理</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1021/acs.analchem.4c02700" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">assistedactivelearningformodelbasedmethoddevelopmentinliquidchromatography.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="assisted-active-learning-lc-method-development" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="assisted-active-learning-lc-method-development" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/assisted-active-learning-lc-method-development/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/assisted-active-learning-lc-method-development/ai-infographic.webp" alt="ベイズ×能動学習で「次に打つべき1実験」を自動選定し、少数実験で最適勾配を突き止める" loading="lazy"></a><p>&lt;!-- Bosten et al., Anal. Chem. 2024, 96, 13699−13709 の全訳密度日本語版。 理論・数式が中心の論文のため researcher レベル。数式はOCR崩れを標準形に復元して記載。 図（Figure 1–4）と補足情報（SI）中の図表は原文参照とする。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>標題（原題）: Assisted Active Learning for Model-Based Method Development in Liquid Chromatography</li><li>著者: Emery Bosten, Marie Pardon, Kai Chen, Valerie Koppen, Gerd Van Herck, Mario Hellings, Deirdre Cabooter（責任著者）</li><li>所属: ルーヴェン・カトリック大学（KU Leuven）薬学・薬理学部 医薬品分析部門（ベルギー・ルーヴェン）／ Janssen Pharmaceutica（ベルギー・ベールセ）Therapeutics Development &amp; Supply</li><li>掲載誌・巻号・DOI: Analytical Chemistry, 2024, 96, 13699−13709. DOI: 10.1021/acs.analchem.4c02700</li><li>インパクトファクター: 7.3（Analytical Chemistry, JCR 2024 / Clarivate。分析化学分野 Q1）</li><li>受理経過: 2024年5月24日受領／6月28日改訂／7月1日受理／7月9日公開。© 2024 American Chemical Society</li><li>データ公開: ソースコードは GitHub（https://github.com/EmeryBosten/ALL_MD.git）で公開</li><li>補足情報（SI）: 追加の実験詳細・材料と方法・表・図（Table S1–S6, Figure S1–S18）が無料公開</li></ul>
+<blockquote>補足: 本論文は「モデルベースのLC法開発（method development, MD）」を、ベイズ統計と能動学習（active learning, AL）で自動化する枠組みを提案する理論・方法論寄りの論文である。生薬QCそのものではないが、複雑試料の分離条件を「少ない実験数で」最適化する手法として、方剤・生薬の多成分HPLC条件設計にも直接応用できる。ダウンロード元が「TSUMURA &amp; CO（ツムラ）」と本文脚注に記録されており（原文10ページ相当）、漢方QC実務での関心を示唆する。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>近年、様々な分野で複雑な最適化問題に取り組む完全自動化手法への関心が高まっている。能動学習（AL）と、その変種で外部からの誘導・支援を学習過程に取り込む「支援付き能動学習（assisted active learning, AAL）」は、問題空間を効率的に探索するための最適な実験条件を自律的に選択できるようにすることで、この自動化に重要な役割を果たす。これらのアプローチは、実験にコストや時間がかかる状況で特に価値が高い。</p>
+<p>本研究は、ベイズ統計を用いて過去データと分析対象物（アナライト）情報を取り込み初期保持モデルを生成することで、液体クロマトグラフィー（LC）のモデルベース法開発（MD）に AAL を適用することを探究する。このプロセスは、新しい実験に基づいてモデルパラメータを更新することと、次のステップで実行すべき最も情報量の多い実験を選ぶ能動データ選択法とを組み合わせる。この反復プロセスは、満足のいく分離が達成されるまで、モデルの「活用（exploitation）」と実験的「探索（exploration）」のバランスを取る。</p>
+<p>本アプローチの有効性は、2つの実践例を通じて、勾配傾き（gradient slope）を最適化することで限られた実験数で最適分離を得られることによって実証される。AAL が過去の知識と化合物情報を活用して精度を向上させ実験回数を減らせる能力は、固定的な設計法に対する柔軟な代替アプローチを提供することが示される。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>過去数十年、複雑で多次元的な問題の最適化のための完全自動化・完全自律的手法の開発への関心が大きく高まってきた。これらの最適化問題はしばしば複数の実験変数の同時探索を必要とし、通常は高度な技能と経験を持つ科学者を要する。人間を意思決定ループから外す自動最適化手法の最近の例には、合成化学における反応最適化の自動化、材料設計における最適プロセスパラメータの同定、半導体プロセス開発の改善、画像空間のナビゲーションを誘導する自律顕微鏡の開発などがある。</p>
+<p>実験変数最適化の自動化には、能動学習（AL）が重要な役割を果たす。ALは、学習または情報獲得を最適化するために実験の途中で実験条件や変数を能動的に選択・調整できる統計的パラダイムである。ALの目標は、研究対象の系について効率的に学ぶために、次にサンプリングすべき最も情報量の多い（valuable）実験条件を同定することである。このアプローチは、実験が高価・時間浪費的・資源集約的な状況で特に価値がある。</p>
+<p>より最近では、外部ソースからの誘導・支援を取り込んで意思決定を助け学習過程の効率と有効性を高める AL の変種、すなわち「支援付き能動学習（AAL）」に注目が移ってきた。この支援は、最適化問題の文脈と目標に応じて様々な形を取りうる。よく使われる外部ソースは物理情報の取り込みであり、最適化を物理的制約や法則で誘導する。同様に、AL に人間の介入を組み合わせて最適化の効率を高める場合もある。AAL の一般的な考え方は、不確かさが高い最適化の初期段階では提供された誘導が AL アルゴリズムを上回り（overpower）、後の段階で能動学習器が引き継いで全体の学習を加速する、というものである。</p>
+<p>試料中の全化合物のベースライン分離につながるクロマトグラフィー条件の最適化過程は、LCでは「法開発（method development, MD）」と呼ばれる。MDでは、勾配プログラム、移動相のpH、流速、カラム温度、カラム寸法、注入量など、クロマトグラフィー過程を制御する複数の操作パラメータが変化させられる。これらのパラメータは試料の分離とLCシステム全体の性能に大きな影響を与え、その最適化は通常、多大な時間と人手を要する。逐次シンプレックス法、進化的アルゴリズム、ベイズ最適化などの能動学習法が、分離を最適化するために実験計画に含める最も情報量の多い実験を能動的に選ぶことで、MD手順を自動化・加速するために近年導入されてきた。</p>
+<p>あるいは、MDは経験的または機構的な保持モデル（retention model）によって支援できる。保持モデルは、化合物の保持挙動を、移動相中の強溶媒濃度・勾配条件・温度・移動相pHなどの実験条件に関係づける。これらの保持モデルには、モデルを使う前に推定する必要のあるハイパーパラメータ（保持パラメータ）が含まれる。これには、実験条件を変化させた探索的なラン（exploratory runs）が入力として必要となる。保持パラメータ（したがって保持モデル）が得られれば、それを用いて様々な条件での化合物の保持挙動を近似できる。</p>
+<p>これらの保持モデルで得られる予測の信頼性は、実験入力の選択に決定的に依存する。さらにLCの実験測定は高価で遅いため、多くの場合、まばら（sparse）で準最適な入力セットになってしまう。加えて、大半のモデルベースMD戦略は、手元の試料を考慮せず固定的な標準実験セットを適用する。これは、不適切な保持パラメータ推定・低い予測品質・結果としての頑健性欠如を招きうる。したがって重要な目的は、できるだけ少ない実験ステップで最適な予測が達成されるよう、最も情報量の多い実験ランを選択することである。</p>
+<p>LCにおけるモデルベースMDを高速化・高精度化する魅力的な解決策が AAL の導入である。AAL は、過去のMD実験や化合物の構造的・物理化学的情報から得られる利用可能な知識を価値化（valorize）できる。現在、長年にわたって収集された大量のデータが、オープンソースデータベースの形で文献中に、また研究室内に私的に、あるいは単に分析者の一般的専門知識として存在している。ALに取り込めば、このデータはMD過程を大きく高速化しうる。一方で化合物の構造情報の取り込みは、定量的構造保持相関（quantitative structure-retention relationships, QSRR）において確立された手法であり、化合物の化学構造をそのクロマトグラフィー挙動（特に保持時間）に関係づける数理モデルが開発されてきた。重要な進歩が遂げられてはいるものの、MDを支援するのに十分な精度で構造情報のみから保持時間を推定することは、依然として複雑な課題である。</p>
+<p>Wiczling らは、化合物構造情報と予備実験の双方を組み合わせて保持モデルのパラメータを推定するベイズ的アプローチを開発した。この概念は、1〜最大3成分をアイソクラティック条件で扱う比較的単純な事例では非常に強力だったが、勾配条件下でより複雑な試料の最適法を探索する完全自動MDプロセスにはまだ組み込まれていなかった。</p>
+<p>ALが提供するデータ駆動型で柔軟な実験選択アプローチは、Drylab・ChromSword・ACD/Autochrom などの現行の法開発ソフトウェアパッケージが採用する固定的な実験計画（Design of Experiment, DoE）手順とは対照的に、原理上は必要な実験ランを削減しつつ、同時に最適な予測結果を提供できる。これは、データ駆動型アプローチが試料の個別性とその独自の要件を勘案し、手元の試料が提供する情報に合わせて実験ランを調整するためである。</p>
+<p>Bos らは、次の実験ランの選択を計算保持モデルの結果によって決定する完全自動データ駆動型MDアプローチを開発した。具体的には、最適分離条件を保持モデルで計算し、それを次の実験で実施する。生成されたデータで保持モデルを更新し、新たな最適分離を推定してこの過程を繰り返す。しかし決定が固有の誤差を含むモデルに基づいていたため、特に保持モデルが乏しいデータ点に基づく初期ステップでは予測誤差が大きく、誤った結果を招いた。AALの枠組みは、最初の実験ステップで事前知識に依拠し、実験空間が十分に探索されるようにすることで、後段で保持モデルがより広い範囲で正確にモデル化されるようにして、このリスクを低減する。</p>
+<p>LCのモデルベースMDに AAL を適用するため、本研究では、保持モデルパラメータの事前分布から出発してベイズ統計を革新的に用い、過去データと物理化学的アナライト情報を導入して現実的な初期保持モデルを生成する。これらのパラメータは、新実験が行われるにつれ事後確率分布へと逐次更新される。これは、現在のモデルの不確かさと、最も最適な予測分離を与えるパラメータ空間の領域とに基づいて、最も顕著な（salient）実験を自動的に選ぶ独自の能動データ選択手順（SI Figure S1）と組み合わされる。これにより、現在の保持モデルの予測の「活用」と、実験空間の「探索」との適切なバランスが確保される。これらのステップは、適切な分離が達成されるか、モデルの不確かさがこれ以上低減できなくなるまで繰り返される。有効性は、勾配傾きを最適化することで2つの試料の最適分離を削減された実験セットで同定する2つの実践例で実証される。</p>
+<h2>2. 理論（Theory）</h2>
+<h3>2.1 保持モデル（Retention Models）</h3>
+<p>アナライトがクロマトグラフィーカラムを移動するのに要する時間を保持時間（retention time, <em>t</em>&lt;sub&gt;r&lt;/sub&gt;）と呼び、アナライトが固定相に保持される時間と移動相中を移動する時間の比を保持因子（retention factor, <em>k</em>）と呼ぶ。保持時間 <em>t</em>&lt;sub&gt;r&lt;/sub&gt; と保持因子 <em>k</em> は、pH・温度・移動相組成など、アナライト固有および実験的なクロマトグラフィーパラメータに依存する。</p>
+<p><em>t</em>&lt;sub&gt;r&lt;/sub&gt; または <em>k</em> を1つ以上の実験パラメータに関係づける多くの式が「保持モデル」として提案されてきた。経験的保持モデルは典型的に、抽象的（すなわちクロマトグラフィーの特定の相互作用／機構に結びつかない）複数のモデルパラメータを特徴とする。保持モデリングとは、実験データ（いわゆるスカウティングラン, scouting runs）からモデルパラメータを推定し、保持モデルの内挿・外挿によって新しいデータを推定する過程である。</p>
+<p>大半の保持モデルは、<em>t</em>&lt;sub&gt;r&lt;/sub&gt; または <em>k</em> を移動相中の有機修飾剤の体積分率（φ）に関係づける。φは分離に大きな影響を与えると同時に、広い値域で容易に調整できるためである。</p>
+<p>本研究では、アナライトの保持時間 <em>t</em>&lt;sub&gt;r&lt;/sub&gt; を勾配傾き <em>S</em> に関係づける3次（cubic）保持モデルを用いた（式1）:</p>
+<p>$$t_\mathrm{r} = a + b \times S + c \times S^2 + d \times S^3 \tag{1}$$</p>
+<p>ここで <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> は各アナライトについて推定すべきモデルパラメータであり、<em>S</em> は次式で定義される（式2）:</p>
+<p>$$S = \frac{\varphi_\mathrm{end} - \varphi_0}{t_\mathrm{g}} \tag{2}$$</p>
+<p>φ&lt;sub&gt;0&lt;/sub&gt; と φ&lt;sub&gt;end&lt;/sub&gt; は勾配の開始時・終了時の強溶出溶媒の分率、<em>t</em>&lt;sub&gt;g&lt;/sub&gt; は勾配時間である。</p>
+<p>アナライトの物理化学的情報を過程に取り込むため、階層的（hierarchical）化合物保持モデルを構築した。これはデータ内の入れ子状／階層的構造を明示的に表現する統計的枠組みであり、パラメータを各階層で変動させることで、階層の複数レベルでの依存関係と変動を勘案する。本研究では、3次保持モデルのパラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> を、アナライトの代表的物性の線形結合でモデル化した（式3〜6）:</p>
+<p>$$a = a_0 + a_1 \times \log P + a_2 \times n_\mathrm{HBDon} \tag{3}$$</p>
+<p>$$b = b_0 + b_1 \times \log P + b_2 \times n_\mathrm{HBDon} \tag{4}$$</p>
+<p>$$c = c_0 + c_1 \times \log P + c_2 \times n_\mathrm{HBDon} \tag{5}$$</p>
+<p>$$d = d_0 + d_1 \times \log P + d_2 \times n_\mathrm{HBDon} \tag{6}$$</p>
+<p>ここで <em>a</em>&lt;sub&gt;0&lt;/sub&gt;, <em>a</em>&lt;sub&gt;1&lt;/sub&gt;, <em>a</em>&lt;sub&gt;2&lt;/sub&gt;, <em>b</em>&lt;sub&gt;0&lt;/sub&gt;, <em>b</em>&lt;sub&gt;1&lt;/sub&gt;, <em>b</em>&lt;sub&gt;2&lt;/sub&gt;, <em>c</em>&lt;sub&gt;0&lt;/sub&gt;, <em>c</em>&lt;sub&gt;1&lt;/sub&gt;, <em>c</em>&lt;sub&gt;2&lt;/sub&gt;, <em>d</em>&lt;sub&gt;0&lt;/sub&gt;, <em>d</em>&lt;sub&gt;1&lt;/sub&gt;, <em>d</em>&lt;sub&gt;2&lt;/sub&gt; は全アナライトで共有される線形回帰モデルの高レベルパラメータであり、それぞれ低レベルパラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> をモデル化する。log <em>P</em> はアナライトのオクタノール／水間分配係数の対数、<em>n</em>&lt;sub&gt;HBDon&lt;/sub&gt; はアナライトの水素結合供与体（hydrogen bond donor）の数である。したがって下位レベルの3次保持モデルのパラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> は各アナライトに固有で、その物性に線形に依存する。このようにして、化合物保持モデルの形状はアナライトの物理化学的特性に直接影響される。</p>
+<p>さらに、ベイズ的枠組みを用い、すべての化合物保持モデルパラメータを確率分布でモデル化し、ベイズの定理で逐次更新した。これにより、まずパラメータについての事前知識を含め、次に観測データに基づいてパラメータを更新し、事前知識と新しい証拠のバランスを取る事後分布を得ることができた。ベイズの定理の図解は SI Figure S2 に、ベイズ階層的化合物保持モデルを表す図は SI Figure S3 に示す。</p>
+<blockquote>補足（式3〜6の記号について）: 原文PDFではOCRの都合で式4の第2項が「b01」と表記されていたが、式構造（各パラメータを <em>a</em>&lt;sub&gt;i&lt;/sub&gt;, <em>b</em>&lt;sub&gt;i&lt;/sub&gt;, <em>c</em>&lt;sub&gt;i&lt;/sub&gt;, <em>d</em>&lt;sub&gt;i&lt;/sub&gt; の3係数でモデル化）から標準的な <em>b</em>&lt;sub&gt;1&lt;/sub&gt; と解される。ここでは統一して <em>b</em>&lt;sub&gt;1&lt;/sub&gt; と記した。</blockquote>
+<h3>2.2 能動データ選択（Active Data Selection）</h3>
+<p>能動データ選択では、最少のステップ数で最大の情報量が得られるように実験を能動的に選ぶ。これは、モデルの出力分散を最大限に低減する（＝モデルの平均二乗誤差を最小化する）ことで達成できる。目標は、新しい訓練例を追加することがモデルの計算分散をどう変化させると期待されるかを推定することである。</p>
+<p><em>n</em> 個の実験の集合 <em>x</em> と、対応する <em>n</em> 個の結果値 <em>y</em> から構成される訓練集合 <em>t</em> が与えられたとき、能動データ選択を用いて、新規実験 <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; とその未知の対応結果値 <em>y</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; を <em>t</em> に追加した効果を計算できる。</p>
+<p>現在のモデルが既にかなり良好であるとの仮定の下、与えられた参照入力 <em>x</em>&lt;sub&gt;r&lt;/sub&gt; に対し、新しい例 <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; を追加すると、参照入力 <em>x</em>&lt;sub&gt;r&lt;/sub&gt; における出力分散の変化 Δvar(<em>x</em>&lt;sub&gt;r&lt;/sub&gt;) は次式に等しいことが示されている（式7）:</p>
+<p>$$\Delta \mathrm{var}(x_\mathrm{r}) = \frac{\mathrm{cov}(x_\mathrm{r}, x_{n+1})^2}{1 + \mathrm{var}(x_{n+1})} \tag{7}$$</p>
+<p>したがって var(<em>x</em>&lt;sub&gt;r&lt;/sub&gt;) の期待値を最小化するには、式7の右辺を最大化するように <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; を選択すべきである。</p>
+<p>式7は単一点 <em>x</em>&lt;sub&gt;r&lt;/sub&gt; における期待分散変化のみを与えるが、求められているのは <em>x</em> の全域にわたる平均分散の最小化である点に注意を要する。全域にわたる明示的な積分は計算困難（intractable）なため近似が必要であり、固定した参照点の集合を用い、それらの上で期待分散変化を測る。</p>
+<p>ベイズ統計の場合、式7による出力分散変化 Δvar(<em>x</em>&lt;sub&gt;r&lt;/sub&gt;) の計算はかなり単純である。系のすべてのパラメータが正規分布などの確率分布でモデル化されているため、共分散 cov(<em>x</em>&lt;sub&gt;r&lt;/sub&gt;, <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt;) と分散 var(<em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt;) の双方を、あらゆる <em>x</em>&lt;sub&gt;r&lt;/sub&gt; と <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; の組み合わせについて事後分布から直接導出できる。</p>
+<p>しかしモデルベース法開発では、主要な関心は最適な精度で保持モデルを推論することだけにとどまらない。同等に重要なのが、モデル予測に基づく最適分離条件の同定である。したがって、クロマトグラフィー分離の品質を定量化する目的関数（goal function）が必要となる。しばしば「臨界対（critical pair）」の分解能、すなわち最も近接して溶出する2成分の分離度が用いられる。分解能（<em>R</em>&lt;sub&gt;s&lt;/sub&gt;）は次式で決まる（式8）:</p>
+<p>$$R_\mathrm{s} = \frac{2 \times (t_\mathrm{r2} - t_\mathrm{r1})}{w_\mathrm{b1} + w_\mathrm{b2}} \tag{8}$$</p>
+<p><em>w</em>&lt;sub&gt;b&lt;/sub&gt; はベースラインでのピーク幅、添字1と2は2成分（アナライト1がアナライト2より先に溶出）を指す。</p>
+<p>分解能に加え、分析所要時間もしばしば考慮される。これら2つの基準を単一の目的関数に結合する簡単な例が、次のクロマトグラフィー応答関数（chromatographic response function, CRF）である（式9）:</p>
+<p>$$\mathrm{CRF} = n_\mathrm{obs} + R_\mathrm{s}^{*} \tag{9}$$</p>
+<p>CRFの値は、追加の化合物が分離されるたびに1増加し（観測ピーク数 <em>n</em>&lt;sub&gt;obs&lt;/sub&gt; で数える）、<em>R</em>&lt;sub&gt;s&lt;/sub&gt;&lt;sup&gt;*&lt;/sup&gt; は臨界対の正規化分解能を表す。これにより、追加で分離された化合物は、臨界対の分解能に対するいかなる追加的な利得をも必ず上回ることが保証される。</p>
+<p>したがってモデルベースMDにおける能動データ選択の目的は、化合物保持モデルの精度を向上させ、かつ式9を最大化して最適分離を提供する新規実験 <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; を同定することである。ゆえに能動データ選択を通じて最も顕著な実験 <em>x</em>&lt;sub&gt;<em>n</em>+1&lt;/sub&gt; の選択を支配する最終的な最適化関数（獲得関数, acquisition function）は、式7と式9の双方の組み合わせとなる（式10）:</p>
+<p>$$x_{n+1} = \max_{x} \left[ \mathrm{CRF}(x_\mathrm{pot}) + \lambda \times \Delta \mathrm{var}(x_\mathrm{pot}) \right] \tag{10}$$</p>
+<p><em>x</em>&lt;sub&gt;pot&lt;/sub&gt; はすべての潜在的な次実験の集合、CRF(<em>x</em>&lt;sub&gt;pot&lt;/sub&gt;) は実験 <em>x</em>&lt;sub&gt;pot&lt;/sub&gt; のクロマトグラフィー応答関数の値、Δvar(<em>x</em>&lt;sub&gt;pot&lt;/sub&gt;) は分散変化、λ は2つの項に配分する重みを均衡させるハイパーパラメータである。ハイパーパラメータ λ は、訓練集合 <em>t</em> のサイズが増えるにつれ指数的に減少する（式11）:</p>
+<p>$$\lambda = \frac{1}{(1 + n_\mathrm{exp})^2} \tag{11}$$</p>
+<p><em>n</em>&lt;sub&gt;exp&lt;/sub&gt; は現在のステップに含まれる実験数である。これにより、より多くの実験が訓練集合に組み込まれるにつれ、実験空間の探索への重みが減り、満足のいく分離の達成への重みが増す。こうして能動学習アプローチは、パラメータ空間を探索してモデル性能を高める実験の選択を優先しつつ、現在のモデル予測を活用して分離効率を最適化するように調整される。</p>
+<h2>3. 材料と方法（Materials and Methods）</h2>
+<h3>3.1 実験ラン</h3>
+<p>AAL MDアプローチは、2つの異なる試験試料（試料A・試料B）で評価した。いずれの場合も、勾配傾きを最適化すべきクロマトグラフィーパラメータとして、各試験試料の最適分離条件を同定することを目的とした。2つのケースは、試験試料の組成と、過去データ（historical data）として用いたアナライトが異なる。試験試料に含まれる化合物、両ケースで過去データとして用いた化合物、およびそれらの log <em>P</em>・<em>n</em>&lt;sub&gt;HBDon&lt;/sub&gt;・保存溶媒・供給業者は SI Table S1 に示す。</p>
+<p>全アナライトの保持時間は、17通りの異なる勾配傾きについて収集した（SI Table S2）。ここでアセトニトリル分率（φ&lt;sub&gt;ACN&lt;/sub&gt;）を 0.05 から 0.95 まで、4〜20分の異なる勾配時間で変化させた。化学薬品と装置に関する追加情報は SI の Section S-1・S-2 に記載。</p>
+<h3>3.2 分子記述子の選択</h3>
+<p>限定した分子記述子集合を選ぶために適用したモデル選択アプローチは、SI の Section S-3 に詳述。</p>
+<h3>3.3 モデルパラメータの事前推定（Prior Estimation）</h3>
+<p>試験試料中のアナライトの初期保持モデルを生成するため、事前保持モデルのパラメータ推定値を、過去データとして用いたアナライトの結果から推論した。まず、各過去アナライトについて3次保持モデル（式1）のパラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> を、R の <code>lm</code> 関数（stats version 3.6.2）で線形モデルを当てはめて計算した。ここで保持時間を応答変数、勾配傾きを入力変数とした。次に、平均と標準偏差を計算して事前の低レベル <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> パラメータ分布を導いた。さらに高レベルパラメータ <em>a</em>&lt;sub&gt;0&lt;/sub&gt;, <em>a</em>&lt;sub&gt;1&lt;/sub&gt;, <em>a</em>&lt;sub&gt;2&lt;/sub&gt;, <em>b</em>&lt;sub&gt;0&lt;/sub&gt;, <em>b</em>&lt;sub&gt;1&lt;/sub&gt;, <em>b</em>&lt;sub&gt;2&lt;/sub&gt;, <em>c</em>&lt;sub&gt;0&lt;/sub&gt;, <em>c</em>&lt;sub&gt;1&lt;/sub&gt;, <em>c</em>&lt;sub&gt;2&lt;/sub&gt;, <em>d</em>&lt;sub&gt;0&lt;/sub&gt;, <em>d</em>&lt;sub&gt;1&lt;/sub&gt;, <em>d</em>&lt;sub&gt;2&lt;/sub&gt; の事前分布も <code>lm</code> 関数で計算した。ここでは低レベルモデルパラメータ値 <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> を応答変数、log <em>P</em> と <em>n</em>&lt;sub&gt;HBDon&lt;/sub&gt; 値を入力変数とした（式3〜6）。</p>
+<h3>3.4 グラウンドトゥルース保持モデルと応答曲面の推定</h3>
+<p>AALアプローチで得た化合物保持モデルと最適分離条件決定能力を評価するため、CRFの図的表現に対応する応答曲面と化合物保持モデルを「グラウンドトゥルース（ground truth, 真値）」として構築し、AALモデル・応答曲面と比較した。グラウンドトゥルースの化合物保持モデルとそれに対応する応答曲面は、17通りすべての異なる勾配の全測定保持時間をモデリングステップに含めて得たもので、それぞれ Figure 1A・1B に示す。グラウンドトゥルース保持モデルは R の <code>lm</code> 関数（stats version 3.6.2）で計算した。SI Table S3 にグラウンドトゥルースモデルの低レベル化合物保持モデルパラメータの推定値と標準誤差を示す。AALとグラウンドトゥルースの結果の類似性を測るため、R の <code>rmse</code> 関数（Metrics version 0.1.4）で二乗平均平方根誤差（RMSE）を計算した。</p>
+<h3>3.5 ベイズ階層保持モデル</h3>
+<p>3次保持モデルは、AAL法の探索ステップに必要な局所的柔軟性を勘案するため、およびベイズ枠組み内での適用の容易さから選ばれた。モデルパラメータは追加的な単純化のため独立と仮定した。本研究の階層保持モデルは Stan で実装し、その R インターフェースである RStan（version 2.32.6）を用いた。モデルは3本の連鎖（chains）で最低15,000回反復して当てはめ、ウォームアップ（warm-up）は最低8,000ステップとし、まばらなデータ条件下でもパラメータの適切な混合（mixing）と収束を確保した。</p>
+<h3>3.6 能動データ選択（実装）</h3>
+<p>出力分散変化（式7）・CRF（式9）・最適化関数（式10）は R で実装した。</p>
+<h2>4. 結果と考察（Results and Discussion）</h2>
+<p>AALアプローチのモデルベースMDにおける性能は、勾配傾きを最適化することで2つの異なる試験試料の最適分離条件を見つける能力によって評価した。AAL MDアプローチの目標は、最適法条件に対応するグラウンドトゥルース応答曲面の最大値の位置を、自律的に、かつできるだけ少ないステップで同定することであった。</p>
+<h3>4.1 過去データからの初期化合物保持モデルの生成</h3>
+<p>AALアプローチの第1ステップは、過去データと物理化学的化合物情報に基づいて事前保持モデルのパラメータ推定値を推論し、それを試験試料アナライトの初期化合物保持モデルとして用いることであった。SI Table S4・S5 に、過去データと物理化学的情報から導いた階層保持モデルの高レベル・低レベルパラメータの推定値を示す。</p>
+<p>さらに SI Figure S4 に、代表例としてアナライト「テストステロン」の保持モデルパラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> の対応する正規事前分布を示す。このアナライトについて、パラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> の平均はそれぞれ 11.342, −1.278, 0.071, −0.0014 であった。テストステロンおよび他の試験試料アナライトについて、パラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> の分布はこの段階で比較的広い分散を示した。これは、推論されたモデルが事前知識のみに基づき、この段階では実際の実験が一切行われていないことによる高い不確かさを反映している。</p>
+<p>Figure 1C に全アナライトの初期化合物保持モデルを、Figure 1D に対応する初期応答曲面を示す。さらに Figure 2A は、テストステロンの個別化合物保持モデル（黒線）をその不確かさとともに示す。他の個別化合物保持モデルは SI Figure S5 に示す。灰色のモデル不確かさは、勾配傾きが高い値でより大きな不確かさを示す。これは、初期モデルの構築において、より高い割合の観測が低い傾きで行われたためと考えられる。したがってモデルはこれらの傾き値についてより多くの情報を持ち、不確かさが低くなった。黒点はテストステロンの17通りの勾配実験での測定保持時間で、この段階ではまだモデルに使われていない。その存在は現在のモデルの性能を示すためだけのものである。グラウンドトゥルースの化合物保持モデル（Figure 1A）や実際の実験結果（黒点）と比較して過度に正確ではないものの、個々のアナライトの一般的傾向と全体的特異性は、この早期段階で初期モデルによって既によくモデル化されている。これは Table 1 の低いRMSEと、グラウンドトゥルース対初期保持時間をプロットした SI Figure S6 でさらに裏付けられる。</p>
+<p>反対に、初期応答曲面（Figure 1D）は、そのグラウンドトゥルース版（Figure 1B）とはよく対応しない。最適勾配値が真の最適値の近傍になく、応答曲面の一般的な挙動もグラウンドトゥルース応答曲面の傾向に従わないためである。さらに Figure 2B は初期獲得関数を示す。これは初期応答曲面を通じて現在のモデル予測を勘案し、有望な分離につながると思われる実験を選ぼうとする（Figure 1D の現在の予測に基づく）。同時に、灰色で示されるモデル周りの不確かさ（Figure 2A・S5）が考慮され、実験空間が十分に探索されてモデル精度が向上するようにする。獲得関数の値が高いほど、AALアルゴリズムは次のステップでその実験を実行しようとする。最初の実験では、トレードオフは探索項に均衡が傾き、主にモデル精度を向上させて不確かさを低減する実験が選好される。これを勘案すると、第1ステップとして実行すべき最も顕著な実験は勾配傾き 22.5、すなわち 4分で 5→95% ACN への勾配（Table 1 の step 1）であった。したがって均衡は主にモデル不確かさの低減に傾き、初期ステップでは歪みうる現在のモデル予測の活用には大きく傾かなかった。</p>
+<h3>4.2 最初の実験（First Experiments）</h3>
+<p>SI Figure S7A は、実験データ（step 1）を事前パラメータ分布に統合し、ベイズの定理で事後パラメータ分布を推論して得た更新後の化合物保持モデルを示す。化合物保持モデルは最初、初期モデルと比べていったん悪化するように見える。これはグラウンドトゥルース保持モデルに対するRMSEの著しい増加で分かる（Table 1, step 1）。同様に SI Figure S7B のテストステロンの更新個別保持モデルは、実際の実験測定（黒点）からさらに外れた保持時間を推定するように見える。</p>
+<p>初期の性能悪化は必ずしも意外ではない。単一の実験測定をモデリングステップに統合すると、この段階では制約がほとんど課されないため、可能なモデル結果に大きな自由度が生じる。これは SI Figure S7B に示される、まだ探索されていないパラメータ領域に対応する低い傾き値での過度に高い不確かさでさらに例示される。モデルを改善するには、モデルにとってまだ未知のこれらの領域で示唆を与える実験測定が必要である。SI Figure S7C は更新後の応答曲面を示すが、この時点ではグラウンドトゥルース応答曲面（Figure 1B）に向けて大きくは進化していなかった。獲得関数の計算ではモデル不確かさが決定的要因として優勢となり、比較的低い傾き 8.18（11分で 5→95% ACN への勾配）が次の実験ランとして選ばれた（SI Figure S7D）。これは最も高い不確かさを持つパラメータ領域（SI Figure S7B）に対応する。</p>
+<p>第2の実験測定の統合（step 2）は、既にモデリング性能の顕著な改善をもたらし、グラウンドトゥルースモデルに対するRMSEの著しい減少（Table 1, step 2）と、実際の実験測定を合理的によく推定できた SI Figure S8 の個別化合物保持モデルで裏付けられた。RMSEは、フルオキセチン（アナライトA2）とクリンダマイシン（A5）を除き、初期モデルより低い値に達した。この相対的な精度不足の理由は、観測データがこれら2成分の事前パラメータ分布をあまり支持せず、事後パラメータ推定に比較的大きな不一致が生じ、モデルの精度が低下した（SI Figure S8B,E）ことにあると考えられる。現在の応答曲面と獲得関数は SI Figure S9A,B に示す。探索と活用の同じ原則に従い、傾き 15（6分で 5→95% ACN への勾配）が選ばれた。</p>
+<p>Figure 3A は、最初の3つの実験測定の統合（step 3）から生じた更新後の化合物保持モデルを示す。初期保持モデルと比べ、更新後の化合物保持モデルはグラウンドトゥルースモデルに向かう傾向を続け、RMSEの全般的な減少（Table 1, step 3）で示される。ただしクロザピン（A4）はRMSE値がわずかに増加したが、依然として比較的低い水準にとどまった。Figure 3B はテストステロンの更新後保持モデルを灰色のモデル不確かさとともに示す。他の個別保持モデルは SI Figure S10 に示す。一般に不確かさは、モデリングステップに含めた実験に対応する勾配傾きで低く、それらの実験の間では高かった。最初の3実験後、保持モデルは未見の実験結果をかなり正確に近似でき、既にうまく機能した。Figure 3C は更新後の応答曲面を示す。グラウンドトゥルース応答曲面（Figure 1B）と完全には一致しないものの、初期モデルによる応答曲面（Figure 1D）と比べて既に著しい改善を示した。より具体的には、現在の最適傾き値は最適なグラウンドトゥルース値の近傍にあった。Figure 3D は獲得関数を示し、次に実行すべき最も顕著な実験として勾配傾き 4.5（20分で 5→95 への勾配）を示した。</p>
+<p><strong>Table 1. 更新後の化合物保持モデルとグラウンドトゥルースモデル間のRMSE</strong></p>
+<table>
+<thead><tr><th>ステップ</th><th>A1（トリメトプリム）</th><th>A2（フルオキセチン）</th><th>A3（エスシタロプラム）</th><th>A4（クロザピン）</th><th>A5（クリンダマイシン）</th><th>A6（テストステロン）</th></tr></thead>
+<tbody>
+<tr><td>0（初期）</td><td>0.31</td><td>0.24</td><td>0.13</td><td>0.46</td><td>0.19</td><td>0.42</td></tr>
+<tr><td>1</td><td>1.34</td><td>0.39</td><td>0.82</td><td>2.57</td><td>0.73</td><td>2.57</td></tr>
+<tr><td>2</td><td>0.12</td><td>0.30</td><td>0.06</td><td>0.08</td><td>0.28</td><td>0.12</td></tr>
+<tr><td>3</td><td>0.06</td><td>0.06</td><td>0.06</td><td>0.13</td><td>0.12</td><td>0.06</td></tr>
+<tr><td>4</td><td>0.02</td><td>0.05</td><td>0.04</td><td>0.03</td><td>0.03</td><td>0.04</td></tr>
+<tr><td>5</td><td>0.02</td><td>0.07</td><td>0.05</td><td>0.03</td><td>0.03</td><td>0.06</td></tr>
+<tr><td>6</td><td>0.02</td><td>0.07</td><td>0.05</td><td>0.03</td><td>0.03</td><td>0.06</td></tr>
+<tr><td>7</td><td>0.03</td><td>0.07</td><td>0.05</td><td>0.03</td><td>0.03</td><td>0.06</td></tr>
+</tbody></table>
+<p>step 0 は初期モデル、step 1 は第1実験を含めた後のモデル、step 2 は第2実験を含めた後、以下同様。</p>
+<h3>4.3 能動学習（Active Learning）</h3>
+<p>SI Figure S11A は、傾き 4.5 に対応する保持測定を含めた更新後の化合物保持モデル（step 4）を示す。モデルはグラウンドトゥルースモデルに向けてさらに進化し、SI Figure S11B のテストステロン個別モデルでも裏付けられる。そこでは推定保持時間（黒線）が、特に低い傾き値でまだ未見の実験測定（黒点）とよく一致する。加えてRMSEはさらに減少した（Table 1, step 4）。同様に、更新後の応答曲面（SI Figure S11C）はグラウンドトゥルース応答曲面と同じ領域に大域的最適を示し、さらにより一般的な傾向も次第に模倣する。獲得関数（SI Figure S11D）は、次に実行すべき最も情報量の多い実験として傾き 18 を示した。</p>
+<p>傾き 18 に対応する実験結果の統合（SI Figure S12）の後、最適分離を同定するにはさらに2ステップ、すなわち傾き 10 と傾き 11.25 が必要で、後者が最適分離に一致した。実験データが AAL 過程に逐次追加されるにつれ、応答曲面はますますそのグラウンドトゥルース版に近づいた（SI Figure S12C・S13C・S14C）。注目すべきは、第5（傾き18）・第6（傾き10）・第7（傾き11.25）の実験の統合で保持モデルが著しくは変化せず、RMSEが同様に低い水準にとどまった（Table 1, step 5–7）ことである。</p>
+<p>この手順の段階で、AALアルゴリズムが次の最適実験として再び傾き 11.25 を選んだため、ループは終了した。同じ実験が連続して2回選ばれ、最適傾きに到達した。SI Figure S15 は傾き 22.5 での初期クロマトグラム（S15A）と、それに対応する傾き 11.25 での最適化クロマトグラム（S15B）を示す。</p>
+<h3>4.4 AAL MDの高速化（Expedite AAL MD）</h3>
+<p>前節では、最適分離が7実験の後に同定された。AALアプローチの様々な側面が、必要な実験ステップ数に大きな影響を与える。</p>
+<p>第1の重要な点は、式10の調整係数 λ で制御される探索と活用の均衡である。異なる実験ステップにわたって計算された応答曲面（SI Figure S7C・3C・S9A・S11C・S12C・S13C・S14C）を注意深く精査すると、アルゴリズムの重点が AAL の活用能力にもっと置かれていれば、最適値は既に3実験の後に到達されていたことが観察できる。しかしこの例では、局所最適に陥るリスクを抑えるためアルゴリズムがパラメータ空間をさらに探索するよう、比較的保守的なアプローチが選ばれた。したがって場合によっては、モデル結果の活用にますます依拠することで、より少ない実験ランで最適分離が達成されうる。ただし他のケースでは大域最適を見逃すリスクを伴う。</p>
+<p>比較として、DoE原則を3次モデルに適用すると、少なくとも5実験（4つの保持パラメータを決めるのに4実験＋予測結果を検証するのに1実験）が実施される。これは、RMSEについてそれ以上有意な改善が得られなくなる実験数（Table 1, step 5）に対応する。したがってアプローチの活用能力を強く強調して5実験未満に至る λ を選ぶには、過去の履歴データに大きく依拠し、やや準最適なモデルを受け入れる必要がある。</p>
+<p>加えて、初期化合物保持モデルを改善することで探索過程をさらに高速化できる。ここでの重要な因子の一つが化合物の物性／構造の多様性である。過去化合物とモデル化すべき新化合物との変動が小さいほど、初期モデルは正確になり、その後必要な実験は少なくなる。これは、5成分から成る第2試験試料（試料B）に AAL アプローチを適用することで例示される。試料Bでは、試料に含まれる全アナライトと過去データとして用いた全アナライトの log <em>P</em> 値がすべて 3〜6 の間にあった。第1試料Aと第2試料Bのアナライトの分布を示すヒストグラムと密度プロットは SI Figure S16 に示す。試料Bのアナライトは log <em>P</em> 値の変動が著しく小さく、重なりが大きい。グラウンドトゥルースモデルと初期モデルのパラメータ推定値は SI Table S6 にまとめられ、より類似度の高い化合物について単に過去データに依拠するだけで初期モデルが既にかなり正確であることを示す。</p>
+<p>これは、5成分のグラウンドトゥルース化合物保持モデルとその初期モデルを示す SI Figure S17A,B でさらに示される。SI Figure S17C,D はグラウンドトゥルース応答曲面と初期応答曲面を示す。興味深いことに、この段階でまだ実験データが一切統合されていないにもかかわらず、推定最適勾配傾きは既に真の最適と同じ位置にある。さらにこのケースでは、AALアプローチは最適条件を頑健に同定するのに3実験しか要さなかった（Figure 4）。これは観測データが事前知識に極めて類似する状況を例示する。したがって正確な事後分布を導くのに多くの実験データは不要で、アルゴリズムは事前知識に強く依拠できる。これは、テストステロンのパラメータ <em>a</em>, <em>b</em>, <em>c</em>, <em>d</em> の事前分布と事後分布を示す SI Figure S18 でさらに強調される。事前分布の平均は3実験の統合後の事後分布の平均とほぼ完全に一致する。これは過去データと実際の観測の重要な類似性を示す。観測データの統合は平均の推定を大きくは変えず、単に分布の分散を減らして推定周りの不確かさを低減しただけであった。</p>
+<p>さらに、初期保持モデルは、モデリングステップに異なる／追加の物理化学的記述子を含めることで改善できる。本研究で選んだ log <em>P</em> と <em>n</em>&lt;sub&gt;HBDon&lt;/sub&gt; の他に、モル屈折率・分極率・形式電荷など多数の代替がある。これらは PubChem などのオープンデータベースで調べたり、InChI や Canonical SMILES といったアナライトの個別識別子に基づいて計算したりできる。Mordred や CDK といったソフトウェアパッケージは、これらの識別子から数千の分子記述子を計算できる。本研究の分子記述子選択ステップでは、電子的記述子と構成的（constitutional）記述子のみを考慮し、それぞれ分子の電子的性質と、各元素の原子数・分子連結性・分子対称性といった基本的構造情報を捉えた。これら比較的単純な記述カテゴリーの他に、トポロジカル・幾何学的・三次元記述子なども存在する。分子記述子とともに、分子フィンガープリントも考慮できる。分子フィンガープリントの場合、構造情報は、分子内の特定の構造的特徴や部分構造の有無を符号化する二値表現やハッシュ表現として要約される。追加の記述子やフィンガープリントを加えることで、アナライトの挙動をよりよくモデル化し、初期化合物モデルの予測性能を向上させられるかもしれない。含めるべき分子記述子を選ぶ有望な代替アプローチは、拡張した分子記述子・フィンガープリント集合を予備選択し、ホースシュー事前分布（horseshoe priors）などの正則化アプローチを適用して自動選択を可能にすることである。</p>
+<h3>4.5 自律性と自動化（Autonomy and Automation）</h3>
+<p>最後の重要な論点は AAL アプローチの自律性と自動化に関わる。強調してきた AAL MD アプローチは、次に実施すべき実験について情報に基づいた決定を提供し、意思決定ループから科学者を不要にする点で本質的に設計上自律的であるが、まだ完全には自動化されていない。手順を完全に自動化するには、ピーク検出とピーク追跡（peak detection and tracking）が必要である。異なる化合物保持モデルを更新するには、様々な分離条件下で得られる各クロマトグラムの各アナライトに保持時間を割り当てねばならないためである。</p>
+<p>近年、この目的で多くのピーク検出・追跡アルゴリズムが開発されてきた。クロマトグラフィーのピーク検出アルゴリズムはしばしば微分計算を用いて信号変動性を高め、重なるピークを分離（デコンボリューション）する。しかしこれらのアプローチはノイズに敏感で、クロマトグラム平滑化やベースライン補正といった前処理を要する。Savitzky−Golay フィルターと Whittaker 平滑化は、クロマトグラムでよく用いられる2つのノイズ濾過法である。同様に、ダイオードアレイ検出器（DAD）や質量分析（MS）から取得したスペクトルデータに依拠し、その後データの多変量解析を行う多数のピーク追跡戦略が開発されてきた。スペクトル情報と分子情報を統合することで、複雑な医薬品試料の場合でも、異なるクロマトグラフィーラン間でピークを一貫して追跡することが可能になる。次のステップでは、ピーク検出・追跡法をアプローチに統合し、LC装置のパラメータを独立に制御できるソフトウェアシステムと組み合わせ、完全に自律的・自動化された AAL MD を実現する。</p>
+<h2>5. 結論（Conclusions）</h2>
+<p>本研究では、液体クロマトグラフィーのモデルベース法開発のための「支援付き能動学習（AAL）」を導入した。ベイズ枠組みの実装により、モデリングステップに事前知識を含めることができ、能動学習の利用により分離の自律的最適化が確保された。アプローチは2つの実例で実証され、削減された実験セットで最適分離の同定を可能にした。アプローチの効率性における決定的役割は、モデル予測がまだ不確かな初期ステップでの事前知識への依拠に帰せられる。したがって、分離すべきアナライトに対する事前知識の代表性が、考慮すべき最も重要な因子の一つである。同様に、探索と活用の均衡は、手法の効率性と頑健性に関する望ましい要件に応じて慎重に設定する必要がある。結論として、支援付き能動学習アプローチは、モデルベース法開発のための現行の確立された固定設計法に対する有望なデータ駆動型の代替として現れる。</p>
+<p>ただし、記述した手法はまだ完全自動化されているとはみなせず、これに対処するための最先端のピーク検出・追跡アルゴリズムの統合が、アプローチをさらに改善する次の重要なステップとなる。さらに、分離能を高める温度やpHといった追加の最適化パラメータも近い将来検討される。</p>
+<h2>訳者補足</h2>
+<ul><li><strong>本手法の位置づけ</strong>: 従来のLC法開発ソフト（Drylab, ChromSword, ACD/Autochrom）は「固定的なDoE」で決まった数の実験を先に打つ。本論文はそれを「1実験ごとに次の最適実験を計算で選ぶ」能動学習に置き換え、しかも過去データ・分子物性を<strong>ベイズ事前分布</strong>として初期モデルに注入する（＝ゼロから始めない）ことで実験数を削減する。「支援付き（assisted）」とは、この事前知識が序盤でアルゴリズムを主導する点を指す。</li></ul>
+<ul><li><strong>獲得関数の直感</strong>（式10）: 次の1実験は「CRF（＝良い分離が得られそうか）」＋「λ×Δvar（＝モデルの不確かさをどれだけ減らせそうか）」の合計が最大の候補を選ぶ。序盤は λ が大きく（式11で <em>n</em>&lt;sub&gt;exp&lt;/sub&gt; が小さいため）不確かさ低減＝探索が優先され、実験が増えると λ が小さくなり良分離の追求＝活用に自然に移行する。試料Aで最初に選ばれた傾き22.5が「最も分離が良い」からではなく「最も不確かさが大きい領域を潰す」ために選ばれたのはこのためである。</li></ul>
+<ul><li><strong>実務的教訓</strong>: 試料A（logPの幅が広い）は7実験、試料B（全成分のlogPが3〜6に集中）はわずか3実験で最適化できた。これは「手元の試料に似た過去データをどれだけ持っているか」が実験削減の鍵であることを示す。漢方・生薬の多成分HPLCでも、既に条件を最適化した類似方剤の保持データを蓄積・再利用すれば、新規方剤の条件出しを大幅に短縮できる可能性がある。</li></ul>
+<ul><li><strong>限界（本文より）</strong>: ピーク検出・追跡がまだ自動化されておらず、各クロマトグラムのどのピークがどの成分かを人が対応づける必要がある。完全無人化にはDAD/MSスペクトルによるピークトラッキングの統合が次の課題。最適化変数も現状は勾配傾き1つのみで、温度・pHは今後の拡張対象。</li></ul>
+<ul><li>図（Figure 1〜4）およびSIの図表（Figure S1〜S18, Table S1〜S6）の詳細は原文・SIを参照。ソースコードは著者GitHub（EmeryBosten/ALL_MD）で公開されている。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="chromatographic-response-functions-universal-comparison.html">クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="doe-desirability-function-multiple-response-optimization-review.html">実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="drylab-computer-simulation-reversed-phase-gradient-elution.html">逆相グラジエント溶出分離の最適化開発の手段としてのコンピュータシミュレーション（DryLab G）——Dolan・Snyder・Quarry 1987</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="fig-polyphenols-aqbd-rsm-dnn-hplc.html">AQbD枠組みでの応答曲面法（RSM）と深層ニューラルネット（DNN）によるイチジク・ポリフェノールHPLC法の開発と最適化</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="assisted-active-learning-lc-method-development" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
