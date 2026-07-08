@@ -755,6 +755,20 @@
       "title": "逆相グラジエント溶出分離の最適化開発の手段としてのコンピュータシミュレーション（DryLab G）——Dolan・Snyder・Quarry 1987",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Dolan JW, Snyder LR, Quarry MA. Chromatographia 24 (1987) 261-276."
+    },
+    "upload-ac8a4c9c-retention-modelling-review": {
+      "source_pdf": "JSSC4488.pdf",
+      "slug": "retention-modelling-liquid-chromatography-review-2021",
+      "title": "液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。den Uijl MJ et al. J Sep Sci 2021;44:88-114."
+    },
+    "upload-b17fa658-perspective-retention-dup": {
+      "source_pdf": "perspectiveonthefutureapproachestopredictretentioninliquidchromatography_1.pdf",
+      "slug": "(重複アップロード)",
+      "title": "（重複アップロード）97dbcbb0 と同一PDF（保持予測の将来アプローチ展望）",
+      "date": "2026-07-08",
+      "note": "97dbcbb0-perspectiveonthefutureapproachestopredictretentioninliquidchromatography.pdf と同一PDFの重複アップロード。解説は既存ページに集約済み。"
     }
   }
 }
