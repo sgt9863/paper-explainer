@@ -70,17 +70,58 @@ def parse_front_matter(text: str):
 # --------------------------------------------------------------------------- #
 # 本文中の [N] 引用を末尾「参考文献」へのアンカーリンクにするか（ドキュメント単位で切替）
 _LINK_CITATIONS = False
+# 実際に参考文献リストへ対応項目が存在する引用番号の集合（飛び先のないリンクを作らないため）
+_REF_IDS = set()
+
+
+def _ref_item_numbers(item_text, ordered, index):
+    """参考文献リスト項目の先頭 [N] / [27, 28] から番号を取り出す。
+    角括弧が無い番号付きリスト項目はリスト位置 index を番号とみなす。"""
+    m = re.match(r"^\s*\[(\d+(?:\s*[,\-–]\s*\d+)*)\]", item_text)
+    if m:
+        return [int(x) for x in re.findall(r"\d+", m.group(1))]
+    if ordered:
+        return [index]
+    return []
+
+
+def _collect_ref_ids(md: str) -> set:
+    """本文（front matter 除去済み）から、参考文献セクションに実在する引用番号を集める。"""
+    ids = set()
+    lines = md.split("\n")
+    in_refs = False
+    idx = 0
+    for line in lines:
+        s = line.strip()
+        hm = re.match(r"^#{1,6}\s+(.*)$", s)
+        if hm:
+            in_refs = bool(re.match(r"(参考文献|引用文献|References)", hm.group(1).strip()))
+            idx = 0
+            continue
+        if not in_refs or not s:
+            continue
+        om = re.match(r"^\d+\.\s+(.*)$", s)
+        um = re.match(r"^[-*+]\s+(.*)$", s)
+        if om:
+            idx += 1
+            for num in _ref_item_numbers(om.group(1), True, idx):
+                ids.add(num)
+        elif um:
+            for num in _ref_item_numbers(um.group(1), False, 0):
+                ids.add(num)
+    return ids
 
 
 def _linkify_citations(text: str) -> str:
-    """エスケープ済みテキスト中の [5] / [5, 6] / [5–7] を #ref-N へのリンクにする。"""
+    """エスケープ済みテキスト中の [5] / [5, 6] / [5–7] を #ref-N へのリンクにする。
+    参考文献に対応項目が無い番号はリンク化せず素のテキストのまま残す。"""
     def repl(m):
         inner = m.group(1)
         parts = re.split(r"([,\-–]\s*)", inner)
         out = []
         for part in parts:
             s = part.strip()
-            if s.isdigit():
+            if s.isdigit() and int(s) in _REF_IDS:
                 out.append(f'<a href="#ref-{s}" class="cite">{s}</a>')
             else:
                 out.append(part)
@@ -143,8 +184,9 @@ def _render_table(rows):
 
 
 def markdown_to_html(md: str, link_citations: bool = False) -> str:
-    global _LINK_CITATIONS
+    global _LINK_CITATIONS, _REF_IDS
     _LINK_CITATIONS = link_citations
+    _REF_IDS = _collect_ref_ids(md) if link_citations else set()
     lines = md.split("\n")
     html_parts = []
     i = 0
@@ -219,11 +261,18 @@ def markdown_to_html(md: str, link_citations: bool = False) -> str:
             while i < n and re.match(pat, lines[i]):
                 items.append(re.match(pat, lines[i]).group(1).strip())
                 i += 1
-            if ordered and in_refs:
-                inner = "".join(
-                    f'<li id="ref-{k}">{_inline(it)}</li>' for k, it in enumerate(items, 1)
-                )
-                html_parts.append(f'<ol class="references">{inner}</ol>')
+            if in_refs:
+                # 参考文献項目に id=ref-N を振る。番号は先頭の [N]（[27, 28] も可）から取り、
+                # 角括弧が無い番号付きリストはリスト位置を番号とする。ul/ol 両対応。
+                lis = []
+                for k, it in enumerate(items, 1):
+                    nums = _ref_item_numbers(it, ordered, k)
+                    if nums:
+                        extra = "".join(f'<span id="ref-{r}"></span>' for r in nums[1:])
+                        lis.append(f'<li id="ref-{nums[0]}">{extra}{_inline(it)}</li>')
+                    else:
+                        lis.append(f"<li>{_inline(it)}</li>")
+                html_parts.append(f'<{tag} class="references">{"".join(lis)}</{tag}>')
             else:
                 inner = "".join(f"<li>{_inline(it)}</li>" for it in items)
                 html_parts.append(f"<{tag}>{inner}</{tag}>")
@@ -569,7 +618,7 @@ def main():
                 meta, body = parse_front_matter(f.read())
             slug = slugify(meta, os.path.splitext(fname)[0])
             meta["slug"] = slug
-            has_refs = bool(re.search(r"^##\s*(参考文献|引用文献|References)", body, re.M))
+            has_refs = bool(re.search(r"^#{1,6}\s*(参考文献|引用文献|References)", body, re.M))
             meta["_body_html"] = markdown_to_html(body, link_citations=has_refs)
             meta["_body_raw"] = body
             papers.append(meta)
