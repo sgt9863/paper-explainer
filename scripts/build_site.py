@@ -237,7 +237,17 @@ def markdown_to_html(md: str, link_citations: bool = False) -> str:
         ) and not (("|" in lines[i]) and i + 1 < n and is_table_sep(lines[i + 1])):
             para.append(lines[i].strip())
             i += 1
-        html_parts.append(f"<p>{_inline(' '.join(para))}</p>")
+        raw_para = " ".join(para)
+        # 表示数式 $$...$$ は独立段落に分割する。複数の $$...$$ が同一 <p> に
+        # 連結されると KaTeX の自動描画（renderMathInElement）が数式を認識できず
+        # 生の LaTeX がそのまま表示されてしまうため。
+        if "$$" in raw_para:
+            for seg in re.split(r"(\$\$.+?\$\$)", raw_para):
+                seg = seg.strip()
+                if seg:
+                    html_parts.append(f"<p>{_inline(seg)}</p>")
+        else:
+            html_parts.append(f"<p>{_inline(raw_para)}</p>")
 
     return "\n".join(html_parts)
 

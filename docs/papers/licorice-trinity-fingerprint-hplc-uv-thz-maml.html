@@ -42,11 +42,17 @@
 <p>MAML は QAMS の原理に、TCM の定量指紋の理論を組み合わせた新しいアプローチである。複数の活性化合物の検量線を、指紋検出と同一のクロマト条件下で確立する。測定マーカー（MEMA）の検量線を用いて、他成分の検量線パラメータについて相対補正係数・誤差・信頼性を算出する。許容誤差の範囲内で、検量線法を最大限に簡略化し対照標準品の使用を節約するという目的を達成する。</p>
 <p>MEMA（添字 s）と他成分（添字 i）の検量線に基づき、絶対補正係数（$f_i$）を式(3)–(6)のように算出する。$b_{as}=a_s/C_s$、$b_{ai}=a_i/C_i$ の式は、$b_{as}$・$b_{ai}$ が濃度に大きく依存することを示す。濃度が大きいほど「切片/傾き」の比が小さくなり、測定誤差が小さくなる。線形平均濃度 $C_0 = 0.5(C_1 + C_2)$ が、最良の被験試料濃度として一般に受け入れられている。式(7)のように相対補正係数（$f_{si}$）を算出する。$b_a = |a/C| \leq 1\% \cdot b$（誤差 1.0% 未満）のとき、式(8)の傾きの式で直接求めることができ、この比を単純相対補正係数（$f&#x27;_{si}$）と呼ぶ。さらに、相対補正係数の誤差（手法信頼性 $R$ と呼ぶ）を式(9)で検討する。$R$ には、秤量誤差（$RSD_{Cs}$）、検量線誤差（$b_{as}/b_s$）、MEMA の相対ピーク面積誤差（$RSD_{As}$）、および他成分の相対ピーク面積誤差（$RSD_{Ai}$）が含まれる。したがって MAML は、QAMS に欠けていた「線形範囲の検査」と「体系的手法の検証」を補い、試験技術者に誤差の除去法を助言することもできる。</p>
 <p>主な式：</p>
-<p>$$A_s = b_s C_s + a_s \quad (3), \qquad A_i = b_i C_i + a_i \quad (4)$$ $$f_s = A_s/C_s = b_s + a_s/C_s = b_s + b_{as} \quad (5), \qquad f_i = A_i/C_i = b_i + b_{ai} \quad (6)$$ $$f_{si} = f_s/f_i = (b_s + b_{as})/(b_i + b_{ai}) \quad (7), \qquad f&#x27;_{si} = f_s/f_i \approx b_s/b_i \quad (8)$$ $$R = 1 - RSD_{Ci} = 1 - \sqrt{RSD_{Cs}^2 + (b_{as}/b_s)^2 + (b_{ai}/b_i)^2 + RSD_{Ai}^2 + RSD_{As}^2} \geq 95.5\% \quad (9)$$ $$C_m = f_{si} \times C_{ms} \times A_m / A_{ms} \quad (10)$$</p>
+<p>$$A_s = b_s C_s + a_s \quad (3), \qquad A_i = b_i C_i + a_i \quad (4)$$</p>
+<p>$$f_s = A_s/C_s = b_s + a_s/C_s = b_s + b_{as} \quad (5), \qquad f_i = A_i/C_i = b_i + b_{ai} \quad (6)$$</p>
+<p>$$f_{si} = f_s/f_i = (b_s + b_{as})/(b_i + b_{ai}) \quad (7), \qquad f&#x27;_{si} = f_s/f_i \approx b_s/b_i \quad (8)$$</p>
+<p>$$R = 1 - RSD_{Ci} = 1 - \sqrt{RSD_{Cs}^2 + (b_{as}/b_s)^2 + (b_{ai}/b_i)^2 + RSD_{Ai}^2 + RSD_{As}^2} \geq 95.5\% \quad (9)$$</p>
+<p>$$C_m = f_{si} \times C_{ms} \times A_m / A_{ms} \quad (10)$$</p>
 <blockquote>補足: QAMS（単一マーカーによる多成分定量）は「高価な標準品を全成分そろえなくても、1つの基準成分（ここではグリチルリチン酸）の検量線と、成分間の相対補正係数だけで他成分を定量する」手法。MAML はその発展形で、単に補正係数を使うだけでなく、各成分の<strong>線形範囲</strong>と<strong>誤差・信頼性（式(9)の $R$）</strong>まで組み込んで、信頼できる濃度域でだけ換算する点が新しい。式(10)が最終的な含量計算式で、基準成分の濃度・ピーク面積と、相対補正係数 $f_{si}$ から目的成分の含量 $C_m$ を求める。</blockquote>
 <h3>2.3. TCM の THz 量子指紋の整合性評価系</h3>
 <p>一般に、テラヘルツ透過スペクトルは THz-TDS（時間領域分光）系で光学パラメータを抽出する最も広く用いられる方法である。主要な抽出の考え方は、光路中で試料の実信号 $E_{sam}(t)$ と、試料を置かないときの参照信号 $E_{ref}(t)$ を測定することである。次にフーリエ変換により、時間領域信号を直接周波数領域信号（$E_{ref}(\omega)$ と $E_{sam}(\omega)$）に変換する。試料の屈折率と吸収係数は、Dorney と Duvillaret が提案した方法でデータ処理して得た。式(11)–(13)で、$n(\omega)$ は試料の屈折率、$\omega$ は周波数、$\varphi(\omega)$ は試料信号と参照信号の位相差、$\alpha(\omega)$ は試料の吸収係数、$A(\omega)$ は周波数領域信号における試料と参照の振幅比、$d$ は試料厚さを表す：</p>
-<p>$$\varphi(\omega) = \varphi_{sample}(\omega) - \varphi_{ref}(\omega) \quad (11)$$ $$n(\omega) = \varphi(\omega) c / (\omega d) + 1 \quad (12)$$ $$\alpha(\omega) = (2/d)\ln\left[4n(\omega) / (A(\omega)[n(\omega)+1]^2)\right] \quad (13)$$</p>
+<p>$$\varphi(\omega) = \varphi_{sample}(\omega) - \varphi_{ref}(\omega) \quad (11)$$</p>
+<p>$$n(\omega) = \varphi(\omega) c / (\omega d) + 1 \quad (12)$$</p>
+<p>$$\alpha(\omega) = (2/d)\ln\left[4n(\omega) / (A(\omega)[n(\omega)+1]^2)\right] \quad (13)$$</p>
 <p>これを基に、3.7 節で述べるソフトウェア内で区間消去法（IEM）により量子指紋を確立した。これは本質的に、スペクトルをクロマト様の量子ピークに変換する過程である。式(14)–(16)で、$H$・$A_{bi}$・$W$ はそれぞれピーク高・ピーク面積・ピーク幅を表す。$b_i$ は消去開始点の吸光度、$W$ はピーク幅、$i$ は消去点の個数を示す：</p>
 <p>$$H = A_{bi} \quad (14), \qquad A = WH \quad (15), \qquad W = i/200 \quad (16)$$</p>
 <p>スペクトル量子指紋の使用は、スペクトル吸収係数の周波数をソフトウェアで定量化し、ピークをクロマト指紋ピークのように照合できるようにすることを目的とする。これは TCM のスペクトログラムの定性・定量分析を可能にする。</p>
@@ -190,7 +196,8 @@
 <figure><img src="assets/licorice-trinity-fingerprint-hplc-uv-thz-maml/fig3-quantum-fingerprints.jpeg" alt="Fig. 3. UV（A）／THz（B）量子化点の検討、85 バッチの UV 指紋（C）、産地別 UV 量子指紋（D）、産地別 THz 量子指紋（E）、産地別 HPLC 指紋（F）、UV 量子または HPLC のスペクトル効果関係の結果（G）。" loading="lazy"><figcaption>Fig. 3. UV（A）／THz（B）量子化点の検討、85 バッチの UV 指紋（C）、産地別 UV 量子指紋（D）、産地別 THz 量子指紋（E）、産地別 HPLC 指紋（F）、UV 量子または HPLC のスペクトル効果関係の結果（G）。</figcaption></figure>
 <h4>4.3.4. HPLC-FP・UV-QFP・THz-QFP の総合評価</h4>
 <p>甘草試料の品質を多次元的に評価し品質等級を統一するため、HPLC・UV・THz 指紋に基づく総合評価法を提案した。式(18)–(19)により、平均アルゴリズムで 2 パラメータ（$S_{m\text{-HPLC+UV+THz}}$ と $P_{m\text{-HPLC+UV+THz}}$）を評価する。</p>
-<p>$$S_{m\text{-HPLC+UV+THz}} = \frac{1}{3}(S_{m\text{-HPLC}} + S_{m\text{-UV}} + S_{m\text{-THz}}) \quad (18)$$ $$P_{m\text{-HPLC+UV+THz}} = \frac{1}{3}(P_{m\text{-HPLC}} + P_{m\text{-UV}} + P_{m\text{-THz}}) \quad (19)$$</p>
+<p>$$S_{m\text{-HPLC+UV+THz}} = \frac{1}{3}(S_{m\text{-HPLC}} + S_{m\text{-UV}} + S_{m\text{-THz}}) \quad (18)$$</p>
+<p>$$P_{m\text{-HPLC+UV+THz}} = \frac{1}{3}(P_{m\text{-HPLC}} + P_{m\text{-UV}} + P_{m\text{-THz}}) \quad (19)$$</p>
 <p>異なる産地の甘草試料の総合品質評価結果を Table 4 に示した。13 産地のうち、内モンゴル・Erie・Koela が Grade 4、Turkmenistan・Gansu・Shaya・Shache・Kyrgyzstan が Grade 3、残りの地域は Grade 2 と評価された。総合評価パラメータは、内モンゴルを除き、残り 3 地域の栽培試料の $S_{m\text{-HPLC+UV+THz}}$ が野生のものより大きく、対応する $P_{m\text{-HPLC+UV+THz}}$ の変動が小さいことを示した。これは人工管理された甘草試料が高い内部品質の類似度をもつことを示す。結論として本研究は、試料の化学組成の類似度と、全体の化学結合の振動スペクトルの類似度を組み合わせた。これにより、検出原理・検出範囲の違いに起因して単一の指紋法が評価結果に偏りをもたらす可能性を回避した。したがって、本研究で提案した総合評価は優れた品質管理法であった。</p>
 <p><strong>Table 4. SQFM による 2 生育様式・17 地域の評価結果。</strong>（Grade は数字が小さいほど良好。$S_m$ は類似度、$P_m$ は含量類似度%）</p>
 <table>
