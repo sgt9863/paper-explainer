@@ -60,7 +60,9 @@
 <h2>3.1. UV 波長選択</h2>
 <p>内標準と被験物質のスペクトルに応じ、波長のわずかなシフトが RRF を日ごと・装置ごとに変動させうる。通常、UV 波長精度の規格は ±2.0 nm。RRF が検出波長に敏感なら、波長のわずかなシフトが応答に明白な変化をもたらし、装置間の RRF の再現性を悪化させる。</p>
 <p>RRF が公称波長付近の検出波長のわずかな変動に敏感かは、公称波長の両側の狭い波長範囲で RRF を比較して予測できる。内標準と被験物質の UV スペクトルの検討でも予測可能。多くの化合物のスペクトルは狭い波長範囲で線形近似できる〔式(1) A = Sλ + I〕。公称検出波長 λ0 を横軸のゼロとすると、公称波長での応答比 R0 と 1 nm 大きい R0+1 は式(2)(3)で計算できる：</p>
-<p>$$ A = S\lambda + I \tag{1} $$ $$ R_0 = \frac{I_{RS}}{I_A} \tag{2} $$ $$ R_{0+1} = \frac{S_{RS} + I_{RS}}{S_A + I_A} \tag{3} $$</p>
+<p>$$ A = S\lambda + I \tag{1} $$</p>
+<p>$$ R_0 = \frac{I_{RS}}{I_A} \tag{2} $$</p>
+<p>$$ R_{0+1} = \frac{S_{RS} + I_{RS}}{S_A + I_A} \tag{3} $$</p>
 <p>S_RS・I_RS は基準物質スペクトルの傾きと切片、S_A・I_A は被験物質スペクトルの対応値。1 nm 変化の効果は式(4)：</p>
 <p>$$ \text{1 nm 変化の効果} = \frac{R_{0+1}}{R_0} = \frac{S_{RS} + I_{RS}}{S_A + I_A} \times \frac{I_A}{I_{RS}} \tag{4} $$</p>
 <p>$$ RRF_{RS/A} = \frac{RF_{RS}}{RF_A} = \frac{A_{RS}/C_{RS}}{A_A/C_A} = \frac{A_{RS}}{A_A} \times \frac{C_A}{C_{RS}} \tag{5} $$</p>
@@ -75,9 +77,13 @@
 <h2>3.2. 標準液濃度が応答係数に及ぼす影響</h2>
 <p>生薬で RRF を計算する2手法：<strong>LRE 法（線形回帰式 line regression equation）</strong> と <strong>OSP 法（単一点 one single point）</strong>。Gao ら[9]は LRE 法でアロエエモジン/エモジンの RRF を、Hou ら[6]は OSP 法でタンシノン I・クリプトタンシノン/タンシノン IIA の RRF を計算し、標準液濃度が RRF 安定性に影響することを観察した。</p>
 <p>RRF は基準物質と被験物質の RF の比で、その一貫性は RF の一貫性に依存する。OSP 法では RF はピーク面積 vs 濃度の平均比〔式(6)〕、LRE 法では RF は線形回帰式の傾き〔式(7)〕。式(6)は式(8)に変換でき、切片 b は分析システムのノイズを表す。濃度 C 増加で b/C は0に近づき、OSP 法の RF は LRE 法と等しくなる〔式(9)〕：</p>
-<p>$$ RF = \frac{A}{C} \tag{6} $$ $$ A = kC + b \tag{7} $$ $$ RF = \frac{kC + b}{C} = k + \frac{b}{C} \tag{8} $$ $$ RF = k + \frac{b}{C} \approx k \quad (b \ll C) \tag{9} $$</p>
+<p>$$ RF = \frac{A}{C} \tag{6} $$</p>
+<p>$$ A = kC + b \tag{7} $$</p>
+<p>$$ RF = \frac{kC + b}{C} = k + \frac{b}{C} \tag{8} $$</p>
+<p>$$ RF = k + \frac{b}{C} \approx k \quad (b \ll C) \tag{9} $$</p>
 <p>LRE 法の RF は直線範囲で安定だが、OSP 法の RF は直線範囲内で基準標準液濃度が閾値以上のときのみ安定。中国「薬品生産品質管理規範（GMP）」ガイダンス（2010年版）は、HPLC-UV アッセイの線形回帰の切片が表示量濃度の応答の2%未満であることを要求〔式(10)(11)〕[14]。これは表示量濃度が <strong>49b/k より高い</strong> ことを要求〔式(12)〕：</p>
-<p>$$ b \le A_\text{labelled} \times 2\% = (kC_\text{labelled} + b) \times 2\% \tag{11} $$ $$ C_\text{labelled} \ge \frac{49b}{k} \tag{12} $$</p>
+<p>$$ b \le A_\text{labelled} \times 2\% = (kC_\text{labelled} + b) \times 2\% \tag{11} $$</p>
+<p>$$ C_\text{labelled} \ge \frac{49b}{k} \tag{12} $$</p>
 <p>すなわち濃度が 49b/k より高いとき b/C は無視できる。エモジンでは OSP 法の RF は濃度が理論上 <strong>7 µg/mL 超</strong> で安定化。原著 Table 2 の実測データと一致。</p>
 <p>被験物質濃度がこの限界より低い場合、正確な結果を得るには試料を濃縮すべき。</p>
 <h3>原著 Table 1：異なる装置での 300 nm・290 nm における RRF 安定性</h3>
