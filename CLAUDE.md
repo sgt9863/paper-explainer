@@ -60,6 +60,10 @@ python3 -m http.server 8000 --directory docs
 - 図は `![キャプション](assets/<slug>/<file>)` を**単独行**に置くと `<figure>+<figcaption>` 化される。
   画像は `content/papers/assets/<slug>/` に置けば、ビルド時に `docs/papers/assets/<slug>/` へ複製される。
   PDF からの図抽出は PyMuPDF を使う（解析セッション側の作業。build_site.py 自体は依存ゼロのまま）。
+  **図を「原文参照」で省略しない**：原文に図があれば PyMuPDF（`page.get_images()` で埋め込み画像を xref 抽出、または `get_pixmap` でページ描画）で抜き出し、
+  各図を Read で内容確認してから正しいキャプションで本文の該当箇所に埋め込む（例：`fig1.png`〜）。
+- **数式（KaTeX）の鉄則**：1つの `$$…$$` ブロックに `\tag{}` は**1個だけ**。複数式を `\qquad` で並べて各々に `\tag` を付けると
+  KaTeX がエラーになり生の LaTeX がそのまま表示される（throwOnError:false のため）。複数式は**必ず別々の `$$…$$` ブロックに分割**する。
 - `_` で始まる md（例 `_TEMPLATE.md`）はビルド対象外。
 - 各論文ページ冒頭に **ダイジェスト・インフォグラフ**（`render_digest`）を出す。front matter の
   `digest_tagline` / `digest_stats`（`ラベル|値`配列・先頭に雑誌IF）/ `digest_points` から生成。
