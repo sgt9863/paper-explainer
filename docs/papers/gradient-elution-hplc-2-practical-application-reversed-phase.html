@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>グラジエント溶出HPLC 第II報――逆相系への実用的応用（実験検証と最適化ルール・Dolan-Gant-Snyder 1979）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="グラジエント溶出HPLC 第II報――逆相系への実用的応用（実験検証と最適化ルール・Dolan-Gant-Snyder 1979）">
+<meta property="og:description" content="逆相グラジエント溶出（RP-GE）理論の実験検証と実用ルールをまとめた記念碑的論文の実践編（Dolan, Gant &amp; Snyder, J Chromatogr 165 (1979) 31–58）。第I報（Snyder-Dolan-Gant）で構築した線形溶媒強度（LSS）理論を、DuPont Zorbax ODS（23×0.46 cm・6 µm C18）カラムと3種の有機溶媒（メタノール・アセトニトリル・テトラヒドロフラン）を用いて実測検証する。3つの柱：(1) 逆相のイソクラティック保持式 log k&#x27;=log kw−Sφ（式1）の妥当性を、直線性・溶質構造によるS変動・カラムによるS変動・溶媒によるS変動の4側面から検証（Sはメタノール≈2.4〜3.0、アセトニトリル≈2.9、THF≈4.2；同族列ではメチレン基あたり0.4単位でS増加）；(2) 保持時間・バンド幅・分解能・検出感度の理論式を実測と照合（個別b値を使えば保持時間を変動係数0.6%で予測、平均b値では溶出順序すら誤る；システム遅れ時間 td を加えた実用式 tg=(t0/b)log(2.3k0b+1)+t0+td）；(3) 「汎用最適」RP-GEグラジエントの設計手順（14ステップ）と、分解能・検出感度・分析時間を個別最適化する微調整ルール（表15-17）。最適勾配は b=0.1〜0.2（ピーク容量PC・有効プレートNQ²で確認）。1回のLSS-GE分離から最適イソクラティック条件を変動係数2%で予測できることも示す。本論文の実務ワークフローは後年のDryLab（グラジエント計算機シミュレーション）の直接の原型であり、生薬・漢方の多成分HPLCグラジエント分離のメソッド開発を根本から支える古典である。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/gradient-elution-hplc-2-practical-application-reversed-phase/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="gradient-elution-hplc-2-practical-application-reversed-phase"><h1>グラジエント溶出HPLC 第II報――逆相系への実用的応用（実験検証と最適化ルール・Dolan-Gant-Snyder 1979）</h1><div class="paper-meta"><span class="date">2026-07-10</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1016/S0021-9673(00)85727-1" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">e6ba41c8-1s2.0S0021967300857271main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="gradient-elution-hplc-2-practical-application-reversed-phase" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="gradient-elution-hplc-2-practical-application-reversed-phase" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/gradient-elution-hplc-2-practical-application-reversed-phase/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/gradient-elution-hplc-2-practical-application-reversed-phase/ai-infographic.webp" alt="第I報の理論をZorbax C18・メタノール/アセトニトリル/THF実測で検証し、逆相グラジエントの「汎用最適法」設計手順（14ステップ）と微調整ルールを与えた実践編" loading="lazy"></a><p>&lt;!-- Dolan JW, Gant JR, Snyder LR. Gradient elution in high-performance liquid chromatography. II. Practical application to reversed-phase systems. Journal of Chromatography, 165 (1979) 31–58. doi:10.1016/S0021-9673(00)85727-1 の全訳密度日本語版。原文はスキャンPDFのため、本文はページ画像とOCRを併用して再構成した。 数値・表は画像で確認して転記。判読不能箇所は「原文参照」と明記。第I報（Part I）は gradient-elution-hplc-1-theoretical-basis-reversed-phase を参照。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は第I報（[グラジエント溶出HPLC 第I報――逆相系の理論的基礎](gradient-elution-hplc-1-theoretical-basis-reversed-phase.html)）の<strong>実践編</strong>である。第I報が「グラジエントをイソクラティックの言葉で理解する」理論（LSS理論・1/b↔k&#x27;の対応）を打ち立てたのに対し、本報はそれを<strong>実際のC18カラムと3種の溶媒で実験検証</strong>し、さらに「<strong>では現場でどう最適なグラジエントを組むか</strong>」という具体的手順（14ステップの設計フロー・微調整ルール）に落とし込む。ここで示された「1回の予備グラジエントから溶質のb・S値を求め、保持や最適イソクラティック条件を予測する」ワークフローは、後年 Snyder・Dolan が商用化した <strong>DryLab</strong>（2本の予備runから最適条件を計算するソフト）の直接の原型である。生薬・漢方の多成分（極性の大きく異なる配糖体・フラボノイド・アルカロイド等）を1回のグラジエントで分離・指紋分析する際の、溶媒選択・勾配率・分析時間短縮の実務判断がすべてここに揃っている。<strong>IFについて:</strong> 原文誌 Journal of Chromatography（1979）は現 Journal of Chromatography A の前身。現行誌IFは <strong>3.8</strong>（JCR2024・Q1）。1979年当時の値ではない（<strong>要確認</strong>）。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> Gradient Elution in High-Performance Liquid Chromatography. II. Practical Application to Reversed-Phase Systems</li><li><strong>和題（本稿）:</strong> グラジエント溶出HPLC 第II報――逆相系への実用的応用</li><li><strong>著者:</strong> J. W. Dolan（John W. Dolan）, J. R. Gant, L. R. Snyder（Lloyd R. Snyder）</li><li><strong>所属:</strong> Technicon Instrument Corp., Tarrytown, N.Y. 10591, U.S.A.</li><li><strong>掲載誌:</strong> Journal of Chromatography, 165 (1979) 31–58（Chromatographic Reviews、CHREV. 117）</li><li><strong>DOI:</strong> 10.1016/S0021-9673(00)85727-1</li><li><strong>© 1979 Elsevier Scientific Publishing Company, Amsterdam</strong></li><li><strong>論文種別:</strong> 実験検証＋実用ガイド論文（第I報 [ref.1] の理論を実測で検証）</li></ul>
+<blockquote><strong>本稿の作成方針:</strong> 原文はスキャンPDF。全28ページのページ画像とOCRテキストを併用して本文・数式・表を再構成した。数値は表画像で確認して転記している。判読不能箇所は「原文参照」と明記し、原文に無い数値・結論は加えていない。第I報で導入された式・表・図の番号には原文でアスタリスク（<em>）が付く（例：式3a</em>、式14<em>、表4</em>、図5*）。本稿では「（第I報 式14）」のように示す。</blockquote>
+<hr>
+<h1>目次（原文 CONTENTS）</h1>
+<ol><li>はじめに</li><li>実験（A. 装置 / B. 試薬 / C. 手順：a. イソクラティック、b. グラジエント）</li><li>イソクラティック逆相LCにおける溶媒効果</li></ol>
+<ul><li>A. log k&#x27; 対 φb の直線性 / B. 溶質構造によるSの変動 / C. 異なる逆相充填剤間のSの変動 / D. 異なる有機溶媒BによるSの変動</li></ul>
+<ol><li>LSS-GEにおける保持・バンド幅・分解能</li></ol>
+<ul><li>A. 保持時間 / B. 初期移動相濃度 / C. バンド幅 / D. 分解能 / E. 検出感度 / F. 分離選択性</li></ul>
+<ol><li>その他の考察（A. イソクラティック分離の設計 / B. GEでのカラム理論段数の計算 / C. まとめ）</li><li>逆相グラジエント溶出への理論の実地応用：初期分離（A. 装置パラメータ / B. 移動相の特性 / C. 試料の分析 / D. カラム再生）</li><li>「微調整（ファインチューニング）」（A. 分解能の改善 / B. 検出感度 / C. 分析時間の最小化）</li><li>記号一覧 / 9. 付録I：イソクラティックとグラジエント溶出の最適 k&#x27;・b / 10. まとめ / 引用文献</li></ol>
+<hr>
+<h1>1. はじめに</h1>
+<p>第I報 [ref.1] では、逆相系と高速液体クロマトグラフィー（LC）に重点を置いた、グラジエント溶出分離の実用理論を提示した。本論文ではこの逆相グラジエント溶出（RP-GE）LCの検討を続ける。ここでは3つの領域に焦点を当てる：(1) 逆相LCにおけるイソクラティック容量因子（k&#x27;）値と移動相組成の関係の性質、(2) 理論研究 [ref.1] で到達した種々の結論の実験的検証、(3) RP-GE応用で種々の目標を達成するための好ましい分離条件の実用的まとめ。</p>
+<hr>
+<h1>2. 実験</h1>
+<h2>A. 装置</h2>
+<p>LCシステムは Waters Model 6000A LCポンプ2台と Model 660 溶媒プログラマー（Waters Assoc., Milford, Mass., U.S.A.）で構成。試料は 10 µL サンプルループ付き注入バルブ（Model 7120, Rheodyne, Berkeley, Calif.）で注入。注入バルブとカラムの間に 2.0 µm プレフィルター（Model 7302, Rheodyne）を設置。特記なき限り、分離は室温で <strong>23×0.46 cm・6 µm C18充填（Zorbax ODS, DuPont, Wilmington, Del.）</strong>カラムを用いて行った。検出はDuPont Model 901 254 nm 固定波長検出器、記録は Model 2000 レコーダー（Houston Instruments, Austin, Texas）。</p>
+<p>表3の研究には追加カラムを使用：Merck C8（25×0.46 cm、10 µm）、Waters C18（30×0.39 cm、10 µm）、Hypersil C18（16×0.5 cm、5–7 µm、Shandon Southern）、DuPont C18（23×0.46 cm、6 µm；1本はオクタデシルジメチルクロロシラン、1本はオクタデシルトリクロロシランで調製）、DuPont C8（23×0.46 cm、6 µm）。</p>
+<h2>B. 試薬</h2>
+<p>移動相はHPLCグレードのメタノール（MeOH）、アセトニトリル（AN）、テトラヒドロフラン（THF）（Burdick &amp; Jackson）を、Milli-Q装置（Millipore）の高純度水と混合。グラジエント溶出では、有機-水移動相を初期溶媒Aは<strong>5%有機-95%水</strong>、最終溶媒Bは<strong>95%有機-5%水</strong>に混合した。この事前混合とヘリウムスパージにより、グラジエント形成時の溶媒脱ガスを排除した。したがって「0–100%グラジエント」は実際には<strong>5–95%有機</strong>である（本論文では実際の移動相組成で表記）。</p>
+<h2>C. 手順</h2>
+<p><strong>(a) イソクラティック:</strong> イソクラティックデータは、グラジエント形成器で混合するか、log k&#x27; 対 φ データについてはグラジエント装置とは独立に精密組成の移動相を混合し、1台のポンプをイソクラティックモードで使用（グラジエントシステム由来のバイアス排除）。</p>
+<p><strong>(b) グラジエント:</strong> 全グラジエントは特記なき限り <strong>20分で0–100%B</strong>。b値は移動相流量を便利な刻み（0.5–1.0 mL/分）で変えて変化させた。グラジエントrun後、カラムは 2.0 mL/分で10分の逆グラジエント＋初期移動相条件で少なくとも10分のイソクラティック運転により初期条件に再生。全分離は二重に実施。</p>
+<hr>
+<h1>3. イソクラティック逆相LCにおける溶媒効果</h1>
+<p>第I報 [ref.1] で簡潔にレビューしたとおり、逆相系の溶質 k&#x27; 値は一次近似で一般式で表せる：</p>
+<p>$$\log k&#x27; = \log k_w - S\,\phi_b \tag{1}$$</p>
+<p>ここで、所与の試料成分（溶質）Xと所与の有機溶媒B（例：メタノール）について、k&#x27; は水-有機移動相中のBの体積分率 φb でのイソクラティック容量因子。k_w は φb=0 での外挿 k&#x27; 値（式1が 0≤φb≤1 で厳密に成り立てば、純水移動相での化合物Xの k&#x27; 値）。溶媒強度パラメータ <strong>S</strong> は有機溶媒Bで決まる（例：メタノールで S≈3、THFで S≈4）。Sは所与の有機溶媒Bでも異なる逆相カラムでいくらか変化する。第I報では、大半の試料でSが溶質分子構造とともに有意には変化しないと仮定したが、同族列や特定のオリゴマーではSが溶質分子量とともに増加することに注意した。</p>
+<p>式1の妥当性は、(1) 第I報のRP-GE一般論、(2) 本報の実験検証、(3) 本報末尾の実用的まとめ、の基礎となる。式1は逆相系の信頼できる一次近似として深刻な留保なしに受け入れられる。それでもこの関係をさらに検討する価値が2つある：第一に式1のRP-GE解釈への疑問を払拭するため、第二に二次的効果（式1からのずれ、溶質構造によるS変動など）の重要性を特殊ケースで洞察するため。式1の妥当性には4つの論点がある：(1) 逆相系での log k&#x27; 対 φb プロットの直線性からのずれ、(2) 溶質構造変化に伴うSの変動、(3) 異なる逆相充填剤によるSの変動、(4) 異なる溶媒BによるSの変動。</p>
+<h2>A. log k&#x27; 対 φb の直線性</h2>
+<p>第I報でレビューしたとおり、大半の先行研究は逆相系で log k&#x27; 対 φb の本質的に直線のプロットを示している。少数の研究、特に φb=1 付近で曲率を示唆する。最も詳細なのは Schoenmakers ら [ref.2] の研究で、多数の溶質と3種の有機溶媒B（メタノール・エタノール・プロパノール）のデータをまとめた。彼らは log k&#x27; 対 φb プロットが<strong>二次式</strong>でよりよく表せると見出した：</p>
+<p>$$\log k&#x27; = A\,\phi_b^2 + B\,\phi_b + C \tag{2}$$</p>
+<p>Schoenmakers ら [ref.2] の各溶質のデータをメタノール・プロパノールについて平均すると、<strong>図1</strong>の log k&#x27; 対 φb プロットが得られる。プロパノールのデータは φb≈0.9 の領域で k&#x27; に明確な極小を示す。式2に従って φb=1 を超えて外挿すると（破線）、メタノールでも（φb≈1.4 で）k&#x27; の極小が生じる。</p>
+<blockquote><strong>図1（原文 Fig. 1）:</strong> n-プロパノールとメタノールを有機溶媒Bとする log k&#x27; 対 φb の変動（ref.2の平均データ）。n-プロパノール：式2で A=2.42, B=−4.19, C=1.50。メタノール：A=1.88, B=−5.24, C=3.06。</blockquote>
+<p>第I報で、RP-GE分離でのバンド移動は主に <strong>k&#x27;が2〜10の間</strong>の時間（または移動相組成）に起こると指摘した。図1でこの領域の log k&#x27; プロット（細い破線）は実験プロット（太線）とほとんど違わない。特にプロパノール（および他の低極性溶媒）で φb≈0.9 付近に見られる k&#x27; の極小は、RP-GE分離では実用的意義がほとんどない。</p>
+<p>k&#x27;&gt;1 では、log k&#x27; 対 φb プロットの有意な非直線性が起こるかは自明でない。限られた数のデータ点では、1点以上の小誤差が容易に曲率を示唆しうる（実際には曲率が無くても）。Schoenmakers ら [ref.2] の研究がある程度これに当てはまることは、彼らのデータが同一溶質で C（純水移動相の k&#x27;）に最大1.74単位（k&#x27;にして55倍）もの差を示すことから示唆される。</p>
+<p>式1・2のよりよい検証は、異なる溶質の log k&#x27; 対 φb プロットを重ね合わせることで得られる。これらを水平方向にずらして大まかに一致させ、生じたプロットの曲率を調べる。<strong>図2</strong>は、我々が調べた水(A)-メタノール(B)系（表1のデータ）の例。これらのデータを通る直線は曲率がないことを示唆する（実験誤差内）。ref.2の平均プロット（式2ベース）を破線で重ねると、2つのプロットの類似は明らかだが、ref.2で指摘されたわずかな曲率は同じ逆相系の我々自身のデータには見られない。</p>
+<p><strong>表1（原文 TABLE 1）：DuPont Zorbax-ODSカラムでの異なるメタノール-水混合物中のイソクラティック k&#x27; 値</strong></p>
+<table>
+<thead><tr><th>溶質</th><th>(シフト)</th><th>70%MeOH</th><th>60%MeOH</th><th>50%MeOH</th><th>45%MeOH</th></tr></thead>
+<tbody>
+<tr><td>フェノール</td><td>(0.175)</td><td>0.71</td><td>1.38</td><td>1.94</td><td>—</td></tr>
+<tr><td>p-ニトロフェノール</td><td>(0.136)</td><td>0.72</td><td>1.97</td><td>2.86</td><td>—</td></tr>
+</tbody></table>
+<p>（括弧内の数字は図2でのプロットの φb シフト量。例：フェノール（0.175）は φb=0.775, 0.675, 0.625 でプロット。）</p>
+<p>log k&#x27; 対 φb プロットが一部の逆相系で実際に曲線的でも（例：ref.2）、その非直線性のRP-GE分離への影響は小さい（第I報 付録V参照）。式1の妥当性、特に log k&#x27; 対 φb プロットの直線性については、さらなる研究が必要である。k&#x27;データ収集時には次の実験的配慮を重視すべき：(a) データ収集前のカラムと移動相の完全平衡化、(b) k&#x27;が溶質濃度の関数でないことの確認（特に k&#x27;&gt;5）、(c) データ収集中のカラム・流入移動相の温度一定、(d) シリカ表面が結合相で完全被覆された充填剤の使用、(e) t0の誤差とその k&#x27; 値への影響の評価。</p>
+<h2>B. 溶質構造によるSの変動</h2>
+<p>溶質分子構造へのS依存を扱った研究は少ない。Schoenmakers ら [ref.2] は17溶質を調べ、そのS値（メタノール）を<strong>表2</strong>に示す。我々が複数カラム・多数溶質で調べた平均S値も表2にまとめた。これらのデータから溶質構造とSの明白な相関は現れない。さらに、これら代表的溶質では、所与のカラム（と有機溶媒B）でのSの平均変動はわずか <strong>10〜20%</strong> 程度である。すなわち典型的試料では、成分間のS変動はほとんど期待されない。</p>
+<p>同族列の溶質では状況がやや異なる。Tanaka &amp; Thornton [ref.3] の研究から導いたS値を種々の同族列（メタノール-水）について<strong>図3</strong>にプロット。溶質のアルキル炭素数nへの強い依存が明瞭。異なる同族列のプロットの傾きはほぼ一定（<strong>メチレン基あたり0.4単位</strong>）。図3をn=0に外挿すると、n-アルカン・アルキルベンゼン列で、溶質分子へのフェニル基の付加はSを約0.8単位増やす（芳香族炭素あたり0.1単位で、脂肪族炭素あたり0.4単位よりずっと小さい）。</p>
+<p><strong>表2（原文 TABLE 2）：溶質構造の関数としてのS値</strong>（メタノール-水、室温）</p>
+<table>
+<thead><tr><th>溶質</th><th>S（ref.2）*</th><th>S（表3データ）**</th></tr></thead>
+<tbody>
+<tr><td>フェノール</td><td>1.7</td><td>2.6</td></tr>
+<tr><td>アセトフェノン</td><td>2.0</td><td>3.2</td></tr>
+<tr><td>ベンゼン</td><td>2.1</td><td>2.7</td></tr>
+<tr><td>トルエン</td><td>2.6</td><td>3.4</td></tr>
+<tr><td>エチルベンゼン</td><td>3.2</td><td>—</td></tr>
+<tr><td>フタル酸ジエチル</td><td>2.6</td><td>—</td></tr>
+<tr><td>フタル酸ジブチル</td><td>4.0</td><td>—</td></tr>
+<tr><td>ベンゾフェノン</td><td>2.7</td><td>—</td></tr>
+<tr><td>アニリン</td><td>1.8</td><td>—</td></tr>
+<tr><td>N-メチルアニリン</td><td>2.2</td><td>—</td></tr>
+<tr><td>N,N-ジメチルアニリン</td><td>2.4</td><td>—</td></tr>
+<tr><td>キノリン</td><td>2.2</td><td>—</td></tr>
+<tr><td>ベンジルアルコール</td><td>1.8</td><td>—</td></tr>
+<tr><td>2,4-キシレノール</td><td>2.3</td><td>—</td></tr>
+<tr><td>2-クレゾール</td><td>2.1</td><td>—</td></tr>
+<tr><td>3-クレゾール</td><td>2.1</td><td>—</td></tr>
+<tr><td>ベンズアルデヒド</td><td>2.9</td><td>—</td></tr>
+<tr><td>ニトロベンゼン</td><td>2.9</td><td>—</td></tr>
+<tr><td>安息香酸メチル</td><td>3.6</td><td>—</td></tr>
+<tr><td>アニソール</td><td>3.0</td><td>—</td></tr>
+<tr><td>フルオロベンゼン</td><td>3.0</td><td>—</td></tr>
+<tr><td><strong>平均</strong></td><td><strong>2.4 ± 0.6</strong></td><td><strong>3.0 ± 0.3</strong></td></tr>
+</tbody></table>
+<p>\<em> ref.2から k&#x27;=1.4 で計算。\</em>\* 平均値（表3より）。</p>
+<h2>C. 異なる逆相充填剤間のSの変動</h2>
+<p>異なる逆相充填剤（とカラム）間のS値の変動については既に懸念を表明した。<strong>表3</strong>は9溶質×5カラムで我々が収集したデータ。表3のSの絶対値は、所与の溶質で5カラム間の変動が、所与のカラムで9溶質間の変動と同程度に大きい。しかしカラムの影響は、各S値をそのカラムの平均Sで割って<strong>正規化</strong>すれば補正できる。正規化S値は所与の溶質で5カラム間で比較的一定に保たれた（<strong>Sの平均変動係数=4%</strong>）。</p>
+<p><strong>表3（原文 TABLE 3）：5つの異なる逆相カラムでの選択溶質のS値</strong>（水-メタノール、室温）</p>
+<table>
+<thead><tr><th>溶質</th><th>Waters C18*</th><th>Shandon C18**</th><th>DuPont C18***</th><th>DuPont C8†</th><th>相対S値††</th></tr></thead>
+<tbody>
+<tr><td>フェノール</td><td>2.21</td><td>2.52</td><td>2.35, 2.97</td><td>3.13</td><td>0.87 ± 0.06</td></tr>
+<tr><td>ベンズアルデヒド</td><td>2.52</td><td>2.72</td><td>2.92, 3.07</td><td>3.08</td><td>0.95 ± 0.03</td></tr>
+<tr><td>アセトフェノン</td><td>2.82</td><td>3.04</td><td>3.08, 3.63</td><td>3.39</td><td>1.06 ± 0.03</td></tr>
+<tr><td>ニトロベンゼン</td><td>2.61</td><td>2.75</td><td>2.79, 3.18</td><td>3.16</td><td>0.96 ± 0.01</td></tr>
+<tr><td>安息香酸メチル</td><td>3.17</td><td>3.46</td><td>3.44, 3.82</td><td>3.78</td><td>1.18 ± 0.02</td></tr>
+<tr><td>アニソール</td><td>2.61</td><td>2.93</td><td>2.90, 3.29</td><td>3.25</td><td>1.00 ± 0.01</td></tr>
+<tr><td>フルオロベンゼン</td><td>2.70</td><td>3.07</td><td>2.90, 3.27</td><td>3.28</td><td>1.01 ± 0.02</td></tr>
+<tr><td>ベンゼン</td><td>2.32</td><td>2.66</td><td>2.55, 2.94</td><td>3.02</td><td>0.90 ± 0.02</td></tr>
+<tr><td>トルエン</td><td>2.90</td><td>3.23</td><td>3.13, 3.52</td><td>3.56</td><td>1.13 ± 0.06</td></tr>
+<tr><td><strong>平均</strong></td><td><strong>2.65</strong></td><td><strong>2.94</strong></td><td><strong>2.90, 3.29</strong></td><td><strong>3.29</strong></td><td>(1.00)</td></tr>
+</tbody></table>
+<p>\<em> モノクロロシラン＋追加シリル化（キャッピング）。\</em>\<em> トリクロロシラン＋追加シリル化。\</em>\<em>\</em> トリクロロシラン（1本目）、モノクロロシラン（2本目）、追加シリル化なし。† モノクロロシラン、追加シリル化なし。†† 全カラムに対する所与溶質の平均相対S値。</p>
+<h2>D. 異なる有機溶媒BによるSの変動</h2>
+<p><strong>表4・5</strong>は、2つの追加二元混合物（アセトニトリル-水、THF-水）のイソクラティック k&#x27; 値とS値。THFで全般的にSが増加、アセトニトリルで減少する以外は、表1のメタノールデータと同じパターン。溶質構造へのS依存の理解には大きく寄与しない。</p>
+<p><strong>表4（原文 TABLE 4）：Zorbax-ODSカラムでの異なるTHF-水混合物中のイソクラティック k&#x27; 値</strong>（室温）</p>
+<table>
+<thead><tr><th>溶質</th><th>55%THF</th><th>50%THF</th><th>45%THF</th><th>40%THF</th><th>S</th></tr></thead>
+<tbody>
+<tr><td>フェノール</td><td>—</td><td>—</td><td>0.79</td><td>1.27</td><td>4.1</td></tr>
+<tr><td>p-ニトロフェノール</td><td>—</td><td>—</td><td>0.99</td><td>1.80</td><td>5.2</td></tr>
+<tr><td>p-クレゾール</td><td>—</td><td>—</td><td>1.00</td><td>1.76</td><td>4.9</td></tr>
+<tr><td>2,5-キシレノール</td><td>0.69</td><td>1.05</td><td>1.55</td><td>2.79</td><td>4.0</td></tr>
+<tr><td>安息香酸メチル</td><td>0.76</td><td>0.93</td><td>1.31</td><td>2.11</td><td>3.0</td></tr>
+<tr><td>アニソール</td><td>0.92</td><td>1.35</td><td>1.57</td><td>3.09</td><td>3.4</td></tr>
+<tr><td>ベンゼン</td><td>1.17</td><td>1.76</td><td>2.41</td><td>4.00</td><td>3.5</td></tr>
+<tr><td>フェネトール</td><td>1.17</td><td>1.80</td><td>2.61</td><td>4.69</td><td>3.9</td></tr>
+<tr><td>トルエン</td><td>1.49</td><td>2.33</td><td>3.39</td><td>6.05</td><td>4.0</td></tr>
+<tr><td>安息香酸ブチル</td><td>—</td><td>1.45</td><td>2.53</td><td>3.54</td><td>4.2</td></tr>
+<tr><td>アントラセン</td><td>—</td><td>1.65</td><td>2.57</td><td>4.76</td><td>4.6</td></tr>
+<tr><td>ベンズアントラセン</td><td>—</td><td>1.57</td><td>3.49</td><td>6.19</td><td>5.2</td></tr>
+<tr><td><strong>平均</strong></td><td></td><td></td><td></td><td></td><td><strong>4.2 ± 0.6</strong></td></tr>
+</tbody></table>
+<p><strong>表5（原文 TABLE 5）：Zorbax-ODSカラムでの異なるアセトニトリル-水混合物中のイソクラティック k&#x27; 値</strong>（室温）</p>
+<table>
+<thead><tr><th>溶質</th><th>70%AN</th><th>60%AN</th><th>50%AN</th><th>S</th></tr></thead>
+<tbody>
+<tr><td>p-ニトロフェノール</td><td>0.61</td><td>1.39</td><td>4.12</td><td>3.6</td></tr>
+<tr><td>フェノール</td><td>0.64</td><td>1.18</td><td>3.24</td><td>2.7</td></tr>
+<tr><td>p-クレゾール</td><td>0.98</td><td>1.99</td><td>(10.0)</td><td>3.1</td></tr>
+<tr><td>2,5-キシレノール</td><td>0.95</td><td>1.68</td><td>3.71</td><td>3.0</td></tr>
+<tr><td>安息香酸メチル</td><td>1.57</td><td>2.66</td><td>5.65</td><td>3.8</td></tr>
+<tr><td>アニソール</td><td>1.64</td><td>2.50</td><td>6.00</td><td>2.8</td></tr>
+<tr><td>ベンゼン</td><td>1.78</td><td>3.10</td><td>6.42</td><td>2.2</td></tr>
+<tr><td>フェネトール</td><td>2.37</td><td>4.46</td><td>10.4</td><td>3.1</td></tr>
+<tr><td>トルエン</td><td>1.57</td><td>2.78</td><td>5.13</td><td>2.5</td></tr>
+<tr><td>安息香酸ブチル</td><td>1.57</td><td>2.85</td><td>5.58</td><td>3.0</td></tr>
+<tr><td>アントラセン</td><td>2.71</td><td>5.03</td><td>10.4</td><td>2.9</td></tr>
+<tr><td><strong>平均</strong></td><td></td><td></td><td></td><td><strong>2.9 ± 0.4</strong></td></tr>
+</tbody></table>
+<p>（表4・5の一部セルは原文で空欄または濃度列見出しがスキャン判読困難。各溶質のS値と平均が要点。個別セルの厳密値は<strong>原文参照</strong>。）</p>
+<hr>
+<h1>4. LSS-GEにおける保持・バンド幅・分解能</h1>
+<h2>A. 保持時間</h2>
+<p>第I報で論じたとおり、（第I報 式3、したがって式3a）は別研究 [ref.4] で実験検証されている。本研究はRP-GEについて（第I報 式3）のさらなる確認を与える。計算の便宜上、（第I報 式3a）を次のように修正する：</p>
+<p>$$t_g = (t_0/b)\,\log(2.3\,k_0 b + 1) + t_0 + t_d \tag{3}$$</p>
+<p>ここで <strong>t_d</strong> はシステムの遅れ時間（グラジエント開始からカラム先端で移動相組成変化が観測されるまでの時間）。我々の場合 t_d = 2.0 mL/F（Fは流量）で、パルスダンパー・プレカラム配管・注入バルブ・フィルターの体積による。式3は溶質が t_d の間カラムを移動しないと仮定するが、実際 t_d 中の移動は t0 近くで溶出する化合物（例：ウラシル）を除きほとんど無い。</p>
+<p>表6の化合物はAN-水グラジエントの範囲で溶出。b値は各化合物で計算（第I報 式14）、k0値は個別の log k&#x27; 対 φb 曲線から外挿。実験と計算の保持時間はよく一致（<strong>変動係数=0.6%</strong>）し、式3の妥当性を確認。個別のb（またはS）値を使う重要性は表6最終列に示され、平均b値を使うと変動係数が個別化合物より有意に大きくなり、この場合<strong>溶出順序の予測が誤る</strong>。</p>
+<p><strong>表6（原文 TABLE 6）：RP-GE分離での保持予測</strong>（5–95%AN-水、t0=2.15分、td=2.0分、ts=20分、F=1.0 mL/分）</p>
+<table>
+<thead><tr><th>溶質</th><th>b*</th><th>k0**</th><th>tg実験</th><th>tg計算（個別b）***</th><th>tg計算（平均b）†</th></tr></thead>
+<tbody>
+<tr><td>p-クレゾール</td><td>0.30</td><td>24</td><td>13.2</td><td>13.1</td><td>13.5</td></tr>
+<tr><td>ベンゼン</td><td>0.27</td><td>59</td><td>16.5</td><td>16.7</td><td>16.4</td></tr>
+<tr><td>フェネトール</td><td>0.31</td><td>134</td><td>17.7</td><td>17.9</td><td>19.1</td></tr>
+<tr><td>トルエン</td><td>0.24</td><td>63</td><td>18.1</td><td>18.1</td><td>16.6</td></tr>
+<tr><td>安息香酸ブチル</td><td>0.27</td><td>180</td><td>20.5</td><td>20.5</td><td>20.0</td></tr>
+</tbody></table>
+<p>\<em> 各溶質で計算したb値。\</em>\<em> log k&#x27; 対 φb 曲線から5%水へ外挿したk0。\</em>\<em>\</em> 式3で個別b値を使用；実験値からの偏差の変動係数=0.6%。† 式3でAN平均 b=0.28を使用；変動係数=4.3%。（フェネトールとトルエンで計算溶出順序が実験と逆転する点に注意。）</p>
+<h2>B. 初期移動相濃度</h2>
+<p>初期移動相組成 φ0（t=0にカラムに入る移動相の φ）を変える効果を<strong>図4A–E</strong>と<strong>表7</strong>に示す。第I報で論じたとおり、グラジエント溶出クロマトグラムは初期部分のみが φ0 変化の影響を受ける。φ0 の増加は一般に、t0近くで溶出する初期溶出化合物の分解能悪化・バンド高増大をもたらす。表7には図4の各分離での各溶質の φg（時刻 tg でのカラム入口の φ 値）を表化：</p>
+<p>$$\phi_g = \phi_0 + \phi&#x27;\,t_g \tag{4}$$</p>
+<p>大半の場合、所与のバンドは φ0 が φg に近い値まで増えるまで、<strong>特徴的な φg 値で溶出</strong>する。φ&#x27; は各分離で一定なので、これは φ0 &lt; φg なら所与の溶質バンドが同じ移動相組成で溶出することを意味する。φ0 は φ0 &lt; φg なら後期溶出バンドの分離・分解能に影響しないので、実務では<strong>可能な限り大きな φ0 を選ぶ</strong>べきである。これが分離時間を最小化する。例えば図4Aの分離のtsは、適切な分解能を保ちつつ図4Cの条件に φ0 を変えることで有意に短縮できる。</p>
+<blockquote><strong>図4（原文 Fig. 4）:</strong> 初期移動相組成のグラジエントクロマトグラムへの影響。溶質：1 ウラシル、2 フェノール、3 p-ニトロフェノール、4 p-クレゾール、5 2,5-キシレノール、6 アニソール、7 安息香酸メチル、8 ベンゼン、9 フェネトール、10 トルエン、11 アントラセン、12 安息香酸ブチル、13 ベンズアントラセン。全グラジエント：φf=95%AN-水、b=0.28、F=1 mL/分。(A) φ0=5%AN, ts=20分／(B) 26%AN, 16分／(C) 46%AN, 12分／(D) 64%AN, 8分／(E) 79%AN, 4分。</blockquote>
+<p><strong>表7（原文 TABLE 7）：初期移動相組成の保持と検出可能性への影響</strong>（φf=95%AN-水、b=0.28。各セルは φg／検出可能性（ピーク高・任意単位））</p>
+<table>
+<thead><tr><th>溶質</th><th>φ0=0.05</th><th>0.26</th><th>0.46</th><th>0.64</th><th>0.79</th></tr></thead>
+<tbody>
+<tr><td>フェノール</td><td>0.54／127</td><td>0.56／148</td><td>0.60／—</td><td>0.71／—</td><td>0.83／—</td></tr>
+<tr><td>p-ニトロフェノール</td><td>0.63／39</td><td>0.64／40</td><td>0.63／43</td><td>0.73／51</td><td>0.84／—</td></tr>
+<tr><td>フェネトール</td><td>0.86／45</td><td>0.87／48</td><td>0.88／49</td><td>0.89／55</td><td>0.92／66</td></tr>
+<tr><td>トルエン</td><td>0.89／30</td><td>0.89／30</td><td>0.90／30</td><td>0.91／34</td><td>0.94／42</td></tr>
+<tr><td>アントラセン</td><td>0.95／44</td><td>0.95／42</td><td>0.95／43</td><td>0.95／46</td><td>0.95／52</td></tr>
+</tbody></table>
+<h2>C. バンド幅</h2>
+<p>RP-GEのバンド幅は（第I報 式7a）で予測できる。その妥当性はAN-水グラジエントの数化合物について<strong>表8</strong>に示す。個別bと平均bのどちらを使ってもσt計算に大差なく、両者とも実験値と一致する。表8のデータは、バンド幅がRPクロマトグラム全体で比較的一定（<strong>変動係数=10%</strong>）であることを示す。イソクラティックではバンド幅は k&#x27;+1 に比例して増加する。</p>
+<p><strong>表8（原文 TABLE 8）：逆相グラジエント溶出における実験と理論のバンド幅の比較</strong>（5–95%AN、t0=129秒、F=1 mL/分）</p>
+<table>
+<thead><tr><th>溶質</th><th>σt実験(秒)</th><th>σt計算・個別b(秒)*</th><th>σt計算・平均b(秒)**</th><th>N(×10⁻⁴)</th><th>b</th><th>σt(GE)***</th><th>σt(イソクラティック)†</th></tr></thead>
+<tbody>
+<tr><td>p-クレゾール</td><td>2.5</td><td>3.5</td><td>2.4</td><td>—</td><td>0.30</td><td>0.81</td><td>0.79</td></tr>
+<tr><td>ベンゼン</td><td>2.4</td><td>2.5</td><td>2.4</td><td>3.0</td><td>0.27</td><td>0.82</td><td>1.77</td></tr>
+<tr><td>フェネトール</td><td>2.4</td><td>2.3</td><td>2.4</td><td>3.8</td><td>0.31</td><td>0.81</td><td>1.67</td></tr>
+<tr><td>トルエン</td><td>2.4</td><td>2.6</td><td>2.4</td><td>4.1</td><td>0.24</td><td>0.83</td><td>1.79</td></tr>
+<tr><td>安息香酸ブチル</td><td>3.0</td><td>2.7</td><td>2.6</td><td>8.6</td><td>0.27</td><td>0.82</td><td>1.46</td></tr>
+</tbody></table>
+<p>\<em> （第I報 式7a）個別b使用、計算対実験の変動係数=12%。\</em>\* 平均 b=0.28使用。† イソクラティック値（64%AN、F=1 mL/分）。（一部セルの数値はスキャン判読が難しく<strong>原文参照</strong>。要点：GEではσtがほぼ一定なのに対しイソクラティックでは溶質ごとに大きく異なる。）</p>
+<h2>D. 分解能</h2>
+<p>最大分解能 Rs には、第I報の議論から <strong>b=0.2</strong> がおおよそ最適。より正確には、ts=20分と本研究の5 µm粒子では、第I報 付録IIは <strong>b=0.1</strong> が最適と予測。<strong>図5–7</strong>は分離時間（とカラム長L）一定でbを変える効果を示す。これらは分解能に関し b=0.1〜0.2 の中間値が好ましいことを大まかに確認する。</p>
+<p>Rsのb（またはk̄）関数としてのより正確な尺度は<strong>ピーク容量 PC</strong>（試料の最初と最後の溶出化合物の保持時間差を平均バンド幅で割った値）で与えられる。Nとbが変わると（図5–7）、PCは NQ² のように変化するはず。<strong>図8</strong>では図5–7の実験PC値をb値に対しプロットし、理論の NQ² 対b（第I報 付録IIで計算）を重ねる。データは理論プロットに合理的によく従い、<strong>0.05&lt;b&lt;0.2 で最大分解能</strong>を確認する。この範囲内ではPCやNQ²のbによる変化は小さい。</p>
+<p>図5–7の目視では b=0.25（図5B）で最大分解能に見え、より低いb値ではない。これはbの変動に伴う選択性変化の結果で、異常ではない（わずかに非最適なbでよりよい分離）。図5–7と図8のデータは、これらのケースで最適b≈0.1を全般的に確認する。さらに重要なのは、（予測どおり）分離時間一定のとき <strong>NQ² がbの変化にあまり敏感でない</strong>という発見である。小さなNQ²差はbの変動に伴うα変化に覆い隠されうる。最後に、大きなb値ほど検出感度が高い点も見落とすべきでない（次節）。</p>
+<h2>E. 検出感度</h2>
+<p>（第I報 式11a）はbの増加に伴う検出感度増加を予測。<strong>表9</strong>のデータがこの効果を示す。固定ts（本研究）で検出感度を上げるには、流量を下げてbを増やす。表9は sg とピーク高が b=0.07→0.56 で約3倍増えることを示す。</p>
+<p><strong>表9（原文 TABLE 9）：逆相グラジエント溶出における実験と理論の検出感度の比較</strong>（sg：p-クレゾール・フェネトール・トルエン・安息香酸ブチルの平均。sg=h2/h1、h1=t0でのピーク高、h2=GEピーク高。計算：sg=2.3b/[(1+2.3b)G]）</p>
+<table>
+<thead><tr><th>移動相</th><th>b</th><th>sg実験</th><th>sg計算</th></tr></thead>
+<tbody>
+<tr><td>AN-水</td><td>0.07</td><td>0.15 ± 0.03</td><td>0.14</td></tr>
+<tr><td></td><td>0.14</td><td>0.23 ± 0.05</td><td>0.28</td></tr>
+<tr><td></td><td>0.28</td><td>0.35 ± 0.07</td><td>0.45</td></tr>
+<tr><td></td><td>0.56</td><td>0.41 ± 0.10</td><td>0.76</td></tr>
+<tr><td>MeOH-水</td><td>0.11</td><td>—</td><td>0.23</td></tr>
+<tr><td></td><td>0.65</td><td>—</td><td>0.88</td></tr>
+<tr><td>THF-水</td><td>0.18</td><td>—</td><td>0.34</td></tr>
+<tr><td></td><td>0.81</td><td>—</td><td>0.92</td></tr>
+</tbody></table>
+<p>予測どおり（第I報 式11a）、bを増やすことでGEの検出感度が予測どおり増加する。ただしこれは同時にRsを下げる点に留意が必要。</p>
+<h2>F. 分離選択性</h2>
+<p>第I報で論じたとおり、所与の溶質対の選択性（分解能）はαを変えて変えられる。GEでの2つの選択肢は、移動相の種類を変えるか、グラジエントの傾き（b値）を変えるかである。例としてベンゼン-フェネトール対を取る。初期分離に最適なTHF-水グラジエント（図7C、b=0.2）を選ぶと、THFでは2溶質が完全に1ピークに融合する。この「理想」条件で本質的に分離しないような場合は、<strong>異なる溶媒特性の移動相を試すのが好ましい</strong>。MeOHまたはANを選び最適（b=0.2）LSSグラジエントを走らせると（図5C・6C）、ベンゼンとフェネトールがベースライン分離する。</p>
+<p>一方、何らかの制約でTHF-水を使う必要がある場合は、グラジエントのb値を変えて2溶質を分離できる（所与の移動相での溶質間のSの小さな差に基づく）。ベンゼン-フェネトールでは、流量を1.0 mL/分に下げてb増加（k̄減少）させると（ts一定）、ベースライン分離する（図7B、この場合Fを下げるとNも増える）。ただし、同じ移動相でb調整するより、<strong>移動相の種類を変える（例：THF→MeOH）ほうが通常ずっと容易に必要な分解能を得られる</strong>。Tanaka ら [ref.5] は最近、イソクラティックRP-LCでの有機修飾剤の溶媒選択性への影響を調べ、有機溶媒変更によるRP分離改善の可能性を強調している。</p>
+<hr>
+<h1>5. その他の考察</h1>
+<h2>A. イソクラティック分離の設計</h2>
+<p>第I報で、好ましいイソクラティック溶出条件（k&#x27;=4）は、時刻 tg−2.5t0 にカラム先端のグラジエント移動相に対応する組成で得られると予測した。td を考慮すると、tg−2.5t0−td の移動相が必要。<strong>表10</strong>のデータは、log k&#x27; 対 φb 曲線から得た実験値がk&#x27;=4の予測値と一致する（<strong>変動係数=2%</strong>）ことを示す。</p>
+<p><strong>表10（原文 TABLE 10）：逆相グラジエント溶出からのイソクラティック条件の予測</strong>（AN-水、b=0.28、t0=2.15分、td=2.0分。イソクラティック移動相＝k&#x27;=4となる組成）</p>
+<table>
+<thead><tr><th>溶質</th><th>tg(分)</th><th>イソクラティック移動相・実験***</th><th>計算†</th></tr></thead>
+<tbody>
+<tr><td>p-クレゾール</td><td>13.2</td><td>0.30</td><td>0.31</td></tr>
+<tr><td>ベンゼン</td><td>16.5</td><td>0.47</td><td>0.46</td></tr>
+<tr><td>フェネトール</td><td>17.7</td><td>0.52</td><td>0.52</td></tr>
+<tr><td>トルエン</td><td>18.1</td><td>0.54</td><td>0.53</td></tr>
+<tr><td>安息香酸ブチル</td><td>20.5</td><td>0.65</td><td>0.64</td></tr>
+</tbody></table>
+<p>\<em>\</em>\* log k&#x27; 対 φb プロットから。† tg−2.5t0−td でのカラム先端の移動相、計算対実験の変動係数=2%。</p>
+<p>したがって<strong>GEはイソクラティック条件の最適化を大幅に簡略化する</strong>。イソクラティック条件の「経験的推測」＋試行錯誤最適化の代わりに、最適bで1回のLSS-GE分離を走らせ、望むイソクラティック条件を数%以内で予測できる。</p>
+<h2>B. GEでのカラム理論段数の計算</h2>
+<p>（第I報 式15a）はGEでのNの正しい推定を可能にする。<strong>表11</strong>はイソクラティック条件のN値とGEのN値を5溶質で比較する。手動測定のNは約10%の精度しかないことを考えれば、2組はよく相関する。平均b値でも個別化合物のb値使用とほぼ同じプレート数を予測する。最終列は（第I報 式15）でNを不適切に計算したときの大きな不一致を示す。</p>
+<p><strong>表11（原文 TABLE 11）：逆相溶出におけるカラム効率の計算</strong>（イソクラティック：64%AN、F=1 mL/分。グラジエント：5–95%AN、F=1 mL/分、b=0.28。N ×10⁻³）</p>
+<table>
+<thead><tr><th>溶質</th><th>イソクラティック</th><th>GE正しい（個別b）**</th><th>GE正しい（平均b）***</th><th>GE不正確†</th></tr></thead>
+<tbody>
+<tr><td>p-クレゾール</td><td>8</td><td>13</td><td>14</td><td>100</td></tr>
+<tr><td>ベンゼン</td><td>18</td><td>16</td><td>15</td><td>170</td></tr>
+<tr><td>フェネトール</td><td>17</td><td>13</td><td>15</td><td>190</td></tr>
+<tr><td>トルエン</td><td>18</td><td>19</td><td>15</td><td>200</td></tr>
+<tr><td>安息香酸ブチル</td><td>15</td><td>10</td><td>10</td><td>260</td></tr>
+<tr><td>平均</td><td>15</td><td>14</td><td>14</td><td>180</td></tr>
+</tbody></table>
+<p>\<em> （第I報 式15）の適切な適用。\</em>\<em> （第I報 式15a）個別b、変動係数=25%。\</em>\<em>\</em> 平均 b=0.28、変動係数=25%。† （第I報 式15）をGEに不適切に適用。（不正確な式15はNを一桁過大評価する。）</p>
+<h2>C. まとめ（第5節）</h2>
+<p>本節では第I報の理論的予測を実験検証した。これはGE-LCの実用性を大きく高める――グラジエントの系統的・予測可能な最適化を可能にし、グラジエントデータからイソクラティック分離条件を信頼性高く予測できる。次節では上記グラジエントパラメータの実測法と、GE-LCを成功させる実用的「経験則」を論じる。</p>
+<hr>
+<h1>6. 逆相グラジエント溶出への理論の実地応用：初期分離</h1>
+<p>本節では「汎用最適」RPグラジエントを設計する簡単な手順を提示する。上で検証した理論でグラジエントクロマトグラムを評価することで、迅速・論理的な「チューニング」（分解能・検出感度・グラジエント時間の最適化）が可能になる。「汎用最適」グラジエントはこれら3目標間の妥協として得られる。<strong>表12</strong>は重要な装置・移動相パラメータをまとめる。典型例を<strong>表13</strong>に沿って展開する。</p>
+<p><strong>表13（原文 TABLE 13）：RP-GEの典型的初期グラジエント条件</strong></p>
+<table>
+<thead><tr><th>パラメータ</th><th>値</th></tr></thead>
+<tbody>
+<tr><td>グラジエントプロファイル</td><td>線形</td></tr>
+<tr><td>溶媒A</td><td>95%水, 5%AN</td></tr>
+<tr><td>溶媒B</td><td>5%水, 95%AN</td></tr>
+<tr><td>勾配急峻さ φ&#x27;</td><td>6.5 %/分</td></tr>
+<tr><td>t0</td><td>1.07分</td></tr>
+<tr><td>流量</td><td>2.0 mL/分</td></tr>
+<tr><td>勾配範囲</td><td>0–100%B</td></tr>
+<tr><td>勾配時間 tg</td><td>14分</td></tr>
+<tr><td>勾配遅れ td</td><td>1.0分</td></tr>
+</tbody></table>
+<h2>A. 装置パラメータ</h2>
+<p>効率的にGE分離を開発するには、装置（ポンプ・注入器・カラム・配管）特性のいくつかを決める必要がある。φ&#x27; 推定には t0 が必要。t0 は60%超の有機修飾剤の移動相でウラシルをイソクラティック溶出して容易に推定できる。本例では t0≈1.07分（V0=2.15 mL、F=2.0 mL/分）。</p>
+<p>もう一つの重要特性は<strong>グラジエント遅れ</strong>。強溶媒Bに溶かしたUV吸収溶質（例：メタノール中ウラシル）と溶質なしの同溶媒Aを使い、通常カラムを付ける位置に検出器を接続してグラジエントを走らせる（<strong>図9</strong>）。遅れ時間 td は、グラジエントプログラム開始から溶媒B到達によるベースライン上昇までの時間で決まる。遅れ時間の知識は特定試料のグラジェント微調整に有用。図9はまた装置が生む<strong>グラジエントプロファイル</strong>も示し、名目上線形のグラジエントが実際はわずかに凸で、理論値から最大6%ずれる。しかし第I報と上記の議論から、RP-GEの結果はこの程度のずれには比較的鈍感である。グラジエント遅れ体積（td/F）と相対グラジエントプロファイルは、所与の装置構成で1回チェックすればよい（正常装置では一定に保たれる）。</p>
+<h2>B. 移動相の特性</h2>
+<p>第一段階は<strong>グラジエントプロファイルの選択</strong>。LSSグラジエントが好ましく、線形溶媒プログラムが大半のRP-GE分離でこの型を生む。よって線形溶媒プログラムを仮定する。次に<strong>有機修飾剤の選択</strong>：メタノール・アセトニトリル・THFが最も一般的。選択は主に必要な選択性で決まるが、分離前には通常未知なので初期選択はやや恣意的。本議論では水-アセトニトリルを仮定。</p>
+<p><strong>勾配急峻さ</strong>は（第I報 表4）から推定。上で決めた t0（1.07分）を使い、アセトニトリルでは φ&#x27;≈<strong>6.5 %/分</strong>。次に<strong>勾配範囲</strong>を考える。勾配範囲はk_i値の範囲を指し、有機溶媒のS値が大きいほど、また分離中の φf の変化（例：0–1.0）が大きいほど広い。勾配範囲が広いほど、所与化合物が首尾よく分離される（t0近くでもグラジエント完了後ずっと後でもなく溶出）可能性が高い。<strong>未知試料には初期グラジエントとして5%→95%アセトニトリル-水を推奨</strong>（5%・95%の事前混合溶液をA・Bとし、0→100%Bを走らせる）。これは合理的な勾配範囲を与えつつ、実務的問題（純水と有機溶媒のオンライン混合での脱ガス、90–100%水の移動相での一部カラムの効率低下＝充填剤の濡れ不良）を避ける。</p>
+<p><strong>グラジエント時間 tg</strong> は勾配範囲÷φ&#x27; で計算。本例では約14分（90/6.5）。これで初期RPグラジエントに必要な全パラメータが決まる（表13）。実試料のグラジエント前に、予想される最も感度の高い検出器減衰で<strong>ブランクグラジエント</strong>を走らせるのが賢明（ベースライン変動やゴーストピークの情報）。GE-LCでの<strong>溶媒純度の重要性は強調してもしすぎることはない</strong>。イソクラティックLCで許容される溶媒がGEでは使えないことがある（図10A・B）。ACSグレード無水メタノール（図10A）では不純物が弱移動相時にカラムに濃縮され、後でグラジェント中に溶出する。高純度HPLCグレードメタノール（図10B）は許容ブランクを与える。水も同様で、使用前に全UV吸収不純物を除く必要がある。</p>
+<h2>C. 試料の分析</h2>
+<p>イソクラティックLC同様、まず標準化合物の許容クロマトグラムを得るとよい。したがって最初のグラジエントは標準の、次に実試料のグラジエント。標準クロマトグラムを指針に重要部分に注目できる。設計・実行の手順を<strong>表14</strong>にまとめる（RP-GE分離開発のチェックリスト）。</p>
+<p><strong>表14（原文 TABLE 14）：「汎用最適」RP-GE分離の設計手順</strong></p>
+<ol><li>線形グラジエントプロファイルを選択</li><li>有機修飾剤を選択（アセトニトリル）</li><li>φ&#x27; を決定（t0が既知なら；近似値で十分）</li><li>勾配範囲を選択（未知試料は0–100%B）</li><li>グラジエント時間 tg を計算</li><li>グラジエント遅れ td を決定</li><li>グラジエントブランク</li><li>標準のグラジエント</li><li>試料のグラジエント</li><li>勾配範囲を修正</li><li>システムを微調整（表15と関連議論）</li></ol>
+<h2>D. カラム再生</h2>
+<p>初期グラジエント条件への再平衡化の重要性は強調してもしすぎることはない。再現性のない結果の多くは不十分な再平衡化による。一般的手順は10–15分の逆グラジエント＋初期条件10分（典型流量2.0 mL/分）。カラム再生は再調整の<strong>時間</strong>でなく通過<strong>液量</strong>に依存するので、急な逆グラジエントを高流量で使うほど再生が速い。</p>
+<hr>
+<h1>7. 「微調整（ファインチューニング）」</h1>
+<p>「汎用最適」RPグラジエントは分解能・検出感度・分析時間の妥協なので、各パラメータを（他の1つか2つを犠牲に）個別最適化できる。<strong>表15</strong>に手順をまとめる。</p>
+<p><strong>表15（原文 TABLE 15）：微調整手順のまとめ</strong></p>
+<table>
+<thead><tr><th>パラメータ</th><th>手順</th></tr></thead>
+<tbody>
+<tr><td>分解能</td><td>必要なら勾配範囲を拡大／Nを増やす／bを減らす／有機修飾剤を変える</td></tr>
+<tr><td>検出感度</td><td>試料サイズを増やす／bを増やす／Nを増やす</td></tr>
+<tr><td>分析時間の最適化</td><td>初期%Bを増やす／最終%Bを減らす／ts短縮でbを増やす（Rsが当初「良すぎる」場合）</td></tr>
+</tbody></table>
+<h2>A. RP-GEでの分解能の改善</h2>
+<p>LSSグラジエント溶出の分解能原理は第I報にまとめた。一般にこれらはイソクラティックRP-LCと類似（k&#x27;とbの類推が理解されていれば）。イソクラティックでRsはN・α・k&#x27;の適切な変更で改善でき、RP-GEでもN・α・bの適切な調整で改善できる。</p>
+<p><strong>(a) 勾配範囲:</strong> N・u・b調整の前に、全対象化合物がグラジエント終了前に溶出し、t0近くで溶出する化合物が無いことを確認。グラジェント終了後もピークが溶出するなら（純B移動相での「ホールド」）、より強い溶媒B（例：THF）が必要。非常に強く保持される化合物には三元グラジエント（水-THF-n-ヘキサンなど）が必要かも。t0で溶出する化合物には保持を増やす手段（pH変更、イオンペア）を要する。</p>
+<p><strong>(b) k&#x27;またはbの変更:</strong> bを第I報と上記のようにほぼ最適化した後は、Rs増加目的でbをさらに調整する理由は通常少ない（ただし検出感度向上にはb増加が有益）。2つの小さな点：第一に、付録Iで論じるとおり、イソクラティック/グラジエントの最適 k&#x27;/b は充填剤粒径や分離時間でいくらか変わる。表13の比較的速い分離（14分）と10 µm粒子ではb≈0.2が正しいが、長い分離時間や小粒子ではb=0.1がわずかに有利、大粒子（50 µm）や短い分離時間（&lt;10分）ではb=0.3が好ましいかも（ただしRs増加は一般に5–10%以下、bの変化はα変化を伴い増加を相殺しうる）。第二に、初期分離が換算速度 v≈3（最小h）で、溶媒Bもカラム長Lも変えたくない場合、Rs増加の唯一の選択肢は<strong>bを2.5倍減らす</strong>こと（Rs 10–20%増だが分離時間も同倍増、検出感度は同倍減）。</p>
+<p><strong>(c) Nの変更:</strong> GEでNを増やす選択肢はイソクラティックと同じ。2大アプローチは (i) Fを減らす（L一定）、(ii) Lを増やしFを比例増（P一定）。どちらでもグラジェント急峻さ（%B/t0、すなわちb）を一定に保つことが要件。<strong>表16</strong>に必要な変更をまとめる。</p>
+<p><strong>表16（原文 TABLE 16）：グラジエント溶出での分解能とNの増加</strong></p>
+<table>
+<thead><tr><th>変数</th><th>カラム長一定</th><th>カラム長を変える</th></tr></thead>
+<tbody>
+<tr><td>流量F</td><td>因子xで減少</td><td>xで減少</td></tr>
+<tr><td>カラム長L</td><td>変化なし</td><td>xで増加</td></tr>
+<tr><td>勾配急峻さ %B/分</td><td>xで減少</td><td>x²で減少</td></tr>
+<tr><td>分離時間t</td><td>xで増加</td><td>x²で増加</td></tr>
+<tr><td>カラム圧P</td><td>xで減少</td><td>変化なし</td></tr>
+</tbody></table>
+<p>重要な注意：流量減少やカラム長増加時に勾配急峻さ（φ&#x27;として測定）を変えないと、t0が増えるため<strong>真の急峻さ（b）は実際には増加</strong>し、分離中の有効k&#x27;が減り、場合により分解能が下がる。Nの変更中bを一定に保つもう一つの理由は、そのときのみ試料バンドの相対溶出順序が完全に同一に保たれるからである。</p>
+<p>イソクラティック同様、GEのα値はNを変えても変わらない。bを変えると隣接バンドのα値が変わることがある（イソクラティックで φb 調整によりk&#x27;を変えたときと類似；Karger ら [ref.8] が最近論じた）。RP-GEでαを意図的に変えるには、通常bを一定に保ちつつ移動相か固定相を変える。移動相組成の変更は2通り：(i) 別の有機修飾剤を選びグラジェントを再最適化（例：7%/分メタノール-水→4.5%/分THF-水、第I報 表4）。うまくいけば平均k&#x27;とNを最適に保ちつつα値を変える（図5Cと6CでANからMeOHへの変更が成分5,6,7,8で顕著な分離変化を与える例が劇的）。(ii) 第三溶媒Cを溶媒A・B両方に加える。</p>
+<h2>B. 検出感度</h2>
+<p>検出感度を改善するにはRP-GEで2つの方法。Rsが問題でなければbを増やして検出改善（イソクラティックでk&#x27;を減らすのに類似；<strong>表17</strong>）。</p>
+<p><strong>表17（原文 TABLE 17）：グラジエント溶出の分解能・ピーク感度とグラジエント急峻さbの関係</strong></p>
+<table>
+<thead><tr><th>b</th><th>相対Rs</th><th>相対感度***</th></tr></thead>
+<tbody>
+<tr><td>0.05</td><td>0.91</td><td>0.1</td></tr>
+<tr><td>0.1</td><td>0.79</td><td>0.3</td></tr>
+<tr><td>0.2*</td><td>0.63</td><td>0.4</td></tr>
+<tr><td>0.3**</td><td>0.54</td><td>0.5</td></tr>
+<tr><td>0.5</td><td>0.39</td><td>0.7</td></tr>
+<tr><td>1.0</td><td>0.20</td><td>1.0</td></tr>
+<tr><td>2.3</td><td>0.05</td><td>1.4</td></tr>
+</tbody></table>
+<p>\<em> カラム長L一定時の最適値。\</em>\<em> カラム圧P一定時の最適値。\</em>\<em>\</em> t0でのイソクラティックバンドに対する相対値。</p>
+<p>分解能がより重要で高いb値で得られない場合は、<strong>より大きな試料をカラムに注入</strong>して検出感度を改善（イソクラティックとの類推が有効）。試料溶媒が十分弱く（対象バンドの有意な移動を起こさない）、k0が可能な限り大きければ、大試料を注入できる。一般に検出感度向上の第一歩は可能なら試料サイズ増加とすべき。</p>
+<h2>C. 分析時間の最小化</h2>
+<p>望む分解能と検出感度を得た後、微調整の最終段階は分析時間の最小化。RP-GEで時間が無駄になる2つの一般的ケース：</p>
+<p><strong>第一に</strong>、溶媒プログラムの極性範囲が対象試料の溶出に必要な範囲より広い場合（クロマトグラムの初め/終わりに空白＝ピークなし）。初期/最終 φf を調整し、bを一定に保つよう ts を同時調整して無駄時間を除く（Rs一定を保つ）。初期溶出ピークが対象外の場合も同様で、初期 φ0 を対象成分が分離されるが初期ピークがt0近くで溶出する点まで増やす（図4B–Eが初期 φ0 増加による ts 減少を示す）。</p>
+<p><strong>第二に</strong>、最適b値でRsが必要以上に大きいが全勾配範囲（0–100%B）が必要な場合。最も直接的なのは t0 を減らして φ&#x27;（したがってb）を増やす（F一定）。あるいはLを減らし/Fを増やしてNを ts と相殺。bとFを同時に増やすと、必要以上のNがあるとき大きな時間短縮になる。</p>
+<hr>
+<h1>8. 記号一覧（第II報で追加、第I報の記号も参照）</h1>
+<ul><li><strong>φ0:</strong> t=0にカラムに入る移動相の φ 値。</li><li><strong>φf:</strong> t=tg にカラムに入る移動相の φ 値（グラジエント終了時の最終値）。</li><li><strong>td:</strong> グラジエント開始からカラム先端での実際の φ 変化までの遅れ時間。</li><li><strong>V0:</strong> クロマトグラフィーカラムのボイド体積。</li></ul>
+<hr>
+<h1>9. 付録I：イソクラティックとグラジエント溶出の最適 k&#x27;・b</h1>
+<p>大粒子（&gt;20 µm）カラムのイソクラティック分離では、最適k&#x27;はそのカラムの log k&#x27; 対 log u プロットの傾きnに関係する [ref.6]。カラム長L一定なら：</p>
+<p>$$k&#x27;(\text{最適}) = 2/n \tag{i-1}$$</p>
+<p>カラム圧一定（L可変）なら最適k&#x27;は：</p>
+<p>$$k&#x27;(\text{最適}) = 4/(1 + n) \tag{i-2}$$</p>
+<p>大粒子カラムのnは一般に0.4〜0.6なので、最適k&#x27;は2.5〜5。この範囲でRsはk&#x27;に比較的鈍感で、k&#x27;を5超に増やすと分離時間・検出感度が悪化するので、大半のケースでk&#x27;調整の理由は少ない。</p>
+<p>小粒子カラムはやや複雑。先行論文 [ref.7] で換算速度vの種々の値にnが導かれ、vは粒径 d_p に大まかに関係する。多孔性粒子の要約：</p>
+<table>
+<thead><tr><th>d_p典型(µm)</th><th>v典型</th><th>最適k&#x27;（L一定）</th><th>最適k&#x27;（P一定）</th></tr></thead>
+<tbody>
+<tr><td>3</td><td>100</td><td>5.7</td><td>3.0</td></tr>
+<tr><td>5</td><td>30</td><td>(—)</td><td>(—)</td></tr>
+<tr><td>10</td><td>15</td><td>3.8</td><td>2.6</td></tr>
+<tr><td>—</td><td>—</td><td>2.9</td><td>2.4</td></tr>
+</tbody></table>
+<p>（この表はスキャン判読が難しく、d_p・v・最適k&#x27;の対応の一部は<strong>原文参照</strong>。主結論：最適k&#x27;は粒径が小さくなるとやや増加し、この効果はL固定時により顕著。）</p>
+<p>状況はグラジエント溶出でも正確に類似する。b=0.2は大半の分離でよい汎用妥協だが、小粒子カラムでは低いb値で分解能をやや増やせる。第I報 図7で10 µmカラムは最適bが一般に0.1に近く、本報 図5でも5 µmカラムで b=0.1 に最大分解能。第I報 図7からは長い分離時間ほど小さいbが有利で、これは小粒子のイソクラティック分離でも成り立つ。</p>
+<hr>
+<h1>10. まとめ（原文 Summary）</h1>
+<p>第I報で展開した理論を、C18カラムと水-メタノール・水-アセトニトリル・水-THF系のグラジエント分離で実験検証した。線形溶媒強度分離は時間に対し線形に変化するグラジエントに対応する。そうした分離を最適化する実用ルールを提示した。</p>
+<hr>
+<h1>主要引用文献</h1>
+<ol><li>L. R. Snyder, J. W. Dolan, J. R. Gant, <em>J. Chromatogr.</em>, 165 (1979) 3.（<strong>第I報</strong>）</li><li>P. J. Schoenmakers, H. A. H. Billiet, R. Tijssen, L. de Galan, <em>J. Chromatogr.</em>, 149 (1978) 519.</li><li>N. Tanaka, E. R. Thornton, <em>J. Amer. Chem. Soc.</em>, 99 (1977) 7300.</li><li>L. R. Snyder, H. D. Warren, <em>J. Chromatogr.</em>, 13 (1964) 344.</li><li>N. Tanaka, H. Goodell, B. L. Karger, <em>J. Chromatogr.</em>, 158 (1978) 233.</li><li>L. R. Snyder, <em>J. Chromatogr. Sci.</em>, 7 (1969) 352.</li><li>L. R. Snyder, <em>J. Chromatogr. Sci.</em>, 15 (1977) 441.</li><li>B. L. Karger, J. R. Gant, A. Hartkopf, P. H. Weiner, <em>J. Chromatogr.</em>, 128 (1976) 65.</li><li>L. B. Sybrandt, E. F. Montoya, <em>Amer. Lab.</em>, 9, No. 8 (1977) 79.</li></ol>
+<hr>
+<h1>訳者ノート（本サイト補足）</h1>
+<ul><li><strong>第I報との役割分担:</strong> 第I報＝理論（なぜ 1/b が k&#x27; と等価に振る舞うか）、本第II報＝実験検証＋実務手順（実際にどう最適グラジエントを組むか）。両方揃って初めて「LSS理論」が実用ツールになる。</li><li><strong>DryLabの原型:</strong> 「1回の予備LSS-GEから溶質のb・S値を求め、保持や最適イソクラティック条件を変動係数0.6〜2%で予測する」という本報のワークフローが、後年の DryLab（2本の予備runから最適条件を計算する商用ソフト）の直接の原型。当サイトで扱う den Uijl らの保持モデリング総説や Baeza-Baeza の LSS拡張も同じ系譜。</li><li><strong>生薬分析への含意:</strong> 溶媒選択（表2–5のS値）、勾配率 φ&#x27; の決め方（第I報 表4）、分析時間短縮（初期%B上げ・最終%B下げ・b増加）、感度と分解能のトレードオフ（表17）は、生薬多成分の指紋グラジエント法をゼロから設計・微調整する際の実務判断そのもの。特に「まず0–100%（実5–95%）Bの広い勾配で下見し、範囲を絞る」という手順（表14）は未知組成の生薬抽出物に直接使える。</li><li><strong>判読不能箇所:</strong> スキャン品質のため、表4・5の一部セル、表8の一部、付録Iの小粒子表の一部が完全には読めず、要点（S平均値・変動係数・主結論）を優先して転記した。厳密な数値は原文（J. Chromatogr. 165 (1979) 31–58）を参照されたい。原文に無い数値は加えていない。</li><li><strong>IFの扱い:</strong> ダイジェストのIF「3.8」は現行誌 J. Chromatogr. A の値（JCR2024・Q1）。原文誌は1979年の J. Chromatogr.（前身誌）であり当時の値ではない（<strong>要確認</strong>）。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="gradient-elution-hplc-1-theoretical-basis-reversed-phase.html">グラジエント溶出HPLC 第I報――逆相系の理論的基礎（LSS理論の原典・Snyder-Dolan-Gant 1979）</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="chromatographic-response-functions-universal-comparison.html">クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="coptis-alkaloids-qbd-bayesian-design-space.html">ベイズ法による黄連（Coptis chinensis）6アルカロイドHPLC分析の設計空間構築と信頼性評価 — QbDによる頑健なRP-HPLC法開発</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="experimental-designs-hplc-method-development-validation-overview.html">HPLCメソッド開発・バリデーションにおける実験計画法の総覧——スクリーニング設計・応答曲面法からQbD・シックスシグマまで</a><span class="rel-tags"><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="gradient-elution-hplc-2-practical-application-reversed-phase" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

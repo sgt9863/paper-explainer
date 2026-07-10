@@ -31,18 +31,6 @@
       "source_pdf": "1-s2.0-S0378874125007822-main.pdf",
       "date": "2026-06-29"
     },
-    "12OoVk9GOr_PO4qTHhcW5ai4IsiHLVLKw": {
-      "slug": "centipeda-minima-qmarker-chemometrics",
-      "title": "ケモメトリクス・ネットワーク薬理・分子ドッキングに基づく漢方のQ-marker探索 — 鵝不食草(Centipeda minima)を例として",
-      "source_pdf": "Phytochemical_Analysis_2022_Liu_Centipeda_minima.pdf",
-      "date": "2026-06-29"
-    },
-    "1NQRe6pr2kMCjEhXCyjpKw64q4qn4ZHAX": {
-      "slug": "clt-fingerprint-ieqfm-fusion",
-      "title": "指紋技術とスペクトル定量予測に基づく漢方複方の総合品質解析戦略 — 複方甘草片(CLT)を例として",
-      "source_pdf": "1-s2.0-S003991402500147X-main.pdf",
-      "date": "2026-06-29"
-    },
     "1X6ZWzuZj_DnhVH3fwZ-hcllUjNCFhOXY": {
       "slug": "cqcqd-multistrategy-qmarker-pancreatitis",
       "title": "柴芩承気湯(CQCQD)の品質管理とQ-marker選定のための多戦略プラットフォーム",
@@ -61,18 +49,6 @@
       "source_pdf": "1-s2.0-S0731708524001109-main.pdf",
       "date": "2026-06-29"
     },
-    "1L3fmJIUmh5H_vRONM-FApUJKYBZA7Aeg": {
-      "slug": "sh-rsqfm-fivewavelength-antioxidant",
-      "title": "HPLC比率定量指紋とスペクトル量子指紋・抗酸化活性を統合した生薬品質管理体系 — 豨薟草(Siegesbeckiae Herba)を例として",
-      "source_pdf": "1-s2.0-S0021967325006570-main.pdf",
-      "date": "2026-06-29"
-    },
-    "1kwhN8vubXickqnnNo5HLwm4231kVBhsu": {
-      "slug": "shxxd-hplc-fingerprint-qmarker",
-      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
-      "source_pdf": "Biomedical_Chromatography_2026_Fu_SHXXD.pdf",
-      "date": "2026-06-29"
-    },
     "1InIz4X1KyGprRJFJn1vmzb5IWVjGvoaz": {
       "slug": "sjg-multidim-network-qmarker",
       "title": "多次元特性ネットワークによる漢方製剤の品質マーカー判別 — 参耆降糖顆粒(SJG)を例として",
@@ -83,12 +59,6 @@
       "slug": "ssyx-linear-substitution-qmarker",
       "title": "線形置換法による多成分定量に基づく参松養心カプセル(SSYX)のQ-marker解明",
       "source_pdf": "1-s2.0-S0944711325000212-main.pdf",
-      "date": "2026-06-29"
-    },
-    "1TT4NWzazt0w9GNjXWuacBD9yPnov5mNS": {
-      "slug": "sxg-2dlc-mdf-qmarker",
-      "title": "直交HILIC×RP二次元LC/MSと質量欠損フィルタによる参消顆粒(SXG)の網羅的化学プロファイルとQ-marker探索",
-      "source_pdf": "s00216-025-06180-9.pdf",
       "date": "2026-06-29"
     },
     "1vElx34vZ7SOqu0QDKrju2pDfIsdy1d6M": {
@@ -203,13 +173,6 @@
       "source_pdf": "s41598-021-91341-w.pdf",
       "date": "2026-07-01"
     },
-    "1o0dX5HRfgeMwJDlGZi5EKArXSgcG5s6H": {
-      "slug": "sxg-2dlc-mdf-qmarker",
-      "title": "SXG 2D-LC/MDF Q-marker (duplicate upload)",
-      "source_pdf": "s00216025061809 1.pdf",
-      "date": "2026-07-01",
-      "note": "duplicate upload of sxg (s00216-025-06180-9)"
-    },
     "138LmDxWLVa9NHMGZHDSF183hdTs5gUYD": {
       "slug": "tcm-five-regulatory-systems-comparison",
       "title": "長い使用歴を持つ伝統・補完医薬品の規制 — 5規制システム比較",
@@ -245,13 +208,6 @@
       "title": "化学・生物評価を統合したTCM総合品質評価指標(QCEI)",
       "source_pdf": "s13020-023-00782-0.pdf",
       "date": "2026-07-01"
-    },
-    "1tAvRqq5Pl6fK9pTyP4UhuOtrpLAh9i3C": {
-      "slug": "shxxd-hplc-fingerprint-qmarker",
-      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
-      "source_pdf": "Biomedical Chromatography  2026  Fu  Fingerprint Analysis and Quality Marker Identification of Sanhuang Xiexin Decoction 1.pdf",
-      "date": "2026-07-02",
-      "note": "duplicate upload of SHXXD paper (doi 10.1002/bmc.70477, same as shxxd-hplc-fingerprint-qmarker)"
     },
     "1XlhcKzrrye-7brdnmfUZ6-LjyiGAdC-N": {
       "slug": "mlstp-multistrategy-qmarker-qams",
@@ -308,13 +264,6 @@
       "source_pdf": "1s2.0S0021967325001748main 1.pdf",
       "date": "2026-07-02",
       "note": "duplicate upload of TCM 3D-integration ML QC paper (same as tcm-3d-integration-ml-qc)"
-    },
-    "1phiMrncVrm13KiGrflfWwoPxNHgleABj": {
-      "slug": "centipeda-minima-qmarker-chemometrics",
-      "title": "ケモメトリクス・ネットワーク薬理・分子ドッキングに基づく漢方のQ-marker探索 — 鵝不食草(Centipeda minima)を例として",
-      "source_pdf": "Phytochemical Analysis  2022  Liu  Discovery of potential Q-marker of traditional Chinese medicine based on chemical 1.pdf",
-      "date": "2026-07-02",
-      "note": "duplicate upload of Centipeda minima Q-marker paper (doi 10.1002/pca.3173, same as centipeda-minima-qmarker-chemometrics)"
     },
     "10OZi-kWiDp6ZeiVgyqTxqJfgu-fz07ng": {
       "slug": "qmarker-new-concept-liu2017",
@@ -431,13 +380,6 @@
       "date": "2026-07-05",
       "note": "duplicate upload of FCG (same paper as fcg-sugarfree-fingerprint-qams)"
     },
-    "1-9D2TYKpF1Pa3y6UrLwozKn0YBvg5cF2": {
-      "slug": "shxxd-hplc-fingerprint-qmarker",
-      "title": "統合的フィトケミカル・ケモメトリクス解析による三黄瀉心湯(SHXXD)の指紋分析とQ-marker同定",
-      "source_pdf": "Biomedical_Chromatography_2026_Fu_Sanhuang_Xiexin_Decoction.pdf",
-      "date": "2026-07-05",
-      "note": "duplicate upload of SHXXD (same paper as shxxd-hplc-fingerprint-qmarker)"
-    },
     "1DfVkGZD9UlLcDW-2xWybxWQ7RXAdrH9b": {
       "slug": "mlstp-multistrategy-qmarker-qams",
       "title": "脈絡疏通丸(MLSTP)の品質管理とQ-marker選定のための多戦略プラットフォームの構築",
@@ -476,11 +418,6 @@
       "source_pdf": "1-s2.0-S0039914014000459-main.pdf",
       "slug": "doe-desirability-multiresponse-optimization",
       "title": "実験計画法と満足度関数による多重応答最適化(総説)"
-    },
-    "daf20216-jpba-2015-ssdmc-rrf": {
-      "source_pdf": "1-s2.0-S0731708515300091-main.pdf",
-      "slug": "huzhang-ssdmc-rrf-uv-wavelength",
-      "title": "単一標準品による多成分定量(SSDMC/QAMS)のRRFを安定させる — UV波長と標準液濃度の設計(虎杖)"
     },
     "1rAw9BH9JI7gFY6RfVQ0N0AFzSv2LaeGE": {
       "source_pdf": "Botanical+Drugs+2026.1.02+Luo.pdf",
@@ -637,13 +574,6 @@
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。AAPS PharmSciTech 2023, 24:210."
     },
-    "upload-d298b781-tcm-granules-extraction-review": {
-      "source_pdf": "Phytochemical_Analysis__2024__Zhang__Analysis_of_the_Impact_of_Extraction_Processes_on_the_Quality_of_Traditional.pdf",
-      "slug": "tcm-granules-extraction-process-quality-review",
-      "title": "抽出プロセスが漢方（TCM）顆粒剤の品質に与える影響の分析（レビュー）",
-      "date": "2026-07-08",
-      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Phytochem Anal 2025, 36:903."
-    },
     "upload-86ed31be-cad-pfv-powerlaw": {
       "source_pdf": "J_of_Separation_Science__2024__Wu__An_optimization_strategy_for_charged_aerosol_detection_to_linearize_the_detector.pdf",
       "slug": "cad-pfv-powerlaw-linearization-qishen-yiqi",
@@ -693,13 +623,6 @@
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Wang L, Qu HB. Anal Bioanal Chem (2016) 408:2133-2145."
     },
-    "upload-8ab6cfb9-saffron-uhplc-ann": {
-      "source_pdf": "molecules2301851.pdf",
-      "slug": "saffron-uhplc-ann-rsm-crocin-separation",
-      "title": "サフラン（Crocus sativus L.）のUHPLC分析：ケモメトリクス（ANN応答曲面法）による分離最適化とマイナークロセチンエステルの検出",
-      "date": "2026-07-08",
-      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。D'Archivio AA et al. Molecules 2018, 23, 1851."
-    },
     "upload-d0ccabc4-usp-botanical-specs": {
       "source_pdf": "1s2.0S0944711318301144main.pdf",
       "slug": "usp-quality-specifications-botanical-articles",
@@ -713,20 +636,6 @@
       "title": "食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。You H et al. J AOAC Int 2020;103(1):124-131."
-    },
-    "upload-e12d274d-doe-desirability-review": {
-      "source_pdf": "1s2.0S0039914014000459main.pdf",
-      "slug": "doe-desirability-function-multiple-response-optimization-review",
-      "title": "実験計画法と多応答最適化——分析法開発における望ましさ関数（desirability function）の活用（総説）",
-      "date": "2026-07-08",
-      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Vera Candioti L et al. Talanta 124 (2014) 123-138. ※f18ff612は同一PDFの重複アップロードのため同一解説に集約。"
-    },
-    "upload-f18ff612-doe-desirability-review-dup": {
-      "source_pdf": "1s2.0S0039914014000459main.pdf",
-      "slug": "doe-desirability-function-multiple-response-optimization-review",
-      "title": "（重複アップロード）実験計画法と多応答最適化・望ましさ関数の活用（総説）",
-      "date": "2026-07-08",
-      "note": "e12d274d と同一PDFの重複アップロード。解説は doe-desirability-function-multiple-response-optimization-review に集約済み。"
     },
     "upload-dbac7497-crf-comparison": {
       "source_pdf": "1s2.0S0021967314012448main.pdf",
@@ -755,13 +664,6 @@
       "title": "逆相グラジエント溶出分離の最適化開発の手段としてのコンピュータシミュレーション（DryLab G）——Dolan・Snyder・Quarry 1987",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Dolan JW, Snyder LR, Quarry MA. Chromatographia 24 (1987) 261-276."
-    },
-    "upload-ac8a4c9c-retention-modelling-review": {
-      "source_pdf": "JSSC4488.pdf",
-      "slug": "retention-modelling-liquid-chromatography-review-2021",
-      "title": "液体クロマトグラフィーにおける保持モデリングの最近の応用（2015–2020）——5大保持モデルとメソッド開発・移管・固定相評価への活用",
-      "date": "2026-07-08",
-      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。den Uijl MJ et al. J Sep Sci 2021;44:88-114."
     },
     "upload-b17fa658-perspective-retention-dup": {
       "source_pdf": "perspectiveonthefutureapproachestopredictretentioninliquidchromatography_1.pdf",
@@ -804,6 +706,20 @@
       "title": "応用生物薬剤学とQuality by Designによる溶出／放出規格の設定——患者利益のための製品品質（AAPS/FDA/UW会議報告 2010）",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Selen A et al., AAPS J 2010;12(3):465-472."
+    },
+    "upload-4c9ab3b1-gradient-elution-1-theory": {
+      "source_pdf": "4c9ab3b1-1s2.0S002196730085726Xmain.pdf",
+      "slug": "gradient-elution-hplc-1-theoretical-basis-reversed-phase",
+      "title": "グラジエント溶出HPLC 第I報――逆相系の理論的基礎（LSS理論の原典・Snyder-Dolan-Gant 1979）",
+      "date": "2026-07-10",
+      "note": "7-PDFバッチ n1（全訳密度）。J Chromatogr 165(1979)3-30。スキャンPDFをページ画像精読で再構成。"
+    },
+    "upload-e6ba41c8-gradient-elution-2-practical": {
+      "source_pdf": "e6ba41c8-1s2.0S0021967300857271main.pdf",
+      "slug": "gradient-elution-hplc-2-practical-application-reversed-phase",
+      "title": "グラジエント溶出HPLC 第II報――逆相系への実用的応用（実験検証と最適化ルール・Dolan-Gant-Snyder 1979）",
+      "date": "2026-07-10",
+      "note": "7-PDFバッチ n2（全訳密度）。J Chromatogr 165(1979)31-58。第I報の実践編。スキャンPDFをOCR+画像で再構成。"
     }
   }
 }
