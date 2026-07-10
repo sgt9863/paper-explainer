@@ -6,7 +6,7 @@
 <title>指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略</title>
 <meta property="og:type" content="article">
 <meta property="og:title" content="指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略">
-<meta property="og:description" content="鎮咳去痰の中成薬「複方甘草片」の品質を、HPLC・GC・UVの3種の指紋を統合して総合評価する戦略。ピーク面積と保持時間を両制御する積分効率定量指紋法（IEQFM）で類似度を精密化し、単一標準多マーカー法（SAM）で11成分を効率的に定量、UV連続スペクトルを特徴連結法＋PLSRで含量予測。3手法の指紋をCRITIC重み付けで融合し、単一手法の片手落ちを避ける多次元品質管理の枠組みを35バッチで実証した。">
+<meta property="og:description" content="鎮咳去痰の中成薬「複方甘草片」の品質を、HPLC・GC・UVの3種の指紋を統合して総合評価する戦略。ピーク面積と保持時間を両制御する積分効率定量指紋法（IEQFM）で類似度を精密化し、単一標準多マーカー法（SAM）で11成分を効率的に定量、UV連続スペクトルを特徴連結法（CCM）＋PLSRで含量予測。3手法の指紋をCRITIC（指標間相関による重要度）法で客観的に重み付けして融合し、単一手法の片手落ちを避ける多次元品質管理の枠組みを35バッチ（3メーカー、うち期限切れ8バッチ）で実証した。OPLS-DAで期限切れ品と適格品を判別し、GA・SB・TA等7成分を差の主因と同定。">
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
@@ -18,54 +18,147 @@
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
 <div class="layout"><main class="container">
-<article class="paper" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic"><h1>指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">多成分定量</span> <span class="tag">指紋分析</span> <span class="tag">ケモメトリクス</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1016/j.talanta.2025.127661" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1s2.0S003991402500147Xmain.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp" alt="HPLC＋GC＋UVの3指紋を、ピーク面積と保持時間の両制御（IEQFM）で評価し、CRITIC重み付けで融合する多次元品質戦略" loading="lazy"></a><p>&lt;!-- Cai et al., Talanta 287 (2025) 127661 の全訳密度日本語版。 多手法融合のTCM品質戦略の実験論文。researcher レベル（IEQFM・SAM・CCM・PLSR・CRITICが中心）。 数式（IEQFM・SAM・CRITIC）は概念を訳出。表・図は原文参照。 --&gt;</p>
-<h2>書誌情報</h2>
-<ul><li>標題（原題）: Comprehensive analysis strategy of quality for traditional Chinese medicine compound based on fingerprint technology and quantitative prediction of spectra</li><li>著者: Ming Cai, Siqi Wang, Jiayi Jiang, Kai Gao（責任著者）, Guoxiang Sun（責任著者）</li><li>所属: 瀋陽薬科大学 薬学院／広州粤華製薬（広州）</li><li>掲載誌・巻号・DOI: Talanta, 287 (2025) 127661. DOI: 10.1016/j.talanta.2025.127661</li><li>インパクトファクター: 6.7（Talanta, JCR 2024 / Clarivate。Q1）</li><li>受理経過: 2024年9月6日受領／2025年1月18日改訂／1月26日受理／1月27日オンライン公開。© 2025 Elsevier B.V.</li></ul>
-<blockquote>補足: 複方甘草片（ふくほうかんぞうへん、Compound Liquorice Tablets, CLT）は、鎮咳・去痰に使われる代表的な中成薬（OTC薬）で、甘草エキス・アヘンチンキ・安息香酸ナトリウム・樟脳・八角茴香油などから成る。本論文の技術的核心は、<strong>1つの分析手法では複雑な中成薬の品質を測りきれない</strong>という問題に対し、<strong>HPLC（不揮発性成分）＋GC（揮発性成分の樟脳・アネトール）＋UV（全体スペクトル）の3種の指紋を、客観的重み付け（CRITIC）で融合する</strong>という多次元戦略を提案した点。IEQFM（面積＋保持時間の両制御）・SAM（単一標準多マーカー）・CCM+PLSR（UV量子化予測）といった独自の手法を組み合わせている。researcherレベル。本文にツムラ（Tsumura And Co.）のダウンロード記録はないが瀋陽薬科大学の最新研究。</blockquote>
-<h2>要旨（Abstract）</h2>
-<p>漢方複方（TCMC）は起源が多様で化学組成が複雑なため品質に差が生じる。品質評価基準の改善はその開発・応用の焦点かつ難点である。従来の指紋分析法はTCMCの品質評価・優劣判定に一定の限界がある。したがって、指紋の類似度評価法をどう最適化し、指紋に基づいて試料データをどう掘り下げてTCMC品質の本質的差異を十分反映するかが本論文の焦点。</p>
-<p>本論文では、ピーク面積と保持時間の両方を用いる積分効率定量指紋法（IEQFM）を提案して類似度評価を最適化。35バッチの複方甘草片（CLT）のHPLC・GC・UV指紋を例に評価した。オフライン波長切替法を探索して多波長データ処理を簡素化。次に、単一標準多マーカー法（SAM）と標準曲線法でCLT中の11成分を正確に定量。直交部分最小二乗判別分析（OPLS-DA）で品質差に影響する特徴成分を発見。UVスペクトルは特徴連結法で前処理して量子指紋を得て、部分最小二乗回帰（PLSR）モデルで定量予測（p&gt;0.7）。最後に、基準間相関による基準重要度（CRITIC）法で各評価法に重みを割り当てて3指紋を融合・評価。TCMCの発展に適応するため、方法最適化は品質評価基準改善に大きな意義を持つ。本研究はTCMCの品質分析の探索的方法を提供する。</p>
-<p><strong>キーワード</strong>: 複方甘草片、定量予測、積分効率定量指紋法、単一標準多マーカー法、漢方複方</p>
-<h2>1. 序論（Introduction）</h2>
-<p>漢方複方（TCMC）は多様な薬から成り化学組成が複雑・多様。その品質評価は安全で効果的な臨床応用の前提。各化合物間の相互作用がTCMC品質評価により高い要求を課す。品質管理分析法は単一化学評価から全体制御モードへ変わった。指紋構築は化学成分の同定・品質管理を実現する効果的方法で、国際的に認知された品質評価法として広く使われる。</p>
-<p>指紋と多指標定量の組み合わせが最も一般的な品質管理法。標準品は定性・定量の参照だが、複数標準品の使用はコスト・入手性・不安定性で困難。<strong>単一標準多マーカー法（SAM）</strong> はこれらに対処でき、参照と測定化合物の比例関係で正確に含量を計算でき、検出コストを大幅削減。品質評価では複雑な化学データの処理・解析が優先。類似度分析は指紋データ評価の効果的方法だが、現行の類似度理論の多くはクロマトピーク面積を主パラメータとし保持時間の影響を無視する。本研究は面積と保持時間の両方を類似度分析に用いる<strong>積分効率定量指紋法（IEQFM）</strong> を提案し、より正確な指紋評価を実現。</p>
-<p>液相分析では、従来は多波長を単純融合・タンデムで解析することが多く、有効情報を統合する一方で冗長情報変数を増幅していた。<strong>波長切替法</strong>は優位情報を効果的に集められTCMの定性・定量に広く応用。本論文はオフライン波長切替法で2波長の最大吸収を収集して指紋を確立し、重要でない情報の干渉を効果的に回避。UVスペクトルは分析物質が似ると吸収が重なりがちなため、<strong>特徴連結法（CCM）</strong> で連続スペクトル信号を量子ピークに変換することを提案——線変化の過程であるだけでなく、連続信号プロファイルを生む物質基盤に反映される物理情報の統合・簡素化。UV分光は高速・低コストで複雑系分析に利点があり、ケモメトリクスの助けで多成分含量と多変量スペクトルデータの関係を表現し、全波長スキャンで複数物質の含量を同時予測できる。</p>
-<p>複数の試験技術を組み合わせた総合分析は品質評価の新たな発展傾向。従来は複数分析法の相互影響・重要性を判断せず単純平均融合を行い評価結果に干渉をもたらしていた。本論文は<strong>CRITIC（基準間相関による基準重要度）法</strong>を初めて評価系に導入し、評価指標の変動性と指標間相関を考慮して異なる手法の重みを計算。</p>
-<p>咳と痰は呼吸器疾患の典型的臨床症状で通常炎症に関連。複方甘草片（CLT）は典型的TCMCで、様々な原因（特に呼吸器感染）による咳・痰の臨床治療に主に使われる。中国薬典ではCLTの品質基準はグリチルリチン酸とモルヒネのみで決定され、一部の報告は定量成分が少なく揮発成分を管理していなかった。<strong>CLTの去痰効果は主に揮発成分（樟脳・トランスアネトールが不可欠な役割）に依存</strong>。したがってHPLC指紋のみの評価は不完全で、GC研究を補完すべき。</p>
-<p>本論文は「指紋-含量予測-データマイニング」の品質管理分析法を開発。35バッチのCLTのHPLC・GC・UV指紋をIEQFMで評価。11成分を標準曲線法（SCM）・SAM・UV予測法で定量。ケモメトリクスで複雑データから有効な化学情報を抽出。</p>
-<h2>2. 材料と方法（Materials and methods）</h2>
-<h3>試薬・材料</h3>
-<p>3メーカーの35バッチのCLT（S1〜S8＝A社の期限切れ試料、S9〜S23＝B社、S24〜S35＝C社）。標準品: リクイリチゲニン（LG）・イソリクイリチゲニン（ILG）・グリチルリチン酸（GA）・モルヒネ（MP）・リン酸コデイン（CP）・安息香酸ナトリウム（SB）・樟脳（CMP）・トランスアネトール（TA）・イソリクイリチンアピオシド（ILA）ほか。</p>
-<h3>2.2 HPLC条件</h3>
-<p>Agilent 1100。注入量10 μL、検出波長220 nmと260 nm。</p>
-<h3>2.3 GC条件</h3>
-<p>Agilent 6890N GC-FID、HP-5キャピラリーカラム（30 m×0.32 mm）。30℃/minで220℃まで昇温し22分保持、2 μLスプリットレス注入。CMP・TAを測定。</p>
-<h3>2.4 UV条件</h3>
-<p>Agilent 1200でフローインジェクション分析。CLT粉末約0.013 gを0.5%リン酸含有80%メタノール25 mLで超音波抽出。60%メタノール溶出、注入5 μL、流速0.5 mL/min。190–400 nmを1.2分で全波長スキャン。</p>
-<h3>2.5 理論</h3>
-<p><strong>2.5.1 積分効率定量指紋法（IEQFM）</strong>: 試料指紋ベクトル X⃗=(A1·tS1, A2·tS2, ..., Ai·tSi)、標準指紋ベクトル Y⃗=(A1·tR1, ...)（A=各ピーク面積、t=各ピーク保持時間）。SF（式1）はX⃗とY⃗のなす角の余弦で、分布比の観点で試料と標準指紋の化学組成の類似度を示す。<strong>定性類似度Se</strong>（式2）は化学指紋成分の量・分布の特徴を反映、<strong>定量類似度Pe</strong>（式3）は化学指紋成分の全体含量を測る。Se・Peを用いる定量評価をIEQFMと呼ぶ。<strong>8段階の品質格付け</strong>: 等級1（Se≥0.95, 95%≤Pe&lt;105%）、等級2（Se≥0.90, 90%≤Pe&lt;110%）、等級3（Se≥0.85, ...）...と続く。</p>
-<p><strong>2.5.x SAM（単一標準多マーカー法）</strong>: 相対補正係数（fsi）で1つの参照から複数成分を定量。相対誤差Re&gt;95.5%なら標準曲線法（SCM）の代替として正確定量可能。</p>
-<p><strong>CCM（特徴連結法）</strong>: 連続スペクトルを量子ピークに変換。p=qのとき各点が量子指紋ピークとなり全情報スペクトルを得る。</p>
-<h2>3. 結果と考察（Results and discussion）</h2>
-<h3>3.1 定量分析</h3>
-<p><strong>3.1.1 11成分の測定</strong>: 220 nmクロマトとUVスペクトルで9化合物を保持時間で同定。GCでCMP・TAを同定。計11化合物。HPLCで9化合物の面積-濃度検量線、GCでCMP・TAを相対面積Ar（=A対照/A_IS）で検量。標準曲線法（SCM）で35バッチの11成分の含量（mg/錠）を計算。含量順は <strong>GA &gt; SB &gt; CMP &gt; LA &gt; TA &gt; LQ &gt; ILA &gt; MP &gt; LG &gt; ILG &gt; CP</strong>。MP・SB・GA・TAに外れ値が多く、ILA・LG・ILGは安定。3メーカーの平均含量では、A社は全体的に少なく（期限切れ試料のため）、B・C社は比較的高い。GA含量の大きな変動は原料産地の生育年数・標高（生育年数増でGA増、標高高でGA増）や保存条件・製法の複合要因による。</p>
-<p><strong>3.1.2 SAM定量分析</strong>: SAMは複数成分の同時定量に適する。GCでは2成分のみ検出されたためHPLCに焦点。<strong>LQ（リクイリチン）を参照物質</strong>とし、SCMでCs決定、相対補正係数（fsi）で他成分を計算。SCMとSAMの結果は強く相関——<strong>LQ 1つの標準品から8成分を正確に定量でき、複数成分同時定量のコストを削減しSCMより高効率</strong>。</p>
-<h3>3.2 HPLC指紋分析</h3>
-<p>機器精度・方法再現性・試料安定性を検証（面積・保持時間のRSD良好）。オフライン波長切替法で220 nmと260 nmの2波長の優位情報を統合。</p>
-<h3>3.x OPLS-DA・UV予測</h3>
-<p>OPLS-DAで品質差に影響する特徴成分を発見。UVスペクトルはCCMで量子指紋化しPLSRモデルで定量予測（p&gt;0.7で良好）。</p>
-<h3>3.7 CRITIC重み付けによる融合</h3>
-<p><strong>3.7.1 CRITIC重み計算</strong>: CRITIC法で指標の変動性・対立に基づき客観的重みを計算。HPLC・GC・UVは異なる視点から指紋情報を提供しSe・Peで評価。定性・定量データの性質が異なってもCRITICは変動係数・相関行列で両方を同時処理して客観重み付け。<strong>Se指標の重み: HPLC 43.81%・GC 55.48%・UV 0.91%</strong>（HPLC・GCの変動が大きく情報量多、UVは他2法と対立が少ない）。<strong>Pe指標の重み: HPLC 19.87%・GC 58.48%・UV 21.66%</strong>（GCが高強度評価で全体品質評価への影響大）。</p>
-<p><strong>3.7.2 融合指紋評価</strong>: 融合定性類似度Sf・定量類似度Pfを計算。SfはSf 0.931〜0.994、Pfは78.0〜139.4%、格付けは6等級内。3手法のデータ融合でより良い品質評価を達成し単一技術の片手落ちを回避。<strong>例: S24を単純平均融合するとSf 0.973・Pf 96.0%で等級1（偽陽性で実態と不一致）だが、CRITIC融合ではSf 0.961・Pf 83.4%で等級4（真の結果に近い）</strong>。CRITICは同一技術内の変動と異なる分析法間の相互影響の双方を反映。CRITICに基づく3指紋の融合でTCMCの多次元制御を実現。</p>
-<h2>4. 結論（Conclusion）</h2>
-<p>本研究では、HPLC・GC・UV指紋データと複数の数理モデル・処理戦略を組み合わせてCLTの品質を総合評価した。オフライン波長切替法の導入で多波長指紋の有効情報を統合し冗長情報処理能力を高めつつ重要波長情報を保持、高次元複雑データ分析の新たな発想を提供。CRITIC法が多源データ重み計算でSe・Peを合理的に統合し複雑試料の総合評価に科学的分析を提供。CLTを研究対象に方法の信頼性・適用性を検証したが、適用範囲はこれに限らず、より複雑な系（TCMC・植物抽出物・機能性食品）に拡張できる。面積と保持時間に基づくIEQFMはクロマトピークの差・変動に対し良好な安定性・適用性を維持、CCM・PLSRモデルのUVスペクトル処理結果も複雑試料の品質差の迅速スクリーニング・評価に一般化できることを示す。異なる分析プラットフォームのデータ融合でのCRITIC法の性能は食品安全・TCMC品質モニタリングに重要な応用参照を提供。将来は機械学習など高度データ処理技術との組み合わせで多次元データ分析の効率・精度をさらに最適化できる。本研究はCLTの品質評価の参照を提供するだけでなく、多成分試料の総合評価の分析枠組みを確立し品質管理研究の深化の方向を示す。</p>
-<h2>訳者補足</h2>
-<ul><li><strong>1手法では足りない、を解決する戦略</strong>: 複方甘草片は「不揮発性成分（甘草のグリチルリチン酸・フラボノイド、アヘンのモルヒネ・コデイン）」と「揮発性成分（樟脳・トランスアネトール＝去痰効果の主役）」が混在する。HPLCは不揮発性、GCは揮発性、UVは全体像——と得意分野が違う。中国薬典はグリチルリチン酸とモルヒネの2成分しか規定しておらず、去痰の主役である揮発成分が管理されていない。本論文は<strong>3手法の指紋を1つの品質スコアに統合</strong>することでこの片手落ちを埋める。</li></ul>
-<ul><li><strong>IEQFM（面積＋保持時間の両制御）</strong>: 従来の指紋類似度は「ピーク面積」だけで比べるが、それだと保持時間がずれても（＝別の成分でも）面積が同じなら似ていると誤判定しうる。IEQFMは<strong>面積と保持時間の両方</strong>を使うので、「同じ成分が同じ量ある」ときだけ高類似度になる。定性類似度Se（何がどう分布するか）と定量類似度Pe（全体量）の2軸で8段階に格付けする。</li></ul>
-<ul><li><strong>SAM（単一標準多マーカー法）の実利</strong>: 11成分を測るのに11個の標準品を買うのは高コスト・入手困難。SAMは<strong>1つの標準品（ここではリクイリチン LQ）</strong> から、成分間の応答比（相対補正係数）を使って8成分を計算する。標準曲線法（全部標準品を使う）と強く相関することを確認済みで、コストを大幅に削減できる。本サイトのQAMS（一標多評）論文と同じ発想。</li></ul>
-<ul><li><strong>CRITICで融合する意味</strong>: 3手法をただ平均するのは危険。本論文の実例では、劣化した試料S24を単純平均すると「等級1（優良）」と誤判定（偽陽性）してしまうが、<strong>CRITIC重み付け</strong>（各手法の情報量と手法間の相関を考慮）で融合すると「等級4」と正しく格付けできた。GCの寄与が大きく（揮発成分の変動が品質差をよく反映）、UVは他と重複が多いので重みが小さい、という客観的な配分が自動的に決まる。本サイトの周天方（AHP-CRITIC）・イチジク（エントロピー重み）論文と同じ「客観的重み付け」の系譜。</li></ul>
-<ul><li><strong>複方甘草片（CLT）とは</strong>: 甘草・アヘン・安息香酸ナトリウム・樟脳・八角茴香油から成る鎮咳去痰のOTC中成薬。日本の一般的漢方ではないが、「複数の性質の異なる成分をどう総合的に品質管理するか」の方法論モデルとして価値が高い。</li></ul>
-<ul><li>数式（IEQFM式1-3、SAM、CCM、CRITIC式18-23）の詳細、35バッチの全定量データ・格付け（Table 2-3）、図（Fig.1：クロマト・バイオリンプロット）は原文を参照。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hugan-capsule-fwfp-ecfp.html">護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qhp-hplc-fingerprint-chemometrics.html">指紋分析・多指標成分定量とケモメトリクスを組み合わせた清胃黄連丸(QHPs)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hgwd-uplc-fingerprint-spectrum-effect-qmarker.html">UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+<article class="paper" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic"><h1>指紋技術とスペクトル定量予測に基づく漢方複方（複方甘草片）の総合的品質分析戦略</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">方剤・中成薬</span> <span class="tag">QC・品質評価</span> <span class="tag">多成分定量</span> <span class="tag">指紋分析</span> <span class="tag">ケモメトリクス</span> <span class="tag">HPLC・UPLC</span> &middot; <a href="https://doi.org/10.1016/j.talanta.2025.127661" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1s2.0S003991402500147Xmain.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/ai-infographic.webp" alt="HPLC＋GC＋UVの3指紋を、ピーク面積と保持時間の両制御（IEQFM）で評価し、CRITIC重み付けで融合する多次元品質戦略" loading="lazy"></a><p>&lt;!-- Cai M, Wang S, Jiang J, Gao K, Sun G. Comprehensive analysis strategy of quality for traditional Chinese medicine compound based on fingerprint technology and quantitative prediction of spectra. Talanta 287 (2025) 127661. doi:10.1016/j.talanta.2025.127661 の全訳密度日本語版（ネイティブ抽出テキストを基に再構成）。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 複方甘草片（Compound Liquorice Tablets, CLT）は甘草・アヘン（モルヒネ・コデイン）・安息香酸ナトリウム・樟脳・アニス（trans-アネトール）等からなる鎮咳去痰の中成薬。本研究（瀋陽薬科大学・孫国祥グループ、Talanta 2025）は、当サイトが扱う「多手法融合による中成薬の品質管理」の代表例で、豨薟草のRSQFM論文と同系譜。核心は3つ：(1) 従来のピーク面積だけでなく<strong>保持時間も併用</strong>する <strong>積分効率定量指紋法（IEQFM）</strong>、(2) 揮発成分（樟脳・アネトール）を捉えるため<strong>HPLCにGCを追加</strong>し、さらにUVを量子化して統合、(3) 3手法の重みを主観でなく <strong>CRITIC法</strong>（指標のばらつき＋指標間相関）で客観的に決めて融合。薬局方がグリチルリチン酸とモルヒネの2成分しか規定しないCLTに対し、11成分の定量と3指紋融合で「片手落ちのない」品質評価を提示する。<strong>IF:</strong> Talanta = 6.7（JCR2024・Q1）。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> Comprehensive analysis strategy of quality for traditional Chinese medicine compound based on fingerprint technology and quantitative prediction of spectra</li><li><strong>著者:</strong> Ming Cai（蔡明）, Siqi Wang, Jiayi Jiang, Kai Gao（責任著者・広州粤華製薬）, Guoxiang Sun（孫国祥・責任著者）</li><li><strong>所属:</strong> 瀋陽薬科大学 薬学院／中薬学院（遼寧省瀋陽）、広州粤華製薬（広東省広州）</li><li><strong>掲載誌:</strong> Talanta 287 (2025) 127661</li><li><strong>DOI:</strong> 10.1016/j.talanta.2025.127661（2024年9月6日受付／2025年1月18日改訂受付／1月26日受理／1月27日オンライン）</li><li><strong>資金:</strong> 国家大学生創新創業訓練計画（No. 2023101630）</li><li><strong>© 2025 Elsevier B.V.</strong></li></ul>
+<blockquote><strong>略語:</strong> CCM=特徴連結法（characteristic concatenation method）；CLTs=複方甘草片；CMP=樟脳（camphor）；CP=リン酸コデイン；CRITIC=指標間相関による重要度（criteria importance through intercriteria correlation）；GA=グリチルリチン酸；IEQFM=積分効率定量指紋法（quantified fingerprint method of integral efficiency）；ILA=イソリクイリチンアピオシド；ILG=イソリクイリチゲニン；LA=リクイリチンアピオシド；LG=リクイリチゲニン；LQ=リクイリチン；MP=モルヒネ；OPLS-DA=直交部分最小二乗判別分析；OSF=オフライン波長切替指紋；PLSR=部分最小二乗回帰；RFP=参照指紋；SAM=単一標準多マーカー法（single-linear assay multi-markers method）；SB=安息香酸ナトリウム；SCM=標準曲線法；TA=trans-アネトール；TCMC=漢方複方（traditional Chinese medicine compounds）。</blockquote>
+<hr>
+<h1>要旨（Abstract）</h1>
+<p>漢方複方（TCMC）は原料の由来が幅広く、化学組成の複雑さが品質差につながる。品質評価基準の向上は、その開発・応用の焦点かつ難点である。従来の指紋分析法はTCMCの品質評価や優劣判定に一定の限界がある。本論文の焦点は、指紋の類似度評価法をどう最適化し、指紋を基に試料データをマイニングして品質の本質的差を十分に反映させるかである。本研究では、ピーク面積と保持時間を二重制御する <strong>積分効率定量指紋法（IEQFM）</strong> を提案して類似度評価法を最適化した。例として35バッチの複方甘草片（CLT）のHPLC・GC・UV指紋を評価。<strong>オフライン波長切替法</strong> を検討して多波長データ処理を簡略化。次にCLT中の11成分を <strong>単一標準多マーカー法（SAM）</strong> と標準曲線法で正確に定量。<strong>OPLS-DA</strong> で品質差に影響する特徴成分を探索。UVスペクトルは <strong>特徴連結法（CCM）</strong> で前処理して量子指紋を得、<strong>PLSR</strong> で定量予測（p&gt;0.7）。最後に、異なる評価法に <strong>CRITIC法</strong> で重みを割り当てた後、3指紋を融合評価した。進化するTCMCに適応するため、品質評価基準を改善する手法最適化は大きな意義をもつ。本研究はTCMCの品質分析に探索的手法を提供する。</p>
+<hr>
+<h1>1. 序論</h1>
+<p>漢方複方（TCMC）は多様な薬物からなり、化学組成が複雑・多様である。その品質評価は安全で有効な臨床応用の前提である [1]。各成分間の相互作用はTCMCの品質評価にさらに高い要求を課す。品質管理分析法は単一化学評価から全体制御モードへ変化してきた [2]。指紋の構築は化学成分の同定と品質管理を実現する有効な方法である [3,4]。指紋法は国際的に認知された品質評価法となり、TCMCの品質評価に広く用いられる [5,6]。</p>
+<p>指紋と多指標定量の組合せは品質管理で最も一般的な分析法である [7,8]。標準品は定性・定量の基準だが、コスト・入手性・不安定性から複数標準の使用は難しい [9]。<strong>単一標準多マーカー法（SAM）</strong> による多成分定量はこれらの問題によく対処する。標準と測定対象化合物の比例関係から、測定物質の含量を正確に算出できる [10,11]。本法は検出コストを大幅に減らし、TCM・食品で広く用いられる [12,13]。品質評価過程では、複雑な化学データをどう処理・解析するかが優先課題となる。類似度解析は指紋データ評価の有効な方法である [14,15]。現行の類似度理論の多くはクロマトピーク面積を主パラメータとし、保持時間の影響を無視する傾向がある [16,17]。本研究は、類似度解析にピーク面積と保持時間の両方を使う <strong>積分効率定量指紋法（IEQFM）</strong> を提案し、指紋評価をより正確にする。</p>
+<p>液相分析では、先行研究はしばしば多波長を単純融合やタンデムで解析してきた [18–20]。これは有効情報を統合する一方で冗長情報変数を増幅する。<strong>波長切替法</strong> は有利な情報を効果的に集められ、TCMの定性・定量分析に広く応用され、TCM品質研究の重要な発展方向である [21,22]。本論文では、オフライン波長切替法で2波長の最大吸収を収集して評価用指紋を確立する。これは処理が簡単で重要でない情報の干渉を効果的に避ける。UVスペクトルでは、分析物質が類似すると吸収が重なりやすい。本論文では、連続スペクトル信号を量子ピークに変換する <strong>特徴連結法（CCM）</strong> の使用を提案する。これは単なる線形変換の過程ではなく、より重要なのは連続信号プロファイルを生む物質基盤が反映する物理情報の統合・簡略化である [23]。UV分光は迅速・低コストから複雑系分析に利点があり、ケモメトリクスの助けで、多成分含量とUV多変量スペクトルデータの関係を表現し、全波長スキャン下で複数物質含量の同時予測を可能にする [24,25]。</p>
+<p>複数の試験技術を組み合わせた総合分析は品質評価の新しい発展傾向である。先行研究の多くは複数分析法間の相互影響・重要度を判断せず単純平均融合を直接行い、評価結果に干渉をもたらす [26]。本論文では、指標の変動性と指標間相関を考慮して異なる手法の重みを算出する <strong>CRITIC法</strong> を評価系に初めて導入する [27–29]。</p>
+<p>咳と痰は呼吸器疾患の典型的臨床症状で、通常は咽頭・気道炎症など炎症を伴う [30]。複方甘草片（CLT）は典型的なTCMCで、様々な原因（特に気道感染）による咳・痰の臨床治療に主に用いられる [31]。中国薬局方 [32] ではCLTの品質基準はグリチルリチン酸とモルヒネのみが定められ、一部の報告は定量成分が少なく揮発成分を制御しない [33,34]。CLTの去痰作用は主に揮発成分に依存し、樟脳とtrans-アネトールが不可欠な役割を果たす [35]。明らかにHPLC指紋のみの評価は不完全で、現状のCLTの品質恒常性評価を不完全にしている。したがって、従来のHPLC研究に加えGC研究を補い、より多くの薬物成分の測定を達成して、CLTの品質恒常性評価をより完全かつ信頼できるものにすべきである。</p>
+<p>本論文では「指紋-含量予測-データマイニング」の品質管理分析法を開発した。35バッチのCLTのHPLC・GC・UV指紋をIEQFMで評価。CLT中の11成分を標準曲線法（SCM）・SAM・UV予測法で定量。ケモメトリクスで複雑データから有効な化学情報を抽出。本法は既存のCLT品質管理の有用な補完で、単一法の限界を補い分析の正確性・信頼性を高める。</p>
+<hr>
+<h1>2. 材料と方法</h1>
+<h2>2.1 試薬と材料</h2>
+<p><strong>3メーカーの35バッチのCLT</strong>（S1〜S8＝メーカーAの期限切れ品、S9〜S23＝メーカーB、S24〜S35＝メーカーC。バッチ番号は表S3）。メタノール・アセトニトリル（LC-MSグレード、TEDIA）、リン酸（HPLCグレード、科密欧・天津）、純水（娃哈哈啟力・瀋陽）、1-ヘプタンスルホン酸ナトリウム（HPLCグレード、中美色譜・山東）、酢酸エチル（HPLCグレード、禹王河・山東）、フェンプロバメート（内標IS、Aladdin）。標準品：リクイリチンアピオシド（LA, 98%）・リクイリチン（LQ, 98%）・リクイリチゲニン（LG, 98%）・イソリクイリチゲニン（ILG, 98%）・グリチルリチン酸（GA, 98%）（Efa Biotechnology・四川）；モルヒネ（MP, 99.1%）・リン酸コデイン（CP, 97.3%）・安息香酸ナトリウム（SB, 99.7%）・樟脳（CMP）・trans-アネトール（TA, 99.7%）（中国食品薬品検定研究院）；イソリクイリチンアピオシド（ILA, 98%）（楽美天・四川）。</p>
+<h2>2.2 HPLC条件</h2>
+<p>Agilent 1100 HPLC。試料液調製・条件は先行法 [36] による。注入10 µL。検出波長 <strong>220 nm・260 nm</strong>。</p>
+<h2>2.3 GC条件</h2>
+<p>CLT 5錠を細かく粉砕し2錠を精秤、フラスコに入れ純水10 mLを加え超音波抽出10分。錠剤完溶後に酢酸エチル10 mLを加え5分振とう、遠心管に移し2000 rpmで5分遠心。上清3 mLとIS液1 mLをフラスコに移し均一化、0.45 µm膜濾過。</p>
+<p>GC：Agilent 6890N（自動注入・無音オイルフリー空気圧縮機・QL型水素発生器）。カラムHP-5キャピラリー（30 m×0.32 mm×0.25 µm、(5%-フェニル)-メチルポリシロキサン）、窒素キャリア定流量1.03 mL/min。注入口・FID検出器温度220℃。空気/水素/窒素流量300.0/40.0/30.0 mL/min。プレカラム圧5.6 psi。昇温：80℃（5分保持）→2℃/minで90℃（5分保持）→20℃/minで200℃（2分保持）→30℃/minで220℃（22分保持）。注入2 µL、スプリットレス。</p>
+<h2>2.4 UV条件</h2>
+<p>Agilent 1200 HPLCでフローインジェクション分析（カラムの代わりに空PEEK管5000 mm×0.12 mm）。CLT粉末約0.013 gを、0.5%リン酸含有80%メタノール25 mLで超音波抽出10分。60%メタノールを溶出液に。注入5 µL、流量0.5 mL/min。190〜400 nmを1.2分以内で全波長スキャン。</p>
+<h2>2.5 理論</h2>
+<h3>2.5.1 積分効率定量指紋法（IEQFM）</h3>
+<p>試料指紋ベクトルは <strong>X</strong>=(A₁/tS₁, A₂/tS₂, …, Aᵢ/tSᵢ)、標準指紋ベクトルは <strong>Y</strong>=(A₁/tR₁, …, Aᵢ/tRᵢ)。A は各指紋ピークの面積、t は保持時間。SF（式1）は <strong>X</strong> と <strong>Y</strong> のなす角の余弦で、試料と標準指紋の化学組成の分布比の類似度を示す。定性類似度（Se、式2）は化学指紋成分の量と分布の特性を反映。定量類似度（Pe、式3）は化学指紋成分の全体含量を測る。Se・Peで定性・定量評価する方法がIEQFMである。8等級に分ける：等級1（Se≥0.95, 95%≤Pe&lt;105%）、2（Se≥0.90, 90〜110%）、3（Se≥0.85, 85〜115%）、4（Se≥0.80, 80〜120%）、5（Se≥0.70, 70〜130%）、6（Se≥0.60, 60〜140%）、7（Se≥0.50, 50〜150%）、8（Se&lt;0.50, Pe&lt;50%またはPe≥150%）。</p>
+<p>$$SF = \frac{\sum_{i=1}^{n}(A_{Si}/t_{Si})(A_{Ri}/t_{Ri})}{\sqrt{\sum_{i=1}^{n}(A_{Si}/t_{Si})^2}\sqrt{\sum_{i=1}^{n}(A_{Ri}/t_{Ri})^2}} \tag{1}$$</p>
+<p>$$Se = \frac{1}{2}\left[SF + \frac{\sum_{i=1}^{n}\frac{A_{Si}t_{Ri}}{A_{Ri}t_{Si}}}{\sqrt{n\sum_{i=1}^{n}\left(\frac{A_{Si}t_{Ri}}{A_{Ri}t_{Si}}\right)^2}}\right] \tag{2}$$</p>
+<p>$$Pe = \frac{1}{2}\left[\frac{\sum_{i=1}^{n}(A_{Si}/t_{Si})(A_{Ri}/t_{Ri})}{\sum_{i=1}^{n}(A_{Ri}/t_{Ri})^2} + \frac{\sum_{i=1}^{n}(A_{Si}/t_{Si})}{\sum_{i=1}^{n}(A_{Ri}/t_{Ri})}SF\right]\frac{m_{RFP}}{m_i}\times100\% \tag{3}$$</p>
+<h3>2.5.2 単一標準多マーカー法（SAM）</h3>
+<p>安定・入手容易・安価な化合物を標準に選ぶ。標準(s)と残り化合物(i)の検量線を式(4)(5)で確立、絶対補正係数を式(6)(7)で算出。直線範囲内の平均濃度を計算の最適点とする。残り化合物の相対補正係数（fsi）を式(8)で、含量を式(9)で算出。さらに秤量誤差（RSDCs）・検量線誤差（bas(i)/bs(i)）・ピーク面積誤差（RSDA）をSAMで検討（式10）。<strong>Re&gt;95.5%</strong> なら標準曲線法（SCM）の代替として正確な定量が可能 [10,37]。</p>
+<p>$$A_s = b_s C_s + a_s \ (4)\qquad A_i = b_i C_i + a_i \ (5)$$</p>
+<p>$$f_s = A_s/C_s = b_s + a_s/C_s = b_s + b_{as} \ (6)\qquad f_i = A_i/C_i = b_i + a_i/C_i = b_i + b_{ai} \ (7)$$</p>
+<p>$$f_{si} = f_s/f_i = (b_s + b_{as})/(b_i + b_{ai}) \ (8)\qquad C&#x27;_i = f_{si}\times C_s\times \frac{A_i}{A_s} \ (9)$$</p>
+<p>$$Re = 1 - RSD_{Ci} = 1 - \sqrt{RSD_{Cs}^2 + \left(\frac{b_{as}}{b_s}\right)^2 + \left(\frac{b_{ai}}{b_i}\right)^2 + RSD_{Ai}^2 + RSD_{As}^2} \ge 95.5\% \tag{10}$$</p>
+<h3>2.5.3 特徴連結法（CCM）</h3>
+<p>CCMは連続信号を処理しつつ元スペクトルの特徴をより多く保持でき、複数の量子ピークを得る良法。連続スペクトル信号をp点で1区間とし、m併合点（m=p/q）で区間内にq量子ピークを得る。量子ピークのピーク高(H)・面積(A)・半値幅(W1/2)を式(11)〜(13)で算出。bmaxは区間内最高点の吸光度、biは各点の吸収、iは併合点数。p=qのとき各点が量子指紋ピークとなり全情報スペクトルが得られる。本法で得られる最大ピーク数は元データ点数。</p>
+<p>$$H = b_{max} \ (11)\qquad A = \sum_{i=1}^{n} b_i \ (12)\qquad W_{1/2} = i/200 \ (13)$$</p>
+<h2>2.6 データ解析</h2>
+<p>クロマト指紋の評価・確立は自作ソフト「TCMクロマト指紋超情報特性デジタル評価システム6.0（登録番号0407573）」。作図はOrigin 2021。UVデータ前処理はUnscrambler X 10.4と「TCMスペクトル定量指紋一貫性デジタル評価システム4.0（No.7037415）」、PLSRモデリングはUnscrambler X 10.4、OPLS-DAはSimca 14.1。</p>
+<hr>
+<h1>3. 結果と考察</h1>
+<h2>3.1 定量分析</h2>
+<p><strong>3.1.1 11成分の測定:</strong> 220 nmクロマト（図1A）の保持時間とUVスペクトル（図S1A）から9化合物を同定。GCではCMP・TAを保持時間で同定（図1B）。11化合物の構造は図S1B。11物質のピーク面積RSDで精度・再現性・安定性を評価しRSD&lt;3.0%。混合標準液で直線式・直線範囲・LOD・LOQを算出（<strong>表1</strong>）。HPLCの9化合物は面積(y)対濃度(x)、CMP・TAは Ar(=Acontrol/Ais) 対濃度で検量線を構築。標準添加で回収率も評価し、11物質の平均回収率は要件を満たした。</p>
+<p><strong>表1. 11成分の検量線・直線範囲・LOD・LOQ・回収率</strong></p>
+<table>
+<thead><tr><th>分析種</th><th>検量線</th><th>r</th><th>直線範囲(µg/mL)</th><th>LOD(ng)</th><th>LOQ(ng)</th><th>回収率</th></tr></thead>
+<tbody>
+<tr><td>MP</td><td>y=31.79x+3.9603</td><td>0.9995</td><td>3.94–78.80</td><td>0.30</td><td>0.90</td><td>101.4%</td></tr>
+<tr><td>LA</td><td>y=24.073x+5.4196</td><td>0.9997</td><td>10.64–212.80</td><td>1.04</td><td>3.16</td><td>102.8%</td></tr>
+<tr><td>LQ</td><td>y=35.497x−0.7975</td><td>0.9989</td><td>4.52–90.40</td><td>0.37</td><td>1.12</td><td>102.0%</td></tr>
+<tr><td>CP</td><td>y=27.088x+2.542</td><td>0.9995</td><td>2.68–53.60</td><td>0.19</td><td>0.57</td><td>100.3%</td></tr>
+<tr><td>SB</td><td>y=26.967x+42.745</td><td>0.9994</td><td>16.38–327.60</td><td>3.18</td><td>9.64</td><td>100.1%</td></tr>
+<tr><td>ILA</td><td>y=11.755x−0.2962</td><td>0.9998</td><td>4.92–98.40</td><td>0.62</td><td>1.88</td><td>103.1%</td></tr>
+<tr><td>LG</td><td>y=52.839x+13.781</td><td>1.0000</td><td>2.64–26.40</td><td>0.14</td><td>0.43</td><td>94.9%</td></tr>
+<tr><td>ILG</td><td>y=21.959x−0.3953</td><td>0.9997</td><td>1.16–23.20</td><td>0.25</td><td>0.77</td><td>102.0%</td></tr>
+<tr><td>GA</td><td>y=1.4385x−5.7597</td><td>0.9995</td><td>110.56–2211.20</td><td>13.51</td><td>40.93</td><td>97.2%</td></tr>
+<tr><td>CMP</td><td>Ar=0.014x−0.1204</td><td>0.9974</td><td>50.00–500.00</td><td>10.00</td><td>30.00</td><td>97.8%</td></tr>
+<tr><td>TA</td><td>Ar=0.0122x−0.0905</td><td>0.9980</td><td>15.00–200.00</td><td>3.00</td><td>9.00</td><td>100.8%</td></tr>
+</tbody></table>
+<p>35バッチの11成分含量（mg/錠）をSCMで算出（<strong>表2</strong>）。含量順は <strong>GA &gt; SB &gt; CMP &gt; LA &gt; TA &gt; LQ &gt; ILA &gt; MP &gt; LG &gt; ILG &gt; CP</strong>。バイオリンプロット（図1C）でMP・SB・GA・TAに外れ値が多く、ILA・LG・ILGの分布は安定（メーカー差の影響を受けにくい）。CMP・TAは揮発性から含量変動が大きい。3メーカーの平均含量（図1D）ではメーカーAが全体的に低く、B・Cが比較的高い。GAは3メーカーとも薬局方規定を満たすが、MPはメーカーB・Cは満たしAは満たさず（0.33 mg/錠、期限切れ品のため）。GA含量の大きな変動は複合要因（原料の栽培源・成長年数・産地標高、保存条件・調製工程）による。</p>
+<p><strong>表2. 35バッチの11成分含量（mg/錠、SCM・代表バッチ抜粋）</strong></p>
+<table>
+<thead><tr><th>試料</th><th>LQ</th><th>MP</th><th>LA</th><th>CP</th><th>SB</th><th>ILA</th><th>LG</th><th>ILG</th><th>GA</th><th>CMP</th><th>TA</th></tr></thead>
+<tbody>
+<tr><td>S1(A,期限切れ)</td><td>0.45</td><td>0.28</td><td>1.14</td><td>0.13</td><td>1.46</td><td>0.45</td><td>0.14</td><td>0.12</td><td>9.02</td><td>1.40</td><td>0.25</td></tr>
+<tr><td>S9(B)</td><td>0.58</td><td>0.40</td><td>1.20</td><td>0.18</td><td>1.97</td><td>0.59</td><td>0.20</td><td>0.18</td><td>13.25</td><td>1.87</td><td>0.78</td></tr>
+<tr><td>S23(B)</td><td>0.57</td><td>0.42</td><td>1.25</td><td>0.19</td><td>2.12</td><td>0.57</td><td>0.21</td><td>0.19</td><td>13.84</td><td>1.96</td><td>2.57</td></tr>
+<tr><td>S28(C)</td><td>0.67</td><td>0.41</td><td>1.53</td><td>0.17</td><td>1.97</td><td>0.71</td><td>0.30</td><td>0.28</td><td>14.46</td><td>1.34</td><td>1.06</td></tr>
+<tr><td>S35(C)</td><td>0.65</td><td>0.41</td><td>1.34</td><td>0.17</td><td>1.98</td><td>0.60</td><td>0.33</td><td>0.31</td><td>13.76</td><td>1.17</td><td>0.87</td></tr>
+</tbody></table>
+<p>（全35バッチは原文表2参照。SAM相対補正係数 fsi：LA=1.11、CP=1.47、SB=1.31、ILA=1.30、LG=3.02、ILG=0.66、GA=1.62、MP=24.75〔いずれもLQ基準〕。）</p>
+<figure><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/fig1.jpeg" alt="図1. (A)HPLCの試料・標準溶液クロマトグラム、(B)GCの試料・標準溶液クロマトグラム、(C)含量変動のバイオリンプロット、(D)3メーカー別の平均含量。" loading="lazy"><figcaption>図1. (A)HPLCの試料・標準溶液クロマトグラム、(B)GCの試料・標準溶液クロマトグラム、(C)含量変動のバイオリンプロット、(D)3メーカー別の平均含量。</figcaption></figure>
+<p><strong>3.1.2 SAM定量分析:</strong> SAMは複数成分の同時定量に適する。GCでは2成分しか検出されないため、HPLCでのSAM適用に注目。HPLCで <strong>LQを基準物質</strong> に選び、含量CsをSCMで決定。他8成分の相対補正係数（fsi）と濃度を2.5.2節の式で算出。各成分のRe（計算信頼度）は <strong>95.5%以上</strong> で、SAMによる含量計算の正確性が満足。SCMとSAMの相関解析で全Pearson相関係数&gt;0.9（図S2）。SAMはSCMの役割を果たし、LQを基準にすれば他8成分の含量を正確に得られる。複数成分の同時定量でコストを削減しSCMより高効率。</p>
+<h2>3.2 HPLC指紋分析</h2>
+<p><strong>3.2.1 指紋評価:</strong> HPLC法を装置精度・再現性・安定性で検証、ピーク面積・保持時間のRSD&lt;3.00%。220 nm（図2A）・260 nm（図2B）で指紋収集。両波長の情報を探るためIEQFMで別々に評価。S9〜S35（適格試料）の平均指紋を参照指紋（RFP）とし各バッチを評価（<strong>表3</strong>）。220 nm指紋のSeは0.935〜0.995、Peは72.8〜112.9%。260 nm指紋のSeは0.900〜0.993、Peは51.7〜126.2%。図2C,Dのとおり、Seの変動は小さく（各バッチに類似の化学組成が存在）、Peの変動は大きい（含量差が大きい）。260 nm指紋の大きな変動は、TA（ピーク26、揮発性で不安定）が260 nmで大きく応答するため。両波長の評価から、<strong>メーカーAはPe値が低く等級が高い</strong>（＝正常試料由来RFPより全体品質が低い）、B・Cは全体品質が良好。単一・複数成分の測定は指標成分の変動しか反映しないが、指紋による品質評価はメーカー間の全体差を定性・定量両面から解析でき、より包括的で信頼できる。</p>
+<figure><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/fig2.jpeg" alt="図2. (A)35バッチCLTの220 nm指紋、(B)260 nm指紋、(C)(D)異なる手法でのSe・Peの変動。" loading="lazy"><figcaption>図2. (A)35バッチCLTの220 nm指紋、(B)260 nm指紋、(C)(D)異なる手法でのSe・Peの変動。</figcaption></figure>
+<p><strong>3.2.2 オフライン波長切替指紋分析:</strong> 2波長（図3A,B）の総合クロマト情報を得るため、低レベルデータ融合の原理で2波長指紋を単純連結（図3C）。35バッチのタンデム指紋（TF、図3E）の評価は表3。Peは69.0〜114.0%で260 nmより変動が減少。しかし直列クロマトは大きすぎ、冗長な小ピークが不要な干渉をもたらす。元指紋（図3A,B）を見ると、32分で2波長に明確な差があり、220 nmのピークは主に32分前に集中、260 nmのピークは32分後に大きな吸収・応答。そこで、他の微細な指紋ピークの影響を受けずに両波長のクロマト情報を最大抽出するため、<strong>32分で2波長指紋をオフライン切替</strong>した新指紋（図3D）を得た。得られたオフライン波長切替指紋（OSF、図3F）の評価は表3。Se・Peの変動は有意でなく、Se範囲0.930〜0.995、Pe範囲68.3〜112.9%。260 nm指紋の大きな差はよく補正された。タンデム指紋と比べPeに有意変化なし（Pearson=0.9982）で、切替波長法が両波長指紋の全体評価に影響しないことを示す。冗長データを減らしつつクロマトピークの最適化情報に集中する。</p>
+<figure><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/fig3.jpeg" alt="図3. (A)220 nm指紋、(B)260 nm指紋、(C)220–260 nmタンデム指紋、(D)220–260 nmオフライン波長切替指紋、(E)35バッチのタンデム指紋、(F)35バッチのオフライン波長切替指紋。" loading="lazy"><figcaption>図3. (A)220 nm指紋、(B)260 nm指紋、(C)220–260 nmタンデム指紋、(D)220–260 nmオフライン波長切替指紋、(E)35バッチのタンデム指紋、(F)35バッチのオフライン波長切替指紋。</figcaption></figure>
+<h2>3.3 GC指紋分析</h2>
+<p><strong>3.3.1 クロマト条件の最適化:</strong> クロマト指紋の情報指数 <strong>I値</strong>（式14）[39–41] を目的関数に、GCのカラム種・注入口温度・昇温プログラムを検討。I値は信号の大きさ・均一性・情報量を反映し、高いほど条件が良い（より一貫し情報豊富な信号）。Rは分解能、nは総指紋ピーク数、piは第iピークの面積百分率、Aiは第iピーク面積。単一変数制御で試料を分析。異なる条件のI値を図4Aに示し、実際のクロマト分離から2.3節の最適条件を決定。</p>
+<p>$$I = -\sum_{i=1}^{n} p_i \ln p_i \ln A_i \tag{14}$$</p>
+<figure><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/fig4.jpeg" alt="図4. (A)異なる条件下でのI値（昇温プログラム1〜3の比較）、(B)35バッチのGC指紋、(C)OPLS-DAモデル、(D)OPLS-DAモデルのクロマトピークVIPプロット。" loading="lazy"><figcaption>図4. (A)異なる条件下でのI値（昇温プログラム1〜3の比較）、(B)35バッチのGC指紋、(C)OPLS-DAモデル、(D)OPLS-DAモデルのクロマトピークVIPプロット。</figcaption></figure>
+<p><strong>3.3.2 指紋評価:</strong> 装置精度・再現性・24時間安定性を検討。IS基準で相対保持時間・相対面積を算出しRSD&lt;3.0%。図4Bに35試料のGC指紋。5ピークを特徴ピークに選択。適格試料の平均ピークをRFPとしIEQFMで評価（表3）。全試料のSe&gt;0.9（成分種と分布の高い類似性）。Peはメーカー別にA:72.6〜86.6%、B:66.1〜164.2%、C:62.6〜105.9%。Peの大きな変動で35試料が8等級に分かれた。保存環境・製造工程が揮発成分に強く影響。メーカーAは期限切れでPe低く、メーカーBは一部バッチでCMP・TAが高くPe大。Peはある程度含量変化を反映。</p>
+<h2>3.4 11成分含量とPeの相関</h2>
+<p>標識成分の百分率（Pc%）と試料Pe%の関係を探るため相関解析。SCMの含量に基づき、非揮発成分の全体含量（Pc1%、式16）・揮発成分の全体含量（Pc2%、式17）と、HPLC・GCで評価したPe%の相関を算出。ci は各試料の各化合物含量、平均は35試料の各化合物平均含量。<strong>Pc1%とHPLC・GCの相関は0.7211・0.1492、Pc2%とHPLC・GCの相関は0.5448・0.9435</strong>。HPLCでは非揮発成分が主寄与だが揮発成分もある程度特性化でき、GCでは揮発成分が支配的。Peは全体試料含量情報を表せ、Peを定量パラメータとするIEQFMはCLTの化合物含量測定に信頼できる選択でTCMC品質の補完評価に有効。</p>
+<p>$$P_i = \frac{c_i}{\bar{c_i}}\times100\% \ (15)\quad Pc_1 = e^{\frac{1}{9}\sum_{i=1}^{9}\ln P_i}\times100\% \ (16)\quad Pc_2 = e^{\frac{1}{2}\sum_{i=1}^{2}\ln P_i}\times100\% \ (17)$$</p>
+<p><strong>表3. CLTの指紋評価結果（Se／Pe%／等級、代表バッチ抜粋。融合列はSf／Pf%）</strong></p>
+<table>
+<thead><tr><th>試料</th><th>220nm</th><th>260nm</th><th>220–260 OSF</th><th>GC</th><th>UV</th><th>融合</th></tr></thead>
+<tbody>
+<tr><td>S1(A)</td><td>0.935/73.4/5</td><td>0.904/53.4/7</td><td>0.930/71.9/5</td><td>0.936/78.6/5</td><td>1.000/118.0/4</td><td>0.934/85.8/3</td></tr>
+<tr><td>S9(B)</td><td>0.985/96.4/1</td><td>0.982/92.4/2</td><td>0.985/95.3/1</td><td>0.983/109.0/2</td><td>1.000/96.1/1</td><td>0.984/103.5/1</td></tr>
+<tr><td>S21(B)</td><td>0.975/103.2/1</td><td>0.973/113.4/3</td><td>0.971/104.6/1</td><td>0.898/159.2/8</td><td>1.000/90.8/2</td><td>0.931/133.6/6</td></tr>
+<tr><td>S24(C)</td><td>0.958/114.4/3</td><td>0.937/126.2/5</td><td>0.943/112.9/3</td><td>0.975/62.6/6</td><td>1.000/112.6/3</td><td>0.961/83.4/4</td></tr>
+<tr><td>平均</td><td>0.972/94.7</td><td>0.958/89.4</td><td>0.970/94.4</td><td>0.969/95.3</td><td>1.000/100.4</td><td>0.970/96.2</td></tr>
+<tr><td>RSD%</td><td>1.98/10.96</td><td>3.31/21.68</td><td>2.31/11.44</td><td>2.85/25.95</td><td>0.03/8.48</td><td>2.31/15.68</td></tr>
+</tbody></table>
+<p>（全35バッチは原文表3参照。UVはSeがほぼ1.000で定性差が出にくく、GCはPeのRSDが25.95%と最大〔揮発成分の変動を鋭敏に反映〕。）</p>
+<h2>3.5 直交部分最小二乗判別分析（OPLS-DA）</h2>
+<p>適格試料（QS）と期限切れ試料（ES）を判別するため、35バッチの220–260 nm OSFの32ピーク面積とGCの5ピーク面積を2次元行列（35×37）に。信頼区間外のS21-23を除去後、<strong>R²X=0.849、R²Y=0.975、Q²=0.966</strong> で安定・信頼できるモデル（図4C）。VIP&gt;1かつP&lt;0.05で差に寄与する <strong>7つの有意成分</strong>（図4D）を抽出：HPLC28(GA)・HPLC16(SB)・GC3(TA)・HPLC2・HPLC21(LG)・HPLC14(LQ)・HPLC29。5つの定量成分を含み、これらの正確な定量の必要性を示す。<strong>GAのVIP値が最高</strong> で、試料品質変動に影響する因子としてのGAの重要性を実証。</p>
+<h2>3.6 UVスペクトル分析</h2>
+<p><strong>3.6.1 スペクトル特性信号:</strong> 生UVスペクトル（図5A）は198 nmに最大吸収、230・270 nmに肩、246・370 nm付近に吸収。異バッチのCLTは類似の吸収ピーク・形状（主要物質が類似）だが吸収強度に差（主要化学成分の含量が異なる）。198 nm最大吸収は芳香環のπ-π<em>電子遷移、230・246 nmは非結合電子を含む飽和炭化水素誘導体のn-σ</em>遷移（モルヒネ・コデインの複雑な立体環構造に関連しうる）、270 nmは安息香酸ナトリウムの特性吸収、370 nmは共役基のn-π*遷移（トリテルペノイド・フラボノイドの芳香環やC=O）。</p>
+<p><strong>3.6.2 スペクトルデータ前処理:</strong> 35バッチは同じUV傾向を示しバッチ間差が見にくい。前処理で有効情報を強調し装置系統誤差を除く。Savitzky-Golay平滑化(SG)・標準正規変量変換(SNV)・二次微分(SD)・本論文のCCMを元スペクトルと比較。35バッチのUVデータ点を独立変数(X)、総含量を従属変数(Y)としてPLSRモデルを確立（校正セット25・検証セット10バッチにランダム分割）。RMSEC/RMSEPと相関係数(Rc²/Rp²)でモデル性能評価。図5Cのとおり4手法とも生スペクトルの予測性能を改善するが、<strong>CCMが優れたR²と低いRMSEC/RMSEPでより良い利点</strong>を示す。CCMは多次元データから有利な情報を抽出し生スペクトル情報の高い表現を達成。</p>
+<p><strong>3.6.3 指紋評価:</strong> 35バッチのUVスペクトルを2.6節のソフトで処理。CCMで30点を1区間、特徴ピーク数10とし、各バッチで最終的に <strong>50量子ピーク</strong> を取得（図5B）。IEQFMで評価（表3）。Seは全て&gt;0.99（指紋が高類似・化学組成と比率が類似）。Peは79.4〜119.7%と大きく変動（含量差を直観的に示す）。等級1〜5に分散（S24-26は等級3、S1・S32・S34は等級4、S10は等級5、残りは等級1-2）。HPLC・GCと差があるのは、UV指紋が190〜400 nm全波長スキャンで主に共役構造成分の特性を反映するため。UVの一貫性評価はスペクトル特性の類似度のみを反映し実際の品質と直結しない（期限切れ品も安定保存なら分解が少なくUVが近くなりうる）。HPLCの数波長検出の情報不足とGCの非揮発成分欠如を補完。</p>
+<figure><img src="assets/compound-liquorice-tablets-fingerprint-spectra-critic/fig5.jpeg" alt="図5. (A)生UVスペクトルプロファイルとCCM処理の模式図、(B)35バッチのUV量子指紋、(C)異なる前処理法のPLSRモデリング結果、(D)11成分の生/量子スペクトル予測の比較。" loading="lazy"><figcaption>図5. (A)生UVスペクトルプロファイルとCCM処理の模式図、(B)35バッチのUV量子指紋、(C)異なる前処理法のPLSRモデリング結果、(D)11成分の生/量子スペクトル予測の比較。</figcaption></figure>
+<p><strong>3.6.4 UVスペクトルの定量予測モデル:</strong> スペクトルデータでモデル構築時、長いデータ点は精度に影響するため、干渉変数を除くと予測が有意に改善。CCMはスペクトル信号を指紋ピークに変換し元情報の特性を保持しつつ簡略化。CCM処理量子指紋を35バッチ11成分でPLSRモデリング。Kennard-Stone法で訓練(80%)・検証(20%)に分割。50量子ピークを独立変数、含量を従属変数に。<strong>表4</strong> に各化合物の4性能パラメータ。生スペクトル変数のPLSRと比較（図5D）、樟脳を除きRMSEが減少しR²が増加。CCM処理でモデル安定性と定量予測精度が向上。予測含量とSCM実測値の相関係数はすべて&gt;0.8、11成分のt検定でp値すべて&gt;0.7（両法に有意差なし）。CCM処理UV量子指紋のPLSRはCLTの11成分含量を予測できる。</p>
+<p>本研究ではSCM・SAM・UV予測の3法で目的成分含量を測定。SCMは目的成分が明確で高純度標準が入手できる場面（製剤開発過程等）に適するが標準品が必要。SAMは多成分系（一部が標準品を欠く場合）に利点があり、TCM・天然物などの複雑系に適する。UV予測は迅速・非破壊で効率的スクリーニング・大規模分析に潜在応用があるが、現状は予測精度・信頼性が不十分（スペクトル背景干渉・試料マトリックス複雑性・訓練データ量の影響）で、SCM・SAMの水準に達せず、現状は予備スクリーニングツールとしてより適する。</p>
+<p><strong>表4. PLSRモデルの予測パラメータ</strong></p>
+<table>
+<thead><tr><th>成分</th><th>RMSEC</th><th>RMSEP</th><th>Rc²</th><th>Rp²</th><th>LV</th></tr></thead>
+<tbody>
+<tr><td>MP</td><td>0.0184</td><td>0.0262</td><td>0.7808</td><td>0.6234</td><td>6</td></tr>
+<tr><td>LA</td><td>0.0727</td><td>0.0860</td><td>0.6849</td><td>0.8142</td><td>6</td></tr>
+<tr><td>LQ</td><td>0.0287</td><td>0.0316</td><td>0.7653</td><td>0.8957</td><td>5</td></tr>
+<tr><td>CP</td><td>0.0083</td><td>0.0088</td><td>0.7473</td><td>0.3998</td><td>4</td></tr>
+<tr><td>SB</td><td>0.0919</td><td>0.0790</td><td>0.7267</td><td>0.6428</td><td>6</td></tr>
+<tr><td>ILA</td><td>0.0354</td><td>0.0303</td><td>0.6794</td><td>0.8267</td><td>3</td></tr>
+<tr><td>LG</td><td>0.0140</td><td>0.0238</td><td>0.9287</td><td>0.9180</td><td>9</td></tr>
+<tr><td>ILG</td><td>0.0142</td><td>0.0247</td><td>0.9213</td><td>0.9066</td><td>9</td></tr>
+<tr><td>GA</td><td>0.7273</td><td>0.8054</td><td>0.7675</td><td>0.7443</td><td>5</td></tr>
+<tr><td>CMP</td><td>0.1879</td><td>0.1550</td><td>0.6527</td><td>0.5987</td><td>7</td></tr>
+<tr><td>TA</td><td>0.2377</td><td>0.2131</td><td>0.8379</td><td>0.5394</td><td>5</td></tr>
+</tbody></table>
+<h2>3.7 3指紋の融合評価</h2>
+<p><strong>3.7.1 CRITIC法による重み計算:</strong> HPLC・GC・UVの3法で35バッチの評価結果に差がある（例：S11はHPLCで等級3、GCで等級5、UVで等級1）。これは各技術の分析原理の違いによる：HPLCは主に非揮発・熱不安定成分、GCは揮発物質、UVは不飽和結合の構造特性を反映。したがって3化学特性を統合する合理的な融合法が必要。本論文では、指標のばらつきと衝突に基づき異なる評価結果の客観的重みを算出する <strong>CRITIC法</strong> を用いた。各法はSe・Peで評価される。CRITICの核心は、各指標の変動性と相関を解析して指標の重要度を客観的に決めること。元評価データ行列（式18）を正規化（式19）。標準偏差(Sj)と相関係数(Rj)から指標の情報量(式20)を算出、rijは指標i,j間の相関係数。最終的に各指標の客観重み(Wj)を式21で得る。<strong>Se指標の重みはHPLC・GC・UVで43.81%・55.48%・0.91%</strong>（HPLC・GCの高変動が多情報を反映、UVは他2法と衝突が少ない）。<strong>Pe指標の重みは19.87%・58.48%・21.66%</strong>（GCが高強度評価で全体品質評価への影響大）。</p>
+<p>$$X&#x27;_{ij} = \frac{X_{ij} - X_{min}}{X_{max} - X_{min}} \tag{19}$$</p>
+<p>$$C_j = S_j\times R_j = \sqrt{\frac{\sum_{i=1}^{n}\left(X&#x27;_{ij}-\frac{1}{n}\sum_{i=1}^{n}X&#x27;_{ij}\right)^2}{n-1}}\times\sum_{i=1}^{n}(1-r_{ij}) \tag{20}$$</p>
+<p>$$W_j = \frac{C_j}{\sum_{j=1}^{n}C_j} \ (21)\qquad Sf = \sum_{j=1}^{n}W_j\times Se \ (22)\qquad Pf = \sum_{j=1}^{n}W&#x27;_j\times Pe \ (23)$$</p>
+<p><strong>3.7.2 融合指紋評価:</strong> 式(22)(23)で各バッチの融合定性類似度(Sf)・定量類似度(Pf)を算出（表3の融合列）。融合結果は個別法と差があり、Sfは0.931〜0.994、Pfは78.0〜139.4%、等級分布は6等級以内。3技術のデータ融合でより良い品質評価が達成でき単一技術の一面性を効果的に回避。CRITIC重み導入で統合がより正確・合理的に。例：S24を単純平均するとSf=0.973・Pf=96.0%で等級1（実態と合わず偽陽性）だが、CRITIC融合ではSf=0.961・Pf=83.4%で等級4（真の結果に近い）。CRITIC重みは同一技術内の結果変動と異なる分析法間の相互影響を反映。CRITICベースの3指紋融合でTCMCの多次元制御を達成。</p>
+<hr>
+<h1>4. 結論</h1>
+<p>本研究はHPLC・GC・UV指紋データを複数の数理モデル・処理戦略と組み合わせてCLTの品質を総合評価した。オフライン波長切替法で多波長指紋の有効情報を統合し、鍵波長情報を保持しつつ冗長情報の処理能力を大幅に向上、高次元複雑データ解析の新アイデアを提供。CRITIC法は多源データ重み計算で定性類似度(Se)・定量類似度(Pe)を合理的に統合し、複雑試料の総合評価に科学的解析を提供。CLTを研究対象に信頼性・適用性を検証したが、適用範囲はこれに限らず、より複雑な系（TCMC・植物抽出物・機能性食品）に拡張できる。ピーク面積と保持時間に基づくIEQFMはクロマトピークの差・変動に対し良好な安定性・適用性を保ち、CCM・PLSRのUVスペクトル処理も複雑試料の品質差の迅速スクリーニング・評価に一般化できる。異なる分析プラットフォームのデータ融合でのCRITIC法の性能は、TCMCの食品安全・品質監視に重要な応用参照を提供。将来は機械学習など高度データ処理技術との組合せを探れる。本研究はCLTの品質評価の参照であるとともに、多成分試料の総合評価の分析枠組みを確立し、品質管理の深化研究に方向性を与える。</p>
+<hr>
+<h1>訳者補足</h1>
+<ul><li><strong>IEQFMの新しさ:</strong> 従来の指紋類似度（コサイン類似度）は各ピークを「面積」だけで見るが、IEQFMは各ピークを <strong>面積/保持時間（A/t）</strong> の比に変換してから評価する。保持時間のズレ（＝カラム劣化・条件変動）も類似度に反映され、クロマト系の安定性監視を兼ねる。孫グループのRSQFM（豨薟草論文）と同じ「比率化で精密化」の思想。</li><li><strong>なぜGCを足すか:</strong> CLTの去痰効果の主役は揮発成分（樟脳・アネトール）。HPLCでは揮発・熱不安定成分を捉えにくいので、GCを補って初めて「効能に効く成分」を品質評価に載せられる。表3でGCのPe変動（RSD 25.95%）が最大なのは、揮発成分がバッチ・保存で大きくばらつくことの反映。</li><li><strong>CRITICの意義:</strong> 3手法を単純平均すると、情報の少ない手法（UV：Seがほぼ1.000で差が出ない）に引っ張られて誤判定が起きる（例：S24が偽の等級1に）。CRITICは「ばらつきが大きく（=情報が多い）」「他指標と相関が低い（=独自情報）」指標に重みを与えるため、Seの重みはGC 55%・HPLC 44%・UV 0.9%と自動配分され、実態に近い等級（S24→等級4）になる。</li><li><strong>数値の扱い:</strong> 表2（35×11）・表3（35バッチ）は代表バッチのみ抜粋。全バッチ・図S1〜S3・表S1〜S3は原文/補足資料参照。原文にない数値は加えていない。式18（元データ行列X）は行列表記のため本文では省略し式19以降を掲載。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hugan-capsule-fwfp-ecfp.html">護肝カプセル（Hugan Capsule）の四波長融合指紋＋電気化学指紋と抗酸化活性・ケモメトリクスによる品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="qhp-hplc-fingerprint-chemometrics.html">指紋分析・多指標成分定量とケモメトリクスを組み合わせた清胃黄連丸(QHPs)の品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="hgwd-uplc-fingerprint-spectrum-effect-qmarker.html">UPLC-DAD/MS化学プロファイルと薬効・ケモメトリクスを統合した黄耆桂枝五物湯（HGWD）の総合品質評価</a><span class="rel-tags"><span class="rel-tag">多成分定量</span><span class="rel-tag">指紋分析</span><span class="rel-tag">方剤・中成薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <aside class="notes" id="notesPanel" data-slug="compound-liquorice-tablets-fingerprint-spectra-critic" aria-label="この論文のメモ">
   <div class="notes-head">
