@@ -80,9 +80,12 @@
 <h2>3. 結果（Results）</h2>
 <h3>3.1 成分優先化のための補助的ネットワーク解析</h3>
 <p><strong>3.1.1 差次遺伝子発現解析</strong>: limmaで群間差次発現解析。DEGを p&lt;0.05・|log2FC|≥1.5 で同定し、火山図（Fig.1a）・ヒートマップ（Fig.1b）で可視化。計34の下方制御遺伝子を同定。これらは後続の成分優先化の参照情報としてのみ使用。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig1.png" alt="図1. 虚血性脳卒中の発現変動遺伝子(DEG)。(a) ボルケーノプロット、(b) クラスタヒートマップ、(c) Venn図。" loading="lazy"><figcaption>図1. 虚血性脳卒中の発現変動遺伝子(DEG)。(a) ボルケーノプロット、(b) クラスタヒートマップ、(c) Venn図。</figcaption></figure>
 <p><strong>3.1.2 成分-標的関連ネットワークの構築</strong>: 潜在的成分-標的関連をVenn図（Fig.1c）で可視化。CytoscapeでネットワークをFig.2aに構築。</p>
 <p><strong>3.1.3 タンパク質-タンパク質相互作用（PPI）ネットワーク</strong>: 大黄・黄連・黄芩の候補成分に対応する計543の潜在標的を34の参照遺伝子にマッピングし、7つの高連結標的（PTGS2, JUN, TNF, IL1B, CXCL8, CXCL2, NAMPT）を得た。STRINGで生成したPPIネットワークは7ノード・19エッジ、平均ノード次数5.4（Fig.2b）。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig2.jpeg" alt="図2. 成分–標的–経路の制御ネットワーク。(a) 成分-標的ネットワーク、(b) 標的PPIネットワーク(JUN/IL1B/PTGS2/CXCL2/TNF/NAMPT等)、(c) コア活性成分-主要標的-上位経路。" loading="lazy"><figcaption>図2. 成分–標的–経路の制御ネットワーク。(a) 成分-標的ネットワーク、(b) 標的PPIネットワーク(JUN/IL1B/PTGS2/CXCL2/TNF/NAMPT等)、(c) コア活性成分-主要標的-上位経路。</figcaption></figure>
 <p><strong>3.1.4 機能アノテーションとパスウェイ濃縮</strong>: GO濃縮解析で845項目（生物学的過程815・細胞成分8・分子機能22）、KEGGで64パスウェイ（Fig.3）。候補成分の生物学的関連性の補助情報として使用し、品質評価の主要証拠とはみなさない。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig3.png" alt="図3. 主要標的の機能濃縮解析。(a) GO濃縮、(b) KEGGシグナル経路濃縮。" loading="lazy"><figcaption>図3. 主要標的の機能濃縮解析。(a) GO濃縮、(b) KEGGシグナル経路濃縮。</figcaption></figure>
 <p><strong>3.1.5 成分-標的-パスウェイ関連の概観</strong>: 統合「代表成分-標的-上位パスウェイ」ネットワーク（Fig.2c）を構築。レイン・アロエエモジン・エモジン・クリソファノール・ウォゴニン・エピベルベリンがネットワーク内で高連結性を示し、さらなる植物化学評価の代表成分として優先。</p>
 <p><strong>3.1.6 分子ドッキング</strong>: 選択代表成分とアノテート標的の相互作用ポテンシャルを評価。ドッキングスコア &lt;−5.0 kcal/mol が良好な結合親和性を示す（Table 2）。これらは候補優先化を支持するが実験的クロマト証拠を置き換えない。</p>
 <p><strong>Table 2. SHXXD活性成分と主要標的タンパク質の分子ドッキング結果（抜粋）</strong></p>
@@ -101,19 +104,25 @@
 <tr><td></td><td>ケルセチン</td><td>−6.82</td></tr>
 <tr><td>NAMPT (2E5D)</td><td>オバクノン</td><td>−6.62</td></tr>
 </tbody></table>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig4.jpeg" alt="図4. SHXXD活性成分と主要標的タンパク質の分子ドッキング。" loading="lazy"><figcaption>図4. SHXXD活性成分と主要標的タンパク質の分子ドッキング。</figcaption></figure>
 <h3>3.2 HPLC指紋法のバリデーション</h3>
 <ul><li><strong>精度</strong>: 参照試料（S5）6連続注入。ピーク10（レイン）を参照ピークとし、相対保持時間（RRT）・相対ピーク面積（RPA）のRSDを算出。RPAのRSD&lt;3%、RRTのRSD&lt;2%で良好な装置精度。</li><li><strong>安定性</strong>: 試料溶液を0, 2, 4, 8, 12, 24時間で分析。RPAのRSD&lt;3%、RRTのRSD&lt;0.5%で24時間安定。</li><li><strong>再現性</strong>: S5の独立調製6試料を分析。RPAのRSD&lt;3%、RRTのRSD&lt;0.5%で満足な再現性。</li></ul>
 <h3>3.3 SHXXDのHPLC指紋分析</h3>
 <p><strong>3.3.1 指紋確立と類似度評価</strong>: 19バッチのSHXXD参照試料のHPLC指紋データをTCM色譜指紋類似度評価システムに取り込み。S1を参照指紋とし、時間窓幅0.5分・メジアン正規化で多点校正・全ピーク自動マッチングして試料指紋と参照指紋（R）を生成（Fig.5）。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig5.jpeg" alt="図5. SHXXD 19バッチ(S1〜S19)と対照指紋(R)のHPLC指紋クロマトグラム(24共通ピーク)。" loading="lazy"><figcaption>図5. SHXXD 19バッチ(S1〜S19)と対照指紋(R)のHPLC指紋クロマトグラム(24共通ピーク)。</figcaption></figure>
 <p>計24の特徴クロマトピークを標識し、うち13を標準品比較で同定: ピーク3（バイカリン）・8（ウォゴノシド）・10（レイン）・14（ヤトロリジン）・15（エピベルベリン）・16（コプチシン）・18（パルマチン）・19（塩酸ベルベリン）・20（アロエエモジン）・21（ウォゴニン）・22（エモジン）・23（クリソファノール）・24（フィスシオン）。</p>
 <p>参照指紋（R）との類似度は19バッチでそれぞれ 0.927, 0.975, 0.975, 0.971, 0.967, 0.975, 0.971, 0.981, 0.973, 0.952, 0.967, 0.972, 0.962, 0.959, 0.980, 0.975, 0.980, 0.964, 0.955、<strong>平均0.967・RSD1.3%</strong>（Table 3）。19バッチの指紋類似度は高く、異なる産地・バッチ間で主要成分プロファイルの変動が小さく、一貫した信頼できる調製工程を示唆。</p>
 <p><strong>3.3.2 共通指紋ピークの帰属</strong>: 試料溶液と大黄・黄連・黄芩の個別生薬溶液を分析し、24共通ピークを各生薬起源に帰属（Fig.6）。<strong>黄芩由来</strong>: ピーク1・3（バイカリン）・5・6・8（ウォゴノシド）・21（ウォゴニン）。<strong>黄連由来</strong>: ピーク13・14（ヤトロリジン）・15（エピベルベリン）・16（コプチシン）・18（パルマチン）・19（塩酸ベルベリン）。<strong>大黄由来</strong>: ピーク2・9・10（レイン）・11・12・17・20（アロエエモジン）・22（エモジン）・23（クリソファノール）・24（フィスシオン）。ピーク14は黄連と大黄の共有成分。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig6.jpeg" alt="図6. SHXXDと構成生薬のHPLCクロマトグラム。(A)黄芩、(B)黄連、(C)大黄、(D)SHXXD試料。" loading="lazy"><figcaption>図6. SHXXDと構成生薬のHPLCクロマトグラム。(A)黄芩、(B)黄連、(C)大黄、(D)SHXXD試料。</figcaption></figure>
 <p><strong>3.3.3 クラスターヒートマップ解析</strong>: 24共通ピークのうち11を階層クラスタリングとOPLS-DA構築に選択（選択基準: ①高いピーク存在量、②良好なバッチ間再現性〔19バッチでピーク面積・保持時間のRSD&lt;5%〕、③良好な信号安定性、④多変量解析での試料群判別への高い寄与）。11ピークの面積データで階層クラスタリングし、バッチを4群に分割: 群I（S9, S18）；群II（S2, S4, S11, S13）；群III（S3, S6, S7, S8, S12, S15, S16, S17）；群IV（S1, S5, S10, S14, S19）。バッチ間でレイン・エモジン・ウォゴニンなどの含量に有意な変動。S6・S15・S17はアロエエモジン・レイン・バイカリンが比較的高く、S12はウォゴニンが有意に高い。S9・S18はアロエエモジン・クリソファノール・バイカリンが総じて低い。S1・S16はコプチシン・エピベルベリン・パルマチン・塩酸ベルベリンが比較的低い。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig7.jpeg" alt="図7. 19バッチの11共通ピークのクラスタリングヒートマップ。" loading="lazy"><figcaption>図7. 19バッチの11共通ピークのクラスタリングヒートマップ。</figcaption></figure>
 <p><strong>3.3.4 指紋データに基づくOPLS-DA</strong>: 校正済み11共通ピークのRPAを変数にSIMCA 14.1でOPLS-DA。<strong>R²X=0.989、R²Y=0.944、Q²=0.899</strong>（&gt;0.5が許容）で満足なモデル適合・予測性能。200回並べ替え検定（Fig.8b）で並べ替えモデルのQ²が負となり過学習でないことを支持。異なるバッチはおよそ4群にクラスター（Fig.8a）。バッチ差に寄与する鍵成分を同定するためVIP値を解析（Fig.8c）、<strong>VIP&gt;1の4ピーク（ピーク10・20・22・23）</strong> を同定——対応化合物（レイン・アロエエモジン・エモジン・クリソファノール、いずれも大黄由来）がSHXXDバッチを区別する主要マーカー成分となりうる。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig8.jpeg" alt="図8. OPLS-DA。(a)スコアプロット(95%信頼楕円)、(b)順列検定 R²=(0.0,0.266)/Q²=(0.0,−0.972)、(c)VIP。" loading="lazy"><figcaption>図8. OPLS-DA。(a)スコアプロット(95%信頼楕円)、(b)順列検定 R²=(0.0,0.266)/Q²=(0.0,−0.972)、(c)VIP。</figcaption></figure>
 <h3>3.4 Q-markerの同定と定量評価</h3>
 <p><strong>3.4.1 Q-markerの選択</strong>: 化学指紋・ケモメトリクス・補助バイオインフォマティクス（ネットワーク薬理・分子ドッキング）と定量含量測定を組み合わせた段階的統合戦略でスクリーニング。ネットワーク薬理の根拠は伝統的効能と現代病態機序の統合にある: 虚血性脳卒中（IS）は酸化ストレス・炎症カスケード（IL-6・TNF-α上昇）・アポトーシス・血液脳関門破綻を伴い、SHXXDの伝統的機能「清熱解毒」「活血」に対応する。黄芩のバイカリン・ウォゴニンはISモデルで強い抗酸化・抗炎症、黄連のベルベリンはNF-κBなど炎症経路阻害で虚血傷害を保護、大黄のアントラキノン（レイン含む）は酸化ストレス・アポトーシス・フェロトーシスを調節。</p>
 <p>この統合アプローチで、まずバイオインフォマティクスにより4候補（レイン・エピベルベリン・アロエエモジン・ウォゴニン、ドッキング結合エネルギー&lt;−5 kcal/mol、含量測定で支持）を同定。次にクロマト指紋のOPLS-DAがVIP&gt;1の4ピークを同定（バッチ判別に重要）。2化合物（レイン・アロエエモジン）が両戦略で重複。ドッキングで予測された一部（ケルセチン・オバクノン）はHPLC指紋で検出されず（生薬・凍結乾燥粉末中の低存在量による）最終候補から除外。6候補Q-marker（レイン・エピベルベリン・アロエエモジン・ウォゴニン・エモジン・クリソファノール）の同一性をHPLC-DADで標準品比較して支持。<strong>5つのQ-marker原則（妥当性・特異性・測定可能性・伝達可能性・効能相関）に沿い、6成分をQ-marker候補として提案</strong>。</p>
 <p><strong>3.4.2 システム適合性</strong>: 最適条件下で6標的成分が優れた分離と明確な保持時間を示した（Fig.9）。</p>
+<figure><img src="assets/sanhuang-xiexin-decoction-fingerprint-qmarker/fig9.jpeg" alt="図9. 混合標準・SHXXD試料・陰性対照液のHPLCクロマトグラム(A〜E)。" loading="lazy"><figcaption>図9. 混合標準・SHXXD試料・陰性対照液のHPLCクロマトグラム(A〜E)。</figcaption></figure>
 <p><strong>3.4.3 直線性</strong>: 混合標準を1, 2, 3, 5, 7, 10, 15 μLで注入。ピーク面積を注入質量（ng）に対しプロット（Table 4）。</p>
 <p><strong>Table 4. 6成分の直線関係</strong></p>
 <table>
