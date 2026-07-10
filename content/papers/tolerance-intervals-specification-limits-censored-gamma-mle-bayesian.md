@@ -83,6 +83,8 @@ $$
 
 Y＝医薬品品質特性測定値、k＝形状（shape）、θ＝尺度（scale）、Γ()＝ガンマ関数。柔軟性のため全形状・尺度の組合せを一般化できず、計算負荷の高いベイズの制約もあり、製薬で遭遇しうるデータセットを例示する **2つの[形状, 尺度]の組[1,1]・[2,3]** をシミュレーションに用いる。Gamma(1,1) は Gamma(2,3) より相対的に右に歪む。打ち切りデータの割合 fcens はこの場合 0.5。
 
+![図1. 本研究で用いる2つのガンマ分布。(A) shape=1, scale=1（Gamma(1,1)、より右に歪む）、(B) shape=2, scale=3（Gamma(2,3)）。赤の陰影は目標割合 P の領域。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig1.png)
+
 ## 2.2. 打ち切りガンマ分布パラメータの推定
 
 ### 2.2.1. MLE
@@ -127,7 +129,11 @@ $$
 打ち切りデータでは全データが観測されず3乗根変換ができない。Y^(1/3) の平均・分散は k・θ の関数（式8, 9）：
 
 $$
-\mu = \theta^{1/3}\frac{\Gamma(k+1/3)}{\Gamma(k)} \tag{8}, \qquad \sigma^2 = \theta^{2/3}\frac{\Gamma(k+2/3)}{\Gamma(k)}-\mu^2 \tag{9}
+\mu = \theta^{1/3}\frac{\Gamma(k+1/3)}{\Gamma(k)} \tag{8}
+$$
+
+$$
+\sigma^2 = \theta^{2/3}\frac{\Gamma(k+2/3)}{\Gamma(k)}-\mu^2 \tag{9}
 $$
 
 EnvStats の egammaCensored 関数で打ち切りガンマの MLE 形状・尺度推定値を出し、それを式(8)(9)に入れて式(7)の正規 TIx を計算、3乗して TI とする（**WH 近似**と呼ぶ）。この方法が正確な TI を生むかは不明で、Millard[24]が今後の研究課題としており、本稿がこれに答える。
@@ -152,7 +158,11 @@ TI は本来、仮想的反復標本で長期的に目標割合を主張信頼�
 パラメータ Θ=[k, θ, μ] の推定を**バイアス（式10）と RMSE（式11）**で評価（低いほど良い）：
 
 $$
-\text{bias} = \frac{1}{S}\sum_{j=1}^{S}(\hat{\Theta}_j - \Theta) \tag{10}, \qquad \text{RMSE} = \sqrt{\frac{1}{S}\sum_{j=1}^{S}(\hat{\Theta}_j-\Theta)^2} \tag{11}
+\text{bias} = \frac{1}{S}\sum_{j=1}^{S}(\hat{\Theta}_j - \Theta) \tag{10}
+$$
+
+$$
+\text{RMSE} = \sqrt{\frac{1}{S}\sum_{j=1}^{S}(\hat{\Theta}_j-\Theta)^2} \tag{11}
 $$
 
 UTL は**平均 UTL と信頼係数**で評価。信頼係数＝100データセットのうち UTL が母集団の目標 P=0.9973（Gamma(1,1) で 5.91、Gamma(2,3) で 24.38）を含む割合。より短い平均 UTL が望ましいが、まず主張信頼水準を保つことが必要。真の信頼係数0.95なら S=100 での期待範囲は二項近似で [0.91, 0.99]。この範囲内に収まるほど良い。
@@ -167,13 +177,21 @@ RStudio 1.2.5033／R 4.0.5。MLE は EnvStats の egammaCensored（パラメー�
 ## 3.1. BDA の形状-尺度 vs 形状-平均パラメータ化
 小標本（n=30）・高打ち切り（fcens=0.5）はパラメータ推定が難しい。Gamma(2,3) から1標本を引き参照事前で BDA を適用すると、[k, θ] パラメータ化では k̂・θ̂ 事後が強相関だが、**[k, μ] パラメータ化では k̂・μ̂ 事後の相関が消え**、極端値を回避できる（原著 Fig. 2）。[k, μ] パラメータ化の計算上の利点を確認し、本稿で採用。
 
+![図2. BDA事後サンプルのパラメータ化比較。(A) 形状-尺度（shape, scale）は強い負相関、(B) 形状-平均（shape, mean）＝挿入図の mu-shape は相関がほぼ消える。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig2.png)
+
 ## 3.2. MCMC サンプリング診断
 neff≥1000・R̂≈1 を満たす割合を原著 Fig. 3 に示す。fcens≤0.5 では MCMC が信頼できない例は1〜2件のみ（小標本 n=30 で多い）。fcens=0.6 で信頼できないサンプリングの頻度が増す。信頼できないサンプリングの事後平均は指標評価から除外。
+
+![図3. 良好なMCMCサンプリング（neff≥1000・R̂≈1）を満たしたデータセットの割合（%）と打ち切り率の関係（BayesRef vs BayesMDIP、n=30/100、Gamma(1,1)/Gamma(2,3)）。fcens=0.6 で低下する。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig3.png)
 
 ## 3.3. MLE と BDA の指標比較
 
 ### 3.3.1. パラメータ推定のバイアス・RMSE
 Gamma(1,1)（原著 Fig. 4）n=30 で、BayesMDIP は最小の正の形状(k)バイアスだが（k,θ 逆相関の結果）最大の正の尺度(θ)バイアス。BayesRef は MLE よりわずかに大きい正の k バイアス、fcens≥0.3 で MLE よりやや負の θ バイアス。BayesMDIP は最大の正の平均(μ)バイアス、次いで BayesRef、MLE は負の μ バイアス。BayesMDIP は最小の k RMSE だが最大の θ RMSE。BayesRef は MLE よりわずかに大きい k・θ RMSE。Gamma(2,3)（Fig. 5）でも同傾向（BayesMDIP は負の k バイアス・正の μ バイアス）。**バイアス・RMSE は打ち切り増で悪化、標本30→100で改善**。
+
+![図4. Gamma(1,1)のシミュレーション結果（MLE・BayesRef・BayesMDIP、n=30/100）。A1-C1: 形状/尺度/平均のバイアス、A2-C2: 同RMSE、D1: 平均UTL、D2: UTL信頼係数。横軸は打ち切り率。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig4.png)
+
+![図5. Gamma(2,3)のシミュレーション結果（パネル構成は図4と同じ）。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig5.png)
 
 ### 3.3.2. 平均 UTL と信頼係数
 Gamma(1,1)（Fig. 4 D）n=30 で、BayesMDIP の平均 UTL は広すぎて目標割合を過大評価し、信頼係数が1.0に近い（保守的すぎる）。BayesRef の平均 UTL は MLE よりわずかに広く信頼係数もやや良いが、両手法とも fcens≥0.1 で期待範囲外に落ちる。Gamma(2,3)（Fig. 5）では BayesRef・MLE とも fcens=0.4 まで信頼係数を保つが、それ以降 MLE は基準外。標本30→100で全手法改善。
@@ -205,8 +223,12 @@ Gamma(1,1)（Fig. 4 D）n=30 で、BayesMDIP の平均 UTL は広すぎて目標
 ### 4.2.1. 例1：鉱泉水中クロム濃度（sdlog>1）
 Suzuki ら[20]（元は Kataoka ら[40]）の150個のクロム濃度、57%が打ち切り。対数正規なら MLE 推定 sdlog=1.55>1＝重度右歪。ガンマ仮定で **MLE の UTL は最大観測値を覆えず（UTL/max=0.9）**——これはシミュレーションの Gamma(1,1) n=100（低打ち切りでも名目未満で、打ち切り増で悪化）と整合。BDA の UTL は全て最大観測を超えるが過大でない（UTL/max=1.8〜1.9）。事前分布選択の影響は例1では小さい。**対数正規仮定の UTL は全て過度に広い（UTL/max≥5.24）**——重度右歪データで対数正規が非現実的に広い UTL を出すという文献[13–15]と整合。Suzuki 事前分布での再現が元論文とよく一致し、本稿の BDA 実装の正しさを検証。
 
+![図6. 例1：鉱泉水中クロム濃度（n=150、57%打ち切り、sdlog=1.55）のヒストグラムと各手法のUTL推定値。ガンマ仮定MLE=0.0017、BDA各種=0.0034〜0.0036、対数正規仮定は0.01〜0.0138と過度に広い。RL=0.0001は報告下限。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig6.png)
+
 ### 4.2.2. 例2：ある医薬品の不純物レベル（sdlog<1）
 102個の不純物レベル、63%が打ち切り。機密保持のため小さな乱数誤差を加えてマスク（右歪傾向は維持）。対数正規なら MLE 推定 sdlog=0.49<1＝中程度右歪。ガンマ仮定で **MLE の UTL は最も狭いが最大観測を覆う（UTL/max=1.7）**。BayesRef は MLE に匹敵（1.8）、BayesMDIP が最も広い（2.1）——シミュレーションの Gamma(2,3) n=100 と整合。対数正規仮定の UTL は全てガンマより広いが例1ほど過度でない（UTL/max=2.1〜2.4）——中程度右歪のため。
+
+![図7. 例2：ある医薬品の不純物レベル（n=102、63%打ち切り、sdlog=0.49）のヒストグラムと各手法のUTL推定値。ガンマ仮定MLE=1.05、BDA各種=1.1〜1.24、対数正規仮定=1.24〜1.44。RL=0.3は報告下限。](assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/fig7.png)
 
 ### 原著 Table 4-5（要点）
 例1（sdlog>1）：ガンマ仮定で MLE UTL/max=0.9（失敗）、BDA 1.8-1.9；対数正規仮定は MLE 5.2・BDA 6.6-7.3（過大）。例2（sdlog<1）：ガンマ仮定で MLE 1.7・BayesRef 1.8・MDIP 2.1；対数正規仮定 2.1-2.4。
