@@ -769,6 +769,20 @@
       "title": "（重複アップロード）97dbcbb0 と同一PDF（保持予測の将来アプローチ展望）",
       "date": "2026-07-08",
       "note": "97dbcbb0-perspectiveonthefutureapproachestopredictretentioninliquidchromatography.pdf と同一PDFの重複アップロード。解説は既存ページに集約済み。"
+    },
+    "upload-e78113ce-lss-elution-degree": {
+      "source_pdf": "1s2.0S0021967319312026main.pdf",
+      "slug": "lss-model-extension-elution-degree-parameter",
+      "title": "溶出強度の変化を記述するパラメータ「溶出度 g」を導入した線形溶媒強度（LSS）保持モデルの拡張",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Baeza-Baeza & García-Alvarez-Coque, J Chromatogr A 1615 (2020) 460757."
+    },
+    "upload-1ed56829-tcm-granules-extraction": {
+      "source_pdf": "Phytochemical_Analysis__2024__Zhang__Analysis_of_the_Impact_of_Extraction_Processes_on_the_Quality_of_Traditional.pdf",
+      "slug": "tcm-granules-extraction-processes-quality-review",
+      "title": "抽出工程が中薬（漢方）配合顆粒の品質に与える影響——抽出技術・効率因子・品質管理の総説",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Zhang C et al., Phytochem Anal 2025;36:903-911."
     }
   }
 }
