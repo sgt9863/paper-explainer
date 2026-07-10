@@ -5,7 +5,7 @@ source_pdf: dba2b051-Pharmaceutical_Statistics__2023__Montes__Frequentist_and_Ba
 doi: https://doi.org/10.1002/pst.2344
 drive_url: (未アップロード：ユーザー返却PDF)
 level: researcher
-date: 2026-07-08
+date: 2026-07-10
 published: true
 tags: [規制・薬事, QC・品質評価, 機械学習・データ処理]
 digest_tagline: LOQ未満（左側打ち切り）で右に裾を引くガンマ分布の品質データから規格限度を設定――MLEとベイズ（参照事前分布/MDIP）の許容区間を打ち切り率・標本数を変えて比較

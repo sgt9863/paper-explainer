@@ -5,7 +5,7 @@ source_pdf: e78113ce-1s2.0S0021967319312026main.pdf
 doi: https://doi.org/10.1016/j.chroma.2019.460757
 drive_url: (未アップロード：ユーザー返却PDF)
 level: researcher
-date: 2026-07-08
+date: 2026-07-10
 published: true
 tags: [メソッド開発・QbD, HPLC・UPLC, ケモメトリクス]
 digest_tagline: LSSモデル（log k=log k0−Sφ）を1階微分方程式とみなし指数gを足して一般化――g=1でLSS、g>1で溶出強度が減少・g<1で増加、RPLC/HILIC/MLC/マイクロエマルションを1式で記述

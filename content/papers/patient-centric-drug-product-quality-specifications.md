@@ -5,7 +5,7 @@ source_pdf: d6d0d5fc-s12248025011417.pdf
 doi: https://doi.org/10.1208/s12248-025-01141-7
 drive_url: (未アップロード：ユーザー返却PDF)
 level: researcher
-date: 2026-07-08
+date: 2026-07-10
 published: true
 tags: [規制・薬事, メソッド開発・QbD, QC・品質評価]
 digest_tagline: 規格を「製造ばらつき＋第III相データ」から「臨床的関連性＝患者要件」へ転換――QbD・生物薬剤学・PBBM安全空間・DoEでCQAを臨床アウトカムに結びつける
