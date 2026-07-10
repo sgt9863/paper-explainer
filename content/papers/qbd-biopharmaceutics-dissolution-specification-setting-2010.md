@@ -5,7 +5,7 @@ source_pdf: f4218da7-s1224801092060.pdf
 doi: https://doi.org/10.1208/s12248-010-9206-0
 drive_url: (未アップロード：ユーザー返却PDF)
 level: researcher
-date: 2026-07-08
+date: 2026-07-10
 published: true
 tags: [規制・薬事, メソッド開発・QbD, QC・品質評価]
 digest_tagline: 溶出／放出規格を「臨床（in vivo）性能」に紐づけるため、生物薬剤学とQbDの統合ロードマップと9つの優先領域を提示したFDA/AAPS/UW会議報告

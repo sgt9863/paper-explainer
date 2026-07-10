@@ -5,7 +5,7 @@ source_pdf: 1ed56829-Phytochemical_Analysis__2024__Zhang__Analysis_of_the_Impact
 doi: https://doi.org/10.1002/pca.3484
 drive_url: (未アップロード：ユーザー返却PDF)
 level: practitioner
-date: 2026-07-08
+date: 2026-07-10
 published: true
 tags: [方剤・中成薬, 製造法, QC・品質評価, Q-marker, レビュー]
 digest_tagline: TCM配合顆粒の抽出工程を「質は設計に由来する（QbD）」の原則で俯瞰――水/代替溶媒の抽出技術、生薬ごとの煎じ特性、品質の一貫性・有効性・安全性への影響を整理
