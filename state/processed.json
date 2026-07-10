@@ -783,6 +783,13 @@
       "title": "抽出工程が中薬（漢方）配合顆粒の品質に与える影響——抽出技術・効率因子・品質管理の総説",
       "date": "2026-07-08",
       "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Zhang C et al., Phytochem Anal 2025;36:903-911."
+    },
+    "upload-dba2b051-tolerance-intervals-gamma": {
+      "source_pdf": "Pharmaceutical_Statistics__2023__Montes__Frequentist_and_Bayesian_tolerance_intervals_for_setting_specification_limits.pdf",
+      "slug": "tolerance-intervals-specification-limits-censored-gamma-mle-bayesian",
+      "title": "左側打ち切りガンマ分布の医薬品品質特性に対する規格限度設定のための頻度論・ベイズ許容区間",
+      "date": "2026-07-08",
+      "note": "ユーザーアップロード（Drive未登録・PDF返却済み）。full-translation density。Montes RO, Pharmaceutical Statistics 2024;23(2):168-184."
     }
   }
 }
