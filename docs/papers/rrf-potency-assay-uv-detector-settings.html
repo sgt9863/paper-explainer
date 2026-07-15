@@ -112,12 +112,83 @@
 <h3>3.2.2 ステップ幅（Step setting）</h3>
 <p>Agilent UV検出器の「Step」はスペクトル設定群にあり、<strong>3D UV収集のみ</strong>に適用され、化合物の全UVスペクトル収集後のデータ取得に使う。取得を異なるステップ間隔で設定でき、例えばスキャン範囲190〜400 nmでステップ4 nmなら、吸光度データは190・194・198・…・396・400 nmで「取得」される。取得点間（例191〜193 nm）の吸光度は、190 nmと194 nmの実データから線形式で「<strong>数学的に計算</strong>」される。つまり193 nmの吸光度は「計算値」。よく使う値は1・2・4 nmで、計算値はステップ間隔で変わる。例（図7）：257 nmで、1 nmステップはPSEHの実測値を与えるが、4 nmステップ（254 nmの次が258・262・266 nm…）では257 nmは計算値になる。</p>
 <figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig7.png" alt="図7. ステップ設定のPSEHへの影響（スリット幅1 nm条件下）。ステップ1/2/4 nmで257 nm近傍の値が変わる。" loading="lazy"><figcaption>図7. ステップ設定のPSEHへの影響（スリット幅1 nm条件下）。ステップ1/2/4 nmで257 nm近傍の値が変わる。</figcaption></figure>
+<p>具体的には、スリット幅1 nm条件下でPSEHの257 nmの吸光度は、1 nmステップの実測値では0.019 AU、2 nmステップの「計算値」では0.018 AU（実測より約5%小さい）、4 nmステップの「計算値」では0.017 AU（実測より約10%小さい）となる。すなわち、同一量のPSEHを注入しても、ステップ間隔設定が違うだけで、HPLCピーク面積は力価分析で一般に許容される2%変動をはるかに超えて変わりうる。表4に示すとおり、スリット幅1 nmでPSEHのピーク面積は、ステップ間隔1・2・4 nmでそれぞれ864,330 → 811,231 → 770,312と減少する。</p>
+<p><strong>表4. ステップ設定による応答（ピーク面積）変動の比較（3D収集・指定波長で取得）</strong></p>
+<table>
+<thead><tr><th></th><th>スリット4 nm・Step 1 nm</th><th>Step 2 nm</th><th>Step 4 nm</th><th>スリット1 nm・Step 1 nm</th><th>Step 2 nm</th><th>Step 4 nm</th></tr></thead>
+<tbody>
+<tr><td>PSEH – 257 nm</td><td>798879</td><td>778240</td><td>747741</td><td>864330</td><td>811231</td><td>770312</td></tr>
+<tr><td>ASA – 295 nm</td><td>670074</td><td>689612</td><td>726773</td><td>713412</td><td>729887</td><td>765224</td></tr>
+<tr><td>SA – 230 nm</td><td>42731223</td><td>42538769</td><td>42498878</td><td>42235219</td><td>42217942</td><td>42087377</td></tr>
+</tbody></table>
+<p>スリット幅とステップ間隔がUV吸光度に与える複合効果をさらに示すため、原著の図8はスリット幅4 nm・ステップ間隔1/2/4 nmで得たPSEHのUVスペクトルを示す。3.2.1節で述べたとおり、スリット幅が広いとUV分解能が下がり、PSEHの場合は三叉形が失われる。257 nmの実際のUV吸光度は減少し、1 nmステップの実データと2/4 nmステップの「計算値」との差は、4 nmスリットで三叉形が不明瞭になるぶん小さくなる。比較すると、<strong>スリット4 nm条件下</strong>ではステップ1 nm（798,879）とステップ4 nm（747,741）の差は約6%だが、<strong>スリット1 nm条件下</strong>ではステップ1 nm（864,330）とステップ4 nm（770,312）の差は10%超になる。ここから導かれる重要な結論は、<strong>スリット幅とステップ間隔は、別個でありながら相互に関連する形で応答係数に影響する</strong>こと、そして「万能の一律設定は存在しない（no one-size-fits-all）」ことである。あるスリット幅・ステップ間隔の組合せが同一試料のUV吸光度を増やすか減らすかは、化合物と波長に依存する（表4参照）。なお、ステップ設定は<strong>3D収集のみ</strong>に影響し、データ収集時にUV波長を事前設定する2D結果には影響しない。Waters系にはステップ/スリットの機能はなく、代わりに「分解能（resolution）」パラメータが使われる（図3のWaters列参照）。その効果はAgilent系と同じと推測される（両者を直接比較する実験は本研究では実施していない）。</p>
+<p>（注：原著の図8「スリット幅4 nm条件下でのステップ設定のPSEHへの影響」は、元PDFが利用者へ返却済みのため画像を抽出・埋め込みできていない。上記の本文で図8が示す内容は文章で記述した。）</p>
 <h3>3.2.3 バンド幅（Band width）</h3>
 <p>Agilent では「Signals」セクション、Waters では「分解能」に組み込まれる。バンド幅は、指定UV波長の<strong>近傍の小範囲の吸光度を平均</strong>する設定で、DADの単一波長データ収集（<strong>2D法</strong>、3.2.4節）に使う。例：波長257 nm・バンド幅4 nmなら、257 nmの吸光度は実際には<strong>255〜259 nmの吸光度の平均</strong>（ステップの「計算値」とは異なり、実吸光度の平均で、監視波長が範囲の中央）。バンド幅が広いほど平均する範囲が広がる。</p>
+<p>バンド幅の影響を表5に示す。バンド幅を2 nmから18 nmまで広げると、化合物により応答が大きく変わる。特にASAは応答（ピーク面積）が195%も増加し（スリット1 nm時）、PSEHは逆に減少（最大差76.7%＝BW18 nmはBW2 nmの76.7%）、FSA（SA）はほぼ不変（99.1%）。この非対称な挙動が、バンド幅設定によりRRFを大きく動かす。</p>
+<p><strong>表5. UV検出器設定の影響――バンド幅（BW）の影響（応答＝ピーク面積）</strong></p>
+<table>
+<thead><tr><th></th><th>BW 2 nm</th><th>BW 4 nm</th><th>BW 8 nm</th><th>BW 10 nm</th><th>BW 14 nm</th><th>BW 18 nm</th><th>最大差(%)¹</th></tr></thead>
+<tbody>
+<tr><td><strong>スリット1 nm</strong> PSEH(257 nm)</td><td>52597</td><td>49038</td><td>45224</td><td>44588</td><td>43714</td><td>40335</td><td>76.7</td></tr>
+<tr><td>ASA(295 nm)</td><td>692508</td><td>712651</td><td>908930</td><td>985305</td><td>1165202</td><td>1352538</td><td>195.3</td></tr>
+<tr><td>FSA(230 nm)</td><td>1349353</td><td>1364984</td><td>1364792</td><td>1359124</td><td>1344567</td><td>1337578</td><td>99.1</td></tr>
+<tr><td><strong>スリット4 nm</strong> PSEH(257 nm)</td><td>50481</td><td>48306</td><td>44839</td><td>44301</td><td>42919</td><td>40318</td><td>79.9</td></tr>
+<tr><td>ASA(295 nm)</td><td>691927</td><td>715256</td><td>811707</td><td>877428</td><td>1033692</td><td>1340014</td><td>193.7</td></tr>
+<tr><td>FSA(230 nm)</td><td>1379025</td><td>1383290</td><td>1359818</td><td>1361858</td><td>1354310</td><td>1340359</td><td>97.2</td></tr>
+</tbody></table>
+<p>¹ 最大差(%)は、同一化合物・同一スリット条件で、BW18 nmの応答をBW2 nmの応答に対する百分率差として算出。</p>
 <h3>3.2.4 データ収集モジュール（3D／2D）</h3>
 <p>DADのデータ収集には2方式がある。<strong>3D収集</strong>は全UVスペクトル（例190〜400 nm）をまず収集し、後から任意波長の吸光度を取り出す（ステップ設定が効く）。<strong>2D収集</strong>は指定単一波長のみを収集し、その際バンド幅で近傍を平均する。同じ化合物・同じ監視波長でも、3D（ステップ補間）と2D（バンド幅平均）でRF値が異なりうるため、<strong>どちらのモジュールを使うかでRRFが変わる</strong>。したがって方法には収集モジュールも明記が必要。</p>
-<h2>3.3 実務上の留意点</h2>
-<p>（原著3.3節）RRF法を力価試験に使う場合の方法開発・移管の実務指針として、(i) UV波長を、スリット/ステップ/バンド幅の変動に対し応答変化が最小となるよう選ぶ、(ii) スリット幅・ステップ幅・バンド幅・データ収集モジュールを数値で方法に明記する、(iii) 可能なら参照標準と分析種のUV特性が近い波長域を選ぶ、(iv) 施設間移管では移管先でRRFを完全に再検証する、等が挙げられる。</p>
+<p>表6は、同一スリット設定（1〜16 nm）で、2D信号チャネルで得たピーク面積と3Dスキャンから抽出したピーク面積を比較したもの。PSEHでは、スリット1 nmで2D（763,224）と3D（870,016）の差が13.1%に達するが、スリット16 nmでは差が0.7%まで縮まる。ASA・SAでは差はより小さい。</p>
+<p><strong>表6. 応答比較――2D信号チャネル vs 3Dスキャンからの抽出（ピーク面積）</strong></p>
+<table>
+<thead><tr><th></th><th>スリット1 nm</th><th>2 nm</th><th>4 nm</th><th>8 nm</th><th>16 nm</th></tr></thead>
+<tbody>
+<tr><td>PSEH(257) 2D</td><td>763224</td><td>764860</td><td>749720</td><td>721433</td><td>689844</td></tr>
+<tr><td>PSEH(257) 3D</td><td>870016</td><td>850935</td><td>797118</td><td>727103</td><td>694657</td></tr>
+<tr><td>差(%)</td><td>13.1</td><td>10.7</td><td>6.1</td><td>0.8</td><td>0.7</td></tr>
+<tr><td>ASA(295) 2D</td><td>683937</td><td>677490</td><td>691884</td><td>764641</td><td>890140</td></tr>
+<tr><td>ASA(295) 3D</td><td>685376</td><td>659002</td><td>670054</td><td>727238</td><td>831078</td></tr>
+<tr><td>差(%)</td><td>0.2</td><td>2.8</td><td>3.2</td><td>5.0</td><td>6.9</td></tr>
+<tr><td>SA(230) 2D</td><td>41909547</td><td>42598313</td><td>42682970</td><td>42573478</td><td>42813659</td></tr>
+<tr><td>SA(230) 3D</td><td>41814092</td><td>41972207</td><td>42151734</td><td>42413110</td><td>43071765</td></tr>
+<tr><td>差(%)</td><td>0.2</td><td>1.5</td><td>1.3</td><td>0.4</td><td>0.6</td></tr>
+</tbody></table>
+<p>（2D＝事前設定したUV波長から得たピーク面積応答、3D＝全スペクトル収集後に指定波長で取り出した応答）</p>
+<p>表7は、ステップ設定の違いによる2Dと3Dの応答比較。PSEHでは、スリット1 nm・ステップ1 nmで2D（765,078）と3D（864,330）の差が12.2%に達する。</p>
+<p><strong>表7. 応答係数比較――「ステップ」設定差による2D vs 3D収集</strong></p>
+<table>
+<thead><tr><th></th><th>スリット4 nm Step1</th><th>Step2</th><th>Step4</th><th>スリット1 nm Step1</th><th>Step2</th><th>Step4</th></tr></thead>
+<tbody>
+<tr><td>PSEH(257) 2D</td><td>750171</td><td>749673</td><td>748427</td><td>765078</td><td>770016</td><td>767664</td></tr>
+<tr><td>PSEH(257) 3D</td><td>798879</td><td>778240</td><td>747741</td><td>864330</td><td>811231</td><td>770312</td></tr>
+<tr><td>差(%)</td><td>6.3</td><td>3.7</td><td>0.1</td><td>12.2</td><td>5.2</td><td>0.3</td></tr>
+<tr><td>ASA(295) 2D</td><td>691811</td><td>690312</td><td>690384</td><td>711568</td><td>710090</td><td>709248</td></tr>
+<tr><td>ASA(295) 3D</td><td>670074</td><td>689612</td><td>726773</td><td>713412</td><td>729887</td><td>765224</td></tr>
+<tr><td>差(%)</td><td>3.2</td><td>0.1</td><td>5.1</td><td>0.3</td><td>2.7</td><td>7.6</td></tr>
+<tr><td>SA(230) 2D</td><td>43293280</td><td>43117024</td><td>43085586</td><td>42357361</td><td>42273753</td><td>42197055</td></tr>
+<tr><td>SA(230) 3D</td><td>42731223</td><td>42538769</td><td>42498878</td><td>42235219</td><td>42217942</td><td>42087377</td></tr>
+<tr><td>差(%)</td><td>1.3</td><td>1.4</td><td>1.4</td><td>0.3</td><td>0.1</td><td>0.3</td></tr>
+</tbody></table>
+<p>3つの影響因子のうち、<strong>ステップ間隔は2D収集に影響せず、バンド幅は3D収集に影響しない</strong>。この比較データが原著の図9・図10にプロットされている。ステップ間隔は、単一波長ではなく「定義されたUV間隔で収集したデータに対する数学的計算」なので、2D（単一波長）収集機構には適用されない（図9に見られる小さな変動は注入ごとのばらつきによる）。対照的に、バンド幅の変化は2D法には大きな影響を与え、3D法には影響しない（図10）。これはAgilent HPLC検出器の装置設定に関連すると説明でき、他メーカーのHPLC系では結果が異なりうる。方法開発時に個別に検討することが推奨される。</p>
+<p>（注：原著の図9「ステップ幅の2D/3Dへの影響」・図10「バンド幅の2D/3Dへの影響」、および図3「UV検出器の装置設定画面（Waters・Agilent）」は、元PDFが利用者へ返却済みのため画像を抽出・埋め込みできていない。各図が示す内容は本文中に文章で記述した。）</p>
+<h2>3.3 力価アッセイへのRRF法適用のまとめ</h2>
+<h3>3.3.1 力価アッセイ試験におけるRRF法の限界</h3>
+<p>前節までで、UV検出器設定とデータ収集手順が引き起こすRRF変動を論じた。同様の変動は力価アッセイと不純物試験の両方に生じるが、<strong>その影響の大きさは試験の性質によって大きく異なる</strong>。RRF適用の比較を表8にまとめる。この比較が示すとおり、分析法に最も厳しい要件が課されるのは<strong>医薬品の力価アッセイ</strong>である。</p>
+<p><strong>表8. RRF変動と各種試験への影響（10%変動を例に）</strong></p>
+<table>
+<thead><tr><th>試験・対象製品</th><th>一般的な量域・例</th><th>分析法の一般的正確性要件</th><th>RRF変動（例：10%）の試験への影響</th></tr></thead>
+<tbody>
+<tr><td><strong>各APIの力価</strong>（複数APIを含む医薬品）</td><td>有効成分の表示量100%</td><td>正確性：100%±2〜3%</td><td>10%変動は許容誤差を大きく超過（真値の90〜110%に相当）</td></tr>
+<tr><td><strong>各有効成分の含量</strong>（複数の同定済み薬効成分を含む<strong>生薬医薬品</strong>）</td><td>有効成分の表示量100%</td><td>正確性：100%±5〜10%</td><td>10%は許容誤差を超過またはかろうじて満たす</td></tr>
+<tr><td><strong>抽出物・溶出物（E/L）の分析</strong>（抽出物/溶出物で汚染された包装医薬品）</td><td>通常ppm〜µg/mLレベル</td><td>正確性：100%±20〜30%（例：5 ppm±1〜1.5 ppm）</td><td>10%は一般的許容範囲内（例：真値5 ppmに対し4.5〜5.5 ppm）</td></tr>
+<tr><td><strong>不純物・分解物（I/D）の試験</strong>（原薬・製剤）</td><td>例：表示量の0.2%</td><td>正確性：100%±20〜30%（例：0.2%±0.04〜0.06%）</td><td>10%は一般的許容範囲内（例：真値0.2%に対し0.18〜0.22%）</td></tr>
+</tbody></table>
+<p>（脚注：E/Lの許容幅は薬の1日用量・安全性懸念閾値（SCT、例0.15 µg/日TDI）・分析評価閾値（AET）・試験法（標準/試料溶液濃度）などに依存。I/Dは報告閾値・確認閾値・安全性確認閾値などに関連。）</p>
+<p><strong>この表の含意（生薬にとって特に重要）:</strong> 表8は、<strong>生薬医薬品（複数の同定済み薬効成分を含む）の含量分析には ±5〜10% の正確性が求められる</strong>ことを明示している。すなわち、RRF変動が10%あると、生薬の含量分析では許容誤差を超えるか、かろうじて満たす程度でしかない。不純物試験（±20〜30%許容）なら10%変動は許容範囲だが、生薬の主要成分の定量にRRF/相対補正係数を使う場合、UV設定に起因する20%規模の変動は致命的になりうる。</p>
+<h3>3.3.2 実務指針</h3>
+<p>RRF法を力価/含量試験に使う場合の方法開発・移管の実務指針として、(i) UV波長を、スリット/ステップ/バンド幅の変動に対し応答変化が最小となるよう選ぶ、(ii) スリット幅・ステップ幅・バンド幅・データ収集モジュールを数値で方法に明記する、(iii) 可能なら参照標準と分析種のUV特性が近い波長域を選ぶ、(iv) 施設間移管では移管先でRRFを完全に再検証する、等が挙げられる。</p>
 <hr>
 <h1>4. 結論</h1>
 <p>RRF法は不純物分析で普及しているが、施設間・装置間のRRF変動は大きくなりうる。これらの変動は本稿で検討・議論した<strong>装置設定</strong>から生じる。RRF法を<strong>力価試験</strong>に使うことは、医薬品の力価分析に求められるはるかに厳しい正確性基準のため、不純物試験に比べ難しい。</p>
@@ -125,7 +196,7 @@
 <p>したがって、UV設定（スリット・ステップ・バンド幅の数値、データ収集モジュール設定）は力価試験結果への潜在的影響ゆえ方法に明確に指定しなければならない。本稿はRRF方法開発でUV波長選択を最適化して変動を減らす提案も示した。<strong>RRF法を力価/含量分析に使うなら、方法移管は厳格に行い、移管先でRRFを完全に検証して同じ値が再現できることを確認する。できなければ移管先で改訂RRF値を確立・使用すべき</strong>である。</p>
 <hr>
 <h1>訳者補足</h1>
-<ul><li><strong>なぜ生薬QCに効くか:</strong> 生薬の QAMS（一標準多成分定量）や SAM（単一標準多マーカー法）は、まさに本論文の「RRF法」と同じ原理——1本の標準で複数成分を定量する。生薬では正規の対照品が入手困難な成分が多く、RRF/相対補正係数への依存が高い。本論文の教訓「装置・施設・UV設定でRRFが最大20%動く」は、生薬 QAMS/SAM で「別の装置・別のラボで定量値がずれた」という再現性トラブルの直接の原因になりうる。</li><li><strong>不純物試験 vs 力価試験の違い:</strong> 不純物は微量（例0.1%）なので、その定量が20%ぶれても製品全体の判定への影響は小さい（0.1%が0.08〜0.12%）。しかし力価（含量）は主成分そのものなので、20%のぶれは「100%が80〜120%」となり致命的。だからRRFを力価に使うハードルは桁違いに高い（要求精度&lt;2%）。</li><li><strong>UV設定の3つ＋1つ:</strong> ①スリット幅（光学分解能／スペクトル形状。狭いほど鋭い）、②ステップ幅（3D収集で取得点間を線形補間する「計算値」の粗さ）、③バンド幅（2D収集で監視波長近傍を実測平均する幅）、④データ収集モジュール（3D全スペクトル vs 2D単一波長）。これらは分析法に数値で書かれないことが多いが、RRFを使うなら必ず明記せよ、というのが本論文の核心。</li><li><strong>数値の扱い:</strong> 表2・表3の値は原文から転記。図3（Waters/Agilentの設定画面）・図8以降・11ページの図は本ページでは割愛（原文参照）。実データはCC BY-NC-NDのオープンアクセス原著を参照可。原文にない数値は加えていない。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aoac-2018-04-ginger-nonvolatile-constituents-lc-uv.html">食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）——LC-UV法とSMPR 2017.012適合の検証</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">多成分定量</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">多成分定量</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="aqbd-lc-method-development-overview-review.html">分析的QbD（AQbD）原則による液体クロマトグラフィー分析法の開発と最適化 — 概観と最近の進歩（レビュー）</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="experimental-designs-hplc-method-development-validation-overview.html">HPLCメソッド開発・バリデーションにおける実験計画法の総覧——スクリーニング設計・応答曲面法からQbD・シックスシグマまで</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+<ul><li><strong>なぜ生薬QCに効くか:</strong> 生薬の QAMS（一標準多成分定量）や SAM（単一標準多マーカー法）は、まさに本論文の「RRF法」と同じ原理——1本の標準で複数成分を定量する。生薬では正規の対照品が入手困難な成分が多く、RRF/相対補正係数への依存が高い。本論文の教訓「装置・施設・UV設定でRRFが最大20%動く」は、生薬 QAMS/SAM で「別の装置・別のラボで定量値がずれた」という再現性トラブルの直接の原因になりうる。</li><li><strong>不純物試験 vs 力価試験の違い:</strong> 不純物は微量（例0.1%）なので、その定量が20%ぶれても製品全体の判定への影響は小さい（0.1%が0.08〜0.12%）。しかし力価（含量）は主成分そのものなので、20%のぶれは「100%が80〜120%」となり致命的。だからRRFを力価に使うハードルは桁違いに高い（要求精度&lt;2%）。</li><li><strong>UV設定の3つ＋1つ:</strong> ①スリット幅（光学分解能／スペクトル形状。狭いほど鋭い）、②ステップ幅（3D収集で取得点間を線形補間する「計算値」の粗さ）、③バンド幅（2D収集で監視波長近傍を実測平均する幅）、④データ収集モジュール（3D全スペクトル vs 2D単一波長）。これらは分析法に数値で書かれないことが多いが、RRFを使うなら必ず明記せよ、というのが本論文の核心。</li><li><strong>数値・表の扱い:</strong> 原文の表1〜8はすべて日本語化して収載（表4〜8を今回追加）。数値は原文から転記し、原文にない数値は加えていない。実データはCC BY-NC-NDのオープンアクセス原著を参照可。</li><li><strong>図について（重要）:</strong> 原著には図1〜10がある。本稿は図1・2・4・5・6・7の6点を抽出・埋め込み済み。<strong>図3（Waters/Agilentの設定画面スクショ）・図8（スリット4 nm下のステップ影響）・図9（ステップの2D/3D影響）・図10（バンド幅の2D/3D影響）の4点は、元PDFが利用者へ返却済みのため画像を抽出できていない</strong>。ただし各図が示す内容（データ・傾向）は本文・表4〜7に文章と数値で反映済み。PDFを再アップロードいただければ PyMuPDF で残り4点を抽出し該当箇所に埋め込む。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aoac-2018-04-ginger-nonvolatile-constituents-lc-uv.html">食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）——LC-UV法とSMPR 2017.012適合の検証</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">多成分定量</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">多成分定量</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="aqbd-lc-method-development-overview-review.html">分析的QbD（AQbD）原則による液体クロマトグラフィー分析法の開発と最適化 — 概観と最近の進歩（レビュー）</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="experimental-designs-hplc-method-development-validation-overview.html">HPLCメソッド開発・バリデーションにおける実験計画法の総覧——スクリーニング設計・応答曲面法からQbD・シックスシグマまで</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
 </main>
 <aside class="notes" id="notesPanel" data-slug="rrf-potency-assay-uv-detector-settings" aria-label="この論文のメモ">
   <div class="notes-head">
