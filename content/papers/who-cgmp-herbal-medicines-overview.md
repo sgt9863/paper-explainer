@@ -5,7 +5,7 @@ source_pdf: 28617a8c-WHO_guideline_on_Current_Good_Manufacturing_Practices_for_H
 doi: https://doi.org/10.35629/7781-0803807816
 drive_url: (未アップロード：ユーザー返却PDF)
 level: practitioner
-date: 2026-07-10
+date: 2026-07-15
 published: true
 tags: [生薬, 規制・薬事, QC・品質評価, 製造法, レビュー]
 digest_tagline: 生薬医薬品の品質・安全・有効性を担保するcGMPの構成要素（品質管理・施設・文書・訓練・変更管理・バリデーション）を体系的に概観するレビュー

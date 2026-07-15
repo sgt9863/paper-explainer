@@ -5,7 +5,7 @@ source_pdf: 686ff702-trs1010annex1herbalprocessing.pdf
 doi: (WHO公式文書・DOI無し。WHO Technical Report Series No.1010, 2018, Annex 1／要確認)
 drive_url: (未アップロード：ユーザー返却PDF)
 level: practitioner
-date: 2026-07-10
+date: 2026-07-15
 published: true
 tags: [生薬, 規制・薬事, QC・品質評価, 製造法, レビュー]
 digest_tagline: 収穫後の生薬を「生薬材料→生薬製剤→生薬製剤形」へと加工する各工程の適正規範（GHPP）をWHOが体系化した公式ガイドライン。GACPとGMPの隙間を埋める加工工程の技術指針

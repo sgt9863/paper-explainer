@@ -5,7 +5,7 @@ source_pdf: f9c7525e-RRF_Assay_.pdf
 doi: https://doi.org/10.1016/j.jpba.2020.113760
 drive_url: (未アップロード：ユーザー返却PDF)
 level: researcher
-date: 2026-07-10
+date: 2026-07-15
 published: true
 tags: [メソッド開発・QbD, HPLC・UPLC, 多成分定量, 規制・薬事]
 digest_tagline: 不純物試験で普及したRRF法を「力価（含量）試験」に拡張する際の落とし穴を実証――UV検出器のスリット/ステップ/バンド幅・3D/2D収集がRRFを最大20%動かす
