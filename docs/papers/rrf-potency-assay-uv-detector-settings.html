@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>相対応答係数（RRF）による医薬品有効成分の含量（力価）試験――HPLCのUV検出器設定（スリット幅・ステップ幅・バンド幅・データ収集モジュール）がRRFに与える影響と実務上の留意点</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="相対応答係数（RRF）による医薬品有効成分の含量（力価）試験――HPLCのUV検出器設定（スリット幅・ステップ幅・バンド幅・データ収集モジュール）がRRFに与える影響と実務上の留意点">
+<meta property="og:description" content="相対応答係数（RRF＝ある化合物の応答係数を別の化合物の応答係数で割った比）は不純物試験で広く使われるが、複数有効成分（API）を含む製剤の「力価（含量）試験」への応用は限られる。本論文（Bayer Consumer Health、J Pharm Biomed Anal 2021）は、アセチルサリチル酸（ASA, 500 mg）＋プソイドエフェドリン塩酸塩（PSEH, 30 mg）を含む製剤を例に、安定・非規制・高水溶性のサリチル酸（SA）を1本の参照標準として両APIを定量するRRF法を検討する。5台のHPLC（Waters e2695×2、Agilent 1200/1290×3）で調べると、RRF値は装置メーカー・機種・施設・測定日で大きく変動し、SA/ASAで最大18.7%、SA/PSEHで最大21.6%の差を生じた（同一装置の日間変動は0.17〜1.6%と小さい）。原因は、従来の分析法手順にほとんど記載されないUV検出器設定——スリット幅・ステップ幅・バンド幅・データ収集モジュール（3D全スペクトル収集／2D単一波長）——にあり、これらがRFひいてはRRFを最大約20%動かすことを実証した。力価試験は不純物試験より許容誤差が厳しい（理想はRRFを規定値の±2%以内）ため、力価RRF法では方法にこれら設定の数値を明記し、施設間移管では移管先でRRFを完全に再検証（できなければ改訂値を設定）すべきと結論する。生薬・漢方製剤の多成分力価試験でも同じ落とし穴が起こりうる。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/rrf-potency-assay-uv-detector-settings/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="rrf-potency-assay-uv-detector-settings"><h1>相対応答係数（RRF）による医薬品有効成分の含量（力価）試験――HPLCのUV検出器設定（スリット幅・ステップ幅・バンド幅・データ収集モジュール）がRRFに与える影響と実務上の留意点</h1><div class="paper-meta"><span class="date">2026-07-10</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">多成分定量</span> <span class="tag">規制・薬事</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2020.113760" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">f9c7525e-RRF_Assay_.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="rrf-potency-assay-uv-detector-settings" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="rrf-potency-assay-uv-detector-settings" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/rrf-potency-assay-uv-detector-settings/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/rrf-potency-assay-uv-detector-settings/ai-infographic.webp" alt="不純物試験で普及したRRF法を「力価（含量）試験」に拡張する際の落とし穴を実証――UV検出器のスリット/ステップ/バンド幅・3D/2D収集がRRFを最大20%動かす" loading="lazy"></a><p>&lt;!-- Liu L(S), Mouallem A, Xiao KP, Meisel J. Assay of active pharmaceutical ingredients in drug products based on relative response factors: Instrumentation insights and practical considerations. Journal of Pharmaceutical and Biomedical Analysis 194 (2021) 113760. doi:10.1016/j.jpba.2020.113760（CC BY-NC-ND）の全訳密度日本語版。 図は原著PDFから抽出。 --&gt;</p>
+<blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は当サイトの「多成分定量・メソッド開発」テーマの実務的な要注意点を扱う。<strong>相対応答係数（RRF）</strong>は「1本の参照標準で複数成分を定量する」ための係数で、生薬・漢方製剤の多成分力価試験（＝当サイトで頻出する QAMS／単一標準多マーカー法 SAM と同じ発想）でも広く使われる。本論文は、RRF を不純物試験から<strong>力価（含量）試験</strong>へ広げるとき、力価に要求される高精度（誤差&lt;2%）ゆえに RRF のわずかな変動が致命的になること、そして従来ほとんど誰も気にしない <strong>UV検出器の内部設定（スリット幅・ステップ幅・バンド幅・3D/2Dデータ収集）</strong> が RRF を最大20%も動かすことを、実データで突きつける。生薬の QAMS/SAM で「装置や施設を変えたら定量値がずれた」という失敗を避けるための一次資料。原著は実際にRRF力価試験の代表例として<strong>生薬製剤</strong>を挙げている。<strong>IF:</strong> J. Pharm. Biomed. Anal. = 3.1（JCR2024・Q2）。</blockquote>
+<hr>
+<h1>書誌情報</h1>
+<ul><li><strong>原題:</strong> Assay of active pharmaceutical ingredients in drug products based on relative response factors: Instrumentation insights and practical considerations</li><li><strong>著者:</strong> Lisa (Song) Liu（責任著者）, Ariel Mouallem, Kang Ping Xiao, Jerry Meisel</li><li><strong>所属:</strong> Bayer Consumer Health, Global R&amp;D Product Development Center, Morristown, NJ, USA</li><li><strong>掲載誌:</strong> Journal of Pharmaceutical and Biomedical Analysis 194 (2021) 113760</li><li><strong>DOI:</strong> 10.1016/j.jpba.2020.113760（2020年8月7日受付／10月30日改訂受付／11月6日受理／11月12日オンライン）</li><li><strong>ライセンス:</strong> © 2020 The Authors. Elsevier B.V.（CC BY-NC-ND 4.0・オープンアクセス）</li><li><strong>キーワード:</strong> HPLC 相対応答係数（RRF）、力価試験、スリット幅、ステップ幅、バンド幅、3D/2Dデータ収集モジュール</li></ul>
+<hr>
+<h1>要旨（Abstract）</h1>
+<p>相対応答係数（RRF）は、ある化合物を別の化合物に対して定量するのに使え、医薬品の不純物分析で広く用いられるが、力価（含量）試験への応用は限られている。本論文の広範な検討から、「RRF法」を力価試験に用いることは、力価分析に要求される<strong>はるかに厳しい基準</strong>のため、不純物分析に比べて格段に難しいと結論できる。現行のHPLC分析法開発・品質出荷試験でほとんど議論・認識されない<strong>装置設定の影響</strong>を論じる。これらの因子は、一般に認識される他のHPLCパラメータと同じくらいRRFに影響する。UV検出器設定——<strong>スリット幅・ステップ幅・バンド幅・データ収集モジュール</strong>——の影響を探索した。この現象を3化合物を用いて実証し、大きなRRF変動による定量への影響を観察した。最後に、RRF変動を減らす原則を論じ、RRFの方法開発・方法移管への応用における実務上の留意点を提供する。</p>
+<hr>
+<h1>1. 序論</h1>
+<h2>1.1 力価試験と参照標準</h2>
+<p>製品開発・製造工程評価・市販品の出荷/安定性試験において、分析ラボはHPLCで医薬品有効成分（API）の力価を測定する広範な分析を行う [1–7]。定量は通常、製品試料溶液中のAPIのUV応答と、外部参照標準溶液中の同一APIのUV応答の比較に基づく。製剤に複数のAPIがある場合、外部参照標準溶液には通常、各対応APIの参照標準が含まれる [1–3]。同様に、複数の既知不純物・分解物を分析する場合、各不純物の定量には別々の参照標準が必要となる。本稿ではこのアプローチを「<strong>同一API参照標準法（Identical API reference standard methodology）</strong>」と呼ぶ。</p>
+<p>しかし、この「同一参照標準」の実践には状況により課題がある [9–26]：(1) 公式参照標準が、寄贈不足や合成/単離の技術的困難で市場に入手できないことがある [9,10,12,20]。(2) 代替の単一標準が使えれば、標準購入コスト・時間・保守を減らせる [11,12]。(3) 長いHPLCシーケンス中に、試料/標準溶液中のAPI分子（力価試験）や不純物分子（不純物試験）の安定性が損なわれることがある [11]。(4) ラボのスループット上、全参照標準を含む同じ標準溶液を頻繁に調製するのは避けたい。</p>
+<p>そこで、<strong>単一化合物を参照標準として製品中の全APIを定量</strong>する（同様に、単一化合物〔通常はAPI〕で原薬/製品中の全不純物を定量する）ことが魅力的になる。これには<strong>相対応答係数（RRF）</strong>が論理的選択となる。RRFは、選んだ分子の応答係数（RF）を別の分子のRFで割った比として定義され、本稿ではこのアプローチを「<strong>RRF法</strong>」と呼ぶ。</p>
+<h2>1.2 RRF法の適用範囲の拡大</h2>
+<p>RRF法は、ICHガイドラインや公定書モノグラフが述べるとおり、医薬品分析の不純物/分解物試験で最も頻用される [1,2,4–8]。不純物は、RRF値と要求補正精度に応じて、RRF補正の有無で活性量または参照標準に対して定量される。一般的な不純物分析を超えて、RRF法は<strong>複数のAPIを含む製品の力価試験</strong>にも拡張され、最も一般的な研究は<strong>生薬製剤（herbal medicine products）</strong>である [12–18]。近年、RRFによる化合物力価測定は、医薬品開発における<strong>抽出物・浸出物（extractables and leachables）</strong>分析にも拡張された [19–22]。真正な参照標準の非存在下でのRRF決定は、特に生薬製品・抽出物定量で現実的になっている。</p>
+<p>本稿では、市場でますます人気の複数API含有製品（OTC製品など）の力価試験に、広く使われるRRF法を拡張することを試みる。参照標準として選ぶ分子は必ずしもAPIの一つではなく、化学的安定性・高水溶性・低コスト・取扱いやすさなど有利な特性をもちうる。この用法の実現可能性を実証し、不純物定量・生薬活性成分分析・抽出物/浸出物分析での用法と比較する。</p>
+<h2>1.3 本研究の焦点：UV検出器設定</h2>
+<p>しかし、ある化合物を別の化合物に対して定量するRRFは変動が大きく、一貫した実装が難しいことが長く観察されてきた。特にHPLCでUV検出器を使うと大きな変動が生じうる。Olsen と Argentine [23] のRRF頑健性の初期研究以来、この変動問題の多くの側面（装置変動・UV波長選択最適化・HPLC条件・方法バリデーション〔頑健性〕など）が詳しく研究されてきた [11,12,14,15,20,24,26]。しかし、UV検出器に関わる<strong>重要な因子のいくつかがまだ研究されておらず、RRF変動への影響が調べられていない</strong>ことを我々は観察した。本稿ではこれらの重要因子を提示する。</p>
+<p>化合物のUV応答は分子構造に固有で、溶解する溶媒/溶液に影響される。希釈液や試料マトリックスの吸収を適切な背景補正で最小化/除去すれば、ある化合物の応答係数は1つのUV検出器上で線形範囲内で一定である。本稿では議論を簡素化するため、通常使用中のUV検出器の劣化の影響は除外した。異なるUV検出器が同じ化合物に異なるRFを生むことは知られているが、<strong>同じUV検出器上で決めた2化合物間のRRFは普遍定数として、どの検出器を使っても（異なるラボでも）適用される</strong>——これがRRF法を可能にする基本的仮定である。</p>
+<h2>1.4 例示製品：ASA + PSEH（参照にSA）</h2>
+<p>本研究の例示製品は「<strong>アセチルサリチル酸（ASA）500 mg</strong>」と「<strong>プソイドエフェドリン塩酸塩（PSEH）30 mg</strong>」を含む。<strong>サリチル酸（SA）</strong>も使用し、ASAの関連化合物として本研究で重要な役割を果たす。目的は、1つの試験法でASAとPSEHの力価を同一製品で測定すること。</p>
+<p><strong>なぜSAを参照標準にするか:</strong> ASAは低pHの水に難溶だがpH&gt;5で可溶になる一方、pH上昇でASAは速やかに連続的に加水分解してSAを生じる。そのため長いHPLCシーケンスでのASA定量の正確性は、オートサンプラーの温度制御があっても管理が難しい。対照的にSAは水に可溶で広いpH範囲で安定。この好ましい特性からASAでなく<strong>SAを参照標準</strong>とし、SA→ASAのRRFを適切に決めればSAでASAを定量できる。もう一つのAPIであるPSEHは化学的に安定だが、米国DEAが定める規制物質（List I）で [27]、使用ごとに正確な文書化が要求され、非規制・安定なSAに比べ文書作業が膨大。これも<strong>SAをRRF参照標準として両API（ASA・PSEH）を定量</strong>する動機となる。本稿ではSA/ASAとSA/PSEHのRRF値の変動を徹底的に調べる。</p>
+<hr>
+<h1>2. 実験</h1>
+<h2>2.1 試薬・材料</h2>
+<p>3主要成分の化学構造を図1に示す。ASA（純度100%、Bayer La Felguera site、スペイン）、サリチル酸（純度99.8%、RTC / Sigma-Aldrich）、PSEH（純度100%、Siegfried、ドイツ）。炭酸水素ナトリウム（Fluka、ACSグレード）、アセトニトリル（Fisher、HPLCグレード）、トリフルオロ酢酸（TFA、Thermo Scientific、HPLCグレード）、Milli-Q水。</p>
+<figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig1.png" alt="図1. 3主要成分（左：アセチルサリチル酸ASA、中：サリチル酸SA、右：プソイドエフェドリン塩酸塩PSEH）の化学構造。" loading="lazy"><figcaption>図1. 3主要成分（左：アセチルサリチル酸ASA、中：サリチル酸SA、右：プソイドエフェドリン塩酸塩PSEH）の化学構造。</figcaption></figure>
+<h2>2.2 装置</h2>
+<p>RRFの変動を調べるため、<strong>2メーカー・5台のHPLC</strong>を使用：(1) Waters Alliance e2695 [29]、(2) Agilent 1200 Infinity と 1290 Infinity [30]。具体的には Waters-1、Waters-2（いずれも e2695）、Agilent-1、Agilent-2（1200 Infinity）、Agilent-3（1290 Infinity）（表1）。各系は四元送液・オンライン脱気・温調オートサンプラー・温調カラム室・ダイオードアレイ検出器（DAD）＋Waters Empower 2/3 ソフト。カラムは同型だがロット違い、移動相もバッチ違い（これらは UV検出器・その設定の影響に比べ非臨界〜無視できる影響とみなす）。同一装置での実験日は1〜38日に広げ、日間の差を観察。</p>
+<p><strong>表1. HPLC装置モジュールとUV設定（抜粋）</strong></p>
+<table>
+<thead><tr><th>メーカー</th><th>系</th><th>機種</th><th>スリット(nm)</th><th>分解能(nm)</th><th>ステップ(nm)</th><th>バンド幅(nm)</th></tr></thead>
+<tbody>
+<tr><td>Waters</td><td>1・2</td><td>e2695</td><td>N/A¹</td><td>1.2</td><td>N/A¹</td><td>1.2</td></tr>
+<tr><td>Agilent</td><td>1・2</td><td>1200 Infinity</td><td>1</td><td>N/A¹</td><td>2（または1）</td><td>4</td></tr>
+<tr><td>Agilent</td><td>3</td><td>1290 Infinity</td><td>1</td><td>N/A¹</td><td>2</td><td>4</td></tr>
+</tbody></table>
+<p>¹ Waters UV系にはスリット・ステップ設定がなく「分解能（Resolution）」を用いる。Agilent UV系には分解能設定がなくスリット・ステップ設定を用いる（3.2節）。</p>
+<h2>2.3 クロマト条件・検出器設定</h2>
+<p>カラム：YMC-Triart C18（3.0 mm ID×75 mm、1.9 µm）。移動相A＝0.15% TFA水、B＝0.15% TFAアセトニトリル。グラジエント溶出。カラム温度40℃、オートサンプラー4℃。初期既定として検出波長 <strong>230 nm（SA）・257 nm（PSEH）・295 nm（ASA）</strong>、バンド幅4 nm（Agilent）・分解能1.2 nm（Waters）、参照波長なし。UVスペクトルは毎回190〜400 nmで収集。ASAは16倍高濃度（ASA 500 mg vs PSEH 30 mg＝濃度差16倍）のため、1試験法で両成分を測るにはASAに低吸収の波長（295 nm）を選ぶのが実務的。</p>
+<h2>2.4 溶液調製</h2>
+<p>希釈液＝6.5 mg/mL炭酸水素ナトリウムの水:メタノール(90:10)（ASAの水系溶解性を上げるため炭酸水素Naとメタノールを使用）。SA原液5 mg/mLを希釈液で調製し段階希釈。ASA/PSEH原液は PSEH 30 mg・ASA 500 mg・炭酸水素Na 650 mg を250 mLメスフラスコに溶解。ASA含有溶液は溶液安定性最大化のため直ちに4℃で冷蔵/HPLC試料室に保管。</p>
+<h2>2.5 RRF計算式</h2>
+<p>RRFは、参照標準(S)のRFをAPI化合物(A)のRFで割って算出（RF＝ピーク面積/濃度、式1）：</p>
+<p>$$RRF_{S/A} = \frac{RF_S}{RF_A} = \frac{(Area/Conc)_S}{(Area/Conc)_A} \tag{1}$$</p>
+<p>$$RRF_{PSEH} = RF_{SA}/RF_{PSEH} \tag{2}$$</p>
+<p>$$RRF_{ASA} = RF_{SA}/RF_{ASA} \tag{3}$$</p>
+<h2>2.6 力価計算式</h2>
+<p>「同一API標準」法での力価は式4、「RRF法」での力価は式5：</p>
+<p>$$\%Assay = \frac{Area_{A\,in\,Sample}}{RF_{A\,in\,Standard}}\times\frac{DF}{LC}\times100 \tag{4}$$</p>
+<p>$$\%Assay = \frac{Area_{A\,in\,Sample}}{RF_{S\,in\,Standard}}\times RRF_{S/A}\times\frac{DF}{LC}\times100 \tag{5}$$</p>
+<p>DF＝試料溶液の標準溶液に対する希釈係数、LC＝製品中の活性成分の表示量（例：100 mg/錠）。</p>
+<hr>
+<h1>3. 結果と考察</h1>
+<h2>3.1 RRF値は大きく変動する</h2>
+<p>次の実験変更を調べた：(a) 異なる装置メーカー（Waters・Agilent）、(b) 同一メーカーの異なる機種/系、(c) 同一装置の異なる測定日、(d) 異なる施設。RRFは 2.0 mg/mL ASA・0.12 mg/mL PSEH・0.12 mg/mL SA のUV応答（それぞれ295・257・230 nm監視）から算出。これらの波長は元々「同一参照標準」法の力価法で使われ、同法では分析上の問題は示さなかった。しかしRRF法を適用すると予期しない差が観察され、本研究の発端となった。実験は非連続の複数日（Day-I/II/III、間隔2〜38日）に、2か月にわたり実施。結果を図2・表2にまとめる。</p>
+<figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig2.png" alt="図2. 施設間・同一系の異なる日でのRRF変動（左：SA/ASA、右：SA/PSEH）。各装置の複数バーは複数日（Day I/II/III）の実験を表す。" loading="lazy"><figcaption>図2. 施設間・同一系の異なる日でのRRF変動（左：SA/ASA、右：SA/PSEH）。各装置の複数バーは複数日（Day I/II/III）の実験を表す。</figcaption></figure>
+<p><strong>主な知見：</strong></p>
+<ol><li><strong>装置メーカー:</strong> 全く同じHPLCパラメータでも、SA/ASAは約3.1〜3.4、SA/PSEHは約2.3〜2.9で、Waters vs Agilent 間で変動。</li><li><strong>施設間:</strong> RRF値は施設間で大きく変動。SA/ASAは Lab A（2.889）が Lab B（3.069〜3.430）より低い一方、SA/PSEHは Lab A（2.901）が Lab B の Waters（2.266〜2.267）より高い（Lab A も Agilent 使用のため Agilent 間では類似）。</li><li><strong>同一メーカーの異なる機種:</strong> 同一メーカーでも機種/系で有意に変動。Waters（同型e2695）は SA/PSEH で ほぼ一定（2.266）だが、Agilent の SA/ASA は機種間（1200 vs 1290 Infinity）で 3.069〜3.396。</li><li><strong>同一装置の異なる日:</strong> 日間変動は最小だがRRFは同一系でも固定値でない。日間RSD は SA/ASA で 0.17〜0.72%、SA/PSEH で 0.2〜1.6%。</li></ol>
+<p><strong>表2. 施設・装置・測定日によるRRF変動のまとめ（抜粋）</strong></p>
+<table>
+<thead><tr><th></th><th>Lab A(QC)¹</th><th>Lab B Waters-1</th><th>Waters-2</th><th>Agilent-1</th><th>Agilent-2</th><th>Agilent-3</th></tr></thead>
+<tbody>
+<tr><td><strong>SA/ASA 平均</strong></td><td>2.889</td><td>3.430</td><td>3.324</td><td>3.262</td><td>3.396</td><td>3.069</td></tr>
+<tr><td>RSD(%)</td><td>—</td><td>0.17</td><td>0.54</td><td>—</td><td>0.17</td><td>0.72</td></tr>
+<tr><td>施設間差(%)</td><td>—</td><td>18.7</td><td>15.1</td><td>12.9</td><td>17.6</td><td>6.2</td></tr>
+<tr><td><strong>SA/PSEH 平均</strong></td><td>2.901</td><td>2.266</td><td>2.267</td><td>2.810</td><td>2.852</td><td>2.823</td></tr>
+<tr><td>RSD(%)</td><td>—</td><td>1.14</td><td>0.20</td><td>—</td><td>1.64</td><td>0.54</td></tr>
+<tr><td>施設間差(%)</td><td>—</td><td>−21.6</td><td>−21.5</td><td>−2.7</td><td>−1.3</td><td>−2.3</td></tr>
+</tbody></table>
+<p>¹ 別サイトのQCラボのデータ（単一測定）。施設間差は各装置の平均RRFをQCラボのRRFに対して算出（例：Waters-1 vs QCラボ＝(2.266−2.901)/2.901×100=−21.6%）。</p>
+<p>同じカラム・カラム温度・UV波長・移動相調製が定義済みなので、上記の観察は主に<strong>異なる装置パラメータ</strong>によると考えられる。これは貴重だがやや残念な知見で、力価分析（通常&lt;2%の測定不確かさを要求）にRRF法を使うとき、RRF決定の頑健性を機種・系・施設・日など様々な角度から徹底評価する必要があることを示す。観察された最大の相対変動は SA/ASA で18.7%、SA/PSEH で21.6%。こうした大きな変動は施設間で移管できない。同一施設内でも、有効期間支持や傾向分析の安定性試験で異なる時点に異なるHPLC系を使うと、製品の化学ではなく<strong>分析装置の設定</strong>により力価結果が誤解を招く/矛盾しうる。実際、大半のHPLC利用者は既定設定を「結果に影響しない」と一般的に仮定して使い、分析手順に装置設定のような「ありふれた」詳細を書かないのが通例。しかし本研究は、力価RRF法では<strong>装置設定がデータ精度と方法移管性に決定的役割</strong>を果たすことを示す。</p>
+<h2>3.2 UV検出器設定がRRF値に影響する</h2>
+<p>化合物はUV/可視光を吸収する限りUV-vis検出器で検出・定量できる。HPLCのUV検出器はVWD（可変波長検出器）かDAD（ダイオードアレイ検出器、PDA）。VWDは1〜2の既定波長で照射、DADは選択波長範囲（例190〜400 nm）でUVスキャンを得る。DADは特性UVスペクトルに加え、スキャン範囲内の任意単一波長の吸光度を抽出できる。UV波長以外にも、データ取得前に選ぶべきUV検出器設定が複数ある。本研究はR&amp;Dの方法開発・バリデーション・移管で一般的な<strong>DAD</strong>に焦点を当てる（DADはVWDより設定選択肢が多く複雑）。Waters と Agilent は設定パラメータが異なり、Agilent はスリット・ステップ・バンド幅の3つ、Waters は「分解能（Resolution）」1つのみ（Watersによれば分解能はスリットとバンド幅の組合せ）。本研究は選択肢の多い Agilent 系に注目。</p>
+<h3>3.2.1 スリット幅（Slit width）</h3>
+<p>スリット幅が広いとUVスペクトルの光学分解能が下がる。DADの3D UV収集で異なるスリット幅の影響を比較。図4のとおり、PSEHの特性的な「三叉（trident）」形スペクトル（頂点257 nm）はスリット幅1〜2 nmで明瞭だが、4 nm超で三叉が消え始める。最大吸収波長での定量はスリット幅で大きく変わる。PSEH・SA・ASAの最大吸収強度はスリット幅変動で大きく変わる（SA・ASAはスペクトル形状はほぼ不変）。</p>
+<p>同一クロマトシーケンス内で試料と同一分析種の標準を比較する定量なら問題ないが、<strong>RRF法では異なる化合物のUV吸収を比較</strong>するため、スリット幅由来の変動が定量の不整合を生む。例：バリデーション時のRRFはスリット幅1 nmで得た値なのに、日常分析はスリット幅4 nmで行う——<strong>RRFは必ずしも普遍定数でない</strong>。</p>
+<p><strong>表3. UV検出器設定の影響――スリット幅（3D収集・指定波長で取得）</strong></p>
+<table>
+<thead><tr><th>スリット設定</th><th>1 nm</th><th>2 nm</th><th>4 nm</th><th>8 nm</th><th>16 nm</th><th>最大差(%)</th></tr></thead>
+<tbody>
+<tr><td>PSEH – 257 nm</td><td>870016</td><td>850935</td><td>797118</td><td>727103</td><td>694657</td><td>79.8</td></tr>
+<tr><td>ASA – 295 nm</td><td>685376</td><td>659002</td><td>670054</td><td>727238</td><td>831078</td><td>126.1</td></tr>
+<tr><td>SA – 230 nm</td><td>41814092</td><td>41972207</td><td>42151734</td><td>42577643</td><td>42783208</td><td>102.3</td></tr>
+</tbody></table>
+<p>スリット幅1→16 nmで、<strong>PSEHのピーク面積は79.8%に低下（−20.2%）、ASAは+26.1%増加、SAは+2.3%とほぼ不変</strong>。この非対称な変化がSA/PSEH・SA/ASAのRRFに大きな変動を生む（PSEH/SAのピーク面積比は1 nmで約0.02、16 nmで約0.016＝20%差）。</p>
+<figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig4.png" alt="図4. スリット幅を変えたときのPSEHのUVスペクトル（頂点257 nmの三叉形が広いスリットで消える）。" loading="lazy"><figcaption>図4. スリット幅を変えたときのPSEHのUVスペクトル（頂点257 nmの三叉形が広いスリットで消える）。</figcaption></figure>
+<figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig5.png" alt="図5. スリット幅を変えたときのSAのUVスペクトル（形状はほぼ不変、強度がわずかに変化）。" loading="lazy"><figcaption>図5. スリット幅を変えたときのSAのUVスペクトル（形状はほぼ不変、強度がわずかに変化）。</figcaption></figure>
+<figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig6.png" alt="図6. スリット幅を変えたときのASAのUVスペクトル（295 nmで明瞭に吸光度が増加）。" loading="lazy"><figcaption>図6. スリット幅を変えたときのASAのUVスペクトル（295 nmで明瞭に吸光度が増加）。</figcaption></figure>
+<p><strong>緩和策:</strong> スリット幅で最も変化の少ない波長を選ぶ。ただしこの選択は自明でなく試行錯誤が要る（最も変化が小さい領域＝最も平坦な領域とは限らない。例：SAは237 nmで1→16 nmで0.48→0.44 AUと変わるが、230 nmでは0.38→0.39 AUと0.01 AU差。ASAは頂点277 nmで大きく変わるが264 nmでは小さい）。単一波長で変化最小を狙うなら個別実験が必要。あるいは<strong>スリット幅（例1 nm）を方法に明記</strong>して日常分析の一貫性を最大化する。図2のとおり、メーカーや機種も分析法に明記する必要がありうる。さもなくばRRFは大きく変動する。</p>
+<h3>3.2.2 ステップ幅（Step setting）</h3>
+<p>Agilent UV検出器の「Step」はスペクトル設定群にあり、<strong>3D UV収集のみ</strong>に適用され、化合物の全UVスペクトル収集後のデータ取得に使う。取得を異なるステップ間隔で設定でき、例えばスキャン範囲190〜400 nmでステップ4 nmなら、吸光度データは190・194・198・…・396・400 nmで「取得」される。取得点間（例191〜193 nm）の吸光度は、190 nmと194 nmの実データから線形式で「<strong>数学的に計算</strong>」される。つまり193 nmの吸光度は「計算値」。よく使う値は1・2・4 nmで、計算値はステップ間隔で変わる。例（図7）：257 nmで、1 nmステップはPSEHの実測値を与えるが、4 nmステップ（254 nmの次が258・262・266 nm…）では257 nmは計算値になる。</p>
+<figure><img src="assets/rrf-potency-assay-uv-detector-settings/fig7.png" alt="図7. ステップ設定のPSEHへの影響（スリット幅1 nm条件下）。ステップ1/2/4 nmで257 nm近傍の値が変わる。" loading="lazy"><figcaption>図7. ステップ設定のPSEHへの影響（スリット幅1 nm条件下）。ステップ1/2/4 nmで257 nm近傍の値が変わる。</figcaption></figure>
+<h3>3.2.3 バンド幅（Band width）</h3>
+<p>Agilent では「Signals」セクション、Waters では「分解能」に組み込まれる。バンド幅は、指定UV波長の<strong>近傍の小範囲の吸光度を平均</strong>する設定で、DADの単一波長データ収集（<strong>2D法</strong>、3.2.4節）に使う。例：波長257 nm・バンド幅4 nmなら、257 nmの吸光度は実際には<strong>255〜259 nmの吸光度の平均</strong>（ステップの「計算値」とは異なり、実吸光度の平均で、監視波長が範囲の中央）。バンド幅が広いほど平均する範囲が広がる。</p>
+<h3>3.2.4 データ収集モジュール（3D／2D）</h3>
+<p>DADのデータ収集には2方式がある。<strong>3D収集</strong>は全UVスペクトル（例190〜400 nm）をまず収集し、後から任意波長の吸光度を取り出す（ステップ設定が効く）。<strong>2D収集</strong>は指定単一波長のみを収集し、その際バンド幅で近傍を平均する。同じ化合物・同じ監視波長でも、3D（ステップ補間）と2D（バンド幅平均）でRF値が異なりうるため、<strong>どちらのモジュールを使うかでRRFが変わる</strong>。したがって方法には収集モジュールも明記が必要。</p>
+<h2>3.3 実務上の留意点</h2>
+<p>（原著3.3節）RRF法を力価試験に使う場合の方法開発・移管の実務指針として、(i) UV波長を、スリット/ステップ/バンド幅の変動に対し応答変化が最小となるよう選ぶ、(ii) スリット幅・ステップ幅・バンド幅・データ収集モジュールを数値で方法に明記する、(iii) 可能なら参照標準と分析種のUV特性が近い波長域を選ぶ、(iv) 施設間移管では移管先でRRFを完全に再検証する、等が挙げられる。</p>
+<hr>
+<h1>4. 結論</h1>
+<p>RRF法は不純物分析で普及しているが、施設間・装置間のRRF変動は大きくなりうる。これらの変動は本稿で検討・議論した<strong>装置設定</strong>から生じる。RRF法を<strong>力価試験</strong>に使うことは、医薬品の力価分析に求められるはるかに厳しい正確性基準のため、不純物試験に比べ難しい。</p>
+<p>大きな変動を生む影響因子を徹底探索し、分析法手順にしばしば未記載のUV検出器設定パラメータが極めて重要で、方法に明記しないとRFひいてはRRFに大差を生みうることを実証した。UV検出器設定の記載がないと、力価RRF法は十分に頑健でなく、他施設への方法移管が失敗しうる。結果として、安定性データが大きくばらつく・出荷試験が規格外/傾向外になる等の帰結を招きうる。重要パラメータは<strong>スリット幅・ステップ幅・バンド幅・データ処理/取得モジュール</strong>。観察された最大変動は約20%（＝真値100%が80〜120%と分析されうる）。理想的にはRRFを規定値の<strong>±2%以内</strong>に制御すべき。</p>
+<p>したがって、UV設定（スリット・ステップ・バンド幅の数値、データ収集モジュール設定）は力価試験結果への潜在的影響ゆえ方法に明確に指定しなければならない。本稿はRRF方法開発でUV波長選択を最適化して変動を減らす提案も示した。<strong>RRF法を力価/含量分析に使うなら、方法移管は厳格に行い、移管先でRRFを完全に検証して同じ値が再現できることを確認する。できなければ移管先で改訂RRF値を確立・使用すべき</strong>である。</p>
+<hr>
+<h1>訳者補足</h1>
+<ul><li><strong>なぜ生薬QCに効くか:</strong> 生薬の QAMS（一標準多成分定量）や SAM（単一標準多マーカー法）は、まさに本論文の「RRF法」と同じ原理——1本の標準で複数成分を定量する。生薬では正規の対照品が入手困難な成分が多く、RRF/相対補正係数への依存が高い。本論文の教訓「装置・施設・UV設定でRRFが最大20%動く」は、生薬 QAMS/SAM で「別の装置・別のラボで定量値がずれた」という再現性トラブルの直接の原因になりうる。</li><li><strong>不純物試験 vs 力価試験の違い:</strong> 不純物は微量（例0.1%）なので、その定量が20%ぶれても製品全体の判定への影響は小さい（0.1%が0.08〜0.12%）。しかし力価（含量）は主成分そのものなので、20%のぶれは「100%が80〜120%」となり致命的。だからRRFを力価に使うハードルは桁違いに高い（要求精度&lt;2%）。</li><li><strong>UV設定の3つ＋1つ:</strong> ①スリット幅（光学分解能／スペクトル形状。狭いほど鋭い）、②ステップ幅（3D収集で取得点間を線形補間する「計算値」の粗さ）、③バンド幅（2D収集で監視波長近傍を実測平均する幅）、④データ収集モジュール（3D全スペクトル vs 2D単一波長）。これらは分析法に数値で書かれないことが多いが、RRFを使うなら必ず明記せよ、というのが本論文の核心。</li><li><strong>数値の扱い:</strong> 表2・表3の値は原文から転記。図3（Waters/Agilentの設定画面）・図8以降・11ページの図は本ページでは割愛（原文参照）。実データはCC BY-NC-NDのオープンアクセス原著を参照可。原文にない数値は加えていない。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="aoac-2018-04-ginger-nonvolatile-constituents-lc-uv.html">食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）——LC-UV法とSMPR 2017.012適合の検証</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">多成分定量</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="grg-dac-tlc-qams-hplc-fingerprint.html">ドイツ薬局方（DAC）準拠の多次元品質評価 — 天麻（テンマ）顆粒をTLC・QAMS・HPLC指紋で評価し中国基準と比較</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">多成分定量</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="aqbd-lc-method-development-overview-review.html">分析的QbD（AQbD）原則による液体クロマトグラフィー分析法の開発と最適化 — 概観と最近の進歩（レビュー）</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="experimental-designs-hplc-method-development-validation-overview.html">HPLCメソッド開発・バリデーションにおける実験計画法の総覧——スクリーニング設計・応答曲面法からQbD・シックスシグマまで</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="rrf-potency-assay-uv-detector-settings" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
