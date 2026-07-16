@@ -291,3 +291,64 @@ SH試料の抗酸化能をDPPHラジカル消去アッセイでIC50として定�
 - **多次元化の意義:** 薬局方のキレノール1成分規格は「その1成分さえ基準を満たせば合格」で、全体組成のばらつき（表1でPmrが47〜112%と大きい）を捉えられない。HPLC（成分）＋UV（共役系）＋FTIR（官能基）＋DPPH（活性）を融合することで、化学組成・構造・生物活性の3層で品質を評価できる。
 - **産地差:** 山西省産（E：S1/S9/S20）が総じて低評価、特にS9は全指標で最下位（等級8）。抗酸化はS8（広西省）が最強でCA・RN高含量と一致——「指紋-効能相関」が実際の活性差を説明できることを示す好例。
 - **数値の扱い:** 本文は「20バッチ」で解析するが、要旨は「22バッチ」と記載する箇所があり不整合（**要確認**）。図S・表Sの一部（補足データ）は本文からは追えず原文補足資料参照。原文にない数値は加えていない。
+
+## 参考文献
+
+1. Shuaishuai Fan, L.G.; Tian, W.; Wang, B.; Wang, X.; Zhang, T.; Niu, L. Chemical components and pharmacological action for Siegesbeckiae Herba and predictive analysis on its Q-Marker, Chin. Herb. Med. 52 (23) (2021) 7389–7400.
+
+2. Tao, H.X.; Zhao, G.D.; Linghu, K.G.; Xiong, W.; Sang, W.; Peng, Y.; Wang, Y.; Yu, H. Botany, traditional use, phytochemistry, pharmacology and toxicology of Sigesbeckiae Herba (Xixiancao): a review, Phytochem. Rev. 20 (3) (2021) 569–587. https://doi.org/10.1007/s11101-020-09714-4
+
+3. Linghu, K.-G.; Xiong, S.H.; Zhao, G.D.; Zhang, T.; Xiong, W.; Zhao, M.; Shen, X.-C.; Xu, W.; Bian, Z.; Wang, Y.; Yu, H. Sigesbeckia orientalis L. Extract alleviated the collagen type II-induced arthritis through inhibiting multi-target-mediated synovial hyperplasia and inflammation, Front. Pharmacol. 11 (2020) 547913. https://doi.org/10.3389/fphar.2020.547913
+
+4. National Pharmacopoeia Commission. Pharmacopoeia of the People's Republic of China (Part I), China Medical Science and Technology Press, Beijing, 2020.
+
+5. Seo, C.S.; Shin, H.K. Simultaneous analysis for quality control of traditional herbal medicine, Gungha-Tang, using liquid chromatography-tandem mass spectrometry, Molecules 27 (4) (2022) 1223. https://doi.org/10.3390/molecules27041223
+
+6. Wu, X.; Zhou, Y.; Yin, F.; Mao, C.; Li, L.; Cai, B.; Lu, T. Quality control and producing areas differentiation of Gardeniae Fructus for eight bioactive constituents by HPLC-DAD-ESI/MS, Phytomedicine 21 (4) (2014) 551–559. https://doi.org/10.1016/j.phymed.2013.10.002
+
+7. Cai, M.; Zhang, Q.; Lan, L.; Sun, W.; Zhang, H.; Sun, G. Holistically assessing the quality consistency of compound liquorice tablets from similarities of both all chemical fingerprints and the integrated dissolution curves by systematically quantified fingerprint method, Talanta 264 (2023) 124774. https://doi.org/10.1016/j.talanta.2023.124774
+
+8. Ma, D.; Wang, L.; Jin, Y.; Gu, L.; Yu, X.; Xie, X.; Yin, G.; Wang, J.; Bi, K.; Lu, Y.; Wang, T. Application of UHPLC fingerprints combined with chemical pattern recognition analysis in the differentiation of six Rhodiola species, Molecules 26 (22) (2021) 6855. https://doi.org/10.3390/molecules26226855
+
+9. Jiang, Y.; David, B.; Tu, P.; Barbin, Y. Recent analytical approaches in quality control of traditional Chinese medicines - A review, Anal. Chim. Acta 657 (1) (2010) 9–18. https://doi.org/10.1016/j.aca.2009.10.024
+
+10. Xu, Q.; Huo, X.; Yin, X.; Zhao, X.; Chen, M.; Wu, L.; Zhou, Y. Multivariate HPLC system assessment and optimization for traditional Chinese medicine: a case study of Gastrodia elata, Anal. Methods 16 (40) (2024) 6916–6928. https://doi.org/10.1039/d4ay01451k
+
+11. Ma, C.J. Simultaneous determination of five compounds in descurainia sophia by HPLC-DAD, Nat. Prod. Sci. 29 (4) (2023) 305–311.
+
+12. Ryu, G.H.; Ma, C.J. Simultaneous determination of eight compounds in Lysimachia christinae by HPLC-DAD, Nat. Prod. Sci. 28 (4) (2022) 187–193. https://doi.org/10.20307/nps.2022.28.4.187
+
+13. Wang, H.; Zhan, C.; Wang, Y. Simultaneous determination of multiple components in Fuke Yangrong pill by HPLC, Acta Chromatogr. 35 (4) (2023) 326–330. https://doi.org/10.1556/1326.2022.01081
+
+14. Zhang, Y.; Cao, C.; Yang, Z.; Jia, G.; Liu, X.; Li, X.; Cui, Z.; Li, A. Simultaneous determination of 20 phenolic compounds in propolis by HPLC-UV and HPLC-MS/MS, J. Food Compos. Anal. 115 (2023) 104877. https://doi.org/10.1016/j.jfca.2022.104877
+
+15. Gu, P.; Chen, M.; Sun, G. Quality control and evaluation of Black chokeberry (Aronia melanocarpa) by three-wavelength fusion fingerprinting and electrochemical fingerprinting combined with antioxidant activity analysis, Food Chem. 450 (2024) 139303. https://doi.org/10.1016/j.foodchem.2024.139303
+
+16. Yang, T.; Xue, L.; Liu, X.; Hao, C.; Gong, D.; Sun, G. Spectral and chromatographic fingerprint-based qualitative and quantitative evaluation strategy combined with chemometrics for quality control of functional red yeast, Microchem. J. 212 (2025) 113211. https://doi.org/10.1016/j.microc.2025.113211
+
+17. Zhang, J.; Gong, D.; Lan, L.; Zheng, Z.; Pang, X.; Guo, P.; Sun, G. Comprehensive evaluation of Loblolly fruit by high performance liquid chromatography four wavelength fusion fingerprint combined with gas chromatography fingerprinting and antioxidant activity analysis, J. Chromatogr. A 1665 (2022) 462819. https://doi.org/10.1016/j.chroma.2022.462819
+
+18. Chen, Y.; Lan, L.; Sun, W.; Zhang, H.; Sun, G. Quality control of Hugan capsule based on four-wavelength fusion profiling and electrochemical fingerprint combined with antioxidant activity and chemometric analysis, Anal. Chim. Acta 1251 (2023) 341015. https://doi.org/10.1016/j.aca.2023.341015
+
+19. Li, S. JJF1059—1999 《Evaluation and expression of measurement uncertainty》 discussion 20: is there no class A uncertainty in a single measurement result? Ind. Meas. 6 (2008) 40.
+
+20. Ji, Z.; Liu, H.; Li, J.; Wang, Y. ATR-FTIR as a green tool for rapid identity authentication of Gastrodia elata Blume under the influence of multi-biological variability, Vib. Spectrosc. 136 (2025) 103766. https://doi.org/10.1016/j.vibspec.2024.103766
+
+21. Aceto, M.; Cala, E.; Gulino, F.; Gullo, F.; Labate, M.; Agostino, A.; Picollo, M. The use of UV-visible diffuse reflectance spectrophotometry for a fast, preliminary authentication of gemstones, Molecules 27 (15) (2022) 4716. https://doi.org/10.3390/molecules27154716
+
+22. Yang, F.; Chu, T.; Zhang, Y.; Liu, X.; Sun, G.; Chen, Z. Quality assessment of licorice (Glycyrrhiza glabra L.) from different sources by multiple fingerprint profiles combined with quantitative analysis, antioxidant activity and chemometric methods, Food Chem. 324 (2020) 126854. https://doi.org/10.1016/j.foodchem.2020.126854
+
+23. Fan, J.; Wang, X.; Chang, Q.; Sun, G.; Lan, L. Evaluating the quality consistency of antiviral oral liquid by high-performance liquid chromatography five-wavelength matched average fusion fingerprint combined with electrochemical fingerprint and ultraviolet spectral quantum fingerprint, J. Chromatogr. A 1702 (2023) 464098. https://doi.org/10.1016/j.chroma.2023.464098
+
+24. Li, X.; Zhang, F.; Wang, X.; Sun, G. Evaluating the quality consistency of Rong'e Yishen oral liquid by UV plus FTIR quantum profilings and HPLC fingerprints combined with 3-dimensional antioxidant profiles, Microchem. J. 170 (2021) 106715. https://doi.org/10.1016/j.microc.2021.106715
+
+25. Wang, P.; Wang, X.; Li, Y.; He, R.; Gao, J.; Chen, C.; Dai, H.; Cao, Z.; Lan, L.; Sun, G.; Sun, W. Thorough evaluation of the Chinese medicine preparations and intermediates using high performance liquid chromatography fingerprints and ultraviolet quantum fingerprints along with antioxidant activity: shuanghuanglian oral solution as an example, J. Chromatogr. A 1705 (2023) 464196. https://doi.org/10.1016/j.chroma.2023.464196
+
+26. Chaudhary, P.; Janmeda, P.; Setzer, W.N.; Aldahish, A.A.; Sharifi-Rad, J.; Calina, D. Breaking free from free radicals: harnessing the power of natural antioxidants for health and disease prevention, Chem. Pap. 78 (4) (2024) 2061–2077. https://doi.org/10.1007/s11696-023-03197-1
+
+27. Chaudhary, P.; Janmeda, P.; Docea, A.O.; Yeskaliyeva, B.; Razis, A.F.A.; Modu, B.; Calina, D.; Sharifi-Rad, J. Oxidative stress, free radicals and antioxidants: potential crosstalk in the pathophysiology of human diseases, Front. Chem. 11 (2023) 1158198. https://doi.org/10.3389/fchem.2023.1158198
+
+28. Roy, Z.; Bansal, R.; Siddiqui, L.; Chaudhary, N. Understanding the role of free radicals and antioxidant enzymes in Human diseases, Curr. Pharm. Biotechnol. 24 (10) (2023) 1265–1276. https://doi.org/10.2174/1389201024666221121160822
+
+29. Hong, P.K.; Betti, M. Non-enzymatic browning reaction of glucosamine at mild conditions: relationship between colour formation, radical scavenging activity and α-dicarbonyl compounds production, Food Chem. 212 (2016) 234–243. https://doi.org/10.1016/j.foodchem.2016.05.170
+
