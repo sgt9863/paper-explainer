@@ -102,6 +102,244 @@ summary: 液体クロマトグラフィー（LC）の保持時間予測の30年�
 2. **方法移管（カラム/装置構成の変更）**: ドウェル容積・空隙容積・勾配パラメータが変わるため、両カラム（空隙容積）・両系（ドウェル容積・分散）・分析対象（等溶媒保持挙動）の関連パラメータを正確に測り、最も精緻な勾配クロマトモデル（勾配の不忠実・遅延・歪みを考慮）を用いることが肝心。特に勾配容積が空隙容積・ドウェル容積に匹敵する高スループット LC で重要。**普遍的規約**が要る（空隙容積＝単一溶媒＋標識溶媒注入の動的法、ドウェル容積＝75/25→55/45 ACN-水線形勾配25℃でカラム設置のまま、保持挙動＝1<k<30 の等溶媒ラン）。MMC カラムの方法移管はなお課題（健全な保持モデルが未整備）。
 3. **既知標的分析対象の保持予測**: 従来の統計法（無作為訓練の LSER/QSRR＋重回帰/PLS）は健全で定性的な情報を与えるが、正確な予測は ±10–30% に留まる。改善は訓練セットの選択（分子類似性）と、重回帰/PLS を広範な訓練セットの AI アルゴリズムに置換することで得られるだろう。だが AI の統計的性質と固液界面吸着の基礎欠如が精度を必然的に制限する。**根本からの解決＝MC/MD シミュレーション**。過去20年で中性表面・分析対象について RPLC/HILIC 機構を解明してきたが、今後の課題は**イオン化系の力場の検証**と計算資源の増強。これが LC 保持予測を、固液吸着平衡の基礎を取り込んだ次の水準に引き上げ、現行統計法の予測誤差リスクを大きく減らす。
 
+## 参考文献
+
+1. Mattrey, F. T.; Makarov, A. A.; Regalado, E. L.; Bernardoni, F.; Figus, M.; Hicks, M. B.; Zheng, J.; Wang, L.; Schafer, W.; Antonucci, V.; Hamilton, S. E.; Zawatzky, K.; Welch, C. J. TrAC 2017, 95, 36−46.
+
+2. Molnar, I. J. Chromatogr. A 2002, 965, 175−194.
+
+3. Snyder, L.; Kirkland, J.; Glach, J. Practical HPLC Method Development, 2nd ed.; John Wiley and Sons: New York, 1997.
+
+4. Schmidt, A.; Molnar, I. J. Chromatogr. A 2002, 948, 51−63.
+
+5. Euerby, M. R.; Scannapieco, F.; Rieger, H.-J.; Molnar, I. J. Chromatogr. A 2006, 1121, 219−227.
+
+6. Fekete, S.; Fekete, J.; Molnar, I.; Ganzler, K. J. Chromatogr. A 2009, 1216, 7816−7823.
+
+7. Krul, I.; Turpin, J.; Lukulay, P. H.; Verseput, R.; Swartz, M. LCGC North America 2008, 26, 1190−1197.
+
+8. Porter, S. C.; Verseput, R. P.; Cunningham, C. R. Pharm. Technol. 1997, 21, 1−7.
+
+9. Sahu, P. K.; Ramisetti, N. R.; Cecchi, T.; Swain, S.; Patro, C. S.; Panda, J. J. Pharm. Biomed. Anal. 2018, 147, 590−611.
+
+10. Pirok, B. W. J.; Pous-Torres, S.; Ortiz-Bolsico, C.; Vivo-Truyols, G.; Schoenmakers, P. J. Chromatogr. A 2016, 1450, 29−37.
+
+11. Pirok, B. W. J.; Gargano, A. F. G.; Schoenmakers, P. J. Sep. Sci. 2018, 41, 68−98.
+
+12. USP Chromatography. In Physical Tests; The United States Pharmacopeial Convention, 2012; Chapter 621; https://www. d r u g f u t u r e . c o m / P h a r m a c o p o e i a / u s p 3 5 / P D F / 0 2 5 8 - 0265%20%5B621%5D%20CHROMATOGRAPHY.pdf.
+
+13. Mazzeo, J. R.; Neue, U. D.; Kele, M.; Plumb, R. S. Anal. Chem. 2005, 77, 460A−467A.
+
+14. Dong, M. W.; Zhang, K. TrAC, Trends Anal. Chem. 2014, 63, 21− 30.
+
+15. Kormany, R.; Fekete, J.; Guillarme, D.; Fekete, S. J. Pharm. Biomed. Anal. 2014, 94, 188−195.
+
+16. Asberg, D.; Samuelsson, J.; Lesko, M.; Cavazzini, A.; Kaczmarski, K.; Fornstedt, T. J. Chromatogr. A 2015, 1401, 52−59.
+
+17. Asberg, D.; Samuelsson, J.; Fornstedt, T. J. Chromatogr. A 2016, 1457, 97−106.
+
+18. Kostka, J.; Gritti, F.; Kaczmarski, K.; Guiochon, G. J. Chromatogr. A 2010, 1217, 4704−4712.
+
+19. Gritti, F.; Guiochon, G. J. Chromatogr. A 2014, 1340, 50−58.
+
+20. Gritti, F.; Guiochon, G. J. Chromatogr. A 2014, 1344, 66−75.
+
+21. Gritti, F.; Guiochon, G. J. Chromatogr. A 2014, 1356, 96−104.
+
+22. Boswell, P. G.; Schellenberg, J. R.; Carr, P. W.; Cohen, J. D.; Hegeman, A. D. J. Chromatogr. A 2011, 1218, 6732−6741.
+
+23. Taft, R. W.; Abboud, J.-L. M.; Kamlet, M. J.; Abraham, M. A. J. Solution Chem. 1985, 14, 153−186.
+
+24. Sadek, P. C.; Carr, P. W.; Doherty, R. M.; Kamlet, M. J.; Taft, R. W.; Abraham, M. A. Anal. Chem. 1985, 57, 2971−2978.
+
+25. Wang, A.; Tan, L. C.; Carr, P. W. J. Chromatogr. A 1999, 848, 21− 37.
+
+26. Wang, A.; Carr, P. W. J. Chromatogr. A 2002, 965, 3−23.
+
+27. Vitha, M.; Carr, P. W. J. Chromatogr. A 2006, 1126, 143−194.
+
+28. Kaliszan, R. Chem. Rev. 2007, 107, 3212−3246.
+
+29. Kaliszan, R. J. Chromatogr. A 1993, 656, 417−435.
+
+30. Gorynski, K.; Bojko, B.; Nowaczyk, A.; Bucinski, A.; Pawliszyn, J.; Kaliszan, R. Anal. Chim. Acta 2013, 797, 13−19.
+
+31. Ng, B. K.; Tan, T. T. Y.; Shellie, R. A.; Dicinoski, G. W.; Haddad, P. R. TrAC, Trends Anal. Chem. 2016, 80, 625−635.
+
+32. Taraji, M.; Haddad, P. R.; Amos, R. I. J.; Talebi, M.; Szucs, R.; Dolan, J. W.; Pohl, C. A. J. Chromatogr. A 2017, 1507, 53−62.
+
+33. Haddad, P. R.; Taraji, M.; Szücs, R. Anal. Chem. 2021, 93, 228− 256.
+
+34. Witting, M.; Böcker, S. J. Sep. Sci. 2020, 43, 1746−1754.
+
+35. Taraji, M.; Haddad, P. R.; Amos, R. I. J.; Talebi, M.; Szücs, R.; Dolan, J. W.; Pohl, C. A. Anal. Chim. Acta 2018, 1000, 20−40.
+
+36. Amos, R. I. J.; Haddad, P. R.; Szücs, R.; Dolan, J. W.; Pohl, C. A. TrAC 2018, 105, 352−359.
+
+37. Moruz, L.; Kall, L. Mass Spectrom. Rev. 2017, 36, 615−623.
+
+38. Abraham, M.; Acree, W. J. Chromatogr. A 2016, 1430, 2−14.
+
+39. Tyteca, E.; Veuthey, J.-L.; Desmet, G.; Guillarme, D.; Fekete, S. Analyst 2016, 141, 5488−5501.
+
+40. Tarasova, I.; Masselon, C.; Gorshkov, A.; Gorshkov, M. Analyst 2016, 141, 4816−4832.
+
+41. Sykora, D.; Vozka, J.; Tesarova, E. J. Sep. Sci. 2016, 39, 115−131.
+
+42. Krokhin, O. V.; Spicer, V. Curr. Protoc. Bioinform. 2010, 31, 13.14.1−13.14.15.
+
+43. Liu, C.; Wang, H.; Fu, Y.; Yuan, Z.; Chi, H.; Wang, L.; Sun, R.; He, S. Sepu 2012, 28, 529−534.
+
+44. Kaliszan, R.; Baczek, T. Proteomics 2009, 9, 835−847.
+
+45. Baczek, T. Curr. Pharm. Anal. 2008, 4, 151−161.
+
+46. Shinoda, K.; Sugimoto, M.; Tomita, M.; Ishihama, Y. Proteomics 2008, 8, 787−798.
+
+47. Put, R.; Vander Heyden, Y. Anal. Chim. Acta 2007, 602, 164− 172.
+
+48. Garcia-Alvarez-Coque, M.C.; Torres-Lapasio, J.R.; Baeza-Baeza, J.J. Anal. Chim. Acta 2006, 579, 125−145.
+
+49. Lochmüller, C.; Reese, C.; Aschman, A.; Breiner, S. Anal. Chim. Acta 1993, 656, 3−18.
+
+50. Hanai, T. J. Chromatogr. A 1991, 550, 313−324.
+
+51. Baba, Y. J. Chromatogr. A 1989, 485, 143−168.
+
+52. Zuvela, P.; Skoczylas, M.; Jay Liu, J.; Baczek, T.; Kaliszan, R.; Wong, M.; Buszewski, B. Chem. Rev. 2019, 119, 3674−3729.
+
+53. Wen, Y.; Amos, R. I. J.; Talebi, M.; Szücs, R.; Dolan, J. W.; Pohl, C. A.; Haddad, P. R. Anal. Chem. 2018, 90, 9434−9440.
+
+54. Lindsey, R.; Rafferty, J.; Eggimann, B.; Siepmann, J.; Schure, M. J. Chromatogr. A 2013, 1287, 60−82. Analytical Chemistry pubs.acs.org/ac Perspective https://doi.org/10.1021/acs.analchem.0c05078 Anal. Chem. 2021, 93, 5653−5664 5663
+
+55. Rybka, J.; Höltzel, A.; Melnikov, S.; Seidel-Morgenstern, A.; Tallarek, U. Fluid Phase Equilib. 2016, 407, 177−187.
+
+56. Braun, J.; Fouqueau, A.; Bemish, R. J.; Meuwly, M. Phys. Chem. Chem. Phys. 2008, 10, 4765−4777.
+
+57. El Hage, K.; Bemish, R.; Meuwly, M. Phys. Chem. Chem. Phys. 2018, 20, 18610−18622.
+
+58. El Hage, K.; Gupta, P.; Bemish, R.; Meuwly, M. J. Phys. Chem. Lett. 2017, 8, 4600−4607.
+
+59. Riedo, F.; Kovats, E. J. Chromatogr. 1982, 239, 1−28.
+
+60. Knox, J.; Kaliszan, R. J. Chromatogr. 1985, 349, 211−234.
+
+61. Alhedai, A.; Martire, D. E.; Scott, R. P. W. Analyst 1989, 114, 869−875.
+
+62. Rybka, J.; Höltzel, A.; Tallarek, U. J. Phys. Chem. C 2017, 121, 17907−17920.
+
+63. Trebel, N.; Höltzel, A.; Steinhoff, A.; Tallarek, U. J. Chromatogr. A 2021, 1640, 461958.
+
+64. Melnikov, S. M.; Höltzel, A.; Seidel-Morgenstern, A.; Tallarek, U. Anal. Chem. 2011, 83, 2569−2575.
+
+65. Melnikov, S. M.; Höltzel, A.; Seidel-Morgenstern, A.; Tallarek, U. Angew. Chem., Int. Ed. 2012, 51, 6251−6254.
+
+66. Melnikov, S. M.; Höltzel, A.; Seidel-Morgenstern, A.; Tallarek, U. J. Phys. Chem. C 2013, 117, 6620−6631.
+
+67. Smith, R.; Nieass, C.; Wainwright, M. J. Liq. Chromatogr. 1986, 9, 1387−1430.
+
+68. Rimmer, R. J.; Simmons, C. S.; Dorsey, J. G. J. Chromatogr. A 2002, 965, 219−232.
+
+69. Gritti, F.; Kazakhevich, Y. V.; Guiochon, G. J. Chromatogr. A 2007, 1161, 157−169.
+
+70. McCormick, R.; Karger, B. J. Chromatogr. 1980, 199, 259−273.
+
+71. McCormick, R.; Karger, B. Anal. Chem. 1980, 52, 2249−2257.
+
+72. Kazakevich, Y. V.; McNair, H. M. J. Chromatogr. Sci. 1993, 31, 317−322.
+
+73. Kazakevich, Y. V.; McNair, H. M. J. Chromatogr. Sci. 1995, 33, 321−327.
+
+74. Felinger, A.; Cavazzini, A.; Guiochon, G. J. Chromatogr. A 2003, 986, 207−225.
+
+75. Cavazzini, A.; Felinger, A.; Guiochon, G. J. Chromatogr. A 2003, 1012, 139−149.
+
+76. Guiochon, G.; Felinger, A.; Katti, A.; Shirazi, D. Fundamentals of Preparative and Nonlinear Chromatography, 2nd ed.; Academic Press: Boston, MA, 2006.
+
+77. Snyder, L. High Performance Liquid Chromatography - Advances and Perspectives; Elsevier: Amsterdam, 1980; Vol. 1.
+
+78. Neue, U. Chromatographia 2006, 63, S45−S53.
+
+79. Schoenmakers, P.; Billiet, H. A. H.; Tussen, R.; Galan, L. D. J. Chromatogr. A 1978, 149, 519−537.
+
+80. Snyder, L.; Dolan, J.; Gant, J. J. Chromatogr. 1979, 165, 3−30.
+
+81. Neue, U.; Kuss, H.-J. J. Chromatogr. A 2010, 1217, 3794−3803.
+
+82. Jandera, P.; Hajek, T.; Sromova, Z. J. Chromatogr. A 2018, 1543, 48−57.
+
+83. Neue, U.; Phoebe, C.; Tran, K.; Cheng, Y.; Lu, Z. J. Chromatogr. A 2001, 925, 49−67.
+
+84. Neue, U.; Tran, K. V.; Mendez, A.; Carr, P. J. Chromatogr. A 2005, 1063, 35−45.
+
+85. Gritti, F. J. Chromatogr. A 2019, 1597, 119−131.
+
+86. Mendez, A.; Bosch, E.; Roses, M.; Neue, U. J. Chromatogr. A 2003, 986, 33−44.
+
+87. Stählberg, J.; Hägglund, I. Anal. Chem. 1988, 60, 1958.
+
+88. Neue, U. D.; Tran, K.; Mendez, A.; Carr, P. W. J. Chromatogr. A 2005, 1063, 35−45.
+
+89. Kiani, F.; Rahmaini, H.; Bahadori, A.; Koohyar, F. Cont. J. Biol. Sci. 2014, 7, 1−29.
+
+90. Gritti, F. J. Chromatogr. A 2015, 1410, 90−98.
+
+91. McCalley, D.; Neue, U. J. Chromatogr. A 2008, 1192, 225−229.
+
+92. Gritti, F.; Guiochon, G. J. Chromatogr. A 2007, 1155, 85−99.
+
+93. Gritti, F.; Sehajpal, J.; Fairchild, J. J. Chromatogr. A 2017, 1489, 95−106.
+
+94. Kazakevich, Y. J. Chromatogr. A 2006, 1126, 232−243.
+
+95. Rustamov, T.; Farcas, I.; Ahmed, F.; Chan, F.; LoBrutto, R.; McNair, H.; Kazakevich, Y. J. Chromatogr. A 2001, 913, 49−63.
+
+96. Wang, M.; Mallette, J.; Parcher, J. F. J. Chromatogr. A 2008, 1190, 1−7.
+
+97. Gilar, M.; Hill, J.; McDonald, T.; Gritti, F. J. Chromatogr. A 2020, 1613, 460690.
+
+98. Gritti, F. J. Chromatogr. A 2020, 1633, 461605.
+
+99. Kaczmarski, K. J. Chromatogr. A 2007, 1176, 57−68.
+
+100. Gritti, F.; Guiochon, G. Anal. Chem. 2003, 75, 5726−5738.
+
+101. Gritti, F.; Guiochon, G. Anal. Chem. 2005, 77, 4257−4272.
+
+102. Gritti, F.; Guiochon, G. J. Chromatogr. A 2005, 1099, 1−42.
+
+103. Rybka, J.; Höltzel, A.; Trebel, N.; Tallarek, U. J. Phys. Chem. C 2019, 123, 21617−21628.
+
+104. Zuvela, P.; Liu, J. J.; Macur, K.; Baczek, T. Anal. Chem. 2015, 87, 9876−9883.
+
+105. Zuvela, P.; Macur, K.; Jay Liu, J.; Baczek, T. J. Pharm. Biomed. Anal. 2016, 127, 94−100.
+
+106. Taraji, M.; Haddad, P. R.; Amos, R. I.J.; Talebi, M.; Szucs, R.; Dolan, J. W.; Pohl, C. A. Anal. Chim. Acta 2018, 1000, 20−40.
+
+107. Johnson, M. A.; Maggiora, G. M. Concept and applications of molecular similarity; John Wiley and Sons: New York, 1990.
+
+108. Walczak-Skierska, J.; Szultka-Mlynska, M.; Pauter, K.; Buszewski, B. J. Pharm. Biomed. Anal. 2020, 184, 113187.
+
+109. Bolanca, T.; Cerjan-Stefanovica, S.; Regelja, M.; Regelja, H.; Loncaric, S. J. Chromatogr. A 2005, 1085, 74−85.
+
+110. Heberger, K. J. Chromatogr. A 2007, 1158, 273−305.
+
+111. Gonzalez, M. A. Collection SFN 2011, 12, 169−200.
+
+112. Zhang, L.; Rafferty, J.; Siepmann, J.; Chen, B.; Schure, M. J. Chromatogr. A 2006, 1126, 219−231.
+
+113. Rafferty, J.; Zhang, L.; Siepmann, J.; Schure, M. Anal. Chem. 2007, 79, 6551−6558.
+
+114. Rybka, J.; Höltzel, A.; Steinhoff, A.; Tallarek, U. J. Phys. Chem. C 2019, 123, 3672−3681.
+
+115. Gritti, F.; Höltzel, A.; Tallarek, U.; Guiochon, G. J. Chromatogr. A 2015, 1376, 112−125.
+
+116. Gritti, F. J. Chromatogr. Sep. Tech. 2015, 6, 1000309.
+
+117. Gritti, F.; Hochstrasser, J.; Svidryski, A.; Hlushkou, D.; Tallarek, U. J. Chromatogr. A 2020, 1620, 460991.
+
+118. Mountain, R. D. J. Phys. Chem. C 2013, 117, 3923−3929. Analytical Chemistry pubs.acs.org/ac Perspective https://doi.org/10.1021/acs.analchem.0c05078 Anal. Chem. 2021, 93, 5653−5664 5664
+
 ## 訳者補足（実務者向けの読みどころ）
 
 > 以下は原文に無い、実務観点の補足である（本文の訳と混ぜない）。

@@ -198,6 +198,78 @@ UPLC-Q-TOF-MS/MSと文献データでZTFの化学組成を系統解析。**35化
 
 モデル適合性（R²・Q²とも>0.5が許容）: 200回並べ替え検定でQ²回帰線と縦軸の交点が0未満。R²X=0.509、R²Y=0.891、Q²=0.541で過学習なし。15バッチの類似度差は主にカリコシン・フェルラ酸・プエラリンの存在による。
 
+## 参考文献
+
+1. Herrman H, Kieling C, McGorry P, Horton R, Sargent J, Patel V. Reducing the global burden of depression: a lancet-world psychiatric association commission. Lancet. 2019;393(10189):e42-e43. doi:10. 1016/S0140-6736(18)32408-5
+
+2. G.M.D. Collaborators. Global, regional, and national burden of 12 mental disorders in 204 countries and territories, 1990-2019: a systematic analysis for the global burden of disease study
+
+3. Guo YX, Chen XF, Gong P, et al. Advances in the mechanisms of polysaccharides in alleviating depression and its complications. Phytomedicine. 2023;109:154566. doi:10.1016/j.phymed.2022.154566
+
+4. Drevets WC, Wittenberg GM, Bullmore ET, Manji HK. Immune targets for therapeutic development in depression: towards precision medicine. Nat Rev Drug Discov. 2022;21(3):224-244. doi:10.1038/ s41573-021-00368-1
+
+5. Marwaha S, Palmer E, Suppes T, Cons E, Young AH, Upthegrove R. Novel and emerging treatments for major depression. Lancet. 2023; 401(10371):141-153. doi:10.1016/S0140-6736(22)02080-3
+
+6. Wang YT, Wang XL, Wang ZZ, Lei L, Hu D, Zhang Y. Antidepressant effects of the traditional Chinese herbal formula Xiao-Yao-San and its bioactive ingredients. Phytomedicine. 2023;109:154558. doi:10.1016/ j.phymed.2022.154558 MA ET AL. 887 10991565, 2024, 4, Downloaded from https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3334 by Tsumura And Co., Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+7. Yuan NJ, Gong L, Tang KR, et al. An integrated pharmacology-based analysis for antidepressant mechanism of Chinese herbal formula Xiao-Yao-San. Front Pharmacol. 2020;11:284. doi:10.3389/fphar. 2020.00284
+
+8. Chen P, Zhang J, Wang C, et al. The pathogenesis and treatment mechanism of Parkinson's disease from the perspective of traditional Chinese medicine. Phytomedicine. 2022;100:154044. doi:10.1016/j. phymed.2022.154044
+
+9. Hao YW, Li JX, Dan LJ, et al. Chinese medicine as a therapeutic option for pulmonary fibrosis: clinical efficacies and underlying mechanisms. J Ethnopharmacol. 2024;318(Pt A):116836. doi:10.1016/j.jep.2023. 116836
+
+10. Yuan S, Wang Q, Li J, et al. Inflammatory bowel disease: an overview of Chinese herbal medicine formula-based treatment. Chin Med-UK. 2022;17(1):74. doi:10.1186/s13020-022-00633-4
+
+11. Abd Elkader HTA, Abdou HM, Khamiss OA, Essawy AE. Anti-anxiety and antidepressant-like effects of astragaloside IV and saponins extracted from Astragalus spinosus against the bisphenol A-induced motor and cognitive impairments in a postnatal rat model of schizophrenia. Environ Sci Pollut R. 2021;28(26):35171-35187. doi:10.1007/ s11356-021-12927-5
+
+12. Song MT, Ruan J, Zhang RY, Deng J, Ma ZQ, Ma SP. Astragaloside IV ameliorates neuroinflammation-induced depressive-like behaviors in mice via the PPARy/NF-kappa B/NLRP3 inflammasome axis. Acta Pharmacol Sin. 2018;39(10):1559-1570. doi:10.1038/aps.2017.208
+
+13. Li CD, Wang Y, Qu JR, et al. Astragalus polysaccharide inhibits lipopolysaccharide-induced depressive-like behaviors and inflammatory response through regulating NF-kappa B and MAPK signaling pathways in rats, Int. J Clin Exp Med. 2018;11:2361-2370.
+
+14. Wang GZ, Luo P, Zhang S, et al. Screening and identification of antidepressant active ingredients from Puerariae Radix extract and study on its mechanism. Oxid Med Cell Longev. 2021;2021:2230195. doi:10. 1155/2021/2230195
+
+15. Cheng J, Chen M, Zhu JX, et al. FGF-2 signaling activation in the hippocampus contributes to the behavioral and cellular responses to puerarin. Biochem Pharmacol. 2019;168:91-99. doi:10.1016/j.bcp. 2019.06.025
+
+16. Dong XY, Zhao DX. Ferulic acid as a therapeutic agent in depression: evidence from preclinical studies. CNS Neurosci Ther. 2023;29(9): 2397-2412. doi:10.1111/cns.14265
+
+17. Wu S, Li HM, Bing YF, et al. Bupleurum scorzonerifolium: systematic research through pharmacodynamics and serum pharmacochemistry on screening antidepressant Q-markers for quality control. J Pharmaceut Biomed. 2023;225:115202. doi:10.1016/j.jpba.2022.115202
+
+18. Bao HW, Yang HL, Li JZ, Xu Y, Huang XW. Establishment and development of a quality evaluation method for Sangbaipi Decoction. J AOAC Int. 2022;105(2):558-566. doi:10.1093/jaoacint/qsab065
+
+19. Zhao HL, Liu RZ, Ding M, et al. Determination of 44 major components and chemical profiling of saccharide in Chinese medicinal formula Lanqin oral liquid. Phytochem Anal. 2023;34(5):560-570. doi:10. 1002/pca.3236
+
+20. Rodríguez-Martín NM, Márquez-Lopez JC, Cerrillo I, et al. Production of chickpea protein hydrolysate at laboratory and pilot plant scales: optimization using principal component analysis based on antioxidant activities. Food Chem. 2024;437(Pt 1):437. doi:10.1016/j.foodchem. 2023.137707
+
+21. Escobar-Avello D, Mardones C, Saéz V, et al. Pilot-plant scale extraction of phenolic compounds from grape canes: comprehensive characterization by LC-ESI-LTQ-Orbitrap-MS. Food Res Int. 2021; 143:110265. doi:10.1016/j.foodres.2021.110265
+
+22. Akram M, Zahid S, Deveci M. Enhanced CRITIC-REGIME method for decision making based on Pythagorean fuzzy rough number. Expert Syst Appl. 2024;238:122014. doi:10.1016/j.eswa.2023.122014
+
+23. Wang PP, Wang Z, Zhang ZP, et al. A review of the botany, phytochemistry, traditional uses, pharmacology, toxicology, and quality control of the Astragalus memeranaceus. Front Pharmacol. 2023;14:
+
+24. Sojin K, Kim MG, Boo K-H, Kim J-H, Kim CS. Anti-inflammatory effects of immature Citrus unshiu fruit extracts via suppression of NF-κB and MAPK signal pathways in LPS-induced RAW264.7 macrophage cells. Food Sci Biotechnol.
+
+25. Maciejewska-Turska M, Pecio L, Zgorka G. Isolation of Mirificin and other bioactive isoflavone glycosides from the kudzu root lyophilisate using centrifugal partition and flash chromatographic techniques. Molecules. 2022;27(19):27. doi:10.3390/molecules27196227
+
+26. Wang YP, Wang ZX, Zhang JJ, et al. Evaluation of the quality of Codonopsis Radix in different growth years by the AHP-CRITIC method. Chem Biodivers. 2023;20(6):e202201108. doi:10.1002/cbdv. 202201108
+
+27. Jiang YL, Xu ZJ, Cao YF, et al. HPLC fingerprinting-based multivariate analysis of chemical components in Tetrastigma Hemsleyanum Diels et Gilg: correlation to their antioxidant and neuraminidase inhibition activities. J Pharmaceut Biomed. 2021;205:114314. doi:10.1016/j. jpba.2021.114314
+
+28. Batool K, Zhao ZY, Nureen N, Irfan M. Assessing and prioritizing biogas barriers to alleviate energy poverty in Pakistan: an integrated AHP and G-TOPSIS model. Environ Sci Pollut R. 2023;30(41):9466994693. doi:10.1007/s11356-023-28767-4
+
+29. Zhang PH, Chen LM, Wang XX, et al. Simultaneous determination of night effective constituents and correlation analysis of multiconstituents and antiplatelet aggregation bioactivity in vitro in chuanxiong Rhizoma subjected to different decoction times. J Anal Methods Chem. 2019;2019:8970624. doi:10.1155/2019/8970624
+
+30. Liu XX, Chen ZJ, Wang X, Luo WR, Yang FD. Quality assessment and classification of Codonopsis Radix based on fingerprints and chemometrics. Molecules. 2023;28(13):5127. doi:10.3390/ molecules28135127
+
+31. You JL, Li HQ, Wang Q, et al. Establishment of male and female Eucommia fingerprints by UPLC combined with OPLS-DA model and its application. Chem Biodivers. 2023;20(3):e202201054. doi:10. 1002/cbdv.202201054
+
+32. Tang D, He B, Zheng ZG, et al. Inhibitory effects of two major isoflavonoids in radix astragali on high glucose-induced mesangial cells proliferation and AGEs-induced endothelial cells apoptosis. Planta Med. 2011;77:729-732. doi:10.1055/s-0030-1250628
+
+33. Yun J, Cui CJ, Zhang SH, et al. Use of headspace GC/MS combined with chemometric analysis to identify the geographic origins of black tea. Food Chem. 2021;360:130033. doi:10.1016/j.foodchem.2021.130033
+
+34. Triba MN, Le Moyec L, Amathieu R, et al. PLS/OPLS models in metabolomics: the impact of permutation of dataset rows on the K-fold cross-validation quality parameters. Mol Biosyst. 2015;11:13-19. doi: 10.1039/c4mb00414k
+
+35. Zhang MA, Chen KX, Wang P, Zhang LQ, Li YM. Comprehensive quality evaluation of processed Scrophulariae radix from different regions of China using HPLC coupled with chemometrics methods. Phytochem Anal. 2023;34(7):816-829. doi:10.1002/pca.3209 SUPPORTING INFORMATION Additional supporting information can be found online in the Supporting Information section at the end of this article. How to cite this article: Ma Y, Feng Y, Yao L, et al. Optimization of the Zhou Tian Formula extraction technology based on AHP-CRITIC method and analysis of transfer efficiency of key components based on HPLC fingerprinting. Phytochemical Analysis. 2024;35(4):873‐888. doi:10.1002/pca. 3334 888 MA ET AL. 10991565, 2024, 4, Downloaded from https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3334 by Tsumura And Co., Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
 ## 訳者補足
 
 - **周天方（ZTF）とは**: 10味の生薬から成る抗うつ漢方方剤。本論文はこの方剤を「①どう抽出すれば良いか（条件最適化）」「②煎じ液を濃縮・乾燥・顆粒化する各工程で有効成分がどれだけ残るか（移行効率）」の2点を定量的に追った品質管理研究。日本の漢方エキス製剤も同じ「煎液→濃縮乾燥→顆粒」という工程を踏むため、実務的に参考になる。

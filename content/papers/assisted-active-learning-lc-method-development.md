@@ -242,6 +242,112 @@ SI Figure S11A は、傾き 4.5 に対応する保持測定を含めた更新後
 
 ただし、記述した手法はまだ完全自動化されているとはみなせず、これに対処するための最先端のピーク検出・追跡アルゴリズムの統合が、アプローチをさらに改善する次の重要なステップとなる。さらに、分離能を高める温度やpHといった追加の最適化パラメータも近い将来検討される。
 
+## 参考文献
+
+1. Shields, B. J.; Stevens, J.; Li, J.; Parasram, M.; Damani, F.; Alvarado, J. I. M.; Janey, J. M.; Adams, R. P.; Doyle, A. G. Nature 2021, 590 (7844), 89−96.
+
+2. Arróyave, R.; Khatamsaz, D.; Vela, B.; Couperthwaite, R.; Molkeri, A.; Singh, P.; Johnson, D. D.; Qian, X.; Srivastava, A.; Allaire, D. MRS Commun. 2022, 12 (6), 1037−1049.
+
+3. Kanarik, K. J.; Osowiecki, W. T.; Lu, Y. Joe.; Talukder, D.; Roschewsky, N.; Park, S. N.; Kamon, M.; Fried, D. M.; Gottscho, R. A. Nature 2023, 616 (7958), 707−711.
+
+4. Roccapriore, K. M.; Kalinin, S. V.; Ziatdinov, M. Adv. Sci. 2022, 9 (36), No. 2203422.
+
+5. Thomas, J. C.; Rossi, A.; Smalley, D.; Francaviglia, L.; Yu, Z.; Zhang, T.; Kumari, S.; Robinson, J. A.; Terrones, M.; Ishigami, M.; Rotenberg, E.; Barnard, E. S.; Raja, A.; Wong, E.; Ogletree, D. F.; Noack, M. M.; Weber-Bargioni, A. npj Comput. Mater. 2022, 8 (1), 1−7.
+
+6. Settles, B. Synthesis Lectures on Artificial Intelligence and Machine Learning. In Active Learning; Springer International Publishing: Cham, 2012.
+
+7. Khatamsaz, D.; Neuberger, R.; Roy, A. M.; Zadeh, S. H.; Otis, R.; Arróyave, R. npj Comput. Mater. 2023, 9 (1), 1−11.
+
+8. Lakshminarayanan, M.; Dutta, R.; Repaka, D. V. M.; Jayavelu, S.; Leong, W. L.; Hippalgaonkar, K. Sci. Rep. 2021, 11 (1), No. 23621.
+
+9. Biswas, A.; Liu, Y.; Creange, N.; Liu, Y.-C.; Jesse, S.; Yang, J.-C.; Kalinin, S. V.; Ziatdinov, M. A.; Vasudevan, R. K. npj Comput. Mater. 2024, 10 (1), 1−12.
+
+10. Berridge, J. C. J. Chromatogr. A 1982, 244 (1), 1−14.
+
+11. Bradbury, J.; Genta-Jouve, G.; Allwood, J. W.; Dunn, W. B.; Goodacre, R.; Knowles, J. D.; He, S.; Viant, M. R. Bioinformatics 2015, 31 (6), 975−977.
+
+12. Boelrijk, J.; Ensing, B.; Forré, P.; Pirok, B. W. J. Anal. Chim. Acta 2023, 1242, No. 340789.
+
+13. Torres, J. A. G.; Lau, S. H.; Anchuri, P.; Stevens, J. M.; Tabora, J. E.; Li, J.; Borovika, A.; Adams, R. P.; Doyle, A. G. J. Am. Chem. Soc. 2022, 144 (43), 19999−20007.
+
+14. Neue, U. D.; Kuss, H.-J. J. Chromatogr. A 2010, 1217 (24), 3794−3803.
+
+15. Zisi, C.; Fasoula, S.; Nikitas, P.; Pappa-Louisi, A. Analyst 2013, 138 (13), 3771−3777.
+
+16. Haddad, P. R.; Taraji, M.; Szücs, R. Anal. Chem. 2021, 93 (1), 228−256.
+
+17. den Uijl, M. J.; Schoenmakers, P. J.; Pirok, B. W. J.; van Bommel, M. R. J. Sep. Sci. 2021, 44 (1), 88−114.
+
+18. Nikitas, P.; Pappa-Louisi, A. J. Chromatogr. A 2009, 1216 (10), 1737−1755.
+
+19. Kamedulska, A.; Kubik, Ł.; Jacyna, J.; Struck-Lewicka, W.; Markuszewski, M. J.; Wiczling, P. Anal. Chem. 2022, 94 (31), 11070− 11080.
+
+20. Wiczling, P.; Kamedulska, A. Anal. Chem. 2024, 96 (3), 1310− 1319.
+
+21. Kensert, A.; Desmet, G.; Cabooter, D. J. Chromatogr. A 2024, 1713, No. 464570.
+
+22. Gisbert-Alonso, A.; Navarro-Huerta, J. A.; Torres-Lapasió, J. R.; García-Alvarez-Coque, M. C. J. Chromatogr. A 2021, 1654, No. 462458.
+
+23. retentionprediction.org/hplcAccurate HPLC Retention Prediction. http://www.retentionprediction.org/hplc/database/ (accessed Aug 21, 2023).
+
+24. Kubik, Ł.; Jacyna, J.; Struck-Lewicka, W.; Markuszewski, M.; Wiczling, P.. LC-TOF-MS Data Collected for 300 Small Molecules. XBridge Shield RP18 Column, 2022.
+
+25. Domingo-Almenara, X.; Guijas, C.; Billings, E.; MontenegroBurke, J. R.; Uritboonthai, W.; Aisporna, A. E.; Chen, E.; Benton, H. P.; Siuzdak, G. Nat. Commun. 2019, 10 (1), No. 5811.
+
+26. Put, R.; Vander Heyden, Y. Anal. Chim. Acta 2007, 602 (2), 164−172.
+
+27. Amos, R. I. J.; Haddad, P. R.; Szucs, R.; Dolan, J. W.; Pohl, C. A. TrAC, Trends Anal. Chem. 2018, 105, 352−359.
+
+28. Szucs, R.; Brown, R.; Brunelli, C.; Hradski, J.; Masár, M. J. Chromatogr. A 2023, 1707, No. 464317.
+
+29. Snyder, L. R.; Kirkland, J. J.; Dolan, J. W. Introduction to Modern Liquid Chromatography; John Wiley & Sons, 2011.
+
+30. Passarin, P. B. S.; Lourenço, F. R. J. Pharm. Biomed. Anal. 2024, 239, No. 115907.
+
+31. Wiczling, P.; Kubik, Ł.; Kaliszan, R. Anal. Chem. 2015, 87 (14), 7241−7249.
+
+32. Kamedulska, A.; Kubik, Ł.; Wiczling, P. Anal. Bioanal. Chem. 2022, 414 (11), 3471−3481.
+
+33. Wiczling, P. Sep. Sci. Plus 2018, 1 (2), 63−75.
+
+34. Dolan, J. W.; Snyder, L. R.; Quarry, M. A. Chromatographia 1987, 24 (1), 261−276.
+
+35. Galushko, S. V.; Shishkina, I.; Urtans, E.; Rotkaja, O. ChromSword?: Software for Method Development in Liquid Chromatography. In Software-Assisted Method Development in High Performance Liquid Chromatography; World Scientific (Europe), 2018; pp 53−94.
+
+36. Automated(QbD) Method Development Software|AutoChrom. ACD/Labs. https://www.acdlabs.com/products/spectrusplatform/autochrom/ (accessed Aug 21, 2023). Analytical Chemistry pubs.acs.org/ac Article https://doi.org/10.1021/acs.analchem.4c02700 Anal. Chem. 2024, 96, 13699−13709 13708
+
+37. Bos, T. S.; Boelrijk, J.; Molenaar, S. R. A.; van ’t Veer, B.; Niezen, L. E.; van Herwerden, D.; Samanipour, S.; Stoll, D. R.; Forré, P.; Ensing, B.; Somsen, G. W.; Pirok, B. W. J. Anal. Chem. 2022, 94 (46), 16060−16068.
+
+38. Snyder, L. R.; Dolan, J. W.; Gant, J. R. J. Chromatogr. A 1979, 165 (1), 3−30.
+
+39. Schoenmakers, P. J.; Billiet, H. A. H.; Tussen, R.; De Galan, L. J. Chromatogr. A 1978, 149, 519−537.
+
+40. van de Schoot, R.; Depaoli, S.; King, R.; Kramer, B.; Märtens, K.; Tadesse, M. G.; Vannucci, M.; Gelman, A.; Veen, D.; Willemsen, J.; Yau, C. Nat. Rev. Methods Primers 2021, 1 (1), 1−26.
+
+41. Cohn, D. In Neural Network Exploration Using Optimal Experiment Design; Advances in Neural Information Processing Systems 6 (NIPS 1993); Morgan-Kaufmann, 1993.
+
+42. Tyteca, E.; Desmet, G. J. Chromatogr. A 2014, 1361, 178−190.
+
+43. Stan Development Team. Stan Modeling Language Users Guide and Reference Manual, 2024. https://mc-stan.org.
+
+44. Stan Development Team. RStan: The R Interface to Stan, 2024. https://mc-stan.org/.
+
+45. Kim, S.; Chen, J.; Cheng, T.; Gindulyte, A.; He, J.; He, S.; Li, Q.; Shoemaker, B. A.; Thiessen, P. A.; Yu, B.; Zaslavsky, L.; Zhang, J.; Bolton, E. E. Nucleic Acids Res. 2023, 51 (D1), D1373−D1380.
+
+46. Moriwaki, H.; Tian, Y.-S.; Kawashita, N.; Takagi, T. J. Cheminf. 2018, 10 (1), No. 4, DOI: 10.1186/s13321-018-0258-y.
+
+47. Willighagen, E. L.; Mayfield, J. W.; Alvarsson, J.; Berg, A.; Carlsson, L.; Jeliazkova, N.; Kuhn, S.; Pluskal, T.; Rojas-Chertó, M.; Spjuth, O.; Torrance, G.; Evelo, C. T.; Guha, R.; Steinbeck, C. J. Cheminf. 2017, 9 (1), No. 33, DOI: 10.1186/s13321-017-0220-4.
+
+48. Wiczling, P.; Kamedulska, A.; Kubik, Ł. Anal. Chem. 2021, 93 (18), 6961−6971.
+
+49. Savitzky, A.; Golay, M. J. E. Anal. Chem. 1964, 36 (8), 1627− 1639.
+
+50. Eilers, P. H. C. Anal. Chem. 2003, 75 (14), 3631−3636.
+
+51. Strasters, J. K.; Billiet; Hugo, A. H.; de Galan, L.; Vandeginste, B. G. M. J. Chromatogr. A 1990, 499, 499−522.
+
+52. Pirok, B. W. J.; Molenaar, S. R. A.; Roca, L. S.; Schoenmakers, P. J. Anal. Chem. 2018, 90 (23), 14011−14019. Analytical Chemistry pubs.acs.org/ac Article https://doi.org/10.1021/acs.analchem.4c02700 Anal. Chem. 2024, 96, 13699−13709 13709
+
 ## 訳者補足
 
 - **本手法の位置づけ**: 従来のLC法開発ソフト（Drylab, ChromSword, ACD/Autochrom）は「固定的なDoE」で決まった数の実験を先に打つ。本論文はそれを「1実験ごとに次の最適実験を計算で選ぶ」能動学習に置き換え、しかも過去データ・分子物性を**ベイズ事前分布**として初期モデルに注入する（＝ゼロから始めない）ことで実験数を削減する。「支援付き（assisted）」とは、この事前知識が序盤でアルゴリズムを主導する点を指す。
