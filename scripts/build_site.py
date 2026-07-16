@@ -256,17 +256,35 @@ def markdown_to_html(md: str, link_citations: bool = False) -> str:
         if re.match(r"^\s*[-*+]\s+", line) or re.match(r"^\s*\d+\.\s+", line):
             ordered = bool(re.match(r"^\s*\d+\.\s+", line))
             tag = "ol" if ordered else "ul"
-            items = []
-            pat = r"^\s*\d+\.\s+(.*)$" if ordered else r"^\s*[-*+]\s+(.*)$"
-            while i < n and re.match(pat, lines[i]):
-                items.append(re.match(pat, lines[i]).group(1).strip())
-                i += 1
+            items = []  # (明示番号 or None, テキスト)
+            opat = r"^\s*(\d+)\.\s+(.*)$"
+            upat = r"^\s*[-*+]\s+(.*)$"
+            while i < n:
+                lm = re.match(opat, lines[i]) if ordered else re.match(upat, lines[i])
+                if lm:
+                    if ordered:
+                        items.append((int(lm.group(1)), lm.group(2).strip()))
+                    else:
+                        items.append((None, lm.group(1).strip()))
+                    i += 1
+                    continue
+                # 参考文献リストのみ、項目間の空行を許容して 1 つのリストに束ねる
+                if in_refs and not lines[i].strip():
+                    j = i
+                    while j < n and not lines[j].strip():
+                        j += 1
+                    nxt = re.match(opat, lines[j]) if (ordered and j < n) else (
+                        re.match(upat, lines[j]) if j < n else None)
+                    if nxt:
+                        i = j
+                        continue
+                break
             if in_refs:
                 # 参考文献項目に id=ref-N を振る。番号は先頭の [N]（[27, 28] も可）から取り、
-                # 角括弧が無い番号付きリストはリスト位置を番号とする。ul/ol 両対応。
+                # 角括弧が無ければ番号付きリストの明示番号（例「27.」→27）を用いる。ul は位置。
                 lis = []
-                for k, it in enumerate(items, 1):
-                    nums = _ref_item_numbers(it, ordered, k)
+                for k, (num, it) in enumerate(items, 1):
+                    nums = _ref_item_numbers(it, ordered, num if num is not None else k)
                     if nums:
                         extra = "".join(f'<span id="ref-{r}"></span>' for r in nums[1:])
                         lis.append(f'<li id="ref-{nums[0]}">{extra}{_inline(it)}</li>')
@@ -274,7 +292,7 @@ def markdown_to_html(md: str, link_citations: bool = False) -> str:
                         lis.append(f"<li>{_inline(it)}</li>")
                 html_parts.append(f'<{tag} class="references">{"".join(lis)}</{tag}>')
             else:
-                inner = "".join(f"<li>{_inline(it)}</li>" for it in items)
+                inner = "".join(f"<li>{_inline(it)}</li>" for (num, it) in items)
                 html_parts.append(f"<{tag}>{inner}</{tag}>")
             continue
 
