@@ -204,3 +204,110 @@ TCM 顆粒の抽出段階は発展の余地が大きい。多様な化学成分�
 - [52] Zhang H, et al. 中薬配方顆粒の調製技術・品質評価へのケモメトリクスの応用. J Chin Med 42(2) (2019) 474–478.
 
 （全52文献。詳細は原著参照。）
+
+## 参考文献
+
+1. H. H. Ding, N. Zhang, L. Wang, et al., “Effect of Enhancing Total Flavonoids Yield From Eucommia ulmoides Oliver via Steam Explosion,” Journal of Central South University of Forestry & Technology 41, no. 06 (2021): 147–156.
+
+2. J. Y. Liang, J. H. Zhou, J. P. Zhou, et al., “Effects of Different Pretreatments on the Extraction of Polysaccharides From Ganoderma lucidum,” Edible Fungi 39, no. 04 (2017): 56–58.
+
+3. Y. F. Zhang, L. X. Wang, M. Xu, et al., “A Modified CTAB Extraction and Inspection for Genome of Aconitum carmichael,” Hubei Agricultural Sciences 01 (2008): 12–14.
+
+4. L. N. Yang, X. L. Feng, C. Y. Li, et al., “Study on Different Extraction Processes of Sugar Free Yuye Compound Granules,” Chinese Journal of Modern Applied Pharmacy 38, no. 16 (2021): 1970–1976.
+
+5. L. L. Cheng and L. Li, “A Comparative Study on the Lycim Barbanm Polsaccharides in Traditional Chinese Medicine Formuh Granule and Traditional Chinese Medicine,” Heilongjiang Journal of Traditional Chinese Medicine 46, no. 01 (2017): 69–70.
+
+6. Y. Y. Yang, Preparation and Quality Assessment of Scutellaria baicalensis Formula Granules, (2019).
+
+7. S. Y. Liang, S. N. Ji, L. X. Tian, et al., “Preparation Technology of Artemisia argyi Formula Granules,” Journal of Hebei University (Natural Science Edition) 42, no. 03 (2022): 256–264.
+
+8. X. F. Zhang, X. D. Yi, Y. Cheng, et al., “Process Optimization of Water Extraction Coupling Rectification for Extracting Volatile Oil From Artemisia argyi,” Chinese Journal of Modern Applied Pharmacy 37, no. 14 (2020): 1708–1713.
+
+9. Y. Liu, J. Z. Liu, C. Jin, et al., “Preparation Technology and Quality Control of Baoyuan Decoction Granules,” Her Medical 42, no. 02 (2023): 235–242.
+
+10. Y. Dong, H. Q. Lin, S. Miao, et al., “Advances in Enzymatic Extraction of Polysaccharides,” Science and Technology of Food Industry 42, no. 03 (2021): 351–358.
+
+11. Z. X. Cai, Y. Yang, L. Sheng, et al., A Type of Instant Granule Formulation of Gastrodia elata and Its Preparation Method. CN112156154A [P/OL].
+
+12. L. Y. Liu, S. K. Cai, G. F. Huang, et al., A Method for Preparing a Formula Granule of Salvia miltiorrhiza, CN109568386A [P/OL].
+
+13. X. F. Ye, P. Han, Q. Zhang, et al., “Study on Enzyme Assisted Extraction of Ganoderma lucidum Dispensing Granules,” Strait Pharmaceutical Journal 33, no. 08 (2021): 33–35.
+
+14. Y. Q. Wang, Z. F. Wu, Q. Zheng, et al., “Rationality Evaluation of Different Extraction Technologies of Andrographis Herba,” Chinese Journal of Experimental Traditional Medical Formulae 20, no. 10 (2014): 1–5.
+
+15. S. M. Sun, “An Exploration of the Toxic Mechanisms of Various Toxic Components in Traditional Chinese Medicine and the Principles of Detoxification Through Processing,” China Journal of Pharmaceutical Economics 9, no. 05 (2014): 219–220.
+
+16. M. Amrollahi-­Sharifabadi, A. Seghatoleslami, M. Amrollahi-­ Sharifabadi, et al., “Fatal Colchicine Poisoning by Accidental Ingestion of Colchicum persicum: A Case Report,” American Journal of Forensic Medicine and Pathology 34, no. 4 (2013): 295–298.
+
+17. J. Li, C. Yao, F. J. Zhu, et al., “Research on the Preparation Process and Quality Control of Saffron Granules,” Zhejiang Journal of Integrated Traditional Chinese and Western Medicine 33, no. 09 (2023): 855–859.
+
+18. D. Lei, “Design of the Production Process Flow for Xanthii Fructus Granules,” Asia-­Pacific Traditional Medicine 9, no. 08 (2013): 36–38.
+
+19. J. H. Wang, Q. F. Hu, J. Liu, et al., “Comprehensive Extraction and Antioxidant Activity Research of Polysaccharides and Flavonoids From 10991565, 2025, 4, Downloaded from https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3484 by Tsumura And Co., Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License 911 Ginkgo biloba Leaf Residue,” Journal of Henan Agricultural Sciences 52, no. 08 (2023): 171–180.
+
+20. S. Cui, Y. F. Ding, F. Li, et al., “Study on Preparation Process of Polysaccharides and Polypeptides of Velvet Antler Granules. Liaoning,” Journal of Traditional Chinese Medicine 48, no. 09 (2021): 162–165+225–226.
+
+21. S. R. Li, R. M. Li, B. P. Chen, et al., “Optimization of High Voltage Pulsed Electric Field Assisted Extraction of Lonicera edulis Anthocyanin,” Journal of Food Safety and Quality 12, no. 08 (2021): 3242–3250.
+
+22. R. Chen, S. S. Hu, C. J. Zheng, et al., “Research Progress on Extraction Technology of Peony Seed Protein and Its Polypeptide Application,” Modern Food 19 (2021): 23–27.
+
+23. P. G. Liang, J. Sun, J. Yue, et al., “Response Surface Optimization of Extraction and Structure and Activity Analysis of Polysaccharides From Polygonatum kingianum Coll. Et Hemsl,” Journal of Southern Agriculture 52, no. 12 (2021): 3434–3445.
+
+24. S. Y. Yue, X. Jin, X. Y. Dong, et al., “Extraction Rate of Total Flavonoids From Toona sinensis Seeds With Different Deep Eutectic Solvents,” Journal of Fuyang Normal University (Natural Science) 37, no. 02 (2020): 67–71.
+
+25. W. J. Wang, H. Chen, C. H. Xiang, et al., “Study on Granula Formulation Moulding Process of Radix Aconite Lateralis,” Food Industry (Shanghai, China) 37, no. 03 (2016): 164–168.
+
+26. Y. Li, Y. N. He, D. K. Zhang, et al., “Study on Innovative Technology and Quality Evaluation of Aconite Granules by One-­Step Decoction of Fresh Aconiti Lateralis Radix. Liaoning,” Journal of Traditional Chinese Medicine 47, no. 01 (2020): 135–140+222.
+
+27. Y. L. Xu, Y. L. Lei, L. Zeng, et al., “Discussion on Relevant Issues of Uniform Standards for Varieties of Traditional Chinese Medicine Formula Granules,” Chinese Traditional and Herbal Drugs 51, no. 20 (2020): 5389–5394.
+
+28. D. L. Huang, Y. M. Meng, B. Qi, et al., “Research on the Preparation Process of Gypsum Formula Granules,” Lishizhen Medicine and Materia Medica Research 30, no. 02 (2019): 334–337.
+
+29. B. Wang, Z. S. Tang, and Y. X. Zhou, “Current Status and Reflections on the Research of Mineral-­Based Traditional Chinese Medicine,” Journal of Shaanxi University of Chinese Medicine 33, no. 06 (2010): 94–95.
+
+30. C. Wang, Z. Shi, Q. Liu, et al., “Discussion on Varieties of Chinese Medicinal Materials Which Are Not Suitable for Preparing Chinese Medicinal Granules,” Chinese Traditional and Herbal Drugs 52, no. 18 (2021): 5775–5781.
+
+31. J. Y. Chen, W. T. Chen, X. L. Bi, et al., “Study on Elements Analysis of Pyritum's TCM Material and the Dispensing Granule,” Pharmacy Today 28, no. 07 (2018): 445–449.
+
+32. Y. C. Shu, K. M. Qin, F. Z. Yin, et al., “A Comparative Study on Traditional Yinqiaosan Decoction and Its Granule,” Chinese Journal of Ethnomedicine and Ethnopharmacy 20, no. 23 (2011): 78–79.
+
+33. L. X. Li, Dahuang Dispensing Granule Raw Material Screening, Preparation Craft Optimization and Pharma-­Codynamics Comparison Research (Chengdu, China: Chengdu University of Traditional Chinese Medicine, 2006).
+
+34. C. J. Shi, S. S. Wang, Z. Q. Cheng, et al., “Optimization of Extraction Technology of Tangwanghuangban Shuizhongfang Granule by Multi Index Evaluate and Study the Dissolution Mechanism Influence by Pollen Typhae,” Liaoning Journal of Traditional Chinese Medicine 45, no. 08 (2018): 1714–1717.
+
+35. X. F. Li, Z. Q. Xu, Y. C. Wei, et al., “Research on Wrapped Extraction of Descurainia sophia of Qibai Pingfei Granule via Response Surface Methodology,” Modernization of Traditional Chinese Medicine and Materia Medica-­World Science and Technology 18, no. 03 (2016): 493–497.
+
+36. W. X. Niu, Study on Preparation Process and Quality Standards of JiaweiDanggui Jianzhong Granules, (2012).
+
+37. B. W. Li, Q. Z. Guo, X. Liu, et al., “Optimization of Pretreatment and Extraction Technology for Antler Gum by Orthogonal Design,” Henan Science 37, no. 08 (2019): 1265–1269.
+
+38. Y. X. Xiao, Decocting and Taking Methods of Special Traditional Chinese Medicine, (2005).
+
+39. H. C. Lin and G. L. Wang, “Attention Should Be Paid to the “Special Treatment” of Decoction and Medicine,” Qingdao Medical Journal 37, no. 02 (2005): 117–118.
+
+40. Z. Jin, T. Xia, and X. M. Tan, “Difference of Copper, Lead, Cadmium, Mercury and Arsenic in the Single Decoction and Combined Decoction of Huangqi Jianzhong Decoction,” China Pharmacy (Chongqing, China) 30, no. 05 (2019): 661–664.
+
+41. H. Zeng, C. M. He, H. L. Su, et al., “Comparison of Detoxification Effects of Glycyrrhiza Decoction Slices and Glycyrrhiza Formula Granules in Sini Decoction,” Journal of Guangdong Pharmaceutical University 36, no. 02 (2017-2020): 231–235.
+
+42. Z. Y. Huang, F. E. Lu, H. Dong, et al., “Comparison on the Dissolution Rate of Berberine Between Granule and Traditional Decoction of Traditional Chinese Medicine of Jiaotai Pill,” Chinese Journal of Hospital Pharmacy 31, no. 20 (2011): 1661–1664.
+
+43. S. L. Chen, C. X. Liu, T. J. Zhang, et al., “Ideas and Suggestions on CMM Decoction Inheritance Based on CMM Quality Markers and Traditional Usage,” Chinese Traditional and Herbal Drugs 50, no. 19 (2019): 4519–4528.
+
+44. L. J. Ma, J. Yao, L. Lu, et al., “Problems and Suggestions in the Consistency Evaluation of Granule Decoction and Traditional Decoction of Traditional Chinese Medicine,” Her Medical 42, no. 07 (2023): 1039–1048.
+
+45. Y. F. Sun, Industrialization Process of Paeoniae Radixalba Formula Granules Based on Quality Markers,
+
+46. Y. D. Hao, K. Fang, R. Q. Wen, et al., “Discussion on Current National Standards for Traditional Chinese Medicine Dispensing Granules,” Chinese Journal of Experimental Traditional Medical Formulae 29, no. 15 (2023): 158–164.
+
+47. T. Wang, S. Q. Liu, Y. H. Li, et al., “Discussion on Development Status of Traditional Chinese Medicine Dispensing Granules and Survival Strategy of Enterprises,” Chinese Journal of Experimental Traditional Medical Formulae 29, no. 23 (2023): 166–173.
+
+48. Y. Bi, Z. Y. Xu, S. M. Xue, et al., “Study on the Enrichment of Salvianolic Acid B in Salvia miltiorrhiza by Macroporous Resin,” Journal of Emergency in Traditional Chinese Medicine 32, no. 09 (2023): 1540–1544.
+
+49. Z. W. Zheng, H. K. Fang, Y. Liu, et al., “Research Progress on Bio-­ Accessibility and Bioavailability of Heavy Metals in Traditional Chinese Medicine,” Journal of Huazhong Agricultural University 42, no. 06 (2023): 175–184.
+
+50. Y. Q. Liu, H. Y. Ren, M. X. Chang, et al., “Study on Stability and Extraction Process of Astilbin in Smilax glabra Aqueous Decoction,” Journal of Hubei University of Chinese Medicine 25, no. 04 (2023): 37–41.
+
+51. W. T. Shi, Y. J. Liu, L. L. Zhang, et al., “Optimization of Spray Drying Process for Citri Reticulatae Pericarpium Formula Granules Based on Quality by Design Concept and Information Entropy Assignment Method,” Global Traditional Chinese Medicine 16, no. 11 (2023): 2207–2214.
+
+52. H. Zhang, J. N. Wang, Y. Chen, et al., “Application of Chemometrics in Preparation Technology and Quality Evaluation of Traditional Chinese Medicine Prescription Granules,” Journal of Chinese Medicine 42, no. 02 (2019): 474–478. 10991565, 2025, 4, Downloaded from https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3484 by Tsumura And Co., Wiley Online Library on [07/07/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+

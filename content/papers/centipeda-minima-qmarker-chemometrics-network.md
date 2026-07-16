@@ -161,3 +161,56 @@ EBSCの活性成分・標的遺伝子をCytoscapeに入れ「EBSC-活性成分-�
 - **薬局方規格との関係:** 薬局方はブレビリンA≥0.1%だけを規定。本研究はそれに**アルニコリドD**を加えるべきと示唆し、かつ偽品ZZとの判別（類似度＞0.90でまとまるZZに対しEBSCは0.67〜0.98とばらつく）という真贋管理の視点も与える。
 - **CP-ANNとは:** 逆伝播型人工ニューラルネットワーク。KohonenのSOM（自己組織化マップ＝似た試料を近いニューロンに配置）に出力層を足し、教師あり分類もできる。図4・5がその出力で、「どの成分（変数）がどの群を決めるか」を重み値で可視化する。
 - **数値の扱い:** 変数番号（VIP>1.2の48/10/46…、重み値0.35基準の変数群）は原文の変数インデックスをそのまま記載。補足表S1〜S7（検量線・類似度・LC-MS同定・遺伝子標的・ドッキングスコア・含量）と図S1・S2は原文参照。原文にない数値は加えていない。図の一部（ドッキングヒートマップ図8・含量棒グラフ図9）は削除済み重複版から復旧した図に統合されている。
+
+## 参考文献
+
+1. Liao JC, Wu YS, Xu FF, et al. Comprehensive evaluation of NAODESHENG by combining UPLC quantitative fingerprint and antioxidant activity. J Pharm Biomed Anal. 2020;193:113636. doi:10.1016/j.jpba. 2020.113636
+
+2. Wang X, Liu X, Wang J, et al. Study on multiple fingerprint profiles control and quantitative analysis of multi-components by single marker method combined with chemometrics based on Yankening tablets. Spectrochim Acta a. 2021;253:119554. doi:10.1016/j.saa. 2021.119554
+
+3. Li H, Gong X, Wang Z, et al. Multiple fingerprint profiles and chemometrics analysis of polysaccharides from Sarcandra glabra. Int J Biol Macromol. 2019;123:957-967. doi:10.1016/j.ijbiomac.2018. 11.103
+
+4. Zhou W, Guo P, Chen J, Lei Y. A rapid analytical method for the quantitative determination of the sugar in acarbose fermentation by infrared spectroscopy and chemometrics. Spectrochim Acta a. 2020; 240:118571. doi:10.1016/j.saa.2020.118571
+
+5. Gao WY, Si N, Li ML, et al. The integrated study on the chemical profiling and in vivo course to explore the bioactive constituents and potential targets of Chinese classical formula Qingxin Lianzi yin decoction by UHPLC-MS and network pharmacology approaches. J Ethnopharmacol. 2021;272:113917. doi:10.1016/j.jep. 2021.113917
+
+6. Liu B, Zheng X, Li JJ, et al. Revealing mechanism of caulis Sargentodoxae for the treatment of ulcerative colitis based on network pharmacology approach. Biosci Rep. 2021;41(1). doi:10. 1042/BSR20204005
+
+7. Pinzi L, Rastelli G. Molecular docking: shifting paradigms in drug discovery. Int J Mol Sci. 2019;20(18):4331. doi:10.3390/ijms20184331
+
+8. Dong D, Xu ZJ, Zhong W, Peng SL. Parallelization of molecular docking: a review. Curr Top Med Chem. 2018;18(12):1015-1028. doi:10. 2174/1568026618666180821145215
+
+9. Zan K, Xie Y, Guo L, Zheng J, Ma S. Study on characteristic chromatogram and quantitation method of seven components for Centipedae Herba. Chin J Pharm Anal. 2018;38:151-157.
+
+10. Guo Z, Liang X, Xie Y. Qualitative and quantitative analysis on the chemical constituents in Orthosiphon stamineus Benth. Using ultra high-performance liquid chromatography coupled with electrospray ionization tandem mass spectrometry. J Pharm Biomed Anal. 2019; 164:135-147. doi:10.1016/j.jpba.2018.10.023
+
+11. Huang S, Chiu C, Lin T, et al. Antioxidant and anti-inflammatory activities of aqueous extract of Centipeda minima. J Ethnopharmacol. 2013;147(2):395-405. doi:10.1016/j.jep.2013.03.025
+
+12. Li S, Zhou Y, He D, et al. Centipeda minima extract exerts antineuroinflammatory effects via the inhibition of NF-κB signaling pathway. Phytomedicine. 2020;67:153164. doi:10.1016/j.phymed. 2019.153164
+
+13. Chan CO, Xie XJ, Wan SW, et al. Qualitative and quantitative analysis of sesquiterpene lactones in Centipeda minima by UPLC–Orbitrap– MS and UPLC-QQQ-MS. J Pharm Biomed Anal. 2019;174:360-366. doi:10.1016/j.jpba.2019.05.067
+
+14. Lee MM, Chan BD, Wong W, et al. Anti-cancer activity of Centipeda minima extract in triple negative breast cancer via inhibition of AKT, NF-κB, and STAT3 signaling pathways. Front Oncol. 2020;10:491. doi: 10.3389/fonc.2020.00491
+
+15. Li Y, Zeng Y, Huang Q, et al. Helenalin from Centipeda minima ameliorates acute hepatic injury by protecting mitochondria function, activating Nrf2 pathway and inhibiting NF-κB activation. Biomed Pharmacother. 2019;119:109435. doi:10.1016/j.biopha.2019.109435
+
+16. Ferreira J, Figueiredo AF, Barbosa JP, et al. A study of new antimalarial artemisinins through molecular modeling and multivariate analysis. J Serb Chem Soc. 2010;75(11):1533-1548. doi:10.2298/ JSC100126124F
+
+17. Xia PG, Bai ZQ, Liang TY, et al. High-performance liquid chromatography based chemical fingerprint analysis and chemometric approaches for the identification and distinction of three endangered Panax plants in Southeast Asia. J Sep Sci. 2016;39(20):3880-3888. doi:10.1002/jssc.201600460
+
+18. Xia PG, Bai ZQ, Liang TY, et al. Simultaneous determination of seven bioactive components in oolong tea Camellia sinensis: quality control by chemical composition and HPLC fingerprints. J Agric Food Chem. 2012;60(1):256-260. doi:10.1021/jf204312w
+
+19. Zhou X, Tang L, Wu H, et al. Chemometric analysis for the characterization of raw and processed seeds of Descurainia Sophia (L.) based on HPLC fingerprints. J Pharmaceut Biomed. 2015;111:1-6. doi:10.1016/j.jpba.2015.03.010
+
+20. Sun LL, You GJ, Cao XX, Wang M, Ren XL. Comparative investigation for raw and processed Aconiti Lateralis radix using chemical UPLC-MS profiling and multivariate classification techniques. J Food Drug Anal. 2019;27(1):265-372. doi:10.1016/j.jfda.2018.10.006
+
+21. Kosugi A, Leong KH, Urata E, et al. Effect of different direct compaction grades of mannitol on the storage stability of tablet properties investigated using a Kohonen self-organizing map and elastic net regression model. Pharmaceutics. 2020;12(9):886. doi:10.3390/ pharmaceutics12090886
+
+22. Ballabio D, Vasighi M, Consonni V, Kompany-Zareh M. Genetic algorithms for architecture optimisation of counter-propagation artificial neural networks. Chemometr Intell Lab. 2011;105(1):56-64. doi:10.1016/j.chemolab.2010.10.010
+
+23. Sun LL, Wang M, Liu YL, et al. Discrimination of Polygoni Multiflori radix and Cynanchi Auriculati radix using ultra-high performance liquid chromatography fingerprints and chemical pattern recognition. Biomed Chromatogr. 2018;32(2):e4050. doi:10.1002/bmc.4050
+
+24. Liu CX, Chen SL, Xiao XH, Zhang TJ, Hou WB, Liao ML. A new concept on quality marker of Chinese materia medica: quality control for Chinese medicinal products. Chin Tradit Herb Drug. 2016;47: 1443-1457.
+
+25. Chan C, Jin D, Dong N, Chen S, Mok DKW. Qualitative and quantitative analysis of chemical constituents of Centipeda minima by HPLCQTOF-MS & HPLC-DAD. J Pharm Biomed Anal. 2016;125:400-407. doi:10.1016/j.jpba.2016.04.029 SUPPORTING INFORMATION Additional supporting information can be found online in the Supporting Information section at the end of this article. How to cite this article: Liu M, Zhao X, Ma Z, et al. Discovery of potential Q-marker of traditional Chinese medicine based on chemical profiling, chemometrics, network pharmacology, and molecular docking: Centipeda minima as an example. Phytochemical Analysis. 2022;33(8):1225‐1234. doi:10.1002/ pca.3173 1234 LIU ET AL. 10991565, 2022, 8, Downloaded from https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/pca.3173 by Tsumura And Co., Wiley Online Library on [28/06/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
