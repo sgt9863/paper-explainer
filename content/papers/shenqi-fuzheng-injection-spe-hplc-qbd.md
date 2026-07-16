@@ -560,3 +560,78 @@ ESM の Table S2 は、開発した SPE-HPLC-UV/ELSD 法で行った9つの測�
 34. Sistla R, Tata VSSK, Kashyap YV, Chandrasekar D, Diwan PV. J Pharmaceut Biomed Anal. 2005;39:517–22.
 35. Wan JB, Li P, Li S, Wang Y, Dong TTX, Tsim KWK. J Sep Sci. 2006;29:2190–6.
 36. Monks K, Molnár I, Rieger HJ, Bogáti B, Szabó E. J Chromatogr A. 2012;1232:218–30.
+
+## 参考文献
+
+1. Raman NVVSS, Mallu UR, Bapatu HR. J Chem. 2015;2015:8. doi:10.1155/2015/435129.
+
+2. ICH (2005) ICH harmonised tripartite guideline. Validation of analytical procedures: text and methodology Q2(R1). International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use.
+
+3. Bonfilio R, Cazedey ECL, Araújo MB, Salgado HRN. Crit Rev Anal Chem. 2012;42:87–100.
+
+4. Karageorgou E, Samanidou V. J Chromatogr A. 2014;1353:131–9.
+
+5. Dejaegher B, Heyden YV. Acta Chromatogr. 2009;21:161–201.
+
+6. Borman P, Chatfield M, Nethercote P, Thompson D, Truman K. Pharm Tech. 2007;31:142–52.
+
+7. Vogt FG, Kord AS. J Pharm Sci. 2011;100:797–812.
+
+8. Pohl M, Smith K, Schweitzer M, Hanna-Brown M, Larew J, Hansen G, et al. Pharm Technol. 2010;34:52–9.
+
+9. Rozet E, Lebrun P, Debrus B, Boulanger B, Hubert P. TRAC-Trends Anal Chem. 2013;42:157–67.
+
+10. Wang L, Chen T, Zeng SS, Qu HB. J Am Soc Mass Spectrom. 2014;25:278–85.
+
+11. Ermer J, Nethercote P. Pharm Technol. 2012;36:74–9.
+
+12. Hanna-Brown M, Borman P, Bale S, Szucs R, Roberts J, Jones C. Sep Sci. 2010;2:12–20.
+
+13. European Medicines Agency (2013) Human medicines development and evaluation.
+
+14. Orlandini S, Pinzauti S, Furlanetto S. Anal Bioanal Chem. 2013;405:443–50.
+
+15. Debrus B, Lebrun P, Ceccato A, Caliaro G, Rozet E, Nistor I, et al. Anal Chim Acta. 2011;691:33–42.
+
+16. Borman PJ, Roberts J, Jones C, Hanna-Brown M, Szucs R, Bale S. Sep Sci. 2010;2:2–8.
+
+17. Muteki K, Morgado JE, Reid GL, Wang J, Xue G, Riley FW, et al. Ind Eng Chem Res. 2013;52:12269–84.
+
+18. Debrus B, Lebrun P, Kindenge JM, Lecomte F, Ceccato A, Caliaro G, et al. J Chromatogr A. 2011;1218:5205–15.
+
+19. Wang Y, Gao S, Zang X, Li J, Ma J. Anal Chim Acta. 2012;716:112–8.
+
+20. Shamsipur M, Fattahi N, Assadi Y, Sadeghi M, Sharafi K. Talanta. 2014;130:26–32.
+
+21. Tan T, Lai CJS, Zeng SL, Liu EH, Li P. Anal Bioanal Chem. 2014;406:4921–9.
+
+22. Liu MH, Tong X, Wang JX, Zou W, Gao H, Su WW. J Pharmaceut Biomed Anal. 2013;74:141–55.
+
+23. Wang J, Tong X, Li P, Liu M, Peng W, Cao H, et al. J Ethnopharmacol. 2014;155:405–15.
+
+24. Rozet E, Lebrun P, Michiels JF, Sondag P, Scherder T, Boulanger B. J Biopharm Stat. 2015;25:260–8.
+
+25. Jimidar M, Bourguignon B, Massart DL. J Chromatogr A. 1996;740:109–17.
+
+26. Gong XC, Li Y, Guo ZT, Qu HB. Sep Purif Technol. 2014;132:126–37.
+
+27. Liu L, Wen YB, Liu KN, Sun L, Wu M, Han GF, et al. J Chromatogr B. 2013;923–924:8–15.
+
+28. Kouzayha A, Iskandarani MA, Mokh S, Rabaa AR, Budzinski H, Jaber F. J Agric Food Chem. 2011;59:7592–600.
+
+29. Zander Å, Findlay P, Renner T, Sellergren B. Anal Chem. 1998;70:3304–14.
+
+30. Cavazzini A, Marchetti N, Guzzinati R, Pasti L, Ciogli A, Gasparrini F, et al. Anal Chem. 2014;86:4919–26.
+
+31. Wu AB, Huang MC, Ho HO, Yeh GC, Sheu MT. Biomed Chromatogr. 2004;18:443–9.
+
+32. Froehlich P, Pennanec R (2004) American Laboratory.
+
+33. Afsah-Hejri L, Jinap S, Arzandeh S, Mirhosseini H. Food Control. 2011;22:381–8.
+
+34. Sistla R, Tata VSSK, Kashyap YV, Chandrasekar D, Diwan PV. J Pharmaceut Biomed Anal. 2005;39:517–22.
+
+35. Wan JB, Li P, Li S, Wang Y, Dong TTX, Tsim KWK. J Sep Sci. 2006;29:2190–6.
+
+36. Monks K, Molnár I, Rieger HJ, Bogáti B, Szabó E. J Chromatogr A. 2012;1232:218–30.
+
