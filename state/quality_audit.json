@@ -1,0 +1,23 @@
+{
+  "_comment": "夜間品質監査ルーチン（runbook ステップ8）の除外リスト。原本が取得できず捏造になるため是正保留のページ。該当PDFが「論文」フォルダに（単一列・テキスト検索可で）再アップロードされたら該当行を消して再挑戦する。",
+  "blocked": {
+    "rrf-potency-assay-uv-detector-settings": "原本が論文フォルダに無い（返却済みPDF）。要再アップロード",
+    "tolerance-intervals-specification-limits-censored-gamma-mle-bayesian": "原本が論文フォルダに無い。要再アップロード",
+    "lss-model-extension-elution-degree-parameter": "原本が論文フォルダに無い。要再アップロード",
+    "patient-centric-drug-product-quality-specifications": "原本が論文フォルダに無い。要再アップロード",
+    "qbd-biopharmaceutics-dissolution-specification-setting-2010": "原本が論文フォルダに無い。要再アップロード",
+    "gradient-elution-hplc-1-theoretical-basis-reversed-phase": "原本が論文フォルダに無い。要再アップロード",
+    "gradient-elution-hplc-2-practical-application-reversed-phase": "原本が論文フォルダに無い。要再アップロード",
+    "who-cgmp-herbal-medicines-overview": "原本が論文フォルダに無い（WHO文書。Web/paper-searchでの取得は要検討）",
+    "who-ghpp-good-herbal-processing-practices": "原本が論文フォルダに無い（WHO TRS1010 Annex1）",
+    "drylab-computer-simulation-reversed-phase-gradient-elution": "OCR劣化スキャン（[2J・Horv~th 等文字化け）。正確な全訳・文献抽出が不可",
+    "xzol-ai-spectrum-effect-nir-qc": "PDF 13.7MB（バイナリ10MB超で取得不可）。テキスト抽出は2段組み混線",
+    "lcxlc-bayesian-optimization-method-development": "PDF 11.4MB（バイナリ10MB超）。テキスト抽出は参考文献が混線",
+    "shd-spectrum-effect-fingerprint-ciri": "PDF 11.9MB（バイナリ10MB超）。テキスト抽出は本文・文献とも混線"
+  },
+  "retry": {
+    "_comment": "10MB以下だがDriveのバイナリ取得エンドポイントが一時的に失敗。エンドポイント回復時に再挑戦（恒久除外ではない）。",
+    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。バイナリ取得エンドポイント不調で保留",
+    "ssyx-linear-substitution-qmarker": "全訳密度・参考文献が要是正。原本(6.6MB)はDrive有。バイナリ取得で全訳し直し要"
+  }
+}
