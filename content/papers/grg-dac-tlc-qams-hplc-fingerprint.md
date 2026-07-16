@@ -185,6 +185,30 @@ QAMSの核心はIRと各成分の間に安定なRCFを確立すること。判�
 
 本研究は、TLC同定・QAMSベースの多成分定量・HPLC指紋を基礎に、天麻顆粒（GRG）のDAC準拠分析戦略を構築・評価した。TLCは特徴成分の定性同定に適し、QAMSはガストロジンを内部標準に6成分の信頼できる同時定量を可能にし、HPLC指紋はロット間一貫性評価に再現性ある化学プロファイルを与えた。統合アプローチは天麻顆粒の多次元品質評価に有効である。CNSと比べ、DAC準拠戦略はクロマトの適合性と包括的な成分特性評価をより重視する。本研究は、基準間の比較と、異なる規制環境下での生薬顆粒の品質評価アプローチの調和（ハーモナイゼーション）に向けた実用的な参照を提供する。
 
+## 参考文献
+
+（原著は著者‐年方式の引用。以下は原著の文献リスト＝アルファベット順）
+
+- Chen, Q., Wang, Z., Yang, B., Yang, Q., and Kan, J. (2022). Determination of main alkylamides responsible for Zanthoxylum bungeanum pungency through quantitative analysis of multi-components by a single marker. Food Chem. 396, 133645.
+- Chinese Pharmacopoeia Commission (2025). Pharmacopoeia of the People's Republic of China. Part I. Beijing: Chinese Medical Science and Technology Press.
+- Cui, T., Hou, Y., Feng, H., Wu, S., Li, W., and Li, Z. (2022). Granulation process analysis technologies and potential applications in traditional Chinese medicine. Acupunct. Herb. Med. 2, 9–24.
+- Essary, C. R., Fischer, L. M., and Irlbeck, E. (2022). A statistical approach to classification: a guide to hierarchical cluster analysis in agricultural communications research. J. Appl. Commun. 106, 3.
+- European Pharmacopoeia Commission (2022). "European pharmacopoeia," in France: European Directorate for the Quality of Medicines and Healthcare. 11th ed.
+- Greenacre, M., Groenen, P. J., Hastie, T., d'Enza, A. I., Markos, A., and Tuzhilina, E. (2022). Principal component analysis. Nat. Rev. Methods Prim. 2, 100.
+- Gu, Z. X., Wang, Z. H., Zhang, X. Q., Zhou, G. H., Liang, G. H., Zeng, L. F., et al. (2025). Research advances in the study of traditional Chinese medicine formula granules on signaling pathway-mediated disease mechanisms. Front. Pharmacol. 16, 1609211.
+- Hempen, N. M. (2014). Qualität und Sicherheit von traditionell chinesischen Arzneien in Deutschland (graduation thesis). Freiburg: Albert-Ludwigs-Universität.
+- Hsu, W. H., Huang, N. K., Shiao, Y. J., Lu, C. K., Chao, Y. M., Huang, Y. J., et al. (2021). Gastrodiae rhizoma attenuates brain aging via promoting neuritogenesis and neurodifferentiation. Phytomedicine 87, 153576.
+- Li, Y., Zhang, Y., Zhang, Z., Hu, Y., Cui, X., and Xiong, Y. (2019). Quality evaluation of Gastrodia elata tubers based on HPLC fingerprint analyses and quantitative analysis of multi-components by single marker. Molecules 24, 1521.
+- Luo, J., Cao, W. G., Yu, B., Chen, H., Wu, Y. Q., Li, Y. H., et al. (2023). Quality evaluation of Hawk tea from different months and regions based on quantitative analysis of multiple components with a single marker combined with HPLC fingerprint. Phytochem. Anal. 34, 884–897.
+- Ma, T., Chen, P., Dong, H., and Wang, X. (2024). Identification of key anti-neuroinflammatory components in Gastrodiae Rhizoma based on spectrum-effect relationships and its mechanism exploration. J. Pharm. Biomed. Anal. 248, 116266.
+- Manns, D., Norwig, J., and Reh, K. (2019). Cannabis for medicinal use: development of pharmacopoeia monographs as a quality standard. Bundesgesundheitsblatt Gesundheitsforschung Gesundheitsschutz 62, 806–810.
+- National Medical Products Administration (2021). Tianma peifangkeli (YBZ-PFKL-2021122).
+- Seide, S. E., Jensen, K., and Kieser, M. (2021). Utilizing radar graphs in the visualization of simulation and estimation results in network meta-analysis. Res. Synth. Methods 12, 96–105.
+- Su, Z., Yang, Y., Chen, S., Tang, Z., and Xu, H. (2023). The processing methods, phytochemistry and pharmacology of Gastrodia elata Bl.: a comprehensive review. J. Ethnopharmacol. 314, 116467.
+- Xiao, G., Tang, R., Yang, N., and Chen, Y. (2023). Review on pharmacological effects of gastrodin. Arch. Pharm. Res. 46, 744–770.
+- Zhang, L. L., Zhao, L., Wang, H. Y., Shi, B. L., Liu, L. Y., and Chen, Z. X. (2019). The relationship between alkylamide compound content and pungency intensity of Zanthoxylum bungeanum based on sensory evaluation and UPLC-MS/MS analysis. J. Sci. Food Agric. 99, 1475–1483.
+- Zhao, J., Tian, G., and Qu, H. (2024). Research on comprehensive quality consistency evaluation strategy for TCM granules: a case study with sugar-free Yangwei granules produced by fluid-bed granulation. Chin. Herb. Med. 16, 575–583.
+
 ## 訳者補足
 
 - **なぜ「DAC準拠」がQC研究として面白いか**: 同じ天麻顆粒でも、中国基準（CNS）は「理論段数≥5,000」「合計含量43〜80 mg/g」のように**数値スペックを規定**するのに対し、DAC/EP流は「似たRf値の2物質で分離を実証せよ」「隣接ピークは既知構造でなければSSTに使えない」のように**クロマトが妥当に働いていることの証明手続き**を重視します。ものさしの思想差を、実データで対比して見せたのが本研究の眼目です。
