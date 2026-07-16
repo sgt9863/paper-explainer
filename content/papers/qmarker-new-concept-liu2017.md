@@ -218,3 +218,94 @@ CM製品の品質評価に関する思考様式と研究手法に従い、我々
 ## 利益相反
 
 著者らは利益相反がないことを宣言する。
+
+## 参考文献
+
+> 本論文はレビューで、本文中は著者・年号方式で引用。以下は著者名アルファベット順の一覧。
+
+1. Ahmad, S. (1979). The functional roles of cytochrome P-450 mediated systems: Present knowledge and future areas of investigations. Drug Metab. Rev. 10(1): 1-14.
+
+2. Beaudoin, G.; Facchini, P. (2014). Benzylisoquinoline alkaloid biosynthesis in opium poppy. Planta 240(1): 19-32.
+
+3. Berenbaum, M.R. (2012). Herbivores: Their interactions with secondary plant metabolites: Ecological and evolutionary processes. Academic Press. ISBN 9780080925455.
+
+4. Buchanan, B.B.; Wilhelm, G.; Jones, R.L. (2015). Biochemistry and Molecular Biology of Plants. John Wiley & Son, New York. ISBN 9781118502198.
+
+5. Caretto, S.; Linsalata, V.; Colella, G.; Mita, G.; Lattanzio, V. (2015). Carbon fluxes between primary metabolism and phenolic pathway in plant tissues under stress. Int. J. Mol. Sci. 16(11): 26378-26394.
+
+6. Chen, S.L.; Liu, A.; Li, Q.; Sugita, T.; Zhu, G.W.; Sun, Y.; Zhang, T.J.; Takehisa, T.; Liu, C.X. (2016). Research strategies in standard decoction of medicinal slices. Chin. J. Chin. Mater. Med. 41(8): 1367-1375.
+
+7. Dai, Z.; Cui, G.; Zhou, S.F.; Zhang, X.; Huang, L.Q. (2011). Cloning and characterization of a novel 3-hydroxy-3-methylglutaryl coenzyme A reductase gene from Salvia miltiorrhiza involved in diterpenoid tanshinone accumulation. J. Plant Physiol. 168: 148-157.
+
+8. Di, P.; Zhang, L.; Chen, J.; Tan, H.; Xiao, Y.; Dong, X.; Zhou, X.; Chen, W. (2013). 13C Tracer reveals phenolic acids biosynthesis in hairy root cultures of Salvia miltiorrhiza. ACS Chem. Biol. 8: 1537-1548.
+
+9. Ding, G.Y.; Lia, B.Q.; Han, Y.Q.; Liu, A.N.; Zhang, J.R.; Peng, J.M.; Jiang, M.; Hou, Y.Y.; Bai, G. (2016). A rapid integrated bioactivity evaluation system based on near-infrared spectroscopy for quality control of Flos Chrysanthemi. J. Pharm. Biomed. Anal. 131: 391-399.
+
+10. Ding, G.Y.; Wang, Y.S.; Liu, A.N.; Hou, Y.Y.; Zhang, T.J.; Bai, G.; Liu, C.X. (2017). From chemical markers to quality markers: An integrated approach of UPLC/Q-TOF, NIRS and chemometrics for the quality assessment of honeysuckle buds. RSC Adv., in press.
+
+11. Dong, Y.; Morris-Natschke, S.L.; Lee, K.H. (2011). Biosynthesis, total syntheses, and antitumor activity of tanshinones and their analogs as potential therapeutic agents. Nat. Prod. Rep. 28: 529-542.
+
+12. Farrow, S.; Hagel, J.; Facchini, P. (2012). Transcript and metabolite profiling in cell cultures of 18 plant species that produce benzylisoquinoline alkaloids. Phytochemistry 77: 79-88.
+
+13. Favela-Hernández, J.M.J.; González-Santiago, O.; Ramírez-Cabrera, M.A.; Esquivel-Ferriño, P.C.; Camacho-Corona, M.R. (2016). Chemistry and pharmacology of Citrus sinensis. Molecules 21: 247.
+
+14. Gao, W.; Sun, H.X.; Xiao, H.; Cui, G.; Hillwig, M.; Jackson, A.; Wang, X.; Shen, Y.; Zhao, N.; Zhang, L. (2014). Combining metabolomics and transcriptomics to characterize tanshinone biosynthesis in Salvia miltiorrhiza. BMC Genomics 15. doi:10.1186/1471-2164-15-73.
+
+15. Guo, J.; Zhou, Y.J.; Hillwig, M.L.; Shen, Y.; Yang, L.; Wang, Y.; Zhang, X.; Liu, W.; Peters, J.; Chen, X. (2013). CYP76AH1 catalyzes turnover of miltiradiene in tanshinones biosynthesis and enables heterologous production of ferruginol in yeasts. Proc. Natl. Acad. Sci. USA 110: 12108-12113.
+
+16. Hagel, J.M.; Facchini, P.J. (2013). Benzylisoquinoline alkaloid metabolism: A century of discovery and a brave new world. Plant Cell Physiol. 54(5): 647-72.
+
+17. He, K.; Gao, J.; Zhao, G. (2007). Advances in studies on chemistry, pharmacology, and quality control of Corydalis yanhusuo. Chin. Tradit. Herb. Drugs 38(12): 1909-1912.
+
+18. Jung, W. (2000). Identification and expression of isoflavone synthase, the key enzyme for biosynthesis of isoflavones in legumes. Nat. Biotechnol. 18(2): 208-212.
+
+19. Kang, Y.L.; Peri, J.; Cai, W.L.; Liu, W.; Luo, J.; Wu, Q.H. (2014). Research progress on flavonoid metabolic synthesis pathway and related function genes in medicinal plants. Chin. Tradit. Herb. Drugs 45(9): 1336-1341.
+
+20. Koes, R.E.; Francesca, Q.; Joseph, N.M. (1994). The flavonoid biosynthetic pathway in plants: Function and evolution. Bioessays 16: 123-132.
+
+21. Li, Y.Z.; Wang, Y.L.; Tai, W.; Yang, L.; Chen, Y.; Chen, C.Q.; Liu, C.X. (2015). Challenges and solutions of pharmacokinetics for efficacy and safety of traditional Chinese medicine. Curr. Drug Metab. 16(9): 765-776.
+
+22. Liu, C.X. (2001). Significance of pharmacokinetics in research and development of traditional Chinese medicine. Chin. Tradit. Herb. Drugs 32: s16-17.
+
+23. Liu, C.X. (2013). Ideas and Practice on Pharmacokinetics of Traditional Chinese Medicine, 1st ed. Beijing Science Press: Beijing.
+
+24. Liu, C.X. (2016). Medicinal model plants: Breaking the traditional medicine research methods. Chin. Herb. Med. 8(1): 1-2.
+
+25. Liu, C.X.; Chen, S.L.; Xiao, X.H.; Zhang, T.J.; Hou, W.B.; Liao, M.L. (2016). A new concept on quality marker of Chinese materia medica: Quality control for Chinese medicinal products. Chin. Tradit. Herb. Drugs 47(9): 1443-1457.
+
+26. Lu, T.; Yang, J.L.; Gao, X.M.; Chen, P.; Du, F.; Sun, Y.; Wang, F.; Xu, F.; Shang, H.; Huang, Y.; Wang, Y.; Wan, R.Z.; Liu, C.X.; Zhang, B.L.; Li, C. (2008). Plasma and urinary tanshinol from Salvia miltiorrhiza (Danshen) can be used as pharmacokinetic markers for cardiotonic pills, a cardiovascular herbal medicine. Drug Metab. Dispos. 36: 1578-1586.
+
+27. Prins, C.L.; Ivo, J.C.V.; Freitas, S.P. (2010). Growth regulators and essential oil production. J. Plant Physiol. 22(2): 91-102.
+
+28. Qing, Z.X.; Cheng, P.; Liu, X.B.; Liu, Y.S.; Zeng, J.G. (2015). Systematic identification of alkaloids in Macleaya microcarpa fruits by liquid chromatography tandem mass spectrometry combined with the isoquinoline alkaloids biosynthetic pathway. J. Pharm. Biomed. Anal. 103: 26-34.
+
+29. Sankhalkar, S.; Vernekar, V. (2016). Quantitative and Qualitative Analysis of Phenolic and Flavonoid Content in Moringa oleifera Lam and Ocimum tenuiflorum L. Pharmacognosy Res. 8(1): 16-21.
+
+30. Sato, F.; Hashimoto, T.; Hachiya, A. (2001). Metabolic engineering of plant alkaloid biosynthesis. Proc. Natl. Acad. Sci. 98(1): 367-372.
+
+31. Schijlen, E.G.W.; de Vos, C.H.R.; van Tunen, A.J. (2004). Modification of flavonoid biosynthesis in crop plants. Phytochemistry 65: 2631-2648.
+
+32. Seigler, D.S. (2012). Plant Secondary Metabolism. Springer Science & Business Media. ISBN 9781461549130.
+
+33. Sun, M.; Liu, J.; Lin, C.; Miao, L.; Lin, L. (2014). Alkaloid profiling of the traditional Chinese medicine Rhizoma Corydalis using high performance liquid chromatography-tandem quadrupole time-of-flight mass spectrometry. Acta Pharm. Sin. B 4(3): 208-216.
+
+34. Thangaraj, P. (2015). Quantification of secondary metabolites. Prog. Drug Res. 71: 49-55.
+
+35. Xiao, X.F.; Qiao, X.L.; Hou, W.B.; Liu, C.X. (2008). Studies on pharmacokinetics of pharmacokinetic-markers in Huanglianjiedu Decoction to cerebral ischemia reperfusion model mice. Asian J. Pharmacodyn. Pharmacokinet. 8: 287-298.
+
+36. Xiong, L.; Peng, C. (2016). Study on Q-Marker of Leonurus japonicus and Penthorum chinense based on basic conditions of Q-Marker. Chin. Tradit. Herb. Drugs 47(13): 2212-2220.
+
+37. Xu, Y.Y.; Si, D.Y.; Liu, C.X. (2009). Determination of strychnine and brucine in rat plasma using liquid chromatography electrospray ionization mass spectrometry. J. Pharm. Biomed. Anal. 49(2): 487-491.
+
+38. Xu, Z.C.; Ji, A.J.; Zhang, X.; Song, J.Y.; Chen, S.L. (2016). Biosynthesis and regulation of active compounds in medicinal model plant Salvia miltiorrhiza. Chin. Herb. Med. 8: 3-11.
+
+39. Zhai, M.M.; Li, J.; Jiang, C.X.; Shi, Y.P.; Di, D.L.; Crews, P.; Wu, Q.X. (2016). The bioactive secondary metabolites from Talaromyces species. Nat. Prod. Bioprospect. 6(1): 1-24.
+
+40. Zhang, T.J.; Xu, J.; Han, Y.Q.; Zhang, H.B.; Gong, S.X.; Liu, C.X. (2016a). Quality markers research on Chinese materia medica: Quality evaluation and quality standards of Corydalis Rhizoma. Chin. Tradit. Herb. Drugs 47(9): 1458-1467.
+
+41. Zhang, T.J.; Xu, J.; Shen, X.P.; Han, Y.Q.; Hu, J.F.; Zhang, H.B.; Gong, S.X.; Liu, C.X. (2016b). Relation of "property-response-component" and action mechanism of Yuanhu Zhitong Dropping Pills based on quality marker (Q-Marker). Chin. Tradit. Herb. Drugs 47(13): 2199-2211.
+
+42. Zhang, Y. (2014). Discovery of N-methyltetrahydroprotoberberines with κ-opioid receptor agonist activities from Corydalis yanhusuo W. T. Wang by using two-dimensional liquid chromatography. J. Ethnopharmacol. 155(3): 1597-1602.
+
+43. Zhou, M.G.; Ma, X.Y.; Ding, G.Y.; Wang, Z.Y.; Liu, D.; Tong, Y.L.; Zhou, H.; Gao, J.; Hou, Y.Y.; Jiang, M.; Bai, G. (2017). Comparison and evaluation of antimuscarinic and anti-inflammatory effects of five Bulbus fritillariae species based on UPLC-Q/TOF integrated dual-luciferase reporter assay, PCA and ANN analysis. J. Chromatogr. B 1041: 60-69.
+
