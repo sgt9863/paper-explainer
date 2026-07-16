@@ -61,7 +61,9 @@ LSS 理論はその簡潔さから低分子（ペプチド・タンパクも）�
 
 ## データ駆動方法論（溶媒組成依存の保持因子予測）
 
-本方法論（Figure 1）は、(a) MD を用いる QSPR で (b) LSER 溶質パラメータを予測し、(c) LSS 理論で分子の保持挙動を可変移動相組成と結びつける。まず溶質の分子構造（SMILES）から MD を決め、それを 4 つの QSPR モデルの入力として、LSER 溶質パラメータ **E・S・A・B**（保持因子/時間ではない）を予測する。5 番目のパラメータ V は分子構造から直接決まる。これら溶質パラメータと（単一 φ に限らない）HPLC システムパラメータを備えた 2 つの LSER で、各溶質の LSS パラメータ **kw・S**（式1）を決める。これにより等溶媒（φ 一定）HPLC の移動相組成の in silico 最適化、あるいは輸送モデルと組み合わせてグラジエント HPLC の初期/最終組成と動的変化の最適化が可能になる。
+本方法論（Figure 1）は、(a) MD を用いる QSPR で (b) LSER 溶質パラメータを予測し、(c) LSS 理論で分子の保持挙動を可変移動相組成と結びつける。
+
+![図1. 本方法論の全体像。溶質（例: シプロフロキサシン）の分子構造→SMILES文字列→分子記述子(MD: ARR・MW・MLOGP・nCIC・%C/%N/%O等)→QSPR で LSER 溶質パラメータ E・S・A・B を予測→2つの LSER で φ非依存の log kw・S を予測→LSS 理論 log k = log kw − S·φ で各移動相組成 φ での保持因子 k(φ) を与える。](assets/insilico-hplc-qspr-lser-lss-retention/fig1-methodology.png)まず溶質の分子構造（SMILES）から MD を決め、それを 4 つの QSPR モデルの入力として、LSER 溶質パラメータ **E・S・A・B**（保持因子/時間ではない）を予測する。5 番目のパラメータ V は分子構造から直接決まる。これら溶質パラメータと（単一 φ に限らない）HPLC システムパラメータを備えた 2 つの LSER で、各溶質の LSS パラメータ **kw・S**（式1）を決める。これにより等溶媒（φ 一定）HPLC の移動相組成の in silico 最適化、あるいは輸送モデルと組み合わせてグラジエント HPLC の初期/最終組成と動的変化の最適化が可能になる。
 
 ### QSPR による LSER 溶質パラメータ予測
 
@@ -76,6 +78,8 @@ LSER 溶質パラメータ E・S・A・B は通常実験で決めるが時間・
 学習データは 6401 分子を 80:20 分割（学習 **5120**・検証 **1281**）。リッジ回帰は w を小さくするがゼロにはしない（lasso と異なる）ため、入力数削減は下記で対処。
 
 **QSPR 予測性能と冗長 MD の除去**: 入力 MD 数を減らしてロバスト化するため、対相関法でさらに削減（高相関の 2 MD の一方を除いても情報損失は小さい）。相関閾値を段階的に上げ、各段で CV により予測性能を評価。半分の MD を除いても精度がほぼ一定であることから、**相関閾値 0.85 に対応する 313 MD** を最終入力に選定。パリティプロット（Figure 3）は RMSEP（式6）・R²（式7）・修正 MAPE（MMAPE、式8）を示し過学習なし。Topliss–Costello 則（学習観測数:入力変数 ≥ 5:1）に対し本 QSPR は **16:1（5120 分子:313 MD）** で余裕を持って満たす。
+
+![図3. QSPR（リッジ回帰）による LSER 溶質パラメータ予測のパリティプロット。(a) E、(b) S、(c) A、(d) B。青＝学習、橙◆＝検証。E は最も良好（R²_Test=0.98・MMAPE=6.8）、S（R²=0.87・MMAPE=13.6）、A（R²=0.89・MMAPE=30.4。多くの低分子でゼロ近傍のため誤差率が大きい）、B（R²=0.95・MMAPE=12.0）。](assets/insilico-hplc-qspr-lser-lss-retention/fig3-qspr-parity.png)
 
 ### LSER による LSS 理論パラメータ予測
 
@@ -119,6 +123,8 @@ LSS パラメータ kw・S の LSER による予測は Poole & Atapattu が実�
 
 **概念実証**: 各溶質について新規の 2 つの LSER で kw・S を決め、式(1) で各 φ の k を予測、対応する実験値（36 溶質 × 5〜6 分率＝計 210 値）と比較。パリティプロット（Figure 5）は、**SMILES だけを入力に用いたにもかかわらず**保持因子が良好に推定でき、MAPE が **25% 未満**（Table 3）であることを明瞭に示した。
 
+![図5. leave-one-out 検証による予測 k 対 実験 k のパリティプロット（36溶質・φ=20〜70%で色分け、計210点）。挿入図は低 k 域（0〜3）の拡大。SMILES のみを入力に用いても保持因子が対角線周りに良好に分布する。](assets/insilico-hplc-qspr-lser-lss-retention/fig5-retention-parity.png)
+
 **誤差伝播**: 実験情報が多いほど必要モデルが減り予測が正確になる。(i) LSS 理論のみ、(ii) LSS＋LSER（実験 LSER 溶質パラメータ使用）、(iii) LSS＋LSER＋QSPR（実験なし）で誤差が段階的に増える。実験保持因子を真値と仮定した誤差伝播:
 
 **Table 3. 保持因子 k の誤差伝播**
@@ -131,11 +137,159 @@ LSS パラメータ kw・S の LSER による予測は Poole & Atapattu が実�
 
 より大きな LSER 学習データ（毎回 35 溶質のみ）が望まれるものの、方法論誤差は主に **LSS 理論の不正確さ**に帰せられる。これは φ→0 で log k が非線形に増える一般的挙動を LSS 理論が捉えられないため（Figure 4 より、log k 対 φ の線形性は概ね 30% < φ < 60% でのみ妥当）。二次などのより複雑な溶媒強度モデルで拡張しうるが、追加パラメータ予測に追加 LSER が要るため本研究では扱わない。
 
+![図4. 代表4溶質（2-アミノフェノール●・フタルイミド◆・カフェイン▲・サリチル酸メチル▼）の log k 対 移動相有機修飾剤分率 φ。LSS 理論の線形性は概ね φ=0.2〜0.7 で妥当で、両端（≈φ<0.2・φ>0.7）は「適用範囲外（Region out of scope）」として網掛けされている。](assets/insilico-hplc-qspr-lser-lss-retention/fig4-logk-vs-phi.png)
+
 ## 結論と展望（Conclusions and Perspectives）
 
 本方法論は、溶質の分子構造のみを用いて移動相依存の保持因子を予測する実用的解を提供する。特定 HPLC 設定に対して保持を予測する他のデータ駆動ツールと異なり、本アプローチは**移動相プロファイルの最適化**に向けた有望な in silico ツールとなる。入力が MD のみ（構造式から直接得られる）なので、**実験用に物質を合成する前でも**適用できる。QSPR（MD→LSER パラメータ）＋LSER＋古典的 LSS 理論の多モデル連結が機能の源泉である。概念実証のデータは小規模だったが、SMILES のみで C18 系の低分子の移動相依存保持因子を **MAPE < 25%** で予測でき、大規模学習データで予測力の大幅改善が期待される。ただしデータ量だけでなく質（学習分子と予測対象の「類似性」）が同等に重要である。QSPR は 5000 超の低分子で学習したが、LSER システムパラメータ予測には類似のサイズ・極性・官能基構成の 35 溶質しか使えず、これらと大きく異なる溶質の予測は難しい。真に汎用にするには、(1) データセットの分子多様性が予測対象を代表すること、(2) 学習データと対象溶質の類似度（MD で捉えた分子特徴）を定量的に示すこと、が重要である。
 
 第一原理の機構的輸送モデルと組み合わせれば、開発初期に HPLC 法を in silico 最適化でき、多くの初期実験をデータ駆動予測で代替して実験負荷を大幅に減らせる。各種カラム・有機修飾剤の LSER システムパラメータを整えれば、固定相・移動相の in silico スクリーニングも可能になる。ただし、共溶出しやすい複雑な多成分試料では実験を完全に置き換えるには至らず、あくまで各種移動相組成にわたる溶出時間の信頼できる初期推定（pH 変化は非対象）を、事前実験なしに与えるものである。総じて本方法論は、追加実験なしに既存 DB を活用して等温線パラメータを予測する有望な解であり、HPLC データベースの急成長でさらに強力になりうる。ハイブリッドモデルから汎用性を得て、実試料入手前の法開発を可能にし、実験プロセスを合理化して時間と資源を節約する。
+
+## 参考文献
+
+> 原文はACS方式（本文中は上付き番号で引用）。以下は文献番号順の一覧。
+
+1. Horvath, C. G.; Lipsky, S. Nature 1966, 211 (5050), 748−749.
+
+2. Arnaud, C. H. 50 years of HPLC. A look back at the history of high-performance liquid chromatography and the column-packing materials that enabled its success. 2016, https://cen.acs.org/articles/94/i24/50-years-HPLC.html (accessed July 18, 2023).
+
+3. Guiochon, G.; Felinger, A.; Shirazi, D. G. Fundamentals of Preparative and Nonlinear Chromatography; Elsevier, 2006.
+
+4. Schmidt-Traub, H.; Schulte, M.; Seidel-Morgenstern, A.; Schmidt-Traub, H. Preparative Chromatography; Wiley Online Library, 2012.
+
+5. Ahmed, K.; Pathmanathan, P.; Kabadi, S.; Doren, J.; Kruhlak, N.; Lumen, A.; Martinez, M.; Morrison, T.; Schuette, P.; Tegenge, M.; et al. Successes and Opportunities in Modeling & Simulation for FDA; US Food and Drug Administration Report, 2022.
+
+6. Fekete, S.; Molnár, I. Software-Assisted Method Development in High Performance Liquid Chromatography; World Scientific, 2018.
+
+7. Besenhard, M. O.; Tsatse, A.; Mazzei, L.; Sorensen, E. Curr. Opin. Chem. Eng. 2021, 32, 100685.
+
+8. Chen, Y.; Yang, O.; Sampat, C.; Bhalode, P.; Ramachandran, R.; Ierapetritou, M. Processes 2020, 8 (9), 1088.
+
+9. Shekhawat, L. K.; Rathore, A. S. Prep. Biochem. Biotechnol. 2019, 49 (6), 623−638.
+
+10. Katsoulas, K.; Tirapelle, M.; Sorensen, E.; Mazzei, L. J. Chromatogr., A 2023, 1708, 464345.
+
+11. Al-Ghouti, M. A.; Da'ana, D. A. J. Hazard Mater. 2020, 393, 122383.
+
+12. Liu, X.; Kaczmarski, K.; Cavazzini, A.; Szabelski, P.; Zhou, D.; Guiochon, G. Biotechnol. Prog. 2002, 18 (4), 796−806.
+
+13. Marchetti, N.; Dondi, F.; Felinger, A.; Guerrini, R.; Salvadori, S.; Cavazzini, A. J. Chromatogr., A 2005, 1079 (1−2), 162−172.
+
+14. De Luca, C.; Felletti, S.; Macis, M.; Cabri, W.; Lievore, G.; Chenet, T.; Pasti, L.; Morbidelli, M.; Cavazzini, A.; Catani, M.; et al. J. Chromatogr., A 2020, 1616, 460789.
+
+15. Gritti, F.; Guiochon, G. J. Chromatogr., A 2004, 1041 (1−2), 63−75.
+
+16. Ahmad, T.; Guiochon, G. J. Chromatogr., A 2006, 1129 (2), 174−188.
+
+17. Ahmad, T.; Guiochon, G. J. Chromatogr., A 2007, 1142 (2), 148−163.
+
+18. Jandera, P.; Krupczynska, K.; Vynuchalová, K.; Buszewski, B. J. Chromatogr., A 2010, 1217 (39), 6052−6060.
+
+19. Snyder, L. R. J. Chromatogr., A 1964, 13, 415−434.
+
+20. Tyteca, E.; De Vos, J.; Vankova, N.; Cesla, P.; Desmet, G.; Eeltink, S. J. Sep. Sci. 2016, 39 (7), 1249−1257.
+
+21. Schoenmakers, P. J.; Tijssen, R. J. Chromatogr., A 1993, 656 (1−2), 577−590.
+
+22. Neue, U. Chromatographia 2006, 63 (S13), S45−S53.
+
+23. Domingo-Almenara, X.; Guijas, C.; Billings, E.; Montenegro-Burke, J. R.; Uritboonthai, W.; Aisporna, A. E.; Chen, E.; Benton, H. P.; Siuzdak, G. Nat. Commun. 2019, 10 (1), 5811.
+
+24. Yang, Q.; Ji, H.; Lu, H.; Zhang, Z. Anal. Chem. 2021, 93 (4), 2200−2206.
+
+25. Bouwmeester, R.; Martens, L.; Degroeve, S. Anal. Chem. 2019, 91 (5), 3694−3703.
+
+26. Poole, C.; Cabooter, D. J. Chromatogr., A 2022, 1684, 463579.
+
+27. Aalizadeh, R.; Alygizakis, N. A.; Schymanski, E. L.; Krauss, M.; Schulze, T.; Ibanez, M.; McEachran, A. D.; Chao, A.; Williams, A. J.; Gago-Ferrero, P.; et al. Anal. Chem. 2021, 93 (33), 11601−11611.
+
+28. Kaliszan, R. Chem. Rev. 2007, 107 (7), 3212−3246.
+
+29. Consonni, V.; Todeschini, R. Molecular Descriptors for Chemoinformatics: Volume I: Alphabetical Listing/Volume II: Appendices, References; John Wiley & Sons, 2009.
+
+30. Taraji, M.; Haddad, P. R.; Amos, R. I.; Talebi, M.; Szucs, R.; Dolan, J. W.; Pohl, C. A. Anal. Chim. Acta 2018, 1000, 20−40.
+
+31. Fedorova, E. S.; Matyushin, D. D.; Plyushchenko, I. V.; Stavrianidi, A. N.; Buryak, A. K. J. Chromatogr., A 2022, 1664, 462792.
+
+32. Todeschini, R.; Consonni, V. Molecular Descriptors for Chemoinformatics, 2 Vol. Set: Vol. I: Alphabetical Listing/Vol. II: Appendices, References; Wiley VCH, 2009; Vol. 41.
+
+33. Mauri, A. alvaDesc: A Tool to Calculate and Analyze Molecular Descriptors and Fingerprints; Ecotoxicological QSARs, 2020; pp 801−820.
+
+34. Kaliszan, R. J. Chromatogr., A 1993, 656 (1), 417−435.
+
+35. Zhang, X.; Li, J.; Wang, C.; Song, D.; Hu, C. J. Pharm. Biomed. Anal. 2017, 145, 262−272.
+
+36. Put, R.; Daszykowski, M.; Baczek, T.; Vander Heyden, Y. J. Proteome Res. 2006, 5 (7), 1618−1625.
+
+37. Taraji, M.; Haddad, P. R.; Amos, R. I.; Talebi, M.; Szucs, R.; Dolan, J. W.; Pohl, C. A. J. Chromatogr., A 2017, 1486, 59−67.
+
+38. Put, R.; Perrin, C.; Questier, F.; Coomans, D.; Massart, D.; Vander Heyden, Y. J. Chromatogr., A 2003, 988 (2), 261−276.
+
+39. Goudarzi, N.; Shahsavani, D.; Emadi-Gandaghi, F.; Chamjangali, M. A. J. Chromatogr., A 2014, 1333, 25−31.
+
+40. Ladiwala, A.; Rege, K.; Breneman, C. M.; Cramer, S. M. Langmuir 2003, 19 (20), 8443−8454.
+
+41. Aicheler, F.; Li, J.; Hoene, M.; Lehmann, R.; Xu, G.; Kohlbacher, O. Anal. Chem. 2015, 87 (15), 7698−7704.
+
+42. Liapikos, T.; Zisi, C.; Kodra, D.; Kademoglou, K.; Diamantidou, D.; Begou, O.; Pappa-Louisi, A.; Theodoridis, G. J. Chromatogr. B 2022, 1191, 123132.
+
+43. Osipenko, S.; Bashkirova, I.; Sosnin, S.; Kovaleva, O.; Fedorov, M.; Nikolaev, E.; Kostyukevich, Y. Anal. Bioanal. Chem. 2020, 412, 7767−7776.
+
+44. Maboudi Afkham, H.; Qiu, X.; The, M.; Käll, L. Bioinformatics 2017, 33 (4), 508−513.
+
+45. Tham, S.; Agatonovic-Kustrin, S. J. Pharm. Biomed. Anal. 2002, 28 (3), 581−590.
+
+46. Ruggieri, F.; D'Archivio, A. A.; Carlucci, G.; Mazzeo, P. J. Chromatogr., A 2005, 1076 (1), 163−169.
+
+47. Taft, R. W.; Abboud, J.-L. M.; Kamlet, M. J.; Abraham, M. H. J. Solution Chem. 1985, 14, 153−186.
+
+48. Sadek, P. C.; Carr, P. W.; Doherty, R. M.; Kamlet, M. J.; Taft, R. W.; Abraham, M. H. Anal. Chem. 1985, 57 (14), 2971−2978.
+
+49. Vitha, M.; Carr, P. W. J. Chromatogr., A 2006, 1126 (1−2), 143−194.
+
+50. Kaliszan, R. Encycl. Sep. Sci. 2000, 4063−4075.
+
+51. Snyder, L.; Dolan, J.; Carr, P. Anal. Chem. 2007, 79 (9), 3254−3262.
+
+52. Zuvela, P.; Skoczylas, M.; Jay Liu, J.; Baczek, T.; Kaliszan, R.; Wong, M. W.; Buszewski, B. Chem. Rev. 2019, 119 (6), 3674−3729.
+
+53. Andric, F.; Héberger, K. J. Chromatogr., A 2017, 1488, 45−56.
+
+54. Wen, Y.; Talebi, M.; Amos, R. I.; Szucs, R.; Dolan, J. W.; Pohl, C. A.; Haddad, P. R. J. Chromatogr., A 2018, 1541, 1−11.
+
+55. Park, S. H.; Haddad, P. R.; Talebi, M.; Tyteca, E.; Amos, R. I.; Szucs, R.; Dolan, J. W.; Pohl, C. A. J. Chromatogr., A 2017, 1486, 68−75.
+
+56. Wiczling, P.; Kamedulska, A. Anal. Chem. 2024, 96 (3), 1310−1319.
+
+57. Stanstrup, J.; Neumann, S.; Vrhovsek, U. Anal. Chem. 2015, 87 (18), 9421−9428.
+
+58. D'Archivio, A. A.; Ruggieri, F.; Mazzeo, P.; Tettamanti, E. Anal. Chim. Acta 2007, 593 (2), 140−151.
+
+59. Weininger, D. J. Chem. Inf. Comput. Sci. 1988, 28 (1), 31−36.
+
+60. McGowan, J. C. J. Chem. Technol. Biotechnol. 1978, 28 (9), 599−607.
+
+61. Zhao, Y. H.; Abraham, M. H.; Zissimos, A. M. J. Chem. Inf. Comput. Sci. 2003, 43 (6), 1848−1854.
+
+62. Ulrich, N.; Endo, S.; Brown, T.; Watanabe, N.; Bronner, G.; Abraham, M.; Goss, K. UFZ-LSER Database V 3.2.1 [internet]; Helmholtz Centre for Environmental Research-UFZ: Leipzig, Germany, 2017.
+
+63. Chung, Y.; Vermeire, F. H.; Wu, H.; Walker, P. J.; Abraham, M. H.; Green, W. H. J. Chem. Inf. Model. 2022, 62 (3), 433−446.
+
+64. Poole, C. F. J. Chromatogr., A 2020, 1617, 460841.
+
+65. Tibshirani, R. J. Roy. Stat. Soc. B 1996, 58, 267−288.
+
+66. Bishop, C. M. Pattern Recognition and Machine Learning; Springer, 2006; Vol. 4.
+
+67. Hoerl, A. E.; Kennard, R. W. Technometrics 1970, 12 (1), 55−67.
+
+68. Topliss, J. G.; Costello, R. J. J. Med. Chem. 1972, 15 (10), 1066−1068.
+
+69. Cherkasov, A.; Muratov, E. N.; Fourches, D.; Varnek, A.; Baskin, I. I.; Cronin, M.; Dearden, J.; Gramatica, P.; Martin, Y. C.; Todeschini, R.; et al. J. Med. Chem. 2014, 57 (12), 4977−5010.
+
+70. Poole, C. F.; Atapattu, S. N. J. Chromatogr., A 2022, 1675, 463153.
+
+71. Atapattu, S. N.; Poole, C. F.; Praseuth, M. B. Chromatographia 2018, 81, 373−385.
 
 ## 訳者補足（実務者向けの読みどころ）
 
