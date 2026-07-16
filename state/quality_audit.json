@@ -22,5 +22,11 @@
   "retry": {
     "_comment": "10MB以下だがDriveのバイナリ取得EPが一時失敗。EP回復時に再挑戦（恒久除外ではない）。ssyxは2026-07-16にテキストEPから全訳密度・参考文献を是正済（図は既存6枚）。",
     "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で図だけ保留（本文・文献は既存）"
+  },
+  "reviewed_adequate": {
+    "_comment": "quality_audit.pyのCJK文字数ヒューリスティックが「密度不足」と誤検知したが、原文と突き合わせて確認した結果、実際には原文の全セクション・全データを既に忠実に全訳済み（英語の化合物名・分子式・m/z値・保持時間等が本文中で大きな比率を占めるため機械的なCJK文字数が低く出るだけ）。追加の手直しは不要。2026-07-16 レビュー。",
+    "herbal-regulation-eu-usa-canada-japan": "密度3092字。原文が4ページの短い規制比較レビュー（Acta Medica Bulgarica）で図は無し。Abstract〜結論・表1・参考文献10件まで全訳済み。runbookの「短いレター/規制コメンタリ」例外に該当",
+    "qams-single-marker-review": "密度3656字。QAMSレビュー論文（11頁）の全7章＋Table1（19処方例）＋図1(a/b)＋参考文献23件＋訳者補足まで全訳済み。Table中の英語化合物名・数値が多くCJK密度が低く出るだけ",
+    "dgjz-uplc-qtof-fingerprint": "密度3257字。77成分同定Table II・指紋Table III/IV相当・定量バリデーションTable V・15バッチ含量Table VIまで数値を網羅済み。英語化合物名・分子式・m/z値が本文の大半を占めるためCJK密度が低く出るだけ"
   }
 }
