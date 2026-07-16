@@ -301,6 +301,62 @@ XECQ 製造工程の 15 バッチの中間体（水抽出物・水抽出濃縮�
 
 本研究は、多次元品質移行解析・QbD 工程最適化・知能的機械視覚監視を統合し、包括的でデータ駆動の品質管理フレームワークを確立した。XECQ における組成と物性の動的結合を解明し、重要工程であるアルコール沈殿に頑健な設計空間を確立し、さらにリアルタイム品質監視のための非破壊機械視覚系を開発した。中核的革新は、**生産前のパラメータ最適化と生産後の知能的品質検査を協同的に閉ループ化**した点にあり、複雑な天然物製剤の品質一貫性課題に新たなパラダイムを提供し、漢方製造の知能化を推進する。
 
+## 参考文献
+
+1. Shah P, Goodyear B, Haq A, Puri V, Michniak-Kohn B. Evaluations of quality by design (QbD) elements impact for developing niosomes as a promising topical drug delivery platform. Pharmaceutics. 2020;12(3):246. https://doi.org/10.3390/pharmaceutics12030246
+
+2. Grassi S, Marti A, Cascella D, Casalino S, Cascella GL. Electric drive supervisor for milling process 4.0 automation: a process analytical approach with IIoT NIR devices for common wheat. Sensors. 2020;20(4):1147. https://doi.org/10.3390/s20041147
+
+3. Mattarozzi M, Laski E, Bertucci A, Giannetto M, Bianchi F, Zoani C, et al. Metrological traceability in process analytical technologies and point-of-need technologies for food safety and quality control: not a straightforward issue. Anal Bioanal Chem. 2023;415(1):119–35. https://doi.org/10.1007/s00216-022-04398-5
+
+4. Li HH, Vora LK, Anjani Q, Abraham AM, Cong YL, Moreno-Csatellanos N, et al. Quality by design-guided development of hydrogel-forming microneedles for transdermal delivery of enfuvirtide. ACS Appl Mater Interfaces. 2025;17(18):26227–51. https://doi.org/10.1021/acsami.5c00499
+
+5. Mishra V, Thakur S, Patil A, Shukla A. Quality by design (QbD) approaches in current pharmaceutical set-up. Expert Opin Drug Deliv. 2018;15(8):737–58. https://doi.org/10.1080/17425247.2018.1504768
+
+6. Teng KX, Fu H, Wu GL, Gong P, Xie YJ, Zhou P, et al. QbD-guided traditional Chinese medicine manufacturing process: development and optimization of fluid-bed granulation and drying processes for Xiaochaihu capsules. AAPS PharmSciTech. 2023;24(7):210. https://doi.org/10.1208/s12249-023-02663-z
+
+7. Lu XY, Jin YY, Wang YZ, Chen YL, Fan XH. Multimodal integrated strategy for the discovery and identification of quality markers in traditional Chinese medicine. J Pharm Anal. 2022;12(5):701–10. https://doi.org/10.1016/j.jpha.2022.05.001
+
+8. Ferdoush S, Gonzalez M. Semi-mechanistic reduced order model of pharmaceutical tablet dissolution for enabling industry 4.0 manufacturing systems. Int J Pharm. 2023;631:122502. https://doi.org/10.1016/j.ijpharm.2022.122502
+
+9. Fukuda IM, Pinto CFF, Moreira CdosS, Saviano AM, Lourenço FR. Design of experiments (DoE) applied to pharmaceutical and analytical quality by design (QbD). Braz J Pharm Sci. 2018;54:e01006. https://doi.org/10.1590/s2175-97902018000001006
+
+10. Yang YJ, Chang YK, Cheng Y, Qian ZY, Zhao J, Li C, et al. An integrated metabolome-microbiome analysis revealed distinct regulatory effects of Xiaoer Chiqiao Qingre Granules in young versus adult rats with acute upper respiratory tract infection. J Ethnopharmacol. 2026;361:121232. https://doi.org/10.1016/j.jep.2026.121232
+
+11. Xu T, Li XQ, Huang MM, Wang Q, Li C, Tian G, et al. A preferable approach for the quality control of Xiaoer Chiqiao Qingre Granules based on the combination of chromatographic fingerprints and chemometrics. J Anal Methods Chem. 2020;2020:6836981. https://doi.org/10.1155/2020/6836981
+
+12. Zhao LP, Sun XF, Wang L, Hu YS, Yu WC, Sun GX. Quality consistency control and evaluation of Xiaoer Chiqiao Qingre Granules by multi-dimensional fingerprinting combined with antioxidant activity analysis. Microchem J. 2025;209:112690. https://doi.org/10.1016/j.microc.2025.112690
+
+13. Zhong CL, Guo SX, Yang YM, Wang AZ, Xue Z, Wang MQ, et al. Efficacy and safety of Xiaoer Chiqiao Qingre syrup in the treatment of pedo-anemopyretic cold with stagnant syndrome in children: a multicenter, randomized, double-blind, double-dummy, parallel, positive-controlled, noninferiority trial. J Evid Based Med. 2025;18(3):e70077. https://doi.org/10.1111/jebm.70077
+
+14. Huang L, Lv Q, Xie DL, Shi TL, Wen CP. Deciphering the potential pharmaceutical mechanism of Chinese traditional medicine (Gui-Zhi-Shao-Yao-Zhi-Mu) on rheumatoid arthritis. Sci Rep. 2016;6:22602. https://doi.org/10.1038/srep22602
+
+15. Li XX, Xu X, Wang JN, Yu H, Wang X, Yang HJ, et al. A system-level investigation into the mechanisms of Chinese traditional medicine: Compound Danshen formula for cardiovascular disease treatment. PLoS ONE. 2012;7(9):e43918. https://doi.org/10.1371/journal.pone.0043918
+
+16. Šahinović M, Hassan A, Kristó K, Regdon G Jr, Vranić E, Sovány T. Quality by design-based development of solid self-emulsifying drug delivery system (SEDDS) as a potential carrier for oral delivery of lysozyme. Pharmaceutics. 2023;15(3):995. https://doi.org/10.3390/pharmaceutics15030995
+
+17. Gurba-Bryśkiewicz L, Maruszak W, Smuga DA, Dubiel K, Wieczorek M. Quality by design (QbD) and design of experiments (DOE) as a strategy for tuning lipid nanoparticle formulations for RNA delivery. Biomedicines. 2023;11(10):2752. https://doi.org/10.3390/biomedicines11102752
+
+18. Tanaka T, Hanaoka H, Sakurai S. Optimization of the quality by design approach for gene therapy products: a case study for adeno-associated viral vectors. Eur J Pharm Biopharm. 2020;155:88–102. https://doi.org/10.1016/j.ejpb.2020.08.002
+
+19. Matić J, Paudel A, Bauer H, Garcia RAL, Biedrzycka K, Khinast JG. Developing HME-based drug products using emerging science: a fast-track roadmap from concept to clinical batch. AAPS PharmSciTech. 2020;21(5):176. https://doi.org/10.1208/s12249-020-01713-0
+
+20. Szoleczky R, Budai-Szűcs M, Csányi E, Berkó S, Tonka-Nagy P, Csóka I, et al. Analytical quality by design (AQbD) approach to the development of in vitro release test for topical hydrogel. Pharmaceutics. 2022;14(4):707. https://doi.org/10.3390/pharmaceutics14040707
+
+21. Hidaya AF, Wardhana YW, Suwendar S, Mohammed AFA, Mahmoud SA, Elamin KM, et al. A review on QbD-driven optimization of lipid nanoparticles for oral drug delivery: from framework to formulation. Int J Nanomedicine. 2025;20:8611–51. https://doi.org/10.2147/IJN.S534137
+
+22. Cornilă A, Iurian S, Tomuță I, Porfire A. Orally dispersible dosage forms for paediatric use: current knowledge and development of nanostructure-based formulations. Pharmaceutics. 2022;14(8):1621. https://doi.org/10.3390/pharmaceutics14081621
+
+23. Bitterlich A, Mihorko A, Juhnke M. Design space and control strategy for the manufacturing of wet media milled drug nanocrystal suspensions by adopting mechanistic process modeling. Pharmaceutics. 2024;16(3):328. https://doi.org/10.3390/pharmaceutics16030328
+
+24. Lu GZ, Yang YJ, Zhu MM, Liu J, Zhao J, Jia XB, et al. Pharmacodynamic substances and mechanism of action of Xiaoer Chiqiao Qingre Granules in treatment of acute upper respiratory tract infection in children. Zhongguo Zhong Yao Za Zhi. 2022;47(21):5717–34. https://doi.org/10.19540/j.cnki.cjcmm.20220614.302
+
+25. Yan Z, Yan YZ, Wen YG, Cui MY, Bian BL, Ni LQ, et al. Identification of chemical constituents of Xiaoer Chiqiao Qingre Granules based on UHPLC-LTQ-Orbitrap-MS/MS and network pharmacology analysis. Zhongguo Zhong Yao Za Zhi. 2021;46(23):6163–77. https://doi.org/10.19540/j.cnki.cjcmm.20211019.301
+
+26. Meng YC, Yan Z, Nan S, Zhou YY, Wang K, Wang Hong J, et al. Mechanism of Xiaoer Chiqiao Qingre Granules in clearing heat and removing food stagnation in suckling rats with fever and food accumulation based on metabolomics. Zhongguo Zhong Yao Za Zhi. 2023;48(3):811–22. https://doi.org/10.19540/j.cnki.cjcmm.20220830.502
+
+27. Waghule T, Dabholkar N, Gorantla S, Rapalli VK, Saha RN, Singhvi G. Quality by design (QbD) in the formulation and optimization of liquid crystalline nanoparticles (LCNPs): a risk based industrial approach. Biomed Pharmacother. 2021;141:111940. https://doi.org/10.1016/j.biopha.2021.111940
+
 ## 訳者補足（実務者向けの読みどころ）
 
 > 以下は原文に無い、実務観点の補足である（本文の訳と混ぜない）。
