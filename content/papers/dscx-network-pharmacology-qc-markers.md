@@ -272,6 +272,68 @@ TCM は多成分・多標的・多効果を特徴とする典型的な複雑系�
 
 本研究では、CC と FM を含む革新的な BMCT ネットワークを構築した。モジュール化概念と計算を適用することで、DS-CX が凝固カスケードと血小板の活性化・シグナル伝達・凝集効果によって抗血栓効果を発揮することを同定した。「二段階」アルゴリズムはまず重要な CC（CC1・CC2・CC13）を同定する助けとなり、さらに有意な化合物を潜在的QCマーカーとして同定した。in vitro THR 阻害活性試験は、潜在的QCマーカーが生物活性化合物であることを部分的に証明した。最終的に、中国薬典で DS の化学マーカーの一つに挙げられるサルビアノール酸Bを含む**9成分**が DS-CX のQCマーカーとして選ばれた。まとめると、ネットワーク構築・解析・新アルゴリズムの適用・実験手法によって、本研究は DS-CX 薬対のQCマーカー同定における二層モジュール化ネットワークモデルの実現可能性を確認した。これは新しい研究フローを提供し、品質管理の新手法を広げるものである。加えて、単一生薬・薬対・さらには処方を含む TCM の潜在的機序の解明にも役立つ可能性がある。
 
+## 参考文献
+
+（原著は著者‐年方式の引用。以下は原著の文献リスト＝アルファベット順）
+
+- Bader, G.D., Hogue, C.W., 2003. An automated method for finding molecular complexes in large protein interaction networks. BMC Bioinf. 4, 2.
+- Barabási, A.-L., Gulbahce, N., Loscalzo, J., 2011. Network medicine: a network-based approach to human disease. Nat. Rev. Genet. 12 (1), 56–68.
+- Chan, K., Hu, X.-Y., Razmovski-Naumovski, V., Robinson, N., 2015. Challenges and opportunities of integrating traditional Chinese medicine into mainstream medicine: a review of the current situation. Eur. J. Integr. Med. 7 (1), 67–75.
+- Chen, Y.-l., Zhao, C., Zhang, L., Li, B., Wu, C.-h., Mu, W., Wang, J.-y., Yang, K.-h., Li, Y.-p., Chen, C., Wang, Y.-y., Wang, C., Bian, Z.-x., Shang, H.-c., 2018a. Toward evidence-based Chinese medicine: Status Quo, opportunities and challenges. Chin. J. Integr. Med. 24 (3), 163–170.
+- Chen, Z., Zhang, C., Gao, F., Fu, Q., Fu, C., He, Y., Zhang, J., 2018b. A systematic review on the rhizome of Ligusticum chuanxiong Hort. (Chuanxiong). Food Chem. Toxicol. 119, 309–325.
+- Cheng, T.O., 2006. Danshen: a versatile Chinese herbal drug for the treatment of coronary heart disease. Int. J. Cardiol. 113 (3), 437–438.
+- Cheng, T.O., 2007. Cardiovascular effects of Danshen. Int. J. Cardiol. 121 (1), 9–22.
+- Consortium, T.U., 2018. UniProt: a worldwide hub of protein knowledge. Nucleic Acids Res. 47 (D1), D506–D515.
+- Delaney, J.S., 1996. Assessing the ability of chemical similarity measures to discriminate between active and inactive compounds. Mol. Divers. 1 (4), 217–222.
+- Dunn, W.B., Broadhurst, D., Begley, P., Zelena, E., Francis-McIntyre, S., Anderson, N., Brown, M., Knowles, J.D., Halsall, A., Haselden, J.N., Nicholls, A.W., Wilson, I.D., Kell, D.B., Goodacre, R., 2011. Procedures for large-scale metabolic profiling of serum and plasma using gas chromatography and liquid chromatography coupled to mass spectrometry. Nat. Protoc. 6 (7), 1060–1083.
+- Geng, L., Yubo, G., Wenshan, L., Sen, L., Rui, Z., Huanhuan, W., Sanyang, Q., Xiaojiao, D., Zhenkun, L., Xiumei, Z., Hongjun, Y., 2020. Summary of competitiveness report on science and Technology of big brand traditional Chinese medicine (2019 edition). Mod. Chin. Med. 1–20.
+- Huang, L., Xie, D., Yu, Y., Liu, H., Shi, Y., Shi, T., Wen, C., 2018. TCMID 2.0: a comprehensive resource for TCM. Nucleic Acids Res. 46 (D1), D1117–D1120.
+- Hur, Y.G., Yun, Y.D., Won, J.W., 2004. Rosmarinic acid induces p56(lck)-dependent apoptosis in Jurkat and peripheral T cells via mitochondrial pathway independent from Fas/Fas ligand interaction. J. Immunol. 172 (1), 79–87.
+- Jelic, D., Mildner, B., Kostrun, S., Nujic, K., Verbanac, D., Culic, O., Antolovic, R., Brandt, W., 2007. Homology modeling of human Fyn kinase structure: discovery of rosmarinic acid as a new Fyn kinase inhibitor and in silico study of its possible binding modes. J. Med. Chem. 50 (6), 1090–1100.
+- Keiser, M.J., Roth, B.L., Armbruster, B.N., Ernsberger, P., Irwin, J.J., Shoichet, B.K., 2007. Relating protein pharmacology by ligand chemistry. Nat. Biotechnol. 25 (2), 197–206.
+- Kim, D.H., Paudel, P., Yu, T., Ngo, T.M., Kim, J.A., Jung, H.A., Yokozawa, T., Choi, J.S., 2017. Characterization of the inhibitory activity of natural tanshinones from Salvia miltiorrhiza roots on protein tyrosine phosphatase 1B. Chem. Biol. Interact. 278, 65–73.
+- Kim, H.H., Kim, J.H., Kwak, H.B., Huang, H., Han, S.H., Ha, H., Lee, S.W., Woo, E.R., Lee, Z.H., 2004. Inhibition of osteoclast differentiation and bone resorption by tanshinone IIA isolated from Salvia miltiorrhiza Bunge. Biochem. Pharmacol. 67 (9), 1647–1656.
+- Kim, S., Chen, J., Cheng, T., Gindulyte, A., He, J., He, S., Li, Q., Shoemaker, B.A., Thiessen, P.A., Yu, B., Zaslavsky, L., Zhang, J., Bolton, E.E., 2019. PubChem 2019 update: improved access to chemical data. Nucleic Acids Res. 47 (D1), D1102–D1109.
+- Kong, X., Zhou, W., Wan, J.B., Zhang, Q., Ni, J., Hu, Y., 2015. An integrative thrombosis network: visualization and topological analysis. Evid. Based Complement. Alternat. Med. 2015, 265303.
+- Lai, X., Wang, X., Hu, Y., Su, S., Li, W., Li, S., 2020. Editorial: Network Pharmacology and Traditional Medicine, vol. 11, 1194.
+- Lee, M.H., Son, Y.K., Han, Y.N., 2004. Tissue factor inhibitory sesquiterpene glycoside from Eriobotrya japonica. Arch Pharm. Res. (Seoul) 27 (6), 619–623.
+- Leenders, J., Frédérich, M., de Tullio, P., 2015. Nuclear magnetic resonance: a key metabolomics platform in the drug discovery process. Drug Discov. Today Technol. 13, 39–46.
+- Li, P., Xu, G., Li, S.P., Wang, Y.T., Fan, T.P., Zhao, Q.S., Zhang, Q.W., 2008. Optimizing ultraperformance liquid chromatographic analysis of 10 diterpenoid compounds in Salvia miltiorrhiza using central composite design. J. Agric. Food Chem. 56 (4), 1164–1171.
+- Li, S., 2015. Mapping ancient remedies: applying a network approach to traditional Chinese medicine. Science 350 (6262), S72–S74.
+- Li, S., Le, W., 2021. Parkinson's disease in traditional Chinese medicine. Lancet Neurol. 20 (4).
+- Li, S., Wang, Y.Y., Ji, L., Li, Y.D., 2002. A discussion and case study of complexities in traditional Chinese medicine. J. Syst. Simul. 14, 1439–1442.
+- Li, S.L., Chan, S.S., Lin, G., Ling, L., Yan, R., Chung, H.S., Tam, Y.K., 2003. Simultaneous analysis of seventeen chemical ingredients of Ligusticum chuanxiong by on-line high performance liquid chromatography-diode array detector-mass spectrometry. Planta Med. 69 (5), 445–451.
+- Liu, C.X., 2016a. Recognizing healthy development of Chinese medicine industry from resources-quality-quality markers of Chinese medicine. Chin. Tradit. Herb. Drugs 47 (18), 3149–3154.
+- Liu, C.X., Chen, S.L., Xiao, X.H., Zhang, T.J., Hou, W.B., Liao, M.L., 2016b. A new concept on quality marker of Chinese materia medica: quality control for Chinese medicinal products. Chin. Tradit. Herb. Drugs 47 (9), 1443–1457.
+- Liu, P., Yang, H., Long, F., Hao, H.P., Xu, X., Liu, Y., Shi, X.W., Zhang, D.D., Zheng, H.C., Wen, Q.Y., Li, W.W., Ji, H., Jiang, X.J., Zhang, B.L., Qi, L.W., Li, P., 2014. Bioactive equivalence of combinatorial components identified in screening of an herbal medicine. Pharm. Res. 31 (7), 1788–1800.
+- Liu, Y.S., Xu, X.P., Tang, H., Pan, Y.C., Hu, B., Huang, G.D., 2021. Rosmarinic acid inhibits cell proliferation, migration, and invasion and induces apoptosis in human glioma cells. Int. J. Mol. Med. 47 (5).
+- Ma, L., Lei, Q.L., Su, Q., 2020. Network pharmacology approach to determine active compounds and potential targets associated with the anti-abortion effects of scutellariae radix. World J. Tradit. Chin. Med. 6 (3), 341–352.
+- Ma, Y.M., Zhang, X.Z., Su, Z.Z., Li, N., Cao, L., Ding, G., Wang, Z.Z., Xiao, W., 2015. Insight into the molecular mechanism of a herbal injection by integrating network pharmacology and in vitro. J. Ethnopharmacol. 173, 91–99.
+- McEwen, B.J., 2015. The influence of herbal medicine on platelet function and coagulation: a narrative review. Semin. Thromb. Hemost. 41 (3), 300–314.
+- Meng, Y., Ding, X., Bi, C., Guo, S., 2000. Reflection on integrated traditional Chinese and western medicine inspired by the tiny effect of single component in the decoction. J. Beijing Univ. Tradit. Chin. Med. 6–7.
+- Ren, J., Zhang, A., Kong, L., Wang, X., 2018. Advances in mass spectrometry-based metabolomics for investigation of metabolites. RSC Adv. 8 (40), 22335–22350.
+- Ren, J.L., Zhang, A.H., Kong, L., Han, Y., Yan, G.L., Sun, H., Wang, X.J., 2020. Analytical strategies for the discovery and validation of quality-markers of traditional Chinese medicine. Phytomedicine 67, 153165.
+- Ru, J., Li, P., Wang, J., Zhou, W., Li, B., Huang, C., Li, P., Guo, Z., Tao, W., Yang, Y., Xu, X., Li, Y., Wang, Y., Yang, L., 2014. TCMSP: a database of systems pharmacology for drug discovery from herbal medicines. J. Cheminf. 6, 13.
+- Shannon, P., Markiel, A., Ozier, O., Baliga, N.S., Wang, J.T., Ramage, D., Amin, N., Schwikowski, B., Ideker, T., 2003. Cytoscape: a software environment for integrated models of biomolecular interaction networks. Genome Res. 13 (11), 2498–2504.
+- Shaoqing, C., Xuan, W., Mingying, S., Feng, X., Guangxue, L., 2015. "Efficacy Theory" may help to explain characteristic advantages of traditional Chinese medicines. China J. Chin. Mater. Med. 40 (17), 3435–3443.
+- Sperl, B., Seifert, M.H.J., Berg, T., 2009. Natural product inhibitors of protein-protein interactions mediated by Src-family SH2 domains. Bioorg. Med. Chem. Lett. 19 (12), 3305–3309.
+- Spirin, V., Mirny, L.A., 2003. Protein complexes and functional modules in molecular networks. Proc. Natl. Acad. Sci. U. S. A. 100 (21), 12123–12128.
+- Sun, H., Li, X., Zhang, A., Zhang, K., Yan, G., Han, Y., Wu, F., Wang, X., 2019. Exploring potential biomarkers of coronary heart disease treated by Jing Zhi Guan Xin Pian using high-throughput metabolomics. RSC Adv. 9 (20), 11420–11432.
+- Wang, S., Hu, Y., Tan, W., Wu, X., Chen, R., Cao, J., Chen, M., Wang, Y., 2012. Compatibility art of traditional Chinese medicine: from the perspective of herb pairs. J. Ethnopharmacol. 143 (2), 412–423.
+- Won, J., Hur, Y.G., Hur, E.M., Park, S.H., Kang, M.A., Choi, Y., Park, C., Lee, K.H., Yun, Y., 2003. Rosmarinic acid inhibits TCR-induced T cell activation and proliferation in an Lck-dependent manner. Eur. J. Immunol. 33 (4), 870–879.
+- Wu, X., Zhang, H., Fan, S., Zhang, Y., Yang, Z., Fan, S., Zhuang, P., Zhang, Y., 2018. Quality markers based on biological activity: a new strategy for the quality control of traditional Chinese medicine. Phytomedicine 44, 103–108.
+- Xu, Q., Bauer, R., Hendry, B.M., Fan, T.P., Zhao, Z., Duez, P., Simmonds, M.S.J., Witt, C.M., Lu, A., Robinson, N., Guo, D.A., Hylands, P.J., 2013. The quest for modernisation of traditional Chinese medicine. BMC Compl. Alternative Med. 13, 132.
+- Yan, R., Li, S.L., Chung, H.S., Tam, Y.K., Lin, G., 2005. Simultaneous quantification of 12 bioactive components of Ligusticum chuanxiong Hort. by high-performance liquid chromatography. J. Pharm. Biomed. Anal. 37 (1), 87–95.
+- Yang, H., Lou, C., Sun, L., Li, J., Cai, Y., Wang, Z., Li, W., Liu, G., Tang, Y., 2019. admetSAR 2.0: web-service for prediction and optimization of chemical ADMET properties. Bioinformatics 35 (6), 1067–1069.
+- Yiqun, C., Anna, C., LiChang, C., Tao, J., Thomas, G., 2008. ChemmineR: a compound mining framework for R. Bioinformatics 24 (15), 1733–1734.
+- Zhang, Q.R., Yu, H., Qi, J., Tang, D.S., Chen, X.J., Wan, J.B., Li, P., Hu, H., Wang, Y.T., Hu, Y.J., 2017. Natural formulas and the nature of formulas: exploring potential therapeutic targets based on traditional Chinese herbal formulas. PLoS One 12 (2), e0171628.
+- Zhang, Q.R., Zhong, Z.F., Sang, W., Xiong, W., Tao, H.X., Zhao, G.D., Li, Z.X., Ma, Q.S., Tse, A.K.W., Hu, Y.J., Yu, H., Wang, Y.T., 2019. Comparative comprehension on the anti-rheumatic Chinese herbal medicine Siegesbeckiae Herba: combined computational predictions and experimental investigations. J. Ethnopharmacol. 228, 200–209.
+- Zhang, Y., Sun, W., Yang, Z., Liang, Y., Zhou, W., Tang, L., 2017. Hemostatic chemical constituents from natural medicine Toddalia asiatica root bark by LC-ESI Q-TOF MS (E). Chem. Cent. J. 11 (1), 55.
+- Zhang, Y.Q., Mao, X., Guo, Q.Y., Lin, N., Li, S., 2016. Network pharmacology-based approaches capture essence of Chinese herbal medicines. Chin. Herb. Med. 8 (2), 107–116.
+- Zhang, Z.Q., Chen, A.P., Yu, T., Yang, S.J., Yu, D.S., Yang, R., Chai, X.L., 2021. Exploring the pharmacological mechanism of danhe granules against hyperlipidemia by means of network pharmacology and verified by preliminary experiments. World J. Tradit. Chin. Med. 7 (4), 436–444.
+- Zhong, G.X., Li, P., Zeng, L.J., Guan, J., Li, D.Q., Li, S.P., 2009. Chemical characteristics of Salvia miltiorrhiza (Danshen) collected from different locations in China. J. Agric. Food Chem. 57 (15), 6879–6887.
+- Zuo, H.L., Zhang, Q.R., Su, S.B., Chen, Q.L., Yang, F.Q., Hu, Y.J., 2018. A network pharmacology-based approach to analyse potential targets of traditional herbal formulas: an example of Yu Ping Feng decoction. Sci. Rep. 8 (1), 11418.
+
 ## 訳者補足
 
 - **本論文の位置づけ**: 分析法の開発・バリデーション（検量線・LOD/LOQ・回収率など）そのものが主題ではなく、「複雑な生薬（薬対）のQCマーカーを、化合物の構造類似性と疾患の機能経路の“二層ネットワーク”で論理的に選定する」という**方法論の提案**が主眼。HPLC のバリデーション詳細は補足資料にあり本体PDFには含まれないため、本稿では条件（カラム・移動相・グラジエント等）のみを訳出し、定量バリデーション数値は「原文（補足資料）参照」とした。
