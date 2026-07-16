@@ -278,6 +278,52 @@ Table 4 は MMDHP の ECFP の8特徴パラメータを記録したものであ�
 
 本論文では、20の MMDHP の TWFFP を確立し、従来の単一波長分析の欠点を克服して、サンプルの品質を包括的に解析できるようにした。PCA と SQFM により、サンプルの全体品質を定性・定量の両面から判別・評価した。次に HCA で SQFM の信頼性を検証し、あわせて PCA の実用性を側面から裏づけた。SQFM と QAMS を組み合わせ、MMDHP 中の4つの Q-marker の包括的・正確な定量決定を達成した。ECFP は複雑な前処理なしで構築され、TCM 複方製剤に豊富で定量可能な情報を提供した。ECFP のサンプル判別能を探るため、電気化学的なシグネチャー読み値を用いて HCA 解析を行った。peak-IC₅₀ および peak-P_m の指紋-薬効相関図を描き、ABTS と ECFP の評価結果に対する TWFFP 指紋ピークの寄与を議論した。いずれもサンプル中の有効成分を予測する良好な能力を示し、生物活性化合物の予測に良い方向性を提供した。最も重要なことに、本研究で提案した手法は、MMDHP の全体的な化学組成を定性・定量に評価できるだけでなく、TCM とその複方製剤の品質に対する革新的な電気化学的積分手法も提供した。最終的に、TCM の品質と有効性のデュアルコントロールを実現し、信頼できる考え方を提示した。
 
+## 参考文献
+
+1. H. Zhu, Y. Qiu, D. Gong, J. Wang, G. Sun, A novel method for quality consistency evaluation of Yankening Tablet by multi-wavelength fusion profiling combined with overall components dissolution method and antioxidant activity analysis, J. Pharm. Biomed. Anal. 196 (2021) 113910. https://doi.org/10.1016/j.jpba.2021.113910
+
+2. L. Tao, Q. Zhang, Y. Wu, X. Liu, Quality evaluation of moluodan concentrated pill using high-performance liquid chromatography fingerprinting coupled with chemometrics, J. Sep. Sci. 39 (2016) 4673–4680. https://doi.org/10.1002/jssc.201600895
+
+3. X. Li, F. Zhang, Y. Shi, B. Bao, G. Sun, Assessing the quality consistency of Rong'e Yishen oral liquid by five-wavelength maximization profilings and electrochemical fingerprints combined with antioxidant activity analyses, Anal. Chim. Acta 1192 (2022) 339348. https://doi.org/10.1016/j.aca.2021.339348
+
+4. F. Yang, G. Sun, J. Chen, Development of a HPLC-DAD method combined with multicomponent chemometrics and antioxidant capacity to monitor the quality consistency of compound bismuth aluminate tablets by comprehensive quantified fingerprint method, Anal. Methods 9 (2017) 4082–4090. https://doi.org/10.1039/c7ay00916j
+
+5. D. Gong, J. Chen, Y. Sun, X. Liu, G. Sun, Multiple wavelengths maximization fusion fingerprint profiling for quality evaluation of compound liquorice tablets and related antioxidant activity analysis, Microchem. J. 160 (2021) 105671. https://doi.org/10.1016/j.microc.2020.105671
+
+6. Y.L.T. Zhang, B. Yuan, F. Ding, Y. Zhang, M. Wei, Determining method and conditional factors of electrochemical fingerprint of Chinese traditional medicine, Chin. Sci. Bull. 16 (2007) 2190–2202.
+
+7. Y. Yang, Study on electrochemical fingerprints of Xiao Huo Luo pills from different manufacturers, Heilongjiang Med. Pharm. 43 (2020) 83–84.
+
+8. M. Lu, Determination of loganin, paeoniflorin and paeonol in Mingmu Dihuang pills by HPLC, J. Kunming Univ. 42 (2020) 99–104. https://doi.org/10.14091/j.cnki.kmxyxb.2020.03.021
+
+9. X. Lei, Y. Su, M. Li, H. Gui, Research progress of loganin and morroniside from cornel iridoid glycosides, Shanghai J. Tradit. Chin. Med. 52 (2018) 104–108. https://doi.org/10.16305/j.1007-1334.2018.01.030
+
+10. J. Lu, Y. Xu, W. Cui, D. Guo, Comparative analysis of peony bark content of Mingmu Dihuang pills from different manufacturers, China Foreign Med. Treat. 31 (2012) 74. https://doi.org/10.16662/j.cnki.1674-0742.2012.10.017
+
+11. Q. Cheng, B. Chen, Determination of Paeonol in Mingmu Dihuang Pills (concentrated pills) by HPLC, Herald Med. 31 (2012) 630–632.
+
+12. W. Cui, Y. Du, Y. He, Comparative analysis of paeoniflorin content in Mingmu Dihuang pills from different manufacturers, China Heal. Ind. 8 (2021) 54–56. https://doi.org/10.16659/j.cnki.1672-5654.2011.z6.021
+
+13. X. Li, L. Lan, D. Gong, G. Sun, P. Guo, Evaluating quality consistency of Mingmu Dihuang Pill by 3 kinds of quantum fingerprint combined with anti-oxidation profiling, Microchem. J. 175 (2022) 107195. https://doi.org/10.1016/j.microc.2022.107195
+
+14. G. Sun, J. Zhang, Identification of the authentic quality of Longdanxiegan pill by systematic quantified fingerprint method based on three wavelength fusion chromatogram, Chinese Journal of Chromatography 27 (2009) 318–322.
+
+15. M. Shi, G. Sun, Integrated evaluation of HPLC and UV fingerprints for the quality control of Danshen tablet by systematic quantified fingerprint method combined with antioxidant activity, J. Sep. Sci. 40 (2017) 1942–1952. https://doi.org/10.1002/jssc.201601330
+
+16. X. Wang, X. Liu, J. Wang, G. Wang, Y. Zhang, L. Lan, G. Sun, Study on multiple fingerprint profiles control and quantitative analysis of multi-components by single marker method combined with chemometrics based on Yankening tablets, Spectrochim. Acta A Mol. Biomol. Spectrosc. 253 (2021) 119554. https://doi.org/10.1016/j.saa.2021.119554
+
+17. H. Yan, G. Sun, W. Sun, L. Lan, X. Li, D. Pu, Y. Hu, J. Jia, Z. Chen, Quantitative fingerprints combined with multi-marker assay by monolinear method for consistency evaluation of traditional Chinese medicine, Central South Pharm. 19 (2021) 2237–2244.
+
+18. C. Su, C. Li, K. Sun, W. Li, R. Liu, Quantitative analysis of bioactive components in walnut leaves by UHPLC-Q-Orbitrap HRMS combined with QAMS, Food Chem. 331 (2020) 127180. https://doi.org/10.1016/j.foodchem.2020.127180
+
+19. J. Zhang, D. Gong, L. Lan, Z. Zheng, X. Pang, P. Guo, G. Sun, Comprehensive evaluation of Loblolly fruit by high performance liquid chromatography four wavelength fusion fingerprint combined with gas chromatography fingerprinting and antioxidant activity analysis, J. Chromatogr. A 1665 (2022) 462819. https://doi.org/10.1016/j.chroma.2022.462819
+
+20. Y. Sun, D. Gong, G. Sun, Quality monitoring and evaluation of powdered Poppy capsule extractive by multiple wavelengths matching average fusion chromatographic fingerprint combined with electrochemical fingerprint, Microchem. J. 169 (2021) 106516. https://doi.org/10.1016/j.microc.2021.106516
+
+21. J. Chen, D. Gong, X. Liu, G. Sun, W. Sun, Quality and antioxidant activity evaluation of dandelion by HPLC with five-wavelength fusion fingerprint, New J. Chem. 45 (2021) 9856–9863. https://doi.org/10.1039/d1nj01422f
+
+22. J. Bai, C. Wu, D. Zhong, D. Xu, Q. Wang, X. Zeng, Hierarchical cluster analysis of cytokine profiles reveals a cutaneous vasculitis-associated subgroup in dermatomyositis, Clin. Rheumatol. 40 (2021) 999–1008. https://doi.org/10.1007/s10067-020-05339-2
+
 ## 訳者補足
 
 - **この論文の位置づけ**: 本研究は瀋陽薬科大学 Guoxiang Sun らのグループによる一連の「多波長融合指紋＋電気化学指紋＋抗酸化」研究（参考文献 [1][3][4][5][19][20][21] など）の系譜にある。特徴は、(1) HPLC の複数波長を1本に融合する **TWFFP**、(2) 前処理不要で全成分を反映する **ECFP（B-Z 振動）**、(3) 生物活性としての **ABTS 抗酸化**、を組み合わせ、これらを **SQFM の Sm（定性）・Pm（定量）**という共通のものさしで採点する点にある。
