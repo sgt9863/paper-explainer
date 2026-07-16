@@ -258,6 +258,80 @@ NOCバッチでは大きな運転上の問題が発生しなかったため、�
 
 著者らは、本論文で報告した研究に影響を与えたと見なされうる既知の競合する財務的利害や個人的関係はないと宣言する。本研究は、浙江省自然科学基金（LGC19B050002）、麗水市科学技術計画（2020GYX05）、「重大新薬創製」国家科学技術重大特別プロジェクト（2018ZX09201010）の財政的支援を受けた。
 
+## 参考文献
+
+1. FDA, Guidance for Industry, PAT: A Framework for Innovative Pharmaceutical Development, Manufacturing and Quality Assurance, 2004.
+
+2. ICH, ICH Harmonised Tripartite Guideline: Pharmaceutical Development Q8 (R2), 2009.
+
+3. ICH, ICH Quality Implementation Working Group Points to Consider (R2): ICH-Endorsed Guide for ICH Q8/Q9/Q10 Implementation, 2011.
+
+4. EMA, Guideline on Real Time Release Testing (formerly Guideline on Parametric Release), 2012.
+
+5. Li, Y.R.; Liu, B.W.; Geng, S.; Kim, S.C.; Jin, Y.; Liu, X.S.; Luan, L.J.; Wu, Y.J.; Chen, Y. An approach combining real-time release testing with near-infrared spectroscopy to improve quality control efficiency of Rhizoma paridis, Spectrochim. Acta A Mol. Biomol. Spectrosc. 157 (2016) 186–191. https://doi.org/10.1016/j.saa.2016.01.001
+
+6. Liu, X.; Tao, L.; Du, W.; Jin, Y.; Wu, Y. Quality control of Ginkgo biloba leaves by real time release testing in combination with near infrared spectroscopy, J. Near Infrared Spectrosc. 23 (6) (2015) 381–389. https://doi.org/10.1255/jnirs.1187
+
+7. Zhang, S.; Ma, H.; Pan, H.; Shao, Q.; Liu, X.; Wu, Y. Quantitative real-time release testing of rhubarb based on near-infrared spectroscopy and method validation, Vib. Spectrosc. 104 (2019) 102964. https://doi.org/10.1016/j.vibspec.2019.102964
+
+8. Liu, X.S.; Zhang, S.Y.; Zhao, M.Q.; Wang, J.; Li, Y.R.; Dai, J.; Teng, C.Z.; Ke, X.; Chen, Y.; Wu, Y.J. The prediction of baicalin content in the extraction process of Scutellaria baicalensis by near-infrared spectroscopy combined with different variable selection methods, Acta Pharm. Sin. 54 (2019) 138–143.
+
+9. Tao, L.; Li, W.; Jin, Y.; Yang, Y.; Wu, Y.; Liu, X. Application of near-infrared spectroscopy combined with chemometrics for online monitoring of Moluodan extraction, J. Chemom. 32 (5) (2018) e2979. https://doi.org/10.1002/cem.2979
+
+10. Yang, Y.; Wang, L.; Wu, Y.J.; Liu, X.S.; Bi, Y.; Xiao, W.; Chen, Y. On-line monitoring of extraction process of Flos Lonicerae Japonicae using near infrared spectroscopy combined with synergy interval PLS and genetic algorithm, Spectrochim. Acta A Mol. Biomol. Spectrosc. 182 (2017) 73–80. https://doi.org/10.1016/j.saa.2017.04.004
+
+11. Jin, Y.; Yang, K.; Chen, M.Z.; Liu, X.S.; Chen, Y.; Long, C.F.; Wu, Y.J. In-line monitoring of blending process of Zhongsheng Wan powder using miniature Near-infrared analyzer, China J. Chin. Mater. Med. 21 (2011) 2963–2966.
+
+12. Chen, X.Y.; Chen, Y.; Wang, L.H.; Sun, C.H.; Liu, X.S. Fast determination of multiple quality control indexes for concentrating process of Carthamus tinctorius L. alcohol sedimentation solution by NIRS, Chin. J. Pharm. Anal. 30 (2010) 2086–2092.
+
+13. Huang, H.; Qu, H. In-line monitoring of alcohol precipitation by near-infrared spectroscopy in conjunction with multivariate batch modeling, Anal. Chim. Acta 707 (1-2) (2011) 47–56. https://doi.org/10.1016/j.aca.2011.09.031
+
+14. Jin, Y.; Wu, Z.Z.; Liu, X.S.; Wu, Y.J. Near infrared spectroscopy in combination with chemometrics as a process analytical technology (PAT) tool for on-line quantitative monitoring of alcohol precipitation, J. Pharm. Biomed. Anal. 77 (2013) 32–39. https://doi.org/10.1016/j.jpba.2013.01.012
+
+15. Wang, Y.; Wen, J.; Zheng, W.; Zhao, L.; Fu, X.; Wang, Z.; Xiong, Z.; Li, F.; Xiao, W. Simultaneous determination of neochlorogenic acid, chlorogenic acid, cryptochlorogenic acid and geniposide in rat plasma by UPLC-MS/MS and its application to a pharmacokinetic study after administration of Reduning injection, Biomed. Chromatogr. 29 (1) (2015) 68–74. https://doi.org/10.1002/bmc.3241
+
+16. Shang, X.; Pan, H.; Li, M.; Miao, X.; Ding, H. Lonicera japonica Thunb.: ethnopharmacology, phytochemistry and pharmacology of an important traditional Chinese medicine, J. Ethnopharmacol. 138 (1) (2011) 1–21. https://doi.org/10.1016/j.jep.2011.08.016
+
+17. Wu, Y.; Jin, Y.; Ding, H.; Luan, L.; Chen, Y.; Liu, X. In-line monitoring of extraction process of scutellarein from Erigeron breviscapus (vant.) Hand-Mazz based on qualitative and quantitative uses of Near-infrared spectroscopy, Spectrochim. Acta A Mol. Biomol. Spectrosc. 79 (5) (2011) 934–939. https://doi.org/10.1016/j.saa.2011.03.056
+
+18. Wu, Y.J.; Jin, Y.; Li, Y.R.; Sun, D.; Liu, X.S.; Chen, Y. NIR spectroscopy as a process analytical technology (PAT) tool for on-line and real-time monitoring of an extraction process, Vib. Spectrosc. 58 (2012) 109–118. https://doi.org/10.1016/j.vibspec.2011.10.006
+
+19. Tracy, N.D.; Young, J.C.; Mason, R.L. Multivariate Control Charts for Individual Observations, J. Qual. Technol. 24 (2) (1992) 88–95. https://doi.org/10.1080/00224065.1992.12015232
+
+20. Chinese Pharmacopoeia Commission, Pharmacopoeia of People's Republic of China, Vol. IV, China Medical Science and Technology Press, Beijing, 2020.
+
+21. Jin, Y.; Wu, Y.J.; Liu, X.S.; Chen, Y. Rapid and quantitative determination of multiple quality indicators (indole alkaloids, etc.) in concentration process of Bufo bufo gargarizans Cantor extract using Fourier transform near infrared spectroscopy and chemometrics, Chin. Pharm. J. 47 (2012) 712–717.
+
+22. Pan, J.; Shao, J.; Qu, H.; Gong, X. Ethanol precipitation of Codonopsis Radix concentrate with a membrane dispersion micromixer, J. Cleaner Prod. 251 (2020) 119633. https://doi.org/10.1016/j.jclepro.2019.119633
+
+23. Adams, M.J. Chemometrics in Analytical Spectroscopy, second ed., Royal Society of Chemistry, Cambridge, 2004.
+
+24. Næs, T.; Isaksson, T.; Fearn, T.; Davies, T. A User-Friendly Guide to Multivariate Calibration and Classification, NIR Publications, Chichester, 2002.
+
+25. Yuan, H.F. Basic Principles of Near-infrared Absorption Spectrum, in: Lu, W.Z. (Ed.), Modern Near Infrared Spectroscopy Analytical Technology, second ed., China Petrochemical Press, Beijing, 2006, pp. 29–31.
+
+26. Blanco, M.; Peguero, A. An expeditious method for determining particle size distribution by near infrared spectroscopy: Comparison of PLS2 and ANN models, Talanta 77 (2) (2008) 647–651. https://doi.org/10.1016/j.talanta.2008.07.015
+
+27. Blanco, M.; Coello, J.; Iturriaga, H.; Maspoch, S.; Pagès, J. NIR calibration in non-linear systems: different PLS approaches and artificial neural networks, Chemom. Intell. Lab. Syst. 50 (1) (2000) 75–82. https://doi.org/10.1016/S0169-7439(99)00048-9
+
+28. MacGregor, J.F.; Kourti, T. Statistical process control of multivariate processes, Control Eng. Pract. 3 (3) (1995) 403–414. https://doi.org/10.1016/0967-0661(95)00014-L
+
+29. Ge, Z.Q.; Song, Z.H. Multivariate Statistical Process Control: Process Monitoring Methods and Applications, Springer-Verlag, London, 2013. https://doi.org/10.1007/978-1-4471-4513-4
+
+30. Chen, H.L. In-line Quality Control of Extraction and Column Chromatographic Process of Ginkgo Biloba, Zhejiang University, Hangzhou, 2015.
+
+31. Shewhart, W.A. Economic Control of Quality of Manufactured Product, Van Nostrand, New York, 1931.
+
+32. Conzen, J.P. Multivariate Calibration: A Practical Guide for Developing Methods in the Quantitative Analytical Chemistry, Bruker Optik, Germany, 2003.
+
+33. Xue, J.T.; Shi, Y.L.; Ye, L.M.; Yang, Q.W.; Li, C.Y.; Chen, X.Y.; Jing, Y. Near-infrared spectroscopy for rapid and simultaneous determination of five main active components in rhubarb of different geographical origins and processing, Spectrochim. Acta A Mol. Biomol. Spectrosc. 205 (2018) 419–427. https://doi.org/10.1016/j.saa.2018.07.055
+
+34. Jintao, X.; Quanwei, Y.; Chunyan, L.; Yun, J.; Shuangxi, W.; Mingxiang, Z.; Peng, L. Rapid and simultaneous determination of three active components in raw and processed root samples of Scutellaria baicalensis by near-infrared spectroscopy, Planta Med. 85 (01) (2019) 72–80. https://doi.org/10.1055/a-0655-2211
+
+35. Siesler, H.W. Basic Principles of Near-Infrared Spectroscopy, in: Burns, D.A.; Ciurczak, E.W. (Eds.), Handbook of Near-Infrared Analysis, third ed., CRC Press, New York, 2008, pp. 7–18.
+
+36. Mishra, P.; Woltering, E.; Brouwer, B.; Hogeveen-van Echtelt, E. Improving moisture and soluble solids content prediction in pear fruit using near-infrared spectroscopy with variable selection and model updating approach, Postharvest Biol. Technol. 171 (2021) 111348. https://doi.org/10.1016/j.postharvbio.2020.111348
+
 ## 訳者補足
 
 - **この論文の新規性はどこか**: 従来のNIR×PATによる中薬工程監視の多くは実験室／パイロット規模だったのに対し、本研究は**工業スケール（3トン濃縮缶6基）**でのオンライン監視を実現し、さらに**RTRT（リアルタイムリリース試験）の概念を中薬製造に初めて持ち込んだ**点にある。分析法の開発ではなく「工程を測りながら出荷判定する仕組み」を作った、GMP／規制寄りの研究。
