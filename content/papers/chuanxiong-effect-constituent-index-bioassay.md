@@ -44,13 +44,13 @@ Li et al., J. Pharm. Biomed. Anal. 233 (2023) 115455 の全訳密度日本語版
 
 ## 1. 序論（Introduction）
 
-脳卒中・心筋梗塞などの虚血性イベントを含む心血管疾患は、世界の死亡・罹病の主因である。急性心血管イベントは主に血栓症で起き、血小板の活性化・凝集が血栓症の病理過程で重要な役割を果たす。アセチルサリチル酸（アスピリン）やクロピドグレルによる抗血小板療法が二次予防の主要手段だが、出血リスクの副作用が避けられない。この課題が、副作用を避けるためTCMから血栓症治療の天然化合物を同定する努力を動機づけた。TCMは心血管疾患予防に広く使われ、多標的の利点を持つ。
+脳卒中・心筋梗塞などの虚血性イベントを含む心血管疾患は、世界の死亡・罹病の主因である[1]。急性心血管イベントは主に血栓症で起き、血小板の活性化・凝集が血栓症の病理過程で重要な役割を果たす。アセチルサリチル酸（アスピリン）やクロピドグレルによる抗血小板療法が二次予防の主要手段だが、出血リスクの副作用が避けられない[2]。この課題が、副作用を避けるためTCMから血栓症治療の天然化合物を同定する努力を動機づけた。TCMは心血管疾患予防に広く使われ、多標的の利点を持つ[3]。
 
-川芎は『神農本草経』に「血瘀証」に関連する各種疼痛疾患の治療で初めて記載された。Ligusticum chuanxiong Hort.（セリ科）の乾燥根に由来し中国薬典に収載。良好な血行促進が見出され、狭心症・脳卒中などの心血管障害の治療薬として主に処方される。さらに川芎は血小板抑制効果を持つと報告されている。したがって、その品質評価・真贋鑑別・効能保証の問題が広く注目を集めている。
+川芎は『神農本草経』に「血瘀証」に関連する各種疼痛疾患の治療で初めて記載された。Ligusticum chuanxiong Hort.（セリ科）の乾燥根に由来し中国薬典に収載[4]。良好な血行促進が見出され、狭心症・脳卒中などの心血管障害の治療薬として主に処方される[5]。さらに川芎は血小板抑制効果を持つと報告されている[6,7]。したがって、その品質評価・真贋鑑別・効能保証の問題が広く注目を集めている。
 
-現在、クロマト指紋がTCM評価の主要な品質管理法である。**フェルラ酸が中国薬典で川芎生薬・川芎系製品の主要品質管理マーカーとして使われている**。しかしフェルラ酸は当帰・酸棗仁・玉ねぎ・リンゴ種子・トウモロコシなど薬用・非薬用の両植物に広く存在する。生薬は通常、生物活性成分に富むため、フェルラ酸だけでは明確に同定できない。さらにTCMの同一性を判定し治療効果の一貫性を確保する品質管理法には技術的課題がある。したがって臨床効能の観点で川芎品質を評価するのは困難で、生薬品質をよりよく管理するには高感度で簡便な生物学的方法が必要である。
+現在、クロマト指紋がTCM評価の主要な品質管理法である。**フェルラ酸が中国薬典で川芎生薬・川芎系製品の主要品質管理マーカーとして使われている**[21]。しかしフェルラ酸は当帰・酸棗仁・玉ねぎ・リンゴ種子・トウモロコシなど薬用・非薬用の両植物に広く存在する[8–11]。生薬は通常、生物活性成分に富むため、フェルラ酸だけでは明確に同定できない。さらにTCMの同一性を判定し治療効果の一貫性を確保する品質管理法には技術的課題がある。したがって臨床効能の観点で川芎品質を評価するのは困難で、生薬品質をよりよく管理するには高感度で簡便な生物学的方法が必要である。
 
-効果-成分指数（ECI）は効能連動型のTCM品質管理法である。ECIは、TCM全体の効能を反映するため、相対的生物活性係数を用いて効果ベースで校正した活性成分含量の合計と定義される。ECIは化学分析の精度という技術的利点と、効能・安全性に関連する生物効力評価を統合し、化学成分検出を通じて臨床効能連動型のTCM品質を判定できる。ECIはこれまで黄連・丹参・附子・大黄・青黛・黄耆などの生薬品質評価に適用されてきた。
+効果-成分指数（ECI）は効能連動型のTCM品質管理法である[12]。ECIは、TCM全体の効能を反映するため、相対的生物活性係数を用いて効果ベースで校正した活性成分含量の合計と定義される。ECIは化学分析の精度という技術的利点と、効能・安全性に関連する生物効力評価を統合し、化学成分検出を通じて臨床効能連動型のTCM品質を判定できる[13]。ECIはこれまで黄連[12]・丹参[13]・附子[14]・大黄[15]・青黛[16]・黄耆[17]などの生薬品質評価に適用されてきた。
 
 本研究では、10バッチの川芎の化学指紋をHPLCで決定。様々な産地の川芎試料の抗血小板凝集活性の差を比較する in vitro 直接バイオアッセイ法を構築。このバイオアッセイと化学指紋を統合し、相関解析とスペクトル-効果関係の特性化で川芎の抗血小板凝集品質マーカーに関する未解決問題に取り組んだ。さらに検証実験で川芎抗血小板凝集品質マーカーの精度を評価。最後にECIを確立して異なる産地の試料の川芎品質を評価した。
 
@@ -98,6 +98,8 @@ $$\mathrm{ECI} = \sum_{i=1}^{n} (F_i \times C_i)$$
 
 HCA（Fig.1D）で2主要クラスターに分割: クラスター1（S7-9、低ピーク強度＝コールドスポット）、クラスター2（S1-S6, S10、高ピーク強度＝ホットスポット）。クラスター2の化学成分含量がクラスター1より高い。
 
+![図1. 川芎のHPLC指紋分析。(A) 混合参照標準のクロマトグラム、(B) 川芎試料S1のクロマトグラム（a=フェルラ酸・b=センキュノリドI・c=センキュノリドA・d=リグスチリド・e=n-ブチリデンフタリド）、(C) 10バッチ（S1–S10）＋参照(R)の重ね書き指紋（X1–X3は未同定共通ピーク）、(D) 8共通ピークの階層クラスタリング(HCA)ヒートマップ。クラスター1(S7–S9)は低含量、クラスター2は高含量。](assets/chuanxiong-effect-constituent-index-bioassay/fig1-hplc-fingerprint.png)
+
 **Table 1. 川芎試料の8共通ピークのピーク面積（抜粋）**
 
 | No. | 産地 | a(フェルラ酸) | b(センキュノリドI) | c(センキュノリドA) | d(リグスチリド) | e(n-ブチリデンフタリド) |
@@ -116,6 +118,10 @@ HCA（Fig.1D）で2主要クラスターに分割: クラスター1（S7-9、低
 
 抗血小板凝集の背後にある活性成分を調べるため、生物効力と8共通成分の面積値のPearson相関解析。8成分（X1, X2, フェルラ酸, センキュノリドI, X3, センキュノリドA, リグスチリド, n-ブチリデンフタリド）の相関係数はすべて有意に正相関（Fig.3）。**リグスチリドが抗血小板凝集効果に最強の相関（r=0.7303, p<0.05）**。
 
+![図2. 川芎の生物効力測定。(A) 各濃度のアセチルサリチル酸によるADP誘発血小板凝集の抑制、(B) 川芎5用量の用量依存的な凝集抑制、(C) 10バッチの生物効力（U/mg）。産地間で最大約5倍の差。](assets/chuanxiong-effect-constituent-index-bioassay/fig2-dose-response.png)
+
+![図3. 生物効力と8共通ピーク面積のPearson相関解析。8成分すべてが有意に正相関し、リグスチリド(d)が最強の相関（r=0.7303）。](assets/chuanxiong-effect-constituent-index-bioassay/fig3-correlation.png)
+
 **Table 2. 川芎試料の生物効力測定結果（抜粋）**
 
 | 試料 | 産地 | 測定生物効力PT(U/mg) | FL(%) |
@@ -131,6 +137,10 @@ HCA（Fig.1D）で2主要クラスターに分割: クラスター1（S7-9、低
 
 5既知化合物の抗血小板活性を検証（Fig.4）。5成分すべてが凝集抑制でき、**生物効力はリグスチリド＞フェルラ酸＞n-ブチリデンフタリド＞センキュノリドI＞センキュノリドA**。各化合物の生物効力を効果校正係数とし、a,b,c,d,eの測定含量に掛けた（Table 3）。式2で10バッチのECIを算出（Table 4）。**最大ECIは6.8782（S1）、最小は2.1264（S7）**。S1-S10のFi×Ci値のうち、**リグスチリド(d)が相対生物効力に最も寄与**（スペクトル-効果関係と一致）。ECIと生物効力の相関 **r=0.811**（Fig.5）で、リグスチリド単独と生物効力の相関（0.7303）より高い。
 
+![図4. 5既知化合物（フェルラ酸・センキュノリドI・n-ブチリデンフタリド・センキュノリドA・リグスチリド）の抗血小板凝集活性の検証。生物効力はリグスチリド＞フェルラ酸＞n-ブチリデンフタリド＞センキュノリドI＞センキュノリドA。](assets/chuanxiong-effect-constituent-index-bioassay/fig4-compound-validation.png)
+
+![図5. ECIと実測生物効力の相関（r=0.811）。ECIはリグスチリド単独（r=0.7303）より生物効力をよく反映する。](assets/chuanxiong-effect-constituent-index-bioassay/fig5-eci-correlation.png)
+
 **Table 4. 川芎の効果-成分指数（Fi×Ci と ECI、抜粋）**
 
 | 試料 | a | b | c | d(リグスチリド) | e | ECI |
@@ -145,19 +155,75 @@ HCA（Fig.1D）で2主要クラスターに分割: クラスター1（S7-9、低
 
 生物効力と化学成分含量に基づくFisher線形判別分析（LDA）で試料を分類。10バッチを3等級に分けた（Fig.6A）: 等級1（S1, S3, S8）、等級2（S2, S5, S10）、等級3（S4, S6, S7, S9）。3等級は互いに分離。**5成分（a,b,c,d,e）は生物効力ベースの品質水準を有意に区別できなかった**が、**ECIは3等級すべてを分類できた**（Fig.6B）。
 
+![図6. Fisher線形判別分析(LDA)による品質等級分類。(A) 生物効力＋化学成分含量による分類（等級1: S1/S3/S8、等級2: S2/S5/S10、等級3: S4/S6/S7/S9）、(B) ECIによる分類。5成分単独では品質水準を有意に区別できないが、ECIは3等級すべてを分類できる。](assets/chuanxiong-effect-constituent-index-bioassay/fig6-lda-classification.png)
+
 ## 4. 考察（Discussion）
 
 TCMの多様性と活性成分定義の不確実性のため、生薬品質管理は臨床応用に非常に重要。本研究では、10産地の川芎の化学指紋はかなり異なったが、指紋類似度は限界値0.85超で、10試料が品質的にほぼ同等に見えた。しかし共通ピーク面積RSD%は22.69〜68.09で、異なる産地の試料に化学組成の差があった。化学分析でTCM組成の多様性を検出できるが、品質・治療の一貫性保証には十分厳密でないかもしれない。
 
 2015年、米国FDAは『植物薬開発ガイダンス』草案で、TCM・植物薬品質評価に生物学的アッセイの構築が必要と示唆した。川芎は抗血小板凝集効果で知られるが、この効果に関連する品質推定バイオアッセイは未確立だった。バイオアッセイでは標準の選択が重要（最大効果が試料に近い・用量関係が有意・隣接濃度比0.5〜0.8）。予備実験後、アセチルサリチル酸を標準に選んだ（比0.7）。生物効力は10バッチで9.87〜43.69 U/mgと大きく変動。FL%<10%で平行線・直線からの偏差・精度・信頼性を満たした。したがって in vitro 抗血小板凝集バイオアッセイで川芎の活性評価と産地判別ができる。
 
-フェルラ酸が中国薬典2020で唯一の川芎品質管理マーカーとして使われるが、川芎は多成分を含むため品質・生物活性の一貫性保証に不十分。例えばS05（四川）は最低ピーク面積（81.3）、S08は最高（195.4）だが、S05の生物効力（20.18）は6位、S08（35.45）は3位——**含量順位と効力順位が一致しない**。したがって構築したバイオアッセイ法は現行の川芎品質管理法を改善できる。
+フェルラ酸が中国薬典2020で唯一の川芎品質管理マーカーとして使われるが[21]、川芎は多成分を含むため品質・生物活性の一貫性保証に不十分。例えばS05（四川）は最低ピーク面積（81.3）、S08は最高（195.4）だが、S05の生物効力（20.18）は6位、S08（35.45）は3位——**含量順位と効力順位が一致しない**。したがって構築したバイオアッセイ法は現行の川芎品質管理法を改善できる。
 
 ただしバイオアッセイは高コスト・操作性の制限・動物倫理・低精度の限界がある。化学分析はこれを補える（高精度・良操作性・低コスト）。したがってECIは両者の利点を統合し、川芎品質評価の有望戦略と証明された。ECIは生物効力ベースの品質等級を区別できたが、フェルラ酸・センキュノリドI・n-ブチリデンフタリド・センキュノリドA・リグスチリドといった単一成分は（すべて強い抗血小板活性を持つにもかかわらず）できなかった。スペクトル-効果関係でリグスチリドが川芎の抗血小板凝集に最も寄与する化合物と示され、検証実験でも同結果。しかし相関解析でリグスチリド単独より**ECIの方が生物効力とよく相関**——ECIは単一活性成分の限界を回避する。
 
 主に共通ピークに焦点を当てた（UV信号が強くPDA検出器の制限のため）。LC/MSでX1-X3をクロロゲン酸・カフェ酸・コニフェリルフェルラートと同定。他9化合物（リグストラジン・フェルラ酸・センキュノリドI・3-ブチリデンフタリド・Z-4,5-ジヒドロキシ-3-ブチリデンフタリド・センキュノリドE・センキュノリドA・リグスチリド・川リグスピロリド）も同定。クロロゲン酸・リグストラジン・カフェ酸・コニフェリルフェルラートも抗血小板効果を持つ。将来これらの生物効力・含量を測定し新ECIを開発すべき。
 
 多成分の複雑系であるTCMの品質管理は、効能・生物効果の一貫性維持と安全性・有効性確保に特に重要。単一成分・単一効能の測定は現代TCM要件を満たせない。本研究は川芎品質基準改善の基盤を築くが、臨床効能に対応する明確な効果・活性成分の解明にはさらなる科学研究が必要。
+
+## 参考文献
+
+1. Ferdinandy, P.; Andreadou, I.; Baxter, G.F.; Bøtker, H.E.; Davidson, S.M.; Dobrev, D.; Gersh, B.J.; Heusch, G.; Lecour, S.; Ruiz-Meana, M.; Zuurbier, C.J.; Hausenloy, D.J.; Schulz, R. Interaction of cardiovascular nonmodifiable risk factors, comorbidities and comedications with ischemia/reperfusion injury and cardioprotection by pharmacological treatments and ischemic conditioning. Pharmacol. Rev. 75 (2023) 159–216.
+
+2. Millesimo, M.; Elia, E.; Marengo, G.; De Filippo, O.; Raposeiras-Roubin, S.; Wanha, W.; et al. Antithrombotic strategy in secondary prevention for high-risk patients with previous acute coronary syndrome: overlap between the PEGASUS eligibility and the COMPASS eligibility in a large multicenter registry. Am. J. Cardiovasc. Drugs 23 (2023) 77–87.
+
+3. Zeng, X.; Zheng, Y.; Liu, Y.; Su, W. Chemical composition, quality control, pharmacokinetics, pharmacological properties and clinical applications of Fufang Danshen tablet: a systematic review. J. Ethnopharmacol. 278 (2021) 114310.
+
+4. Chen, Z.; Zhang, C.; Gao, F.; Fu, Q.; Fu, C.; He, Y.; Zhang, J. A systematic review on the rhizome of Ligusticum chuanxiong Hort. (Chuanxiong). Food Chem. Toxicol. 119 (2018) 309–325.
+
+5. Huajuan, J.; Xulong, H.; Bin, X.; Yue, W.; Yongfeng, Z.; Chaoxiang, R.; Jin, P. Chinese herbal injection for cardio-cerebrovascular disease: overview and challenges. Front. Pharmacol. 14 (2023) 1038906.
+
+6. Chen, C.; Wang, F.; Xiao, W.; Xia, Z.; Hu, G.; Wan, J.; Yang, F. Effect on platelet aggregation activity: extracts from 31 traditional Chinese medicines with the property of activating blood and resolving stasis. J. Tradit. Chin. Med. 37 (2017) 64–75.
+
+7. Xiao, S.L.; Ding, S.L.; Sun, Z.X.; Liao, F.L.; You, Y. Platelet function tests and Chinese medicines with antiplatelet function: a review. Zhongguo Zhong Yao Za Zhi 46 (2021) 4907–4921.
+
+8. Long, Y.; Li, D.; Yu, S.; Shi, A.; Deng, J.; Wen, J.; Li, X.Q.; Ma, Y.; Zhang, Y.L.; Liu, S.Y.; Wan, J.Y.; Li, N.; Yang, M.; Han, L. Medicine-food herb: angelica sinensis, a potential therapeutic hope for Alzheimer's disease and related complications. Food Funct. 13 (2022) 8783–8803.
+
+9. Kaur, R.; Sood, A.; Lang, D.K.; Arora, R.; Kumar, N.; Diwan, V.; Saini, B. Natural products as sources of multitarget compounds: advances in the development of ferulic acid as multitarget therapeutic. Curr. Top. Med. Chem. 22 (2022) 347–365.
+
+10. Guo, X.; Li, H.; Feng, H.; Qi, H.; Zhang, L.; Xu, W.; Wu, Y.; Wang, C.; Liang, X. Quality analysis of Ziziphi Spinosae Semen extracts based on high performance liquid chromatography quantitative fingerprint and ultra-high performance liquid chromatography-tandem mass spectrometry quantification. Se Pu 39 (2021) 989–997.
+
+11. Yuan, X.; Han, B.; Feng, Z.M.; Jiang, J.S.; Yang, Y.N.; Zhang, P.C. Chemical constituents of Ligusticum chuanxiong and their anti-inflammation and hepatoprotective activities. Bioorg. Chem. 101 (2020) 104016.
+
+12. Xiong, Y.; Hu, Y.; Li, F.; Chen, L.; Dong, Q.; Wang, J.; Gullen, E.A.; Cheng, Y.C.; Xiao, X. Promotion of quality standard of Chinese herbal medicine by the integrated and efficacy-oriented quality marker of effect-constituent Index. Phytomedicine 45 (2018) 26–35.
+
+13. Liu, Z.J.; Shi, Z.L.; Tu, C.; Zhang, H.Z.; Gao, D.; Li, C.Y.; He, Q.; Li, R.S.; Guo, Y.M.; Niu, M. An activity-calibrated chemical standardization approach for quality evaluation of Salvia miltiorrhiza Bge. RSC Adv. 7 (2017) 5331–5339.
+
+14. Zhang, D.K.; Li, R.S.; Han, X.; Li, C.Y.; Zhao, Z.H.; Zhang, H.Z.; Yang, M.; Wang, J.B.; Xiao, X.H. Toxic constituents index: a toxicity-calibrated quantitative evaluation approach for the precise toxicity prediction of the hypertoxic phytomedicine-aconite. Front. Pharmacol. 7 (2016) 164.
+
+15. Tan, P.; Wang, J.B.; Zhang, D.K.; Zhou, Y.F.; Wang, M.; Niu, M.; Zhao, J.N.; Xiao, X.H. Application of an effect-constituents index for the quality evaluation of the traditional Chinese medicine rhubarb. Acta Pharm. Sin. B 54 (2019) 2141–2148.
+
+16. Zhang, T.; Huang, H.-z.; Xu, R.-c.; Wang, J.-b.; Yang, M.; Cao, J.-h.; Zhang, Y.; Zhang, D.-k.; Han, L. An anti-influenza virus activity-calibrated chemical standardization approach for quality evaluation of indigo naturalis. Anal. Methods 11 (2019) 4719–4726.
+
+17. Ren, Y.; Gao, F.; Li, B.; Yuan, A.; Zheng, L.; Zhang, Y. A precise efficacy determination strategy of traditional Chinese herbs based on Q-markers: anticancer efficacy of Astragali radix as a case. Phytomedicine 102 (2022) 154155.
+
+18. Li, C.; Tu, C.; Che, Y.; Zhang, M.; Dong, B.; Zhou, X.; Shi, Y.; Li, G.; Wang, J. Bioassay based screening for the antiplatelet aggregation quality markers of Polygonum multiflorum with UPLC and chemometrics. J. Pharm. Biomed. Anal. 166 (2019) 264–272.
+
+19. Qu, J.; Zhang, T.; Liu, J.; Su, Y.; Wang, H. Considerations for the quality control of newly registered traditional Chinese medicine in China: a review. J. AOAC Int. 102 (2019) 689–694.
+
+20. Liang, Y.Z.; Xie, P.S.; Chan, K. Chromatographic fingerprinting and metabolomics for quality control of TCM. Comb. Chem. High. Throughput Screen 13 (2010) 943–953.
+
+21. Chinese Pharmacopoeia Commission, Pharmacopoeia of the People's Republic of China. Beijing: China Medical Science Press 1 (2022) 42.
+
+22. Yang, Y.Y.; Wu, Z.Y.; Xia, F.B.; Zhang, H.; Wang, X.; Gao, J.L.; Yang, F.Q.; Wan, J.B. Characterization of thrombin/factor Xa inhibitors in Rhizoma Chuanxiong through UPLC-MS-based multivariate statistical analysis. Chin. Med. 15 (2020) 93.
+
+23. Zhang, D.Y.; Peng, R.Q.; Wang, X.; Zuo, H.L.; Lyu, L.Y.; Yang, F.Q.; Hu, Y.J. A network pharmacology-based study on the quality control markers of antithrombotic herbs: using Salvia miltiorrhiza - Ligusticum chuanxiong as an example. J. Ethnopharmacol. 292 (2022) 115197.
+
+24. Ke, Y.; Ma, Z.; Ye, H.; Guan, X.; Xiang, Z.; Xia, Y.; Shi, Q. Chlorogenic acid-conjugated nanoparticles suppression of platelet activation and disruption to tumor vascular barriers for enhancing drug penetration in tumor. Adv. Healthc. Mater. 12 (2023) e2202205.
+
+25. Yang, Q.Q.; Fang, M.S.; Tu, J.; Ma, Q.X.; Shen, L.Y.; Xu, Y.Y.; Chen, J.; Chen, M.L. Guanxinning tablet inhibits the interaction between leukocyte integrin Mac-1 and platelet GPIbα for antithrombosis without increased bleeding risk. Chin. J. Nat. Med. 20 (2022) 589–600.
+
+26. Gao, J.; Ren, J.; Ma, X.; Zhang, Y.; Song, L.; Liu, J.; Shi, D.; Ma, X. Ligustrazine prevents coronary microcirculation dysfunction in rats via suppression of miR-34a-5p and promotion of Sirt1. Eur. J. Pharmacol. 929 (2022) 175150.
 
 ## 訳者補足
 
