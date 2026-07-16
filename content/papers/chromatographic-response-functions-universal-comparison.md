@@ -241,3 +241,96 @@ CRF の大規模 in silico 比較により、以下が明らかになった：
 - [41–43] Kaiser ピーク谷比 f/g。
 
 （全44文献。詳細は原著参照。）
+
+## 参考文献
+
+1. J.M. Giddings, J.C. Davis, Statistical method for estimation of number of components from single complex chromatograms: theory, computer-based testing, and analysis of errors, Anal. Chem. 57 (1985) 2168–2177.
+
+2. J.C. Berridge, Simplex optimization of high-performance liquid chromatographic separations, J. Chromatogr. 485 (1989) 3–14.
+
+3. I.J. Molnar, Computerized design of separation strategies by reversed-phase liquid chromatography: development of DryLab software, J. Chromatogr. A 965 (2002) 175–194.
+
+4. E.F. Hewitt, P. Lukulay, S. Galushko, Implementation of a rapid and automated high performance liquid chromatography method development strategy for pharmaceutical drug candidates, J. Chromatogr. A 1107 (2006) 79–87.
+
+5. M. Beer, F. Lynen, K. Chen, P. Ferguson, M. Hanna-Brown, P. Sandra, Stationaryphase optimized selectivity liquid chromatography: development of a linear gradient prediction algorithm, Anal. Chem. 82 (2010) 1733–1743.
+
+6. S. Goga, S. Heinisch, J.L. Rocca, Retention and column efficiency in reversed phase liquid chromatography as a function of pH for optimization purposes, Chromatographia 48 (1998) 237–244.
+
+7. Y. Dharmadi, R. Gonzalez, A better global resolution function and a novel iterative stochastic search method for optimization of high-performance liquid chromatographic separation, J. Chromatogr. A 1070 (2005) 89–101.
+
+8. G. Vivó-Truyols, J.R. Torres-Lapasió, M.C. Garcia-Alvarez-Coque, A hybrid genetic algorithm with local search: I. Discrete variables: optimisation of complementary mobile phases, Chem. Intel. Lab. Syst. 59 (2001) 89–106.
+
+9. E. Tyteca, A. Liekens, D. Clicq, A. Fanigliulo, B. Debrus, S. Rudaz, D. Guillarme, G. Desmet, Predictive elution window shifting and stretching as a generic search strategy for automated method development for liquid chromatography, Anal. Chem. 84 (2012) 7823–7830.
+
+10. S.L. Morgan, S.N. Deming, Optimization strategies for the development of gas–liquid chromatographic methods, J. Chromatogr. 112 (1975) 267–285.
+
+11. M.W. Watson, P.W. Carr, Simplex algorithm for the optimization of gradient elution high-performance liquid chromatography, Anal. Chem. 51 (1979) 1835–1842.
+
+12. J.L. Glajch, J.J. Kirkland, K.M. Squire, J.M. Minor, Optimization of solvent strength and selectivity for reversed-phase liquid chromatography using an interactive mixture-design statistical technique, J. Chromatogr. 199 (1980) 57–79.
+
+13. J.C. Berridge, Unattended optimisation of reversed-phase high-performance liquid chromatographic separations using the modified simplex algorithm, J. Chromatogr. 244 (1982) 1–14.
+
+14. J.C. Berridge, E.G. Morrisey, Automated optimisation of reversed-phase highperformance liquid chromatography separations: an improved method using the sequential simplex procedure, J. Chromatogr. 316 (1984) 69–79.
+
+15. E.V. Dose, Off-line optimization of gas chromatographic temperature programs, Anal. Chem. 59 (1987) 2420–2423. 190 E. Tyteca, G. Desmet / J. Chromatogr. A 1361 (2014) 178–190
+
+16. T.D. Schlabach, J.L. Excoffier, Multi-variate ranking function for optimizing separations, J. Chromatogr. 439 (1988) 173–184.
+
+17. N.M. Djordevic, F. Erni, B. Schreiber, E.P. Lankmayr, W. Wegscheider, L. Jaufman, Fully automatic high-performance liquid chromatographic optimization, J. Chromatogr. 550 (1991) 27–37.
+
+18. J.-L. Martinez-Vidal, P. Parrilla, A.R. Fernandez-Alba, R. Carreno, F. Herrera, A new sequential procedure for the efficient and automated location of optimum conditions in high performance liquid chromatography (HPLC), J. Liq. Chromatogr. 18 (1995) 2969–2989.
+
+19. V.M. Morris, J.G. Hughes, P.J. Marriott, Examination of a new chromatographic function, based on an exponential resolution term, for use in optimization strategies: application to capillary gas chromatography separation of phenols, J. Chromatogr. A 755 (1996) 235–243.
+
+20. G. Vivó-Truyols, J.R. Torres-Lapasió, M.C. Garcia-Alvarez-Coque, Complementary mobile-phase optimisation for resolution enhancement in highperformance liquid chromatography, J. Chromatogr. A 876 (2000) 17–35.
+
+21. U.D. Neue, H.-J. Kuss, Improved reversed-phase gradient retention modeling, J. Chromatogr. A 1217 (2010) 3794–3803.
+
+22. R.M.B.O. Duarte, A.C. Duarte, A new chromatographic response function for use in size-exclusion chromatography optimization strategies: application to complex organic mixtures, J. Chromatogr. A 1217 (2010) 7556–7663.
+
+23. B. Jancic-Stojanovíc, T. Rakic, N. Kostic, A. Vemic, A. Malenovic, D. Ivanovic, M. Medenica, Advancement in optimization tactic achieved by newly developed chromatographic response function: application to LC separation of raloxifene and its impurities, Talanta 85 (2011) 1453–1460.
+
+24. A. Ortín, J.R. Torres-Lapasio, M.C. Garcia-Alvarez-Coque, A complementary mobile phase approach based on the peak count concept oriented to the full resolution of complex mixtures, J. Chromatogr. A 1218 (2011) 5829–5836.
+
+25. W. Nowik, S. Héron, B. Myriam, A. Tchapla, Separation system suitability (3S): a new criterion of chromatogram classification in HPLC based on cross-evaluation of separation capacity/peak symmetry and its application to complex mixtures of anthraquinones, Analyst 138 (2013) 2810–5801.
+
+26. M.C. Garcia-Alvarez-Coque, J.R. TorresLapasio, J.J. Baeza-Baeza, Models and objective functions for the optimisation of selectivity in reversed-phase liquid chromatography, Anal. Chim. Acta 579 (2006) 125–145.
+
+27. K.S. Booksh, B.R. Kowalski, Theory of analytical chemistry, Anal. Chem. 66 (1994) 782A.
+
+28. M. Lopatka, G. Vivo-Truyols, M.J. Sjerps, Probabilistic peak detection for firstorder chromatographic data, Anal. Chim. Acta 817 (2014) 9–16.
+
+29. P. Nikitas, A. Pappa-Louisi, A. Papageorgiou, On the equations describing chromatographic peaks and the problem of the deconvolution of overlapped peaks, J. Chromatogr. A 912 (2001) 13–29.
+
+30. J.R. Torres-Lapasió, J.J. Baeza-Baeza, M.C. Garcia-Alvarez-Coque, A model for the description, simulation, and deconvolution of skewed chromatographic peaks, Anal. Chem. 69 (1977) 3822–3831.
+
+31. G. Vivo-Truyols, J.R. Torres-Lapasio, M.C. Garcia-Alvarez-Coque, Net analyte signal as a deconvolution-oriented resolution criterion in the optimisation of chromatographic techniques, J. Chromatogr. A 991 (2003) 47–59.
+
+32. L.R. Snyder, Linear elution adsorption chromatography: VII. Gradient elution theory, J. Chromatogr. 11 (1964) 415–434.
+
+33. L.R. Snyder, J.W. Dolan, High-Performance Gradient Elution: The Practical Application of the Linear Solvent Strength Model, Willey Interscience, Hoboken, NJ, 2007.
+
+34. G. Guiochon, S.G. Shirazi, A.M. Katti, Fundamentals of Preparative and Nonlinear Chromatography, Academic press, Boston, 1994.
+
+35. U.D. Neue, D.H. Marchand, L.R. Snyder, Peak compression in reversed-phase gradient elution, J. Chromatogr. A 1111 (2006) 32–39.
+
+36. P.J. Schoenmakers, H.A.H. Billiet, R. Tijssen, L.J. De Galan, Gradient selection in reversed-phase liquid chromatography, J. Chromatogr. 149 (1978) 519–537.
+
+37. J.J. Baeza-Baeza, C. Ortiz-Bolsico, M.C. García-Álvarez-Coque, New approaches based on modified Gaussian models for the prediction of chromatographic peaks, Anal. Chim. Acta 758 (2013) 36–44.
+
+38. Y. Kalambet, Y. Kozmin, K. Mikhailova, I. Nagaev, P. Tikhonov, Reconstruction of chromatographic peaks using the exponentially modified Gaussian function, J. Chemometr. 25 (2011) 352–356.
+
+39. M.Z. El Fallah, M. Martin, Influence of the peak height distribution on separation performances: discrimination factor and effective peak capacity, Chromatographia 24 (1987) 115–122.
+
+40. U.D. Neue, HPLC Columns: Theory, Technology and Practice, Willey-VCH, New York, 1997.
+
+41. R.E. Kaiser, Gas Chromatograohie, Geest & Portig, Leipzig, 1960, pp. 33.
+
+42. W. Wegscheider, E.P. Lankmayr, K.W. Budna, A chromatographic response function for automated optimization of separations, Chromatographia 15 (1982) 498–504.
+
+43. E. Haghedooren, T. Németh, S. Dragovic, B. Noszál, J. Hoogmartens, E. Adams, Comparison of two column characterization systems based on pharmaceutical applications, J. Chromatogr. A 1189 (2008) 59–71.
+
+44. S.J. López-Grío, G. Vivó-Truyols, J.R. Torres-Lapasió, M.C. García-Alvarez-Coque, Resolution assessment and performance of several organic modifiers in hybrid micellar liquid chromatography, Anal. Chim. Acta 433 (2001) 187–198.
+
+45. B. Debrus, P. Lebrun, E. Rozet, T. Schofield, J.K. Mbinze, R.D. Marini, S. Rudaz, B. Boulanger, P. Hubert, A new method for quality by design robust method optimization in liquid chromatography, LC–GC Eur. 26 (2013) 370–375.
+

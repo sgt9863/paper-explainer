@@ -259,3 +259,36 @@ RRF の頑健性・堅牢性試験を実施（Table S3-1〜S3-7）。併行精�
 - [13] Qi H, Zhang M, Wang ZT. Simultaneous determination of 4 components in Polygonum cuspidatum by HPLC. Chin J Chin Mater Med. 2006;31:2003–2005.
 - [14] China FDA, Guidance of Good Manufacturing Practices for Drug, 2010, p. 140.
 - [15] Zhang H, et al. A review of the pharmacological effects of the dried root of Polygonum cuspidatum. Evid Based Complement Alternat Med. 2013.
+
+## 参考文献
+
+1. S.P. Li, J. Zhao, B. Yang, Strategies for quality control of Chinese medicines, J. Pharm. Biomed. Anal. 55 (2011) 802–809.
+
+2. J.J. Hou, W.Y. Wu, J. Liang, Z. Yang, H.L. Long, L.Y. Cai, L. Fang, D.D. Wang, S. Yao, X. Liu, B.H. Jiang, D.A. Guo, A single, multi-faceted, enhanced strategy to quantify the chromatographically diverse constituents in the roots of Euphorbia kansui, J. Pharm. Biomed. Anal. 88 (2014) 321–330.
+
+3. M. Kong, H.H. Liu, J. Xu, C.R. Wang, M. Lu, X.N. Wang, Y.B. Li, S.L. Li, Quantitative evaluation of Radix Paeoniae Alba sulfur-fumigated with different durations and purchased from herbal markets: simultaneous determination of twelve components belonging to three chemical types by improved high performance liquid chromatography-diode array detector, J. Pharm. Biomed. Anal. 98 (2014) 424–433.
+
+4. S.P. Li, C.F. Qiao, Y.W. Chen, J. Zhao, X.M. Cui, Q.W. Zhang, X.M. Liu, D.J. Hu, A novel strategy with standardized reference extract qualification and single compound quantitative evaluation for quality control of Panax notoginseng used as a functional food, J. Chromatogr. A 1313 (2013) 302–307.
+
+5. L.W. Qi, C.Z. Wang, C.S. Yuan, Isolation and analysis of ginseng: advances and challenges, Nat. Prod. Rep. 28 (2011) 467–495.
+
+6. J.J. Hou, W.Y. Wu, J. Da, S. Yao, H.L. Long, Z. Yang, L.Y. Cai, M. Yang, X. Liu, B.H. Jiang, D.A. Guo, Ruggedness and robustness of conversion factors in method of simultaneous determination of multi-components with single reference standard, J. Chromatogr. A 1218 (2011) 5618–5627.
+
+7. W.Y. Lu, Y.G. Niu, H.S. Yang, Y. Sheng, H.M. Shi, L.L. (Lucy) Yu, Simultaneous HPLC quantification of five major triterpene alcohol and sterol ferulates in rice bran oil using a single reference standard, Food Chem. 148 (2014) 329–334.
+
+8. J. Sun, Z.Z. Jiang, R.Q. Yan, O. Olaleye, X.L. Zhang, X. Chai, Y.F. Wang, Quality evaluation of astragali radix products by quantitative analysis of multi-components by single marker, Chin. Herb. Med. 5 (2013) 272–279.
+
+9. X.Y. Gao, Y. Jiang, J.Q. Lu, P.F. Tu, One single standard substance for the determination of multiple anthraquinone derivatives in rhubarb using high-performance liquid chromatography-diode array detection, J. Chromatogr. A 1216 (2009) 2118–2123.
+
+10. Z.M. Wang, H.M. Gao, X.T. Fu, W.H. Wang, Multi-components quantitation by one marker new method for quality evaluation of Chinese herbal medicine, Chin. J. Chin. Mater. Med. 31 (2006) 1925–1928.
+
+11. United States Pharmacopeia 35-NF 30, US Pharmacopoeial Convention, Rockville, MD, vol. I, 2011, p. 1271.
+
+12. National Commission of Chinese Pharmacopoeia, Pharmacopoeia of People’s Republic of China, vol. I, China Medical Science Press, Beijing, 2010. T.-W. Yang et al. / Journal of Pharmaceutical and Biomedical Analysis 114 (2015) 280–287 287
+
+13. H. Qi, M. Zhang, Z.T. Wang, Simultaneous determination of 4 components in Polygonum cuspidatum (Hu Zhang) by HPLC, Chin. J. Chin. Mater. Med. 31 (2006) 2003–2005.
+
+14. China Food and Drug Administration, Guidance of Good Manufacturing Practices for Drug, vol. Quality Control Laboratories and Materials Management, China Medical Science Press, Beijing, 2010, p. 140.
+
+15. H. Zhang, C. Li, S.T. Kwok, Q.W. Zhang, S.W. Chan, A review of the pharmacological effects of the dried root of Polygonum cuspidatum (Hu Zhang) and its constituents, Evid. Based. Complement. Alternat. Med. 2013 (208) (2013) 349–208362.
+

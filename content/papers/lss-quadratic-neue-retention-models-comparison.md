@@ -137,6 +137,58 @@ LSS・Neueモデルのkw・Sパラメータは、3種の異なるtGと2種の異
 
 タンパク質のMWがより高いこと、および予想されるS値が高いこと[7]と一致して、ln(k)対φの曲線は非常に急峻であることが判明し、その結果、低分子・ペプチドと同様のk範囲を得つつ信頼できるピーク積分を達成できる溶媒範囲は非常に狭いものとなった。LSSモデルおよび検討した非線形モデルは、適用した溶媒強度範囲内では非常に類似したフィッティング精度を示した。この範囲外では、非線形モデルは物理的にあり得ない外挿値を与えた。タンパク質もペプチドと同様に非線形保持挙動を示すと推測することはできるが、実際に適用可能な溶媒範囲はこれを実証するには狭すぎる。タンパク質分離における保持パラメータの正確な推定にグラジエントスカウトランを用いる試みは不成功であった。したがって、タンパク質のCAMDには、保持パラメータを得るために個別の等温ラン（少なくとも2点）を実施する必要がある。
 
+## 参考文献
+
+1. Nikitas, P., Pappa-Louisi, A., Agrafiotou, P., J. Chromatogr. A 2004, 1034, 41–54.
+
+2. Snyder, L. R., Dolan, J. W., The Practical Application of the Linear Solvent Strength Model, Wiley Interscience, Hoboken 2007.
+
+3. Duarte, R. M. B. O., Duarte, A. C., J. Chromatogr. A 2010, 1217, 7556–7563.
+
+4. Davis, J. M., Giddings J. C., Anal. Chem. 1985, 57, 2168– 2177.
+
+5. Beinert, W.-D., Eckert, V., Galushko, S., Tanchuk, V., Shishkina, I., LC-GC Eur. Online Suppl. 2001, 34–38.
+
+6. Molnar, I., J. Chromatogr. A 2002, 965, 175–194.
+
+7. Snyder, L. R., Dolan, J. W., Adv. Chromatogr. 1998, 38, 115–187.
+
+8. Schoenmakers, P. J., Billiet, H. A. H., Tijssen, R., De Galan, L., J. Chromatogr. 1978, 149, 519–537.
+
+9. Neue, U. D., Mendez, A., J. Sep. Sci. 2007, 30, 949–963.
+
+10. Baeza-Baeza, J. J., Carcia-Alvarez-Coquie, M. C., J. Sep. Sci. 2014, 37, 2269–2277.
+
+11. Neue, U. D., Kuss, H.-J., J. Chromatogr. A 2010, 1217, 3794–3803.
+
+12. Kaliszan, R., Baczek, T., Bucinski, A., Buszewski, B., Sztupecka, M., J. Sep. Sci. 2003, 26, 271–282.
+
+13. Tate, P. A., Dorsey, J. G., J. Chromatogr. A 2004, 1042, 37–48.
+
+14. Baczek, T., Kaliszan, R., J. Chromatogr. A 2002, 962, 41– 55.
+
+15. Vankova, N., De Vos, J., Tyteca, E., Desmet, G., Edge, T., Ceslova, L., Cesla, P., Eeltink, S., J. Chromatogr. A. 2015, 1409, 152–158.
+
+16. Vaast, A., Tyteca, E., Desmet, G., Schoenmakers, P. J., Eeltink, J. Chromatogr. A 2014, 1355, 149–157.
+
+17. Hahn R., J. Sep. Sci. 2012, 22, 3001–3032.
+
+18. Jandera, P., Kubat J., J. Chromatogr. A 1990, 50, 281–299.
+
+19. Vivo´ -Truyols, G., Torres-Lapasio´ , J. R., Garc´ıa-AlvarezCoque, M. C., J. Chromatogr. A 2003, 1018, 169–181.
+
+20. Valko, K., Snyder, L. R., Glajch, J. L., J. Chromatogr. A 1993, 656, 501–520.
+
+21. Baczek, T., Markuszewski, M., Kaliszan, R., van Straten, M. A., Claessens, H. A., J. High Resolut. Chromatogr. 2000, 23, 667–676.
+
+22. Jandera, P., Ha´ jek, T., Vynuchalova´ , K., J. Chromatogr. A 2014, 1337, 57–66.
+
+23. Michałowicz, J., Duda, W., Pol. J. Environ. Stud. 2007, 16, 347–362.
+
+24. Quarry, M. A., Grob, R. L., Snyder, L. R., Anal. Chem. 1986, 58, 907–917.
+
+25. Concha-Herrera, V., Vivo´ -Truyols, G., Torres-Lapasio´ , J. R., Garc´ıa-Alvarez-Coque, M. C., J. Chromatogr. A 2005, 1063, 79–88.
+
 ## 訳者補足
 
 - 本論文は漢方・生薬そのものを対象とした品質評価論文ではなく、逆相HPLCにおける保持時間モデル（LSS・二次・Neue-Kuss）の適用限界を、分子サイズ（低分子〜ペプチド〜完全長タンパク質、MW 817〜66,430 Da）という軸で体系的に比較した基礎的な分析化学の研究である。本ライブラリに既収載の関連論文（`retention-modeling-lc-review`／`retention-modelling-liquid-chromatography-review-2021`／`retention-prediction-lc-perspective-gritti`／`insilico-hplc-qspr-lser-lss-retention`など）と合わせて読むことで、コンピュータ支援メソッド開発（CAMD、DryLab等）の理論的基盤を補強する位置づけとなる。
