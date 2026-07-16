@@ -38,15 +38,15 @@ summary: 抑うつに用いられる古典処方「逍遥丸（Xiaoyao Wan, XYW�
 
 ## 1. 序論（Introduction）
 
-近年、中医薬の処方製剤（TCMFPs）は、長い歴史・確かな効能・比較的少ない副作用ゆえに、世界中の人々からますます注目を集めている。逍遥散は『太平恵民和剤局方』に由来する古典処方で、**柴胡（RB）・芍薬（PL）・当帰（AS）・白朮（AM）・甘草（L）・薄荷（MH）・茯苓（PC）・生姜（G）**の8生薬からなる。肝と脾を調え、肝鬱を和らげ、血を養い、脾を強める機能をもつ。逍遥丸は逍遥散の製剤形である。近年、XYW は抑うつ治療で広く注目を集めており、臨床データと関連研究により、XYW が抑うつに確かな効能をもち、抑うつ治療の常用古典方剤の一つになっていることが示されている。
+近年、中医薬の処方製剤（TCMFPs）は、長い歴史・確かな効能・比較的少ない副作用ゆえに、世界中の人々からますます注目を集めている[1]。逍遥散は『太平恵民和剤局方』に由来する古典処方で、**柴胡（RB）・芍薬（PL）・当帰（AS）・白朮（AM）・甘草（L）・薄荷（MH）・茯苓（PC）・生姜（G）**の8生薬からなる。肝と脾を調え、肝鬱を和らげ、血を養い、脾を強める機能をもつ。逍遥丸は逍遥散の製剤形である。近年、XYW は抑うつ治療で広く注目を集めており[2,3]、臨床データと関連研究により、XYW が抑うつに確かな効能をもち、抑うつ治療の常用古典方剤の一つになっていることが示されている[4,5]。
 
-しかし既存研究の多くは、XYW が抗うつ効果を発揮する「機序」の研究に集中してきた。これらは XYW の治療効果が調節する経路や機序を解明するもので、また別の多くの研究者はメタボロミクス手法で代謝マーカーを研究し、抑うつ治療における XYW 臨床応用のバイオマーカーを見出してきた。上記の研究は XYW が抗うつ効果を発揮する機序を説明・証明するとともに、臨床的抑うつの早期診断のためのバイオマーカーも発見している。
+しかし既存研究の多くは、XYW が抗うつ効果を発揮する「機序」の研究に集中してきた。これらは XYW の治療効果が調節する経路や機序を解明するもので[6,7]、また別の多くの研究者はメタボロミクス手法で代謝マーカーを研究し、抑うつ治療における XYW 臨床応用のバイオマーカーを見出してきた[8–10]。上記の研究は XYW が抗うつ効果を発揮する機序を説明・証明するとともに、臨床的抑うつの早期診断のためのバイオマーカーも発見している。
 
 品質の一貫性は常に TCM の懸案であり、TCM の効能の鍵は品質を管理して薬効を確保することにある。残念ながら、報告済み研究では XYW の物質基盤の特性解析と多成分品質管理手法に関する研究はほとんどない。さらに中国薬典（Chinese Pharmacopoeia）は、XYW の品質を**パエオニフロリン（芍薬苷）を検出指標として**評価すると規定するにとどまる。これまで XYW の品質管理手法は包括的でなく、総合的な品質管理戦略を欠いている。したがって、TCMFPs における多成分の品質一貫性評価を達成するため、合理的で有効な定性・定量戦略の確立が急務である。
 
-技術の進歩とともに、クロマトグラフィーと質量分析は TCM 中の物質の特性解析における主要な測定ツールとなっている。LC–MS はクロマトグラフィーの高い分離能と、質量分析の高選択性・高感度・相対分子量および構造情報の提供という利点を相補的に併せ持ち、TCMFPs に広く用いられてきた。GC-MS は複雑系中の VOCs 検出において強力な分離・同定機能をもつが、薬物マトリックスの複雑さゆえに試料抽出が複雑かつ時間を要し、迅速検出が制限される。GC-MS を基礎に、HS-SPME-GC-MS はヘッドスペース固相マイクロ抽出の抽出・濃縮技術を統合して前処理を簡便化し、試料の迅速・非破壊検査を実現する。HS-GC-IMS は新しい気相分離・検出技術で、GC の高い分離能と IMS の迅速応答を組み合わせたもので、グリーン・高感度・前処理不要・迅速定量という特長から TCM・臨床・食品・環境分析に広く使われる。HS-GC-IMS は通常、小分子の VOCs を検出でき、中分子の VOCs しか捕捉できない HS-SPME-GC-MS の弱点を補う。
+技術の進歩とともに、クロマトグラフィーと質量分析は TCM 中の物質の特性解析における主要な測定ツールとなっている。LC–MS はクロマトグラフィーの高い分離能と、質量分析の高選択性・高感度・相対分子量および構造情報の提供という利点を相補的に併せ持ち[11]、TCMFPs に広く用いられてきた[12–14]。GC-MS は複雑系中の VOCs 検出において強力な分離・同定機能をもつが[15]、薬物マトリックスの複雑さゆえに試料抽出が複雑かつ時間を要し、迅速検出が制限される。GC-MS を基礎に、HS-SPME-GC-MS はヘッドスペース固相マイクロ抽出の抽出・濃縮技術を統合して前処理を簡便化し、試料の迅速・非破壊検査を実現する。HS-GC-IMS は新しい気相分離・検出技術で、GC の高い分離能と IMS の迅速応答を組み合わせたもので[18]、グリーン・高感度・前処理不要・迅速定量という特長から TCM・臨床・食品・環境分析に広く使われる[19]。HS-GC-IMS は通常、小分子の VOCs を検出でき、中分子の VOCs しか捕捉できない HS-SPME-GC-MS の弱点を補う。
 
-そこで本研究では、定性面では UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMS を組み合わせて、XYW の薬理物質基盤を n-VOCs と VOCs の両面から包括的に特性解析する戦略を確立した。定量面では、UPLC-Q-Orbitrap-MS に**並行反応モニタリング（PRM）**を組み合わせた手法を確立し、XYW 中の 14 の主要有効成分を定量した。従来の選択反応モニタリング（SRM）法と比べ、PRM はより広い質量範囲で複数成分を同時検出する特異性を高められ、検出干渉の影響が最小である。加えて PRM はすべての遷移を同時に検出でき、データ処理を減らし解析効率を高める。PRM での多成分同時定量の精度を高めるため、私たちはエネルギーレベルを調整した。調整後の PRM は、貧弱なパラメータで含量の多い成分の応答を抑え、最適なパラメータで微量物質の応答を促進する。この戦略により、XYW 中の 14 の薬理活性成分を同時定量した。
+そこで本研究では、定性面では UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMS を組み合わせて、XYW の薬理物質基盤を n-VOCs と VOCs の両面から包括的に特性解析する戦略を確立した。定量面では、UPLC-Q-Orbitrap-MS に**並行反応モニタリング（PRM）**を組み合わせた手法を確立し、XYW 中の 14 の主要有効成分を定量した。従来の選択反応モニタリング（SRM）法と比べ、PRM はより広い質量範囲で複数成分を同時検出する特異性を高められ、検出干渉の影響が最小である[20]。加えて PRM はすべての遷移を同時に検出でき、データ処理を減らし解析効率を高める。PRM での多成分同時定量の精度を高めるため、私たちはエネルギーレベルを調整した。調整後の PRM は、貧弱なパラメータで含量の多い成分の応答を抑え、最適なパラメータで微量物質の応答を促進する[21]。この戦略により、XYW 中の 14 の薬理活性成分を同時定量した。
 
 本研究では、UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMS を用いた包括戦略を確立し、計 **299 成分**を同定または推定同定した。同時に、**47 成分を標準品でさらに確認**した。PCA と HCA のデータは、XYW の品質がメーカー間で異なることを示した。加えて、UPLC-Q-Orbitrap-MS と PRM の組み合わせにより、含量の多い成分と微量成分を同時にモニタリングして XYW の多成分品質を評価した。本研究のデータは XYW の多成分品質管理の基礎と参照を提供し、私たちの戦略は TCM 品質の一貫性を探る実用的なワークフローを提供する。実験計画の模式図を Fig. 1 に示す。
 
@@ -294,6 +294,43 @@ XYW は 2000 年以上、肝損傷の治療と抗うつ薬として広く用い�
 ## 4. 結論（Conclusion）
 
 実用的な品質評価の深い検討と確立という理念に基づき、本研究は UPLC-Q-Orbitrap-MS・HS-SPME-GC-MS・HS-GC-IMS の戦略により、10 メーカーの XYW の包括的な多成分特性解析と品質評価を達成した。UPLC-Q-Orbitrap-MS は XYW 多成分のプロファイリングと特性解析に極めて強力で、198 成分を推定同定した。加えて HS-SPME-GC-MS・HS-GC-IMS で計 **101 VOCs** を検出し、XYW の成分種を豊かにした。新規開発の3手法は XYW の n-VOCs と VOCs を包括的に特性解析できた。続いて PCA・HCA は異なるメーカーの XYW の化学組成に有意差があることを示した。XYW の異なる製法が品質差の主要因の一つと考えられる。最後に、調整 PRM 法により 10 メーカーの XYW 試料中の 14 品質標識成分を正確・高感度に定量できた。特筆すべきは、14 薬理成分の含量がメーカー間で大きく変動した点で、含量の変動は薬効に影響しうる。これらの結果は、提案戦略が高い価値をもち、TCM 製剤の包括的同定と品質一貫性評価の課題を解決しうることを示す。
+
+## 参考文献
+
+1. Y.J. Dai, S.Y. Wan, S.S. Gong, et al., Recent advances of traditional Chinese medicine on the prevention and treatment of COVID-19, Chin. J. Nat. Med. 18 (12) (2020) 881–889.
+2. X.L. Wang, S.T. Feng, Y.T. Wang, et al., Canonical Chinese medicine formula Danzhi-Xiaoyao-San for treating depression: a systematic review and meta-analysis, J. Ethnopharmacol. 287 (2022) 114960.
+3. Z. Xue, Z. Huang, S.L. Cheng, et al., Efficacy and safety of Xiaoyao pills for mild to moderate depression: study protocol for a randomized controlled trial, Trials 23 (1) (2022).
+4. Y.L. Zhu, S.L. Li, K.L. Chen, et al., Effect of Chinese herb danzhi Xiaoyao pills on pharmacokinetics of venlafaxine in beagles, Drug Des. Devel. Ther. 13 (2019) 3343–3355.
+5. W.D. Liu, M. Zhao, Clinical evaluation of modified Xiaoyao pill on the treatment of oral lichen planus patients with anxiety or depression, Shanghai J. Stomatol. 28 (3) (2019) 312–316.
+6. J. Wang, X. Li, S. He, et al., Regulation of the kynurenine metabolism pathway by Xiaoyao San and the underlying effect in the hippocampus of the depressed rat, J. Ethnopharmacol. 25 (2018) 13–21.
+7. X. Liu, F. Wei, H. Liu, et al., Integrating hippocampal metabolomics and network pharmacology deciphers the antidepressant mechanisms of Xiaoyaosan, J. Ethnopharmacol. 25 (2021) 113549.
+8. X. Liu, C. Liu, J. Tian, et al., Plasma metabolomics of depressed patients and treatment with Xiaoyaosan based on mass spectrometry technique, J. Ethnopharmacol. 246 (2020) 112219.
+9. J.S. Tian, G.J. Peng, Y.F. Wu, et al., A GC-MS urinary quantitative metabolomics analysis in depressed patients treated with TCM formula of Xiaoyaosan, J. Chromatogr. B Anal. Technol. Biomed. Life Sci. 1026 (2016) 227–235.
+10. X. Gao, X. Li, Z. Zheng, et al., Metabonomic study on chronic unpredictable mild stress and intervention effects of Xiaoyaosan in rats using gas chromatography coupled with mass spectrometry, J. Ethnopharmacol. 137 (2011) 690–699.
+11. M. Maekawa, N. Mano, Cutting-edge LC-MS/MS applications in clinical mass spectrometry: Focusing on analysis of drugs and metabolites, Biomed. Chromatogr. 36 (5) (2022) e5347.
+12. X. Wang, X. Zhang, J. Li, et al., Network pharmacology and LC-MS approaches to explore the active compounds and mechanisms of Yuanjiang decoction for treating bradyarrhythmia, Comput. Biol. Med. 152 (2023) 106435.
+13. D. Sun, Q. Yan, X. Xu, et al., LC-MS/MS analysis and evaluation of the anti-inflammatory activity of components from BushenHuoxue decoction, Pharm. Biol. 55 (1) (2017) 937–945.
+14. F. Xu, Y. Liu, R. Song, et al., Constituents of Da-Cheng-Qi decoction and its parent herbal medicines determined by LC-MS/MS, Nat. Prod. Commun. 5 (5) (2010) 789–794.
+15. M.P. Papadimitropoulos, C.G. Vasilopoulou, C. Maga-Nteve, et al., Untargeted GC-MS Metabolomics, Methods Mol. Biol. 1738 (2018) 133–147.
+16. Y.M. Alshehri, T.S. Alghamdi, F.S. Aldawsari, HS-SPME-GC-MS as an alternative method for NDMA analysis in ranitidine products, J. Pharm. Biomed. Anal. 30 (2020) 113582.
+17. X.J. Li, M.F. Wu, H. Ding, et al., Integration of non-targeted multicomponent profiling, targeted characteristic chromatograms and quantitative to accomplish systematic quality evaluation strategy of Huo-Xiang-Zheng-Qi oral liquid, J. Pharm. Biomed. Anal. 236 (2023) 115715.
+18. C. Capitain, P. Weller, Non-Targeted screening approaches for profiling of volatile organic compounds based on gas chromatography-ion mobility spectroscopy (GC-IMS) and machine learning, Molecules 26 (18) (2021) 5457.
+19. J.X. Yin, M.F. Wu, R.M. Lin, et al., Application and development trends of gas chromatography–ion mobility spectrometry for traditional Chinese medicine, clinical, food and environmental analysis, Microchem. J. 168 (2021) 106527.
+20. C.X. Wang, K.Y. Feng, Z.F. Fu, et al., Systematic quality evaluation of Peiyuan Tongnao capsule by offline two-dimensional liquid chromatography/quadrupole-Orbitrap mass spectrometry and adjusted parallel reaction monitoring of quality markers, Anal. Bioanal. Chem. 411 (29) (2019) 7747–7760.
+21. R.M. Lin, J.X. Yin, M.F. Wu, et al., Global identification and determination of the major constituents in Kai-Xin-San by ultra-performance liquid chromatography-quadrupole-Orbitrap mass spectrometry and gas chromatography-mass spectrometry, J. Pharm. Biomed. Anal. 206 (2021) 114385.
+22. S.F. Wu, J.X. Yin, X.J. Li, et al., An exploration of dynamic changes in the mulberry growth process based on UPLC-Q-Orbitrap-MS, HS-SPME-GC-MS, and HS-GC-IMS, Foods 12 (2023) 3335.
+23. X.L. Wu, J.X. Yin, H. Ding, et al., The discrimination and characterization of volatile organic compounds in different areas of zanthoxylum bungeanum pericarps and leaves by HS-GC-IMS and HS-SPME-GC-MS, Foods 11 (2022) 3745.
+24. Y.M. Zuo, J.S. Tian, X.Q. Guo, et al., Study on supercritical CO2 extraction of xiaoyaosan and its GC-MS fingerprint, China J. Mater. Medica 39 (4) (2014) 674–678.
+25. A.R. Wang, L.F. Mi, Z.L. Zhang, et al., Saikosaponin A improved depression like behavior and inhibited hippocampal neuronal apoptosis after cerebral ischemia through p-CREB/BDNF pathway, Behav. Brain Res. 403 (2021) 113138.
+26. J. Su, Y.W. Pan, S.Q. Wang, et al., Saikosaponin D attenuated lipopolysaccharide induced depressive-like behaviors via inhibiting microglia activation and neuroinflammation, Int. Immunopharmacol. 80 (2020) 106181.
+27. S. Chen, Y. Tang, Y. Gao, et al., Antidepressant potential of quercetin and its glycoside derivatives: a comprehensive review and update, Front. Pharm. 13 (2022) 865376.
+28. Y.L. Wang, J.X. Wang, X.X. Hu, et al., Antidepressant-like effects of albiflorin extracted from Radix paeoniae Alba, J. Ethnopharmacol. 17 (2016) 9–15.
+29. J. Han, Y. Xia, L. Lin, et al., Next-generation metabolomics in the development of new antidepressants: using albiflorin as an example, Curr. Pharm. Des. 24 (22) (2018) 2530–2540.
+30. D.D. Tian, M. Wang, A. Liu, et al., Antidepressant effect of paeoniflorin is through inhibiting pyroptosis CASP-11/GSDMD pathway, Mol. Neurobiol. 58 (2) (2021) 761–776.
+31. G.S. Jeong, M.G. Kang, J.Y. Lee, et al., Inhibition of butyrylcholinesterase and human monoamine oxidase-B by the coumarin glycyrol and liquiritigenin isolated from glycyrrhiza uralensis, Molecules 25 (17) (2020) 3896.
+32. J.C. Ma, H.L. Zhang, H.P. Huang, et al., Antidepressant-like effects of Z-ligustilide on chronic unpredictable mild stress-induced depression in rats, Exp. Ther. Med. 22 (1) (2021) 677.
+33. H. Gao, X. Zhu, Y. Xi, et al., Anti-depressant-like effect of atractylenolide I in a mouse model of depression induced by chronic unpredictable mild stress, Exp. Ther. Med. 15 (2) (2018) 1574–1579.
+34. Y. Zhou, S. Huang, F. Wu, et al., Atractylenolide III reduces depressive- and anxiogenic-like behaviors in rat depression models, Neurosci. Lett. 759 (2021) 136050.
 
 ## 訳者補足
 
