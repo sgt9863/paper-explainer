@@ -283,3 +283,360 @@ $a, b$ は非極性溶媒に固有。100%水での分析はカラム寿命に破
 - 測定と報告の質に配慮すれば、モデルパラメータはいずれ**システム非依存の保持データ**として使える可能性があり、これは魅力的な提案である。
 
 > 補足（生薬QC実務への示唆）: 本総説はTCM/漢方に限らないLC方法論だが、生薬QCの現場に直結する含意が多い。①**指紋・多成分定量法の開発を、数回のスキャニンググラジエント→保持モデルで予測**することで、試行錯誤を大幅に減らせる（本サイト収録の2D-LCやQAMS系の論文とも地続き)。②**2D-LC（HILIC×RP等)**の直交性・溶媒ミスマッチ設計に $S_{LSS}$ や NK モデルが使える。③**メソッド移管**（装置・カラム更新時に指紋法を再現する）に保持パラメータが有効で、Bos らのように形状補正で系間誤差を1桁下げられる。④モデルは「慣習で1つ」ではなく、**AIC・F検定で過学習を避けつつ選ぶ**べき——実務でも「線形(LSS)が当たり前」ではなく低φ域の非線形（Q・NK）を疑う姿勢が精度を上げる。⑤著者らの「生データ・空隙容積・ドウェル容積・残差を必ず報告せよ／手法開発は誤差1%以内を目標に」という提言は、QC法バリデーションの記録様式としてそのまま指針になる。
+
+## 参考文献
+
+1. Schoenmakers PJ, Billiet HAH, Tussen R, De Galan L. Gradient selection in reversed-phase liquid chromatography. J. Chromatogr. A 1978;149:519–537.
+
+2. Martel S, Gillerat F, Carosati E, Maiarelli D, Tetko IV, Mannhold R, Carrupt PA. Large, chemically diverse dataset of log P measurements for benchmarking studies. Eur J Pharm Sci. 2013;48:21–9.
+
+3. Xiang Q, Shan G, Wu W, Jin H, Zhu L. Measuring log Kow coefficients of neutral species of perfluoroalkyl carboxylic acids using reversed-phase high-performance liquid chromatography. Environ Pollut. 2018;242:1283–90.
+
+4. Marchand DH, Snyder LR, Dolan JW. Characterization and applications of reversed-phase column selectivity based on the hydrophobic-subtraction model. J Chromatogr A. 2008;1191:2–
+
+5. Snyder LR, Dolan JW, Carr PW. The hydrophobic-subtraction model of reversed-phase column selectivity. J Chromatogr A. 2004;1060:77–116.
+
+6. Abraham MH. Scales of solute hydrogen-bonding: Their construction and application to physicochemical and biochemical processes. Chem Soc Rev. 1993;22:73–83.
+
+7. Abraham MH, Rosés M, Poole CF, Poole SK. Hydrogen bonding.
+
+8. Snyder LR, Dolan JW, Marchand DH, Carr PW. The hydrophobicSubtraction model of reversed-phase column selectivity. Adv Chromatogr. 2015;50:297–376.
+
+9. Græsbøll R, Nielsen NJ, Christensen JH. Using the hydrophobic subtraction model to choose orthogonal columns for online comprehensive two-dimensional liquid chromatography. J Chromatogr A. 2014;1326:39–46.
+
+10. Kaliszan R. QSRR: Quantitative structure-(chromatographic) retention relationships. Chem Rev. 2007;107:3212–46.
+
+11. Kaliszan R, Baczek T, Buciński A, Buszewski B, Sztupecka M. Prediction of gradient retention from the linear solvent strength (LSS) model, quantitative structure-retention relationships (QSRR), and artificial neural networks (ANN). J Sep Sci. 2003;26:271–82.
+
+12. Novotná K, Havliš J, Havel J. Optimisation of high performance liquid chromatography separation of neuroprotective peptides: Fractional experimental designs combined with artificial neural networks. J Chromatogr A. 2005;1096:50–7.
+
+13. Barron LP, McEneff GL. Gradient liquid chromatographic retention time prediction for suspect screening applications: A critical assessment of a generalised artificial neural networkbased approach across 10 multi-residue reversed-phase analytical methods. Talanta. 2016;147:261–70.
+
+14. Euerby MR, Hulse J, Petersson P, Vazhentsev A, Kassam K. Retention modelling in hydrophilic interaction chromatography. Anal Bioanal Chem. 2015;407:9135–52.
+
+15. Pirok BWJ, Molenaar SRA, van Outersterp RE, Schoenmakers PJ. Applicability of retention modelling in hydrophilicinteraction liquid chromatography for algorithmic optimization programs with gradient-scanning techniques. J Chromatogr A. 2017;1530:104–11.
+
+16. Tyteca E, Périat A, Rudaz S, Desmet G, Guillarme D. Retention modeling and method development in hydrophilic interaction chromatography. J Chromatogr A. 2014;1337:116–27.
+
+17. Gilar M, Hill J, McDonald TS, Gritti F. Utility of linear and nonlinear models for retention prediction in liquid chromatography. J Chromatogr A. 2020;1613:460690.
+
+18. Molnar I. Computerized design of separation strategies by reversed-phase liquid chromatography: Development of DryLab software. J Chromatogr A. 2002;965:175–94.
+
+19. Tyteca E, Liekens A, Clicq D, Fanigliulo A, Debrus B, Rudaz S, Guillarme D, Desmet G. Predictive elution window stretching and shifting as a generic search strategy for automated method development for liquid chromatography. Anal Chem. 2012;84:7823–30.
+
+20. Pirok BWJ, Pous-Torres S, Ortiz-Bolsico C, Vivó-Truyols G, Schoenmakers PJ. Program for the interpretive optimization of two-dimensional resolution. J Chromatogr A. 2016;1450:29–
+
+21. Snyder LR, Dolan JW, Gant JR. Gradient elution in highperformance liquid chromatography. I. Theoretical basis for reversed-phase systems. J Chromatogr A. 1979;165: 3–30.
+
+22. Schoenmakers PJ, Billiet HAH, Tijssen R, De Galan L. Gradient selection in reversed-phase liquid chromatography. J Chromatogr A. 1978;149:519–37.
+
+23. Soczewinski E. Solvent Composition Effects in Thin-Layer Chromatography Systems of the Type Silica Gel-Electron Donor Solvent. Anal Chem. 1969;41:179–82.
+
+24. Jandera P, Churáček J. Gradient elution in liquid chromatography. I. The influence of the composition of the mobile phase on the capacity ratio (retention volume, band width, and resolution) in isocratic elution - theoretical considerations. J Chromatogr A. 1974;91:207–21.
+
+25. Snyder LR, Poppe H. Mechanism of solute retention in liquid— solid chromatography and the role of the mobile phase in affecting separation. J Chromatogr A. 1980;184:363–413.
+
+26. Soczewiński E. Mechanistic molecular model of liquid-solid chromatography: Retention-eluent composition relationships. J Chromatogr A. 2002;965:109–16.
+
+27. Jin G, Guo Z, Zhang F, Xue X, Jin Y, Liang X. Study on the retention equation in hydrophilic interaction liquid chromatography. Talanta. 2008;76:522–7.
+
+28. Nikitas P, Pappa-Louisi A, Agrafiotou P. Effect of the organic modifier concentration on the retention in reversed-phase liquid chromatography: II. Tests using various simplified models. J Chromatogr A. 2002;946:33–45.
+
+29. Nikitas P, Pappa-Louisi A, Agrafiotou P. Effect of the organic modifier concentration on the retention in reversed-phase liquid chromatography: I. General semi-thermodynamic treatment for adsorption and partition mechanisms. J Chromatogr A. 2002;946:9–32.
+
+30. Neue UD. Chromatographia. Springer; 2006: S45–53.
+
+31. NeueUD,KussHJ.Improvedreversed-phasegradientretention modeling. J Chromatogr A. 2010;1217:3794–803.
+
+32. Vivó-Truyols G, Torres-Lapasió JR, García-Alvarez-Coque MC. Error analysis and performance of different retention models in the transference of data from/to isocratic/gradient elution. J Chromatogr A. 2003;1018:169–81. DEN UIJL et al. 109
+
+33. Vivó-Truyols G, Torres-Lapasió JR, García-Alvarez-Coque MC. J. Chromatogr. A 2004: 31–9.
+
+34. Tyteca E, Guillarme D, Desmet G. Use of individual retention modeling for gradient optimization in hydrophilic interaction chromatography: Separation of nucleobases and nucleosides. J Chromatogr A. 2014;1368:125–31.
+
+35. Jandera P, Hájek T, Vyňuchalová K. Retention and bandwidths prediction in fast gradient liquid chromatography. Part 2-Coreshell columns. J Chromatogr A. 2014;1337:57–66.
+
+36. Schellinger AP, Carr PW. A practical approach to transferring linear gradient elution methods. J Chromatogr A. 2005;1077:110–9.
+
+37. Roca LS, Schoemaker SE, Pirok BWJ, Gargano AFG, Schoenmakers PJ. Accurate modelling of the retention behaviour of peptides in gradient-elution hydrophilic interaction liquid chromatography. J Chromatogr A. 2019, 1614,
+
+38. Nikitas P, Pappa-Louisi A, Papageorgiou A. Simple algorithms for fitting and optimisation for multilinear gradient elution in reversed-phase liquid chromatography. J Chromatogr A. 2007;1157:178–86.
+
+39. den Uijl MJ, Schoenmakers PJ, Schulte GK, Stoll DR van Bommel MR, Pirok BWJ. Measuring and using scanning-gradient data for use in method optimization for liquid-chromatography.
+
+40. Akaike H. A New Look at the Statistical Model Identification. IEEE Trans Automat Contr. 1974;19:716–23.
+
+41. Horner AR, Wilson RE, Groskreutz SR, Murray BE, Weber SG. Evaluation of three temperatureand mobile phase-dependent retention models for reversed-phase liquid chromatographic retention and apparent retention enthalpy. J Chromatogr A. 2019;1589:73–82.
+
+42. Bos TS, Knol WC, Molenaar SRA, Niezen LE, Schoenmakers PJ, Somsen GW, Pirok BWJ. Recent applications of chemometrics in oneand two-dimensional chromatography. J Sep Sci. 2020;43:1678–1727.
+
+43. Li R, Sun W, Xiao X, Chen B, Wei Y. Retention of stevioside polar compounds on a sulfonic acid-functionalized stationary phase. J Chromatogr A.
+
+44. Komendová M, Urban J. Dual-retention mechanism of dopamine-related compounds on monolithic stationary phase with zwitterion functionality. J Chromatogr A. 2020;1618. .
+
+45. Česla P, Vaňková N, Křenková J, Fischer J. Comparison of isocratic retention models for hydrophilic interaction liquid chromatographic separation of native and fluorescently labeled oligosaccharides. J Chromatogr A. 2016;1438:179–88.
+
+46. Baczek T, Markuszewski M van Kaliszan R, Straten MA, Claessens HA. Linear and Quadratic Relationships between Retention and Organic Modifier Content in Eluent in Reversed Phase High-Performance Liquid Chromatography: A Systematic Comparative Statistical Study. J High Resolut Chromatogr. 2000;23:667–76.
+
+47. Zhang S-D, Gong C, Lu Y, Xu X. Separation of Triacylglycerols from Edible Oil Using a Liquid Chromatography-Mass Spectrometry System with a Porous Graphitic Carbon Column and a Toluene-Isopropanol Gradient Mobile Phase. J Am Oil Chem Soc. 2018;95:1253–66.
+
+48. Fekete S, Beck A, Veuthey JL, Guillarme D. Proof of Concept to Achieve Infinite Selectivity for the Chromatographic Separation of Therapeutic Proteins. Anal Chem. 2019;91:12954–61.
+
+49. Fekete S, Ritchie H, Lawhorn J, Veuthey JL, Guillarme D. Improving selectivity and performing online on-column fractioning in liquid chromatography for the separation of therapeutic biopharmaceutical products. J Chromatogr A.
+
+50. Alvarez-Segura T, Camacho-Molinero C, Torres-Lapasió JR, García-Alvarez-Coque MC. Analysis of amino acids using serially coupled columns. J Sep Sci. 2017;40:2741–51.
+
+51. Jeong LN, Sajulga R, Forte SG, Stoll DR, Rutan SC. Simulation of elution profiles in liquid chromatography—I: Gradient elution conditions, and with mismatched injection and mobile phase solvents. J Chromatogr A. 2016;1457:41–9.
+
+52. Gritti F, Gilar M, Hill J. Mismatch between sample diluent and eluent: Maintaining integrity of gradient peaks using in silico approaches. J Chromatogr A. 2019;1608. https://doi.org/10. 1016/j.chroma.2019.460414.
+
+53. Boateng BO, Fever M, Edwards D, Petersson P, Euerby MR, Sutcliffe OB. Chromatographic retention behaviour, modelling and optimization of a UHPLC-UV separation of the regioisomers of the Novel Psychoactive Substance (NPS) methoxphenidine (MXP). J Pharm Biomed Anal. 2018;153:238–47.
+
+54. Vaňková N, De Vos J, Tyteca E, Desmet G, Edge T, Česlová L, Česla P, Eeltink S. Effect of gradient steepness on the kinetic performance limits and peak compression for reversedphase gradient separations of small molecules. J Chromatogr A. 2015;1409:152–8.
+
+55. Gritti F. General theory of peak compression in liquid chromatography. J Chromatogr A. 2016;1433:114–22.
+
+56. Wilson RE, Groskreutz SR, Weber SG. Improving the Sensitivity, Resolution, and Peak Capacity of Gradient Elution in Capillary Liquid Chromatography with Large-Volume Injections by Using Temperature-Assisted On-Column Solute Focusing. Anal Chem. 2016;88:5112–21.
+
+57. 112 DEN UIJL et al.
+
+58. Chang Q, Shao Y, Yang Y, Yu H, Wang R. Chromatographic retention assisted deconvolution of liquid chromatographymass spectrometry chromatogram of natural products. Anal Sci. 2019;35:201–6.
+
+59. Pirok BWJ, Stoll DR, Schoenmakers PJ. Recent Developments in Two-Dimensional Liquid Chromatography: Fundamental Improvements for Practical Applications. Anal Chem. 2019;91:240–63.
+
+60. Pirok BWJ, Gargano AFG, Schoenmakers PJ. Optimizing separations in online comprehensive two-dimensional liquid chromatography. J Sep Sci. 2018;41:68–98.
+
+61. Sarrut M, D’Attoma A, Heinisch S. Optimization of conditions in on-line comprehensive two-dimensional reversed phase liquid chromatography: Experimental comparison with onedimensional reversed phase liquid chromatography for the separation of peptides. J Chromatogr A. 2015;1421:48–59.
+
+62. Sarrut M, Rouvière F, Heinisch S. Theoretical and experimental comparison of one dimensional versus on-line comprehensive two dimensional liquid chromatography for optimized 110 DEN UIJL et al. sub-hour separations of complex peptide samples. J Chromatogr A. 2017;1498:183–95.
+
+63. Bernardin M, Masle ALe, Bessueille-Barbier F, Lienemann CP, Heinisch S. Comprehensive two-dimensional liquid chromatography with inductively coupled plasma mass spectrometry detection for the characterization of sulfur, vanadium and nickel compounds in petroleum products. J Chromatogr A. 2020;1611. .
+
+64. Sarrut M, Corgier A, Fekete S, Guillarme D, Lascoux D, JaninBussat MC, Beck A, Heinisch S. Analysis of antibody-drug conjugates by comprehensive on-line two-dimensional hydrophobic interaction chromatography x reversed phase liquid chromatography hyphenated to high resolution mass spectrometry. I − Optimization of separation conditions. J Chromatogr B Anal Technol Biomed Life Sci. 2016;1032:103–11.
+
+65. Iguiniz M, Rouvière F, Corbel E, Roques N, Heinisch S. Comprehensive two dimensional liquid chromatography as analytical strategy for pharmaceutical analysis. J Chromatogr A. 2018;1536:195–204.
+
+66. D’Attoma A, Grivel C, Heinisch S. On-line comprehensive two-dimensional separations of charged compounds using reversed-phase high performance liquid chromatography and hydrophilic interaction chromatography. Part I: Orthogonality and practical peak capacity considerations. J Chromatogr A. 2012;1262:148–59.
+
+67. Stoll DR, Sajulga RW, Voigt BN, Larson EJ, Jeong LN, Rutan SC. Simulation of elution profiles in liquid chromatography − II: Investigation of injection volume overload under gradient elution conditions applied to second dimension separations in two-dimensional liquid chromatography. J Chromatogr A. 2017;1523:162–72.
+
+68. Muller M, Tredoux AGJ, de Villiers A. Predictive kinetic optimisation of hydrophilic interaction chromatography × reversed phase liquid chromatography separations: Experimental verification and application to phenolic analysis. J Chromatogr A. 2018;1571:107–20.
+
+69. Hewitt EF, Lukulay P, Galushko S. Implementation of a rapid and automated high performance liquid chromatography method development strategy for pharmaceutical drug candidates. J Chromatogr A. 2006;1107:79–87.
+
+70. Taheri M, Moazeni-Pourasil RS, Sheikh-Olia-Lavasani M, Karami A, Ghassempour A. Central composite design with the help of multivariate curve resolution in loadability optimization of RP-HPLC to scale-up a binary mixture. J Sep Sci. 2016;39:1031–40.
+
+71. Tyteca E, Bieber S, Letzel T, Desmet G. Possibilities and Limitations of Computer-Assisted Method Development in HILIC: A Case Study. Chromatographia. 2017;80:771–81.
+
+72. Fasoula S, Zisi C, Gika H, Pappa-Louisi A, Nikitas P. Retention prediction and separation optimization under multilinear gradient elution in liquid chromatography with Microsoft Excel macros. J Chromatogr A. 2015;1395:109–15.
+
+73. Zisi C, Pappa-Louisi A, Nikitas P. Separation optimization in HPLC analysis implemented in R programming language. J Chromatogr A. 2020:1617. https://doi.org/10.1016/j.chroma. 2019.460823.
+
+74. van Schaick G, Pirok BWJ, Haselberg R, Somsen GW, Gargano AFG. Computer-aided gradient optimization of hydrophilic interaction liquid chromatographic separations of intact proteins and protein glycoforms. J Chromatogr A. 2019;1598:67–76.
+
+75. Khalaf R, Baur D, Pfister D. Optimization of reversed-phase chromatography methods for peptide analytics. J Chromatogr A. 2015;1425:198–203.
+
+76. Zhang Y. Computer simulation and optimization for reversedphase HPLC separation: A novel algorithm simulating and optimizing the non-linear and non-ideal separation process in analytical chromatography. Chemom Intell Lab Syst. 2015;149:73–
+
+77. Alvarez-Segura T, López-Ureña S, Torres-Lapasió JR, GarcíaAlvarez-Coque MC. Multi-scale optimisation vs. genetic algorithms in the gradient separation of diuretics by reversed-phase liquid chromatography. J Chromatogr A. 2020:1609. https://doi. org/10.1016/j.chroma.2019.460427.
+
+78. Bos TS, Niezen LE, den Uijl MJ, Molenaar SRA, Lege S, Schoenmakers PJ, Somsen GW, Pirok BWJ. Eliminating the influence of geometry-induced gradient deformation in liquid chromatographic retention modelling.
+
+79. Jandera P, Hájek T. Possibilities of retention prediction in fast gradient liquid chromatography. Part 3: Short silica monolithic columns. J Chromatogr A. 2015;1410:76–89.
+
+80. Gritti F. Gradient method transfer after changing the average pore diameter of the chromatographic stationary phase I – Onedimensional sample mixture. J Chromatogr A. 2019;1597:119–31.
+
+81. HPLC Columns - HPLC column selectivity measurements of more than 600 reversed phase columns from over 30 manufacturers. http://hplccolumns.org/ (last time accessed: August 19, 2020).
+
+82. Abraham MH, Chadha HS, Leo AJ. Hydrogen bonding. XXXV. Relationship between high-performance liquid chromatography capacity factors and water-octanol partition coefficients. J Chromatogr A. 1994;685:203–11.
+
+83. Sykora D, Vozka J, Tesarova E. Chromatographic methods enabling the characterization of stationary phases and retention prediction in high-performance liquid chromatography and supercritical fluid chromatography. J Sep Sci. 2016;39:115–
+
+84. Žuvela P, Skoczylas M, Jay Liu J, Baczek T, Kaliszan R, Wong MW, Buszewski B, Ba̧czek T, Kaliszan R, Wong MW, Buszewski B, Baczek T, Kaliszan R, Wong MW, Buszewski B, Ba̧czek T, Kaliszan R, Wong MW, Buszewski B, Baczek T, Kaliszan R, Wong MW, Buszewski B, Ba̧czek T, Kaliszan R, Wong MW, Buszewski B. Column Characterization and Selection Systems in Reversed-Phase High-Performance Liquid Chromatography. Chem Rev. 2019;119:3674–729.
+
+85. Visky D, Vander Heyden Y, Iványi T, Baten P, De Beer J, Kovács Z, Noszál B, Roets E, Massart DL, Hoogmartens J. Characterisation of reversed-phase liquid chromatographic columns by chromatographic tests. Evaluation of 36 test parameters: Repeatability, reproducibility and correlation. J Chromatogr A. 2002;977:39–58.
+
+86. Galea C, Mangelings D, Vander Heyden Y. Characterization and classification of stationary phases in HPLC and SFC - a review. Anal Chim Acta. 2015;886:1–15.
+
+87. Wang L, Wei W, Xia Z, Jie X, Xia ZZ. Recent advances in materials for stationary phases of mixed-mode high-performance DEN UIJL et al. 111 liquid chromatography. TrAC - Trends Anal Chem. 2016;80:495–506.
+
+88. Khalaf R, Forrer N, Buffolino G, Butté A, Morbidelli M. Modelbased description of peptide retention on doped reversed-phase media. J Chromatogr A. 2015;1407:169–75.
+
+89. Lincoln DR, Lavrik NV, Kravchenko II, Sepaniak MJ. Retention in Porous Layer Pillar Array Planar Separation Platforms. Anal Chem. 2016;88:8741–8.
+
+90. Li Y, Zhu N, Chen T, Wei M, Ma Y. Stationary Phase Based on βCyclodextrin and Poly(N-isopropylacrylamide) for HILIC and RPLC. Chromatographia. 2016;79:29–36.
+
+91. Peristyy A, Paull B, Nesterenko PN. Chromatographic performance of synthetic polycrystalline diamond as a stationary phase in normal phase high performance liquid chromatography. J Chromatogr A. 2015;1391:49–59.
+
+92. Qiao L, Shi X, Xu G. Recent advances in development and characterization of stationary phases for hydrophilic interaction chromatography. TrAC - Trends Anal Chem. 2016;81:23–33.
+
+93. Vyňuchalová K, Jandera P. Comparison of a C30 bonded silica column and columns with shorter bonded ligands in reversedphase LC. Chromatographia. 2015;78:861–71.
+
+94. Jandera P. Reversed-phase liquid chromatography of homologous series. A general method for prediction of retention. J Chromatogr A. 1984;314:13–36.
+
+95. Héron S, Charbonneau D, Albisson P, Estievenart G, Groni S, Tchapla A. A new methodology to determine the isoeluotropic conditions on ultra-performance flash purification stationary phases from analytical reversed liquid chromatography stationary phase. J Chromatogr A. 2015;1397: 59–72.
+
+96. Lunn DB, Yun YJ, Jorgenson JW. Retention and effective diffusion of model metabolites on porous graphitic carbon. J Chromatogr A. 2017;1530:112–9.
+
+97. Gilar M, McDonald TS, Gritti F, Roman GT, Johnson JS, Bunner B, Michienzi JD, Collamati RA, Murphy JP, Satpute DD, Bannon MP, DellaRovere D, Jencks RA, Dourdeville TA, Fadgen KE, Gerhardt GC. Chromatographic performance of microfluidic liquid chromatography devices: Experimental evaluation of straight versus serpentine packed channels. J Chromatogr A. 2018;1533:127–35.
+
+98. Douša M. 1H-Tetrazole-5-amine Immobilized on Substituted Polymer Gel/Silica as a New Stationary Phase for Hydrophilic Interaction Chromatography. Chromatographia. 2018;81:349–
+
+99. Li S, Li Z, Zhang F, Geng H, Yang B. A polymer-based zwitterionic stationary phase for hydrophilic interaction chromatography. Talanta. 2020;216. https://doi.org/10.1016/j.talanta.2020.
+
+100. Kalíková K, Voborná M, Tesařová E. Chromatographic behavior of new deazapurine ribonucleosides in hydrophilic interaction liquid chromatography. Electrophoresis. 2018;39:2144–51.
+
+101. Peng Y, Hou Y, Zhang F, Shen G, Yang B. A hyperbranched polyethylenimine functionalized stationary phase for hydrophilic interaction liquid chromatography. Anal Bioanal Chem. 2016;408:3633–8.
+
+102. Peng Y, Zhang F, Pan X, Hou Y, Yang B. Poly(vinyl alcohol)- cationic cellulose copolymer encapsulated SiO2 stationary phase for hydrophilic interaction liquid chromatography. RSC Adv. 2017;7:21336–41.
+
+103. Li H, Zhang X, Zhang L, Cang H, Kong F, Fan D, Wang W. Hyperbranched polyglycerol functionalized silica stationary phase for hydrophilic interaction liquid chromatography. Anal Sci. 2018;34:433–8.
+
+104. Geng H, Jing J, Zhang F, Zhang F, Yang B. A polar stationary phase obtained by surface-initiated polymerization of hyperbranched polyglycerol onto silica. Talanta. 2020;209. https:// doi.org/10.1016/j.talanta.2019.120525.
+
+105. Wang Y, Bu H, Wang L, Wang L, Guo Y, Liang X, Wang S. High efficiency and simple preparation of polyacrylamide coated silica stationary phase for hydrophilic interaction liquid chromatography. J Chromatogr A. 2019;1605. https://doi.org/10. 1016/j.chroma.2019.07.011.
+
+106. Hou Y, Zhang F, Liang X, Yang B, Liu X, Dasgupta PK. Poly(vinyl alcohol) Modified Porous Graphitic Carbon Stationary Phase for Hydrophilic Interaction Liquid Chromatography. Anal Chem. 2016;88:4676–81.
+
+107. Ding L, Guo Z, Hu Z, Liang X. Mixed-mode reversed phase/positively charged repulsion chromatography for intact protein separation. J Pharm Biomed Anal. 2017;138:63–9.
+
+108. Wang X, Bo C, Wang C, Wei Y. Controllable preparation of a hydrophilic/ion-exchange mixed-mode stationary phase by surface-initiated atom transfer radical polymerization using a mixture of two functional monomers. J Sep Sci. 2017;40:1861–8.
+
+109. Staňková M, Jandera P. Dual Retention Mechanism in Two-Dimensional LC Separations of Barbiturates, Sulfonamides, Nucleic Bases and Nucleosides on Polymethacrylate Zwitterionic Monolithic Micro-Columns. Chromatographia. 2016;79:657–66.
+
+110. Komendová M, Ribeiro LF, Urban J. Controlling selectivity of polymer-based monolithic stationary phases. J Sep Sci. 2019;42:952–61.
+
+111. Jandera P, Janás P. Recent advances in stationary phases and understanding of retention in hydrophilic interaction chromatography. A review. Anal Chim Acta. 2017;967:12–32.
+
+112. Vera CM, Shock D, Dennis GR, Samuelsson J, Enmark M, Fornstedt T, Shalliker RA. A preliminary study on the selectivity of linear polynuclear aromatic hydrocarbons in SFC using phenyltype stationary phases. Microchem J. 2015;121:136–40.
+
+113. Vera CM, Shock D, Dennis GR, Samuelsson J, Enmark M, Fornstedt T, Shalliker RA. Contrasting selectivity between HPLC and SFC using phenyl-type stationary phases: A study on linear polynuclear aromatic hydrocarbons. Microchem J. 2015;119:40–
+
+114. Gritti F, Belanger J, Izzo G, Leveille W. On the performance of conically shaped columns: Theory and practice. J Chromatogr A. 2019;1593:34–46.
+
+115. Jeong LN, Rutan SC. Simulation of elution profiles in liquid chromatography – III. Stationary phase gradients. J Chromatogr A. 2018;1564:128–36.
+
+116. Cain CN, Forzano AV, Rutan SC, Collinson MM. Experimentaland simulation-based investigations of coupling a mobile phase gradient with a continuous stationary phase gradient. J Chromatogr A. 2019;1602:237–45.
+
+117. Tyteca E, De Vos J, Vankova N, Cesla P, Desmet G, Eeltink S. Applicability of linear and nonlinear retention-time models for reversed-phase liquid chromatography separations of small molecules, peptides, and intact proteins. J Sep Sci. 2016;39:1249–
+
+118. Jandera P, Hájek T, Šromová Z. Mobile phase effects in reversed-phase and hydrophilic interaction liquid chromatography revisited. J Chromatogr A. 2018;1543:48–57.
+
+119. Jandera P, Kučerová M. Prediction of retention in gradientelution normal-phase high performance liquid chromatography with binary solvent gradients. J Chromatogr A. 1997;759:13–
+
+120. Baeza-Baeza JJ, García-Alvarez-Coque MC. Extension of the linear solvent strength retention model including a parameter that describes the elution strength changes in liquid chromatography. J Chromatogr A. 2020;1615. https://doi.org/10.1016/j. chroma.2019.460757.
+
+121. Navarro-Huerta JA, Gisbert-Alonso A, Torres-Lapasió JR, García-Alvarez-Coque MC. Benefits of solvent concentration pulses in retention time modelling of liquid chromatography. J Chromatogr A. 2019;1597:76–88.
+
+122. Blumberg LM. Migration and elution equations in gradient liquid chromatography. J Chromatogr A. 2019;1599:35–45.
+
+123. De Luca C, Felletti S, Macis M, Cabri W, Lievore G, Chenet T, Pasti L, Morbidelli M, Cavazzini A, Catani M, Ricci A. Modeling the nonlinear behavior of a bioactive peptide in reversed-phase gradient elution chromatography. J Chromatogr A. 2020;1616. .
+
+124. Hao W, Wang K, Yue B, Chen Q, Huang Y, Yu J, Li D. Influence of the pre-elution of solute in initial mobile phase on retention time and peak compression under linear gradient elution. J Chromatogr A. 2020;1618. https://doi.org/10.1016/j.chroma. 2020.460858.
+
+125. Wu D, Lucy CA. Study of the slope of the linear relationship between retention and mobile phase composition (SnyderSoczewiñski model) in normal phase liquid chromatography with bonded and charge-transfer phases. J Chromatogr A. 2016;1475:31–40.
+
+126. Kartsova LA, Bessonova EA, Somova VD. Hydrophilic Interaction Chromatography. J Anal Chem. 2019;74:415–24.
+
+127. Guo Y. Recent progress in the fundamental understanding of hydrophilic interaction chromatography (HILIC). Analyst. 2015;140:6452–66.
+
+128. McCalley DV. Understanding and manipulating the separation in hydrophilic interaction liquid chromatography. J Chromatogr A. 2017;1523:49–71.
+
+129. Jandera P, Hájek T. Mobile phase effects on the retention on polar columns with special attention to the dual hydrophilic interaction–reversed-phase liquid chromatography mechanism, a review. J Sep Sci. 2018;41:145–62.
+
+130. Taraji M, Haddad PR, Amos RIJ, Talebi M, Szucs R, Dolan JW, Pohl CA. Chemometric-assisted method development in hydrophilic interaction liquid chromatography: A review. Anal Chim Acta. 2018;1000:20–40.
+
+131. Maksić J, Tumpa A, Stajić A, Jovanović M, Rakić T, JancicStojanovic B. Hydrophilic interaction liquid chromatography in analysis of granisetron HCl and its related substances. Retention mechanisms and method development. J Pharm Biomed Anal. 2016;123:93–103.
+
+132. Douša M, Doubský J. Separation of structurally related primary aliphatic amines using hydrophilic interaction chromatography with fluorescence detection after postcolumn derivatization with o -phthaldialdehyde/mercaptoethanol. J Sep Sci. 2017;40:4689–99.
+
+133. Xu X, Gevaert B, Bracke N, Yao H, Wynendaele E, De Spiegeleer B. Hydrophilic interaction liquid chromatography method development and validation for the assay of HEPES zwitterionic buffer. J Pharm Biomed Anal. 2017;135:227–33.
+
+134. Kokotou MG, Thomaidis NS. Characterization of the retention of artificial sweeteners by hydrophilic interaction liquid chromatography. Anal Lett. 2018;51:49–72.
+
+135. Kasagić-Vujanović I, Jančić-Stojanović B, Ivanović D. Investigation of the retention mechanisms of amlodipine besylate, bisoprolol fumarate, and their impurities on three different HILIC columns. J Liq Chromatogr Relat Technol. 2018;41: 523–31.
+
+136. Tircova B, Kozlik P. HILIC-MS/MS Method for Analysis of Ephedrine in Internet-available Drugs. Chromatographia. 2017;80:523–8.
+
+137. Rácz N, Nagy J, Jiang W, Veress T. Modeling Retention Behavior on Analysis of Hallucinogenic Mushrooms Using Hydrophilic Interaction Liquid Chromatography. J Chromatogr Sci. 2019;57:230–7.
+
+138. Wang N, Boswell PG. Accurate prediction of retention in hydrophilic interaction chromatography by back calculation of high pressure liquid chromatography gradient profiles. J Chromatogr A. 2017;1520:75–82.
+
+139. Jandera P, HÃąjek T. Utilization of dual retention mechanism on columns with bonded PEG and diol stationary phases for adjusting the separation selectivity of phenolic and flavone natural antioxidants. J Sep Sci. 2009;32:3603–19.
+
+140. Obradović D, Oljačić S, Nikolić K, Agbaba D. Investigation and prediction of retention characteristics of imidazoline and serotonin receptor ligands and their related compounds on mixedmode stationary phase. J Chromatogr A. 2019;1585:92–104.
+
+141. Balkatzopoulou P, Fasoula S, Gika H, Nikitas P, PappaLouisi A. Retention prediction of highly polar ionizable solutes under gradient conditions on a mixed-mode reversed-phase and weak anion-exchange stationary phase. J Chromatogr A. 2015;1396:72–6.
+
+142. Navarro-Huerta JA, Vargas-García AG, Torres-Lapasió JR, García-Alvarez-Coque MC. Interpretive search of optimal isocratic and gradient separations in micellar liquid chromatography in extended organic solvent domains. J Chromatogr A. 2020;1616. .
+
+143. Hegade RS, De Beer M, Lynen F. Chiral stationary phase optimized selectivity liquid chromatography: A strategy for the separation of chiral isomers. J Chromatogr A. 2017;1515:109–17.
+
+144. Tyteca E, Desfontaine V, Desmet G, Guillarme D. Possibilities of retention modeling and computer assisted method development in supercritical fluid chromatography. J Chromatogr A. 2015;1381:219–28.
+
+145. De Pauw R, Shoykhet (Choikhet) K, Desmet G, Broeckhoven K. Effect of reference conditions on flow rate, modifier fraction and retention in supercritical fluid chromatography. J Chromatogr A. 2016;1459:129–35.
+
+146. Stankov V, Cvetnić M, Novak Stankov M, Rogošić M, Bolanča T, Ukić Š. Retention Modeling of Gradient Elutions: Application of Iso-to-Grad Approach for LC Systems with Dual-Species Eluent. Chromatographia. 2019;82:749–55.
+
+147. Tsui HW, Kuo CH, Huang YC. Elucidation of retention behaviors in reversed-phase liquid chromatography as a function of mobile phase composition. J Chromatogr A. 2019;1595:127–35. DEN UIJL et al. 113
+
+148. Gritti F. Combined solventand non-uniform temperatureprogrammed gradient liquid chromatography. I – A theoretical investigation. J Chromatogr A. 2016;1473:38–47.
+
+149. Groskreutz SR, Weber SG. Temperature-assisted solute focusing with sequential trap/release zones in isocratic and gradient capillary liquid chromatography: Simulation and experiment. J Chromatogr A. 2016;1474:95–108.
+
+150. Andrés A, Téllez A, Rosés M, Bosch E. Chromatographic models to predict the elution of ionizable analytes by organic modifier gradient in reversed phase liquid chromatography. J Chromatogr A. 2012;1247:71–80.
+
+151. Téllez A, Rosés M, Bosch E. Modeling the retention of neutral compounds in gradient elution RP-HPLC by means of polarity parameter models. Anal Chem. 2009;81:9135–45.
+
+152. Andrés A, Rosés M, Bosch E. Prediction of the chromatographic retention of acid-base compounds in pH buffered methanolwater mobile phases in gradient mode by a simplified model. J Chromatogr A. 2015;1385:42–8.
+
+153. Sasaki T, Todoroki K, Toyo’oka T. Simultaneous optimization of pH and binary organic composition by grid form modeling of the retention behavior in reversed-phase ultra highperformance liquid chromatography. J Pharm Biomed Anal. 2017;146:251–60.
+
+154. Wang F, Yang F, Tian Y, Liu J, Shen J, Bai Q. Studies on the retention mechanism of solutes in hydrophilic interaction chromatography using stoichiometric displacement theory I. The linear relationship of lgk’ vs. lg\[H2O\]. Talanta. 2018;176:499–
+
+155. Obradović D, Komsta Ł, Agbaba D. Novel computational approaches to retention modeling in dual hydrophilic interactions/reversed phase chromatography. J Chromatogr A. 2020;1619. .
+
+156. Tyteca E, Desmet G. On the inherent data fitting problems encountered in modelingretention behavior of analytes with dual retention mechanism. J Chromatogr A. 2015;1403:81–95.
+
+157. Tumpa A, Mišković S, Stanimirović Z, Jančić-Stojanović B, Medenica M. Modeling of HILIC retention behavior with theoretical models and new spline interpolation technique. J Chemom. 2017;31:e2910.
+
+158. Arnott JA, Planey SL. The influence of lipophilicity in drug discovery and design. Expert Opin Drug Discov. 2012;7:863–75.
+
+159. Chmiel T, Mieszkowska A, Kempińska-Kupczyk D, Kot-Wasik A, Namieśnik J, Mazerska Z. The impact of lipophilicity on environmental processes, drug delivery and bioavailability of food components. Microchem J. 2019;146:393–406.
+
+160. Liang C, Lian H, Recent advances in lipophilicity measurement by reversed-phase high-performance liquid chromatography. TrAC - Trends Anal Chem. 2015;68:28–36.
+
+161. Yamagami C, Yokota M, Takao N. Hydrophobicity Parameters Determined by Reversed-Phase Liquid Chromatography. IX. Relationship between Capacity Factor and Water-Octanol Partition Coefficient of Monosubstituted Pyrimidines. Chem Pharm Bull (Tokyo). 1994;42:907–12.
+
+162. Giaginis C, Tsantili-Kakoulidou A. Current State of the Art in HPLC Methodology for Lipophilicity Assessment of Basic Drugs. A Review. J Liq Chromatogr Relat Technol. 2007;31:79–
+
+163. Braumann T. Determination of hydrophobic parameters by reversed-phase liquid chromatography: theory, experimental techniques, and application in studies on quantitative structure-activity relationships. J Chromatogr A. 1986;373:191–
+
+164. Gritti F, Gilar M, Walter TH, Wyndham K. Retention loss of reversed-phase chromatographic columns using 100% aqueous mobile phases from fundamental insights to best practice. J Chromatogr A. 2020;1612:460662.
+
+165. Liang C, Qiao Jq, Lian Hz. Determination of reversed-phase high performance liquid chromatography based octanol-water partition coefficients for neutral and ionizable compounds: Methodology evaluation. J Chromatogr A. 2017;1528:25–34.
+
+166. Sobańska AW. Application of planar chromatographic descriptors to the prediction of physicochemical properties and biological activity of compounds. J Liq Chromatogr Relat Technol. 2018;41:255–71.
+
+167. Sztanke M, Tuzimski T, Janicka M, Sztanke K. Structureretention behaviour of biologically active fused 1,2,4triazinones - Correlation with in silico molecular properties. Eur J Pharm Sci. 2015;68:114–26.
+
+168. Hawrył AM, Popiołek ŁP, Hawrył MA, Wieboda RS, Niejedli MA. Chromatographic and calculation methods for analysis of the lipophilicity of newly synthesized thiosemicarbazides and their cyclic analogues 1,2,4-triazol-3-thiones. J Braz Chem Soc. 2015;26:1617–24.
+
+169. Hawrył A, Kus¨mierz E, Hawrył M, Wieboda R, Wujec M. Determination of lipophilicity of new thiosemicarbazide and 1,2,4-triazole-3-thione derivatives using reversed-phase HPLC method and theoretical calculations. J Liq Chromatogr Relat Technol. 2015;38:430–7.
+
+170. Pachuta-Stec A, Hawrył AM, Wróbel A, Hawrył MA, Pitucha M. Chromatographic Evaluation of the Lipophilic Properties of Some 1,2,4-Triazole with Potential Antitumour Activity. J Liq Chromatogr Relat Technol. 2015;38:1199–206.
+
+171. Tosti T, Šegan S, Milić D, Radoičić A, Tešić Ž, MilojkovićOpsenica D. Estimation of Lipophilicity of Some Polyoxygenated Steroids by the Means of Normal-Phase ThinLayer Chromatography. J Liq Chromatogr Relat Technol. 2015;38:1097–103.
+
+172. Yüksek H, Koca E, Gürsoy-Kol Ö, Akyildirim O, Çelebier M. Synthesis, in vitro antioxidant activity, and physicochemical properties of novel 4,5-dihydro-1H-1,2,4-triazol-5-one derivatives. J Mol Liq. 2015;206:359–66.
+
+173. Flieger J, Tatarczak-Michalewska M, Kowalska A, Rzadkowska M, Szacoń E, Kaczor AA, Matosiuk D. Fragmental method KowWIN as the powerful tool for prediction of chromatographic behavior of novel bioactive urea derivatives. J Braz Chem Soc. 2016;27:2312–21.
+
+174. Marciniec K, Boryczka S. Chromatographic and Computational Assessment of Lipophilicity of New Anticancer Acetylenequinoline Derivatives. J Chromatogr Sci. 2017;55:934–
+
+175. Gonec TT, Malík I, Csöllei J, Jampílek J, Stolaríková J, Solovic I, Miku P, Keltoová S, Kollár P, O’Mahony J, Coffey A. Synthesis and in vitro antimycobacterial activity of novel narylpiperazines containing an ethane-1,2-diyl connecting chain. Molecules. 2017;22. .
+
+176. Milosevic NP, Kojic V, Curcic J, Jakimov D, Milic N, Banjac N, Uscumlic G, Kaliszan R. Evaluation of in silico pharmacokinetic properties and in vitro cytotoxic activity of selected newly 114 DEN UIJL et al. synthesized N-succinimide derivatives. J Pharm Biomed Anal. 2017;137:252–7.
+
+177. Klose MHM, Theiner S, Varbanov HP, Hoefer D, Pichler V, Galanski M, Meier-Menches SM, Keppler BK. Development and valid
+
