@@ -35,7 +35,7 @@ summary: 中国・湖南大学のケモメトリクス研究室が、漢方方�
 
 漢方（伝統中国医薬, TCM）は多成分の集合体で、有効成分の含量が品質と効果を左右します。したがって有効成分の含量をモニタリングする方法が重要です。ところが従来のHPLCで多成分を「きれいに」定量しようとすると、次の壁にぶつかります。
 
-- **完全分離のための煩雑な前処理**と、**長い溶出時間**（既報では1回の分析に30分超）。
+- **完全分離のための煩雑な前処理**と、**長い溶出時間**（既報では1回の分析に30分超[30,31]）。
 - 実試料ごとに変わる**未知の妨害（バックグラウンド）**。
 - **ベースラインのずれ（baseline shift）**と**保持時間のずれ（time shift）**が定量精度を損なう。
 
@@ -43,7 +43,7 @@ summary: 中国・湖南大学のケモメトリクス研究室が、漢方方�
 
 ## 対象：温清飲（Wen-Qing-Yin, WQY）と指標5成分
 
-温清飲は、**黄連解毒湯（Huang-Lian-Jie-Du-Tang）**と**四物湯（Si-Wu-Tang）**を合わせた方剤で、当帰・白芍・熟地黄・川芎・黄連・黄芩・黄柏・山梔子から構成されます。主要成分はアルカロイド・フラボノイド・テルペン配糖体・イリドイド配糖体で、抗酸化・抗潰瘍・抗炎症・抗菌・抗がん活性が報告され、婦人科出血性疾患・皮膚疾患・再発性アフタ性潰瘍などに用いられます。
+温清飲は、**黄連解毒湯（Huang-Lian-Jie-Du-Tang）**と**四物湯（Si-Wu-Tang）**を合わせた方剤で、当帰・白芍・熟地黄・川芎・黄連・黄芩・黄柏・山梔子から構成されます。主要成分はアルカロイド・フラボノイド・テルペン配糖体・イリドイド配糖体で[1,2]、抗酸化[3–5]・抗潰瘍[6–8]・抗炎症[9–12]・抗菌[13–15]・抗がん[16–18]活性が報告され、婦人科出血性疾患・皮膚疾患・再発性アフタ性潰瘍などに用いられます[19]。HMF・PAE・FER・BAI・BERの5つはWQYの指標成分であり[3,25–29]、多成分を同時定量する方法はUHPLC・HPLC・キャピラリー電気泳動とMS/DAD/UV等の組み合わせで多数開発されてきました[20–24]。
 
 本研究が定量する指標成分は次の5つ（略号は原文どおり）:
 
@@ -81,11 +81,11 @@ summary: 中国・湖南大学のケモメトリクス研究室が、漢方方�
 - N は因子（factor）の総数＝目的成分＋共溶出する妨害＋バックグラウンド＋ベースラインのずれ＋ノイズ。
 - A（I×N）＝正規化クロマトグラム行列、B（J×N）＝正規化UVスペクトル行列、C（K×N）＝相対濃度行列、E＝残差。
 
-> 補足（なぜ「三次元」だと強いのか＝二次の利点）: 各成分は「固有のクロマト形状（溶出プロファイル）」と「固有のUVスペクトル」という**2つの指紋**を持ちます。データを時間×波長×試料の三次元にすると、この2指紋の組み合わせが各成分ごとに一意になり、**未知の妨害が混ざっていても目的成分だけを抜き出せます**。これが「二次校正（second-order calibration）」がもつ **二次の利点（second-order advantage）**で、著者らはこれを「数学的分離（mathematical separation）」と呼びます。物理的に分けきれなくても、計算で分けられる、というわけです。
+> 補足（なぜ「三次元」だと強いのか＝二次の利点）: 各成分は「固有のクロマト形状（溶出プロファイル）」と「固有のUVスペクトル」という**2つの指紋**を持ちます。データを時間×波長×試料の三次元にすると、この2指紋の組み合わせが各成分ごとに一意になり、**未知の妨害が混ざっていても目的成分だけを抜き出せます**。これが「二次校正（second-order calibration）」がもつ **二次の利点（second-order advantage）**[32]で、著者らはこれを「数学的分離（mathematical separation）」と呼びます。物理的に分けきれなくても、計算で分けられる、というわけです。
 
 ### アルゴリズム① ATLD（交替三線分解）
 
-ATLD（alternating trilinear decomposition, Wu ら 1996/1998）は、**推定因子数に鈍感**で**収束が速い**アルゴリズムです（スライス行列の三線構造を使う）。HPLC-DAD・LC-MS など大規模データの処理に向きます。特長として、
+ATLD（alternating trilinear decomposition, Wu ら 1996/1998[33]）は、**推定因子数に鈍感**で**収束が速い**アルゴリズムです（スライス行列の三線構造を使う）。HPLC-DAD・LC-MS など大規模データの処理に向きます。特長として、
 
 - **因子数を増やすことでバックグラウンドを近似**でき、ベースラインのずれを「妨害の一部」として除去できる。
 - **軽い保持時間シフトは許容**できる（ただし深刻なシフトには不向き）。
@@ -94,7 +94,7 @@ ATLD（alternating trilinear decomposition, Wu ら 1996/1998）は、**推定因
 
 ### アルゴリズム② ATLD-MCR
 
-ATLD-MCR（Wang ら 2019）は、**液体クロマトデータの保持時間シフト問題を解ける**新しいアルゴリズムです。手順は、(1) まずATLDでシフトのあるデータを近似し、初期スペクトル行列 B(ini) を得る、(2) MCR（多変量曲線分解）戦略で各試料の保持時間プロファイル行列 A(k) を最小二乗で求める、(3) 定性情報（A(k)・B）と定量情報（C）を得る（式5〜7）。要するに、**試料ごとに少しずつずれるピーク位置を個別に合わせ込みつつ、二次の利点を保つ**手法です。
+ATLD-MCR（Wang ら 2019[35]）は、**液体クロマトデータの保持時間シフト問題を解ける**新しいアルゴリズムです。手順は、(1) まずATLDでシフトのあるデータを近似し、初期スペクトル行列 B(ini) を得る、(2) MCR（多変量曲線分解）戦略で各試料の保持時間プロファイル行列 A(k) を最小二乗で求める、(3) 定性情報（A(k)・B）と定量情報（C）を得る（式5〜7）。要するに、**試料ごとに少しずつずれるピーク位置を個別に合わせ込みつつ、二次の利点を保つ**手法です。
 
 ## 結果と考察
 
@@ -137,7 +137,7 @@ ATLDでは回収率91.8–112.5%（SD<9.7%）、r 0.9969–0.9993、RMSEP<4.05�
 
 同一バッチの実試料を同日3回・連続3日で測り、日内・日間精度（RSD%）を求めました。**日間再現性はATLD-MCRがATLDより良好**でした。とりわけ**ベルベリン（BER）は、ATLDでの日間RSDが40.8%**と大きく悪化——これは連続日測定で生じた深刻な保持時間シフトのためです（補足 Figure S1）。最初の4成分は急速溶出のため軽い時間ドリフトはATLDが妨害として除去できましたが、**最後に溶出するBERのシフトは別アルゴリズム（ATLD-MCR）で解く必要**がありました。ATLD-MCRではBERの日間RSDは0.9%まで改善しています。
 
-性能指標（Table 2）では、感度 SEN は ATLD で 1.04×10⁴〜1.24×10⁵、ATLD-MCR で 7.74×10³〜7.93×10⁴（mAU·mL/µg）、選択性 SEL は ATLD 0.20–0.56／ATLD-MCR 0.13–0.35。SELが低めなのはピーク重なりと未知妨害の影響が大きいためです。検出限界 LOD は ATLD 0.07–11.67／ATLD-MCR 0.22–4.53（µg/mL）。ATLDのBERのLODは検量線最低濃度を下回っており（時間シフトの影響）、その点でもATLD-MCRの結果の方が妥当でした。
+性能指標（Table 2）では、感度 SEN は ATLD で 1.04×10⁴〜1.24×10⁵、ATLD-MCR で 7.74×10³〜7.93×10⁴（mAU·mL/µg）、選択性 SEL は ATLD 0.20–0.56／ATLD-MCR 0.13–0.35。性能指標の数理的定義は既報[36]に詳しく、ここでは繰り返しません。SELが低めなのはピーク重なりと未知妨害の影響が大きいためです。検出限界 LOD は ATLD 0.07–11.67／ATLD-MCR 0.22–4.53（µg/mL）。ATLDのBERのLODは検量線最低濃度を下回っており（時間シフトの影響）、その点でもATLD-MCRの結果の方が妥当でした。
 
 ### 2手法の統計的比較
 
@@ -146,6 +146,45 @@ ATLDでは回収率91.8–112.5%（SD<9.7%）、r 0.9969–0.9993、RMSEP<4.05�
 ## 結論
 
 HPLC-DAD と二次校正を組み合わせることで、温清飲中の5成分を**同時・迅速**に定量できました。全成分が検量線範囲で良好な直線性を示し、軽い時間シフトを含むデータには高感度・省時間で対応、深刻な時間シフトには ATLD-MCR が適切に対処しました。温清飲を例に、本戦略が**方剤（漢方）の有効成分定量と品質モニタリングの信頼できるツール**になりうることが示されました。
+
+## 参考文献
+
+1. Zhou, F.; Li, J.; He, Y.; Mu, R.; Fu, C. Simultaneous determination of eight components in Siwu decoction by HPLC and analysis of transmitting of the components in water extraction and ethanol precipitation process. Chin. J. Pharm. Anal. 2019, 39, 983–991.
+2. Qi, Y.; Zhang, Q.; Zhu, H. Huang-Lian Jie-Du decoction: A review on phytochemical, pharmacological and pharmacokinetic investigations. Chin. Med. 2019, 14, 57.
+3. Xu, Z.F.; Feng, W.; Shen, Q.; et al. Rhizoma Coptidis and Berberine as a Natural Drug to Combat Aging and Aging-Related Diseases via Anti-Oxidation and AMPK Activation. Aging Dis. 2017, 8, 760–777.
+4. Zdunska, K.; Dana, A.; Kolodziejczak, A.; Rotsztejn, H. Antioxidant properties of ferulic acid and its possible application. Ski. Pharmacol. Physiol. 2018, 31, 332–336.
+5. Grzegorczyk-Karolak, I.; Golab, K.; Gburek, J.; Wysokinska, H.; Matkowski, A. Inhibition of advanced glycation end-product formation and antioxidant activity by extracts and polyphenols from Scutellaria alpina L. and S. altissima L. Molecules 2016, 21, 739.
+6. Sun, Y.; Lenon, G.B.; Yang, A.W.H. Phellodendri cortex: A phytochemical, pharmacological, and pharmacokinetic review. Evid. Based Complement. Altern. Med. 2019, 2019, 7621929.
+7. Yuan, Z.W.; Yang, L.H.; Zhang, X.S.; et al. Mechanism of Huang-lian-Jie-du decoction and its effective fraction in alleviating acute ulcerative colitis in mice. J. Ethnopharmacol. 2020, 259, 112872.
+8. Zheng, Y.H.; You, X.R.; Guan, S.Y.; et al. Poly (ferulic acid) with an anticancer effect as a drug nanocarrier for enhanced colon cancer therapy. Adv. Funct. Mater. 2019, 29, 1808646.
+9. Kim, K.S.; Rhee, H.I.; Park, E.K.; et al. Anti-inflammatory effects of Radix Gentianae Macrophyllae (Qinjiao), Rhizoma Coptidis (Huanglian) and Citri Unshiu Pericarpium in animal models. Chin. Med. 2008, 3, 1–7.
+10. Meng, F.C.; Wu, Z.F.; Yin, Z.Q.; Lin, L.G.; Wang, R.; Zhang, Q.W. Coptidis rhizoma and its main bioactive components: Recent advances in chemical investigation, quality evaluation and pharmacological activity. Chin. Med. 2018, 13, 1–18.
+11. Kang, O.H.; Chae, H.S.; Oh, Y.C.; et al. Anti-nociceptive and anti-inflammatory effects of Angelicae dahuricae radix through inhibition of iNOS expression and NO production. Am. J. Chin. Med. 2008, 36, 913–928.
+12. Liao, H.F.; Ye, J.; Gao, L.L.; Liu, Y.L. The main bioactive compounds of Scutellaria baicalensis Georgi. for alleviation of inflammatory cytokines: A comprehensive review. Biomed. Pharmacother. 2021, 133, 110917.
+13. Lu, Y.J.; Joerger, R.; Wu, C.Q. Study of the chemical composition and antimicrobial activities of ethanolic extracts from roots of Scutellaria baicalensis Georgi. J. Agric. Food Chem. 2011, 59, 10934–10942.
+14. Qian, W.; Zhang, J.; Wang, W.; et al. Antimicrobial and antibiofilm activities of paeoniflorin against carbapenem-resistant Klebsiella pneumoniae. J. Appl. Microbiol. 2020, 128, 401–413.
+15. Lin, S.J.; Chen, C.S.; Lin, S.S.; et al. In vitro anti-microbial and in vivo cytokine modulating effects of different prepared Chinese herbal medicines. Food Chem. Toxicol. 2006, 44, 2078–2085.
+16. Wang, H.; Chan, Y.L.; Li, T.L.; Wu, C.J. Improving cachectic symptoms and immune strength of tumour-bearing mice in chemotherapy by a combination of Scutellaria baicalensis and Qing-Shu-Yi-Qi-Tang. Eur. J. Cancer 2012, 48, 1074–1084.
+17. Chen, Z.; Liu, W.M.; Qin, Z.G.; Liang, X.T.; Tian, G.R. Geniposide exhibits anticancer activity to medulloblastoma cells by downregulating microRNA-373. J. Biochem. Mol. Toxicol. 2020, 34, e22471.
+18. Ma, Z.; Otsuyama, K.; Liu, S.Q.; et al. Baicalein, a component of Scutellaria radix from Huang-Lian-Jie-Du-Tang (HLJDT), leads to suppression of proliferation and induction of apoptosis in human myeloma cells. Blood 2005, 105, 3312–3318.
+19. Koda, A.; Ono, Y.; Nishiyori, T.; et al. Immunopharmacological studies of Wen-Qing-Yin, a chinese blended medicine: Effects of type IV allergic reactions and humoral antibody production. Int. J. Immunopharmacol. 1987, 9, 289–295.
+20. Zheng, Z.J.; Zhao, X.E.; Zhu, S.Y.; et al. Simultaneous determination of oleanolic acid and ursolic acid by in vivo microdialysis via UHPLC-MS/MS. J. Agric. Food Chem. 2018, 66, 3975–3982.
+21. Liu, Y.K.; Zhou, W.; Mao, Z.K.; Liao, X.Y.; Chen, Z.L. Analysis of six active components in Radix tinosporae by nonaqueous capillary electrophoresis with mass spectrometry. J. Sep. Sci. 2017, 40, 4628–4635.
+22. Zhang, Y.; Zou, Z.Z.; Chou, G.X. Fast simultaneous detection of three diterpenoids in Herba Siegesbeckiae using solid phase extraction followed by HPLC-UV with a core-shell particle column. Anal. Methods 2018, 10, 1325–1330.
+23. Li, Y.Y.; Guo, M.Q.; Li, X.M.; Yang, X.W. Simultaneous qualitative and quantitative evaluation of the Coptidis Rhizoma and Euodiae Fructus herbal pair by using UHPLC-ESI-QTOF-MS and UHPLC-DAD. Molecules 2020, 25, 4782.
+24. Fu, S.; Cheng, R.R.; Xiang, Z.L.; Deng, Z.X.; Liu, T.G. Rapid profiling of chemical constituents in Qingfei Paidu granules using HPLC coupled with Q exactive mass spectrometry. Chromatographia 2021, 84, 1035–1048.
+25. Committee, N.P. Pharmacopoeia of the People's Republic of China 2020; China Medical Science Press: Beijing, China, 2020.
+26. Zhang, W.S.; Cui, N.; Su, F.Z.; et al. Comprehensive Metabolomics and Network Pharmacology to Explore the Mechanism of 5-Hydroxymethyl Furfural in the Treatment of Blood Deficiency Syndrome. Front. Pharmacol. 2022, 12, 811331.
+27. Huang, T.; Liu, Y.A.; Zhang, C.L. Pharmacokinetics and Bioavailability Enhancement of Baicalin: A Review. Eur. J. Drug Metab. Pharmacokinet. 2019, 44, 159–168.
+28. Wang, J.; Yuan, Z.; Zhao, H.P.; et al. Ferulic acid promotes endothelial cells proliferation through up-regulating cyclin D1 and VEGF. J. Ethnopharmacol. 2011, 137, 992–997.
+29. Jiao, F.; Varghese, K.; Wang, S.; et al. Recent Insights Into the Protective Mechanisms of Paeoniflorin in Neurological, Cardiovascular, and Renal Diseases. J. Cardiovasc. Pharmacol. 2021, 77, 728–734.
+30. Yeh, C.C.; Huang, S.S.; Liu, P.Y.; et al. Simultaneous quantification of six indicator compounds in Wen-Qing-Yin by high-performance liquid chromatography-diode array detection. J. Food Drug Anal. 2019, 27, 749–757.
+31. Chang, Y.X.; Ge, A.H.; Yu, X.A.; et al. Simultaneous determination of four phenolic acids and seven alkaloids in rat plasma after oral administration of Jinqi Jiangtang Tablet by LC-ESI–MS/MS. J. Pharm. Biomed. Anal. 2016, 117, 1–10.
+32. Wu, H.L.; Nie, J.F.; Yu, Y.J.; Yu, R.Q. Multi-way chemometric methodologies and applications: A central summary of our research work. Anal. Chim. Acta 2009, 650, 131–142.
+33. Wu, H.L.; Shibukawa, M.; Oguma, K. An alternating trilinear decomposition algorithm with application to calibration of HPLC–DAD for simultaneous determination of overlapped chlorinated aromatic hydrocarbons. J. Chemom. 1998, 12, 1–26.
+34. Zhang, Y.; Wu, H.L.; Xia, A.L.; Hu, L.H.; Zou, H.F.; Yu, R.Q. Trilinear decomposition method applied to removal of three-dimensional background drift in comprehensive two-dimensional separation data. J. Chromatogr. A 2007, 1167, 178–183.
+35. Wang, T.; Wu, H.L.; Yu, Y.J.; et al. A simple method for direct modeling of second-order liquid chromatographic data with retention time shifts and holding the second-order advantage. J. Chromatogr. A 2019, 1605, 360360.
+36. Olivieri, A.C. Analytical figures of merit: From univariate to multiway calibration. Chem. Rev. 2014, 114, 5358–5378.
 
 ## 訳者補足（要点と漢方QCへの示唆）
 
