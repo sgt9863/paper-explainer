@@ -258,3 +258,88 @@ $$W_j = \frac{C_j}{\sum_{j=1}^{n}C_j} \ (21)\qquad Sf = \sum_{j=1}^{n}W_j\times 
 - **なぜGCを足すか:** CLTの去痰効果の主役は揮発成分（樟脳・アネトール）。HPLCでは揮発・熱不安定成分を捉えにくいので、GCを補って初めて「効能に効く成分」を品質評価に載せられる。表3でGCのPe変動（RSD 25.95%）が最大なのは、揮発成分がバッチ・保存で大きくばらつくことの反映。
 - **CRITICの意義:** 3手法を単純平均すると、情報の少ない手法（UV：Seがほぼ1.000で差が出ない）に引っ張られて誤判定が起きる（例：S24が偽の等級1に）。CRITICは「ばらつきが大きく（=情報が多い）」「他指標と相関が低い（=独自情報）」指標に重みを与えるため、Seの重みはGC 55%・HPLC 44%・UV 0.9%と自動配分され、実態に近い等級（S24→等級4）になる。
 - **数値の扱い:** 表2（35×11）・表3（35バッチ）は代表バッチのみ抜粋。全バッチ・図S1〜S3・表S1〜S3は原文/補足資料参照。原文にない数値は加えていない。式18（元データ行列X）は行列表記のため本文では省略し式19以降を掲載。
+
+## 参考文献
+
+1. Jiang, H.; Gao, Y.; Yang, J.; Meng, X. Overview of traditional Chinese medicine quality evaluation method based on overall research, China J. Chin. Mater. Med. 40 (6) (2015) 1027–1031.
+
+2. Ju, S.; Li, Y.; Lin, Z.; Zhang, B.; Ren, Z. Present situation analysis and thinking on quality control mode of Chinese materia medica, Chin. J. Exp. Tradit. Med. Formulae 28 (18) (2022) 269–274.
+
+3. Dou, J.H.; Wang, Z.Y.; Shi, D.D.; He, H.P.; Zhang, T.C.; Li, X.M. HPLC fingerprint and total antioxidant capacity of the extracts from the aerial part of Paeonia lactiflora Pall, Int. J. Food Prop. 26 (1) (2023) 1364–1373.
+
+4. Zhang, H.; Chen, Y.; Wang, J.; Jiang, H.; Shen, X.; Yan, J. Application of fingerprint technology in quality evaluation and process control of traditional Chinese medicine formula granules, China J. Chin. Mater. Med. 43 (19) (2018) 3822–3827.
+
+5. Liu, D.; Zhao, L.; Li, Y.; Jin, C. Research progress and application in fingerprint technology on Chinese materia medica, Chin. Tradit. Herb. Drugs 47 (22) (2016) 4085–4094.
+
+6. Fan, X.; Ji, T.; Bi, X.; Ma, C.; Zhang, Q. Overview of the classification and evaluation of fingerprints of traditional Chinese medicines, Heilongjiang Med. J. 36 (6) (2023) 1254–1258.
+
+7. Li, X.; Wang, W.; Sun, S.L.; Wang, J.H.; Zhu, J.H.; Liang, F.; Zhang, Y.; Hu, G.X. Quantitative analysis of anthocyanins in grapes by UPLC-Q-TOF MS combined with QAMS, Separations 9 (6) (2022).
+
+8. Bao, H.W.; Chi, J.H.; Yang, H.L.; Liu, F.X.; Fang, K.; Xu, Y. Simultaneous determination of six active components in danggui kushen pills via quantitative analysis of multicomponents by single marker, J. Anal. Methods Chem. 2019 (2019).
+
+9. Li, S.; Zhao, J. Key scientific issues in research on quality control of traditional Chinese medicine, Chin. J. Pharm. Anal. 43 (7) (2023) 1104–1109.
+
+10. Yan, H.; Sun, G.; Sun, W.; Lan, L.; Li, X.; Pu, D.; Hu, Y.; Jia, J.; Chen, Z. Quantitative fingerprints combined with multi-marker assay by monolinear method for consistency evaluation of traditional Chinese medicine, Cent. South Pharm. 19 (11) (2021) 2237–2244.
+
+11. Zhang, Q.; Cai, M.; Fan, J.J.; Lan, L.L.; Sun, G.X. Comprehensively evaluating the quality consistency of Forsythia suspensa by five-wavelength mean fusion fingerprint profiling combined with spectrum quantum fingerprint and antioxidant activity, New J. Chem. 47 (34) (2023) 16108–16119.
+
+12. Yang, T.; Wang, S.Q.; Liu, X.; Xue, L.; Guo, Y.L.; Guo, P.; Sun, G.X. Integrated quality control strategy for red yeast rice combining DSC and HPLC profiles, Food Control 158 (2024).
+
+13. Wang, P.Y.; Wang, X.Y.; Li, Y.F.; He, R.R.; Gao, J.; Chen, C.Y.; Dai, H.Q.; Cao, Z.M.; Lan, L.L.; Sun, G.X.; Sun, W.Y. Thorough evaluation of the Chinese medicine preparations and intermediates using high performance liquid chromatography fingerprints and ultraviolet quantum fingerprints along with antioxidant activity: shuanghuanglian oral solution as an example, J. Chromatogr. A 1705 (2023).
+
+14. Yin, Q.H.; Yang, Y.L.; Zhao, J.; Zhu, Y.Q. Chemical fingerprint analysis of Salvia yunnanensis roots by high-performance liquid chromatography with photodiode array detection, Anal. Methods 6 (17) (2014) 6878–6884.
+
+15. Li, Z.H.; Zhang, X.H.; Liao, J.; Fan, X.H.; Cheng, Y.Y. An ultra-robust fingerprinting method for quality assessment of traditional Chinese medicine using multiple reaction monitoring mass spectrometry, J. Pharm. Anal. 11 (1) (2021) 88–95.
+
+16. Wang, X.Y.; Chang, Q.; Lan, L.L.; Guo, Y.; Sun, G.X.; Li, Q. Reliability evaluation of traditional Chinese medicine fingerprints combined with qualitative and quantitative analysis and antioxidant activity to comprehensively evaluate the quality of Citri Reticulatae Pericarpium, New J. Chem. 46 (45) (2022) 21660–21671.
+
+17. Chen, L.; Fan, J.J.; Li, X.; Lan, L.L.; Wang, Z.; Sun, G.X. Evaluating Paeonia Radix Alba quality by multidimensional quantified fingerprinting combined with antioxidant profiling, New J. Chem. 47 (22) (2023) 10770–10780.
+
+18. Shen, T.Y.; Gong, D.D.; Xu, S.T.; Wang, J.H.; Sun, G.X.; Guo, P. Multi wavelengths fusion profiling for quality evaluation of donglingcao tablets combined with electrochemical oscillation fingerprints and antioxidant activity analysis, Electroanalysis 34 (9) (2022) 1507–1518.
+
+19. Chang, Q.; Lan, L.L.; Gong, D.D.; Guo, Y.; Sun, G.X. Evaluation of quality consistency of herbal preparations using five-wavelength fusion HPLC fingerprint combined with ATR-FT-IR spectral quantized fingerprint: belamcandae rhizoma antiviral injection as an example, J. Pharmaceut. Biomed. Anal. 214 (2022).
+
+20. Chen, J.Y.; Gong, D.D.; Liu, X.T.; Sun, G.X.; Sun, W.Y. Quality and antioxidant activity evaluation of dandelion by HPLC with five-wavelength fusion fingerprint, New J. Chem. 45 (22) (2021) 9856–9863.
+
+21. Wang, N.; Liu, X.; Liu, J.; Jin, C.; Zhang, Y. Qualitative study on fingerprint of Pini Radix in Poria by HPLC wavelength switching method combined with double standard linear correction, Chinese Journal of Pharmaceutical Analysis 43 (10) (2023) 1791–1799.
+
+22. Zang, Y.; Xu, L.; Liu, H.; Luan, Y.; Xu, X.; Yu, Y.; Lin, Y. Determination of 8 main active compounds in curcumae rhizoma by HPLC wavelength switching method, Chinese Journal of Modern Applied Pharmacy 38 (18) (2021) 2227–2233.
+
+23. Sun, G.; Yang, T.; Sun, W.; Zhang, J.; Zhou, K.; Pu, D.; Chen, Z. Key technology of TCM consistency evaluation — theory and application of spectral quantum fingerprints in quality consistency evaluation of TCM, Central South Pharmacy 20 (7) (2022) 1467–1477.
+
+24. Cantarelli, M.A.; Azcarate, S.M.; Savio, M.; Marchevsky, E.J.; Camia, J.M. Authentication and discrimination of whiskies of high commercial value by pattern recognition, Food Anal. Methods 8 (3) (2015) 790–798.
+
+25. Cancilla, J.C.; Aroca-Santos, R.; Wierzchos, K.; Torrecilla, J.S. Hazardous aromatic VOC quantification through spectroscopic analysis and intelligent modeling to assess drinking water quality, Chemometr. Intell. Lab. Syst. 156 (2016) 102–107.
+
+26. Gong, D.D.; Chen, J.Y.; Li, X.; Sun, G.X.; Sun, W.Y. A smart spectral analysis strategy-based UV and FT-IR spectroscopy fingerprint: application to quality evaluation of compound liquorice tablets, J. Pharmaceut. Biomed. Anal. 202 (2021).
+
+27. Krishnan, A.R.; Kasim, M.M.; Hamid, R.; Ghazali, M.F. A modified CRITIC method to estimate the objective weights of decision criteria, Symmetry-Basel 13 (6) (2021).
+
+28. Ou, Z.; Wang, J.; Zhang, B.; Yan, L.; Zhang, Y.; Wang, Y.; Tong, Y.; Ma, Z.; Liu, D.; Cai, J. Optimization of extraction process of Congrong Shujing Granules based on AHP-CRITIC analysis, China J. Chin. Mater. Med. 47 (13) (2022) 3481–3487.
+
+29. Zeng, X.; Chen, Y.; Yue, S.; Xu, D.; Fu, R.; Tang, Y. Quantitative identification of Q-markers of Euphorbiae Humifusae Herba based on AHP-CRITIC comprehensive weighting method, China J. Chin. Mater. Med. 47 (19) (2022) 5193–5202.
+
+30. Boesch, M.; Rassouli, F.; Baty, F.; Schwärzler, A.; Widmer, S.; Tinschert, P.; Shih, I.; Cleres, D.; Barata, F.; Fleisch, E.; Brutsche, M.H. Smartphone-based cough monitoring as a near real-time digital pneumonia biomarker, ERJ Open Research 9 (3) (2023).
+
+31. Tian, R.; Zhao, N.; Li, L.; Tang, Y. Rational application of compound licorice tablets, J. Nort. Pharm. 15 (11) (2018) 171–172.
+
+32. Chinese Pharmacopoeia Commission. Pharmacopoeia of the People's Republic of China, China Medical Science Press, Beijing, 2020.
+
+33. Gong, D.D.; Chen, J.Y.; Sun, Y.; Liu, X.T.; Sun, G.X. Multiple wavelengths maximization fusion fingerprint profiling for quality evaluation of compound liquorice tablets and related antioxidant activity analysis, Microchem. J. 160 (2021).
+
+34. Zuo, W.; Yang, K.; Liu, J. Determination of codeine and thebaine in compound licorice tablet by LC-MS/MS, J. China Pres. Drug 20 (3) (2022) 38–39.
+
+35. Zhao, H.; Qi, Y.; Qi, L.; Yang, L.; Chen, Y.; Xu, Y. Quality evaluation of compound liquorice tablets in market, Chin. J. Mod. Appl. Pharm. 39 (13) (2022) 1737–1743.
+
+36. Cai, M.; Zhang, Q.; Lan, L.L.; Sun, W.Y.; Zhang, H.; Sun, G.X. Holistically assessing the quality consistency of compound liquorice tablets from similarities of both all chemical fingerprints and the integrated dissolution curves by systematically quantified fingerprint method, Talanta 264 (2023).
+
+37. Yang, H.Z.; Yang, T.; Gong, D.D.; Li, X.H.; Sun, G.X.; Guo, P. A trinity fingerprint evaluation system of traditional Chinese medicine, J. Chromatogr. A 1673 (2022).
+
+38. Yuan, R.; Wang, J.; Yang, J. Research on the relationship between glycyrrhizic acid content and environment in Glycyrrhiza uralensis, Chem. Enterp. Manag. (23) (2023) 55–57.
+
+39. Yan, B.; Sun, G.X. Monitoring quality consistency of Liuwei Dihuang Pill by integrating the ultraviolet spectroscopic fingerprint, a multi-wavelength fusion fingerprint method, and antioxidant activities, J. Separ. Sci. 41 (6) (2018) 1182–1191.
+
+40. Ji, Z.C.; Sun, W.Y.; Sun, G.X.; Zhang, J. Monitoring the quality consistency of Fufang Danshen Pills using micellar electrokinetic chromatography fingerprint coupled with prediction of antioxidant activity and chemometrics, J. Separ. Sci. 39 (15) (2016) 3019–3027.
+
+41. Dai, T.T.; Yang, F.L.; Liu, J.D.; Sun, G.X. Evaluation of the quality consistency of Zhenju Jiangya Tablets by systematic quantified fingerprint method in combination with antioxidant activity and three compounds analyses, Microchem. J. 150 (2019).
+
