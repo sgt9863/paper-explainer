@@ -150,6 +150,68 @@ LTQ-Orbitrap XLで定性分析。正負両ESIモードで相補的構造情報�
 
 本研究で初めて、UHPLC-CAD指紋と多成分定量分析を組み合わせた総合戦略を開発し、中成薬ZYPの品質評価に適用した。一般的なDAD検出と比べ、CADはより高い感度でより多くのピークを提供し、ZYPの複雑成分の指紋分析に適した。計52の特徴指紋ピークで16バッチの類似度を評価。加えて先進的ハイブリッドLTQ-Orbitrap MSと組み合わせ、化学標準品・精密質量・MSⁿ断片データに基づいてZYPから計281化合物を同定・推定同定。さらに±MRMで18マーカーを13分で同時定量。UHPLC-CAD指紋と多成分定量の組み合わせは、ZYPの効率的で信頼できる品質管理戦略であり、中成薬の品質評価の参照となる。
 
+## 参考文献
+
+1. Q. Gao, L. Han, X. Li, X. Cai, Traditional chinese medicine, the Zishen Yutai Pill, ameliorates precocious endometrial maturation induced by controlled ovarian hyperstimulation and improves uterine receptivity via upregulation of HOXA10, Evid. Complement. Alternat. Med. 2015 (2015) 317–586.
+
+2. Y. Zhang, W. Yan, P.F. Ge, Y. Li, Q. Ye, Study on prevention effect of Zishen Yutai pill combined with progesterone for threatened abortion in rats, Asian Pac, J. Trop. Med. 9 (2016) 577–581.
+
+3. Y. Jiang, B. David, P.F. Tu, Y. Barbin, Recent analytical approaches in quality control of traditional Chinese medicines-A review, Anal. Chim. Acta 657 (2010) 9–18.
+
+4. W.Z. Yang, Y.B. Zhang, W.Y. Wu, L.Q. Huang, D. Guo, C.X. Liu, Approaches to establish Q-markers for the quality standards of traditional Chinese medicines, Acta Pharm. Sin. B 7 (2017) 439–446.
+
+5. J.M. Lin, L.H. Wei, W. Xu, Z.F. Hong, X.X. Liu, J. Peng, Effect of Hedyotis diffusa Willd extract on tumor angiogenesis, Mol. Med. Rep. 4 (2011) 1283–1288.
+
+6. M.Z. Guo, J. Han, D.D. He, J.H. Zou, Z. Li, Y. Du, D.Q. Tang, Optimization and assessment of three different high performance liquid chromatographic systems for the combinative fingerprint analysis and multi-ingredients quantification of Sangju ganmao tablet, J. Chromatogr. Sci. 55 (2017) 334–345.
+
+7. D.Z. Yang, T.Q. An, X.L. Jiang, D.Q. Tang, Y.Y. Gao, H.T. Zhao, X.W. Wu, Development of a novel method combining HPLC fingerprint and J. Cao, T. Lei, S. Wu et al. / Journal of Pharmaceutical and Biomedical Analysis 191 (2020) 113570 9 multi-ingredients quantitative analysis for quality evaluation of traditional chinese medicine preparation, Talanta 85 (2011) 885–890.
+
+8. W.H. Organization, WHO Guidelines for the Assessment of Herbal Medicine, Munich, 1991.
+
+9. U.F.a.D. Administration, FDA Guidance for Industry-Botanical Drug Products (Draft Guidance), 2000.
+
+10. S.F.a.D.A.o. China, Technical Requirements for the Development of Finger-prints of TCM Injections, SFDA, Beijing, 2000.
+
+11. C.J. Xu, B.X. Yang, W. Zhu, X.M. Li, J.K. Tian, L. Zhang, Characterisation of polyphenol constituents of Linderae aggregate leaves using HPLC fingerprint analysis and their antioxidant activities, Food Chem. 186 (2015) 83–89.
+
+12. M.P. La, F. Zhang, S.H. Gao, X.W. Liu, Z.J. Wu, L.N. Sun, X. Tao, W.S. Chen, Constituent analysis and quality control of Lamiophlomis rotata by LC-TOF/MS and HPLC-UV, J. Pharm. Biomed. Anal. 102 (2015) 366–376.
+
+13. X.J. Xie, Y. Zhang, Z.F. Yue, K. Wang, X.M. Mai, Y.T. Liu, M.F. Zhu, H.J. Fan, W. Zhang, Multi-fingerprint profiling analysis for screening and quantification of illegal adulterated antidiabetics in a functional food using HPLC coupled to diode array detection/fluorescence detection, Microchem. J. 149 (2019), 103995.
+
+14. C.P. Commission, Chinese Pharmacopoeia, China Medical Science Press Beijing, 2015.
+
+15. G.Y. Xie, Q.H. Xu, R. Li, L. Shi, Y. Han, Y. Zhu, G. Wu, M.J. Qin, Chemical profiles and quality evaluation of Buddleja officinalis flowers by HPLC-DAD and HPLC-Q-TOF-MS/MS, J. Pharm. Biomed. Anal. 164 (2019) 283–295.
+
+16. J. Nie, L. Xiao, L.M. Zheng, Z.F. Du, D. Liu, J.W. Zhou, J. Xiang, J.J. Hou, X.G. Wang, J.B. Fang, An integration of UPLC-DAD/ESI-Q-TOF MS, GC-MS, and PCA analysis for quality evaluation and identification of cultivars of Chrysanthemi Flos (Juhua), Phytomedicine 59 (2019), 152803.
+
+17. K. Schilling, U. Holzgrabe, Recent applications of the Charged Aerosol Detector for liquid chromatography in drug quality control, J. Chromatogr. A 1619 (2020), 469011.
+
+18. X. He, W. Yang, M. Ye, Q. Wang, D. Guo, Differentiation of Cuscuta chinensis and Cuscuta australis by HPLC-DAD-MS analysis and HPLC-UV quantitation, Planta Med. 77 (2011) 1950–1957.
+
+19. B.S. Han, Z.Q. Xin, S.S. Ma, W.B. Liu, B.Y. Zhang, L. Ran, L.Z. Yi, D.B. Ren, Comprehensive characterization and identification of antioxidants in Folium Artemisiae Argyi using high-resolution tandem mass spectrometry, J. Chromatogr. B 1063 (2017) 84–92.
+
+20. M.Z. He, J. Jia, J.M. Li, B. Wu, W.P. Huang, M. Liu, Y. Li, S.L. Yang, H. Ouyang, Y.L. Feng, Application of characteristic ion filtering with ultra-high performance liquid chromatography quadrupole time of flight tandem mass spectrometry for rapid detection and identification of chemical profiling in Eucommia ulmoides Oliv, J. Chromatogr. A 1554 (2018) 81–91.
+
+21. G.Y. Wang, J. Shang, Y. Wu, G. Ding, W. Xiao, Rapid Characterization of the major chemical constituents from Polygoni Multiflori Caulis by liquid chromatography tandem mass spectrometry and comparative analysis with Polygoni Multiflori Radix, J. Sep. Sci. 40 (2017) 2107–2116.
+
+22. X. Sun, Y. Zhang, Y. Yang, J. Liu, W. Zheng, B. Ma, B. Guo, Qualitative and quantitative analysis of furofuran lignans, iridoid glycosides, and phenolic acids in Radix dipsaci by UHPLC-Q-TOF/MS and UHPLC-PDA, J. Pharm. Biomed. Anal. 154 (2018) 40–47.
+
+23. K.M. Yip, J. Xu, S.S. Zhou, Y.M. Lau, Q.L. Chen, Y.C. Tang, Z.J. Yang, Z.P. Yao, P. Ding, H.B. Chen, Z.Z. Zhao, Characterization of chemical component variations in different growth years and tissues of morindae officinalis Radix by integrating metabolomics and glycomics, J. Agric. Food Chem. 67 (2019) 7304–7314.
+
+24. X. Sun, X.B. Cui, H.M. Wen, C.X. Shan, X.Z. Wang, A. Kang, C. Chai, W. Li, Influence of sulfur fumigation on the chemical profiles of Atractylodes macrocephala Koidz. Evaluated by UFLC-QTOF-MS combined with multivariate statistical analysis, J. Pharm. Biomed. Anal. 141 (2017) 19–31.
+
+25. X.Q. Ma, A.K. Leung, C.L. Chan, T. Su, W.D. Li, S.M. Li, D.W. Fong, Z.L. Yu, UHPLC UHD Q-TOF MS/MS analysis of the impact of sulfur fumigation on the chemical profile of Codonopsis Radix (dangshen), Analyst 139 (2014) 505–516.
+
+26. S. Gao, J. Liu, M. Wang, Y. Liu, X. Meng, T. Zhang, Y. Qi, B. Zhang, H. Liu, X. Sun, P. Xiao, Exploring on the bioactive markers of Codonopsis Radix by correlation analysis between chemical constituents and pharmacological effects, J. Ethnopharmacol. 236 (2019) 31–41.
+
+27. M.H. Liu, X. Tong, J.X. Wang, W. Zou, H. Cao, W.W. Su, Rapid separation and identification of multiple constituents in traditional Chinese medicine formula Shenqi Fuzheng Injection by ultra-fast liquid chromatography combined with quadrupole-time-of-flight mass spectrometry, J. Pharm. Biomed. Anal. 74 (2013) 141–155.
+
+28. J. Zhang, W. Xu, P. Wang, J. Huang, J.Q. Bai, Z.H. Huang, X.S. Liu, X.H. Qiu, Chemical analysis and multi-component determination in chinese medicine preparation bupi yishen formula using ultra-high performance liquid chromatography with linear ion trap-orbitrap mass spectrometry and triple-quadrupole tandem mass spectrometry, Front. Pharmacol. 9 (2018) 568.
+
+29. S.L. Li, J.Z. Song, C.F. Qiao, Y. Zhou, K. Qian, K.H. Lee, H.X. Xu, A novel strategy to rapidly explore potential chemical markers for the discrimination between raw and processed Radix rehmanniae by UHPLC-TOFMS with multivariate statistical analysis, J. Pharm. Biomed. Anal. 51 (2010) 812–823.
+
+30. H.P. Wang, Y.B. Zhang, X.W. Yang, D.Q. Zhao, Y.P. Wang, Rapid characterization of ginsenosides in the roots and rhizomes of Panax ginseng by UPLC-DAD-QTOF-MS/MS and simultaneous determination of 19 ginsenosides by HPLC-ESI-MS, J. Ginseng Res. 40 (2016) 382–394.
+
 ## 訳者補足
 
 - **「三位一体」のQC戦略**: 本論文の設計思想は、1つの手法では複雑な15生薬複方を評価しきれないので、役割の異なる3手法を組み合わせる点にある。①**UHPLC-CAD指紋**＝「全体像（52ピークのパターンが揃っているか＝類似度）」を見る、②**LTQ-Orbitrap高分解能MS**＝「そのピークが何なのか（281成分の同定）」を突き止める、③**UPLC-MS/MS（±MRM）**＝「重要な18成分が何μg/gあるか（定量）」を測る。指紋は"似ているか"しか言えず微小差を定量できない、という弱点を定量が補う関係。
