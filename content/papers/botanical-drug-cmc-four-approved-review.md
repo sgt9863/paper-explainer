@@ -161,6 +161,27 @@ FDA のボタニカルIND経路は、従来の NCE 開発に対して 2 つの�
 **データ利用可能性**: 本レビューで新たなデータは生成・解析されていない。議論した情報はすべて、公開されている規制文書・公表文献・FDA 承認パッケージから得たものである。
 **資金**: 著者は公的・商業的・非営利いずれのセクターの資金助成も受けていないことを宣言する。
 
+## 参考文献
+
+1. Atanasov AG, Zotchev SB, Dirsch VM, the International Natural Product Sciences Taskforce, Supuran CT. Natural products in drug discovery: advances and opportunities. Nat Rev Drug Discov. 2021;20:200–216.
+2. Ahn K. The worldwide trend of using botanical drugs and strategies for developing global drugs. BMB Rep. 2017;50(3):111–116.
+3. U.S. Food and Drug Administration. Botanical Drug Products (Final Guidance). Silver Spring, MD: U.S. Department of Health and Human Services; 2004.
+4. U.S. Food and Drug Administration. Botanical Drug Development: Guidance for Industry. Silver Spring, MD: U.S. Department of Health and Human Services; 2016.
+5. Wu C, Lee SL, Taylor C, et al. Scientific and regulatory approach to botanical drug development: a U.S. FDA perspective. J Nat Prod. 2020;83(2):552–562.
+6. Cespedes Zablah A, Lio P. A new pathway: botanical drugs and the FDA. J Integr Dermatol. 2025;1(1). https://doi.org/10.64550/joid.ysj2js31.
+7. U.S. Food and Drug Administration. Drug approval package: Veregen ointment, NDA 021902. Approval date October 31, 2006. Accessed March 15, 2026. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021902s000TOC.cfm.
+8. McChesney JD, Dou J, Harrington PB. The development of botanical drugs — a review. Pharmaceut Reg Affairs. 2019;8(2):1000224.
+9. Hoffman FA. Botanicals as new drugs: U.S. development considerations. Epilepsy Behav. 2015;52:338–343.
+10. Patel D, Sorkin BC, Mitchell CA, et al. Improving the rigor and utility of botanical toxicity studies: recommended resources. Regul Toxicol Pharmacol. 2023;144:105471.
+11. Tatti S, Stockfleth E, Beutner KR, et al. Polyphenon E sinecatechins ointment 15% for the treatment of external genital warts: a pooled analysis of two phase III trials. Obstet Gynecol. 2008;111(6):1371–1379.
+12. Lee SL, Dou J, Agarwal R, et al. Evolution of traditional medicines to botanical drugs. In: Art and Science of Traditional Medicine, Part 2. Washington, DC: Science/AAAS Custom Publishing Office; 2015:S32–S35.
+13. U.S. Food and Drug Administration. Drug approval package: Mytesi delayed-release tablets, NDA 202292. Approval date December 31, 2012. Accessed March 15, 2026. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/202292Orig1s000TOC.cfm.
+14. U.S. Food and Drug Administration. Drug approval package: NexoBrid, BLA 761192. Approval date December 28, 2022. Accessed March 15, 2026. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2023/761192Orig1s000TOC.cfm.
+15. Park JY, Lee D, Rui L, Gao X, Furness MS, Wu C. Analysis of regulatory botanical submission profile for cancer management from the U.S. FDA perspectives. Ther Innov Regul Sci. 2025;59(5):1129–1137. https://doi.org/10.1007/s43441-025-00786-y.
+16. Berman TA, Ben-Arye E, Kienle GS, Master V, Huston A, Paller CJ. Integrating botanicals into oncology care: consideration of FDA regulation of botanical products and botanical clinical trials. Clin Cancer Res. 2025;31(9):1566–1572. https://doi.org/10.1158/1078-0432.CCR-24-3419.
+17. U.S. Food and Drug Administration. Drug approval package: Filsuvez, NDA 215064. Approval date December 18, 2023. Accessed March 15, 2026. https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215064Orig1s000TOC.cfm.
+18. Li W. Botanical drugs: a future for herbal medicines. J Contemp Health Law Policy. 2002;19(1):117–164.
+
 ## 訳者補足（実務者向けの読みどころ）
 
 > 以下は原文に無い、漢方・生薬QC実務の観点からの補足である（本文の訳と混ぜない）。
