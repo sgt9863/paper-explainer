@@ -259,6 +259,76 @@ TCM処方は「君臣佐使」の配合原則で組まれ、適切な比率で�
 
 > 補足（実務的示唆）: 本研究の要点は、単一成分(ginsenoside Re)依存の現行規格に対し、「薬効・安定性まで含めた多次元評価」で指標成分を選ぶ枠組みを示した点。実務では、ここで挙がった12成分を多成分同時定量(MRM)の対象とし、特に高温・高湿で不安定な成分(notoginsenoside Fe・Rd・Rb1・Rc・Rg1)を安定性モニタリング指標に据える設計が考えられる。なお活性・効能・安定性の重み付け係数(0.4/0.4/0.2 など)は本研究の設定であり、処方や目的により再検討の余地がある。
 
+## 参考文献
+
+> 原文はElsevier方式（本文中は著者・年号で引用）。以下は著者名アルファベット順の一覧。
+
+1. Cao, C., Liu, M.Q., Qu, S.C., Huang, R.J., Qi, M.Z., Zhu, Z.Q., Zheng, J.N., Chen, Z.C., Wang, Z.K., Han, Z.X., Zhu, Y., Huang, F., Duan, J.A., 2020. Chinese medicine formula Kai-Xin-San ameliorates depression-like behaviours in chronic unpredictable mild stressed mice by regulating gut microbiota-inflammation-stress system. J. Ethnopharmacol. 261, 113055–113065.
+
+2. Chen, B.S., Tian, J., Zhang, J.J., Wang, K., Liu, L., Yang, B., Bao, L., Liu, H.W., 2017. Triterpenes and meroterpenes from Ganoderma lucidum with inhibitory activity against HMGs reductase, aldose reductase and α-glucosidase. Fitoterapia 120, 6–16.
+
+3. Chen, T.B., Zuo, Y.H., Dong, G.T., Liu, L., Zhou, H., 2018. An integrated strategy for rapid discovery and identification of quality markers in Guanxin Kangtai preparation using UHPLC-TOF/MS and multivariate statistical analysis. Phytomedicine 44, 239–246.
+
+4. Dai, X.M., Cui, D.N., Wang, J., Zhang, W., Zhang, Z.J., Xu, F.G., 2018. Systems pharmacology based strategy for Q-markers discovery of Huangqin decoction to attenuate intestinal damage. Front. Pharmacol. 9, 236–240.
+
+5. Dai, Y.T., Li, Q., Tong, J.Y., Verpoorte, R., Zhao, S.J., Qin, X.M., Chen, S.L., 2019. Quality marker identification based on standard decoction of differently processed materials of Ephedrae Herba. J. Ethnopharmacol. 237, 47–54.
+
+6. Gokhan, Z., Zaahira, A.E., Adriano, M., Mustafa, A.Y., Mohamad, F.M., 2018. In vitro and in silico perspectives on biological and phytochemical profile of three halophyte species—A source of innovative phytopharmaceuticals from nature. Phytomedicine 38, 35–44.
+
+7. He, L.L., Liu, Y.H., Yang, K.F., Zou, Z.Y., Fan, C.L., Yao, Z.H., Dai, Y., Li, K.S., Chen, J.X., Yao, X.S., 2021. The discovery of Q-markers of Qiliqiangxin Capsule, a traditional Chinese medicine prescription in the treatment of chronic heart failure, based on a novel strategy of multi-dimensional "radar chart" mode evaluation. Phytomedicine 82, 153443.
+
+8. Huang, Y.X., Chen, Y.Y., Yue, S.J., Feng, L.M., Xu, D.Q., Fu, R.J., Xing, L.M., Wang, B.A., Tang, Y.P., 2021. Identification of quality markers of Qixuehe capsule based on analytic hierarchy process and entropy weight methods. Chinese Journal of Chinese Materia Medica 2, 1–9.
+
+9. Jiang, Z., Yang, J., Wang, Y., 2018. Discrimination and identification of Q-markers based on 'Spider-web' mode for quality control of traditional Chinese medicine. Phytomedicine 44, 98–102.
+
+10. Kousaxidis, A., Petrou, A., Lavrentaki, V., Fesatidou, M., Nicolaou, I., Geronikaki, A., 2020. Aldose reductase and protein tyrosine phosphatase 1B inhibitors as a promising therapeutic approach for diabetes mellitus. Eur. J. Med. Chem. 207, 112742.
+
+11. Li, D.T., Lv, B., Wang, D., Xu, D.D., Qin, S.Y., Zhang, Y., Chen, J., Zhang, W., Zhang, Z.J., Xu, F.G., 2020. Network pharmacology and bioactive equivalence assessment integrated strategy driven Q-markers discovery for da-cheng-qi decoction to attenuate intestinal obstruction. Phytomedicine 72, 153236.
+
+12. Li, Z.T., Zhang, F.X., Fan, C.L., Ye, M.N., Chen, W.W., Yao, Z.H., Yao, X.S., Dai, Y., 2021. Discovery of potential Q-marker of traditional Chinese medicine based on plant metabolomics and network pharmacology: Periplocae Cortex as an example. Phytomedicine 85, 153535.
+
+13. Liu, C.X., Guo, D.A., Liu, L., 2018. Quality transitivity and traceability system of herbal medicine products based on quality markers. Phytomedicine 44, 247–257.
+
+14. Liu, J.L., Kong, Y.C., Miao, J.Y., Mei, X.Y., Wu, S.Y., Yan, Y.C., Cao, X.Y., 2020. Spectroscopy and molecular docking analysis reveal structural specificity of flavonoids in the inhibition of α-glucosidase activity. Int. J. Biol. Macromol. 152, 981–989.
+
+15. Nuraniye, E., Emrah, D., 2019. Determination of 1-Deoxynojirimycin by a developed and validated HPLC-FLD method and assessment of in-vitro antioxidant, α-Amylase and α-Glucosidase inhibitory activity in mulberry varieties from Turkey. Phytomedicine 53, 234–242.
+
+16. Pan, L.L., Li, Z.Z., Wang, Y.F., Zhang, B.Y., Liu, G.R., Liu, J.H., 2020. Network pharmacology and metabolomics study on the intervention of traditional Chinese medicine Huanglian Decoction in rats with type 2 diabetes mellitus. J. Ethnopharmacol. 258, 112842.
+
+17. Pang, B., Lian, F.M., Zhao, X.Y., Zhao, X.M., Jin, D., Lin, Y.Q., Zheng, Y.J., Ni, Q., Tong, X.L., 2017. Prevention of type 2 diabetes with the traditional Chinese patent medicine: a systematic review and meta-analysis. Diabetes Res. Clin. Pract. 131, 242–259.
+
+18. Panunti, B., Jawa, A.A., Fonseca, V.A., 2004. Mechanisms and therapeutic targets in type 2 diabetes mellitus. Drug Discov. Today 2, 151–157.
+
+19. She, W.J., Liu, J.Z., Gong, H., 2019. Effects of Shenqi Jiangtang granules in the treatment of type 2 diabetic patients. World Chin. Med. 14, 3294–3297.
+
+20. Sri, F., Taslim, E., Kuniyoshi, S., 2015. The inhibitory activity of aldose reductase in vitro by constituents of Garcinia mangostana Linn. Phytomedicine 22, 49–51.
+
+21. Tang, Y.P., Shang, E.X., Chen, Y.Y., Yue, S.J., Yang, J., Zhang, S., Li, J.J., Duan, J.A., 2019. Research thoughts and methods on grading identification and transmission change law of traditional Chinese medicine (TCM) Q-marker. China J. Chin. Mater. Med. 44, 3116–3122.
+
+22. Wang, H.Y., Liu, T.H., 2015. A meta analysis of Shenqi Jiangtang granule treatment on diabetic nephropathy. World Sci. and Technol. 12, 2608–2613.
+
+23. Wang, T.Y., Lin, S., Li, H., Liu, R., Liu, Z.H., Xu, H.R., Li, Q., Bi, K.S., 2020. A stepwise integrated multi-system to screen quality markers of Chinese classic prescription Qingzao Jiufei decoction on the treatment of acute lung injury by combining 'network pharmacology-metabolomics-PK/PD modeling'. Phytomedicine 78, 153313.
+
+24. Xiong, H., Zhang, A.H., Zhao, Q.Q., Yan, J.L., Sun, H., Wang, X.J., 2020. Discovery of quality-marker ingredients of Panax quinquefolius driven by high-throughput chinmedomics approach. Phytomedicine 74, 152928–152936.
+
+25. Yan, J., Cheng, X.H., Jiang, F.Q., Guo, Z., Xie, J., Fu, L., 2016. Application of the ultrafiltration-based LC-MS approach for screening PTP1B inhibitors from Chinese red yeast rice. Analytical Methods 8, 353–361.
+
+26. Yang, J., Jiang, Z., Chai, X., Wang, Y., Zhao, B., Zhao, X., Wang, Y., 2016. Discriminant analysis of "Q-Markers" of traditional Chinese medical injections – taking Danhong injection as a model. Mod. Tradit. Chin. Med.-World Sci. and Technol. 18, 2056–2061.
+
+27. Zhang, H., Xu, C., Tian, Q.H., Zhang, Y., Zhang, G.M., Guan, Y.X., Tong, S.Q., Yan, J.Z., 2021. Screening and characterization of aldose reductase inhibitors from Traditional Chinese medicine based on ultrafiltration-liquid chromatography mass spectrometry and in silico molecular docking. J. Ethnopharmacol. 264, 113282–113291.
+
+28. Zhang, H., Zhang, X.J., Jiang, H.J., Xu, C., Tong, S.Q., Yan, J.Z., 2017a. Screening and identification of α-glucosidase inhibitors from Shenqi Jiangtang Granule by ultrafiltration liquid chromatography and mass spectrometry. J. Separ. Sci. 44, 797–805.
+
+29. Zhang, H., Zhang, X.J., Jiang, H.J., Yan, J.Z., 2017b. Analysis of chemical constituents in Shenqi Jiangtang granules by UPLC-Q-TOF MS/MS. Chin. Tradit. Pat. Med. 39, 2101–2108.
+
+30. Zhang, L., Wang, L.L., Li, M.D., Wang, Y.Y., 2019a. Clinical study on Shenqi Jiangtang granules in adjuvant therapy for type 2 diabetes of qi-yin deficiency type. J. New Chin. Med. 51, 166–168.
+
+31. Zhang, Q., Xiao, X.H., Zheng, J., Li, M., Yu, M., Ping, F., Wang, T., Wang, X.J., 2019b. Shenqi Jiangtang granule ameliorates kidney function by inhibiting apoptosis in a diabetic rat model. Evid-Based Compl. Alt. 3240618, 1–12.
+
+32. Zhang, T.J., Xu, J., Shen, X.P., Han, Y.Q., Hu, J.F., Zhang, H.B., Gong, S.X., Liu, C.X., 2016. Relation "property-response-component" and action mechanism of Yuanhu Zhitong Dropping Pills based on quality marker (Q-Marker). Chin. Tradit. Herb. Drugs 47, 2199–2211.
+
+33. Zhou, X., Seto, S.W., Chang, D., Kiat, H., Razmovski-Naumovski, V., Chan, K., Bensousan, A., 2016. Synergistic effects of Chinese herbal medicine: a comprehensive review of methodology and current research. Front. Pharmacol. 7, 201–207.
+
 ## 訳者補足（用語）
 
 - **君臣佐使**: 漢方処方の配合原則。主薬(君)・補助(臣)・調整/減毒(佐)・引経/調和(使)。
