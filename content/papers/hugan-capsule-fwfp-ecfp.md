@@ -41,13 +41,13 @@ summary: 慢性肝炎・初期肝硬変に用いる中国の6生薬処方「護�
 
 ## 1. 序論（Introduction）
 
-社会と技術の発展に伴い、各種疾患の予防・治療のために生薬製剤（HP）を用いる動きが世界的に高まっている。HPは多成分・多標的・多機能などの特徴をもち、TCMの継承と革新のための重要な担い手である。しかし、TCMとHPには成分が複雑・機序が不明・品質管理が困難といった短所がある。したがって、現代的な検出手法と革新的な解析手法を組み合わせ、TCMとその複方製剤を現代的に研究して品質を管理し、品質規格体系を改善することは、困難だが避けられない趨勢である。
+社会と技術の発展に伴い、各種疾患の予防・治療のために生薬製剤（HP）を用いる動きが世界的に高まっている。HPは多成分・多標的・多機能などの特徴をもち、TCMの継承と革新のための重要な担い手である。しかし、TCMとHPには成分が複雑・機序が不明・品質管理が困難といった短所がある。したがって、現代的な検出手法と革新的な解析手法を組み合わせ、TCMとその複方製剤を現代的に研究して品質を管理し、品質規格体系を改善することは、困難だが避けられない趨勢である[1,2]。
 
-近年、TCMの主要な分析手法にはHPLC、GC、近赤外分光法、ナノテクノロジーなどがある。中でもTCM指紋と現代分析技術を組み合わせた手法は、TCMとHPの解析で重要な役割を果たす。その「全体性（integrity）」と「あいまいさ（fuzziness）」という顕著な特徴はTCMの基礎理論に合致しており、国内外で認められたTCM品質管理の有効な手法である。HPLC指紋はTCMの全成分を俯瞰でき、各試料間の定性的・定量的な類似性を示せるため、TCM・HP中の有効成分の含量測定と医薬品の品質一貫性評価に好適な手法とされる。しかし、化合物ごとに条件・波長により紫外吸収が異なるため、単一波長のHPLC指紋では試料の化学情報を一面的にしか特徴づけられない。そこで、異なる波長下の試料情報を融合して多波長指紋を作れば、より包括的かつ客観的に試料を理解できる。本研究では、各波長で最大シグナル応答をもつピークを新しいクロマトグラムに合成してHP情報を抽出・統合する**四波長融合指紋（FWFP）**を確立した。化学指紋の定性的・定量的類似度の評価には**系統的定量指紋法（SQFM）**を用いた。
+近年、TCMの主要な分析手法にはHPLC[3,4]、GC[5,6]、近赤外分光法[7]、ナノテクノロジー[8]などがある。中でもTCM指紋と現代分析技術を組み合わせた手法は、TCMとHPの解析で重要な役割を果たす。その「全体性（integrity）」と「あいまいさ（fuzziness）」という顕著な特徴はTCMの基礎理論に合致しており、国内外で認められたTCM品質管理の有効な手法である[9,10]。HPLC指紋はTCMの全成分を俯瞰でき[11]、各試料間の定性的・定量的な類似性を示せるため、TCM・HP中の有効成分の含量測定と医薬品の品質一貫性評価に好適な手法とされる[12]。しかし、化合物ごとに条件・波長により紫外吸収が異なるため、単一波長のHPLC指紋では試料の化学情報を一面的にしか特徴づけられない。そこで、異なる波長下の試料情報を融合して多波長指紋を作れば、より包括的かつ客観的に試料を理解できる。本研究では、各波長で最大シグナル応答をもつピークを新しいクロマトグラムに合成してHP情報を抽出・統合する**四波長融合指紋（FWFP）**を確立した[13–16]。化学指紋の定性的・定量的類似度の評価には**系統的定量指紋法（SQFM）**を用いた[17]。
 
-HPLC指紋は医薬品分析で広く使われているが、前処理が複雑・分析操作の工程・実験費用が高い・検出時間が長い、といった限界がある。そこで、TCMとHPの全化学物質の定性・定量情報を包括的に得るために、**電気化学指紋法（ECFP）**が、迅速・簡便・低コストな新しい指紋技術として登場した。前処理が簡単・実験操作が便利・安価という利点があり、TCM・HP中の電気化学活性成分全体を特徴づけられる。この結果をHPLC評価の補足として組み合わせ、TCM全体の品質を論じることで、TCMとその製剤の品質管理・評価に優れた分析手法を提供する。
+HPLC指紋は医薬品分析で広く使われているが、前処理が複雑・分析操作の工程・実験費用が高い・検出時間が長い、といった限界がある[18]。そこで、TCMとHPの全化学物質の定性・定量情報を包括的に得るために、**電気化学指紋法（ECFP）**が、迅速・簡便・低コストな新しい指紋技術として登場した[19]。前処理が簡単・実験操作が便利・安価という利点があり、TCM・HP中の電気化学活性成分全体を特徴づけられる[20,21]。この結果をHPLC評価の補足として組み合わせ、TCM全体の品質を論じることで、TCMとその製剤の品質管理・評価に優れた分析手法を提供する。
 
-HGCsは中国薬典2020年版に収載され、**柴胡（BR）・茵陳蒿（ASH）・五味子（FS）・板藍根（IR）・猪胆粉（SFP）・緑豆（MB）**の6生薬から作られる。疏肝理気・健脾消食・降トランスアミナーゼの効能をもち、慢性活動性肝炎・初期肝硬変の治療に臨床応用される。中国薬典2020年版に従い、本研究ではデオキシシザンドリン（DSD）・シザンドリン（SSD）・シザンドリンB（SSB）をHGCs定量分析の3つの品質マーカー（Q-marker）とした。調査によると、HGCsの品質一貫性に関する報告は国内外でほとんどなく、HGCs成分の定性・定量情報を迅速かつ包括的に解析・管理できる手法の開発が急務であった。
+HGCsは中国薬典2020年版に収載され[22]、**柴胡（BR）・茵陳蒿（ASH）・五味子（FS）・板藍根（IR）・猪胆粉（SFP）・緑豆（MB）**の6生薬から作られる。疏肝理気・健脾消食・降トランスアミナーゼの効能をもち、慢性活動性肝炎・初期肝硬変の治療に臨床応用される。中国薬典2020年版に従い、本研究ではデオキシシザンドリン（DSD）・シザンドリン（SSD）・シザンドリンB（SSB）をHGCs定量分析の3つの品質マーカー（Q-marker）とした。調査によると、HGCsの品質一貫性に関する報告は国内外でほとんどなく、HGCs成分の定性・定量情報を迅速かつ包括的に解析・管理できる手法の開発が急務であった。
 
 本論文ではHGCsのFWFPを確立し、ECFPと組み合わせて21ロット試料の全体的な品質一貫性を評価した。PCAとHCAを用いて、HPLCとECFPが試料間の差を識別する能力を検証した。PLSモデルでABTS試験結果を解析してFWFPと抗酸化活性の関係を探り、同時にFWFPを橋渡しとして、二変量相関分析（BCA）をECFPと抗酸化の関係（試料の化学組成と生物活性）に適用した。結論として本研究はHGCsの品質一貫性を科学的・客観的・包括的に評価し、TCM・HPの総合的品質一貫性評価に新しく実行可能な方向性を提供した。
 
@@ -310,6 +310,36 @@ FWFPと抗酸化実験の関係を探るため、21試料の40共通ピーク面
 ## 5. 結論（Conclusions）
 
 本論文では21ロットのHGCsの四波長最大融合指紋（FWFP）を確立した。FWFPの統合データを抽出・解析することで従来の単一波長分析の欠点を補い、試料の全体品質を包括的に解析した。確立したPCAモデルとSQFMで試料の定性・定量を識別し、品質一貫性を信頼性高く評価した。次に、複雑な前処理を要さないECFPを電気化学原理に基づき構築した。HCAでHGCs中の関連電気活性物質と対応化学成分を特徴づけ・解析し、HPに豊富な視覚情報を提供した。同時にABTS抗酸化能と組み合わせてPLSモデルを確立し、peak-PEC指紋効果とpeak-IC50図を描いて電気化学とABTSの抗酸化能を比較し、FWFPピークを媒介としてABTS・ECFP評価結果への寄与を探った。その結果、両者は試料の活性成分に対して良好な抗酸化予測能をもち、化合物の内在活性予測に新しく有利な研究方向を提供した。要するに本研究の手法は、HGCsの内部全体化学成分の品質一貫性を定性・定量の両面から評価できる。この新規手法の開発は、TCM・HPの品質と効能の二重管理に信頼性・実用性・包括性・有効性のある戦略を提供し、TCM・HPの品質規格の改善と品質規格法の研究に優れた方向性を提供する。
+
+## 参考文献
+
+1. Z. Li, X. Zhang, J. Liao, X. Fan, Y. Cheng, An ultra-robust fingerprinting method for quality assessment of traditional Chinese medicine using multiple reaction monitoring mass spectrometry, J. Pharm. Anal. 11 (1) (2021) 88–95.
+2. L. Wang, Z. Li, X. Zhao, W. Liu, Y. Liu, J. Yang, X. Li, X. Fan, Y. Cheng, A network study of Chinese medicine xuesaitong injection to elucidate a complex mode of action with multicompound, multitarget, and multipathway, Evid. Based Complement. Alternat. Med. (2013) 652373.
+3. L. Lan, J. Zhang, T. Yang, D. Gong, Z. Zheng, G. Sun, P. Guo, H. Zhang, Compound synthesizing profiling based on quantitative HPLC fingerprints combined with antioxidant activity analysis for Zhizi Jinhua pills, Phytomedicine 105 (2022) 154340.
+4. W. Liu, D.-x. Yin, N. Tang, T. Zhang, J. Wang, D.-h. Qin, Z. Zhang, Quality evaluation of Sinopodophyllum hexandrum (Royle) Ying based on active compounds, bioactivities and RP-HPLC fingerprint, Ind. Crop. Prod. 174 (2021).
+5. B. Quintanilla-Casas, B. Torres-Cobos, F. Guardiola, M. Servili, S. Vichi, A. Tres, Geographical authentication of virgin olive oil by GC-MS sesquiterpene hydrocarbon fingerprint: verifying EU and single country label-declaration, Food Chem. 378 (2022) 132104.
+6. M. Li, R. Yang, H. Zhang, S. Wang, D. Chen, S. Lin, Development of a flavor fingerprint by HS-GC-IMS with PCA for volatile compounds of Tricholoma matsutake Singer, Food Chem. 290 (2019) 32–39.
+7. S. Jeong, S. Seol, H. Kim, Y. Lee, S.H. Nam, J.M. An, H. Chung, Cooperative combination of LIBS-based elemental analysis and near-infrared molecular fingerprinting for enhanced discrimination of geographical origin of soybean paste, Food Chem. 399 (2023) 133956.
+8. S.R. Yousefi, A. Sobhani, H.A. Alshamsi, M. Salavati-Niasari, Green sonochemical synthesis of BaDy(2)NiO(5)/Dy(2)O(3) and BaDy(2)NiO(5)/NiO nanocomposites in the presence of core almond as a capping agent and their application as photocatalysts for the removal of organic dyes in water, RSC Adv. 11 (19) (2021) 11500–11512.
+9. D.Z. Yang, Y.Q. An, X.L. Jiang, D.Q. Tang, Y.Y. Gao, H.T. Zhao, X.W. Wu, Development of a novel method combining HPLC fingerprint and multi-ingredients quantitative analysis for quality evaluation of traditional Chinese medicine preparation, Talanta 85 (2) (2011) 885–890.
+10. L. Zheng, M. Wang, Z. Chen, J. Hou, X. Li, Simultaneous quantitation of 13 active components in SimiaoYong'an decoction using high-performance liquid chromatography with diode array detection, Acta Chromatogr. 31 (3) (2019) 216–221.
+11. X. Li, F. Zhang, Y. Shi, B. Bao, G. Sun, Assessing the quality consistency of Rong'e Yishen oral liquid by five-wavelength maximization profilings and electrochemical fingerprints combined with antioxidant activity analyses, Anal. Chim. Acta 1192 (2022) 339348.
+12. B. Yan, L. Yang, D. Ma, G. Sun, Comprehensively evaluating the quality consistency of liuwei dihuang pill by five-wavelength overall fused HPLC fingerprints combined with simultaneous determination and antioxidant activity, J. Chromatogr. Sci. 55 (10) (2017) 1026–1036.
+13. H. Zhu, Y. Qiu, D. Gong, J. Wang, G. Sun, A novel method for quality consistency evaluation of Yankening Tablet by multi-wavelength fusion profiling combined with overall components dissolution method and antioxidant activity analysis, J. Pharm. Biomed. Anal. 196 (2021) 113910.
+14. L. Tao, Q. Zhang, Y. Wu, X. Liu, Quality evaluation of moluodan concentrated pill using high-performance liquid chromatography fingerprinting coupled with chemometrics, J. Separ. Sci. 39 (24) (2016) 4673–4680.
+15. D. Gong, J. Chen, Y. Sun, X. Liu, G. Sun, Multiple wavelengths maximization fusion fingerprint profiling for quality evaluation of compound liquorice tablets and related antioxidant activity analysis, Microchem. J. 160 (2021).
+16. F. Yang, G. Sun, J. Chen, Development of a HPLC-DAD method combined with multicomponent chemometrics and antioxidant capacity to monitor the quality consistency of compound bismuth aluminate tablets by comprehensive quantified fingerprint method, Anal. Methods 9 (27) (2017) 4082–4090.
+17. F. Yang, T. Chu, Y. Zhang, X. Liu, G. Sun, Z. Chen, Quality assessment of licorice (Glycyrrhiza glabra L.) from different sources by multiple fingerprint profiles combined with quantitative analysis, antioxidant activity and chemometric methods, Food Chem. 324 (2020) 126854.
+18. X. Li, D. Gong, G. Sun, H. Zhang, W. Sun, High performance liquid chromatography three-wavelength fusion fingerprint combined with electrochemical fingerprint and antioxidant method to evaluate the quality consistency of Mingmu Dihuang Pill, J. Chromatogr. A 1681 (2022) 463448.
+19. T. Zhang, Y. Liang, B. Yuan, F. Ding, Y. Zhang, M. Wei, X. Chen, Determining method and conditional factors of electrochemical fingerprint of Chinese traditional medicine, Chin. Sci. Bull. 52 (16) (2007) 2190–2202.
+20. D. Gong, X. Li, X. Liu, G. Sun, P. Guo, Electrochemical-based quantitative fingerprint evaluation strategy combined with multi-markers assay by monolinear method for quality control of herbal medicine, Phytomedicine 104 (2022) 154274.
+21. Y. Sun, D. Gong, G. Sun, Quality monitoring and evaluation of Powdered Poppy Capsule Extractive by multiple wavelengths matching average fusion chromatographic fingerprint combined with electrochemical fingerprint, Microchem. J. 169 (2021).
+22. N.P. Committee, Pharmacopoeia of the People's Republic of China 2020, China Medical Science and Technology Press, Beijing, 2020.
+23. R.J. Field, E. Koros, R.M. Noyes, Oscillations in chemical systems. II. Thorough analysis of temporal oscillation in the bromate-cerium-malonic acid system, J. Am. Chem. Soc. 94 (25) (1972) 8649–8664.
+24. T. Zhang, Z. Zhao, X. Fang, J. Qiao, F. Xiang, R. Zhu, Y. Liang, F. Ding, Principle of nonlinear chemical fingerprint by using dissipative components in samples as well as calculation and evaluation of similarity, Sci. China Chem. 55 (2) (2011) 304–322.
+25. R.L.-N. de la Fuente, S. García-Muñoz, L.T. Biegler, An efficient nonlinear programming strategy for PCA models with incomplete data sets, J. Chemometr. 24 (2010) 301–311.
+26. Y. Ni, Y. Lai, S. Brandes, S. Kokot, Multi-wavelength HPLC fingerprints from complex substances: an exploratory chemometrics study of the Cassia seed example, Anal. Chim. Acta 647 (2) (2009) 149–158.
+27. J.D. Qiu, S.H. Luo, J.H. Huang, R.P. Liang, Using support vector machines for prediction of protein structural classes based on discrete wavelet transform, J. Comput. Chem. 30 (8) (2009) 1344–1350.
 
 ## 訳者補足（本稿の位置づけ）
 
