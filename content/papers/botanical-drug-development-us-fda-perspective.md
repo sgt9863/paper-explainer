@@ -189,6 +189,45 @@ FDA は、34 年間にわたって **800 件を超える植物性提出**を審�
 
 結論として、2 件の承認済み NDA と、800 件を超える植物性提出の審査から蓄積された経験・知識により、2016 年に改訂された植物性医薬品ガイダンスは、後期段階医薬品開発への推奨を伴って、最も重要な課題のいくつかによりよく対処している。我々は、より多くの植物性製品が米国で植物性医薬品として承認を得るために開発され、患者のアンメットメディカルニーズに応えることを期待している。
 
+## 参考文献
+
+（原著（J. Nat. Prod. 2020）は上付き番号方式の引用。以下は原著の文献リスト＝出現順）
+
+1. Dias, D. A.; Urban, S.; Roessner, U. Metabolites 2012, 2, 303–336.
+2. Farnsworth, N. R.; Akerele, O.; Bingel, A. S.; Soejarto, D. D.; Guo, Z. Bull. World. Health Organ. 1985, 63, 965–981.
+3. Fabricant, D. S.; Farnsworth, N. R. Environ. Health Perspect. 2001, 109, 69–75.
+4. Mishra, B. B.; Tiwari, V. K. Eur. J. Med. Chem. 2011, 46, 4769–4807.
+5. Rey-Ladino, J.; Ross, A. G.; Cripps, A. W.; McManus, D. P.; Quinn, R. Vaccine 2011, 29, 6464–6471.
+6. Cragg, G. M.; Newman, D. J. Pure Appl. Chem. 2005, 77, 7–24.
+7. McRae, J.; Yang, Q.; Crawford, R.; Palombo, W. Environmentalist 2007, 27, 165–174.
+8. Fellows, L.; Scofield, A. In Intellectual Property Rights and Biodiversity Conservation—An Interdisciplinary Analysis of the Values of Medicinal Plants; Swanson, T., Ed.; University Press: Cambridge, UK, 1995.
+9. Cragg, G. M. Med. Res. Rev. 1998, 18, 315–331.
+10. The Nobel Prize in Physiology or Medicine 2015. Nobel Foundation. https://www.nobelprize.org/prizes/medicine/2015/summary/ (accessed September 27, 2019).
+11. Chen, S. T.; Dou, J.; Temple, R.; Agarwal, R.; Wu, K. M.; Walker, S. Nat. Biotechnol. 2008, 26, 1077–1083.
+12. FDA Revised Botanical Drug Development, Guidance for Industry: https://www.fda.gov/media/93113/download (accessed July 3, 2019).
+13. Cross, R. Drug development success rates are higher than previously reported. C&EN Chemical & Engineering News. https://cen.acs.org/articles/96/i7/Drug-development-success-rates-higher.html (accessed on July 2, 2019).
+14. Khan, I. A. Life Sci. 2006, 78, 2033–2038.
+15. European Medicines Agency. Matching patients friendly therapeutic areas for browse search on herbal medicines for human use with ATC therapeutic groups (level 2). http://www.ema.europa.eu/docs/en_GB/document_library/Other/2011/06/WC500108080.pdf (accessed July 3, 2019).
+16. Pharmaceutical Research and Manufacturers of America. Nearly 800 New Medicines in Development to Help in the Fight against Cancer. https://www.phrma.org/press-release/nearly-800-new-medicines-in-development-to-help-in-the-fight-against-cancer (2014) (accessed July 3, 2019).
+17. Deng, G. E.; Frenkel, M.; Cohen, L.; Cassileth, B. R.; Abrams, D. I.; Capodice, J. L.; Courneya, K. S.; Dryden, T.; Hanser, S.; Kumar, N.; Labriola, D.; Wardell, D. W.; Sagar, S. J. Soc. Integr. Oncol. 2009, 7, 85–120.
+18. Alvandi, F.; et al. Oncologist 2014, 19, 94–99.
+19. McCune, J. S.; Hatfield, A. J.; Blackburn, A. A.; Leith, P. O.; Livingston, R. B.; Ellis, G. K. Support Care Cancer 2004, 12, 454–462.
+20. WHO guidelines on good agricultural and collection practices (GACP) for medicinal plants. https://www.who.int/medicines/publications/traditional/gacp2004/en/ (accessed July 2, 2019).
+21. European Medicines Agency. Guidelines for Good Agricultural and Wild Collection Practices for Medicinal and Aromatic Plants (GACP-MAP). http://europam.net/documents/gacp/EUROPAM_GACP_MAP_8.0.pdf (accessed July 2, 2019).
+22. Wilken, R.; Veena, M. S.; Wang, M. B.; Srivatsan, E. S. Mol. Cancer 2011, 10, 12.
+23. Zhuyun, Y. Pharmacy and Clinics of Chinese Materia Medica 2012, 3, 1–6.
+24. Huang, L.; Peng, H.; Xiao, P. Zhongguo Zhong Yao Za Zhi 2011, 36, 1–4.
+25. Food and Agriculture Organization. A scheme and training manual on good agricultural practices (GAP) for fruits and vegetables. http://www.fao.org/3/a-i5739e.pdf (accessed July 2, 2019).
+26. Gingseng. http://www.theplantlist.org/tpl1.1/search?q=panax (accessed September 12, 2019).
+27. Lin, Y. K.; Leu, Y. L.; Yang, S. H.; Chen, H. W.; Wang, C. T.; Pang, J. H. J. Dermatol. Sci. 2009, 54, 168–174.
+28. Approved Labeling for Veregen (NDA 021902). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021902s000_prntlbl.pdf (accessed July 3, 2019).
+29. Drugs@FDA FDA: Veregen (NDA 021902). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021902s000TOC.cfm (accessed July 3, 2019).
+30. Approved Labeling for Fulyzaq (NDA 202292). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/202292Orig1s000Lbl.pdf (accessed July 3, 2019).
+31. Drugs@FDA FDA: Fulyzaq Delayed-Release Tablets (NDA 202292). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/202292Orig1s000TOC.cfm (accessed July 3, 2019).
+32. Lee, S.; Dou, J. H.; Agarwal, R.; Temple, R.; Beitz, J.; Wu, C.; Mulberg, A.; Yu, L. X.; Woodcock, J. Science 2015, 347, S32–S34.
+33. Acupuncture Today. Massa Fermentata (shen qu): What is massa fermentata? What is it used for? https://www.acupuncturetoday.com/herbcentral/massa_fermentata.php (accessed July 2, 2019).
+34. 80 FR 79776 Fixed-Combination and Co-Packaged Drugs: Applications for Approval and Combinations of Active Ingredients Under Consideration for Inclusion in an Over-the-Counter Monograph. https://www.federalregister.gov/documents/2015/12/23/2015-32246/fixed-combination-and-co-packaged-drugs-applications-for-approval-and-combinations-of-active (accessed September 12, 2019).
+
 ## 訳者補足（本稿の位置づけ）
 
 - **本稿は分析法の論文ではなく、FDA 審査当局が自ら書いた「制度と実務の解説」** である。個別の検量線・LOD/LOQ・回収率などの分析条件は登場せず、代わりに 800 超の申請の統計（投与経路・治療領域・原料の地理的由来）と、後期開発で品質・治療一貫性をどう担保するかの規制哲学が中心。数値はすべて Figure 1〜4 と本文に示された集計値を原文どおり転記した。
