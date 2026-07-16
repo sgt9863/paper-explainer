@@ -45,16 +45,25 @@
 <h3>試料</h3>
 <ul><li>実試料: 市販の温清飲3社品（いずれも台湾。Sun Ten・Kaiser・Sheng Chang を Q01〜Q03 と表記）。粉末1.00 gをメタノール10 mLに溶かし、30分超音波抽出→12時間静置→0.22 µm ナイロンフィルターで濾過。</li><li>検量線試料（C01〜C08）: 作業標準液をメタノールで希釈。共線性（成分間の相関）を減らすため**均一計画 U8\*(8⁵)** で濃度を設計。</li><li>添加回収試料（P01〜P06）: 実試料に既知量を添加。実試料中のBAI・BERはHMF・PAE・FERよりずっと高濃度のため、HMF/PAE/FER検出用は20倍希釈（P01–03）、BAI/BER検出用は50倍希釈（P04–06）と2段階で調製。</li></ul>
 <h3>理論：三線成分モデルと「三次元データ」</h3>
-<p>各試料からは、<strong>溶出時間 I 点 × 波長 J 点</strong>の2次元データ行列が得られます。全 K 試料を同条件で測り、試料方向に積み重ねると、<strong>三次元配列 X（I × J × K）</strong>になります。これは次式で表せます。</p>
-<blockquote><code>x(ijk) = Σ[n=1..N] a(in)·b(jn)·c(kn) + e(ijk)</code></blockquote>
-<ul><li>N は因子（factor）の総数＝目的成分＋共溶出する妨害＋バックグラウンド＋ベースラインのずれ＋ノイズ。</li><li>A（I×N）＝正規化クロマトグラム行列、B（J×N）＝正規化UVスペクトル行列、C（K×N）＝相対濃度行列、E＝残差。</li></ul>
+<p>各試料からは、<strong>溶出時間 I 点 × 波長 J 点</strong>の2次元データ行列が得られます。全 K 試料（検量線試料・添加回収試料・実試料を含む）を同条件で測り、試料方向に積み重ねると、<strong>三次元配列 X（I × J × K）</strong>になります。これは次式で表せます。</p>
+<p>$$ x_{ijk} = \sum_{n=1}^{N} a_{in}\, b_{jn}\, c_{kn} + e_{ijk} \qquad (i=1,\dots,I;\ j=1,\dots,J;\ k=1,\dots,K) \tag{1} $$</p>
+<ul><li>$N$ は因子（factor）の総数＝目的成分＋共溶出する妨害＋バックグラウンド＋ベースラインのずれ＋ノイズ。</li><li>$x_{ijk}$ は三次元配列 <strong>X</strong>（I×J×K）の要素で、試料 k・溶出時間 i・波長チャンネル j における応答値。</li><li>$a_{in}$・$b_{jn}$・$c_{kn}$・$e_{ijk}$ はそれぞれ正規化クロマトグラム行列 <strong>A</strong>（I×N）・正規化UVスペクトル行列 <strong>B</strong>（J×N）・相対濃度行列 <strong>C</strong>（K×N）・三次元残差配列 <strong>E</strong>（I×J×K）の要素。</li></ul>
 <blockquote>補足（なぜ「三次元」だと強いのか＝二次の利点）: 各成分は「固有のクロマト形状（溶出プロファイル）」と「固有のUVスペクトル」という<strong>2つの指紋</strong>を持ちます。データを時間×波長×試料の三次元にすると、この2指紋の組み合わせが各成分ごとに一意になり、<strong>未知の妨害が混ざっていても目的成分だけを抜き出せます</strong>。これが「二次校正（second-order calibration）」がもつ <strong>二次の利点（second-order advantage）</strong>[<a href="#ref-32" class="cite">32</a>]で、著者らはこれを「数学的分離（mathematical separation）」と呼びます。物理的に分けきれなくても、計算で分けられる、というわけです。</blockquote>
 <h3>アルゴリズム① ATLD（交替三線分解）</h3>
-<p>ATLD（alternating trilinear decomposition, Wu ら 1996/1998[<a href="#ref-33" class="cite">33</a>]）は、<strong>推定因子数に鈍感</strong>で<strong>収束が速い</strong>アルゴリズムです（スライス行列の三線構造を使う）。HPLC-DAD・LC-MS など大規模データの処理に向きます。特長として、</p>
-<ul><li><strong>因子数を増やすことでバックグラウンドを近似</strong>でき、ベースラインのずれを「妨害の一部」として除去できる。</li><li><strong>軽い保持時間シフトは許容</strong>できる（ただし深刻なシフトには不向き）。</li></ul>
-<p>特異値分解に基づくMoore–Penrose一般化逆行列を用いて、3つの目的関数 σ(A)・σ(B)・σ(C) を交互に最小化し、定性行列（A・B）と相対濃度行列（C）を求めます（式2〜4）。</p>
+<p>ATLD（alternating trilinear decomposition, Wu ら 1996/1998[<a href="#ref-33" class="cite">33</a>]）は、<strong>推定因子数に鈍感</strong>で<strong>収束が速い</strong>アルゴリズムです（スライス行列の三線構造を使う）。HPLC-DAD・LC-MS・液体クロマト蛍光検出など大規模データの処理に向きます。特長として、</p>
+<ul><li><strong>因子数を増やすことでバックグラウンドを近似</strong>でき、ベースラインのずれを「妨害の一部」として除去できる[<a href="#ref-34" class="cite">34</a>]。</li><li><strong>軽い保持時間シフトは許容</strong>できる（ただし深刻なシフトには不向き）。</li></ul>
+<p>ATLDは、特異値分解に基づくMoore–Penrose一般化逆行列を用いて、次の3つの目的関数を交互に最小化し、定性行列（<strong>A</strong>・<strong>B</strong>）と相対濃度行列（<strong>C</strong>）を求めます。</p>
+<p>$$ \sigma(\mathbf{A}) = \sum_{i=1}^{I} \left\| \mathbf{X}_{i \cdot \cdot} - \mathbf{B}\,\mathrm{diag}\big(\mathbf{a}(i)\big)\,\mathbf{C}^{T} \right\|_F^2 \tag{2} $$</p>
+<p>$$ \sigma(\mathbf{B}) = \sum_{j=1}^{J} \left\| \mathbf{X}_{\cdot j \cdot} - \mathbf{C}\,\mathrm{diag}\big(\mathbf{b}(j)\big)\,\mathbf{A}^{T} \right\|_F^2 \tag{3} $$</p>
+<p>$$ \sigma(\mathbf{C}) = \sum_{k=1}^{K} \left\| \mathbf{X}_{\cdot \cdot k} - \mathbf{A}\,\mathrm{diag}\big(\mathbf{c}(k)\big)\,\mathbf{B}^{T} \right\|_F^2 \tag{4} $$</p>
+<p>ここで $\mathbf{X}_{i\cdot\cdot}$・$\mathbf{X}_{\cdot j\cdot}$・$\mathbf{X}_{\cdot\cdot k}$ は三次元配列 <strong>X</strong> を各次元でスライスした行列、$\mathrm{diag}(\cdot)$ はベクトルの各成分を対角要素とする行列、$\|\cdot\|_F$ はフロベニウスノルム。詳細な理論は原著[<a href="#ref-33" class="cite">33</a>]を参照。</p>
 <h3>アルゴリズム② ATLD-MCR</h3>
-<p>ATLD-MCR（Wang ら 2019[<a href="#ref-35" class="cite">35</a>]）は、<strong>液体クロマトデータの保持時間シフト問題を解ける</strong>新しいアルゴリズムです。手順は、(1) まずATLDでシフトのあるデータを近似し、初期スペクトル行列 B(ini) を得る、(2) MCR（多変量曲線分解）戦略で各試料の保持時間プロファイル行列 A(k) を最小二乗で求める、(3) 定性情報（A(k)・B）と定量情報（C）を得る（式5〜7）。要するに、<strong>試料ごとに少しずつずれるピーク位置を個別に合わせ込みつつ、二次の利点を保つ</strong>手法です。</p>
+<p>ATLD-MCR（Wang ら 2019[<a href="#ref-35" class="cite">35</a>]）は、<strong>液体クロマトデータの保持時間シフト問題を解ける</strong>新しいアルゴリズムです。手順は、(1) まずATLDでシフトのあるデータを近似し、初期スペクトル行列 $\mathbf{B}^{(\mathrm{ini})}$ を得る、(2) MCR（多変量曲線分解）戦略で各試料の保持時間プロファイル行列 $\mathbf{A}_k$ を最小二乗計算で求める（$\mathbf{X}_{\cdot\cdot k}$ は各試料のスライス行列）、(3) 定性情報（$\mathbf{A}_k$・<strong>B</strong>）と定量情報（<strong>C</strong>）を得る、という3段階です。</p>
+<p>$$ \mathbf{A}_k = \mathbf{X}_{\cdot\cdot k} \left(\mathbf{D}_k \mathbf{B}^{T}\right)^{+} \qquad (k=1,2,\dots,K) \tag{5} $$</p>
+<p>$$ \mathbf{B} = \left[\sum_{k=1}^{K} \mathbf{X}_{\cdot\cdot k}^{T}\, \mathbf{A}_k \mathbf{D}_k \right] \left[\sum_{k=1}^{K} \mathbf{D}_k \mathbf{A}_k^{T} \mathbf{A}_k \mathbf{D}_k \right]^{-1} \tag{6} $$</p>
+<p>$$ \mathbf{c}(k) = \left[ (\mathbf{B}^{T}\mathbf{B}) \times (\mathbf{A}_k^{T}\mathbf{A}_k) \right]^{-1} \mathrm{diag}\!\left[\mathbf{A}_k^{T}\mathbf{X}_{\cdot\cdot k}\mathbf{B}\right]^{T} \qquad (k=1,2,\dots,K) \tag{7} $$</p>
+<p>ここで $+$ はMoore–Penrose一般化逆行列、$\times$ はアダマール積（要素ごとの積）、$^{-1}$ は行列の逆行列、$\mathrm{diag}(\cdot)$ は角行列の対角要素を取り出して列ベクトル化する操作。</p>
+<blockquote>補足: $\mathbf{D}_k$（式5・6中の重み行列）について、原文はこの記号を式中で導入していますが、その定義式は本文には明記されておらず、ATLDで得た初期近似（保持時間プロファイルに関する重み付け）に基づくと推察されます。正確な定義が必要な場合は原著[<a href="#ref-35" class="cite">35</a>]（J. Chromatogr. A 1605, 2019, 360360）を参照してください。要するに、ATLD-MCRは<strong>試料ごとに少しずつずれるピーク位置を個別に合わせ込みつつ、二次の利点を保つ</strong>手法です。</blockquote>
 <h2>結果と考察</h2>
 <h3>なぜ従来分離では難しいか（Figure 1）</h3>
 <figure><img src="assets/wqy-hplc-dad-atld-mcr-secondorder/fig1-2dcontour-chromatograms.png" alt="Figure 1. (a) 混合標準液（C06）の2次元等高線プロファイル、(b) 8つの検量線試料の260 nm溶出プロファイル、(c) 混合標準液の多波長クロマトグラム、(d) 6つの予測試料の260 nm溶出プロファイル。HMFとPAEは急速溶出時に激しく重なり（見かけ上1本のピーク・溶媒ピークの影響大）、FERとBAIも共溶出する。実試料では未知成分が目的ピークに重なる。" loading="lazy"><figcaption>Figure 1. (a) 混合標準液（C06）の2次元等高線プロファイル、(b) 8つの検量線試料の260 nm溶出プロファイル、(c) 混合標準液の多波長クロマトグラム、(d) 6つの予測試料の260 nm溶出プロファイル。HMFとPAEは急速溶出時に激しく重なり（見かけ上1本のピーク・溶媒ピークの影響大）、FERとBAIも共溶出する。実試料では未知成分が目的ピークに重なる。</figcaption></figure>

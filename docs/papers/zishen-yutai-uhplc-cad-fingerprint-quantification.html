@@ -43,28 +43,28 @@
 <p>定性分析にThermo Fisher LTQ-Orbitrap XL（ESIソース）を指紋クロマト条件でUPLCに接続。正負両ESIモードで分析。イオンスプレー電圧5.0/−4.5 kV、キャピラリー温度380/380℃。質量スペクトルm/z 100-1500。フルスキャン（Orbitrap分解能15,000@m/z 400）＋6回のデータ依存取得（DDA）。最も強い2イオンからMSⁿ（n=2–4）をリニアイオントラップで取得（CID正規化衝突エネルギー35%）。動的排除を有効化。元素組成条件: 炭素≤90・水素≤150・酸素≤60・窒素なし、前駆質量許容10 ppm。</p>
 <h3>2.5 UPLC-MS/MS定量分析</h3>
 <p>ACQUITY I-Class UPLC＋Xevo TQD三連四重極（正負イオンESI）。ACQUITY BEH C18（100 mm×2.1 mm, 1.7 μm, 40℃）。移動相0.1%ギ酸(A)・アセトニトリル(B)、流速0.3 mL/min、勾配: 0–1.5分 2%B；1.5–6分 2–40%B；6–9.5分 40–100%B；9.5–11.5分 100%B；11.5–11.6分 100–2%B；11.6–13分 2%B。注入量3 μL。キャピラリー電圧3.0/−2.5 kV。MRMモードで定量。</p>
-<p><strong>Table 1. ZYP中18分析種のRT・イオンモード・MRM遷移・CV・CE（抜粋）</strong></p>
+<p><strong>Table 1. ZYP中18分析種のRT・イオンモード・MRM遷移・滞留時間(Dwell)・コーン電圧(CV)・衝突エネルギー(CE)（全18種）</strong></p>
 <table>
-<thead><tr><th>No.</th><th>分析種</th><th>RT(分)</th><th>イオン</th><th>遷移(m/z)</th><th>CE(V)</th></tr></thead>
+<thead><tr><th>No.</th><th>分析種</th><th>RT(分)</th><th>イオン</th><th>遷移(m/z)</th><th>Dwell(ms)</th><th>CV(V)</th><th>CE(V)</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>ナイストース</td><td>0.91</td><td>+</td><td>689.1→347.0</td><td>42</td></tr>
-<tr><td>2</td><td>ロガン酸</td><td>3.92</td><td>−</td><td>374.9→213.0</td><td>16</td></tr>
-<tr><td>3</td><td>クロロゲン酸</td><td>4.15</td><td>−</td><td>352.8→191.0</td><td>30</td></tr>
-<tr><td>4</td><td>ロガニン</td><td>4.51</td><td>+</td><td>413.0→219.0</td><td>24</td></tr>
-<tr><td>5</td><td>ピノレシノールジグルコシド</td><td>4.60</td><td>−</td><td>681.0→357.0</td><td>24</td></tr>
-<tr><td>6</td><td>スウェロシド</td><td>4.64</td><td>+</td><td>380.9→218.9</td><td>20</td></tr>
-<tr><td>7</td><td>ヒペロシド</td><td>5.07</td><td>−</td><td>462.9→300.0</td><td>28</td></tr>
-<tr><td>8</td><td>ベルバスコシド</td><td>5.13</td><td>−</td><td>623.1→160.9</td><td>36</td></tr>
-<tr><td>9</td><td>2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド</td><td>5.13</td><td>−</td><td>404.9→243.0</td><td>18</td></tr>
-<tr><td>10</td><td>G-Re</td><td>5.86</td><td>+</td><td>969.5→789.5</td><td>46</td></tr>
-<tr><td>11</td><td>G-Rg1</td><td>5.89</td><td>+</td><td>823.4→203.0</td><td>44</td></tr>
-<tr><td>12</td><td>アスペロサポニンVI</td><td>6.76</td><td>+</td><td>951.5→347.1</td><td>56</td></tr>
-<tr><td>13</td><td>G-Rb1</td><td>6.93</td><td>+</td><td>1131.6→365.0</td><td>54</td></tr>
-<tr><td>14</td><td>ヤセオシジン</td><td>7.14</td><td>−</td><td>328.9→314.0</td><td>18</td></tr>
-<tr><td>15</td><td>G-Rd</td><td>7.43</td><td>+</td><td>969.5→789.5</td><td>46</td></tr>
-<tr><td>16</td><td>オイパチリン</td><td>7.74</td><td>−</td><td>342.9→313.0</td><td>24</td></tr>
-<tr><td>17</td><td>エモジン</td><td>8.65</td><td>−</td><td>268.8→224.9</td><td>26</td></tr>
-<tr><td>18</td><td>エモジン-3-メチルエーテル</td><td>9.59</td><td>−</td><td>282.8→239.9</td><td>26</td></tr>
+<tr><td>1</td><td>ナイストース</td><td>0.91</td><td>+</td><td>689.1→347.0</td><td>8</td><td>80</td><td>42</td></tr>
+<tr><td>2</td><td>ロガン酸</td><td>3.92</td><td>−</td><td>374.9→213.0</td><td>8</td><td>38</td><td>16</td></tr>
+<tr><td>3</td><td>クロロゲン酸</td><td>4.15</td><td>−</td><td>352.8→191.0</td><td>8</td><td>30</td><td>18</td></tr>
+<tr><td>4</td><td>ロガニン</td><td>4.51</td><td>+</td><td>413.0→219.0</td><td>8</td><td>62</td><td>24</td></tr>
+<tr><td>5</td><td>ピノレシノールジグルコシド</td><td>4.60</td><td>−</td><td>681.0→357.0</td><td>8</td><td>34</td><td>24</td></tr>
+<tr><td>6</td><td>スウェロシド</td><td>4.64</td><td>+</td><td>380.9→218.9</td><td>8</td><td>48</td><td>20</td></tr>
+<tr><td>7</td><td>ヒペロシド</td><td>5.07</td><td>−</td><td>462.9→300.0</td><td>8</td><td>54</td><td>28</td></tr>
+<tr><td>8</td><td>ベルバスコシド</td><td>5.13</td><td>−</td><td>623.1→160.9</td><td>8</td><td>72</td><td>36</td></tr>
+<tr><td>9</td><td>2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド</td><td>5.13</td><td>−</td><td>404.9→243.0</td><td>8</td><td>40</td><td>18</td></tr>
+<tr><td>10</td><td>G-Re</td><td>5.86</td><td>+</td><td>969.5→789.5</td><td>8</td><td>100</td><td>46</td></tr>
+<tr><td>11</td><td>G-Rg1</td><td>5.89</td><td>+</td><td>823.4→203.0</td><td>8</td><td>100</td><td>44</td></tr>
+<tr><td>12</td><td>アスペロサポニンVI</td><td>6.76</td><td>+</td><td>951.5→347.1</td><td>8</td><td>140</td><td>56</td></tr>
+<tr><td>13</td><td>G-Rb1</td><td>6.93</td><td>+</td><td>1131.6→365.0</td><td>8</td><td>100</td><td>54</td></tr>
+<tr><td>14</td><td>ヤセオシジン</td><td>7.14</td><td>−</td><td>328.9→314.0</td><td>8</td><td>46</td><td>18</td></tr>
+<tr><td>15</td><td>G-Rd</td><td>7.43</td><td>+</td><td>969.5→789.5</td><td>8</td><td>100</td><td>46</td></tr>
+<tr><td>16</td><td>オイパチリン</td><td>7.74</td><td>−</td><td>342.9→313.0</td><td>8</td><td>44</td><td>24</td></tr>
+<tr><td>17</td><td>エモジン</td><td>8.65</td><td>−</td><td>268.8→224.9</td><td>8</td><td>64</td><td>26</td></tr>
+<tr><td>18</td><td>エモジン-3-メチルエーテル</td><td>9.59</td><td>−</td><td>282.8→239.9</td><td>8</td><td>50</td><td>26</td></tr>
 </tbody></table>
 <h3>2.6–2.8 バリデーションとデータ解析</h3>
 <p>指紋分析: 精度（同一試料6連続注入）・再現性（6並行調製）・安定性（0/3/6/9/12/24時間）を、参照ピークに対する各特徴ピークのRRT・RPAのRSDで評価。UPLC-MS/MS: 直線性・LLOD・LLOQ、精度（1日7反復）・再現性（6独立調製）・安定性（0/2/4/8/16/24時間）・正確性（回収率、5添加試料）。回収率(%) = 100×(検出量−元の量)/添加量。指紋データ解析はTCM色譜指紋類似度評価システム（2004A版）。</p>
@@ -78,26 +78,109 @@
 <p>最適化UHPLC-CAD法で16バッチを190分で分析。TCM色譜指紋類似度評価システムで評価し、<strong>全試料で計52共通ピークを認識</strong>、16バッチの平均クロマトグラムを参照指紋とした。共通ピークのうち、RT 52.97分のピーク10（アスペロサポニンVI、良分離・高含量）を参照ピークとしRRT・RPAを算出。他13共通ピークも標準品比較で確認: クロロゲン酸(2)・スウェロシド(3)・ロガニン(4)・アストラガリン(5)・G-Rg1(6)・G-Re(7)・G-Rb1(13)・G-Rc(14)・G-Rb2(17)・G-Rd(21)・クリソファノール(30)・エモジン-3-メチルエーテル(32)・β-カロテン(36)。</p>
 <figure><img src="assets/zishen-yutai-uhplc-cad-fingerprint-quantification/fig1.png" alt="図1. 滋腎育胎丸（ZYP）の代表的な標準UHPLC-CAD指紋クロマトグラム（共通ピークに番号付与）。" loading="lazy"><figcaption>図1. 滋腎育胎丸（ZYP）の代表的な標準UHPLC-CAD指紋クロマトグラム（共通ピークに番号付与）。</figcaption></figure>
 <p>52共通ピークで指紋法を検証: 精度のRSDはRRT&lt;0.5%・RPA&lt;4.4%、再現性はRRT&lt;5.0%・RPA&lt;0.3%、安定性（24時間内）はRRT&lt;4.5%・RPA&lt;0.4%。16バッチの類似度（相関係数）は<strong>全て0.929〜0.983</strong>で高い類似度（Table 2）。</p>
+<p><strong>Table 2. 16バッチのZYPクロマトグラム間の類似度（相関係数）。R=参照指紋（16バッチの平均クロマトグラム）</strong></p>
+<table>
+<thead><tr><th></th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th><th>S9</th><th>S10</th><th>S11</th><th>S12</th><th>S13</th><th>S14</th><th>S15</th><th>S16</th><th>R</th></tr></thead>
+<tbody>
+<tr><td><strong>S1</strong></td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S2</strong></td><td>0.970</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S3</strong></td><td>0.913</td><td>0.927</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S4</strong></td><td>0.936</td><td>0.944</td><td>0.943</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S5</strong></td><td>0.944</td><td>0.983</td><td>0.930</td><td>0.945</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S6</strong></td><td>0.945</td><td>0.975</td><td>0.921</td><td>0.948</td><td>0.968</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S7</strong></td><td>0.969</td><td>0.954</td><td>0.912</td><td>0.929</td><td>0.931</td><td>0.955</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S8</strong></td><td>0.929</td><td>0.944</td><td>0.918</td><td>0.952</td><td>0.952</td><td>0.956</td><td>0.955</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S9</strong></td><td>0.921</td><td>0.923</td><td>0.944</td><td>0.935</td><td>0.926</td><td>0.949</td><td>0.929</td><td>0.953</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S10</strong></td><td>0.875</td><td>0.920</td><td>0.867</td><td>0.886</td><td>0.926</td><td>0.901</td><td>0.834</td><td>0.882</td><td>0.867</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S11</strong></td><td>0.888</td><td>0.932</td><td>0.870</td><td>0.892</td><td>0.946</td><td>0.937</td><td>0.901</td><td>0.945</td><td>0.909</td><td>0.921</td><td>1</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S12</strong></td><td>0.838</td><td>0.888</td><td>0.888</td><td>0.908</td><td>0.917</td><td>0.900</td><td>0.858</td><td>0.945</td><td>0.911</td><td>0.896</td><td>0.951</td><td>1</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S13</strong></td><td>0.908</td><td>0.923</td><td>0.918</td><td>0.961</td><td>0.938</td><td>0.919</td><td>0.894</td><td>0.952</td><td>0.929</td><td>0.925</td><td>0.934</td><td>0.950</td><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td><strong>S14</strong></td><td>0.865</td><td>0.887</td><td>0.860</td><td>0.891</td><td>0.907</td><td>0.902</td><td>0.889</td><td>0.937</td><td>0.907</td><td>0.841</td><td>0.944</td><td>0.931</td><td>0.923</td><td>1</td><td></td><td></td><td></td></tr>
+<tr><td><strong>S15</strong></td><td>0.951</td><td>0.967</td><td>0.934</td><td>0.944</td><td>0.974</td><td>0.956</td><td>0.932</td><td>0.952</td><td>0.938</td><td>0.920</td><td>0.922</td><td>0.900</td><td>0.943</td><td>0.904</td><td>1</td><td></td><td></td></tr>
+<tr><td><strong>S16</strong></td><td>0.939</td><td>0.970</td><td>0.917</td><td>0.927</td><td>0.968</td><td>0.964</td><td>0.928</td><td>0.938</td><td>0.926</td><td>0.918</td><td>0.932</td><td>0.904</td><td>0.932</td><td>0.905</td><td>0.964</td><td>1</td><td></td></tr>
+<tr><td><strong>R</strong></td><td>0.953</td><td>0.973</td><td>0.947</td><td>0.966</td><td>0.983</td><td>0.967</td><td>0.945</td><td>0.972</td><td>0.954</td><td>0.930</td><td>0.950</td><td>0.940</td><td>0.970</td><td>0.929</td><td>0.977</td><td>0.968</td><td>1</td></tr>
+</tbody></table>
+<blockquote>補足: 表は原文Table 2の下三角行列（対称行列のため上三角は省略）をそのまま転記。相関係数は最小0.834（S7–S10間）〜1（対角）で、参照指紋Rとの相関はすべて0.929〜0.983。</blockquote>
 <h3>3.4 ZYP成分の特性評価</h3>
 <p>LTQ-Orbitrap XLで定性分析。正負両ESIモードで相補的構造情報（Orbitrapの精密質量＋リニアイオントラップのMSⁿ）を取得。DDAで動的排除を有効化し低存在量の共溶出イオンもMSⁿ断片化。成分は正モードで[M+H]⁺/[M+Na]⁺、負モードで[M−H]⁻/[M+HCOO]⁻の分子付加イオンを生成。精密質量・MSⁿ断片を標準品・文献と比較し、<strong>計281化合物を同定・推定同定</strong>（Table A.1）。</p>
 <h3>3.5 定量分析</h3>
 <p>より包括的な品質評価のため多成分定量を指紋と組み合わせた。中国薬典（2015年版）や文献に基づき18化学マーカーを選択。一部成分（ロガン酸・クロロゲン酸）はDAD検出範囲内でCADも微量成分に良好だが、DAD/CADで18標的を正確に定量するにはベースライン分離が必要で複雑・長時間・誤検出リスクを伴う。一方、MS/MSは遷移対・CV・CEの最適化だけでよく複雑なクロマト分離が不要。したがってUPLC-MS/MS法を採用。</p>
 <p><strong>3.5.1 UPLC-MS/MS条件の最適化</strong>: アセトニトリル-0.1%ギ酸を移動相に採用。標的の広い極性範囲のため勾配溶出。正負両モードを検討し、8標的が正モード・10標的が負モードで高感度。MRMモードで感度向上。<strong>18標的を13分以内で同時分離</strong>。</p>
 <figure><img src="assets/zishen-yutai-uhplc-cad-fingerprint-quantification/fig2.png" alt="図2. ZYP試料中18標的成分の代表的MRMクロマトグラム（正負両イオンモード。ESI+/ESI−）。" loading="lazy"><figcaption>図2. ZYP試料中18標的成分の代表的MRMクロマトグラム（正負両イオンモード。ESI+/ESI−）。</figcaption></figure>
-<p><strong>Table 3. 18分析種のバリデーション（抜粋）</strong></p>
+<p><strong>Table 3. 18分析種のバリデーション（検量線・直線範囲・LLOQ/LLOD・回収率・精度/安定性/再現性RSD、全18種）</strong></p>
 <table>
-<thead><tr><th>No.</th><th>分析種</th><th>r</th><th>直線範囲(ng/mL)</th><th>回収率(%)</th><th>精度RSD(%)</th></tr></thead>
+<thead><tr><th>No.</th><th>分析種</th><th>検量線</th><th>r</th><th>直線範囲(ng/mL)</th><th>LLOQ(ng/mL)</th><th>LLOD(ng/mL)</th><th>回収率(%, n=5)</th><th>精度RSD(%)</th><th>安定性RSD(%)</th><th>再現性RSD(%)</th></tr></thead>
 <tbody>
-<tr><td>1</td><td>ナイストース</td><td>0.996</td><td>416.3–13320</td><td>96.2±4.0</td><td>4.8</td></tr>
-<tr><td>3</td><td>クロロゲン酸</td><td>0.993</td><td>1106.3–35400</td><td>101.0±4.5</td><td>2.7</td></tr>
-<tr><td>8</td><td>ベルバスコシド</td><td>0.999</td><td>195.0–6240</td><td>97.3±2.4</td><td>3.2</td></tr>
-<tr><td>12</td><td>アスペロサポニンVI</td><td>0.990</td><td>18.1–1160</td><td>104.3±3.7</td><td>4.5</td></tr>
-<tr><td>13</td><td>G-Rb1</td><td>0.997</td><td>21.6–693.1</td><td>95.9±4.9</td><td>4.8</td></tr>
-<tr><td>14</td><td>ヤセオシジン</td><td>0.994</td><td>51.6–1650</td><td>102.2±5.0</td><td>3.2</td></tr>
-<tr><td>17</td><td>エモジン</td><td>0.992</td><td>42.2–2700</td><td>98.6±3.6</td><td>4.8</td></tr>
+<tr><td>1</td><td>ナイストース</td><td>y=1.44x+2104.89</td><td>0.996</td><td>416.3–13320.0</td><td>13.0</td><td>6.5</td><td>96.2±4.0</td><td>4.8</td><td>2.6</td><td>3.9</td></tr>
+<tr><td>2</td><td>ロガン酸</td><td>y=1.42x+163.08</td><td>0.994</td><td>470.0–15040.0</td><td>14.7</td><td>7.3</td><td>101.3±4.0</td><td>3.7</td><td>4.1</td><td>1.8</td></tr>
+<tr><td>3</td><td>クロロゲン酸</td><td>y=1.40x+496.56</td><td>0.993</td><td>1106.3–35400.0</td><td>17.3</td><td>4.3</td><td>101.0±4.5</td><td>2.7</td><td>4.2</td><td>3.6</td></tr>
+<tr><td>4</td><td>ロガニン</td><td>y=0.64x+90.68</td><td>0.991</td><td>60.9–1950.0</td><td>15.2</td><td>7.6</td><td>99.6±6.6</td><td>4.7</td><td>3.3</td><td>4.8</td></tr>
+<tr><td>5</td><td>ピノレシノールジグルコシド</td><td>y=0.47x+30.24</td><td>0.997</td><td>213.1–6820.0</td><td>26.6</td><td>13.3</td><td>96.6±3.8</td><td>5.0</td><td>4.9</td><td>6.1</td></tr>
+<tr><td>6</td><td>スウェロシド</td><td>y=1.09x+1040.29</td><td>0.992</td><td>447.5–14320.0</td><td>3.5</td><td>1.8</td><td>97.8±3.1</td><td>4.6</td><td>4.9</td><td>3.5</td></tr>
+<tr><td>7</td><td>ヒペロシド</td><td>y=7.41x+394.42</td><td>0.994</td><td>145.0–4640.0</td><td>4.5</td><td>2.3</td><td>97.0±2.9</td><td>2.5</td><td>4.8</td><td>4.5</td></tr>
+<tr><td>8</td><td>ベルバスコシド</td><td>y=5.76x−125.94</td><td>0.999</td><td>195.0–6240.0</td><td>6.1</td><td>3.0</td><td>97.3±2.4</td><td>3.2</td><td>5.0</td><td>4.9</td></tr>
+<tr><td>9</td><td>2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド</td><td>y=6.19x+610.00</td><td>0.991</td><td>126.9–4060.0</td><td>2.0</td><td>1.0</td><td>100.9±2.3</td><td>2.4</td><td>4.4</td><td>3.1</td></tr>
+<tr><td>10</td><td>G-Re</td><td>y=1.57x−2.43</td><td>0.997</td><td>18.5–591.9</td><td>4.6</td><td>2.3</td><td>99.6±4.8</td><td>4.3</td><td>3.1</td><td>7.0</td></tr>
+<tr><td>11</td><td>G-Rg1</td><td>y=2.39x+102.86</td><td>0.990</td><td>15.6–500.6</td><td>15.6</td><td>2.0</td><td>96.9±7.9</td><td>5.6</td><td>4.8</td><td>5.9</td></tr>
+<tr><td>12</td><td>アスペロサポニンVI</td><td>y=8.74x+293.85</td><td>0.990</td><td>18.1–1160.0</td><td>4.5</td><td>2.3</td><td>104.3±3.7</td><td>4.5</td><td>3.6</td><td>1.8</td></tr>
+<tr><td>13</td><td>G-Rb1</td><td>y=6.28x−118.25</td><td>0.997</td><td>21.6–693.1</td><td>10.8</td><td>1.4</td><td>95.9±4.9</td><td>4.8</td><td>6.6</td><td>3.9</td></tr>
+<tr><td>14</td><td>ヤセオシジン</td><td>y=19.19x+404.63</td><td>0.994</td><td>51.6–1650.0</td><td>0.8</td><td>0.4</td><td>102.2±5.0</td><td>3.2</td><td>3.3</td><td>3.3</td></tr>
+<tr><td>15</td><td>G-Rd</td><td>y=2.46x−33.86</td><td>0.998</td><td>19.7–630.0</td><td>19.7</td><td>1.2</td><td>99.0±7.0</td><td>5.8</td><td>4.6</td><td>7.8</td></tr>
+<tr><td>16</td><td>オイパチリン</td><td>y=6.08x+817.84</td><td>0.994</td><td>215.0–6880.0</td><td>1.7</td><td>0.8</td><td>102.1±5.3</td><td>0.4</td><td>4.3</td><td>1.6</td></tr>
+<tr><td>17</td><td>エモジン</td><td>y=5.32x+2451.25</td><td>0.992</td><td>42.2–2700.0</td><td>1.3</td><td>0.7</td><td>98.6±3.6</td><td>4.8</td><td>4.7</td><td>4.6</td></tr>
+<tr><td>18</td><td>エモジン-3-メチルエーテル</td><td>y=0.62x−44.44</td><td>0.998</td><td>36.4–1164.4</td><td>36.4</td><td>4.5</td><td>96.9±7.6</td><td>6.6</td><td>4.1</td><td>8.1</td></tr>
 </tbody></table>
-<p>全18分析種で r≥0.990、回収率95.9–104.3%、精度・安定性・再現性のRSDは概ね良好。</p>
-<p><strong>3.5.2 16バッチの含量（Table 4、μg/g、抜粋）</strong>: クロロゲン酸177.8–257.7、ロガン酸98.0–183.5、スウェロシド15.6–52.5、ナイストース7.4–48.2、アスペロサポニンVI 8.2–14.1、G-Rb1 3.0–4.4など。多くの成分でバッチ間差が見られ（例: ベルバスコシドは2.2–11.5と5倍以上）、原料の産地・加工の違いが品質に影響することを示す。</p>
+<p>（y=ピーク面積、x=対応する注入濃度 ng/mL。回収率は平均±SD、n=5）</p>
+<p>全18分析種で r=0.990–0.999、LLODは0.4–13.3 ng/mL、LLOQは0.8–36.4 ng/mL、回収率は95.9–104.3%、精度RSDは0.4–6.6%、安定性RSDは2.6–6.6%（24時間以内で安定）、再現性RSD（6回独立調製）は8.1%以下と、いずれも良好な結果だった。</p>
+<p><strong>3.5.2 16バッチの含量（Table 4、μg/g、mean±SD、UPLC-MS/MSによる全18分析種×16バッチ）</strong></p>
+<p>サンプル管理番号: S1=X00091, S2=X00095, S3=X00074, S4=X00075, S5=X00082, S6=X00077, S7=X00093, S8=X00083, S9=X00076, S10=V0001, S11=V00027M, S12=V06131, S13=W06008J, S14=W06221, S15=X0001, S16=X06011</p>
+<table>
+<thead><tr><th>分析種</th><th>S1</th><th>S2</th><th>S3</th><th>S4</th><th>S5</th><th>S6</th><th>S7</th><th>S8</th></tr></thead>
+<tbody>
+<tr><td>ナイストース</td><td>19.5±1.8</td><td>17.2±0.9</td><td>19.5±1.2</td><td>26.0±1.3</td><td>15.0±0.7</td><td>17.5±0.6</td><td>14.6±0.3</td><td>12.9±1.1</td></tr>
+<tr><td>ロガン酸</td><td>127.7±5.3</td><td>128.6±1.1</td><td>98.0±2.2</td><td>100.4±0.8</td><td>121.0±6.2</td><td>112.3±2.9</td><td>115.5±3.5</td><td>106.3±4.3</td></tr>
+<tr><td>クロロゲン酸</td><td>191.8±5.3</td><td>230.3±1.5</td><td>190.4±3.5</td><td>177.8±1.3</td><td>218.5±5.6</td><td>224.1±9.9</td><td>180.9±1.7</td><td>183.0±4.1</td></tr>
+<tr><td>ロガニン</td><td>6.7±0.7</td><td>6.1±0.4</td><td>5.5±0.3</td><td>5.7±0.3</td><td>6.0±0.8</td><td>5.6±1.0</td><td>6.2±1.4</td><td>6.8±0.3</td></tr>
+<tr><td>ピノレシノールジグルコシド</td><td>11.1±0.9</td><td>12.6±1.1</td><td>11.0±0.3</td><td>10.6±0.8</td><td>14.9±0.6</td><td>8.9±0.5</td><td>11.7±1.9</td><td>9.6±0.5</td></tr>
+<tr><td>スウェロシド</td><td>36.8±1.4</td><td>30.1±0.6</td><td>24.9±2.2</td><td>25.7±0.8</td><td>26.3±0.7</td><td>24.2±2.0</td><td>33.4±1.5</td><td>32.2±1.3</td></tr>
+<tr><td>ヒペロシド</td><td>6.2±0.2</td><td>3.5±0.2</td><td>4.4±0.4</td><td>4.1±0.1</td><td>3.3±0.2</td><td>3.8±0.1</td><td>4.2±0.1</td><td>3.3±0.1</td></tr>
+<tr><td>ベルバスコシド</td><td>11.0±0.1</td><td>7.7±0.3</td><td>8.1±0.6</td><td>8.1±0.0</td><td>5.7±0.1</td><td>8.2±0.5</td><td>11.5±0.1</td><td>5.0±0.1</td></tr>
+<tr><td>2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド</td><td>11.7±1.1</td><td>3.6±0.1</td><td>5.1±0.2</td><td>4.9±0.2</td><td>3.2±0.1</td><td>5.0±0.2</td><td>5.4±0.1</td><td>2.9±0.2</td></tr>
+<tr><td>G-Re</td><td>4.4±0.1</td><td>2.9±0.1</td><td>3.2±0.4</td><td>3.3±0.3</td><td>3.3±0.0</td><td>2.9±0.3</td><td>4.4±0.1</td><td>3.9±0.1</td></tr>
+<tr><td>G-Rg1</td><td>3.0±0.2</td><td>2.1±0.4</td><td>2.4±0.0</td><td>2.5±0.3</td><td>2.4±0.2</td><td>2.4±0.2</td><td>3.1±0.2</td><td>2.7±0.2</td></tr>
+<tr><td>アスペロサポニンVI</td><td>13.5±0.6</td><td>11.5±0.5</td><td>12.1±0.7</td><td>12.3±0.4</td><td>11.4±0.3</td><td>12.3±0.1</td><td>12.5±0.2</td><td>12.0±0.2</td></tr>
+<tr><td>G-Rb1</td><td>3.7±0.1</td><td>3.2±0.1</td><td>3.2±0.3</td><td>3.0±0.1</td><td>3.3±0.1</td><td>3.3±0.2</td><td>3.5±0.1</td><td>3.3±0.1</td></tr>
+<tr><td>ヤセオシジン</td><td>4.9±0.1</td><td>2.5±0.1</td><td>3.1±0.2</td><td>3.2±0.1</td><td>2.3±0.1</td><td>2.7±0.0</td><td>3.9±0.0</td><td>2.5±0.1</td></tr>
+<tr><td>G-Rd</td><td>0.8±0.1</td><td>0.6±0.2</td><td>0.6±0.1</td><td>0.6±0.0</td><td>0.6±0.1</td><td>0.7±0.1</td><td>0.8±0.2</td><td>0.7±0.0</td></tr>
+<tr><td>オイパチリン</td><td>20.6±0.4</td><td>11.0±0.2</td><td>12.1±0.4</td><td>12.0±0.2</td><td>10.5±0.2</td><td>12.8±0.4</td><td>17.6±0.6</td><td>10.4±0.1</td></tr>
+<tr><td>エモジン</td><td>2.6±0.1</td><td>3.3±0.1</td><td>2.9±0.1</td><td>2.8±0.1</td><td>3.3±0.1</td><td>2.9±0.0</td><td>2.5±0.1</td><td>3.0±0.1</td></tr>
+<tr><td>エモジン-3-メチルエーテル</td><td>2.1±0.4</td><td>2.3±0.4</td><td>2.0±0.3</td><td>2.4±0.6</td><td>2.2±0.2</td><td>2.1±0.2</td><td>1.5±0.3</td><td>1.9±0.3</td></tr>
+<tr><td><strong>合計</strong></td><td><strong>478.1</strong></td><td><strong>479.1</strong></td><td><strong>408.5</strong></td><td><strong>405.4</strong></td><td><strong>453.2</strong></td><td><strong>451.7</strong></td><td><strong>433.2</strong></td><td><strong>402.4</strong></td></tr>
+</tbody></table>
+<table>
+<thead><tr><th>分析種</th><th>S9</th><th>S10</th><th>S11</th><th>S12</th><th>S13</th><th>S14</th><th>S15</th><th>S16</th></tr></thead>
+<tbody>
+<tr><td>ナイストース</td><td>18.7±1.8</td><td>7.4±1.1</td><td>10.4±1.2</td><td>13.4±0.1</td><td>48.2±1.2</td><td>28.6±0.3</td><td>11.5±0.6</td><td>28.1±1.9</td></tr>
+<tr><td>ロガン酸</td><td>115.4±1.8</td><td>183.5±3.6</td><td>159.2±7.3</td><td>131.8±3.1</td><td>164.1±3.4</td><td>131.0±3.7</td><td>114.6±2.5</td><td>130.3±6.3</td></tr>
+<tr><td>クロロゲン酸</td><td>232.0±0.6</td><td>257.7±6.9</td><td>212.8±8.7</td><td>181.7±8.2</td><td>219.8±2.8</td><td>182.9±5.1</td><td>206.7±7.1</td><td>240.9±6.2</td></tr>
+<tr><td>ロガニン</td><td>5.6±0.7</td><td>13.1±0.7</td><td>10.7±1.2</td><td>8.8±0.2</td><td>9.2±0.7</td><td>7.8±0.4</td><td>9.0±1.0</td><td>7.8±1.1</td></tr>
+<tr><td>ピノレシノールジグルコシド</td><td>9.9±1.1</td><td>8.2±0.2</td><td>7.6±0.6</td><td>8.1±0.7</td><td>13.2±0.5</td><td>20.0±0.6</td><td>6.1±0.9</td><td>9.1±0.7</td></tr>
+<tr><td>スウェロシド</td><td>24.7±1.4</td><td>52.5±2.3</td><td>47.7±1.6</td><td>36.6±0.2</td><td>41.1±2.2</td><td>15.6±1.9</td><td>33.1±2.9</td><td>38.6±2.3</td></tr>
+<tr><td>ヒペロシド</td><td>4.0±0.2</td><td>1.6±0.0</td><td>1.8±0.1</td><td>1.3±0.0</td><td>4.4±0.1</td><td>5.6±0.1</td><td>1.7±0.1</td><td>6.8±0.5</td></tr>
+<tr><td>ベルバスコシド</td><td>8.3±0.3</td><td>2.3±0.1</td><td>2.2±0.2</td><td>3.2±0.0</td><td>8.3±0.4</td><td>8.0±0.2</td><td>3.4±0.1</td><td>6.1±0.3</td></tr>
+<tr><td>2,3,5,4&#x27;-テトラヒドロキシスチルベン-2-O-β-D-グルコシド</td><td>4.9±0.1</td><td>1.8±0.1</td><td>2.6±0.3</td><td>1.5±0.2</td><td>7.0±0.1</td><td>7.8±0.2</td><td>0.6±0.0</td><td>4.8±0.1</td></tr>
+<tr><td>G-Re</td><td>3.4±0.2</td><td>0.9±0.0</td><td>1.0±0.1</td><td>2.9±0.1</td><td>3.2±0.3</td><td>1.4±0.3</td><td>3.2±0.3</td><td>4.6±0.1</td></tr>
+<tr><td>G-Rg1</td><td>2.4±0.2</td><td>0.6±0.1</td><td>0.8±0.3</td><td>2.6±0.1</td><td>3.0±0.2</td><td>2.2±0.2</td><td>2.9±0.3</td><td>3.4±0.3</td></tr>
+<tr><td>アスペロサポニンVI</td><td>12.7±0.4</td><td>12.8±0.3</td><td>12.3±0.7</td><td>11.7±0.4</td><td>13.8±0.0</td><td>8.2±0.4</td><td>12.1±0.5</td><td>14.1±0.7</td></tr>
+<tr><td>G-Rb1</td><td>3.3±0.1</td><td>3.5±0.1</td><td>3.5±0.1</td><td>3.4±0.2</td><td>4.4±0.1</td><td>3.4±0.1</td><td>4.0±0.0</td><td>4.3±0.0</td></tr>
+<tr><td>ヤセオシジン</td><td>2.8±0.0</td><td>2.0±0.0</td><td>1.8±0.1</td><td>1.5±0.0</td><td>2.7±0.1</td><td>3.4±0.0</td><td>1.4±0.1</td><td>4.2±0.1</td></tr>
+<tr><td>G-Rd</td><td>0.7±0.1</td><td>0.6±0.0</td><td>0.6±0.1</td><td>0.8±0.1</td><td>1.0±0.1</td><td>0.6±0.1</td><td>0.7±0.0</td><td>1.1±0.1</td></tr>
+<tr><td>オイパチリン</td><td>12.2±0.5</td><td>8.6±0.4</td><td>8.8±0.3</td><td>7.8±0.2</td><td>13.5±0.6</td><td>15.2±0.4</td><td>7.2±0.2</td><td>16.7±0.4</td></tr>
+<tr><td>エモジン</td><td>2.8±0.1</td><td>6.8±0.2</td><td>5.4±0.2</td><td>4.5±0.1</td><td>4.1±0.2</td><td>4.8±0.1</td><td>2.2±0.1</td><td>2.1±0.0</td></tr>
+<tr><td>エモジン-3-メチルエーテル</td><td>1.8±0.1</td><td>2.2±0.3</td><td>2.0±0.1</td><td>1.9±0.1</td><td>2.2±0.2</td><td>1.3±0.1</td><td>1.4±0.1</td><td>1.6±0.3</td></tr>
+<tr><td><strong>合計</strong></td><td><strong>465.6</strong></td><td><strong>566.1</strong></td><td><strong>491.2</strong></td><td><strong>423.5</strong></td><td><strong>563.2</strong></td><td><strong>447.8</strong></td><td><strong>421.8</strong></td><td><strong>524.6</strong></td></tr>
+</tbody></table>
+<p>18成分の合計含量は402.4–566.1 μg/g（RSD 11.2%）。最多はクロロゲン酸（177.8–257.7 μg/g）、次いでロガン酸（98.0–183.5 μg/g）。他16成分はより低含量で、G-Rdが最少（平均0.7 μg/g）。多くの成分でバッチ間差が見られ（例: ベルバスコシドは2.2–11.5 μg/gと5倍以上、ヒペロシドは1.3–6.8 μg/gと5倍以上）、原料の産地・加工の違いが品質に影響することを示す。全16バッチで18分析種すべてが検出された。</p>
 <h2>4. 結論（Conclusion）</h2>
 <p>本研究で初めて、UHPLC-CAD指紋と多成分定量分析を組み合わせた総合戦略を開発し、中成薬ZYPの品質評価に適用した。一般的なDAD検出と比べ、CADはより高い感度でより多くのピークを提供し、ZYPの複雑成分の指紋分析に適した。計52の特徴指紋ピークで16バッチの類似度を評価。加えて先進的ハイブリッドLTQ-Orbitrap MSと組み合わせ、化学標準品・精密質量・MSⁿ断片データに基づいてZYPから計281化合物を同定・推定同定。さらに±MRMで18マーカーを13分で同時定量。UHPLC-CAD指紋と多成分定量の組み合わせは、ZYPの効率的で信頼できる品質管理戦略であり、中成薬の品質評価の参照となる。</p>
 <h2>参考文献</h2>

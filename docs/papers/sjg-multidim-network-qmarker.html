@@ -130,7 +130,7 @@
 <figure><img src="assets/sjg-multidim-network-qmarker/fig3.jpeg" alt="図3. 統合薬理学によるSJGの「生薬-成分-標的-経路」ネットワーク。" loading="lazy"><figcaption>図3. 統合薬理学によるSJGの「生薬-成分-標的-経路」ネットワーク。</figcaption></figure>
 <h3>3.4 効能次元</h3>
 <p>SJGは主に2型糖尿病・合併症に用いられるため、統合薬理で「2型糖尿病」「糖尿病性腎症(DN)」「糖尿病性心筋症」の疾患−成分−標的−経路ネットワークを解析。DNの疾患標的が2型糖尿病標的をほぼ包含し、より多くの活性成分を抽出できたため、効能次元の疾患症状にDNを選定。98成分とDNの共通標的をUniProt/DAVIDで解析し、<strong>SJGが調節する163経路</strong> を取得。P &lt; 0.05 の有意経路には、酸化ストレス関連9・糖脂質代謝関連16・炎症応答関連20・オートファジー/免疫関連16 などが含まれた。最終的に「<strong>98成分 − 377標的 − 163経路</strong>」のDN関連ネットワークを得た。98成分の平均次数は <strong>11.81</strong>。</p>
-<p><strong>Table 3. 成分とDN標的に関連する主要経路（P値・遺伝子数、抜粋）</strong></p>
+<p><strong>Table 3. 成分とDN標的に関連する有意経路（P&lt;0.05、全61経路、P値・関連遺伝子数）</strong></p>
 <table>
 <thead><tr><th>経路</th><th>P値</th><th>遺伝子数</th></tr></thead>
 <tbody>
@@ -140,32 +140,93 @@
 <tr><td>Cytokine-cytokine receptor interaction</td><td>1.3E-16</td><td>82</td></tr>
 <tr><td>HIF-1 signaling pathway</td><td>4.4E-15</td><td>45</td></tr>
 <tr><td>Insulin resistance</td><td>5.9E-15</td><td>48</td></tr>
+<tr><td>Chemokine signaling pathway</td><td>2.2E-13</td><td>64</td></tr>
+<tr><td>Apoptosis</td><td>4.1E-13</td><td>33</td></tr>
+<tr><td>Toll-like receptor signaling pathway</td><td>1.6E-12</td><td>44</td></tr>
+<tr><td>Adipocytokine signaling pathway</td><td>2.8E-11</td><td>33</td></tr>
 <tr><td>Insulin signaling pathway</td><td>5.9E-11</td><td>49</td></tr>
 <tr><td>Type II diabetes mellitus</td><td>1.2E-10</td><td>26</td></tr>
+<tr><td>Type I diabetes mellitus</td><td>1.8E-10</td><td>24</td></tr>
+<tr><td>Rap1 signaling pathway</td><td>2.6E-10</td><td>63</td></tr>
+<tr><td>ErbB signaling pathway</td><td>2.6E-10</td><td>36</td></tr>
+<tr><td>NF-kappa B signaling pathway</td><td>2.6E-10</td><td>36</td></tr>
+<tr><td>Jak-STAT signaling pathway</td><td>4.2E-10</td><td>49</td></tr>
+<tr><td>T cell receptor signaling pathway</td><td>1.4E-09</td><td>38</td></tr>
 <tr><td>AMPK signaling pathway</td><td>1.8E-09</td><td>43</td></tr>
-<tr><td>VEGF signaling pathway</td><td>2.9E-07</td><td>25</td></tr>
-<tr><td>TGF-beta signaling pathway</td><td>1.6E-06</td><td>29</td></tr>
-<tr><td>PPAR signaling pathway</td><td>2.1E-06</td><td>25</td></tr>
+<tr><td>Ras signaling pathway</td><td>2.4E-09</td><td>64</td></tr>
+<tr><td>Sphingolipid signaling pathway</td><td>9.9E-09</td><td>41</td></tr>
+<tr><td>NOD-like receptor signaling pathway</td><td>0.000000041</td><td>25</td></tr>
+<tr><td>Fc epsilon RI signaling pathway</td><td>0.000000041</td><td>28</td></tr>
+<tr><td>MAPK signaling pathway</td><td>0.000000045</td><td>66</td></tr>
+<tr><td>Natural killer cell mediated cytotoxicity</td><td>0.000000055</td><td>40</td></tr>
+<tr><td>Complement and coagulation cascades</td><td>0.00000006</td><td>28</td></tr>
+<tr><td>B cell receptor signaling pathway</td><td>0.00000006</td><td>28</td></tr>
+<tr><td>Leukocyte transendothelial migration</td><td>0.0000001</td><td>38</td></tr>
+<tr><td>Adherens junction</td><td>0.00000012</td><td>28</td></tr>
+<tr><td>Phagosome</td><td>0.00000013</td><td>45</td></tr>
+<tr><td>cAMP signaling pathway</td><td>0.0000002</td><td>54</td></tr>
+<tr><td>VEGF signaling pathway</td><td>0.00000029</td><td>25</td></tr>
+<tr><td>p53 signaling pathway</td><td>0.00000054</td><td>26</td></tr>
+<tr><td>TGF-beta signaling pathway</td><td>0.0000016</td><td>29</td></tr>
+<tr><td>Glucagon signaling pathway</td><td>0.0000021</td><td>32</td></tr>
+<tr><td>PPAR signaling pathway</td><td>0.0000021</td><td>25</td></tr>
+<tr><td>Antigen processing and presentation</td><td>0.0000022</td><td>27</td></tr>
+<tr><td>mTOR signaling pathway</td><td>0.0000076</td><td>22</td></tr>
+<tr><td>GnRH signaling pathway</td><td>0.0000095</td><td>29</td></tr>
+<tr><td>Intestinal immune network for IgA production</td><td>0.000014</td><td>19</td></tr>
+<tr><td>Inflammatory mediator regulation of TRP channels</td><td>0.000044</td><td>29</td></tr>
+<tr><td>Fc gamma R-mediated phagocytosis</td><td>0.000053</td><td>26</td></tr>
+<tr><td>Glutathione metabolism</td><td>0.00018</td><td>18</td></tr>
+<tr><td>Galactose metabolism</td><td>0.00024</td><td>13</td></tr>
+<tr><td>Arachidonic acid metabolism</td><td>0.00065</td><td>19</td></tr>
+<tr><td>Carbohydrate digestion and absorption</td><td>0.00067</td><td>15</td></tr>
+<tr><td>Cell adhesion molecules (CAMs)</td><td>0.00072</td><td>34</td></tr>
+<tr><td>Primary immunodeficiency</td><td>0.0032</td><td>12</td></tr>
+<tr><td>Regulation of lipolysis in adipocytes</td><td>0.005</td><td>16</td></tr>
+<tr><td>Glycolysis/Gluconeogenesis</td><td>0.0053</td><td>18</td></tr>
+<tr><td>Insulin secretion</td><td>0.0066</td><td>21</td></tr>
+<tr><td>Fat digestion and absorption</td><td>0.01</td><td>12</td></tr>
+<tr><td>Calcium signaling pathway</td><td>0.01</td><td>36</td></tr>
+<tr><td>Bacterial invasion of epithelial cells</td><td>0.012</td><td>19</td></tr>
+<tr><td>cGMP-PKG signaling pathway</td><td>0.015</td><td>32</td></tr>
+<tr><td>Steroid hormone biosynthesis</td><td>0.017</td><td>15</td></tr>
+<tr><td>Starch and sucrose metabolism</td><td>0.024</td><td>10</td></tr>
+<tr><td>Linoleic acid metabolism</td><td>0.031</td><td>9</td></tr>
+<tr><td>ECM-receptor interaction</td><td>0.034</td><td>19</td></tr>
+<tr><td>RIG-I-like receptor signaling pathway</td><td>0.038</td><td>16</td></tr>
+<tr><td>Hippo signaling pathway</td><td>0.039</td><td>29</td></tr>
 </tbody></table>
-<blockquote>補足: 上表は代表的経路の抜粋。原文Table 3には計60超の経路（炎症・免疫・糖脂質代謝・酸化ストレス等）が P値・遺伝子数とともに掲載されている（詳細は原文参照）。</blockquote>
-<p><strong>Table 4. 主要候補成分の次数値・関連経路数・効能スコア（抜粋）</strong></p>
+<blockquote>補足: 上表は原文Table 3の全61経路をP値の小さい順に並べ替えて転記（原文は2列組の紙面レイアウトのため掲載順を整理）。内訳は酸化ストレス関連9・糖脂質代謝関連16・炎症応答関連20・オートファジー/免疫関連16など（本文既述）。</blockquote>
+<p><strong>Table 4. 候補成分の次数値・関連経路数・効能スコア（有意な経路が見つかった全24成分）</strong></p>
 <table>
 <thead><tr><th>成分</th><th>次数値</th><th>関連経路数</th><th>効能スコア</th></tr></thead>
 <tbody>
-<tr><td>Calycosin</td><td>238</td><td>60</td><td>19.82</td></tr>
-<tr><td>Ginsenoside Re</td><td>141</td><td>58</td><td>11.35</td></tr>
-<tr><td>Ginsenoside Rb1</td><td>125</td><td>51</td><td>8.85</td></tr>
-<tr><td>Ginsenoside Rf</td><td>102</td><td>57</td><td>8.07</td></tr>
-<tr><td>Ginsenoside Rd</td><td>95</td><td>58</td><td>7.65</td></tr>
-<tr><td>Ginsenoside Rc</td><td>81</td><td>51</td><td>5.73</td></tr>
 <tr><td>Ginsenoside Rg1</td><td>72</td><td>54</td><td>5.40</td></tr>
-<tr><td>Astragaloside IV</td><td>47</td><td>43</td><td>2.81</td></tr>
+<tr><td>Ginsenoside Re</td><td>141</td><td>58</td><td>11.35</td></tr>
+<tr><td>Calycosin</td><td>238</td><td>60</td><td>19.82</td></tr>
+<tr><td>Ginsenoside Rf</td><td>102</td><td>57</td><td>8.07</td></tr>
+<tr><td>Ginsenoside Rb1</td><td>125</td><td>51</td><td>8.85</td></tr>
+<tr><td>Notoginsenoside R2</td><td>10</td><td>39</td><td>0.54</td></tr>
+<tr><td>Ginsenoside Rh1</td><td>29</td><td>43</td><td>1.73</td></tr>
+<tr><td>Ginsenoside Rc</td><td>81</td><td>51</td><td>5.73</td></tr>
+<tr><td>Ginsenoside Rb3</td><td>4</td><td>23</td><td>0.13</td></tr>
 <tr><td>Formononetin</td><td>40</td><td>50</td><td>2.78</td></tr>
-<tr><td>Ginsenoside Rh2</td><td>37</td><td>38</td><td>1.95</td></tr>
+<tr><td>Astragaloside IV</td><td>47</td><td>43</td><td>2.81</td></tr>
+<tr><td>Ginsenoside Rd</td><td>95</td><td>58</td><td>7.65</td></tr>
+<tr><td>Notoginsenoside Fe</td><td>8</td><td>37</td><td>0.41</td></tr>
+<tr><td>Quinquenoside L10</td><td>4</td><td>14</td><td>0.08</td></tr>
 <tr><td>Schisandrol A</td><td>37</td><td>32</td><td>1.64</td></tr>
+<tr><td>Notoginsenoside FT1</td><td>20</td><td>15</td><td>0.42</td></tr>
+<tr><td>Ginsenoside Rg3</td><td>43</td><td>39</td><td>2.33</td></tr>
 <tr><td>Gomisin D</td><td>43</td><td>29</td><td>1.73</td></tr>
+<tr><td>Ginsenoside F2</td><td>26</td><td>28</td><td>1.01</td></tr>
+<tr><td>Gomisin J</td><td>43</td><td>29</td><td>1.73</td></tr>
+<tr><td>Gomisin K3</td><td>2</td><td>26</td><td>0.07</td></tr>
+<tr><td>Ginsenoside Rh2</td><td>37</td><td>38</td><td>1.95</td></tr>
+<tr><td>Gomisin E</td><td>42</td><td>24</td><td>1.40</td></tr>
+<tr><td>Schisandrin A</td><td>2</td><td>40</td><td>0.11</td></tr>
 </tbody></table>
-<p>効能次元では calycosin・ginsenoside Re/Rf/Rb1/Rd/Rc/Rg1 がより多くの標的・経路を調節した。一方、isoschisandrol A・ginsenoside Rg6/Rh7・tigloylgomisin H・pregomisin・schisanhenol は有意な標的・経路が見つからなかった。</p>
+<p>効能次元では calycosin（次数238）・ginsenoside Re（141）・Rb1（125）・Rf（102）・Rd（95）・Rc（81）・Rg1（72）がより多くの標的・経路を調節し、効能スコア上位を占めた。一方、isoschisandrol A・ginsenoside Rg6/Rh7・tigloylgomisin H・pregomisin・schisanhenolの6成分（Table 2には含まれるがTable 4には現れない）は有意な標的・経路が見つからなかった。</p>
 <h3>3.5 安定性次元</h3>
 <p>高温・高湿の極端条件で評価。高温の方が高湿より安定性への影響が大きかった。安定性スコア &gt; 20 の成分が13、特に <strong>notoginsenoside Fe・ginsenoside Rd・ginsenoside Rb1・ginsenoside Rc・ginsenoside Rg1</strong>（スコア &gt; 30）は高温・高湿で最も不安定だった。不安定成分の含量管理がSJG品質の把握に有効である。</p>
 <figure><img src="assets/sjg-multidim-network-qmarker/fig4.jpeg" alt="図4. 異なる条件下でのSJGのUHPLCクロマトグラム。S1=初期条件、S2〜S4=高湿度条件下(5/10/15日)。" loading="lazy"><figcaption>図4. 異なる条件下でのSJGのUHPLCクロマトグラム。S1=初期条件、S2〜S4=高湿度条件下(5/10/15日)。</figcaption></figure>

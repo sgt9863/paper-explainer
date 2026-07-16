@@ -4,6 +4,8 @@ slug: sjg-multidim-network-qmarker
 doi: https://doi.org/10.1016/j.jep.2021.114277
 citations: 20
 source_pdf: 1-s2.0-S0378874121005043-main.pdf
+drive_file_id: 1InIz4X1KyGprRJFJn1vmzb5IWVjGvoaz
+drive_url: https://drive.google.com/file/d/1InIz4X1KyGprRJFJn1vmzb5IWVjGvoaz/view
 level: practitioner
 date: 2026-06-29
 published: 2021
@@ -191,7 +193,7 @@ DAD検出のピーク面積から相対含量を算出。複雑系では1ピー�
 
 SJGは主に2型糖尿病・合併症に用いられるため、統合薬理で「2型糖尿病」「糖尿病性腎症(DN)」「糖尿病性心筋症」の疾患−成分−標的−経路ネットワークを解析。DNの疾患標的が2型糖尿病標的をほぼ包含し、より多くの活性成分を抽出できたため、効能次元の疾患症状にDNを選定。98成分とDNの共通標的をUniProt/DAVIDで解析し、**SJGが調節する163経路** を取得。P < 0.05 の有意経路には、酸化ストレス関連9・糖脂質代謝関連16・炎症応答関連20・オートファジー/免疫関連16 などが含まれた。最終的に「**98成分 − 377標的 − 163経路**」のDN関連ネットワークを得た。98成分の平均次数は **11.81**。
 
-**Table 3. 成分とDN標的に関連する主要経路（P値・遺伝子数、抜粋）**
+**Table 3. 成分とDN標的に関連する有意経路（P<0.05、全61経路、P値・関連遺伝子数）**
 
 | 経路 | P値 | 遺伝子数 |
 |---|---|---|
@@ -201,33 +203,94 @@ SJGは主に2型糖尿病・合併症に用いられるため、統合薬理で�
 | Cytokine-cytokine receptor interaction | 1.3E-16 | 82 |
 | HIF-1 signaling pathway | 4.4E-15 | 45 |
 | Insulin resistance | 5.9E-15 | 48 |
+| Chemokine signaling pathway | 2.2E-13 | 64 |
+| Apoptosis | 4.1E-13 | 33 |
+| Toll-like receptor signaling pathway | 1.6E-12 | 44 |
+| Adipocytokine signaling pathway | 2.8E-11 | 33 |
 | Insulin signaling pathway | 5.9E-11 | 49 |
 | Type II diabetes mellitus | 1.2E-10 | 26 |
+| Type I diabetes mellitus | 1.8E-10 | 24 |
+| Rap1 signaling pathway | 2.6E-10 | 63 |
+| ErbB signaling pathway | 2.6E-10 | 36 |
+| NF-kappa B signaling pathway | 2.6E-10 | 36 |
+| Jak-STAT signaling pathway | 4.2E-10 | 49 |
+| T cell receptor signaling pathway | 1.4E-09 | 38 |
 | AMPK signaling pathway | 1.8E-09 | 43 |
-| VEGF signaling pathway | 2.9E-07 | 25 |
-| TGF-beta signaling pathway | 1.6E-06 | 29 |
-| PPAR signaling pathway | 2.1E-06 | 25 |
+| Ras signaling pathway | 2.4E-09 | 64 |
+| Sphingolipid signaling pathway | 9.9E-09 | 41 |
+| NOD-like receptor signaling pathway | 0.000000041 | 25 |
+| Fc epsilon RI signaling pathway | 0.000000041 | 28 |
+| MAPK signaling pathway | 0.000000045 | 66 |
+| Natural killer cell mediated cytotoxicity | 0.000000055 | 40 |
+| Complement and coagulation cascades | 0.00000006 | 28 |
+| B cell receptor signaling pathway | 0.00000006 | 28 |
+| Leukocyte transendothelial migration | 0.0000001 | 38 |
+| Adherens junction | 0.00000012 | 28 |
+| Phagosome | 0.00000013 | 45 |
+| cAMP signaling pathway | 0.0000002 | 54 |
+| VEGF signaling pathway | 0.00000029 | 25 |
+| p53 signaling pathway | 0.00000054 | 26 |
+| TGF-beta signaling pathway | 0.0000016 | 29 |
+| Glucagon signaling pathway | 0.0000021 | 32 |
+| PPAR signaling pathway | 0.0000021 | 25 |
+| Antigen processing and presentation | 0.0000022 | 27 |
+| mTOR signaling pathway | 0.0000076 | 22 |
+| GnRH signaling pathway | 0.0000095 | 29 |
+| Intestinal immune network for IgA production | 0.000014 | 19 |
+| Inflammatory mediator regulation of TRP channels | 0.000044 | 29 |
+| Fc gamma R-mediated phagocytosis | 0.000053 | 26 |
+| Glutathione metabolism | 0.00018 | 18 |
+| Galactose metabolism | 0.00024 | 13 |
+| Arachidonic acid metabolism | 0.00065 | 19 |
+| Carbohydrate digestion and absorption | 0.00067 | 15 |
+| Cell adhesion molecules (CAMs) | 0.00072 | 34 |
+| Primary immunodeficiency | 0.0032 | 12 |
+| Regulation of lipolysis in adipocytes | 0.005 | 16 |
+| Glycolysis/Gluconeogenesis | 0.0053 | 18 |
+| Insulin secretion | 0.0066 | 21 |
+| Fat digestion and absorption | 0.01 | 12 |
+| Calcium signaling pathway | 0.01 | 36 |
+| Bacterial invasion of epithelial cells | 0.012 | 19 |
+| cGMP-PKG signaling pathway | 0.015 | 32 |
+| Steroid hormone biosynthesis | 0.017 | 15 |
+| Starch and sucrose metabolism | 0.024 | 10 |
+| Linoleic acid metabolism | 0.031 | 9 |
+| ECM-receptor interaction | 0.034 | 19 |
+| RIG-I-like receptor signaling pathway | 0.038 | 16 |
+| Hippo signaling pathway | 0.039 | 29 |
 
-> 補足: 上表は代表的経路の抜粋。原文Table 3には計60超の経路（炎症・免疫・糖脂質代謝・酸化ストレス等）が P値・遺伝子数とともに掲載されている（詳細は原文参照）。
+> 補足: 上表は原文Table 3の全61経路をP値の小さい順に並べ替えて転記（原文は2列組の紙面レイアウトのため掲載順を整理）。内訳は酸化ストレス関連9・糖脂質代謝関連16・炎症応答関連20・オートファジー/免疫関連16など（本文既述）。
 
-**Table 4. 主要候補成分の次数値・関連経路数・効能スコア（抜粋）**
+**Table 4. 候補成分の次数値・関連経路数・効能スコア（有意な経路が見つかった全24成分）**
 
 | 成分 | 次数値 | 関連経路数 | 効能スコア |
 |---|---|---|---|
-| Calycosin | 238 | 60 | 19.82 |
-| Ginsenoside Re | 141 | 58 | 11.35 |
-| Ginsenoside Rb1 | 125 | 51 | 8.85 |
-| Ginsenoside Rf | 102 | 57 | 8.07 |
-| Ginsenoside Rd | 95 | 58 | 7.65 |
-| Ginsenoside Rc | 81 | 51 | 5.73 |
 | Ginsenoside Rg1 | 72 | 54 | 5.40 |
-| Astragaloside IV | 47 | 43 | 2.81 |
+| Ginsenoside Re | 141 | 58 | 11.35 |
+| Calycosin | 238 | 60 | 19.82 |
+| Ginsenoside Rf | 102 | 57 | 8.07 |
+| Ginsenoside Rb1 | 125 | 51 | 8.85 |
+| Notoginsenoside R2 | 10 | 39 | 0.54 |
+| Ginsenoside Rh1 | 29 | 43 | 1.73 |
+| Ginsenoside Rc | 81 | 51 | 5.73 |
+| Ginsenoside Rb3 | 4 | 23 | 0.13 |
 | Formononetin | 40 | 50 | 2.78 |
-| Ginsenoside Rh2 | 37 | 38 | 1.95 |
+| Astragaloside IV | 47 | 43 | 2.81 |
+| Ginsenoside Rd | 95 | 58 | 7.65 |
+| Notoginsenoside Fe | 8 | 37 | 0.41 |
+| Quinquenoside L10 | 4 | 14 | 0.08 |
 | Schisandrol A | 37 | 32 | 1.64 |
+| Notoginsenoside FT1 | 20 | 15 | 0.42 |
+| Ginsenoside Rg3 | 43 | 39 | 2.33 |
 | Gomisin D | 43 | 29 | 1.73 |
+| Ginsenoside F2 | 26 | 28 | 1.01 |
+| Gomisin J | 43 | 29 | 1.73 |
+| Gomisin K3 | 2 | 26 | 0.07 |
+| Ginsenoside Rh2 | 37 | 38 | 1.95 |
+| Gomisin E | 42 | 24 | 1.40 |
+| Schisandrin A | 2 | 40 | 0.11 |
 
-効能次元では calycosin・ginsenoside Re/Rf/Rb1/Rd/Rc/Rg1 がより多くの標的・経路を調節した。一方、isoschisandrol A・ginsenoside Rg6/Rh7・tigloylgomisin H・pregomisin・schisanhenol は有意な標的・経路が見つからなかった。
+効能次元では calycosin（次数238）・ginsenoside Re（141）・Rb1（125）・Rf（102）・Rd（95）・Rc（81）・Rg1（72）がより多くの標的・経路を調節し、効能スコア上位を占めた。一方、isoschisandrol A・ginsenoside Rg6/Rh7・tigloylgomisin H・pregomisin・schisanhenolの6成分（Table 2には含まれるがTable 4には現れない）は有意な標的・経路が見つからなかった。
 
 ### 3.5 安定性次元
 

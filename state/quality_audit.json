@@ -16,11 +16,20 @@
   },
   "figures_only_blocked": {
     "_comment": "本文（全訳密度）・参考文献は是正済み。残るは図の抽出のみで、これはPyMuPDF＝PDFバイナリが必要。Driveバイナリ取得EP不調＋外部直DL(HTTP 000)不可のため図だけ保留。EP回復時に図を抽出して埋め込む。",
-    "shd-spectrum-effect-fingerprint-ciri": "全訳密度(10363字)・参考文献(39件・[N]リンク)は read_file_content 本文から再構築済(2026-07-16)。図(Figure1-14)のみ未抽出＝バイナリ取得不可(Drive session expired/ACS直DL HTTP000)",
-    "xecq-qbd-fullchain-machinevision-qc": "全訳密度・参考文献は既存。図のみ未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で保留"
+    "shd-spectrum-effect-fingerprint-ciri": "全訳密度(10363字)・参考文献(39件・[N]リンク)は read_file_content 本文から再構築済(2026-07-16)。図(Figure1-14)のみ未抽出。2026-07-16再挑戦: download_file_content は今回「File too large for download, over limit of 10 MB」と明確に返却（原本は約11.9MB、フロントマターの指示どおり10MB上限超）。代替としてACS Omega OA本文ページへのWebFetch／curl直DLも試したが、いずれもエージェントプロキシが403（組織の egress ポリシーによる拒否）を返し取得不可。Drive・Web直取得の両方が塞がっており、図の抽出は依然として不可能。ページには手を付けていない（本文・文献は既に是正済のため据え置き）。",
+    "xecq-qbd-fullchain-machinevision-qc": "全訳密度・参考文献は既存。図のみ未抽出。原本(9.5MB、10MB上限内)はDrive有。2026-07-16再挑戦: download_file_content を7回試行し毎回 'MCP server \"Google-Drive\" session expired' で失敗（同じfileIdに対する get_file_metadata / search_files は同セッション内で正常応答したため、Drive自体の障害ではなくバイナリ取得エンドポイント固有の問題）。代替としてBMC(Chinese Medicine)のOA本文ページへのWebFetch／curl直DLも試したが、いずれもエージェントプロキシが403（組織の egress ポリシーによる拒否）を返し取得不可。Drive・Web直取得の両方が塞がっており、図の抽出はできなかった。ページには手を付けていない。"
   },
   "retry": {
     "_comment": "10MB以下だがDriveのバイナリ取得EPが一時失敗。EP回復時に再挑戦（恒久除外ではない）。ssyxは2026-07-16にテキストEPから全訳密度・参考文献を是正済（図は既存6枚）。",
-    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で図だけ保留（本文・文献は既存）"
+    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。2026-07-16に再挑戦したが download_file_content が7回連続 'session expired' で失敗（同セッションの get_file_metadata/search_files は成功、BMC OA本文ページへのWeb直DLも403でブロック）。図だけ保留を継続（本文・文献は既存）"
+  },
+  "reviewed_adequate": {
+    "_comment": "quality_audit.pyのCJK文字数ヒューリスティックが「密度不足」と誤検知したが、原文と突き合わせて確認した結果、実際には原文の全セクション・全データを既に忠実に全訳済み（英語の化合物名・分子式・m/z値・保持時間等が本文中で大きな比率を占めるため機械的なCJK文字数が低く出るだけ）。追加の手直しは不要。2026-07-16 レビュー。",
+    "herbal-regulation-eu-usa-canada-japan": "密度3092字。原文が4ページの短い規制比較レビュー（Acta Medica Bulgarica）で図は無し。Abstract〜結論・表1・参考文献10件まで全訳済み。runbookの「短いレター/規制コメンタリ」例外に該当",
+    "qams-single-marker-review": "密度3656字。QAMSレビュー論文（11頁）の全7章＋Table1（19処方例）＋図1(a/b)＋参考文献23件＋訳者補足まで全訳済み。Table中の英語化合物名・数値が多くCJK密度が低く出るだけ",
+    "dgjz-uplc-qtof-fingerprint": "密度3257字。77成分同定Table II・指紋Table III/IV相当・定量バリデーションTable V・15バッチ含量Table VIまで数値を網羅済み。英語化合物名・分子式・m/z値が本文の大半を占めるためCJK密度が低く出るだけ",
+    "wqy-hplc-dad-atld-mcr-secondorder": "旧密度3417字→是正後3747字。原文(Chemosensors, MDPI, 11頁の短い実験論文)をdownload/read_file_contentで突き合わせ、Table1(正確さ:r/回収率/RMSEP)・Table2(RSD/SEN/SEL/LOD/LOQ)は元々全数値を網羅済みだったため据え置き、唯一の欠落だった二次校正理論の数式(2)〜(7)をKaTeXで追加（式番号・記号定義つき、\\tagは1ブロック1個を厳守）。Dk（式5,6の重み行列）は原文本文に明示定義が無いため『原文参照』と正直に注記。全セクション・全定量値は充足済みで、原文自体が短いMDPI論文のためCJK密度は5000字の閾値を下回るが情報量は完全（runbookの短い論文の例外に該当）。2026-07-16 是正",
+    "zishen-yutai-uhplc-cad-fingerprint-quantification": "旧密度3865字→是正後4384字。原文(J. Pharm. Biomed. Anal., 9頁)をread_file_content全文と突き合わせ、Table1(18分析種MRM)にDwell/CV列を追加して完全化、Table2(16バッチ類似度行列、全120ペア)・Table3(18分析種のバリデーション全項目)・Table4(18分析種×16バッチの含量全288セル+合計行)を『抜粋』表記から原文全数値に展開。本文・図・参考文献は既存で充足。281成分表(Table A.1)・付録図(Fig.A.1-9)は補足資料で本体PDFに無く『原文参照』のまま。展開後もCJK密度が5000字未満なのは、追加した表が化合物名・数値主体の英語/数字テーブルのため（情報量としては完全）。2026-07-16 是正",
+    "sjg-multidim-network-qmarker": "旧密度3975字→是正後4047字。原文(J. Ethnopharmacol., 11頁)をread_file_content全文と突き合わせ、Table3(DN関連有意経路)を『抜粋12件』から原文の全61経路(P<0.05)に展開、Table4(成分の次数値・関連経路数・効能スコア)を『抜粋12件』から有意な経路が見つかった全24成分に展開。式(1)〜(7)・Table1(MRM全24分析種)・Table2(候補30成分の配合/含量/活性スコア)は元々全数値を網羅済みで据え置き。展開後もCJK密度が5000字未満なのは追加した経路名・化合物名が英語のKEGG/化合物表記のため（情報量としては完全）。2026-07-16 是正"
   }
 }
