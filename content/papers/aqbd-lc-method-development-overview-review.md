@@ -136,6 +136,188 @@ AQbDはATP設定→CMAとその規格の決定→重要方法パラメータ（�
 
 方法に品質を設計することで、AQbDは分析法の全体的ライフサイクル概念を完成させる。実例を用いて本レビューは、AQbD法が最適動作し高堅牢・容易な検証・費用時間効率的で（方法開発の実験作業が少ない）、最小ラン時間で最大分離性能を達成できることを示した。汎用性のためAQbDはLC以外の分析法（例 GC）にも適用でき、将来のGC分野での応用が期待される。
 
+## 参考文献
+
+1. Parr, M. K.; Schmidt, A. H. Life Cycle Management of Analytical Methods. J. Pharm. Biomed. Anal. 2018, 147, 506−517.
+
+2. Gaudin, K.; Ferey, L. Quality by Design: A Tool for Separation Method Development in Pharmaceutical Laboratories. LC-GC 2016, 29 (10), 16−25.
+
+3. Maggio, R. M.; Vignaduzzo, S. E.; Kaufman, T. S. Practical and Regulatory Considerations for Stability-Indicating Methods for the Assay of Bulk Drugs and Drug Formulations. TrAC, Trends Anal. Chem. 2013, 49, 57−70.
+
+4. Blessy, M.; Patel, R. D.; Prajapati, P. N.; Agrawal, Y. K. Development of Forced Degradation and Stability Indicating Studies of Drugs A Review. J. Pharm. Anal. 2014, 4 (3), 159−165.
+
+5. Singh, S.; Junwal, M.; Modhe, G.; Tiwari, H.; Kurmi, M.; Parashar, N.; Sidduri, P. Forced Degradation Studies to Assess the Stability of Drugs and Products. TrAC, Trends Anal. Chem. 2013, 49, 71−88.
+
+6. ICH Harmonised Tripartite Guideline: Stability Testing of New Drug Substances and Products Q1A(R2), current Step 4 version; International Conference on Harmonisation: Geneva, 2003.
+
+7. ICH Harmonised Tripartite Guideline: Validation of Analytical Procedures: Text and Methodology Q2(R1), current Step 4 version; International Conference on Harmonisation: Geneva, 2005.
+
+8. McDowall, R. D. Life Cycle and Quality by Design for Chromatographic Methods. LCGC Eur. 2014, 27 (2), 91−97.
+
+9. Peraman, R.; Bhadraya, K.; Padmanabha Reddy, Y. Analytical Quality by Design : A Tool for Regulatory Flexibility and Robust Analytics. Int. J. Anal. Chem. 2015, 2015, 868727.
+
+10. Borman, P.; Truman, K.; Thompson, D.; Nethercote, P.; Chatfield, M. The Application of Quality by Design to Analytical Methods. Pharm. Technol. 2007, 31 (10); http://www.pharmtech. com/application-quality-design-analytical-methods
+
+11. Sangshetti, J. N.; Deshpande, M.; Zaheer, Z.; Shinde, D. B.; Arote, R. Quality by Design Approach: Regulatory Need. Arabian J. Chem. 2017, 10, S3412−S3425.
+
+12. Pharmaceutical CGMPs for the 21st CenturyA Risk-Based Approach, Final Report; U.S. Food and Drug Administration: Silver Spring, MD, 2004.
+
+13. ICH Harmonised Tripartite Guideline: Pharmaceutical Development Q8(R2), current Step 4 version; International Conference on Harmonisation: Geneva, 2009.
+
+14. ICH Harmonised Tripartite Guideline: Quality Risk Management Q9, current Step 4 version; International Conference on Harmonisation: Geneva, 2005.
+
+15. ICH Harmonised Tripartite Guideline: Pharmaceutical Quality System Q10, current Step 4 version; International Conference on Harmonisation: Geneva, 2008.
+
+16. ICH Harmonised Tripartite Guideline: Development and Manufacture of Drug Substances (Chemical Entities and Biotechnological/Biological Entities) Q11, current Step 4 version; International Conference on Harmonisation: Geneva, 2012.
+
+17. Vogt, F. G.; Kord, A. S. Development of Quality-By-Design Analytical Methods. J. Pharm. Sci. 2011, 100 (3), 797−812.
+
+18. Analytical Procedures and Methods Validation for Drugs and BiologicsGuidance for Industry; U.S. Food and Drug Administration: Silver Spring, MD, 2015.
+
+19. Martin, G. P.; Barnett, K. L.; Burgess, C.; Curry, P. D.; Ermer, J.; Gratzl, G. S.; Hammond, J. P.; Herrmann, J.; Kovacs, E.; LeBlond, D. J.; et al. Stimuli to the Revision Process: Proposed New USP General Chapter: The Analytical Procedure Lifecycle ⟨1220⟩. Pharmacopeial Forum 2017, 43 (1); https://www.uspnf.com/sites/ default/files/usp_pdf/EN/USPNF/revisions/s201784.pdf.
+
+20. ECA Academy. New ICH Guidelines: ICH Q13 on Conti Manufacturing and ICH Q14 on AQbD. https://www.gmpcompliance.org/gmp-news/new-ich-guidelines-ich-q13-on-contimanufacturing-and-ich-q14-on-aqbd (accessed Jan 22, 2019).
+
+21. Kochling, J.; Wu, W.; Hua, Y.; Guan, Q.; Castaneda-Merced, J. A Platform Analytical Quality by Design (AQbD) Approach for Multiple UHPLC-UV and UHPLC−MS Methods Development for Protein Analysis. J. Pharm. Biomed. Anal. 2016, 125, 130−139.
+
+22. Boussès, C.; Ferey, L.; Vedrines, E.; Gaudin, K. Using an Innovative Combination of Quality-by-Design and Green Analytical Chemistry Approaches for the Development of a Stability Indicating UHPLC Method in Pharmaceutical Products. J. Pharm. Biomed. Anal. 2015, 115, 114−122.
+
+23. Panda, S. S.; Bera, V. V. R. K.; Beg, S.; Sahu, S. K. Ultrafast Liquid Chromatographic Method Development and Its Validation for Quantification of Telaprevir in Pharmaceutical Dosage Form by Using Organic Process Research & Development Review DOI: 10.1021/acs.oprd.9b00238 Org. Process Res. Dev. 2019, 23, 1784−1802 1799 Quality by Design Approach. J. Chromatogr. Sci. 2015, 53, 1193− 1202.
+
+24. Beg, S.; Sharma, G.; Katare, O. P.; Lohan, S.; Singh, B. Development and Validation of a Stability-Indicating Liquid Chromatographic Method for Estimating Olmesartan Medoxomil Using Quality by Design. J. Chromatogr. Sci. 2015, 53, 1048−1059.
+
+25. Dash, R. N.; Habibuddin, M.; Humaira, T.; Patel, A. A. Application of Quality by Design for the Optimization of an HPLC Method to Determine Ezetimibe in a Supersaturable SelfNanoemulsifying Formulation. J. Liq. Chromatogr. Relat. Technol. 2015, 38, 874−885.
+
+26. Oliva, A.; Fariña, J. B.; Llabrés, M. Development and Validation of an UPLC Method for Determination of Content Uniformity in Low-Dose Solid Drugs Products Using the Design Space Approach. Talanta 2013, 115, 490−499.
+
+27. Xavier, C. M.; Basavaiah, K. Implementation of Quality by Design for the Development and Validation of Pioglitazone Hydrochloride by RP-UPLC with Application to Formulated Forms. ISRN Chromatogr. 2012, 2012, 592849.
+
+28. Garg, L. K.; Sait, S. S.; Krishnamurthy, T.; Kumar, C. H. R. P. Quality by Design (QbD): A Practical Experimental Design Approach by Blocking and Varying Certain Factors of a Stability-Indicating HPLC Method for Simultaneous Determination of Omeprazole and Ketoprofen. J. Liq. Chromatogr. Relat. Technol. 2015, 38, 677−686.
+
+29. Devrukhakar, P. S.; Borkar, R.; Shastri, N.; Surendranath, K. V. A Validated Stability-Indicating RP-HPLC Method for the Simultaneous Determination of Tenofovir, Emtricitabine, and a Efavirenz and Statistical Approach to Determine the Effect of Variables. ISRN Chromatogr. 2013, 2013, 878295.
+
+30. Pantović, J.; Malenović, A.; Vemić, A.; Kostić, N.; Medenica, M. Development of Liquid Chromatographic Method for the Analysis of Dabigatran Etexilate Mesilate and Its Ten Impurities Supported by Quality-by-Design Methodology. J. Pharm. Biomed. Anal. 2015, 111, 7−13.
+
+31. Jovanović, M.; Rakić, T.; Tumpa, A.; Jančić-Stojanović, B. Quality by Design Approach in the Development of Hydrophilic Interaction Liquid Chromatographic Method for the Analysis of Iohexol and Its Impurities. J. Pharm. Biomed. Anal. 2015, 110, 42−48.
+
+32. Vemić, A.; Rakić, T.; Malenović, A.; Medenica, M. Chaotropic Salts in Liquid Chromatographic Method Development for the Determination of Pramipexole and Its Impurities Following Qualityby-Design Principles. J. Pharm. Biomed. Anal. 2015, 102, 314−320.
+
+33. Schmidt, A. H.; Wess, C. A QbD with Design-of-Experiments Approach for Development of a State-of-the-Art UPLC Purity Method for Carbamazepine. J. Liq. Chromatogr. Relat. Technol. 2014, 37, 2653−2666.
+
+34. Karmarkar, S.; Yang, X.; Garber, R.; Szajkovics, A.; Koberda, M. Quality by Design (QbD) Based Development and Validation of an HPLC Method for Amiodarone Hydrochloride and Its Impurities in the Drug Substance. J. Pharm. Biomed. Anal. 2014, 100, 167−174.
+
+35. Kormány, R.; Molnár, I.; Rieger, H. Exploring Better Column Selectivity Choices in Ultra-High Performance Liquid Chromatography Using Quality by Design Principles. J. Pharm. Biomed. Anal. 2013, 80, 79−88.
+
+36. Zakrajšek, J.; Stojić, V.; Bohanec, S.; Urleb, U. Quality by Design Based Optimization of a High Performance Liquid Chromatography Method for Assay Determination of Low Concentration Preservatives in Complex Nasal Formulations. Acta Chim. Slov. 2015, 62, 72−82.
+
+37. Karmarkar, S.; Garber, R.; Genchanok, Y.; George, S.; Yang, X.; Hammond, R. Quality by Design (QbD) Based Development of a Stability Indicating HPLC Method for Drug and Impurities. J. Chromatogr. Sci. 2011, 49, 439−446.
+
+38. Garg, N. K.; Sharma, G.; Singh, B.; Nirbhavane, P.; Katare, O. P. Quality by Design (QbD)-Based Development and Optimization of a Simple, Robust RP-HPLC Method for the Estimation of Methotrexate. J. Liq. Chromatogr. Relat. Technol. 2015, 38, 1629− 1637.
+
+39. Musters, J.; van den Bos, L.; Kellenbach, E. Applying QbD Principles To Develop a Generic UHPLC Method Which Facilitates Continual Improvement and Innovation Throughout the Product Lifecycle for a Commercial API. Org. Process Res. Dev. 2013, 17, 87− 96.
+
+40. Debrus, B.; Guillarme, D.; Rudaz, S. Improved Quality-byDesign Compliant Methodology for Method Development in Reversed-Phase Liquid Chromatography. J. Pharm. Biomed. Anal. 2013, 84, 215−223.
+
+41. Kalariya, P. D.; Kumar Talluri, M. V. N.; Gaitonde, V. D.; Devrukhakar, P. S.; Srinivas, R. Quality by Design : A Systematic and Rapid Liquid Chromatography and Mass Spectrometry Method for Eprosartan Mesylate and Its Related Impurities Using a Superficially Porous Particle Column. J. Sep. Sci. 2014, 37, 2160−2171.
+
+42. Awotwe-Otoo, D.; Agarabi, C.; Faustino, P. J.; Habib, M. J.; Lee, S.; Khan, M. A.; Shah, R. B. Application of Quality by Design Elements for the Development and Optimization of an Analytical Method for Protamine Sulfate. J. Pharm. Biomed. Anal. 2012, 62, 61− 67.
+
+43. Sahu, P. K.; Ramisetti, N. R.; Cecchi, T.; Swain, S.; Patro, C. S.; Panda, J. An Overview of Experimental Designs in HPLC Method Development and Validation. J. Pharm. Biomed. Anal. 2018, 147, 590−611.
+
+44. Deidda, R.; Orlandini, S.; Hubert, P.; Hubert, C. Risk-Based Approach for Method Development in Pharmaceutical Quality Control Context : A Critical Review. J. Pharm. Biomed. Anal. 2018, 161, 110−121.
+
+45. Dispas, A.; Avohou, H. T.; Lebrun, P.; Hubert, P.; Hubert, C. Quality by Design” Approach for the Analysis of Impurities in Pharmaceutical Drug Products and Drug Substances. TrAC, Trends Anal. Chem. 2018, 101, 24−33.
+
+46. Orlandini, S.; Pinzauti, S.; Furlanetto, S. Application of Quality by Design to the Development of Analytical Separation Methods. Anal. Bioanal. Chem. 2013, 405, 443−450.
+
+47. Hubert, C.; Houari, S.; Rozet, E.; Lebrun, P.; Hubert, P. Towards a Full Integration of Optimization and Validation Phases: An Analytical-Quality-by-Design Approach. J. Chromatogr. A 2015, 1395, 88−98.
+
+48. Raman, N. V. V. S. S.; Mallu, U. R.; Bapatu, H. R. Analytical Quality by Design Approach to Test Method Development and Validation in Drug Substance Manufacturing. J. Chem. 2015, 2015, 435129.
+
+49. Swartz, M. E. UPLCTM: An Introduction and Review. J. Liq. Chromatogr. Relat. Technol. 2005, 28, 1253−1263.
+
+50. Fekete, S.; Schappler, J.; Veuthey, J.; Guillarme, D. Current and Future Trends in UHPLC. TrAC, Trends Anal. Chem. 2014, 63, 2−13.
+
+51. Dong, M. W.; Zhang, K. Ultra-High-Pressure Liquid Chromatography (UHPLC) in Method Development. TrAC, Trends Anal. Chem. 2014, 63, 21−30.
+
+52. Rozet, E.; Lebrun, P.; Debrus, B.; Boulanger, B.; Hubert, P. Design Spaces for Analytical Methods. TrAC, Trends Anal. Chem. 2013, 42, 157−167.
+
+53. Sahu, P. K.; Ramisetti, N. R.; Cecchi, T.; Swain, S.; Patro, C. S.; Panda, J. An Overview of Experimental Designs in HPLC Method Development and Validation. J. Pharm. Biomed. Anal. 2018, 147, 590−611.
+
+54. Patel, M. N.; Kothari, C. S. Review on Implementation of Multivariate Approach for Forced Degradation Study and Impurity Profiling with Regulatory Considerations. Chromatographia 2018, 81, 105−125.
+
+55. Reid, G. L.; Cheng, G.; Fortin, D. T.; Harwood, J. W.; Morgado, J. E.; Wang, J.; Xue, G. Reversed-Phase Liquid Chromatographic Method Develpment in an Analytical Quality by Design Framework. J. Liq. Chromatogr. Relat. Technol. 2013, 36, 2612−2638.
+
+56. Lundstedt, T.; Seifert, E.; Abramo, L.; Thelin, B.; Nyström, Å.; Pettersen, J.; Bergman, R. Experimental Design and Optimization. Chemom. Intell. Lab. Syst. 1998, 42, 3−40.
+
+57. Tol, T.; Kadam, N.; Raotole, N.; Desai, A.; Samanta, G. A Simultaneous Determination of Related Substances by High PerformOrganic Process Research & Development Review DOI: 10.1021/acs.oprd.9b00238 Org. Process Res. Dev. 2019, 23, 1784−1802 1800 ance Liquid Chromatography in a Drug Product Using Quality by Design Approach. J. Chromatogr. A 2016, 1432, 26−38.
+
+58. Kormány, R.; Molnár, I.; Fekete, J. Renewal of an Old European Pharmacopoeia Method for Terazosin Using Modeling with Mass Spectrometric Peak Tracking. J. Pharm. Biomed. Anal. 2017, 135, 8−15.
+
+59. Kormány, R.; Tamás, K.; Guillarme, D.; Fekete, S. A Workflow for Column Interchangeability in Liquid Chromatography Using Modeling Software and Quality-by-Design Principles. J. Pharm. Biomed. Anal. 2017, 146, 220−225.
+
+60. Tumpa, A.; Stajić, A.; Jančić-Stojanović, B.; Medenica, M. Quality by Design in the Development of Hydrophilic Interaction Liquid Chromatography Method with Gradient Elution for the Analysis of Olanzapine. J. Pharm. Biomed. Anal. 2017, 134, 18−26.
+
+61. Terzić, J.; Popović, I.; Stajić, A.; Tumpa, A.; Jančić-Stojanović, B. Application of Analytical Quality by Design Concept for Bilastine and Its Degradation Impurities Determination by Hydrophilic Interaction Liquid Chromatographic Method. J. Pharm. Biomed. Anal. 2016, 125, 385−393.
+
+62. Dobričić, V.; Vukadinović, D.; Jančić-Stojanović, B.; Vladimirov, S.; Čudina, O. AQbD - Oriented Development of a New LC Method for Simultaneous Determination of Telmisartan and Its Impurities. Chromatographia 2017, 80, 1199−1209.
+
+63. Wingert, N. R.; Ellwanger, J. B.; Bueno, L. M.; Gobetti, C.; Garcia, C. V.; Steppe, M.; Schapoval, E. E. S. Application of Quality by Design to Optimize a Stability-Indicating LC Method for the Determination of Ticagrelor and Its Impurities. Eur. J. Pharm. Sci. 2018, 118, 208−215.
+
+64. Zhang, X.; Hu, C. Application of Quality by Design Concept to Develop a Dual Gradient Elution Stability-Indicating Method for Cloxacillin Forced Degradation Studies Using Combined MixtureProcess Variable Models. J. Chromatogr. A 2017, 1514, 44−53.
+
+65. Patel, K. G.; Patel, A. T.; Shah, P. A.; Gandhi, T. R. Multivariate Optimization for Simultaneous Determination of Aspirin and Simvastatin by Reverse Phase Liquid Chromatographic Method Using AQbD Approach. Bull. Fac. Pharm. 2017, 55, 293−301.
+
+66. Schmidtsdorff, S.; Schmidt, A. H.; Parr, M. K. Structure Assisted Impurity Profiling for Rapid Method Development in Liquid Chromatography. J. Chromatogr. A 2018, 1577, 38−46.
+
+67. Zacharis, C. K.; Vastardi, E. Application of Analytical Quality by Design Principles for the Determination of Alkyl P-Toluenesulfonates Impurities in Aprepitant by HPLC. Validation Using TotalError Concept. J. Pharm. Biomed. Anal. 2018, 150, 152−161.
+
+68. Rácz, N.; Molnár, I.; Zöldhegyi, A.; Rieger, H.-J.; Kormány, R. Simultaneous Optimization of Mobile Phase Composition and pH Using Retention Modeling and Experimental Design. J. Pharm. Biomed. Anal. 2018, 160, 336−343.
+
+69. Zöldhegyi, A.; Rieger, H.-J.; Molnár, I.; Fekhretdinova, L. Automated UHPLC Separation of 10 Pharmaceutical Compounds Using Software-Modeling. J. Pharm. Biomed. Anal. 2018, 156, 379− 388.
+
+70. Habyalimana, V.; Kindenge Mbinze, J.; Loconon Yemoa, A.; Waffo, C.; Diallo, T.; Kalenda Tshilombo, N.; Ntokamunda, J. K.; Lebrun, P.; Hubert, P.; Djang’eing’a Marini, R. Application of Design Space Optimization Strategy to the Development of LC Methods for Simultaneous Analysis of 18 Antiretroviral Medicines and 4 Major Excipients Used in Various Pharmaceutical Formulations. J. Pharm. Biomed. Anal. 2017, 139, 8−21.
+
+71. Ferey, L.; Raimbault, A.; Rivals, I.; Gaudin, K. UHPLC Method for Multiproduct Pharmaceutical Analysis by Quality-by-Design. J. Pharm. Biomed. Anal. 2018, 148, 361−368.
+
+72. Lin, Q.; Kahsay, G.; de Waal, T.; Zhu, P.; Tam, M.; Teughels, R.; Wang, W.; Van Schepdael, A.; Adams, E. Improved Liquid Chromatographic Method for Quality Control of Spiramycin Using Superficially Porous Particles. J. Pharm. Biomed. Anal. 2018, 149, 57− 65.
+
+73. Sylvester, B.; Tefas, L.; Vlase, L.; Tomuta, I.; Porfire, A. A Quality by Design (QbD) Approach to the Development of a Gradient High-Performance Liquid Chromatography for the Simultaneous Assay of Curcuminoids and Doxorubicin from LongCirculating Liposomes. J. Pharm. Biomed. Anal. 2018, 158, 395−404.
+
+74. Guichard, N.; Fekete, S.; Guillarme, D.; Bonnabry, P.; FleurySouverain, S. Computer-Assisted UHPLC−MS Method Development and Optimization for the Determination of 24 Antineoplastic Drugs Used in Hospital Pharmacy. J. Pharm. Biomed. Anal. 2019, 164, 395−401.
+
+75. Bossunia, M. T. I.; Urmi, K. F.; Shaha, C. K. Quality-By-Design Approach to Stability Indicating RP-HPLC Analytical Method Development for Estimation of Canagliflozin API and Its Validation. Pharm. Methods 2017, 8 (2), 92−101.
+
+76. Panda, S. S.; Ravi Kumar Bera, V. V.; Beg, S.; Mandal, O. Analytical Quality by Design (AQbD)-Oriented RP-UFLC Method for Quantification of Lansoprazole with Superior Method Robustness. J. Liq. Chromatogr. Relat. Technol. 2017, 40 (9), 479−485.
+
+77. Sunitha, G.; Anumolu, P. D.; Subrahmanyam, C. V. S.; Mounika, G.; Priyanka, B. Stability Indicating Liquid Chromatographic Assessment of Dolutegravir by AQbD Approach - Central Composite Design. Indian Drugs 2017, 54 (10), 44−51.
+
+78. Edlabadkar, A.; Rajput, A. AQbD ApproachRP-HPLC Method for Optimization, Development and Validation of Garenoxacin Mesylate in Bulk and in Tablets. Eurasian J. Anal. Chem. 2018, 13 (4), em26.
+
+79. Shakya, A. K. Development and Validation of a StabilityIndicating Liquid Chromatographic Method for Determination of Valsartan and Hydrochlorthiazide Using Quality by Design. Orient. J. Chem. 2016, 32 (2), 777−788.
+
+80. Basso, J.; Mendes, M.; Cova, T. F. G. G.; Sousa, J. J.; Pais, A. A. C. C.; Vitorino, C. Analytical Quality by Design (AQbD) as a Multiaddressable Platform for Co-Encapsulating Drug Assays. Anal. Methods 2018, 10, 5659−5671.
+
+81. Otašević, B.; Šljivić, J.; Protić, A.; Maljurić, N.; Malenović, A.; Zečević, M. Comparison of AQbD and Grid Point Search Methodology in the Development of Micellar HPLC Method for the Analysis of Cilazapril and Hydrochlorothiazide Dosage Form Stability. Microchem. J. 2019, 145, 655−663.
+
+82. Sharma, T.; Khurana, R. K.; Jain, A.; Katare, O. P.; Singh, B. Development of a Validated Liquid Chromatographic Method for Quantification of Sorafenib Tosylate in the Presence of Stress - Induced Degradation Products and in Biological Matrix Employing Analytical Quality by Design Approach. Biomed. Chromatogr. 2018, 32, No. e4169.
+
+83. Sandhu, P. S.; Beg, S.; Katare, O. P.; Singh, B. QbD-Driven Development and Validation of a HPLC Method for Estimation of Tamoxifen Citrate with Improved Performance. J. Chromatogr. Sci. 2016, 54 (8), 1373−1384.
+
+84. Yadav, N. K.; Raghuvanshi, A.; Sharma, G.; Beg, S.; Katare, O. P.; Nanda, S. QbD-Based Development and Validation of a StabilityIndicating HPLC Method for Estimating Ketoprofen in Bulk Drug and Proniosomal Vesicular System. J. Chromatogr. Sci. 2015, 54 (3), 377−389.
+
+85. Thakur, K.; Sharma, G.; Singh, B.; Chhibber, S.; Katare, O. P. Analytical QbD-Integrated Method Development and Validation of Silver Sulphadiazine in Pure Drug and Topical Nanocarrier(s). Anal. Chem. Lett. 2018, 8 (6), 727−746.
+
+86. Ganorkar, S. B.; Dhumal, D. M.; Shirkhedkar, A. A. Development and Validation of Simple RP-HPLC-PDA Analytical Protocol for Zileuton Assisted with Design of Experiments for Robustness Determination. Arabian J. Chem. 2017, 10, 273−282.
+
+87. Beg, S.; Chaudhary, V.; Sharma, G.; Garg, B.; Panda, S. S.; Singh, B. QbD-Oriented Development and Validation of a Bioanalytical Method for Nevirapine with Enhanced Liquid −Liquid Extraction and Chromatographic Separation. Biomed. Chromatogr. 2016, 30, 818−828.
+
+88. Taevernier, L.; Wynendaele, E.; D’Hondt, M.; De Spiegeleer, B. Analytical Quality-by-Design Approach for Sample Treatment of BSA-Containing Solutions. J. Pharm. Anal. 2015, 5 (1), 27−32.
+
+89. Jordan, N.; Zakrajšek, J.; Bohanec, S.; Roškar, R.; Grabnar, I. Applying the Methodology of Design of Experiments to Stability Organic Process Research & Development Review DOI: 10.1021/acs.oprd.9b00238 Org. Process Res. Dev. 2019, 23, 1784−1802 1801 Studies: A Partial Least Squares Approach for Evaluation of Drug Stability. Drug Dev. Ind. Pharm. 2018, 44 (5), 778−786.
+
+90. Shamrock, W. F.; Reilly, K.; Lloyd, D. K. Automated Sample Preparation of Roxifiban Tablets: Transfer of a Manual Method to an Automated Workstation. J. Pharm. Biomed. Anal. 2000, 21, 1225− 1232. Organic Process Research & Development Review DOI: 10.1021/acs.oprd.9b00238 Org. Process Res. Dev. 2019, 23, 1784−1802 1802
+
 ## 訳者補足
 
 - **本レビューの位置づけ**: 本サイトの3本のAQbD論文のうち、**最も「実装の教科書」に近い**のがこれ。ICH Q14 Perspective（AbbVie）が「どの要素を選ぶか（戦略）」、Accred Qual Assur 総説（NIPER）が「各要素の定義（概念）」を扱うのに対し、本論文は「**ATP→リスク評価→スクリーニングDoE→応答曲面→MODR**という具体的な手順と、各段階でどのDoE（完全要因/Plackett-Burman/Box-Behnken/CCD/D最適）を使い、どの数式・統計指標（R²・Q²・ANOVA・F検定）で判断するか」を実例付きで示す。3本を「戦略・概念・実装」で読み分けると立体的に理解できる。

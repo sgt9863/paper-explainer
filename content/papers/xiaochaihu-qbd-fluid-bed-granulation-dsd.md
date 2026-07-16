@@ -169,6 +169,86 @@ $$Y_3 = 2.25 - 0.47x_1 - 0.42x_2 + 0.60x_3 - 0.13x_4 - 0.26x_6 + 0.15x_1x_3 - 0.
 
 本ケーススタディはQbD主導のTCM製造過程の開発・最適化を提示する。TCMエキス粉末を固体粉末、水を85%エタノールの代わりに結合剤とし、小柴胡湯カプセルの安全で実現可能なFBG・乾燥過程を成功裏に開発・最適化。造粒・乾燥をFBG過程に統合することで、より安全・高効率な新結合剤・新過程を確立。生産環境の改善・結合剤コスト削減・乾燥時間短縮による過程時間節約・移送ステップ削減が、従来法に対する明確な利点。DSDを統計ツールとして、CPP（噴霧給気温度・霧化圧・結合剤噴霧速度・結合剤温度・乾燥給気温度・乾燥時間）のCQA（生産収率・原料利用率・生産水分含量）への効果を、最小限の実験ランと高い統計効率で研究。数理モデルとモデル主導設計空間の精度・信頼性を実験で検証。本研究はTCM製造過程の開発・最適化にQbDを活用する概念を例示し、DoEアプローチの大きな潜在力を強調し、商業製造の継続的改善支援に価値あるツールを提供する。
 
+## 参考文献
+
+1. The Chinese Pharmacopoeia. Commission CP, editor. Beijing, China: China Medical Science Press;
+
+2. Zheng C. The effects of the Xiaochaihu capsule on immunoglobulin A nephropathy. Clin J Chin Med. 2020;12(26):63–4.
+
+3. Wu L, Geng B, Zhang R, Yong D, Xu J. Study on antibacterial and liver protective effects of Xiaochaihu capsule. Pharmacol Clin Chin Materia Med. 1999;06:3–5.
+
+4. Zhang Y, Zhou X, Shao Q, Ze F, Wang S. Anti-inflammatory effect of Xiaochaihutang in rats with collagen-induced arthritis and the mechanism. Immunol J. 2015;31(09):781–5.
+
+5. Liu J, Sun R. Protective effect of Xiaochaihu decoction on nonalcoholic steatohepatitis model mice. Chin Tradit Herb Drugs. 2020;51(14):3708–16.
+
+6. Li L, Zhang Y, Wang X. Anti-tumor effect of Bupleuri Radix, Scutellariae Radix and Xiaochaihu capsule. Tradit Chin Med Res. 2013;26(08):79–80.
+
+7. Su Z. Investigation and influencing factors analysis of Chinese medicine decoction taking compliance. J Tradit Chin Med Manag. 2022;30(13):35–7.
+
+8. Fries L, Antonyuk S, Heinrich S, Dopfer D, Palzer S. Collision dynamics in fluidised bed granulators: a DEM-CFD study. Chem Eng Sci. 2013;86:108–23.
+
+9. Morin G, Briens L. A comparison of granules produced by highshear and fluidized-bed granulation methods. AAPS PharmSciTech. 2014;15(4):1039–48.
+
+10. Kwon HJ, Heo E-J, Kim Y-H, Kim S, Hwang Y-H, Byun J-M, et al. Development and evaluation of poorly water-soluble celecoxib as solid dispersions containing nonionic surfactants using fluidized-bed granulation. Pharmaceutics. 2019;11(3):136.
+
+11. Goracinova K, Klisarova L, Simov A, Fredro-Kumbaradzi E, Petrusevska-Tozi L. Characterization of fluid bed prepared granulates with verapamil hydrochloride as active substance. Acta Pharmaceutica (Zagreb). 1996;46(2):147–53.
+
+12. Consiglieri V, Rivas P, Lopez P, Sampaio M, Spricigo R, Mourao S, et al. Developments of fluconazole granulation by fluid bed for capsules and tablets manufacturing. Latin Am J Pharm. 2007;26(1):20–5.
+
+13. Thapa P, Tripathi J, Jeong SH. Recent trends and future perspective of pharmaceutical wet granulation for better process understanding and product development. Powder Technol. 2019;344:864–82.
+
+14. Tamrakar A, Ramachandran R. CFD–DEM–PBM coupled model development and validation of a 3D top-spray fluidized bed wet granulation process. Comput Chem Eng. 2019;125:249–70.
+
+15. Menon A, Dhodi N, Mandella W, Chakrabarti S. Identifying fluid-bed parameters affecting product variability. Int J Pharm. 1996;140(2):207–18.
+
+16. Liu H, Wang K, Schlindwein W, Li M. Using the Box–Behnken experimental design to optimise operating parameters in pulsed spray fluidised bed granulation. Int J Pharm. 2013;448(2):329–38.
+
+17. Lipsanen T, Antikainen O, Räikkönen H, Airaksinen S, Yliruusi J. Novel description of a design space for fluidised bed granulation. Int J Pharm. 2007;345(1):101–7.
+
+18. Debevec V, Srcic S, Horvat M. Scientific, statistical, practical, and regulatory considerations in design space development. Drug Dev Ind Pharm. 2018;44(3):349–64.
+
+19. Dhoot AS, Fernandes GJ, Naha A, Rathnanand M, Kumar L. Design of experiments in pharmaceutical development. Pharm Chem J. 2019;53(8):730–5.
+
+20. ICH Q8 (R2)
+
+21. Yu LX. Pharmaceutical quality by design: product and process development, understanding, and control. Pharm Res. 2008;25(4):781–91.
+
+22. Jelena D, Djordje M, Marko K, Ivana V, Ivana M, Svetlana I. Design space approach in optimization of fluid bed granulation and tablets compression process. Sci World J. 2012;2012:185085.
+
+23. Närvänen T, Antikainen O, Yliruusi J. Predicting particle size during fluid bed granulation using process measurement data. AAPS PharmSciTech. 2009;10(4):1268–75.
+
+24. Lourenço V, Lochmann D, Reich G, Menezes JC, Herdling T, Schewitz J. A quality by design study applied to an industrial pharmaceutical fluid bed granulation. Eur J Pharm Biopharm. 2012;81(2):438–47.
+
+25. Rambali B, Baert L, Massart DL. Using experimental design to optimize the process parameters in fluidized bed granulation on a semi-full scale. Int J Pharm. 2001;220(1):149–60.
+
+26. Dacanal GC, Menegalli FC. Selection of operational parameters for the production of instant soy protein isolate by pulsed fluid bed agglomeration. Powder Technol. 2010;203(3):565–73.
+
+27. Zhao J, Li W, Qu H, Tian G, Wei Y. Application of definitive screening design to quantify the effects of process parameters on key granule characteristics and optimize operating parameters in pulsed-spray fluid-bed granulation. Particuology. 2018;43:56–65.
+
+28. Rambali B, Baert L, Thoné D, Massart DL. Using experimental design to optimize the process parameters in fluidized bed granulation. Drug Dev Ind Pharm. 2001;27(1):47–55.
+
+29. Jiang S, Yang L, Wei X. Preparation process study of ibuprofen arginine granules based on quality by design approach. Chin J Pharm. 2022;53(10):1446–52.
+
+30. Meshali M, El-Banna HM, El-Sabbagh H. Use of a fractional factorial design to evaluate granulations prepared in a fluidized bed. Die Pharmazie. 1983;38(5):323–5.
+
+31. Lipps DM, Sakr AM. Characterization of Wet Granulation process parameters using response surface methodology. 1 Top-spray fluidized bed. J Pharm Sci. 1994;83(7):937–47.
+
+32. Jones B, Nachtsheim CJ. A class of three-level designs for definitive screening in the presence of second-order effects. J Qual Technol. 2011;43(1):1–15.
+
+33. Erler A, de Mas N, Ramsey P, Henderson G. Efficient biological process characterization by definitive-screening designs: the formaldehyde treatment of a therapeutic protein as a case study. Biotechnol Lett. 2013;35(3):323–9.
+
+34. Takagaki K, Ito T, Arai H, Obata Y, Takayama K, Onuki Y. The usefulness of definitive screening design for a quality by design approach as demonstrated by a pharmaceutical study of orally disintegrating tablet. Chem Pharm Bull. 2019;67(10):1144–51.
+
+35. Tian G, Wei Y, Zhao J, Li W, Qu H. Application of near-infrared spectroscopy combined with design of experiments for process development of the pulsed spray fluid bed granulation process. Powder Technol. 2018;339:521–33.
+
+36. Benjasirimongkol P, Piriyaprasarth S, Moribe K, Sriamornsak P. Use of Risk Assessment and Plackett-Burman design for developing resveratrol spray-dried emulsions: a quality-by-design approach. AAPS PharmSciTech. 2018;20(1):14.
+
+37. Gao JZH, Jain A, Motheram R, Gray DB, Hussain MA. Fluid bed granulation of a poorly water soluble, low density, micronized drug: comparison with high shear granulation. Int J Pharm. 2002;237(1):1–14.
+
+38. Shao J, Qu H, Gong X. Comparison of two algorithms for development of design space-overlapping method and probability-based method. China J Chin Materia Med. 2018;43(10):2074–80.
+
+39. Chordiya M, Gangurde H, Sancheti V. Quality by design: a roadmap for quality pharmaceutical products. J Rep Pharma Sci. 2019;8(2):289. 40 Fukuda IM, Pinto CFF, Moreira CdS, Saviano AM, Lourenço FR. Design of experiments (DoE) applied to pharmaceutical and analytical quality by design (QbD). Braz J Pharm Sci. 2018;54:e01006. AAPS PharmSciTech (2023) 24:210 1 3 210 Page 14 of 14
+
 ## 訳者補足
 
 - **この論文は「成分」でなく「製造」のQbD**: 本サイトの他のQbD論文（イチジク・黄連など）が「分析法」や「成分」を対象にするのに対し、本論文は**製造工程（造粒・乾燥）**をQbDで最適化する。小柴胡湯エキス粉末を顆粒（カプセル用）にする工程で、①従来バラバラだった湿式造粒＋オーブン乾燥＋篩過を**流動層1工程に統合**、②結合剤を**85%エタノールから水に置換**（防爆・コスト・環境）。この2つが実務的な改善の柱。日本の漢方エキス製剤メーカーの造粒工程にも通じる。
