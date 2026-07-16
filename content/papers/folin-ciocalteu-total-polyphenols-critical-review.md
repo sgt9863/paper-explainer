@@ -136,6 +136,142 @@ FCアッセイはPPsに非特異的で慎重な解釈が必要。元来の目的
 
 **最終結論**: FC実験因子が同一でない、かつ/または未知試料分析前にMVが行われていない場合、文献で公表された全体TPC結果の比較は疑わしいとみなせる。
 
+## 参考文献
+
+1. H. Cory, S. Passarelli, J. Szeto, M. Tamez, J. Mattei, The role of polyphenols in human health and food systems: a mini-review, Front, Nutr. 5 (2018) 1–9, https:// doi.org/10.3389/fnut.2018.00087.
+
+2. M.J. Motilva, A. Serra, A. Maci`a, Analysis of food polyphenols by ultra highperformance liquid chromatography coupled to mass spectrometry: an overview, J. Chromatogr. A. 1292 (2013) 66–82, https://doi.org/10.1016/j. chroma.2013.01.012.
+
+3. R.L. Prior, X. Wu, K. Schaich, Standardized methods for the determination of antioxidant capacity and phenolics in foods and dietary supplements, J. Agric. Food Chem. 53 (2005) 4290–4302, https://doi.org/10.1021/jf0502698.
+
+4. O. Folin, V. Ciocalteu, On tyrosine and Tryptophane determinations in proteins, J. Biol. Chem. 73 (1927) 627–650, https://doi.org/10.1016/s0021-9258(18) 84277-6.
+
+5. V.L. Singleton, J.A. Rossi Jr., Colorimetry of total phenolics with phosphomolybdic-phosphotungtic acid reagents, Am. J. Enol. Vitic. 16 (1965) 144–158, https://doi.org/10.5344/ajev.1965.16.3.144.
+
+6. International Organization of Vine & Wine (OIV), Compendium of International Methods of Wine and Must Analysis. Method OIV-MA-AS2-10, Folin-Ciocalteu Index, 1990.
+
+7. International Organization for Standardization (ISO), ISO 14502 Determination of Substances Characteristic of Green and Black Tea — Part 1: Content of Total Polyphenols in Tea — Colorimetric Method Using Folin-Ciocalteu Reagent, 2005.
+
+8. European Pharmacopoeia, Determination of Tannins in Herbal Drugs, Council of Europe, Strasbourg, France, 2005 (Chapter 2).8.14.
+
+9. J.D. Box, Investigation of the Folin-Ciocalteau phenol reagent for the determination of polyphenolic substances in natural waters, Water Res. 17 (1983) 511–525, https://doi.org/10.1016/0043-1354(83)90111-2.
+
+10. L.M. Magalh˜aes, M.A. Segundo, S. Reis, J.L.F.C. Lima, A.O.S.S. Rangel, Automatic method for the determination of Folin-Ciocalteu reducing capacity in food products, J. Agric. Food Chem. 54 (2006) 5241–5246, https://doi.org/10.1021/ jf060324s.
+
+11. Q. Zhang, J. Zhang, J. Shen, A. Silva, D.A. Dennis, C.J. Barrow, A simple 96-well microplate method for estimation of total polyphenol content in seaweeds, J. Appl. Phycol. 18 (2006) 445–450, https://doi.org/10.1007/s10811-006-9048-4.
+
+12. E.A. Ainsworth, K.M. Gillespie, Estimation of total phenolic content and other oxidation substrates in plant tissues using Folin-Ciocalteu reagent, Nat. Protoc. 2 (2007) 875–877, https://doi.org/10.1038/nprot.2007.102.
+
+13. N. Cicco, M.T. Lanorte, M. Paraggio, M. Viggiano, V. Lattanzio, A reproducible, rapid and inexpensive Folin-Ciocalteu micro-method in determining phenolics of plant methanol extracts, Microchem. J. 91 (2009) 107–110, https://doi.org/ 10.1016/j.microc.2008.08.011.
+
+14. A. Medina-Rem´on, A. Barrionuevo-Gonz´alez, R. Zamora-Ros, C. Andres-Lacueva, R. Estruch, M.´A. Martínez-Gonz´alez, J. Diez-Espino, R.M. Lamuela-Raventos, Rapid Folin-Ciocalteu method using microtiter 96-well plate cartridges for solid phase extraction to assess urinary total phenolic compounds, as a biomarker of total polyphenols intake, Anal. Chim. Acta 634 (2009) 54–60, https://doi.org/10.1016/ j.aca.2008.12.012.
+
+15. J.D. Everette, Q.M. Bryant, A.M. Green, Y.A. Abbey, G.W. Wangila, R.B. Walker, Thorough study of reactivity of various compound classes toward the FolinCiocalteu reagent, J. Agric. Food Chem. 58 (2010) 8139–8144, https://doi.org/ 10.1021/jf1005935.
+
+16. L.M. Magalh˜aes, F. Santos, M.A. Segundo, S. Reis, J.L.F.C. Lima, Rapid microplate high-throughput methodology for assessment of Folin-Ciocalteu reducing capacity, Talanta 83 (2010) 441–447, https://doi.org/10.1016/j.talanta.2010.09.042.
+
+17. A. Vallverdú-Queralt, A. Medina-Rem´on, M. Martínez-Hu´elamo, O. J´auregui, C. Andres-Lacueva, R.M. Lamuela-Raventos, Phenolic profile and hydrophilic antioxidant capacity as chemotaxonomic markers of tomato varieties, J. Agric. Food Chem. 59 (2011) 3994–4001, https://doi.org/10.1021/jf104400g.
+
+18. E. Attard, A rapid microtitre plate Folin-Ciocalteu method for the assessment of polyphenols, Cent. Eur. J. Biol. 8 (2013) 48–53, https://doi.org/10.2478/s11535012-0107-3.
+
+19. A. Blainski, G.C. Lopes, J.C.P. De Mello, Application and analysis of the folin ciocalteu method for the determination of the total phenolic content from limonium brasiliense L, Molecules 18 (2013) 6852–6865, https://doi.org/ 10.3390/molecules18066852.
+
+20. M.R. Rover, R.C. Brown, Quantification of total phenols in bio-oil using the FolinCiocalteu method, J. Anal. Appl. Pyrolysis 104 (2013) 366–371, https://doi.org/ 10.1016/j.jaap.2013.06.011.
+
+21. M.J. Jara-Palacios, D. Hernanz, S. Gonz´alez-Manzano, C. Santos-Buelga, M. L. Escudero-Gilete, F.J. Heredia, Detailed phenolic composition of white grape byproducts by RRLC/MS and measurement of the antioxidant activity, Talanta 125 (2014) 51–57, https://doi.org/10.1016/j.talanta.2014.02.065.
+
+22. G. Bobo-García, G. Davidov-Pardo, C. Arroqui, P. Vírseda, M.R. Marín-Arroyo, M. Navarro, Intra-laboratory validation of microplate methods for total phenolic content and antioxidant activity on polyphenolic extracts, and comparison with conventional spectrophotometric methods, J. Sci. Food Agric. 95 (2015) 204–209, https://doi.org/10.1002/jsfa.6706.
+
+23. T. Margraf, A.R. Karnopp, N.D. Rosso, D. Granato, Comparison between folinciocalteu and Prussian blue assays to estimate the total phenolic content of Juices and teas using 96-well microplates, J. Food Sci. 80 (2015) C2397–C2403, https:// doi.org/10.1111/1750-3841.13077.
+
+24. J.O. Moreno-Escamilla, L.A. de la Rosa, J.A. L´opez-Díaz, J. Rodrigo-García, J. A. Nú˜nez-Gast´elum, E. Alvarez-Parrilla, Effect of the smoking process and firewood type in the phytochemical content and antioxidant capacity of red Jalape˜no pepper F. Raposo et al. Talanta 272 (2024) 125771 10 during its transformation to chipotle pepper, Food Res. Int. 76 (2015) 654–660, https://doi.org/10.1016/j.foodres.2015.07.031.
+
+25. C.V. V´azquez, M.G.V. Rojas, C.A. Ramírez, J.L. Ch´avez-Servín, T. García-Gasca, R. A. Ferriz Martínez, O.P. García, J.L. Rosado, C.M. L´opez-Sabater, A.I. Castellote, H. M.A. Montemayor, K. De La Torre Carbot, Total phenolic compounds in milk from different species. Design of an extraction technique for quantification using the Folin-Ciocalteu method, Food Chem. 176 (2015) 480–486, https://doi.org/ 10.1016/j.foodchem.2014.12.050.
+
+26. K.P. Bastola, Y.N. Guragain, V. Bhadriraju, P.V. Vadlani, Evaluation of standards and interfering compounds in the determination of phenolics by folin-ciocalteu assay method for effective Bioprocessing of Biomass, Am. J. Anal. Chem. 8 (2017) 416–431, https://doi.org/10.4236/ajac.2017.86032.
+
+27. Mashuni, N.A. Yanti, M. Jahiding, M. Edihar, Validation of UV-vis spectrophotometric method for determination of bio oil total phenolic content from Pyrolisis of Cashew Nut Shell, Res. J. Pharm. Biol. Chem. Sci. 8 (2017) 1745–1752.
+
+28. M. Musci, S. Yao, Optimization and validation of Folin–Ciocalteu method for the determination of total polyphenol content of Pu-erh tea, Int. J. Food Sci. Nutr. 68 (2017) 913–918, https://doi.org/10.1080/09637486.2017.1311844.
+
+29. M.A.M. Galv˜ao, A.O. de Arruda, I.C.F. Bezerra, M.R.A. Ferreira, L.A.L. Soares, Evaluation of the folin-ciocalteu method and quantification of total tannins in Stem Barks and Pods from Libidibia ferrea (Mart. Ex Tul) L. P. Queiroz, Brazilian Arch. Biol. Technol. 61 (2018) 1–20, https://doi.org/10.1590/1678-4324-2018170586.
+
+30. S. Kupina, C. Fields, M.C. Roman, S.L. Brunelle, Determination of total phenolic content using the Folin-C assay: single-laboratory validation, first action 2017.13, J. AOAC Int. 102 (2018) 320–321, https://doi.org/10.5740/jaoacint.2017.13.
+
+31. R. L´opez-Froil´an, B. Hern´andez-Ledesma, M. C´amara, M.L. P´erez-Rodríguez, Evaluation of the antioxidant potential of mixed fruit-based Beverages: a new Insight on the folin-ciocalteu method, Food Anal. Methods 11 (2018) 2897–2906, https://doi.org/10.1007/s12161-018-1259-1.
+
+32. G.A. Pereira, H.S. Arruda, G.M. Pastore, Modification and validation of FolinCiocalteu assay for faster and safer analysis of total phenolic content in food samples, Brazilian J. Food Res. 9 (2018) 125, https://doi.org/10.3895/rebrapa. v9n1.6062.
+
+33. B. Poniedziałek, P. Rzymski, M. Pięt, M. Gąsecka, A. Stroi´nska, P. Niedzielski, M. Mleczek, P. Rzymski, M. Wilczak, Relation between polyphenols, malondialdehyde, antioxidant capacity, lactate dehydrogenase and toxic elements in human colostrum milk, Chemosphere 191 (2018) 548–554, https://doi.org/ 10.1016/j.chemosphere.2017.10.098.
+
+34. S. Aryal, M.K. Baniya, K. Danekhu, P. Kunwar, R. Gurung, N. Koirala, Total Phenolic content, Flavonoid content and antioxidant potential of wild vegetables from western Nepal, Plants 8 (2019), https://doi.org/10.3390/plants8040096.
+
+35. M.R. Gao, Q. Da Xu, Q. He, Q. Sun, W.C. Zeng, A theoretical and experimental study: the influence of different standards on the determination of total phenol content in the Folin–Ciocalteu assay, J. Food Meas. Charact. 13 (2019) 1349–1356, https://doi.org/10.1007/s11694-019-00050-6.
+
+36. N. Hudz, O. Yezerska, M. Shanaida, V.H. Sedl´aˇckov´a, P.P. Wieczorek, Application of the Folin-Ciocalteu method to the evaluation of Salvia sclarea extracts, Pharmacia 66 (2019) 209–215, https://doi.org/10.3897/pharmacia.66.e38976.
+
+37. S. Ma, C. Kim, A.P. Neilson, L.E. Griffin, G.M. Peck, S.F. O’Keefe, A.C. Stewart, Comparison of common analytical methods for the quantification of total polyphenols and Flavanols in fruit Juices and Ciders, J. Food Sci. 84 (2019) 2147–2158, https://doi.org/10.1111/1750-3841.14713.
+
+38. Y. Martono, F.F. Yanuarsih, N.R. Aminu, J. Muninggar, Fractionation and determination of phenolic and flavonoid compound from Moringa oleifera leaves, J. Phys. Conf. Ser. 1307 (2019), https://doi.org/10.1088/1742-6596/1307/1/ 012014.
+
+39. G. Parmar, K. Pundarikakshudu, Determination and validation assay for total phenolic content in two Euphorbiaceous plants by folin ciocalteu method, Int. J. Pharm. Res. 12 (2020) 608–612, https://doi.org/10.31838/ijpr/2020.SP1.101.
+
+40. J. Pico, R.Y. Pismag, M. Laudouze, M.M. Martinez, Systematic evaluation of the Folin-Ciocalteu and Fast Blue BB reactions during the analysis of total phenolics in legumes, nuts and plant seeds, Food Funct. 11 (2020) 9868–9880, https://doi.org/ 10.1039/d0fo01857k.
+
+41. F. Tatzber, W. Wonisch, S. Lackner, M. Lindschinger, W. Pursch, U. Resch, C. Trummer, M. Murkovic, S. Zelzer, S. Holasek, G. Cvirn, A micromethod for polyphenol high-throughput screening saves 90 percent reagents and sample volume, Antioxidants 9 (2020), https://doi.org/10.3390/antiox9010011.
+
+42. J.C. Carmona-Hernandez, G. Taborda-Ocampo, C.H. Gonz´alez-Correa, FolinCiocalteu reaction alternatives for higher polyphenol quantitation in Colombian passion fruits, Int. J. Food Sci. 2021 (2021), https://doi.org/10.1155/2021/ 8871301.
+
+43. P. Luaces, M. Pascual, A.G. P´erez, C. Sanz, An easy-to-use procedure for the measurement of total phenolic compounds in olive fruit, Antioxidants 10 (2021), https://doi.org/10.3390/antiox10111656.
+
+44. G.R. Martins, A.F. Monteiro, F.R.L. do Amaral, A.S. da Silva, A validated FolinCiocalteu method for total phenolics quantification of condensed tannin-rich açaí (Euterpe oleracea Mart.) seeds extract, J. Food Sci. Technol. 58 (2021) 4693–4702, https://doi.org/10.1007/s13197-020-04959-5.
+
+45. M. Platzer, S. Kiese, T. Herfellner, U. Schweiggert-Weisz, P. Eisner, How does the phenol structure influence the results of the folin-ciocalteu assay? Antioxidants 10 (2021) 1–13, https://doi.org/10.3390/antiox10050811.
+
+46. J. George, D. Edwards, S. Pun, D. Williams, Evaluation of antioxidant capacity (ABTS and CUPRAC) and total phenolic content (Folin-Ciocalteu) assays of selected fruit, vegetables, and Spices, Int. J. Food Sci. 2022 (2022), https://doi.org/ 10.1155/2022/2581470.
+
+47. J.B. Johnson, J.S. Mani, M. Naiker, Development and validation of a 96-well microplate assay for the measurement of total phenolic content in Ginger extracts, Food Anal. Methods 15 (2022) 413–420, https://doi.org/10.1007/s12161-02102127-9.
+
+48. D.A. Klari´c, A. Mornar, J. Kovaˇci´c, M.L. Jeliˇci´c, E. Brusaˇc, I. Brleti´c, I. Klari´c, Polyphenol content and antioxidant activity of phytoestrogen containing food and dietary supplements: DPPH free radical scavenging activity by HPLC, Acta Pharm. 72 (2022) 375–388, https://doi.org/10.2478/acph-2022-0031.
+
+49. H.S. Pandhyta Kuntari, Method validation and estimation of measurement Uncertainty in the determination of total polyphenols content in Land Spinach by UV-vis Spectrophotometry, J. Akad. Kim. 11 (2022) 176–182. https://jurnal.fkip. untad.ac.id/index.php/jak/article/view/2273.
+
+50. B.N. Lucas, F.M. Dalla Nora, C.P. Boeira, S. Verruck, C.S. Da Rosa, Determination of total phenolic compounds in plant extracts via Folin-Ciocalteu’s method adapted to the usage of digital images, Food Sci. Technol. 42 (2022) 1–6, https://doi.org/ 10.1590/fst.35122.
+
+51. D. Michiu, M.I. Socaciu, M. Fogarasi, A.M. Jimborean, F. Ranga, V. Mures¸an, C. A. Semeniuc, Implementation of an analytical method for spectrophotometric evaluation of total phenolic content in essential oils, Molecules 27 (2022), https:// doi.org/10.3390/molecules27041345.
+
+52. L. Rickards, A. Lynn, M.E. Barker, M. Russell, M.K. Ranchordas, Comparison of the polyphenol content and in vitro antioxidant capacity of fruit-based nutritional supplements commonly consumed by athletic and recreationally active populations, J. Int. Soc. Sports Nutr. 19 (2022) 336–348, https://doi.org/10.1080/ 15502783.2022.2091412.
+
+53. M. Samara, A. Nasser, U. Mingelgrin, Critical Examination of the suitability of the folin-ciocalteu reagent assay for quantitative analysis of polyphenols—the case of olive-Mill Wastewater, Am. J. Anal. Chem. 13 (2022) 476–493, https://doi.org/ 10.4236/ajac.2022.1311032.
+
+54. I.L. Lawag, E.S. Nolden, A.A.M. Schaper, L.Y. Lim, C. Locher, A modified folinciocalteu assay for the determination of total phenolics content in honey, Appl. Sci. 13 (2023), https://doi.org/10.3390/app13042135.
+
+55. N.B. Rizvi, A. Fatima, R. Busquets, M.R. Khan, S. Ashraf, M.S. Khan, F. Oz, Effect of the media in the folin-ciocalteu assay for the analysis of the total phenolic content of olive products, Food Anal. Methods (2023), https://doi.org/10.1007/s12161023-02527-z.
+
+56. K.R.P. Sari, Z. Ikawati, R. Danarti, T. Hertiani, Micro-titer plate assay for measurement of total phenolic and total flavonoid contents in medicinal plant extracts, Arab. J. Chem. 16 (2023), https://doi.org/10.1016/j. arabjc.2023.105003.
+
+57. F. Raposo, Evaluation of analytical calibration based on least-squares linear regression for instrumental techniques: a tutorial review, TrAC - Trends Anal. Chem. 77 (2016) 167–185, https://doi.org/10.1016/j.trac.2015.12.006.
+
+58. F. Raposo, C. Ibelli-Bianco, Performance parameters for analytical method validation: Controversies and discrepancies among numerous guidelines, TrAC - Trends Anal. Chem. 129 (2020), https://doi.org/10.1016/j.trac.2020.115913.
+
+59. Brazilian Sanitary Surveillance Agency (ANVISA), Resolution - RE N. 899, of May 29, 2003. Guide for Validation of Analytical and Bioanalytical Methods, Official Diary of the Union, 2003.
+
+60. Association of Analytical Communities (AOAC), AOAC guidelines for single laboratory validation of chemical methods for dietary supplements and Botanicals. https://doi.org/10.1063/1.4915424, 2002.
+
+61. B. Magnusson, U. ¨Ornemark (Eds.), Eurachem Guide. The Fitness for Purpose of Analytical Methods: A Laboratory Guide to Method Validation and Related Topics, second ed., 2014, https://doi.org/10.1016/S0014-2999(99)00500-2.
+
+62. International Conference on Harmonisation (ICH) of technical requirements for registration of pharmaceuticals for human use. ICH harmonised tripartite guideline. Validation of analytical procedures: Text and Methodology Q2(R1). https://doi.org/10.1590/S1984-82502011000100012, 2005.
+
+63. International Organization for Standardization (ISO), ISO 5725. Accuracy (Trueness and Precision) of Measurement Methods and Results-Part 2: Basic Method for the Determination of Repeatability and Reproducibility of a Standard Measurement Method, 1994, pp. 1–41.
+
+64. U.S. Food and Drug Administration/Foods and Veterinary Medicine (FDA/FVM), Guidelines for the Validation of Chemical Methods for the FDA Foods Program, third ed., 2019.
+
+65. J.C. S´anchez-Rangel, J. Benavides, J.B. Heredia, L. Cisneros-Ceballos, D.A. JacoboVelazquez, The Folin-Ciocalteu assay revisited: improvements of its specificity for total phenolic content determination, Anal. Methods5 (2013) 5990–5999, https:// doi.org/10.1039/c3ay4125g.
+
+66. J.M. Jurado, A. Alc´azar, R. Mu˜niz-Valencia, S.G. Ceballos-Maga˜na, F. Raposo, Some practical considerations for linearity assessment of calibration curves as function of concentration levels according to the fitness-for-purpose approach, Talanta 172 (2017) 221–229, https://doi.org/10.1016/j.talanta.2017.05.049.
+
+67. W.J. Youden, E.H. Steiner, Statistical Manual of the Association of Official Analytical Chemists, 1975. F. Raposo et al.
+
 ## 訳者補足
 
 - **本レビューが突く問題**: Folin-Ciocalteu法は「総ポリフェノール量（TPC）」を測る定番の比色法で、生薬エキス・食品・お茶の品質指標として論文に山ほど出てくる。しかし本レビューの警告は「**これほど普及しているのに標準化されていない**」——試料量・試薬濃度・塩基・添加順序・波長・温度・反応時間・標準品という15の条件が研究ごとにバラバラで、**別々の論文のTPC値を比べても意味がない**、というもの。「〇〇のポリフェノールは△△ mg/g」という数字を鵜呑みにする前に、どの条件で測ったかを確認せよという教訓。
