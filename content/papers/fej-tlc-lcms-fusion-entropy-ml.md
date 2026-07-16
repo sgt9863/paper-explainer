@@ -39,15 +39,15 @@ summary: 気血両虚に用いる中国の複方処方「復方阿膠漿（FEJ�
 
 ## 1. 序論（Introduction）
 
-クロマトグラフィーは TCM 処方の品質評価に最も広く用いられる手法の一つであり、なかでも**薄層クロマトグラフィー（TLC）と液体クロマトグラフィー（LC）**の組み合わせが最も一般的である。TLC は、低コストで迅速な定性・定量分析が急務な場面など、複雑な化合物混合物の日常的な化学分析に一般的に用いられる。分離が速く操作が容易なため、多様な化合物を含む混合物の分離において TLC は代替不能の重要性をもつ。TLC が広く用いられるクロマト法の中で化合物とその代謝物の分析に最も単純な方法だと評する研究者すらいる。TLC は移動相の選択肢が広く、試料識別の柔軟性が高く、負荷容量も大きいため、複雑な化学物質の化学組成プロファイルを得ることができる。
+クロマトグラフィーは TCM 処方の品質評価に最も広く用いられる手法の一つであり、なかでも**薄層クロマトグラフィー（TLC）と液体クロマトグラフィー（LC）**の組み合わせが最も一般的である[1]。TLC は、低コストで迅速な定性・定量分析が急務な場面など、複雑な化合物混合物の日常的な化学分析に一般的に用いられる。分離が速く操作が容易なため、多様な化合物を含む混合物の分離において TLC は代替不能の重要性をもつ[2–5]。TLC が広く用いられるクロマト法の中で化合物とその代謝物の分析に最も単純な方法だと評する研究者すらいる[6,7]。TLC は移動相の選択肢が広く、試料識別の柔軟性が高く、負荷容量も大きいため、複雑な化学物質の化学組成プロファイルを得ることができる[8]。
 
-TLC が色によって豊富な化学物質のより明瞭な情報を与えるのとは異なり、質量分析と結合した LC は、ほぼあらゆる二次代謝物について詳細な情報を提供する。**液体クロマトグラフィー-高分解能質量分析（LC-HRMS）**は高感度で試料適応範囲が広く、化学的特徴の包括的・効率的な研究と、試料間の動的変化のモニタリングを可能にする。ただし、TLC と LC-HRMS の生データの解析だけでは、化学プロファイルの深い理解には至らない。
+TLC が色によって豊富な化学物質のより明瞭な情報を与えるのとは異なり、質量分析と結合した LC は、ほぼあらゆる二次代謝物について詳細な情報を提供する。**液体クロマトグラフィー-高分解能質量分析（LC-HRMS）**は高感度で試料適応範囲が広く、化学的特徴の包括的・効率的な研究と、試料間の動的変化のモニタリングを可能にする[9,10]。ただし、TLC と LC-HRMS の生データの解析だけでは、化学プロファイルの深い理解には至らない。
 
-クロマト指紋（fingerprint）は、TCM の複雑さを探るための全体論的かつ定量可能なアプローチであり、化学成分の相対的に完全で包括的なプロファイルを構築するため本研究に導入された。天然物の構造分類、生薬原料の植物起源などを分類するモデルが確立されてきた。これらの研究はコンピュータ処理により TLC 指紋を評価しようとしているが、異なる分類を決定づける特徴や、選択されたマーカー化合物の性能は依然として不明確である。化合物のプロファイリングは、多数の試料を同一条件下で同時に可視化できる TLC 画像によって正確に得られる。バンドの色やパターンのグレースケールを調べることで、各バンドについて化合物組成のプロファイリング特徴情報のセットを作成できる。しかし、TLC 画像特徴であれ LC-HRMS スペクトルデータであれ、鍵となる課題は、数百〜数千の変数の中から、ノイズや無関係な変動ではなく真に品質を示す最も情報量の多い特徴を、いかに効果的に選び出すかにある。
+クロマト指紋（fingerprint）は、TCM の複雑さを探るための全体論的かつ定量可能なアプローチであり、化学成分の相対的に完全で包括的なプロファイルを構築するため本研究に導入された。天然物の構造分類[11]、生薬原料の植物起源[12,13]などを分類するモデルが確立されてきた。これらの研究はコンピュータ処理により TLC 指紋を評価しようとしているが、異なる分類を決定づける特徴や、選択されたマーカー化合物の性能は依然として不明確である。化合物のプロファイリングは、多数の試料を同一条件下で同時に可視化できる TLC 画像によって正確に得られる[13]。バンドの色やパターンのグレースケールを調べることで、各バンドについて化合物組成のプロファイリング特徴情報のセットを作成できる。しかし、TLC 画像特徴であれ LC-HRMS スペクトルデータであれ、鍵となる課題は、数百〜数千の変数の中から、ノイズや無関係な変動ではなく真に品質を示す最も情報量の多い特徴を、いかに効果的に選び出すかにある。
 
-TLC 指紋から意味のある特徴やそれに対応する化合物を特徴づけることは、クロマトグラム上の微妙な変化を定義するのが難しいため、複雑な作業である。ケモインフォマティクスは指紋の解析において重要な役割を果たす。ケモインフォマティクス解析を用いれば、複雑な分析手順を省くことができる。ただし、より簡便な装置と最小限の手順に切り替える際には、分析精度の損失が生じうる。機械学習やエントロピーモデルなどの評価手法を併用することで、この損失を十分に補う可能性が得られる。したがって、TLC 指紋分析と、ケモインフォマティクス、機械学習に基づく特徴選択、エントロピーに基づく評価を統合することは、TLC データを評価し重要な品質マーカーを同定するための強力なアプローチとなりうる。これが本研究の焦点である。
+TLC 指紋から意味のある特徴やそれに対応する化合物を特徴づけることは、クロマトグラム上の微妙な変化を定義するのが難しいため、複雑な作業である。ケモインフォマティクスは指紋の解析において重要な役割を果たす。ケモインフォマティクス解析を用いれば、複雑な分析手順を省くことができる[14]。ただし、より簡便な装置と最小限の手順に切り替える際には、分析精度の損失が生じうる。機械学習やエントロピーモデルなどの評価手法を併用することで、この損失を十分に補う可能性が得られる[15–17]。したがって、TLC 指紋分析と、ケモインフォマティクス、機械学習に基づく特徴選択、エントロピーに基づく評価を統合することは、TLC データを評価し重要な品質マーカーを同定するための強力なアプローチとなりうる。これが本研究の焦点である。
 
-復方阿膠漿（FEJ）は、**阿膠（Colla Corii Asini）・熟地黄（Radix Rehmanniae Preparata）・紅参（red ginseng）・党参（Radix Codonopsis Pilosulae）・山楂（Fructus Crataegi）**からなるよく知られた TCM 処方である。TCM 臨床で広く用いられ、気血両虚に処方される。私たちの先行研究では「スペクトル-効果（spectrum-effect）」関係とネットワーク薬理により品質マーカーがスクリーニングされ、FEJ の品質規格も改良されてきた。しかし、FEJ の製造工程における鍵化合物の伝達性（transitivity）と追跡可能性（traceability）は依然として不明である。サポニンとトリテルペノイドに富む **n-ブタノール層**は、中国薬典によって FEJ の品質評価の鍵画分と認められている。したがって本研究は、全化学物質ではなくこの特定画分に焦点を当てた。
+復方阿膠漿（FEJ）は、**阿膠（Colla Corii Asini）・熟地黄（Radix Rehmanniae Preparata）・紅参（red ginseng）・党参（Radix Codonopsis Pilosulae）・山楂（Fructus Crataegi）**からなるよく知られた TCM 処方である。TCM 臨床で広く用いられ、気血両虚に処方される[18]。私たちの先行研究では「スペクトル-効果（spectrum-effect）」関係とネットワーク薬理により品質マーカーがスクリーニングされ、FEJ の品質規格も改良されてきた。しかし、FEJ の製造工程における鍵化合物の伝達性（transitivity）と追跡可能性（traceability）は依然として不明である。サポニンとトリテルペノイドに富む **n-ブタノール層**は、中国薬典によって FEJ の品質評価の鍵画分と認められている[19]。したがって本研究は、全化学物質ではなくこの特定画分に焦点を当てた。
 
 私たちは、TCM 処方中の化学物質を低コストで評価する重要性に対処するため、TLC と LC-MS のクロマト指紋を組み合わせた統合的アプローチを提案した。機械学習支援の特徴選択と計算的評価手法を用いることで、最終製品 FEJ だけでなくその中間体（FEJM）においてもマーカー化合物を識別することを目指した。このアプローチは FEJ 中のロベチオリンと FEJM 中のジンセノシド Rf を重要化合物として同定することに成功し、複雑な TCM 処方の製造工程全体を通じた品質モニタリングと追跡可能性のための新戦略を提供する。さらに本アプローチは「**特徴融合 - 機械学習スクリーニング - エントロピー重み付け選択**」として実行されるモジュール式計算パイプラインとして設計されており、分野固有の改変を要さず、医薬品や環境試料など多様な複雑系に適応可能である。
 
@@ -273,6 +273,46 @@ TLC 指紋（強度-画素）の単純シミュレーションモデルを得た
 FEJ に適用したところ、本法は最終製品と製造工程の双方に共通するマーカーとして**ジンセノシド類（Rh1・Rg1・Rg2・Rg3 を含む）**を認識することに成功した。さらに、**ロベチオリンが FEJ 試料に固有のマーカー、ジンセノシド Rf が中間製造段階に固有のマーカー**と同定された。本研究は分離の難しさから一部の重要な共溶出化合物を十分に調べられなかったが、この限界は今後の方法論的洗練の方向を示す。
 
 結論として、多次元指紋分析をデータ駆動型モデリングとエントロピー評価と統合することで、本研究は複雑な TCM マトリックスに特に適したマーカー探索の迅速・効果的な戦略を提供する。本アプローチは、近赤外分光など多次元処理を要する他のデータソースにも適応可能と期待される。したがって本研究は、TCM 製剤の品質評価系を構築する実践的方法論を提供するだけでなく、医薬・環境分析などの他の複雑系にも適用可能な、ケモメトリクスで強化された新規フレームワークを提供する。
+
+## 参考文献
+
+1. L. Hu, C. Zhou, Y. Huang, Y. Wang, G. Wei, Z. Liang, C. Zhou, HPLC coupled with electrospray ionization multistage MS/MS and TLC analysis of flavones-C-glycosides and bibenzyl of Dendrobium hercoglossum, J. Sep. Sci. 43 (2020) 3885–3901.
+2. X. Xu, Y. Zhang, X. Liu, Y. Wang, Y. Liu, Y. Dong, R. Song, A. Yu, J. Ma, G. She, Promotion on quality standard of Fufang E'jiao Jiang, Chin. Tradit. Herb. Drugs 52 (2021) 6226–6233.
+3. I.M. Choma, M. Olszowy, M. Studziński, S. Gnat, Determination of chlorogenic acid, polyphenols and antioxidants in green coffee by thin-layer chromatography, effect-directed analysis and dot blot – comparison to HPLC and spectrophotometry methods, J. Sep. Sci. 42 (2019) 1542–1549.
+4. K. Ciura, S. Dziomba, J. Nowakowska, M.J. Markuszewski, Thin layer chromatography in drug discovery process, J. Chromatogr. A 1520 (2017) 9–22.
+5. Á.M. Móricz, P.G. Ott, T.T. Häbe, A. Darcsi, A. Böszörményi, Á. Alberti, D. Krüzselyi, P. Csontos, S. Béni, G.E. Morlock, Effect-Directed discovery of bioactive compounds followed by highly targeted characterization, isolation and identification, exemplarily shown for Solidago virgaurea, Anal. Chem. 88 (2016) 8202–8209.
+6. Q. Zhang, M. Ye, Chemical analysis of the Chinese herbal medicine Gan-Cao (licorice), J. Chromatogr. A 1216 (2009) 1954–1969.
+7. S. Šegan, D. Opsenica, D. Milojković-Opsenica, Thin-layer chromatography in medicinal chemistry, J. Liq. Chromatogr. Relat. Technol. 42 (2019) 238–248.
+8. M.R. Siddiqui, Z.A. AlOthman, N. Rahman, Analytical techniques in pharmaceutical analysis: a review, Arab. J. Chem. 10 (2017) S1409–S1421.
+9. X. Liu, W. Jiang, M. Su, Y. Sun, H. Liu, L. Nie, H. Zang, Quality evaluation of traditional Chinese medicines based on fingerprinting, J. Sep. Sci. 43 (2020) 6–17.
+10. W. Zhou, X. Wang, J. Yang, J. Dou, Y. Sun, M. Zhang, J. Li, X. Li, Quality evaluation of Eucommiae folium extracts and discovery of efficacy-associated quality markers based on spectrum-effect relationship, Int. J. Food Prop. 26 (2023) 1264–1276.
+11. L. Xu, S. Liu, Forecasting structure of natural products through color formation process by thin layer chromatography, Food Chem. 334 (2021) 127496.
+12. S.M. Sibug-Torres, I.D. Padolina, P. Cruz, F.C. Garcia, M.J. Garrovillas, M.R. Yabillo, E.P. Enriquez, Smartphone-based image analysis and chemometric pattern recognition of the thin-layer chromatographic fingerprints of herbal materials, Anal. Methods 11 (2019) 721–732.
+13. A.A. Nada, I.H. Nour, A.M. Metwally, A.M. Asaad, S.M. Shams Eldin, R.S. Ibrahim, An integrated strategy for chemical, biological and palynological standardization of bee propolis, Microchem. J. 182 (2022) 107923.
+14. M. Saveliev, V. Panchuk, D. Kirsanov, Math is greener than chemistry: assessing green chemistry impact of chemometrics, TrAC Trends Anal. Chem. 172 (2024) 117556.
+15. S. Luo, Dynamic scheduling for flexible job shop with new job insertions by deep reinforcement learning, Appl. Soft Comput. 91 (2020) 106208.
+16. S. Malik, A. Kontsos, A novel information entropy approach for crack monitoring leveraging nondestructive evaluation sensing, Mech. Syst. Signal Process. 214 (2024) 111207.
+17. Z. Zhao, N. Xiao, M. Shen, J. Li, Comparison between optimized MaxEnt and random forest modeling in predicting potential distribution: a case study with Quasipaa boulengeri in China, Sci. Total Environ. 842 (2022) 156867.
+18. X. Li, X. Xu, Y. Dong, S. Fan, X. Wang, R. Song, D. Shan, F. Lv, X. Zhong, Q. Deng, X. Li, Y. He, Y. Zheng, Q. Xia, Y. Zhang, G. She, Fufang E'jiao Jiang's effect on immunity, hematopoiesis, and angiogenesis via a systematic "compound-effect-target" analysis, Food Sci. Hum. Wellness 13 (2023) 2813–2832.
+19. National Pharmacopoeia Commission, Pharmacopoeia of the People's Republic of China, 2020 ed., China Medical Science Press, Beijing, 2020.
+20. T. Chen, T. Zhang, C. Niu, T. Feng, H. Tang, X. Cheng, H. Li, Multi-element quantitative analysis of single micro-sized suspended particles in air with high accuracy based on Random Forest and variable selection strategies, Anal. Chem. (2022).
+21. J. Du, T. Zhang, H. Li, M. Wang, T. Wang, F. Li, T. Chen, Individual micron-sized coal aerosol particle for quantitative analysis based on hollow laser trapping-LIBS and machine learning, Talanta 297 (2026) 128565.
+22. L. Liang, Z. Wang, J. Li, The effect of urbanization on environmental pollution in rapidly developing urban agglomerations, J. Clean. Prod. 237 (2019) 117649.
+23. Y.-E. An, S.-C. Ahn, D.-C. Yang, S.-J. Park, B.-Y. Kim, M.-Y. Baik, Chemical conversion of ginsenosides in puffed red ginseng, LWT - Food Sci. Technol. 44 (2011) 370–374.
+24. J.W. Lee, E.J. Mo, J.E. Choi, Y.H. Jo, H. Jang, J.Y. Jeong, Q. Jin, H.N. Chung, B.Y. Hwang, M.K. Lee, Effect of Korean Red ginseng extraction conditions on antioxidant activity, extraction yield, and ginsenoside Rg1 and phenolic content: optimization using response surface methodology, J. Ginseng Res. 40 (2016) 229–236.
+25. P. Gu, M. Chen, G. Sun, Quality control and evaluation of Black chokeberry (Aronia melanocarpa) by three-wavelength fusion fingerprinting and electrochemical fingerprinting combined with antioxidant activity analysis, Food Chem. 450 (2024) 139303.
+26. L. Chen, Y. Zhang, X. Yang, J. Xu, Z. Wang, Y.-Z. Sun, W. Xu, Y.-P. Wang, Application of UPLC-Triple TOF-MS/MS metabolomics strategy to reveal the dynamic changes of triterpenoid saponins during the decocting process of Asian ginseng and American ginseng, Food Chem. 424 (2023) 136425.
+27. Z. Wang, Research on feature selection methods based on random Forest, Teh. Vjesn. - Tech. Gaz. 30 (2023).
+28. J.L. Speiser, M.E. Miller, J. Tooze, E. Ip, A comparison of random forest variable selection methods for classification prediction modeling, Expert Syst. Appl. 134 (2019) 93–101.
+29. L. Voronina, C. Leonardo, J.B. Mueller-Reif, P.E. Geyer, M. Huber, M. Trubetskov, K.V. Kepesidis, J. Behr, M. Mann, F. Krausz, M. Žigman, Molecular origin of blood-based infrared spectroscopic fingerprints, Angew. Chem. Int. Ed. 60 (2021) 17060–17069.
+30. J. Hao, F. Gao, X. Fang, X. Nong, Y. Zhang, F. Hong, Multi-factor decomposition and multi-scenario prediction decoupling analysis of China's carbon emission under dual carbon goal, Sci. Total Environ. 841 (2022) 156788.
+31. C.E. Shannon, A mathematical theory of communication, Bell Syst. Tech. J. 27 (1948) 623–656.
+32. A. Shternshis, P. Mazzarisi, S. Marmi, Measuring market efficiency: the Shannon entropy of high-frequency financial time series, Chaos Solitons Fractals 162 (2022) 112403.
+33. P. Gao, Z. Li, H. Zhang, Thermodynamics-Based evaluation of various improved shannon entropies for configurational information of gray-level images, Entropy 20 (2018) 19.
+34. D. Sh Sabirov, Information entropy of mixing molecules and its application to molecular ensembles and chemical reactions, Comput. Theor. Chem. 1187 (2020) 112933.
+35. C.P. Commission, Pharmacopoeia of People's Republic of China, China Medical Science Press, Beijing, 2020.
+36. X.M. Piao, Y. Huo, J.P. Kang, R. Mathiyalagan, H. Zhang, D.U. Yang, M. Kim, D.C. Yang, S.C. Kang, Y.P. Wang, Diversity of ginsenoside profiles produced by various processing technologies, Molecules 25 (2020) 4390.
+37. W. Yang, X. Qiao, K. Li, J. Fan, T. Bo, D. Guo, M. Ye, Identification and differentiation of Panax ginseng, Panax quinquefolium, and Panax notoginseng by monitoring multiple diagnostic chemical markers, Acta Pharm. Sin. B 6 (2016) 568–575.
 
 ## 訳者補足
 
