@@ -43,9 +43,17 @@ Drive「論文」フォルダ(PDF)
 # サイト生成（content/papers/*.md → docs/）。テストの代わりにこれで検証する
 python3 scripts/build_site.py
 
+# 全ページ品質監査（4基準: 全訳密度/図/引用文献/gpt-imageヒーロー）。夜間ルーチンが毎晩実行
+python3 scripts/quality_audit.py          # 要対応ページ一覧
+python3 scripts/quality_audit.py --json    # 機械可読
+
 # ローカル確認（http://localhost:8000）
 python3 -m http.server 8000 --directory docs
 ```
+
+**夜間の品質監査ルーチン**: `runbook/nightly.md` のステップ8で、新着PDFの有無にかかわらず毎晩
+`quality_audit.py` を実行し、既存全ページの4基準（①全訳密度②図の抽出③引用文献④ヒーロー画像）を点検・是正する。
+原本が取得できず捏造になるページは `state/quality_audit.json` に理由を記録してスキップ（同じ調査を繰り返さない）。
 
 テストスイートは無い。CI（`.github/workflows/build.yml`）は `build_site.py` を実行して
 `docs/index.html` が生成されることを確認するだけ。Markdown を変更したらビルドを通すこと。
