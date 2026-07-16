@@ -1,5 +1,5 @@
 {
-  "_comment": "夜間品質監査ルーチン（runbook ステップ8）の除外リスト。原本が取得できず捏造になるため是正保留のページ。該当PDFが「論文」フォルダに（単一列・テキスト検索可で）再アップロードされたら該当行を消して再挑戦する。",
+  "_comment": "夜間品質監査ルーチン（runbook ステップ8）の除外リスト。原本が取得できず捏造になるため是正保留のページ。該当PDFが「論文」フォルダに（単一列・テキスト検索可で）再アップロードされたら該当行を消して再挑戦する。read_file_content（テキストEP）は10MB超でも本文を返すことがあり、本文が読める論文は全訳密度・参考文献のみ先行是正できる（図はPyMuPDF＝バイナリ必須なので別枠）。",
   "blocked": {
     "rrf-potency-assay-uv-detector-settings": "原本が論文フォルダに無い（返却済みPDF）。要再アップロード",
     "tolerance-intervals-specification-limits-censored-gamma-mle-bayesian": "原本が論文フォルダに無い。要再アップロード",
@@ -12,12 +12,15 @@
     "who-ghpp-good-herbal-processing-practices": "原本が論文フォルダに無い（WHO TRS1010 Annex1）",
     "drylab-computer-simulation-reversed-phase-gradient-elution": "OCR劣化スキャン（[2J・Horv~th 等文字化け）。正確な全訳・文献抽出が不可",
     "xzol-ai-spectrum-effect-nir-qc": "PDF 13.7MB（バイナリ10MB超で取得不可）。テキスト抽出は2段組み混線",
-    "lcxlc-bayesian-optimization-method-development": "PDF 11.4MB（バイナリ10MB超）。テキスト抽出は参考文献が混線",
-    "shd-spectrum-effect-fingerprint-ciri": "PDF 11.9MB（バイナリ10MB超）。テキスト抽出は本文・文献とも混線"
+    "lcxlc-bayesian-optimization-method-development": "PDF 11.4MB（バイナリ10MB超）。テキスト抽出は参考文献が混線"
+  },
+  "figures_only_blocked": {
+    "_comment": "本文（全訳密度）・参考文献は是正済み。残るは図の抽出のみで、これはPyMuPDF＝PDFバイナリが必要。Driveバイナリ取得EP不調＋外部直DL(HTTP 000)不可のため図だけ保留。EP回復時に図を抽出して埋め込む。",
+    "shd-spectrum-effect-fingerprint-ciri": "全訳密度(10363字)・参考文献(39件・[N]リンク)は read_file_content 本文から再構築済(2026-07-16)。図(Figure1-14)のみ未抽出＝バイナリ取得不可(Drive session expired/ACS直DL HTTP000)",
+    "xecq-qbd-fullchain-machinevision-qc": "全訳密度・参考文献は既存。図のみ未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で保留"
   },
   "retry": {
-    "_comment": "10MB以下だがDriveのバイナリ取得エンドポイントが一時的に失敗。エンドポイント回復時に再挑戦（恒久除外ではない）。",
-    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。バイナリ取得エンドポイント不調で保留",
-    "ssyx-linear-substitution-qmarker": "全訳密度・参考文献が要是正。原本(6.6MB)はDrive有。バイナリ取得で全訳し直し要"
+    "_comment": "10MB以下だがDriveのバイナリ取得EPが一時失敗。EP回復時に再挑戦（恒久除外ではない）。ssyxは2026-07-16にテキストEPから全訳密度・参考文献を是正済（図は既存6枚）。",
+    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で図だけ保留（本文・文献は既存）"
   }
 }
