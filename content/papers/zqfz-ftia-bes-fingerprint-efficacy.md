@@ -21,50 +21,79 @@ summary: 免疫調節用生薬製剤「貞芪扶正製剤(ZQFZ)」32バッチ(3�
 ## 書誌情報
 
 - 原題: Full-spectrum HPLC fingerprint with binary evaluation system and chemometrics for herbal medicine quality-efficacy control
-- 著者: Lidan Wu, Jing Yan, Jiangshan Hu, Daoran Pang, Yuting Ji, Dandan Gong（山東中医薬大学薬学研究所 ほか, 中国。Wu・Yanは共同筆頭）
+- 著者: Lidan Wu, Jing Yan, Jiangshan Hu, Daoran Pang, Yuting Ji, Dandan Gong（山東中医薬大学薬学研究所／第一臨床医学院, 中国。Wu・Yanは同等貢献の共同筆頭著者、Gongが責任著者）
 - 掲載: *Journal of Chromatography A* 1761 (2025) 466399. https://doi.org/10.1016/j.chroma.2025.466399
 - インパクトファクター: **約3.8**（*Journal of Chromatography A*, JCR 2024 / Clarivate。報告により3.8〜4.2）
+- キーワード: 品質管理、生薬、全波長時間域積算(FTIA)、二元評価系(BES)、指紋−薬効相関
 - 受理経過: 受領 2025-08-04 / 改訂 2025-09-11 / 採録 2025-09-20
 
-> 補足: ZQFZ = 貞芪扶正製剤（Zhenqi Fuzheng Preparation。黄耆・女貞子主体の免疫調節製剤で、がん化学・放射線療法の補助等に用いられる）。FTIA = 全波長時間域積算。BES = 二元評価系(Sm=パターン類似度、Pm=定量一致度)。DAD=ダイオードアレイ検出、ELSD=蒸発光散乱検出。本論文は分析法開発＋in vivo薬効検証の研究論文。
+> 補足: ZQFZ = 貞芪扶正製剤（Zhenqi Fuzheng Preparation。黄耆・女貞子主体の免疫調節製剤で、がん化学・放射線療法の補助等に用いられる）。FTIA = 全波長時間域積算(Full-spectrum Time-domain Integral Accumulation)。BES = 二元評価系(Binary Evaluation System。Sm=パターン類似度、Pm=定量一致度)。DAD=ダイオードアレイ検出、ELSD=蒸発光散乱検出。本論文は分析法開発＋in vivo薬効検証の研究論文。原文は[数字]方式の引用で、本稿では該当箇所に[N]を残し末尾に**参考文献**一覧を付す（[N]をクリックで文献へジャンプ）。
+>
+> 略語（原文Abbreviations）: As-IV=アストラガロシドIV、CA=カリコシン、CG=カリコシン-7-O-β-D-グルコシド、CTX=シクロホスファミド、ECH=エキナコシド、FN=ホルモノネチン、H&E=ヘマトキシリン・エオジン染色、HM=生薬(herbal medicine)、IL-6=インターロイキン6、LMS=レバミゾール塩酸塩、ON=オノニン、PCA=主成分分析、QC=品質管理、RSD=相対標準偏差、SPZ=スペクヌエジド、SAL=サリドロシド。
 
 ## 要旨（Abstract）
 
-多生薬製剤の従来クロマト指紋は、DADのλ-t立方体を1〜2波長に縮約してしまい、弱UV/非UV成分を隠して厳密な品質管理の価値を損なう。本研究では、より包括的でルーチン向きの **全波長時間域積算(FTIA)** 戦略を開発し、DAD立方体の各ボクセルを数値積分してELSDトレースと融合した情報豊富な単一指紋を生成した。3社由来 **32バッチの貞芪扶正製剤(ZQFZ)** をプロファイルし、コサイン指標の等重みバイアスを克服するため、パターン類似度(Sm)と定量一致度(Pm)を分離する **二元評価系(BES)** を設計。主成分分析(PCA)と組み合わせると、従来の単一波長指紋では区別できなかったメーカー間クラスターを明瞭に分離した。BESはこの差を定量化し、あるメーカーは数種のフェニルエタノイド配糖体が **10分の1の不足**(Pm 3–21%)、別のメーカーは系統的な富化(Pm > 120%)を示した。PLS回帰は **Pm変動の98%** を4つの直交マーカー(**サリドロシド・スペクヌエジド・オノニン・ホルモノネチン**)に帰属させた。マーカー豊富なバッチは、シクロホスファミド(CTX)誘発免疫抑制マウスで脾臓・胸腺指数を回復させ、血清IgG・IL-6・TNF-αをベースラインの **85–95%** に正常化し、化学から薬効への直接的連関を支持した。FTIA＋BESは網羅的化学カバレッジと生物学的指標を統合する、規制当局に優しい高分解能の品質評価戦略である。
+多生薬製剤の従来のクロマトグラフ指紋は、ダイオードアレイ検出器(DAD)の λ-t 立方体をしばしば1〜2波長に縮約してしまい、弱UV/非UV成分を隠して、厳密な品質管理における価値を制限している。本研究では、より包括的かつルーチン向きのアプローチを求めて、DAD立方体の各ボクセルを数値積分し、蒸発光散乱検出器(ELSD)のトレースと融合して単一の情報豊富な指紋を生成する **全波長時間域積算(FTIA)** 戦略を開発した。3社に由来する **32バッチの貞芪扶正製剤(ZQFZP)** をプロファイルし、コサイン指標の等重みバイアスを克服するため、パターン類似度(Sₘ)と定量一致度(Pₘ)を分離する **二元評価系(BES)** を設計した。本手法は優れた分析性能を示し、主成分分析(PCA)と組み合わせると、従来の単一波長指紋では区別できなかったメーカー間クラスターを明瞭に分離した。BESはこれらの差を定量化し、あるメーカーは数種のフェニルエタノイド配糖体で **10分の1の不足**(Pₘ 3–21%)を示すバッチを生産し、別のメーカーは系統的な富化(Pₘ > 120%)を示した。部分最小二乗(PLS)回帰は、**Pₘ変動の98%** を4つの直交マーカー(**サリドロシド・スペクヌエジド・オノニン・ホルモノネチン**)に帰属させた。マーカー豊富なバッチは、シクロホスファミド(CTX)誘発免疫抑制マウスモデルで脾臓・胸腺指数を回復させ、血清IgG・インターロイキン6(IL-6)・腫瘍壊死因子α(TNF-α)をベースラインの **85–95%** に正常化し、化学から薬効への直接的連関を支持した。これらの知見は、FTIAとBESの組み合わせが、網羅的な化学カバレッジと生物学的に意味のある指標を統合する、規制当局に優しい高分解能の品質評価戦略を提供でき、複雑な天然薬の一貫した生産に移転可能な手法となることを示した。
 
 ## 1. 序論（Introduction）
 
-生薬(HM)は世界人口の多くで第一選択治療であり、現代薬の約40%を着想させるが、化学的複雑さがバッチ間の安全性・有効性保証を難しくする。各国薬局方はクロマト指紋を中核的品質評価ツールとして支持し、**2025年版中国薬局方は多くのHMで単一マーカー定量でなく全プロファイル比較を要求**している。指紋研究は単一波長HPLC-DADから、多検出器・全波長・データ融合戦略へ移行してきた。全波長DADはλ-t立方体を保持し重なるクロモフォアの検出性を高める。本研究はDAD立方体を全波長で積算しELSDと融合(FTIA)、BESでパターンと定量を分離する。
+生薬(HM)は世界人口の多くにとって依然として第一選択治療であり、現代薬の約40%の着想源であり続けているが、その化学的複雑さは、バッチ間の安全性・有効性を保証しなければならない規制当局にとって課題となる[1,2]。そのため国際・国内の薬局方はクロマトグラフ指紋を中核的な品質評価ツールとして支持している——単一のランで数百の成分を可視化できるからである[3,4]。**2025年版中国薬局方はさらに踏み込み、多くのHMについて単一マーカー定量ではなく全プロファイル比較を要求**しており、これは多成分データが製品の同一性と一貫性のより真実に近い姿を提供するという公式な認識である。過去5年間で、指紋研究は単一波長のHPLC-DADプロファイルから、多検出器・全波長・データ融合戦略へと移行してきた。これら新手法は化学的カバレッジを拡大し、ケモメトリクスによる判別を強化する[4–8]。系統的レビューは、λ-t立方体全体を無傷のまま保持し重なるクロモフォアのピーク検出性を高める全波長DAD捕捉が急速に採用されていることを示した[2,9]。並行する研究はDADをELSDと組み合わせ、UV検出器では検出できない弱UV/非UV成分を明らかにした。これにより、茶・暗発酵食品・中成薬について、より豊富な二重検出器指紋が得られた[7,10]。元素または同位体指紋は、真正性試験を強化するさらなる直交層を加える[11]。
+
+こうした拡大したデータセットの取り扱いは、新たなケモメトリクス・機械学習手法を促した。近年の研究は、多ブロック主成分分析／潜在構造への直交射影(PCA/OPLS)、ランダムフォレストモデリング、深層オートエンコーダを統合して高次元指紋を採掘した。これらの手法は潜在的品質マーカーを同定し、産地トレーサビリティを支え、**95%超の分類精度**で混入(不正)を検出した[12,13]。他の研究は、機械学習と多ブロック解析に基づくデジタル評価系を開発した。こうした系は隠れたパターン・真正性シグナル・潜在マーカーを採掘できる[14–16]。デジタルで立体的な評価系は、いまやクロマトグラフ・分光・さらにはメタボロミクスの層を、感度・頑健性の両面で従来のコサイン類似度を上回る規制当局向けダッシュボードへと融合している[4]。こうした進展にもかかわらず、ルーチンの試験室は依然としてデータ過多・ベースラインドリフト、そして密な指紋を明確な合否基準に変換できる規制当局向け類似度指標の欠如に苦しんでいる[17,18]。これらの進歩にもかかわらず、2つの実務的なボトルネックが残る。第一に、多くの試験室が依然として λ-t 立方体（時間−波長−吸光度データ）をわずか数波長に縮約している。生スペクトルデータの膨大な量・ベースラインドリフト・検出器の不均一性がルーチン処理を複雑にし、初期段階からかなりの化学的分散を失わせる[19]。第二に、現行の類似度指標はすべてのピークを等しく重み付けし、しばしば生物活性を追跡する存在量(abundance)の差を無視する。その結果、治療能力が乖離したバッチでも従来の目視やコサインのチェックを通過しうる[20]。したがって、全スペクトル情報を捉えつつ、それを明確で存在量を考慮した基準に変換してこれらのギャップを橋渡しすることが、多成分天然薬の品質管理(QC)にとって決定的に重要である。
+
+貞芪扶正製剤(ZQFZP)は、**黄耆（Astragalus membranaceus）と女貞子（Ligustrum lucidum）** に由来する二味処方であり、免疫能を回復させ抗腫瘍免疫を高めるために中国で日常的に処方されている。近年の動物・臨床研究は、ZQFZPがシクロホスファミド誘発免疫抑制を逆転させ、胸腺・脾臓指数を上昇させ、サイトカインと腸−免疫軸のネットワークを調節することを確認した[21]。商業的需要により複数拠点での並行製造が進み、比較調査では、従来のコサイン類似度スコアが「合格」であっても、工場間でフェニルエタノイド配糖体とサポニンに **10倍の差**があることが示されている[22]。現行の薬局方基準は依然として10未満のマーカーしか監視しておらず、この範囲は製剤の完全な化学的多様性を反映するにも薬効ドリフトを説明するにも狭すぎる[22,23]。その結果、包括的特性評価を求める規制要件と、既存の単一波長指紋の実務的限界との間にギャップが残り、化学を免疫学的便益に結びつける高情報かつ規制当局向けのプラットフォームの探索が動機づけられた。
+
+これらの課題に対処するため、本研究は、HPLC-DAD λ-t 立方体の各ボクセルを積算トレースに圧縮し、それをELSDデータと融合して単一の情報豊富な指紋を形成する **全波長時間域積算(FTIA)** 戦略を導入した。この密なトレースを実行可能な品質指標へ翻訳するため、コサイン指標の等重みバイアスを排除し異常バッチ検出を鋭くする、パターン類似度(Sₘ)と定量一致度(Pₘ)を分離する **二元評価系(BES)** を開発した。そして、3社の32 ZQFZPバッチにFTIA-BESを適用した。FTIA-BES法は、網羅的な化学データを規制当局向けの指標へ変換しつつ、それを生物学的アウトカムに固定し、多成分HMの次世代QCに移転可能な戦略を提供した。本論文の全体構想を Fig. 1 に示す。
 
 ![図1. 本研究の全体構想。FTIA-BES(HPLC-DAD-ELSD指紋融合とケモメトリクスによる二値評価系)と免疫薬理評価のフロー。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig1.png)
 
 ## 2. 材料と方法（Materials and Methods）
 
-### 2.2 HPLC-DAD-ELSD条件
+### 2.1 試薬・化学品
 
-- 装置: Agilent 1260 II（DAD＋ELSD）、COSMOSIL C18（250 × 4.6 mm, 5 μm）
-- 移動相: A=水、B=アセトニトリル、流速 1.0 mL/min
-- グラジエント: 0–2 min 5%B / 2–28 min 5–15%B / 28–56 min 15–22%B / 56–76 min 22–27%B / 76–85 min 27–35%B / 85–90 min 35–52%B / 90–95 min 52–95%B / 95–100 min 95%B / 100–110 min 95–5%B
-- 注入量 10 μL、30 ℃、DADは **全波長スキャン(190–400 nm)**
-- ELSD: 蒸発器温度 60 ℃、ネブライザー温度 45 ℃、ガス流量 1.6 SLM
+全ZQFZP(S1〜S32)は中国の3社から収集した。うち **S1–S6・S7–S13・S14–S32** をそれぞれメーカー1(M1)・メーカー2(M2)・メーカー3(M3)が供給した。オノニン(ON)・カリコシン(CA)・エキナコシド(ECH)・スペクヌエジド(SPZ)・ホルモノネチン(FN)は成都PUSH生物科技(四川)より、アストラガロシドIV(As-IV)・サリドロシド(SAL)は上海源葉生物科技(上海)より、カリコシン-7-O-β-D-グルコシド(CG)は上海詩丹徳標準技術服務(上海)より購入した。各化合物の純度は **98%超**。レバミゾール塩酸塩(LMS, ≥99%)・シクロホスファミド(CTX, 98%)はそれぞれ上海Macklin・Solarbioより購入。免疫グロブリン・サイトカイン（IgG・IL-6・TNF-α）のELISAキットはSolarbio(北京)、H&E染色キットはServicebio(北京)より入手。HPLCグレードのアセトニトリル・メタノールはThermoFisher(上海)より。蒸留水はHyperpurexの高度純水システムでさらに精製した。他の全化学品は分析グレード。
 
-### 2.3 試料調製
+### 2.2 装置・分析条件
 
-標準品(ON・CA・ECH・SPZ・FN・As-IV・SAL・CG)をメタノールに溶解。ZQFZP粉末を70%メタノール25.0 mLに溶解し 45 kHz・30分超音波抽出、0.45 μm濾過。マウス投与用には滅菌生理食塩水で 0.15 g/mL に調製。
+クロマト分離には、DAD・ELSD と COSMOSIL C18 カラム(250 mm × 4.6 mm, 5 μm)を備えた **Agilent 1260 II** を用いた。移動相は水溶液(A)とアセトニトリル(B)、流速 1.0 mL/min。グラジエント溶出は——0–2 min: 5%B／2–28 min: 5–15%B／28–56 min: 15–22%B／56–76 min: 22–27%B／76–85 min: 27–35%B／85–90 min: 35–52%B／90–95 min: 52–95%B／95–100 min: 95%B／100–110 min: 95–5%B。注入量 10 μL、30 ℃。DADは **全波長スキャンモード**で検出。ELSDの蒸発器温度・ネブライザー温度・ガス流量はそれぞれ 60 ℃・45 ℃・1.6 SLM。クロマトグラフ指紋の評価は Jianglei Zhang ら[24]に従い、全試料の.csvデータを取り込んで実施した。
+
+### 2.3 標準・試料溶液の調製
+
+ON・CA・ECH・SPZ・FN・As-IV・SAL・CG の標準品を各々精秤し、メタノールに溶かしてストック溶液とした。作業標準溶液はメタノールでさらに希釈して調製し、遮光・4 ℃で保存してHPLC-DAD-ELSD分析に供した。精秤したZQFZP粉末試料を **70%(v/v)メタノール 25.0 mL** に溶かし、**45 kHz・30分**超音波抽出して試料溶液を調製した。減った重量は抽出溶媒で補い、よく振り混ぜた。上清を 0.45 μm 膜で濾過してHPLC-DAD-ELSD分析に供した。マウス投与用には、ZQFZP粉末試料を滅菌生理食塩水に溶かして **0.15 g/mL** の経口(胃内)溶液とした。
 
 ### 2.4 動物・実験計画
 
-BALB/cマウス(SPF・雄・20 ± 2 g・6–8週)。4群(各n=6): 正常対照(NC)・陽性対照(LMS=レバミゾール 24 mg/kg)・モデル対照(MC)・ZQFZ群(**1.51 g/kg**)。1〜17日に毎日強制経口投与、18〜21日に **CTX 80 mg/kg を腹腔内投与**して免疫抑制を誘発。
+雄・SPFグレードのBALB/cマウス（体重 20 ± 2 g・6–8週齢）を北京維通利華実験動物技術(北京)より購入（license No. SCXK(Jing)2021–0006）。恒温(25 ℃)・12時間明暗サイクルの飼育施設で馴化させ、標準飼料・水を自由摂取させた。全動物実験は山東中医薬大学倫理委員会の承認を得た。10日間の馴化後、マウスを無作為に4群(各 n=6)——正常対照群(NC)・陽性対照群(LMS)・モデル対照群(MC)・ZQFZ処理群(ZQFZ)——に分けた。**1〜17日**に毎日強制経口投与——NC: 生理食塩水／MC: 生理食塩水／LMS: 24 mg/kg 体重／ZQFZ: **1.51 g/kg 体重**のZQFZ胃内溶液。**18〜21日**に、NC群を除く全マウスに **CTX 80 mg/kg を腹腔内(i.p.)投与**して免疫抑制を誘発した。
 
-### 2.5–2.7 評価
+### 2.5 脾臓・胸腺指数の測定
 
-最終投与24時間後に脾臓・胸腺指数(臓器重量/体重)を算出。血清TNF-α・IL-6・IgGをELISAで測定(各6匹・3反復)。脾臓・胸腺をH&E染色で組織学的評価。
+最終投与の24時間後、動物を秤量して屠殺した。全マウスの脾臓・胸腺を摘出し、生理食塩水で洗浄、濾紙で水分を取ってから秤量した。脾臓指数・胸腺指数は次式で算出した：
+
+胸腺または脾臓指数(mg/g) = (胸腺または脾臓の重量) / (体重)
+
+### 2.6 血清サイトカイン・IgG含量解析
+
+頸椎脱臼で屠殺する前に血清を採取し、**4 ℃・4000 rpm・10分**を2回遠心した。各群6匹の血清サイトカイン(TNF-α・IL-6)と免疫グロブリン(IgG)を、市販マウスELISAキットで説明書どおりに測定・解析した。検出は3回反復した。
+
+### 2.7 組織学的解析
+
+脾臓・胸腺組織を4%パラホルムアルデヒドで固定し、パラフィン包埋(10%)、4 μmで薄切した。H&E染色で組織病理変化を評価し、Nikon Eclipse E100(日本)で画像を取得した。
+
+### 2.8 統計解析
+
+クロマトグラフ指紋の評価は Jianglei Zhang ら[24]に従った。実験結果は平均 ± S.D. で表した。実験データは GraphPad Prism 10.0 で解析し、群間分散は一元配置ANOVA＋t検定の事後解析で比較、有意水準を p < 0.05 とした。
 
 ## 3. 結果と考察（Results and Discussion）
 
-### 8成分の定量と方法バリデーション
+### 3.1 HPLC指紋解析
 
-8指標成分——**SAL(サリドロシド)・ECH(エキナコシド)・CG(カリコシン-7-O-β-D-グルコシド)・SPZ(スペクヌエジド)・ON(オノニン)・CA(カリコシン)・FN(ホルモノネチン)・As-IV(アストラガロシドIV)**。アストラガロシドIVのような弱UV/非UV成分の網羅にELSDをHPLC-DADに直列接続。回収率(RSD)は——
+#### 3.1.1 抽出・HPLC条件の最適化
+
+抽出手順の効率は、各種抽出溶媒・抽出法を用いて評価した。エタノール・メタノールおよびそれぞれの各種比率の水溶液を、還流法・超音波法でZQFZ試料の抽出に用いた。その結果、**メタノールを溶媒とする超音波抽出**が最適と検証され、干渉ピークが少なく、最大のピーク面積・ピーク数が得られた。さらに、各種比率のメタノール溶液(20%・50%・70%)を各種超音波時間(15・30・45分)で行い抽出を最適化した結果、確立した抽出法がHPLC分析に適することが示された。S1のクロマトグラムを、COSMOSIL C18カラムで各種移動相・各種グラジエントを用いて最適化し、確立した方法で大部分のピークが良好なクロマト吸収と分離性能を得た。Fig. 2A のとおり、化合物は波長ごとに多様なUV吸収を示すため、全試料のHPLC指紋には **全波長(190–400 nm)** を選んだ。加えて、As-IV のようにUV吸収が弱い成分を考慮し、試料指紋の全体的特性評価のため **ELSDをHPLC-DADに直列接続**した。こうしてZQFZPのHPLC-DAD-ELSD指紋を確立し、それぞれ **26および14の共通ピーク**を同定した(Fig. 2B)。
+
+#### 3.1.2 方法バリデーション
+
+試料と標準の保持時間・UV吸収プロファイルの類似性(Fig. 2C・2D)から、8化合物を暫定同定した——DADで **SAL(ピーク4)・ECH(6)・CG(8)・SPZ(12)・ON(16)・CA(18)・FN(20)**、ELSDで **As-IV(30)**。指紋の方法バリデーションは、ピーク8(DAD)・ピーク12(ELSD)を参照ピークとして共通ピークの相対保持時間(RT)・相対ピーク面積(RA)で行った。装置精度試験は同一試料溶液(S1)を連続6回注入して実施。再現性は6反復試料の注入で評価。中間精度試験は2名の分析者が同一濃度の6試料溶液を別々の装置で解析。安定性試験は24時間内(0・2・4・8・12・24 h)で実施。全共通ピークのRT・RAの相対標準偏差(RSD)はそれぞれ **1.00%・3.00%を超えなかった**。検量線は8分析物の7濃度水準(x, mg/mL)に対しピーク面積(y)をプロットして作成し、Table S1のとおり全分析物が目標濃度範囲で **r > 0.999** の期待どおりの直線性を示した。回収率は——SAL 95.8–100.4%(RSD 1.84)、ECH 98.7–101.9%(1.24)、CG 99.9–103.1%(1.29)、SPZ 99.8–101.9%(0.79)、ON 98.8–100.8%(0.78)、CA 99.2–102.2%(1.08)、FN 100.1–100.9%(0.31)、As-IV 95.8–100.2%(1.87)——で、方法の正確性が良好であることを示した。以上より、開発したHPLC指紋は定量分析要件を満たした。
 
 | 成分 | 回収率(%) | RSD(%) |
 |---|---|---|
@@ -77,32 +106,217 @@ BALB/cマウス(SPF・雄・20 ± 2 g・6–8週)。4群(各n=6): 正常対照(N
 | ホルモノネチン FN | 100.1–100.9 | 0.31 |
 | アストラガロシドIV As-IV | 95.8–100.2 | 1.87 |
 
-### FTIAとBES
+#### 3.1.3 FTIA法の開発
 
-FTIAは完全なDAD立方体(200–400 nm)を積算し、280 nm(π–π)・312 nm(n–π)等の吸収帯を保持。32バッチのDAD指紋とELSD指紋を構築(ELSD行列 32 × 14)。BESはコサイン指標の等重みバイアスを克服し、パターン類似度(Sm)と定量一致度(Pm)を分離。
+従来の単一波長HPLC指紋は、多成分の生薬マトリクスの完全な化学的多様性を捉える能力に限界がある。この限界に対処するため、FTIA法を導入した。FTIAは完全なDAD立方体(200–400 nm)を処理し、各保持時間で全波長にわたる吸光度を積分してグローバルな吸収プロファイルを再構成する。この手法は、生物活性分子を特徴づける異なる種類の電子遷移からの重要情報を保持する。例えばヘスペリジンは 280 nm(π–π)・312 nm(n–π)に明確なバンドを示すが、これらは数波長のみを監視すると失われるところ、積算トレース内に保持される。全波長技術という広い枠組みの中で、融合スペクトル法・多検出器系・ケモメトリクス統合など、いくつかの戦略が化学カバレッジを高めてきた[25]。しかしこれらの手法はしばしば λ-t 立方体の次元削減を要するか、ピークを等重み付けするグローバル類似度指標を適用し、鍵成分間の存在量差を見落としうる。完全なスペクトル軌跡を保持しBESと組み合わせることで、FTIAはSmとPmを区別する。この設計は、ケモメトリクスモデリングにより適した存在量考慮型の指標を提供することで既存戦略を改良した。さらなる検証は必要だが、これらの特徴はFTIAが現行の指紋技術における有用な方法論的拡張であることを示唆した。
 
-![図2. (上)3Dスペクトログラム、ELSDとFTIA基盤の3D指紋融合クロマトグラム、(下)対照クロマトグラムとの比較。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig2.png)
+全UVスペクトル範囲(λ)にわたるクロマトデータを収集し、対応する保持時間(t)で全波長にわたり吸光度信号(F)を積分すると、総信号体積は式(1)で表せる。
 
-### PCAによるメーカー判別
+$$V_1 = \int_{t_{min}}^{t_{max}} \left( \int_{\lambda_{min}}^{\lambda_{max}} F(\lambda, t)\, d\lambda \right) dt \qquad (1)$$
 
-PCAでメーカー(M1/M2/M3)が明瞭にクラスター分離(DADモデルでPC1+PC2累積72.7%)。従来の単一波長指紋では区別できなかった差を解像。BESによる定量では、あるメーカーは数種のフェニルエタノイド配糖体が10分の1不足(**Pm 3–21%**)、別のメーカーは系統的富化(**Pm > 120%**)。
+ここで F(λ,t) は波長λ・時間tにおける吸光度を表す。データ処理の便宜上、元の3次元データを2次元データに縮約する。すなわち各時点tで、波長範囲[λ₁…λₙ]内の信号を合計して総吸光度信号を得(式(2))、続いて時間で積分して式(3)を得る。
+
+$$F_{total}(t) = \sum_{\lambda_{min}}^{\lambda_{max}} F(\lambda, t)\, \Delta\lambda \qquad (2)$$
+
+$$V_2 = \Delta\lambda \times \int_{\lambda_{min}}^{\lambda_{max}} F_{total}(t)\, dt \qquad (3)$$
+
+この戦略に基づき、32バッチのZQFZPの3D指紋融合プロファイリングを開発した(Fig. 3A)。これは試料間ばらつきを増幅し、より正確な類似度評価・試料分類・ケモメトリクスモデルを容易にする。さらに32バッチのHPLC ELSD指紋も開発した(Fig. 3B)。
+
+![図2. (上)3Dスペクトログラム(A)、FTIA基盤のZQFZの代表的ELSDおよび3D指紋融合クロマトグラム(B)、(下)DAD(C)・ELSD(D)における標準品と試料の比較クロマトグラム。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig2.png)
+
+### 3.2 FTIA指紋の統合PCA
+
+平均中心化・単位分散スケーリングののち、FTIA指紋行列(32バッチ × 26変数)とELSD行列(32 × 14)に独立にPCAを適用した。DADモデル(Fig. 3C)では PC1・PC2 がそれぞれ全分散の **50.8%・21.9%**(累積 **72.7%**)を説明した。ELSDモデル(Fig. 3E)では第1・第2成分が **63.2%・23.8%**(累積 **86.0%**)を占め、両2次元解がバッチ間の主要変動を捉えたことを示した。2検出器のスコアプロット(Fig. 3C・3E)は同一のクラスタリングパターンに収束した——M1はPC1の負側、M2はPC1の正側に孤立クラスターを形成、M3はPC1の負軸にグループ化した。ELSDモデルはさらにM3を2つの密なサブクラスター(S14-S18/S28-S32 対 S19-S27)に分割し、明瞭なメーカー間分離を保ちつつ、わずかなメーカー内不均一性を明らかにした。
+
+ローディング行列(Fig. 3D・3F)のとおり、早く溶出する極性成分(DAD-4/ELSD-4、DAD-6/ELSD-6)は正のPC2ローディングを示しM3の上方変位を説明し、中〜遅く溶出するUVクロモフォア(DAD-8/ELSD-8、12/12、14/14、9/26)は大きな負のPC1ローディングを示しM2の水平方向の孤立を支えた。唯一乖離したペア DAD-20/ELSD-20 は、DADではPC1で負・ELSDではPC2で正となり、吸光度検出と光散乱検出の相補的応答プロファイルを浮き彫りにした。マッチしたピークを超えて、DADは強クロモフォアのピーク3・15・26を独自に強調し、ELSDは弱UV/非UVのピーク27・28・30・31を捉え、融合データセットの化学カバレッジを広げた。全体として、ピーク6・9〜12が最も一貫し顕著なローディングをもつ普遍マーカーとして現れ、検出器固有の変数が直交的な選択性を提供した。Hotelling's T²・Q残差診断で外れ値は検出されず、モデルの頑健性を確認した。総じて、二検出器PCAは高信頼の産地トレーサビリティを達成しただけでなく、後続の融合OPLS-DAワークフローで精緻化される候補品質マーカー群を生成した。
 
 ![図3. ZQFZ 32バッチのHPLC DAD(A)・ELSD(B)クロマトグラム、スコア散布図(C:DAD, E:ELSD)とローディング(D:DAD, F:ELSD)。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig3.png)
 
-### 指紋−薬効相関とin vivo検証
+### 3.3 二元評価系(BES)
 
-PLS回帰により **Pm変動の98%** が4直交マーカー(**サリドロシド・スペクヌエジド・オノニン・ホルモノネチン**)に帰属。CTX誘発免疫抑制マウスで、マーカー豊富なバッチは脾臓・胸腺指数を回復し、血清IgG・IL-6・TNF-αをベースラインの **85–95%** に正常化、化学組成と薬効の直接的連関を示した。
+#### 3.3.1 定性・定量類似度解析
 
-![図4. マーカーとPmを結ぶPLSR回帰係数(95%信頼区間)(A)、PmのPLSR VIPスコア(B)、Passing-Bablok一致プロット(C)、Bland-Altman解析ほか。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig4.png)
+32バッチのZQFZ試料のFTIA融合指紋を、参照指紋を基準としてBESで評価した。Table 1 に示すとおり、BESはメーカー内・メーカー間の変動の定量的確認を与え、PCAが明らかにしたケモメトリクス傾向と一致した。3社とも、各バッチを自社の参照と比較すると優れた内部均一性(Sₘ = 0.87–0.98, Pₘ = 88–107%)を示し、バッチ間一貫性を裏づけた。しかしグローバル参照に対しては3つの明確なパターンが現れた。第一に、M1はコホート重心近くに留まり(Sₘ ≥ 0.80, Pₘ = 94–112%)、平均的プロファイルを示した。第二に、M2は高いSₘ値(Sₘ = 0.68–0.88)を保ったがPₘは **3–21%** に崩壊し、数種マーカーの著しい不足を示した。さらにM3は逆の傾向を示し、Pₘ は **114–147%(DAD)・120–157%(ELSD)** で、系統的富化と整合した。従来のQC法(例：コサインや相関係数)は全体のパターン類似を強調するがすべてのピークを等重み付けするため、臨床的に重要な定量的偏差を隠しうる[26]。同様に単一マーカー定量戦略は1つか少数の化合物に狭く着目し、HM混合物に内在する多次元的ばらつきを捉え損ねることが多い[27]。定性類似度(Sₘ)と存在量忠実度(Pₘ)を統合することで、BESは「パターンマッチング」と「定量一致」を明示的に分離する。この二重指標はPCAが明らかにしたケモメトリクス傾向を再現するだけでなく、従来指標が見落とす特定の不足(例：M2のPₘが3–21%と低い)や富化(例：M3のPₘが150%超)を的確に指摘する。
 
-![図5. 標準化含量ヒートマップ(A)、分散拡大係数(VIF)解析(B)、階層クラスタリング付き相関行列(C)ほか。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig5.png)
+**Table 1. 二元評価系(BES)によるZQFZ 32バッチの品質評価（Sm・Pmパラメータ）**
 
-![図6. ZQFZの免疫器官指数(A)・IgG(B)・TNF-α(C)・IL-6(D)への効果。##p<0.01 vs 正常群、*p<0.05・**p<0.01 vs モデル群。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig6.png)
+| 試料 | DAD Sm | DAD Pm(%) | ELSD Sm | ELSD Pm(%) | 融合 Sm | 融合 Pm(%) |
+|---|---|---|---|---|---|---|
+| S1 | 0.93 | 108.5 | 0.98 | 97.4 | 0.94 | 108.5 |
+| S2 | 0.93 | 106.0 | 0.98 | 97.1 | 0.94 | 106.0 |
+| S3 | 0.92 | 111.7 | 0.98 | 97.0 | 0.94 | 111.7 |
+| S4 | 0.80 | 99.9 | 0.98 | 97.0 | 0.81 | 99.9 |
+| S5 | 0.82 | 99.7 | 0.93 | 96.8 | 0.82 | 99.6 |
+| S6 | 0.83 | 93.8 | 0.94 | 102.5 | 0.83 | 93.8 |
+| S7 | 0.87 | 17.0 | 0.76 | 3.3 | 0.83 | 16.9 |
+| S8 | 0.81 | 15.2 | 0.77 | 3.6 | 0.78 | 15.2 |
+| S9 | 0.88 | 17.1 | 0.68 | 3.1 | 0.82 | 17.1 |
+| S10 | 0.83 | 16.3 | 0.91 | 3.4 | 0.79 | 16.2 |
+| S11 | 0.88 | 16.8 | 0.92 | 4.3 | 0.84 | 16.8 |
+| S12 | 0.95 | 21.4 | 0.93 | 4.1 | 0.92 | 21.4 |
+| S13 | 0.96 | 20.9 | 0.91 | 3.4 | 0.93 | 20.9 |
+| S14 | 0.96 | 133.4 | 0.98 | 141.9 | 0.97 | 133.4 |
+| S15 | 0.96 | 117.4 | 0.98 | 141.9 | 0.96 | 117.4 |
+| S16 | 0.95 | 117.2 | 0.98 | 140.4 | 0.96 | 117.2 |
+| S17 | 0.97 | 130.8 | 0.98 | 141.7 | 0.97 | 130.9 |
+| S18 | 0.97 | 121.8 | 0.98 | 122.0 | 0.97 | 121.8 |
+| S19 | 0.93 | 121.4 | 0.88 | 128.3 | 0.91 | 121.4 |
+| S20 | 0.96 | 123.4 | 0.90 | 124.5 | 0.93 | 123.4 |
+| S21 | 0.94 | 119.3 | 0.88 | 128.4 | 0.91 | 119.3 |
+| S22 | 0.95 | 114.8 | 0.85 | 157.1 | 0.89 | 114.8 |
+| S23 | 0.94 | 118.3 | 0.88 | 129.4 | 0.92 | 118.3 |
+| S24 | 0.93 | 131.1 | 0.89 | 131.2 | 0.91 | 131.1 |
+| S25 | 0.94 | 117.5 | 0.88 | 140.4 | 0.92 | 117.5 |
+| S26 | 0.94 | 113.7 | 0.93 | 131.0 | 0.93 | 113.8 |
+| S27 | 0.94 | 117.4 | 0.91 | 120.2 | 0.87 | 117.5 |
+| S28 | 0.92 | 126.0 | 0.98 | 141.9 | 0.92 | 126.0 |
+| S29 | 0.92 | 146.7 | 0.98 | 140.8 | 0.93 | 146.7 |
+| S30 | 0.94 | 132.1 | 0.98 | 140.5 | 0.95 | 132.1 |
+| S31 | 0.93 | 134.4 | 0.98 | 141.7 | 0.94 | 134.4 |
+| S32 | 0.92 | 120.2 | 0.98 | 140.5 | 0.93 | 120.2 |
+
+> 補足: 原文Table 1は「各メーカー基準の評価」と「全バッチ基準の評価」を併記するが、ここでは差が最も顕著に出る**全バッチ基準**のSm・Pm（DAD／ELSD／融合）を抜粋した。M2(S7–S13)はSmが高いのにPmが3–21%と激減しており、「形は似ているが量が桁違いに不足」という状況が数値で読める。
+
+#### 3.3.2 PmばらつきのPLS解明
+
+化学組成とPmの関係をモデル化する根拠は、存在量に敏感な類似度指標が、マーカー成分の定量的分布によって直接形づくられるという理論的仮定にある。定性的パターン類似を捉えるSmと異なり、Pmは各バッチが参照の定量プロファイルをどれだけ再現するかを反映するよう設計されている。したがって生物活性分子の系統的な富化・枯渇はPmの比例的シフトとして現れるはずである。経験的に、PLS回帰はPm分散の98%が直交マーカーに帰属できることを示し、Pmがブラックボックス指標ではなく化学的に解釈可能な指標であることを確認した。この知見は、単なるパターン類似ではなく多成分の存在量差がHMの機能的乖離に結びつくとする先行報告と整合する。本研究では化学−Pmモデルが2つの鍵的目的を果たす——異なるケモタイプのバッチがなぜ異なるPmスコアを生むかの機構的説明を提供し、生物学的薬効予測の信頼できる代理指標としてのPm使用を支持する。この理論・経験の二重の基盤により、BES枠組みは単に不均一性を検出するだけでなく、組成の不均衡を分析的・生物学的に意味のある品質指標へ翻訳する。
+
+2潜在変数のPLSモデルが組成とPmを定量的に結びつけた(R² = 0.98)。標準化係数(Fig. 4A)とVIPスコア(Fig. 4B)から、8成分すべてが正の相関係数と比較的高いVIP値を示し、Pmの全体的な指紋定量組成への有意な寄与を示した。うちECHは弱い正の相関だが比較的高いVIP値を示し、含量比の高い成分がPmに大きく寄与することを示唆した。ただし単一指標成分の含量だけではPmの全体指紋含量の分布を決められない。したがってHM指紋プロファイルの包括的評価には、「点」(指標成分の定量)と「面」(Pmのマクロ定量)の両方を組み合わせた統合的QCが必要である。
+
+#### 3.3.3 ケモメトリクスとBES評価手法の一致
+
+PC1スコアとグローバルPm値の間でPassing-Bablok回帰解析を行った(Fig. 4C)。破線は理論的同一線(y = x, 傾き1)、実線はPassing-Bablok回帰線を表す。回帰解析は **傾き −10.83** を与え、PC1の寄与が全体の寄与を代表できないこと、Pmのグローバル情報の方が試料差をより反映できることを示した。Bland-Altman解析(Fig. 4D)は、Pm値がPC1スコアより系統的かつ有意に高く、両者の差が測定値の上昇とともに増大し明白な比例バイアスを伴い、両手法の一致が乏しいことを示した。以上は、PmとPC1が反映する成分特徴情報が実質的に異なることを示す——PC1は主成分の差に着目し、Pmは全体成分の差を強調する。したがってHMの品質評価には、主成分と全体成分の両特性を統合する必要がある。
+
+BESは2つの独立指標を組み合わせる。Smはピークの有無と形状に基づくパターン類似度を、Pmは各ピーク面積が参照指紋にどれだけ近いかを測る。この二重アプローチは、すべてのピークを等重み付けするコサイン・相関指標の弱点を是正する。従来法は、鍵となる薬理ピークの量が大きく異なっても2バッチを「類似」と判定するだけである。例えばM2のバッチはSm 0.68–0.88(高い定性類似)を示すのにPmは 3–21% に崩壊し(Table 1)、深刻な定量的不足を反映した。逆にM3のバッチは高いSm(> 0.90)を保ちつつPm > 120% を示し、系統的富化と整合した。これらの結果は、Sm-Pm二重アプローチが定性的パターンマッチングと定量的存在量を分離し、バッチ不均一性のより鋭い検出とクロマトデータの明確な数値的品質指標への翻訳を可能にすることを確認した。
+
+![図4. マーカーとPmを結ぶPLSR回帰係数(95%信頼区間)(A)、PmのPLSR VIPスコア(B)、Passing-Bablok一致プロット(C)、Bland-Altman解析(D)。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig4.png)
+
+### 3.4 8化学マーカーの定量プロファイル
+
+#### 3.4.1 定量化学とその多変量的帰結
+
+SAL・ECH・CG・SPZ・ON・CA・FN・As-IV の定量分析を開発・検証した(3.1.2節)。各バッチの8分析物含量は Table S2 に掲載。バッチ別ヒートマップ(Fig. 5A)は鏡像的な富化パターンを示した。M1・M3はSAL・ECH・CGで暖色のzスコアを示し、M2は寒色を示して、**10倍のECH・6倍のSALの不足**を反映した。逆にSPZ・CAは反対の傾向を示し、M3でピークとなった。バイオリンプロット(Fig. S1)がこれらの分布をバッチ水準で裏づけ、メーカー間分離とメーカー内一貫性の双方を強調した。
+
+zスコア標準化した濃度行列(32バッチ × 8マーカー)に基づく冗長性診断がマーカーパネルを精緻化した。分散拡大係数(VIF, Fig. 5B)はSAL・ECH・CG・ONで **30超**、クラスタリング(Fig. 5C)は同じ4成分をグループ化した(平均 r = 0.90)。SPZ・CA・FNは中程度に相関したがフェニルエタノイド群と直交し、As-IVは独立を保った(全変数と |r| < 0.30)。したがって、SPZ＋1つのフェニルエタノイドマーカーを保持すれば判別に十分であった。
+
+#### 3.4.2 組成とケモメトリクス軸
+
+ピアソン相関(Fig. 5D)は、全成分がPC1に負のローディング(−0.50〜−0.82)を示し、この軸が組成的コントラストというよりグローバルな存在量勾配を主に反映することを示した。回帰解析(Fig. 5E)はさらに、全変数のPC1との標準化係数(β)が一貫して負であることを確認し、代謝物レベルの上昇がPC1スコアの低下と関連することを示唆した。うちON・SPZ・As-IVが最も強い負の寄与を示し、PC1が説明する分散を形づくる支配的役割を強調した一方、CG・ECH・CA・FNの寄与はより小さかった。これらは、PC1が単一成分でなく複数成分にわたる集合的な減少によって駆動され、ON・SPZ・As-IVが鍵決定因子として働くことを示す。もしPC1が後に生物活性や品質パラメータと相関するなら、観測される効果が植物化学系の全体的な定量プロファイルに支配されることを含意する。これは、薬理学的関連性の解釈には全体的な化学的背景と主要寄与化合物の双方を考慮する必要があることを強調した。
+
+![図5. 標準化含量ヒートマップ(A)、分散拡大係数(VIF)解析(B)、階層クラスタリング付き相関行列(C)、マーカー含量とPCの相関(D)、重回帰係数(E)。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig5.png)
+
+### 3.5 CTX処理マウスの自然免疫に対するZQFZの効果
+
+#### 3.5.1 免疫抑制マウスの臓器指数への効果
+
+免疫臓器指数は免疫臓器機能をある程度反映する[28]。Fig. 6 のとおり、NCマウスと比べCTXモデル群は脾臓・胸腺指数の顕著な低下(p < 0.01)を示し、CTXの腹腔内投与が免疫臓器萎縮をもたらし免疫抑制モデルを確立できたことを示した。LMSと同様に、ZQFZ 1.51 g/kg の投与は実験マウスの脾臓・胸腺指数を著明に増加させた(モデル群比で p < 0.05・p < 0.01)。これらはZQFZがCTX起因の免疫臓器萎縮をある程度緩和できることを示唆した。
+
+#### 3.5.2 免疫抑制マウスの炎症性サイトカインへの効果
+
+ZQFZのサイトカインへの免疫調節効果を探るため、血清中TNF-α・IL-6・IgGを評価した。Fig. 6 のとおり、モデル群ではTNF-α・IL-6・IgGがNC群より有意に低下し(p < 0.01)、CTXがマウスの免疫調節系を抑制したことを示唆した。しかし陽性群・ZQFZ処理群ではこれらの濃度がモデル群比で著明に増加し(p < 0.05)、ZQFZがサイトカイン・IgG産生の増強を介して免疫抑制を改善できることを示唆した。
+
+![図6. ZQFZの免疫器官指数(A)・IgG(B)・TNF-α(C)・IL-6(D)への効果。データは平均±S.D.。##p<0.01 vs 正常群、*p<0.05・**p<0.01 vs モデル対照。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig6.png)
+
+#### 3.5.3 免疫抑制マウスの脾臓・胸腺の組織病理への効果
+
+ZQFZの効果をさらに解析するため、脾臓・胸腺の組織病理をH&E染色で調べた。Fig. 7A は脾臓の組織像。NC群は、均等に分布した赤脾髄(rp)に埋め込まれた、境界明瞭で顕著な胚中心をもつリンパ濾胞(白脾髄, wp)を示した。NC群と比べMC群では、wpのリンパ濾胞が著明に枯渇または消失し、rpが実質の3分の2以上に拡大して軽度のうっ血を示し、wpとrpの境界が不明瞭になった。これらはCTXが脾臓とリンパ球を傷害したことを示す。MC群と比べLMS群では、wp濾胞の数・径が増加し、rp内のうっ血が鎮まり赤/白脾髄比が正常に近づいた。ZQFZ群も同程度の組織学的修復を示し、境界明瞭な濾胞が多数再出現し、rp拡大・うっ血が著明に減少、皮髄境界が明瞭さを回復した。以上より、ZQFZ処理脾臓のリンパ球は豊富で密に配列していた。
+
+Fig. 7B は胸腺の組織像。NC群と比べMC群では皮質層が著しく菲薄化し、リンパ球密度が急減、ハッサル小体がほとんど観察されず、モデルマウスの胸腺萎縮を確認した。MC群と比べLMS群はこれらを逆転させ、皮質が相当な厚みを回復し、髄質細胞密度が正常化、ハッサル小体が顕著になった。ZQFZ群も再びLMS群と並行し、MC群比で皮質厚・リンパ球密度が有意に改善、皮髄境界が再確立され、壊死・空胞化なしに無傷のハッサル小体が容易に観察された。これらは、ZQFZが二次・一次両免疫臓器をCTX誘発萎縮から救済できることを示し、良好な免疫指標・サイトカインプロファイルを補完する構造的証拠を提供した。
 
 ![図7. 正常群および免疫抑制モデルマウスの脾臓(A, 10倍)・胸腺(B, 5倍)のH&E染色病理像。](assets/zqfz-ftia-bes-fingerprint-efficacy/fig7.png)
 
+### 3.6 化学−薬効相関
+
+32のFTIA融合指紋をPmに対して多ブロックPLSモデル化したところ、4つの直交マーカー(**SAL・SPZ・ON・FN**)が支配的寄与因子(VIP > 1.5)として浮かび上がり、共同でPm分散の **98%** を説明した(Fig. 5A)。モデルは試料を「マーカー豊富/高Pm」表現型と「マーカー欠乏/低Pm」表現型に分離した。代表的なマーカー豊富バッチ1つ(M1-S4, Pm = 117%)をCTX誘発免疫抑制アッセイに供した。このバッチは脾臓・胸腺指数と血清IgG・IL-6・TNF-αを正常値の **85–95%** に回復させ(Fig. 5B)、過去のCTX対照を有意に上回った(p < 0.01)。これらは、4鍵マーカーの富化が駆動する高Pmスコアが具体的な免疫学的便益に翻訳されうることを確認し、Pmを生物学的に意味のある品質指標として検証した。in vivoで評価したのは1バッチのみだが、化学表現型と免疫回復の一致は品質−薬効関係の概念実証を提供した。今後はより多くのバッチへの迅速in vitro免疫モデルへの拡張と、in vivo反復の追加により、完全に定量的なスペクトル−薬効相関を可能にし、提案QC戦略の適用性をさらに強める。
+
+4つの強調マーカーはいずれも免疫調節・抗炎症効果が報告されている。SALはシクロホスファミド誘発骨髄抑制から保護し免疫回復を調節する[29,30]。SPZは肝細胞・骨芽細胞の酸化ストレス・炎症を緩和する[31,32]。ONは前炎症性シグナルを抑制し実験的関節炎を改善する[33–35]。FNはNrf2/HO-1/NF-κB経路を介して液性免疫を高め炎症応答を減弱させる[36–38]。これらの薬理学的知見は、本研究で観察されたこれらマーカーのPm富化と免疫機能改善との連関に妥当な機構的支持を与える（ただし直接的な機構検証は今後の課題）。
+
 ## 4. 結論（Conclusion）
 
-FTIA(DAD全波長立方体の時間域積算)とELSD融合により網羅的な単一指紋を構築し、BESでパターン類似度と定量一致度を分離、PCA・PLSでメーカー間差と薬効連関を解明した。FTIA＋BESは網羅的化学カバレッジと生物学的に意味のある指標を統合する、規制当局に優しい高分解能の品質評価戦略であり、複雑な天然薬の一貫生産に移転可能な手法を提供する。
+本研究は、FTIA法を確立しBESと連結して、高次元のHPLC-DAD-ELSDデータを存在量考慮型の類似度指標へ変換し、初めてこれらの指標をZQFZPのin vivo免疫薬効へ結びつけた。本アプローチは **スペクトル分散の98%超を保持**し、単一波長指紋が見落とすメーカー固有のケモタイプの検出を可能にした。さらに定量変動の98%を4つの直交マーカーに帰属させた。特筆すべきは、これらマーカーを富化することが、免疫抑制マウスで脾臓・胸腺・サイトカインの読み出しを回復させ、HMのQCにおける全体的化学特性評価と生物学的関連性との決定的な連関を探索した点である。FTIAはUV・非UV成分の双方を包含する単一トレース指紋を生成し、BESはパターン類似度を定量一致から分離して、異常バッチ検出を鋭くし融合指紋を薬効連結の代理指標へ翻訳する。本ケモメトリクスアプローチは、より大きな製造ロットと追加の薬理モデルでさらに検証すべきであり、今後の研究はイオンモビリティやMSデータを統合してマーカー発見を強化しうる。とはいえ本結果は、全波長融合と存在量感受性の類似度解析を結びつけることが、複雑な植物薬の品質保証を再定義し、データ駆動・薬効整合の規制のための堅牢な基盤を提供できることを示した。
+
+## 参考文献
+
+1. H. Wang, Y. Chen, L. Wang, Q. Liu, S. Yang, C. Wang, Advancing herbal medicine: enhancing product quality and safety through robust quality control practices, Front. Pharmacol. 14 (2023). https://doi.org/10.3389/fphar.2023.1265178
+
+2. Y. Luo, H. Yang, G. Tao, Systematic review on fingerprinting development to determine adulteration of Chinese herbal medicines, Phytomedicine 129 (2024). https://doi.org/10.1016/j.phymed.2024.155667
+
+3. Y. Liu, L. Zhang, X. Zhang, X. Bian, W. Tian, Modern spectroscopic techniques combined with chemometrics for process quality control of traditional Chinese medicine: a review, Microchem. J. 213 (2025). https://doi.org/10.1016/j.microc.2025.113605
+
+4. L. Zhang, Y. Hu, M. Zhai, G. Sun, A novel quality evaluation strategy for natural medicines integrated with HPLC Euclidean quantitative fingerprinting, UV total fingerprint dissolution and in vitro antioxidant activity: a case study of Gegen Qinlian tablet, Talanta 292 (2025). https://doi.org/10.1016/j.talanta.2025.127960
+
+5. T. Yang, M. Chen, X. Liu, L. Xue, Y. Guo, H. Zhang, G. Sun, W. Sun, Enhancing quality evaluation in traditional Chinese medicine: utilizing dual wavelength fusion fingerprint, electrochemical fingerprint, and DSC fingerprint, J. Chromatogr. A 1722 (2024). https://doi.org/10.1016/j.chroma.2024.464907
+
+6. T. Yang, L. Xue, X. Liu, C. Hao, D. Gong, G. Sun, Spectral and chromatographic fingerprint-based qualitative and quantitative evaluation strategy combined with chemometrics for quality control of functional red yeast, Microchem. J. 212 (2025). https://doi.org/10.1016/j.microc.2025.113211
+
+7. R. Bai, Y. Wang, Y. Cao, H. Yu, P. Li, G. Chai, X. Li, W. Li, F. Cui, F. Hu, Discrimination of three varieties of Codonopsis Radix based on fingerprint profiles of oligosaccharides by high performance liquid chromatography-evaporative light scattering detector combined with multivariate analysis, J. Chromatogr. A 1685 (2022). https://doi.org/10.1016/j.chroma.2022.463642
+
+8. M. Cai, S. Wang, J. Jiang, K. Gao, G. Sun, Comprehensive analysis strategy of herbal quality for traditional Chinese medicine compound based on fingerprint technology and quantitative prediction of spectra, Talanta 287 (2025). https://doi.org/10.1016/j.talanta.2025.127661
+
+9. Z. Zhang, L. Chen, X. Li, M. Cai, H. Yan, G. Sun, A quality control system of Chinese medicine preparation based on fingerprint identification technology, chemometrics and network pharmacology, using the Yixinshu capsule as an example, Talanta 292 (2025). https://doi.org/10.1016/j.talanta.2025.128015
+
+10. Z. Wang, Y. Han, L. Zhang, Y. Ye, L. Wei, L. Li, The utilization of a data fusion approach to investigate fingerprint profiles of dark tea from China's different altitudes, Food Chem.: X 22 (2024). https://doi.org/10.1016/j.fochx.2024.101447
+
+11. Y. Li, J. Fan, H. Jin, F. Wei, S. Ma, New vision for TCM quality control: elemental fingerprints and key ingredient combination strategy for identification and evaluation of TCMs, Eur. J. Med. Chem. 281 (2025) 117006. https://doi.org/10.1016/j.ejmech.2024.117006
+
+12. L. Zhang, Y. Hu, J. Zhang, M. Cai, L. Lan, G. Sun, Application of chemical pattern recognition and similarity evaluation in electrochemical and HPLC-DAD fingerprints for quality consistency study of herbal medicines, Anal. Chim. Acta 1349 (2025). https://doi.org/10.1016/j.aca.2025.343830
+
+13. C.H. Ratnasekhar, A.K. Rai, P. Rakwal, S. Khan, A.K. Verma, P. Mukhopadhyay, P. Rathor, L. Hinghrani, N. Birse, R. Trivedi, P.K. Trivedi, Machine learning-guided Orbitrap-HRAMS-based metabolomic fingerprinting for geographical origin, variety and tissue specific authentication, and adulteration detection of turmeric and ashwagandha, Food Chem. 482 (2025). https://doi.org/10.1016/j.foodchem.2025.144078
+
+14. Y. Bai, H. Zhang, The cluster analysis of traditional Chinese medicine authenticity identification technique assisted by chemometrics, Heliyon 10 (18) (2024). https://doi.org/10.1016/j.heliyon.2024.e37479
+
+15. J. Zhang, Y. Ren, J. Zeng, L. Zhang, M. Cai, L. Lan, G. Sun, An quality evaluation method based on three-dimensional integration and machine learning: advanced data processing, J. Chromatogr. A 1747 (2025). https://doi.org/10.1016/j.chroma.2025.465826
+
+16. Y. Feng, X. Zhu, Y. Wang, Application of spectroscopic technology with machine learning in Chinese herbs from seeds to medicinal materials: the case of genus Paris, J. Pharm. Anal. 15 (2) (2025). https://doi.org/10.1016/j.jpha.2024.101103
+
+17. Z. Chen, C.T. Vong, T. Zhang, C. Yao, Y. Wang, H. Luo, Quality evaluation methods of chinese medicine based on scientific supervision: recent research progress and prospects, Chin. Med. 18 (1) (2023). https://doi.org/10.1186/s13020-023-00836-3
+
+18. Michael P. Lindenmaier, Matthew W. Bernart, Josef A. Brinckmann, Advanced methodologies for the quality control of herbal supplements and regulatory considerations, Phytochem. Anal. (2025). https://doi.org/10.1002/pca.70000
+
+19. A. Bārzdiņa, D.P. Prudņikova, M. Zogota, B. Mauriņa, D. Bandere, A. Brangule, Combining chromatographic and spectroscopic fingerprinting with chemometrics and data fusion to characterize the phytochemical composition of anthocyanin-rich fruit extracts, Eur. J. Pharm. Sci. 212 (2025). https://doi.org/10.1016/j.ejps.2025.107177
+
+20. B.B. Champati, P.K. Das, C. Sahoo, A. Ray, S. Jena, A. Sahoo, S. Nayak, S. Lata, P.C. Panda, Chemical fingerprinting and multicomponent quantitative analysis for quality control of cinnamomum tamala collected from Western Himalaya by HPLC-DAD, Heliyon 10 (9) (2024). https://doi.org/10.1016/j.heliyon.2024.e30361
+
+21. J.D. Wang, L. Wang, S. Yu, Y.T. Jin, Y.Y. Wang, R.D. Chai, Z.Y. Zhao, Y.H. Bian, S.W. Zhao, Condensed Fuzheng extract increases immune function in mice with cyclophosphamide-induced immunosuppression, Food Sci. Nutr. 10 (11) (2022) 3865–3875. https://doi.org/10.1002/fsn3.2982
+
+22. Z. Xue, L. Xu, Z. Shang, X. Shi, M. Ye, X. Qiao, Discovery of minor quality evaluation marker compounds for Chinese patent medicine products using a two-leveled metabolomics strategy, J. Chromatogr. A 1652 (2021). https://doi.org/10.1016/j.chroma.2021.462354
+
+23. Y.-K. Shi, F. Cui, F.-D. Hu, Y.-Y. Bi, Y.-F. Ma, S.-L. Feng, Quantification of six bioactive compounds in Zhenqi Fuzheng preparation by high-performance liquid chromatography coupled with diode array detector and evaporative light scattering detector, J. Pharm. Anal. 1 (1) (2011) 20–25. https://doi.org/10.1016/s2095-1779(11)70004-1
+
+24. J. Zhang, Y. Ren, J. Zeng, L. Zhang, M. Cai, L. Lan, G. Sun, An quality evaluation method based on three-dimensional integration and machine learning: advanced data processing, J. Chromatogr. A 1747 (2025) 465826. https://doi.org/10.1016/j.chroma.2025.465826
+
+25. C. Wei, J. Wang, X. He, Y. Gu, A fast and non-destructive approach to identify the heavy mineral oil trace evidence based on spectral fusion treatment and chemometrics, Microchem. J. 163 (2021). https://doi.org/10.1016/j.microc.2021.105924
+
+26. Y. Xiao, X. Shan, H. Wang, B. Hong, Z. Ge, J. Ma, Y. Li, Y. Zhao, G. Ma, C. Zhang, Spectrum-effect relationship between HPLC fingerprint and antioxidant of "San-Bai Decoction" extracts, J. Chromatogr. B Anal. Technol. Biomed. Life Sci. 1208 (2022) 123380. https://doi.org/10.1016/j.jchromb.2022.123380
+
+27. H. Yi, J. Zhou, X. Shang, Z. Zhao, Q. Peng, M. Zhu, C. Zhu, C. Lin, Q. Liu, Q. Liao, L. Zhang, Multi-component analysis of Ilex Kudingcha C. J. Tseng by a single marker quantification method and chemometric discrimination of HPLC fingerprints, Molecules 23 (4) (2018). https://doi.org/10.3390/molecules23040854
+
+28. J. Choi, W. Rod-In, A.Y. Jang, W.J. Park, Arctoscopus japonicus lipids enhance immunity of mice with cyclophosphamide-induced immunosuppression, Foods 12 (17) (2023). https://doi.org/10.3390/foods12173292
+
+29. A. Panossian, G. Wikman, J. Sarris, Rosenroot (Rhodiola rosea): traditional use, chemical composition, pharmacology and clinical efficacy, Phytomedicine 17 (7) (2010) 481–493. https://doi.org/10.1016/j.phymed.2010.02.002
+
+30. X. Chen, C. Fang, Effect of salidroside on bone marrow haematopoiesis in a mouse model of myelosuppressed anaemia, J. Radiat. Res. 60 (2) (2019) 197–203. https://doi.org/10.1093/jrr/rry093
+
+31. G.S. He, J.K. Xia, Q.H. Li, Y. Zheng, C.R. Shi, R. Li, Q. Hong, X.M. Chen, Specnuezhenide: comprehensive review of pharmacology, pharmacokinetics and ethnomedicinal uses, Fitoterapia 181 (2025) 106389. https://doi.org/10.1016/j.fitote.2025.106389
+
+32. D. Hu, S. Huang, Y. Ding, X. Zhao, W. Zhang, H. Chen, J. Wang, Specnuezhenide reduces carbon tetrachloride-induced liver injury in mice through inhibition of oxidative stress and hepatocyte apoptosis, J. Pharm. Pharmacol. 74 (2) (2022) 191–199. https://doi.org/10.1093/jpp/rgab164
+
+33. L. Luo, J. Zhou, H. Zhao, M. Fan, W. Gao, The anti-inflammatory effects of formononetin and ononin on lipopolysaccharide-induced zebrafish models based on lipidomics and targeted transcriptomics, Metabolomics 15 (12) (2019) 153. https://doi.org/10.1007/s11306-019-1614-2
+
+34. U. Sharma, B. Sharma, A. Mishra, A. Sahu, D.M. Mathkor, S. Haque, D. Raina, S. Ramniwas, M. Gupta, H.S. Tuli, Ononin: a comprehensive review of anticancer potential of natural isoflavone glycoside, J. Biochem. Mol. Toxicol. 38 (6) (2024) e23735. https://doi.org/10.1002/jbt.23735
+
+35. L. Dong, L. Yin, Y. Zhang, X. Fu, J. Lu, Anti-inflammatory effects of ononin on lipopolysaccharide-stimulated RAW 264.7 cells, Mol. Immunol. 83 (2017) 46–51. https://doi.org/10.1016/j.molimm.2017.01.007
+
+36. Y. Liu, T. Xie, J. Liang, W. Feng, M. Yang, S. Li, L. Xiong, K. Luo, F. Li, S. Tang, S. Liu, Q. Huang, H. Tang, F. Tang, Q. Wei, Formononetin enhances cisplatin chemotherapy sensitivity in osteosarcoma by inducing ferroptosis and reconstructing the immune microenvironment, Phytomedicine 145 (2025) 156960. https://doi.org/10.1016/j.phymed.2025.156960
+
+37. M. Ding, Y. Bao, H. Liang, X. Zhang, B. Li, R. Yang, N. Zeng, Potential mechanisms of formononetin against inflammation and oxidative stress: a review, Front. Pharmacol. 15 (2024) 1368765. https://doi.org/10.3389/fphar.2024.1368765
+
+38. X. Li, X. Jiang, R. Zeng, X. Lai, J. Wang, H. Liu, H. Wu, J. He, L. Liu, Z. Zhu, J. Li, X. Liang, Formononetin attenuates cigarette smoke-induced COPD in mice by suppressing inflammation, endoplasmic reticulum stress, and apoptosis in bronchial epithelial cells via AhR/CYP1A1 and AKT/mTOR signaling pathways, Phytother. Res. 38 (3) (2024) 1278–1293. https://doi.org/10.1002/ptr.8104
+
+## 訳者補足
 
 > 補足（実務的示唆）: 「DADを1〜2波長に縮約せず全波長立方体ごと使い(FTIA)、ELSDで弱UV/非UV成分(アストラガロシドIV等)も拾う」点と、「類似度を“形(Sm)”と“量(Pm)”に分けて評価する(BES)」点が要点。2025年版中国薬局方が全プロファイル比較を求める流れに沿う。実務的には、メーカー間でフェニルエタノイド配糖体が10倍違う等の差を定量(Pm)で可視化でき、さらに薬効を担う4マーカーをPmで押さえれば品質−薬効の一貫管理に直結する。長時間グラジエント(110分)である点はルーチン適用時のスループットとの兼ね合いになる。
+>
+> 補足（数値の読み方）: Sm(パターン類似度)は「形が似ているか」、Pm(定量一致度)は「量が参照と一致するか」。M2(S7–S13)はSmが0.68–0.88と高い（形は似ている）のにPmが3–21%（量が桁違いに不足）で、従来のコサイン類似度だけ見ると見逃す不良を、Pmが定量的に暴く。R²=0.98は「Pmの変動の98%が化学組成で説明できる」という強い当てはまり。VIF>30は「その4成分（SAL/ECH/CG/ON）が互いに強く相関し情報が重複している」ことを意味し、実運用では代表1つに絞ってよい根拠になる。
+>
+> 補足（in vivo検証の限界）: 薬効検証は代表1バッチ(M1-S4)のみで、原文も「概念実証(proof-of-concept)」と位置づけ、今後の多バッチ・in vitro/in vivo反復拡張を課題としている。式(1)–(3)は「全波長で吸光度を積分して1本のトレースにまとめる」FTIAの数学的定義で、KaTeXで表示している。同ワークスペースには全波長積算・多検出器融合・指紋−薬効相関を扱う関連解説が複数あり、本論文はそれらに「BESによる形と量の分離」と「免疫薬効との連結」を加えた事例として読める。
