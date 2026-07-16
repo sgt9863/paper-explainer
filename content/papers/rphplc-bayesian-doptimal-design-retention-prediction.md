@@ -102,6 +102,74 @@ Fedorov 交換は、各反復で平均 log|FIM| を増やすように設計点�
 
 逆相HPLCで、広範な分析対象のパラメータ推定の平均一般化分散を最小化する最適実験計画を決める方法論を示した。近年の多階層モデルに基づき、酸・塩基が中性・イオン両形態をとる一般的な分析問題を扱う。推奨最適設計は: 可能な限り長い勾配時間（maxtg）・φ0=0.05 の勾配を MeOH と ACN 両方で；MeOH で maxtg/3・φ0≈0.2；MeOH で maxtg・φ0≈0.2；ACN で maxtg・φ0≈0.1（異なる pH を考える場合は各形態で）。実験数や勾配時間スケールは制約に応じて変更できる。**事前情報は大半の分析対象でパラメータ推定の正確性を大きく高める**。本手法は汎用性が高く他のクロマト法・技術にも容易に適用でき、複雑なクロマトデータを要約しシミュレーションで最適設計を導く多階層モデル開発の重要性を示す。
 
+## 参考文献
+
+1. I. Moln´ar, H.J. Rieger, R. Korm´any, Modeling of HPLC methods using QbD principles in HPLC, in: E. Grushka, N. Grinberg (Eds.), Advances in Chromatography, Volume 53, CRC Press, 2016.
+
+2. R. Cela, E.Y. Ordo˜nez, J.B. Quintana, R. Rodil, Chemometric-assisted method development in reversed-phase liquid chromatography, J. Chromatogr. A 1287 (2013) 2–22, https://doi.org/10.1016/j.chroma.2012.07.081.
+
+3. D.B. Hibbert, Experimental design in chromatography: a tutorial review, J. Chromatogr. B 910 (2012) 2–13, https://doi.org/10.1016/j. jchromb.2012.01.020.
+
+4. J.R. Torres-Lapasi´o, S. Pous-Torres, J.J. Baeza-Baeza, M.C. García-´Alvarez-Coque, Optimal experimental designs in RPLC at variable solvent content and pH based on prediction error surfaces, Anal. Bioanal. Chem. 400 (2011) 1217–1230, https:// doi.org/10.1007/s00216-011-4709-9.
+
+5. P. Nikitas, A. Pappa-Louisi, Retention models for isocratic and gradient elution in reversed-phase liquid chromatography, J. Chromatogr. A 1216 (2009) 1737–1755, https://doi.org/10.1016/j.chroma.2008.09.051.
+
+6. M. Ros´es, X. Subirats, E. Bosch, Retention models for ionizable compounds in reversed-phase liquid chromatography: effect of variation of mobile phase composition and temperature, J. Chromatogr. A 1216 (2009) 1756–1775, https:// doi.org/10.1016/j.chroma.2008.12.042.
+
+7. M.J. den Uijl, P.J. Schoenmakers, B.W.J. Pirok, M.R. van Bommel, Recent applications of retention modelling in liquid chromatography, J. Sep. Sci. 44 (2021) 88–114, https://doi.org/10.1002/jssc.202000905.
+
+8. M.C. García-Alvarez-Coque, J.J. Baeza-Baeza, G. Ramis-Ramos, Reversed Phase Liquid Chromatography, in: Analytical Separation Science, John Wiley & Sons, Ltd, 2015, pp. 159–198, https://doi.org/10.1002/9783527678129.assep008.
+
+9. I. Molnar, Computerized design of separation strategies by reversed-phase liquid chromatography: development of DryLab software, J. Chromatogr. A 965 (2002) 175–194, https://doi.org/10.1016/S0021-9673(02)00731-8.
+
+10. A.C. Atkinson, A.N. Donev, A.C. Atkinson, A.N. Donev, Optimum Experimental Designs, Oxford University Press, Oxford, New York, 1992.
+
+11. P.F. de Aguiar, B. Bourguignon, M.S. Khots, D.L. Massart, R. Phan-Than-Luu, Doptimal designs, Chemomet. Intell. Lab. Syst. 30 (1995) 199–210, https://doi.org/ 10.1016/0169-7439(94)00076-X.
+
+12. J.W. Dolan, L.R. Snyder, M.A. Quarry, Computer simulation as a means of developing an optimized reversed-phase gradient-elution separation, Chromatographia 24 (1987) 261–276, https://doi.org/10.1007/BF02688488.
+
+13. E. Tyteca, G. Desmet, A universal comparison study of chromatographic response functions, J. Chromatogr. A 1361 (2014) 178–190, https://doi.org/10.1016/j. chroma.2014.08.014.
+
+14. P. Peir´o-Vila, J.R. Torres-Lapasi´o, M.C. García-Alvarez-Coque, Global retention models in reversed-phase liquid chromatography. A tutorial, J. Chromatogr. Open 6 (2024) 100192, https://doi.org/10.1016/j.jcoa.2024.100192. P. Wiczling Journal of Chromatography A 1746 (2025) 465787 9
+
+15. J.A. Navarro-Huerta, A. Gisbert-Alonso, J.R. Torres-Lapasi´o, M.C. García-AlvarezCoque, Testing experimental designs in liquid chromatography (I): development and validation of a method for the comprehensive inspection of experimental designs, J. Chromatogr. A 1624 (2020) 461180, https://doi.org/10.1016/j. chroma.2020.461180.
+
+16. A.C. Atkinson, R.D. Tobias, Optimal experimental design in chromatography, J. Chromatogr. A 1177 (2008) 1–11, https://doi.org/10.1016/j. chroma.2007.11.045.
+
+17. P.K. Sahu, N.R. Ramisetti, T. Cecchi, S. Swain, C.S. Patro, J. Panda, An overview of experimental designs in HPLC method development and validation, J. Pharm. Biomed. Anal. 147 (2018) 590–611, https://doi.org/10.1016/j.jpba.2017.05.006.
+
+18. S.B. Duffull, F. Mentr´e, L. Aarons, Optimal design of a population pharmacodynamic experiment for ivabradine, Pharm Res. 18 (2001) 83–89, https://doi.org/10.1023/a:1011035028755.
+
+19. M.G. Dodds, A.C. Hooker, P. Vicini, Robust population pharmacokinetic experiment design, J. Pharmacok. Pharmacodyn. 32 (2005) 33–64, https://doi. org/10.1007/s10928-005-2102-z.
+
+20. K. Chaloner, I. Verdinelli, Bayesian Experimental Design: a review, Stat. Sci. 10 (1995) 273–304, https://doi.org/10.1214/ss/1177009939.
+
+21. P. Wiczling, Analyzing chromatographic data using multilevel modeling, Anal. Bioanal. Chem. 410 (2018) 3905–3915, https://doi.org/10.1007/s00216-0181061-3.
+
+22. P. Wiczling, A. Kamedulska, Comparison of chromatographic stationary phases using a Bayesian-based multilevel model, Anal. Chem. 96 (2024) 1310–1319, https://doi.org/10.1021/acs.analchem.3c04697.
+
+23. A. Kamedulska, Ł. Kubik, J. Jacyna, W. Struck-Lewicka, M.J. Markuszewski, P. Wiczling, Toward the general mechanistic model of liquid chromatographic retention, Anal. Chem. 94 (2022) 11070–11080, https://doi.org/10.1021/acs. analchem.2c02034.
+
+24. D. Stoll, Initiating method development with scouting gradients—Where to begin and how to proceed? LCGC North Am. 41 (2023) 160–165, https://doi.org/ 10.56530/lcgc.na.jc4676g7.
+
+25. Ł. Kubik, J. Jacyna, W. Struck-Lewicka, M.J. Markuszewski, P. Wiczling, LC-TOFMS data collected for 300 small molecules. XBridge Shield RP18 column, Osf.Io/1 (2022) 1. https://doi.org/10.17605/OSF.IO/ZQTJ7.
+
+26. A. Gelman, J.B. Carlin, H.S. Stern, D.B. Dunson, A. Vehtari, D.B. Rubin (2013). Bayesian data analysis. In Chapman and Hall/CRC eBooks. https://doi.org/10.12 01/b16018.
+
+27. B. Carpenter, A. Gelman, M.D. Hoffman, D. Lee, B. Goodrich, M. Betancourt, M. A. Brubaker, J. Guo, P. Li, A. Riddell, Stan: a probabilistic programming language, J. Stat. Softw. 76 (2017) 1, https://doi.org/10.18637/jss.v076.i01.
+
+28. V. Fedorov, Theory of optimal Experiments designs, 1972.
+
+29. K. Ogungbenro, G. Graham, I. Gueorguieva, L. Aarons, The use of a modified Fedorov exchange algorithm to optimise sampling times for population pharmacokinetic experiments, Comput. Methods Programs Biomed. 80 (2005) 115–125, https://doi.org/10.1016/j.cmpb.2005.07.001.
+
+30. L.R. Snyder, J.J. Kirkland, J.L. Glajch, Practical HPLC Method Development, 2nd ed, Wiley, New York, 1997.
+
+31. L.R. Snyder, J.W. Dolan, J.R. Gant, Gradient elution in high-performance liquid chromatography: I. Theoretical basis for reversed-phase systems, J. ChromatoGraphy. A 165 (1979) 3–30, https://doi.org/10.1016/S0021-9673(00) 85726-X.
+
+32. P. Wiczling, Evaluation of sequential Bayesian-based method development procedures for chromatographic problems involving one, two, and three analytes, Separat. Sci. Plus 1 (2018) 63–75, https://doi.org/10.1002/sscp.201700037.
+
+33. E. Bosten, M. Pardon, K. Chen, V. Koppen, G. Van Herck, M. Hellings, D. Cabooter, Assisted active learning for model-based method development in liquid chromatography, Anal. Chem. 96 (2024) 13699–13709, https://doi.org/10.1021/ acs.analchem.4c02700. P. Wiczling
+
 ## 訳者補足（実務者向けの読みどころ）
 
 > 以下は原文に無い、実務観点の補足である（本文の訳と混ぜない）。

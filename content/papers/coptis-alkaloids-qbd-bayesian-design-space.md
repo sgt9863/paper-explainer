@@ -159,6 +159,88 @@ Pareto チャート（Fig. 3）で重要因子を判定。有機相%の低下は
 
 QbD概念に基づき、黄連の6アルカロイドを分離する頑健な RP-HPLC 法を開発した。Plackett–Burman で重要3因子を選抜、Box–Behnken で全二次モデルを構築し設計空間を作成、**ベイズ事後予測分布でモデル不確実性と応答間相関を同時に考慮して設計空間の信頼性を定量**した。最適点（ACN40%・SDS1.7g/L・KH₂PO₄0.03mol/L）で両目標同時達成確率51%、正確性プロファイルで全6成分を検証。QbDが黄連の頑健な分析法開発に効率的に使えることを示した。
 
+## 参考文献
+
+1. China Pharmacopoeia Committee. Pharmacopoeia of the People’s Republic of China [M]. China Medical Science Press, Beijing, 2010.
+
+2. Prieto JM, Recio MC, Giner RM, et al. Influence of traditional Chinese anti-inflammatory medicinal plants on leukocyte andplatelet functions [J]. J Pharm Pharmacol, 2003, 55(9): 1275-1282.
+
+3. Wang H, Zhang F, Ye F, et al. The effect of Coptis chinensis on the signaling network in the squamous carcinoma cells [J]. Front Biosci, 2011, 3: 326-340.
+
+4. Chin LW, Cheng YW, Lin SS, et al. Anti-herpes simplex virus effects of berberine from Coptidis rhizoma, a major component of a Chinese herbal medicine, Ching-Wei-San [J]. Arch Virol, 2010, 155(12): 1933-1941.
+
+5. Sun J, Ma JS, Jin J, et al. Qualitative and quantitative determination of the main components of huanglianjiedu decoction by HPLC-UV/MS [J]. Acta Pharm Sin, 2006, 41(4): 380-384.
+
+6. Yokozawa T, Satoh A, Cho EJ, et al. Protective role of Coptidis Rhizoma alkaloids against peroxynitrite-induced damage to renal tubular epithelial cells [J]. J Pharm Pharmacol, 2005, 57(3): 367-374.
+
+7. Zhang Y, Wu W, Han F, et al. LC/MS/MS for identification of in vivo and in vitro metabolites of jatrorrhizine [J]. Biomed Chromatog, 2008, 22(12): 1360-1367. YUAN Si-Yuan, et al. / Chin J Nat Med, 2016, 14(9): 697−708 – 708 –
+
+8. Ma HD, Wang YJ, Guo T, et al. Simultaneous determination of tetrahydropalmatine, protopine, and palmatine in rat plasma by LC-ESI-MS and its application to a pharmacokinetic study [J]. J Pharm Biomed Anal, 2009, 49(2): 440-446.
+
+9. Deng YT, Liao QF, Li SH, et al. Simultaneous determination of berberine, palmatine and jatrorrhizine by liquid chromatography-tandem mass spectrometry in rat plasma and its application in a pharmacokinetic study after oral administration of coptis-evodia herb couple [J]. J Chromatogr B, 2008, 863(2): 195-205.
+
+10. Zhu YH, Tong L, Zhou SP, et al. Simultaneous determination of active flavonoids and alkaloids of Tang-Min-Ling-Pill in rat plasma by liquid chromatography tandem mass spectrometry [J]. J Chromatogr B Analyt Technol Biomed Life Sci, 2012, 904: 51-58.
+
+11. Zeng Y, Huo P, Xu Y. Simultaneous determination of berberine, palmatine, matrine, catechin and baicalin in Funing Shuan by micellar electrokinetic capillary chromatography-electrospray ionization mass spectrometry [J]. Chin J Chrom, 2010, 28(7): 677-681.
+
+12. Sun CL, Li J, Wang X, et al. Preparative separation of quaternary ammonium alkaloids from Coptis chinensis Franch. by pH-zone-refining counter-current chromatography [J]. J Chromatogr A, 2014, 1370: 156-161.
+
+13. Kuang YH, Zhu JJ, Wang ZM, et al. Simultaneous quantitative analysis of five alkaloids in rhizoma of Coptis chinensis by multi-components assay by single marker [J]. Chin Pharm J, 2009, 44(5): 390-394.
+
+14. International conference on harmonization of technical requirements for registration of pharmaceuticals for human use. ICH harmonized tripartite guideline, Pharmaceutical Development Q8 (R1) [C]. ICH, Geneva, Switzerland, 2008.
+
+15. Lawrence XY. Pharmaceutical quality by design: product and process development, understanding and control [J]. Pharm Res, 2008, 25(4): 781-791.
+
+16. Lee SL, Raw AS, Yu L. Significance of drug substance physicochemical properties in regulatory quality by design [J]. Drugs Pharm Sci, 2008, 178: 571.
+
+17. Mhatre R, Rathore AS. Quality by design: an overview of the basic concepts. In quality by design for biopharmaceuticals [M]. Wiley, New York, 2009: 1-8.
+
+18. Gavin PF, Olsen BA. A quality by design approach to impurity method development for atomoxetine hydrochloride (LY139603) [J]. J Pharm Biomed Anal, 2008, 46(3): 431-441.
+
+19. Pohl M, Schweitzer M, Hansen G, et al. Implications and opportunities of applying the principles of QbD to analytical measurements [J]. Pharm Technol Eur, 2010, 22(2): 29-36.
+
+20. Vogt FG, Kord AS. Development of quality by design analytical methods [J]. J Pharm Sci, 2011, 100(3): 797-811.
+
+21. Borman P, Roberts J, Jones C, et al. The development phase of an LC method using QbD principles [J]. Sep Sci, 2010, 2: 2-8.
+
+22. Hanna-Brown M, Borman P, Bale S, et al. Development of chromatographic methods using QbD principles [J]. Sep Sci, 2010, 2: 12-20.
+
+23. International conference on harmonization (ICH) of Technical Requirements for registration of pharmaceuticals for human use. Topic Q8 (R2): Pharmaceutical Development [C]. ICH, Geneva, Switzerland, 2009.
+
+24. Little TA. Evaluating design margin, edge of failure, and process capability [J]. Bio Pharm International, 2014, 27(9): 46-49.
+
+25. Debrus B, Lebrun P, Ceccato A, et al. Application of new methodologies based on design of experiments, independent component analysis and design space for robust optimization in liquid chromatography [J]. Anal Chim Acta, 2011, 691(1): 33-42.
+
+26. Joseph T, Patrick HL, Richard V. A qality-by-dsign methodology for rapid LC method development, Part III [J]. Lc Gc N Am, 2009, 27: 328-339.
+
+27. Hubert P, Nguyen-Huu JJ, Boulanger B, et al. Harmonization of strategies for the validation of quantitative analytical procedures a SFSTP proposal. Part IV, examples of application [J]. J Pharm Biomed Anal, 2008, 48(3): 760-771.
+
+28. Rozet E, Wascotte V, Lecouturier N, et al. Improvement of the decision efficiency of the accuracy profile by means of a desirability function for analytical methods validation: application to a diacetyl-monoxime colorimetric assay used for the determination of urea in transdermal iontophoretic extracts [J]. Anal Chim Acta, 2007, 591(2): 239-247.
+
+29. Wrisley L, Pfizer. Column selectivity database aplication to HPLC method development: a QbD perspective [C]. Pittsburgh Conference, Orlando, USA, 2010.
+
+30. Li W, Rasmussen HT. Strategy for developing and optimizing liquid chromatography methods in pharmaceutical development using computerassisted screening and Plackett-Burman experimental design [J]. J Chromatogr A, 2003, 1016(2): 165-180.
+
+31. Peterson JJ. A Bayesian approach to the ICH Q8 definition of design space [J]. J Biopharm Stat, 2008, 18(5): 959-975.
+
+32. Peterson JJ. A posterior predictive approach to multiple response surface optimization [J]. J Qual Technol, 2004, 36(2): 139-153.
+
+33. Chen MH, Shao QM, Ibrahim JG. Monte Carlo methods in bayesian computation [M]. Springer-Verlag, New York, 2000: 15.
+
+34. Awotwe-Otoo D, Agarabi C, Faustino PJ, et al. Application of quality by design elements for the development and optimization of an analytical method for protamine sulfate [J]. J Pharmaceut Biomed Anal, 2012, 62: 61-67.
+
+35. Lebrun P, Govaerts B, Debrus B, et al. Development of a new predictive modelling technique to find with confidence equivalence zone and design space of chromatographic analytical methods [J]. Chemom Intell Lab Sys, 2008, 91(1): 4-16.
+
+36. Debrus B, Lebrun P, Ceccato A, et al. A new statistical method for the automated detection of peaks in UV-DAD chromatograms of a sample mixture [J]. Talanta, 2009, 79(1): 77-85.
+
+37. Center for Biologics Evaluation and Research (CBER), US department of health and human services, Food and Drug Administration, Center for Drug Evaluation and Research (CDER). Guidance for industry: bioanalytical method validation [M]. Rockville, 2001.
+
+38. Hubert P, Nguyen-Huu JJ, Boulanger B, et al. Harmonization of strategies for the validation of quantitative analytical procedures-a SFSTP proposal Part II [J]. J Pharm Biomed Anal, 2007, 45(1): 82-96.
+
+39. Feinberg M, Boulanger B, Dewe W, et al. New advances in method validation and measurement uncertainty aimed at improving the quality of chemical data [J]. Anal Bioana Chem, 2004, 380(3): 502-514.
+
+40. Alejandro CO. Practical guidelines for reporting results in singleand multi-component analytical calibration: a tutorial [J]. Anal Chim Acta, 2015, 868: 10-12. Cite this article as: DAI Sheng-Yun, XU Bing, ZHANG Yi, LI Jian-Yu, SUN Fei, SHI Xin-Yuan, QIAO Yan-Jiang. Establishment and reliability evaluation of the design space for HPLC analysis of six alkaloids in Coptis chinensis (Huanglian) using Bayesian approach[J]. Chin J Nat Med, 2016, 14(9): 697-708.
+
 ## 訳者補足（実務者向けの読みどころ）
 
 > 以下は原文に無い、実務観点の補足である（本文の訳と混ぜない）。
