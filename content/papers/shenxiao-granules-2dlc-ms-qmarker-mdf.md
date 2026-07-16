@@ -204,3 +204,96 @@ SXGは薬局方に公式品質評価基準がない院内製剤のため、各�
 - **3次元Q-marker枠組み:** ①薬局方適合（原料の恒常性）②薬理関連（腎保護のエビデンス）③共通指紋ピーク（クロマト代表性）の3軸で12成分を選ぶ。院内製剤で公式規格がない方剤に、この3軸で「守るべき成分」を科学的に決めるのが要点。当サイトの他のQ-marker論文（鵝不食草・三黄瀉心湯）と同じ思想。
 - **実務上の要注意点:** サルビアノール酸B（丹参のフェノール酸）が2.9〜14.8 µg/10 mgと約5倍もばらつく。丹参の産地・収穫期・アルコール沈殿濃度・乾燥法でフェノール酸が沈殿/分解しやすいため。ここがSXGの品質管理の弱点で、原料・工程の標準化が課題と本論文は指摘する。
 - **数値の扱い:** 図S1–S17と補足表S1–S11は原文参照。図1–6は削除済み重複版から復旧して統合した。表1・2は主要値を転記、全バッチ・全成分は原文表参照。原文にない数値は加えていない。
+
+## 参考文献
+
+1. Ahmad J. Management of diabetic nephropathy: recent progress and future perspective. Diabetes Metab Syndr. 2015;9:343–58.
+
+2. Li J, Guo K, Qiu J, Xue S, Pi L, Li X, et al. Epidemiological status, development trends, and risk factors of disability-adjusted life years due to diabetic kidney disease: a systematic analysis of global burden of disease study 2021. Chin Med J. 2025;138:568–78.
+
+3. Merid F, Getahun F, Esubalew H, Gezahegn T. Incidence and predictors of diabetic nephropathy among type 2 diabetes mellitus patients, southern Ethiopia. J Nutr Metab. 2024;1:6976870.
+
+4. Palmer BF. Managing hyperkalemia caused by inhibitors of the renin–angiotensin–aldosterone system. N Engl J Med. 2004;351:585–92.
+
+5. Shen Y, Miao N, Xu J, Gan X, Xu D, Zhou L, et al. N-acetylcysteine alleviates angiotensin II-mediated renal fibrosis in mouse obstructed kidneys. Acta Pharmacol Sin. 2016;37:637–44.
+
+6. Hu L, Yu L, Cao Z, Wang Y, Zhu C, Li Y, et al. Integrating transcriptomics, metabolomics, and network pharmacology to investigate multi-target effects of sporoderm-broken spores of Ganoderma lucidum on improving HFD-induced diabetic nephropathy rats. J Pharm Anal. 2024;14:101105.
+
+7. Huang M, Yu S, Shao Q, Liu H, Wang Y, Chen H, et al. Comprehensive profiling of Lingzhihuang capsule by liquid chromatography coupled with mass spectrometry-based molecular networking and target prediction. Acupunct Herbal Med. 2022;2:58–67.
+
+8. Zhang GB, Li QY, Chen QL, Su SB. Network pharmacology: a new approach for Chinese herbal medicine research. Evid-Based Compl Alt. 2013;1:621423.
+
+9. Qin T, Wu L, Hua Q, Song Z, Pan Y, Liu T. Prediction of the mechanisms of action of Shenkang in chronic kidney disease: a network pharmacology study and experimental validation. J Ethnopharmacol. 2020;246:112128.
+
+10. Zhang N, Guan C, Liu ZY, Li C, Yang C, Xu L, et al. Calycosin attenuates renal ischemia/reperfusion injury by suppressing NF-κB mediated inflammation via PPARγ/EGR1 pathway. Front Pharmacol. 2022;13:828061.
+
+11. Yu L, Zhang YY, Chen Q-Q, He Y, Zhou HF, Wan HT, et al. Formononetin protects against inflammation associated with cerebral ischemia-reperfusion injury in rats by targeting the JAK2/STAT3 signaling pathway. Biomed Pharmacother. 2022;149:112836.
+
+12. Liang YT, Chen BQ, Liang D, Quan XX, Gu RL, Meng ZY, et al. Pharmacological effects of astragaloside IV: a review. Molecules. 2023;28(16):6118.
+
+13. Hsu YC, Shih YH, Ho C, Liu CC, Liaw CC, Lin HY, et al. Ethyl acetate fractions of Salvia miltiorrhiza Bunge (Danshen) crude extract modulate fibrotic signals to ameliorate diabetic kidney injury. Int J Mol Sci. 2024;25(16):8986.
+
+14. Huang Y, Jiang CM, Hu YL, Zhao XJ, Shi C, Yu Y, et al. Immunoenhancement effect of rehmannia glutinosa polysaccharide on lymphocyte proliferation and dendritic cell. Carbohydr Polym. 2013;96(2):516–21.
+
+15. Lan JP, Xue YF, Pu JY, Ding Y, Gan ZY, Yang YB, et al. Plantaginis semen ameliorates diabetic kidney disease via targeting the sphingosine kinase 1/sphingosine-1-phosphate pathway. J Ethnopharmacol. 2024;331:118221.
+
+16. Ehambarampillai D, Wan MLY. A comprehensive review of Schisandra chinensis lignans: pharmacokinetics, pharmacological mechanisms, and future prospects in disease prevention and treatment. Chin Med. 2025;20(1):47.
+
+17. Li Y, Lin Z, Wang Y, Ju S, Wu H, Jin H, et al. Unraveling the mystery of efficacy in Chinese medicine formula: new approaches and technologies for research on pharmacodynamic substances. Arab J Chem. 2022;15:104302.
+
+18. Liu Y, Li X, Chen C, Ding N, Ma S, Yang M. Exploration of compatibility rules and discovery of active ingredients in TCM formulas by network pharmacology. Chin Herbal Med. 2024;16:572–88.
+
+19. Dou M, Huang J, Yu M, Li H, Song Y, Peng Z, et al. HPLC combined with chemometrics for quality control of huamoyan granules or capsules. Chin Herb Med. 2024;16:449–56.
+
+20. Yan M, Zhang Z, Liu Y. Difference analysis of different parts of chicory based on HPLC fingerprint and multi-component content determination. Chin Herb Med. 2022;14:317–23.
+
+21. Abdulhussain N, Nawada S, Schoenmakers P. Latest trends on the future of three-dimensional separations in chromatography. Chem Rev. 2022;121:12016–34.
+
+22. Barros de Souza A, Ali I, van de Goor T, Dewil R, Cabooter D. Comprehensive two-dimensional liquid chromatography with high resolution mass spectrometry to investigate the photoelectrochemical degradation of environmentally relevant pharmaceuticals and their degradation products in water. J Environ Manage. 2024;351:120023.
+
+23. Wang Y, Zhou L, Chen T, You L, Shi X, Liu X, et al. Screening strategy for 1210 exogenous chemicals in serum by two-dimensional liquid chromatography-mass spectrometry. Environ Pollut. 2023;331:121914.
+
+24. Arfian N, Wahyudi DAP, Zulfatina IB, Citta AN, Anggorowati N, Multazam A, et al. Chlorogenic acid attenuates kidney ischemic/reperfusion injury via reducing inflammation, tubular injury, and myofibroblast formation. BioMed Res Int. 2019;2019:5423703.
+
+25. Jiao H, Zhang M, Xu W, Pan T, Luan J, Zhao Y, et al. Chlorogenic acid alleviates kidney fibrosis through regulating TLR4/NF-κB mediated oxidative stress and inflammation. J Ethnopharmacol. 2024;335:118693.
+
+26. Zhou X, Zhang B, Zhao X, Lin Y, Zhuang Y, Guo J, et al. Chlorogenic acid prevents hyperuricemia nephropathy via regulating TMAO-related gut microbes and inhibiting the PI3K/AKT/mTOR pathway. J Agric Food Chem. 2022;70:10182–93.
+
+27. Wang P, Lan Q, Huang Q, Zhang R, Zhang S, Yang L, et al. Schisandrin A attenuates diabetic nephropathy via EGFR/AKT/GSK3β signaling pathway based on network pharmacology and experimental validation. Biology. 2024;13:597.
+
+28. Zhou T, Tian N, Li L, Yu R. Iridoids modulate inflammation in diabetic kidney disease: a review. J Integr Med. 2023;22(3):210–22.
+
+29. Gong F, Qu R, Li Y, Lv Y, Dai J. Astragalus mongholicus: a review of its anti-fibrosis properties. Front Pharmacol. 2022;13:976561.
+
+30. Elsherbiny NM, Said E, Atef H, Zaitone SA. Renoprotective effect of calycosin in high fat diet-fed/STZ injected rats: effect on IL-33/ST2 signaling, oxidative stress and fibrosis suppression. Chem-Biol Interact. 2020;315:108897.
+
+31. Qi M, He Y, Cheng Y, Fang Q, Ma R, Zhou S, et al. Icariin ameliorates streptozocin-induced diabetic nephropathy through suppressing the TLR4/NF-κB signal pathway. Food Funct. 2021;12:1241–51.
+
+32. Yao W, Tao R, Xu Y, Chen ZS, Ding X, Wan L. AR/RKIP pathway mediates the inhibitory effects of icariin on renal fibrosis and endothelial-to-mesenchymal transition in type 2 diabetic nephropathy. J Ethnopharmacol. 2024;320:117414.
+
+33. Cao W, Guo X, Zheng H, Li D, Jia G, Wang J. Current progress of research on pharmacologic actions of salvianolic acid B. Chin J Integr Med. 2012;18:316–20.
+
+34. Zhang ZY, Miao LF, Qian LL, Wang N, Qi MM, Zhang YM, et al. Molecular mechanisms of glucose fluctuations on diabetic complications. Front Endocrinol. 2019;10:640.
+
+35. Titko T, Perekhoda L, Drapak I, Tsapko Y. Modern trends in diuretics development. Eur J Med Chem. 2020;208:112855.
+
+36. Liu X, Sun N, Mo N, Lu S, Song E, Ren C, et al. Quercetin inhibits kidney fibrosis and the epithelial to mesenchymal transition of the renal tubular system involving suppression of the sonic hedgehog signaling pathway. Food Funct. 2019;10:3782–97.
+
+37. Liu J, Zhang Y, Sheng H, Liang C, Liu H, Moran Guerrero JA, et al. Hyperoside suppresses renal inflammation by regulating macrophage polarization in mice with type 2 diabetes mellitus. Heliyon. 2023;476:e16849.
+
+38. Lu H, Wu L, Liu L, Ruan Q, Zhang X, Hong W, et al. Quercetin ameliorates kidney injury and fibrosis by modulating M1/M2 macrophage polarization. Biochem Pharmacol. 2018;154:203–12.
+
+39. Zhang K, Li M, Yin, Wang M, Dong Q, Miao Z, Guan Y, Wu Q, Zhou Y. Hyperoside mediates protection from diabetes kidney disease by regulating ROS-ERK signaling pathway and pyroptosis. Phytother Res. 2023;37:5871–5882.
+
+40. Ren HL, Zhang JH, Xiao JH. Benzylisoquinoline alkaloids inhibit lung fibroblast activation mainly via inhibiting TGF-β1/Smads and ERK1/2 pathway proteins. Heliyon. 2023;9:e16849.
+
+41. Zhao Y, Song JY, Feng R, Hu JC, Xu H, Ye ML, et al. Renal health through medicine–food homology: a comprehensive review of botanical micronutrients and their mechanisms. Nutrients. 2024;16:3530.
+
+42. Li X, Liu Z, He Z, Wang X, Li R, Wang J, et al. Acteoside protects podocyte against apoptosis through regulating AKT/GSK-3β signaling pathway in db/db mice. BMC Endocr Disord. 2023;23:230.
+
+43. Li MH, Chen JM, Peng Y, Wu Q, Xiao PG. Investigation of Danshen and related medicinal plants in China. J Ethnopharmacol. 2008;120:419–26.
+
+44. Kum KY, Kirchhof R, Luick R, Heinrich M. Danshen (Salvia miltiorrhiza) on the global market: what are the implications for products' quality? Front Pharmacol. 2021;12:621169.
+
+45. Tai Y, Shen J, Luo Y, Qu H, Gong X. Research progress on the ethanol precipitation process of traditional Chinese medicine. Chin Med. 2022;15:84.
+
