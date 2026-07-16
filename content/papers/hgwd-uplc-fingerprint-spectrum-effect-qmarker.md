@@ -276,6 +276,52 @@ MRMモードの最適UPLC-TQ-MS/MS法を、15バッチのHGWD試料中の12代�
 
 本研究では、UPLC-DAD指紋・UPLC-HRMS化学プロファイリング・薬効評価・多成分定量をケモメトリクスと組み合わせて統合した包括的戦略を、HGWDの品質評価のために確立した。15試料のHGWDの指紋を決定し、**30本の共通ピーク**を同定して化学的類似度を評価した。次いで、提案UPLC-DAD指紋とOPLS-DAモデルの組み合わせにより、産地に関連する **9種の特徴マーカー**（プロトカテク酸、クマリン、桂皮酸、オキシペオニフロリン、ペオニフロリン、カリコシン、ホルモノネチン、カテキン、アルビフロリン）を同定した。さらなる品質評価のため、スペクトル-効果関係解析を行い、Q-markerとなりうる生物活性化合物を発見した。UPLC-HRMSによる化学プロファイリングで15バッチから **95種の共通化合物**を暫定同定した。薬効評価により、異なるバッチの抗RA活性が大きく異なることが示された。スペクトル-効果関係解析により、抗RA活性と正相関する **30種の潜在的生物活性化合物**をスクリーニングした。相対含量 >1% の5化合物――**ペオニフロリン、アストラガロシドIV、ヘキサヒドロクルクミン、ホルモノネチン、カリコシン-7-グルコシド**――をHGWDのQ-markerとして採用した。最後に、上記の **代表12成分**を15バッチのHGWD試料中で同時定量した。この包括的戦略は、HGWDの品質評価を改善する信頼性が高く有効な方法となりうる。
 
+## 参考文献
+
+（原著は著者‐年方式の引用。以下は原著の文献リスト＝アルファベット順）
+
+- Bischoff Kont, I., Furst, R., 2021. Benefits of ginger and its constituent 6-shogaol in inhibiting inflammatory processes. Pharmaceuticals 14 (6), 571–590.
+- Cai, K., Hu, B., 1997. Huangqi Guizhi Wuwu Decoction treating 36 cases of senile rheumatoid arthritis. Chin. J. Surg. Integr. Tradit. West. Med. 3, 350–351, 05.
+- Cheng, X., Bi, L., Zeng, W., Zhao, Z., Chen, Y., Zhang, Z., 2020. Chemical constituents of distillation residues from cinnamon twigs and leaves by using UHPLC-QTOF MS. Chem. Ind. For. Prod. 40 (6), 50–59.
+- Choi, N., Yang, G., Jang, J.H., Kang, H.C., Cho, Y.Y., Lee, H.S., Lee, J.Y., 2021. Loganin alleviates gout inflammation by suppressing NLRP3 inflammasome activation and mitochondrial damage. Molecules 26 (4), 1071–1084.
+- Fu, S., Cheng, R., Deng, Z., Liu, T., 2021. Qualitative analysis of chemical components in Lianhua Qingwen capsule by HPLC-Q Exactive-Orbitrap-MS coupled with GC-MS. J. Pharm. Biomed. Anal. 195, 709–716.
+- Gong, P.Y., Guo, Y.J., Tian, Y.S., Gu, L.F., Qi, J., Yu, B.Y., 2021. Reverse tracing anti-thrombotic active ingredients from dried Rehmannia Radix based on multidimensional spectrum-effect relationship analysis of steaming and drying for nine cycles. J. Ethnopharmacol. 276, 114177–114187.
+- Guan, J., Wang, L., Jin, J., Chang, S., Xiao, X., Feng, B., Zhu, H., 2019. Simultaneous determination of calycosin-7-O-beta-D-glucoside, cinnamic acid, paeoniflorin and albiflorin in rat plasma by UHPLC-MS/MS and its application to a pharmacokinetic study of Huangqi Guizhi Wuwu Decoction. J. Pharm. Biomed. Anal. 170, 1–7.
+- Guo, S., Duan, J.A., Tang, Y.P., Yang, N.Y., Qian, D.W., Su, S.L., Shang, E.X., 2010. Characterization of triterpenic acids in fruits of ziziphus species by HPLC-ELSD-MS. J. Agric. Food Chem. 58 (10), 6285–6289.
+- Ji, Z., Jiang, Y., Lin, H., Ren, W., Lin, L., Guo, H., Huang, J., Li, Y., 2021. Global identification and quantitative analysis of representative components of Xin-Nao-Kang Capsule, a traditional Chinese medicinal formula, by UHPLC-Q-TOF-MS and UHPLC-TQ-MS. J. Pharm. Biomed. Anal. 198, 114002–114013.
+- Jiang, M., Cao, J., Zhang, C., Su, B., Wang, S., Ning, N., Lei, T., Li, P., 2022. A comprehensive strategy for quality evaluation of Wushe Zhiyang Pills by integrating UPLC-DAD fingerprint and multi-ingredients rapid quantitation with UPLC-MS/MS technology. J. Pharm. Biomed. Anal. 210, 114556–114564.
+- Lan, L., Sun, W., Chang, Q., Sun, G., 2021. Comprehensive evaluation of Licorice extract by five-dimensional quantitative profiling. J. Chromatogr. A 1644, 462105.
+- Lee, B., Heo, J., Hong, S., Kim, E.Y., Sohn, Y.J., Jung, H.S., 2019. dl-Malic acid as a component of alpha-hydroxy acids: effect on 2,4-dinitrochlorobenzene-induced inflammation in atopic dermatitis-like skin lesions in vitro and in vivo. Immunopharmacol. Immunotoxicol. 41 (6), 614–621.
+- Li, Y., Zhao, L., Wang, Y., Chen, W., Ma, Y., Liu, J., Zhang, R., Zhou, R., 2016. Effect of Huangqi Guizhi wuwutang on immunology and blood stasis state of osteoarthritis rats with Yang deficiency and cold coagulation symptoms. China J. Chin. Mater. Med. 22 (23), 149–154.
+- Lin, W., Su, H., Li, H., Peng, D., Hong, F., Zeng, Y., 2022. Therapeutic mechanism of Huangqi Guizhi wuwutang on rheumatoid arthritis. Chin. J. Exp. Tradit. Med. Formulae 28 (9), 9–15.
+- Liu, C., Guo, D.A., Liu, L., 2018. Quality transitivity and traceability system of herbal medicine products based on quality markers. Phytomedicine 44, 247–257.
+- Liu, H., Liang, J., Xiao, G., Ma, L., Wang, Q., 2021. Dendrobine suppresses lipopolysaccharide-induced gut inflammation in a Co-culture of intestinal epithelial caco-2 cells and RAW264.7 macrophages. eFood 2 (2), 92–99.
+- Liu, J., Wang, Y., Li, Y., Zhang, Y., Zhao, L., Zhang, R., 2017. Effect of Huangqi Guizhi wuwutang on joint synovial cell apoptosis in CIA rat model. Chin. J. Exp. Tradit. Med. Formulae 23 (14), 171–176.
+- Liu, J., Wang, Y., Li, Y., Zhang, Y., Zhao, L., Zhang, R., Sun, L., 2019. Effect of Huangqi Guizhi Wuwu decoction on JAK-STAT signaling pathway in CIA model rats with rheumatoid. Arthritis Lishizhen Medicine and Materia Medica Research 30 (4), 811–814.
+- Liu, M.Y., Luo, Z.H., Chen, Z.E., Qin, Y.R., Liu, Q.Y., Ding, P., 2022. Quality markers for processed products of Morinda officinalis how based on the "oligosaccharides-spectrum-effect". J. Pharm. Biomed. Anal. 208, 114403–114418.
+- Liu, W., Fan, Y., Tian, C., Jin, Y., Du, S., Zeng, P., Wang, A., 2020. Deciphering the molecular targets and mechanisms of HGWD in the treatment of rheumatoid arthritis via network pharmacology and molecular docking. Evid. Based Complement Alternat. Med. 2020, 1–13.
+- NationalMedicalProductsAdministration, 2020. Chinese Pharmacopoeia. China.
+- Sang, Q., Jia, Q., Zhang, H., Lin, C., Zhao, X., Zhang, M., Wang, Y., Hu, P., 2021. Chemical profiling and quality evaluation of Zhishi-Xiebai-Guizhi Decoction by UPLC-Q-TOF-MS and UPLC fingerprint. J. Pharm. Biomed. Anal. 194, 113771–113781.
+- Shi, S., Liu, J., Zhang, Q., 2010. Treatment of 31 cases of rheumatoid arthritis of qi-blood deficiency by internal and external administration of modified "Huangqi Guizhi Wuwu Decoction". Shanghai J. Tradit. Chin. Med. 44, 1–3, 05.
+- Sun, M., Wang, Y.Z., Yang, Y., Lv, M.W., Li, S.S., Teixeira da Silva, J.A., Wang, L.S., Yu, X.N., 2021. Analysis of chemical components in the roots of eight intersubgeneric hybrids of paeonia. Chem. Biodivers. 18 (2), 2000848.
+- Tanaka, M., Kishimoto, Y., Sasaki, M., Sato, A., Kamiya, T., Kondo, K., Iida, K., 2018. Terminalia bellirica (gaertn.) roxb. Extract and gallic acid attenuate LPS-induced inflammation and oxidative stress via MAPK/NF-kappaB and akt/AMPK/Nrf2 pathways. Oxid. Med. Cell. Longev. 2018, 1–15.
+- Tian, Z., Li, J., Zhao, L., Liu, D., Li, Y., Liu, J., Wang, J., 2020. Historical evolution and modern study of "Huangqi Guizhi Wuwu decoction". Education and Teaching Forum 29, 74–76.
+- Tong, N.N., Zhou, X.Y., Peng, L.P., Liu, Z.A., Shu, Q.Y., 2021. A comprehensive study of three species of Paeonia stem and leaf phytochemicals, and their antioxidant activities. J. Ethnopharmacol. 273, 113985–113995.
+- Wang, C., Zhang, H., 2004. Huangqi Guizhi Wuwu Decoction treating 58 cases of rheumatoid arthritis. Journal of Practical Chinese Medicine 1–2, 05.
+- Wang, Y., Liu, L., Ma, Y., Guo, L., Sun, Y., Liu, Q., Liu, J., 2019. Chemical discrimination of Astragalus mongholicus and Astragalus membranaceus based on metabolomics using UHPLC-ESI-Q-TOF-MS/MS approach. Molecules 24 (22), 4064–4075.
+- Wang, Z., Wang, Z., Jiang, M., Yang, J., Meng, Q., Guan, J., Xu, M., Chai, X., 2022. Qualitative and quantitative evaluation of chemical constituents from shuanghuanglian injection using nuclear magnetic resonance spectroscopy. J. Anal. Methods Chem. 2022, 7763207–7763218.
+- Yang, G., Chen, M., Sun, W., Yao, L., Zou, X., 2019. Observation of effect of Huangqi Guizhi Wuwu decoction on rheumatoid arthritis. Chin. J. Clin. Hepatol. 22, 549–552, 04.
+- Yang, L., Xue, Y., Wei, J., Dai, Q., Li, P., 2021. Integrating metabolomic data with machine learning approach for discovery of Q-markers from Jinqi Jiangtang preparation against type 2 diabetes. Chin. Med. 16 (1), 30–42.
+- Yang, W., Zhang, Y., Wu, W., Huang, L., Guo, D., Liu, C., 2017. Approaches to establish Q-markers for the quality standards of traditional Chinese medicines. Acta Pharm. Sin. B 7 (4), 439–446.
+- Yang, Y., Li, S.S., Teixeira da Silva, J.A., Yu, X.N., Wang, L.S., 2020. Characterization of phytochemicals in the roots of wild herbaceous peonies from China and screening for medicinal resources. Phytochemistry 174, 112331–112341.
+- Yu, Y., Zhu, Z., Xie, M., Deng, L., Xie, X., Zhang, M., 2022. Investigation on the Q-markers of Bushen Huoxue Prescriptions for DR treatment based on chemometric methods and spectrum-effect relationship. J. Ethnopharmacol. 285, 114800–114812.
+- Zhang, A., Lee, Y.C., 2018. Mechanisms for joint pain in rheumatoid arthritis (RA): from cytokines to central sensitization. Curr. Osteoporos. Rep. 16 (5), 603–610.
+- Zhang, D., Zhang, B., Lv, J.T., Sa, R.N., Zhang, X.M., Lin, Z.J., 2020. The clinical benefits of Chinese patent medicines against COVID-19 based on current evidence. Pharmacol. Res. 157, 104882–104891.
+- Zhang, J., Wang, J., Yang, L., Wang, Y., Jin, W., Li, J., Zhang, Z., 2023. Comprehensive quality evaluation of polygonatum cyrtonema and its processed product: chemical fingerprinting, determination and bioactivity. Molecules 28 (11).
+- Zhang, X., Zhou, Y., Cheong, M.S., Khan, H., Ruan, C.C., Fu, M., Xiao, J., Cheang, W.S., 2022. Citri Reticulatae Pericarpium extract and flavonoids reduce inflammation in RAW 264.7 macrophages by inactivation of MAPK and NF-κB pathways. Food Frontiers 3 (4), 785–795.
+- Zhang, Y., Nie, M., Shi, S., You, Q., Guo, J., Liu, L., 2014. Integration of magnetic solid phase fishing and off-line two-dimensional high-performance liquid chromatography-diode array detector-mass spectrometry for screening and identification of human serum albumin binders from Radix Astragali. Food Chem. 146, 56–64.
+- Zheng, H.Z., Shen, X., He, Y.Y., Yan, X.L., Wang, S.X., Yu, A.M., Wang, L.S., 2020. Pharmacokinetic analysis of Huangqi Guizhi Wuwu decoction on blood and brain tissue in rats with normal and cerebral ischemia-reperfusion injury by microdialysis with HPLC-MS/MS. Drug Des. Dev. Ther. 14, 2877–2888.
+
 ## 訳者補足
 
 > 本論文の位置づけ: 本研究は「単一〜数成分の定量だけでは方剤の真の品質を反映できない」という問題意識に対し、**4層の統合戦略**で答えたものである。すなわち――
