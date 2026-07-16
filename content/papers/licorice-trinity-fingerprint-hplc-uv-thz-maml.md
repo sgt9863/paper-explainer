@@ -37,18 +37,18 @@ summary: 甘草（Glycyrrhiza glabra L.）の内部品質を、HPLC指紋（3波
 
 ## 1. 序論（Introduction）
 
-2019 年に新型コロナウイルス（2019-nCoV）が発生して以来、伝統中薬（TCM）は中国において予防・治療戦略の要点となっている。一方で、医薬品の安全性は TCM の内部品質と密接に関係する。TCM の内部品質は、産地の違い・栽培方法の違いなど様々な要因により大きく変動しうる。TCM の複雑な混合機構も、その品質管理をより困難にしている。そこで本研究は、13 産地に由来する甘草（*Glycyrrhiza glabra* L.）85 バッチを手法開発試料として、TCM のための統合的な品質管理法の構築に取り組んだ。
+2019 年に新型コロナウイルス（2019-nCoV）が発生して以来、伝統中薬（TCM）は中国において予防・治療戦略の要点となっている[1]。一方で、医薬品の安全性は TCM の内部品質と密接に関係する。TCM の内部品質は、産地の違い・栽培方法の違いなど様々な要因により大きく変動しうる[4]。TCM の複雑な混合機構も、その品質管理をより困難にしている[5]。そこで本研究は、13 産地に由来する甘草（*Glycyrrhiza glabra* L.）85 バッチを手法開発試料として、TCM のための統合的な品質管理法の構築に取り組んだ。
 
-現在、クロマト指紋、とりわけ HPLC 指紋は TCM の品質管理に広く用いられている。しかし HPLC-DAD 指紋分析は通常、あらかじめ定めた 1 波長で測定されるため、一部の物質が単一波長では応答が低すぎて後続のデータ処理に使えなかったり、そもそも検出されなかったりする。単一波長では全化合物の最大 UV 吸収特性を捉えられない。そこで、他波長の指紋情報も考慮し有用情報を掘り起こす場を提供するため、「3 波長最大融合指紋（three-wavelength maximum fusion fingerprint）」が構築された。しかしこの手法もまた、UV 吸収をもつ共通化合物の指紋特徴しか考慮できないという限界があった。この状況下では、複数の検出技術を組み合わせて TCM の品質を管理することが不可欠であった。
+現在、クロマト指紋、とりわけ HPLC 指紋は TCM の品質管理に広く用いられている。しかし HPLC-DAD 指紋分析は通常、あらかじめ定めた 1 波長で測定されるため、一部の物質が単一波長では応答が低すぎて後続のデータ処理に使えなかったり、そもそも検出されなかったりする[8]。単一波長では全化合物の最大 UV 吸収特性を捉えられない。そこで、他波長の指紋情報も考慮し有用情報を掘り起こす場を提供するため、「3 波長最大融合指紋（three-wavelength maximum fusion fingerprint）」が構築された。しかしこの手法もまた、UV 吸収をもつ共通化合物の指紋特徴しか考慮できないという限界があった。この状況下では、複数の検出技術を組み合わせて TCM の品質を管理することが不可欠であった。
 
-- 紫外可視（UV-vis）は主に、共役系や芳香族系成分の不飽和結合の情報を明らかにする。フローインジェクション分析（FIA）法と組み合わせると、低消費・高精度で試料を迅速に分析でき、主観的な波長選択の一面性を回避できる。
-- テラヘルツ（THz）応答は分子の集団的挙動と結びつき、TCM 中の高分子（アミノ酸・炭水化物など）の全体構造や、関連する環境情報の振動モードを反映できる。
+- 紫外可視（UV-vis）は主に、共役系や芳香族系成分の不飽和結合の情報を明らかにする。フローインジェクション分析（FIA）法と組み合わせると、低消費・高精度で試料を迅速に分析でき、主観的な波長選択の一面性を回避できる[13–15]。
+- テラヘルツ（THz）応答は分子の集団的挙動と結びつき、TCM 中の高分子（アミノ酸・炭水化物など）の全体構造や、関連する環境情報の振動モードを反映できる[16–19]。
 
-これら3手法の原理は互いに相補的であるだけでなく、いずれも TCM 分析の分類・類似度評価に一般的に用いられる。しかしスペクトルデータは一般に、連続信号・冗長情報・複雑なグラフィックスという特徴をもち、総合的な定性・定量分析への利用が難しい。この問題を踏まえ、孫毓慶（Guoxiang Sun）教授は「量子指紋（quantum fingerprint, QFP）」を提唱した。これは連続的なスペクトル信号を区間消去法（IEM）によって定量化し、デジタル情報処理による積分・還元の結果をクロマト様の「量子指紋ピーク」として表現するものである。構築された QFP は、対象の情報特徴を網羅しつつ、スペクトル特性をより簡潔かつ直感的にする。TCM の品質は、クロマト（HPLC-FP）とスペクトル（UV-QFP・THz-QFP）に対して体系的定量化指紋法（SQFM）によって評価された。
+これら3手法の原理は互いに相補的であるだけでなく、いずれも TCM 分析の分類・類似度評価に一般的に用いられる。しかしスペクトルデータは一般に、連続信号・冗長情報・複雑なグラフィックスという特徴をもち、総合的な定性・定量分析への利用が難しい。この問題を踏まえ、孫毓慶（Guoxiang Sun）教授は「量子指紋（quantum fingerprint, QFP）」を提唱した。これは連続的なスペクトル信号を区間消去法（IEM）によって定量化し、デジタル情報処理による積分・還元の結果をクロマト様の「量子指紋ピーク」として表現するものである。構築された QFP は、対象の情報特徴を網羅しつつ、スペクトル特性をより簡潔かつ直感的にする。TCM の品質は、クロマト（HPLC-FP）とスペクトル（UV-QFP・THz-QFP）に対して体系的定量化指紋法（SQFM）によって評価された[22]。
 
-さらに、TCM は体系的な標準化がまだ達成されておらず、一部の対照標準品は高価で、一部成分の定量が困難である。そこで「単一直線法による多マーカー定量（MAML）」が提案され、本研究で初めて甘草において検証された。MAML は「単一マーカーによる多成分定量（QAMS）」からのさらなる革新である。MAML は、操作誤差を最小化し分析技術の精度を高めるために、線形範囲と体系的方法論、ならびに誤差解析・信頼性解析の理論に焦点を当てる。甘草の定量指紋を用い、本研究ではグリチルリチン酸を測定マーカー（MEMA）とし、定量成分の検量線の下で絶対補正係数を算出し、続いて対応成分の相対補正係数を求めた。
+さらに、TCM は体系的な標準化がまだ達成されておらず、一部の対照標準品は高価で、一部成分の定量が困難である[23]。そこで「単一直線法による多マーカー定量（MAML）」[24]が提案され、本研究で初めて甘草において検証された。MAML は「単一マーカーによる多成分定量（QAMS）」からのさらなる革新である。MAML は、操作誤差を最小化し分析技術の精度を高めるために、線形範囲と体系的方法論、ならびに誤差解析・信頼性解析の理論に焦点を当てる。甘草の定量指紋を用い、本研究ではグリチルリチン酸を測定マーカー（MEMA）とし、定量成分の検量線の下で絶対補正係数を算出し、続いて対応成分の相対補正係数を求めた。
 
-活性化合物の定量制御に加え、甘草試料の in vitro 抗酸化活性を DPPH（1,1-ジフェニル-2-ピクリルヒドラジル）ラジカル消去アッセイにより検討した。二変量相関解析（BCA）を通じて、UV と HPLC の間の抗酸化活性のスペクトル効果関係を議論し、試料の二次元活性プロファイリングを与えた。要するに本論文は、TCM の機能特性・多成分性・多層性などを反映しうる、科学的・厳密・標準化された一連の品質評価法の確立を目指した。
+活性化合物の定量制御に加え、甘草試料の in vitro 抗酸化活性を DPPH（1,1-ジフェニル-2-ピクリルヒドラジル）ラジカル消去アッセイにより検討した[27–29]。二変量相関解析（BCA）[30]を通じて、UV と HPLC の間の抗酸化活性のスペクトル効果関係を議論し、試料の二次元活性プロファイリングを与えた。要するに本論文は、TCM の機能特性・多成分性・多層性などを反映しうる、科学的・厳密・標準化された一連の品質評価法の確立を目指した。
 
 ## 2. 理論（Theory）
 
@@ -85,7 +85,7 @@ $$C_m = f_{si} \times C_{ms} \times A_m / A_{ms} \quad (10)$$
 
 ### 2.3. TCM の THz 量子指紋の整合性評価系
 
-一般に、テラヘルツ透過スペクトルは THz-TDS（時間領域分光）系で光学パラメータを抽出する最も広く用いられる方法である。主要な抽出の考え方は、光路中で試料の実信号 $E_{sam}(t)$ と、試料を置かないときの参照信号 $E_{ref}(t)$ を測定することである。次にフーリエ変換により、時間領域信号を直接周波数領域信号（$E_{ref}(\omega)$ と $E_{sam}(\omega)$）に変換する。試料の屈折率と吸収係数は、Dorney と Duvillaret が提案した方法でデータ処理して得た。式(11)–(13)で、$n(\omega)$ は試料の屈折率、$\omega$ は周波数、$\varphi(\omega)$ は試料信号と参照信号の位相差、$\alpha(\omega)$ は試料の吸収係数、$A(\omega)$ は周波数領域信号における試料と参照の振幅比、$d$ は試料厚さを表す：
+一般に、テラヘルツ透過スペクトルは THz-TDS（時間領域分光）系で光学パラメータを抽出する最も広く用いられる方法である。主要な抽出の考え方は、光路中で試料の実信号 $E_{sam}(t)$ と、試料を置かないときの参照信号 $E_{ref}(t)$ を測定することである。次にフーリエ変換により、時間領域信号を直接周波数領域信号（$E_{ref}(\omega)$ と $E_{sam}(\omega)$）に変換する。試料の屈折率と吸収係数は、Dorney[32] と Duvillaret[33] が提案した方法でデータ処理して得た。式(11)–(13)で、$n(\omega)$ は試料の屈折率、$\omega$ は周波数、$\varphi(\omega)$ は試料信号と参照信号の位相差、$\alpha(\omega)$ は試料の吸収係数、$A(\omega)$ は周波数領域信号における試料と参照の振幅比、$d$ は試料厚さを表す：
 
 $$\varphi(\omega) = \varphi_{sample}(\omega) - \varphi_{ref}(\omega) \quad (11)$$
 $$n(\omega) = \varphi(\omega) c / (\omega d) + 1 \quad (12)$$
@@ -340,6 +340,90 @@ HPLC のスペクトル効果関係分析では、正のピークであったピ
 ## 6. 結論（Conclusions）
 
 本研究は、SQFM を中核・MAML を基礎として、HPLC 定量指紋の制御法を創造的に構築し、「トリニティ」指紋評価系と二次元活性スペクトルを用いて甘草の品質を評価した。SQFM により、甘草の指紋化学特性と分子化学結合の振動スペクトルの類似度を検討した。異なる産地・2 つの生育様式の甘草試料は異なる等級に分けられた。加えて、MAML を甘草の品質評価系に初めて適用し、MAML が TCM の多指標品質管理に新しい手法を提供する革新的手法であることを疑いなく証明した。MAML は QAMS より優れている。本論文が提案した「トリニティ」指紋評価系は、HPLC 指紋だけでなく、2 つの新興量子指紋、すなわち UV-QFP と THz-QFP をも含んだ。抗酸化と UV-QFP/HPLC-FP の関係をさらに検討し、甘草に補足的な生物活性情報を提供した。これらの評価法は互いに相補的であり、TCM のより総合的で客観的な品質管理のための多次元的な知的戦略を提供する。
+
+## 参考文献
+
+1. Q. Li, Y. Xiaoqian, Z. Yiwen, W. Han, Glycyrrhiza uralenesis on novel coronavirus infection complicated with myocarditis based on network pharmacology, Adv. Cardiovasc. Dis. 41 (11) (2020) 1215–1221. https://doi.org/10.16806/j.cnki.issn.1004-3934.2020.11.026
+
+2. H. Xu, K. Li, Y. Chen, Y. Zhang, S. Tang, S. Wang, D. Shen, X. Wang, Y. Lei, D. Li, Y. Zhang, L. Jin, H. Yang, L. Huang, Study on the absorbed fingerprint-efficacy of yuanhu zhitong tablet based on chemical analysis, vasorelaxation evaluation and data mining, PLoS ONE 8 (12) (2013) 1–11. https://doi.org/10.1371/journal.pone.0081135
+
+3. Y. Zhang, L. Yang, J. Zhang, M. Shi, G. Sun, Micellar electrokinetic capillary chromatography fingerprints combined with multivariate statistical analyses to evaluate the quality consistency and predict the fingerprint-efficacy relationship of Salviae miltiorrhizae Radix et Rhizoma (Danshen), J. Sep. Sci. 40 (13) (2017) 2800–2809. https://doi.org/10.1002/jssc.201700261
+
+4. Y. Li, T. Wu, J. Zhu, L. Wan, Q. Yu, X. Li, Z. Cheng, C. Guo, Combinative method using HPLC fingerprint and quantitative analyses for quality consistency evaluation of an herbal medicinal preparation produced by different manufacturers, J. Pharm. Biomed. Anal. 52 (4) (2010) 597–602. https://doi.org/10.1016/j.jpba.2010.01.018
+
+5. T. Dai, G. Sun, The establishment of an infrared quantitative model, quantitative analysis of multi-components by a single marker and an integrated fingerprint method for the quality control of Zhenju Jiangya Tablets, New J. Chem. 44 (39) (2020) 16921–16928. https://doi.org/10.1039/d0nj01582b
+
+6. Y. Wang, P. Wang, C. Xu, Y. Yang, J. Li, T. Chen, Z. Li, W. Cui, Q. Zhou, S. Sun, H. Li, Macro-fingerprint analysis-through-separation of licorice based on FT-IR and 2DCOS-IR, J. Mol. Struct. 1070 (2014) 1–9. https://doi.org/10.1016/j.molstruc.2014.03.016
+
+7. Y. Jiang, B. David, P. Tu, Y. Barbin, Recent analytical approaches in quality control of traditional Chinese medicines–a review, Anal. Chim. Acta 657 (1) (2010) 9–18. https://doi.org/10.1016/j.aca.2009.10.024
+
+8. L. Tao, Q. Zhang, Y. Wu, X. Liu, Quality evaluation of moluodan concentrated pill using high-performance liquid chromatography fingerprinting coupled with chemometrics, J. Sep. Sci. 39 (24) (2016) 4673–4680. https://doi.org/10.1002/jssc.201600895
+
+9. T. Wang, H. Zhang, D. Zhao, J. Chen, Z.L. Xie, W. Dai, K.H. Ye, J. Huang, G.F. Chen, Study on wavelength overlapping HPLC fingerprint and multi-component content determination of Danshen, Zhongguo Zhong Yao Za Zhi 44 (2) (2019) 338–343. https://doi.org/10.19540/j.cnki.cjcmm.20181009.011
+
+10. B. Yan, G. Sun, Monitoring quality consistency of Liuwei Dihuang Pill by integrating the ultraviolet spectroscopic fingerprint, a multi-wavelength fusion fingerprint method, and antioxidant activities, J. Sep. Sci. 41 (6) (2018) 1182–1191. https://doi.org/10.1002/jssc.201700620
+
+11. Y. Wang, G.-X. Sun, Y. Jin, X.-M. Xie, Y.-C. Liu, D.-D. Ma, J. Zhang, J.-Y. Gao, Y.-F. Li, Holistic evaluation of San-Huang Tablets using a combination of multi-wavelength quantitative fingerprinting and radical-scavenging assays, Chin. J. Nat. Med. 15 (4) (2017) 310–320. https://doi.org/10.1016/s1875-5364(17)30049-3
+
+12. J.R. Lucio-Gutierrez, J. Coello, S. Maspoch, Enhanced chromatographic fingerprinting of herb materials by multi-wavelength selection and chemometrics, Anal. Chim. Acta 710 (2012) 40–49. https://doi.org/10.1016/j.aca.2011.10.010
+
+13. E. Jaccoulet, C. Boughanem, L. Auduteau, P. Prognon, E. Caudron, UV spectroscopy and least square matching for high throughput discrimination of taxanes in commercial formulations and compounded bags, Eur. J. Pharm. Sci. 123 (2018) 143–152. https://doi.org/10.1016/j.ejps.2018.07.047
+
+14. L. Yang, X. Xie, L. Yang, J. Zhang, G. Sun, Monitoring quality consistency of Ixeris sonchifolia (Bunge) hance injection by integrating UV spectroscopic fingerprints, a multi-wavelength fusion fingerprint method, antioxidant activities and UHPLC/Q-TOF-MS, RSC Adv. 6 (90) (2016) 87616–87627. https://doi.org/10.1039/c6ra16436f
+
+15. K. Musil, V. Florianova, P. Bucek, V. Dohnal, K. Kuca, K. Musilek, Development and validation of a FIA/UV-vis method for pK(a) determination of oxime based acetylcholinesterase reactivators, J. Pharm. Biomed. Anal. 117 (2016) 240–246. https://doi.org/10.1016/j.jpba.2015.09.010
+
+16. H.B. Liu, Y. Chen, X.C. Zhang, Characterization of anhydrous and hydrated pharmaceutical materials with THz time-domain spectroscopy, J. Pharm. Sci. 96 (4) (2007) 927–934. https://doi.org/10.1002/jps.20782
+
+17. M.R. Patil, S.B. Ganorkar, A.S. Patil, A.A. Shirkhedkar, Terahertz spectroscopy: encoding the discovery, instrumentation, and applications toward pharmaceutical prospectives, Crit. Rev. Anal. Chem. (2020) 1–13. https://doi.org/10.1080/10408347.2020.1802219
+
+18. W.S. Ham, J. Kim, D.J. Park, H.C. Ryu, Y.P. Jang, Discrimination of Cynanchum wilfordii and Cynanchum auriculatum by terahertz spectroscopic analysis, Phytochem. Anal. 29 (5) (2018) 472–475. https://doi.org/10.1002/pca.2751
+
+19. J.Q. Rao, Q.D. Zhao, F. Qiu, Progress on application of terahertz time-domain spectroscopy in identification of traditional Chinese medicine, Zhongguo Zhong Yao Za Zhi 45 (4) (2020) 825–828. https://doi.org/10.19540/j.cnki.cjcmm.20191105.201
+
+20. G. Sun, W. Sun, H. Yan, J. Zhang, Constructing traditional Chinese medicine standard system for overall quality control and quality consistency evaluation of Chinese medicine, Central South Pharmacy 17 (3) (2019). https://doi.org/10.7539/j.issn
+
+21. X. Li, L.L. Lan, D.N. Gong, G.X. Sun, P. Guo, Evaluating quality consistency of Mingmu Dihuang Pill by 3 kinds of quantum fingerprint combined with antioxidation profiling, Microchem. J. 175 (2022). https://doi.org/10.1016/j.microc.2022.107195
+
+22. H. Yan, G. Sun, J. Zhang, W. Sun, Z. Hou, X. Li, D. Pu, Z. Chen, Overall control herbal medicine in best consistency, J. Pharm. Biomed. Anal. 195 (2021) 113867. https://doi.org/10.1016/j.jpba.2020.113867
+
+23. Y. Wang, Y. Yu, G. Sun, Y. Guo, Quality evaluation of powdered poppy capsule extractive by systematic quantified fingerprint method combined with quantitative analysis of multi-components by single marker method, J. Pharm. Biomed. Anal. 185 (2020) 113247. https://doi.org/10.1016/j.jpba.2020.113247
+
+24. H. Yan, G. Sun, W. Sun, L. Lan, Quantitative fingerprints combined with multi-marker assay by monolinear method for consistency evaluation of traditional Chinese medicine, Central South Pharmacy 19 (11) (2021). https://doi.org/10.7539/j.issn.1672-2981.2021.11.001
+
+25. W.W. Hou, Y.H. Shi, Y. Song, Y.L. Zhang, G.H. Qu, Z.T. Wang, L. Yang, Simultaneous determination of four anthraquinones in Polygonum multiflorum by QAMS, Zhongguo Zhong Yao Za Zhi 45 (1) (2020) 133–141. https://doi.org/10.19540/j.cnki.cjcmm.20191014.201
+
+26. N. Cuo, G.U. Rui, F.U. Lin, W. Ke-Ru, D. Rong, Z. Cai-Hong, Determination of content of iridoids and flavonoids in Tibetan medicine "Lanhua Longdan" by quantitative analysis of multi-components by single marker (QAMS), Zhongguo Zhong Yao Za Zhi 45 (18) (2020) 4423–4428. https://doi.org/10.19540/j.cnki.cjcmm.20200603.202
+
+27. J. Jiang, L. Shan, Z. Chen, H. Xu, J. Wang, Y. Liu, Y. Xiong, Evaluation of antioxidant-associated efficacy of flavonoid extracts from a traditional Chinese medicine Hua Ju Hong (peels of Citrus grandis (L.) Osbeck), J. Ethnopharmacol. 158 Pt A (2014) 325–330. https://doi.org/10.1016/j.jep.2014.10.039
+
+28. M.H. Kang, G.Y. Jang, Y.J. Ji, J.H. Lee, S.J. Choi, T.K. Hyun, H.D. Kim, Antioxidant and anti-melanogenic activities of heat-treated licorice (wongam, glycyrrhiza glabra x G. uralensis) extract, Curr. Issues Mol. Biol. 43 (2) (2021) 1171–1187. https://doi.org/10.3390/cimb43020083
+
+29. X. Zhang, X. Guo, P. Zhao, X. Zhang, W. Gao, X. Li, Chemometric analysis of active compounds and antioxidant and alpha-glucosidase inhibitory activities for the quality evaluation of licorice from different origins, Biomed. Chromatogr. 35 (12) (2021) e5215. https://doi.org/10.1002/bmc.5215
+
+30. M. Tabatabai, S. Bailey, Z. Bursac, H. Tabatabai, D. Wilus, K.P. Singh, An introduction to new robust linear and monotonic correlation coefficients, BMC Bioinformatics 22 (1) (2021) 170. https://doi.org/10.1186/s12859-021-04098-4
+
+31. R.M. Smith, M.A. Arnold, Terahertz time-domain spectroscopy of solid samples: principles, applications, and challenges, Appl. Spectrosc. Rev. 46 (8) (2011) 636–679. https://doi.org/10.1080/05704928.2011.614305
+
+32. T.D. Dorney, R.G. Baraniuk, D.M. Mittleman, Material parameter estimation with terahertz time-domain spectroscopy, J. Opt. Soc. Am. A Opt. Image Sci. Vis. 18 (7) (2001) 1562–1571. https://doi.org/10.1364/josaa.18.001562
+
+33. L. Duvillaret, F. Garet, J.L. Coutaz, Highly precise determination of optical constants and sample thickness in terahertz time-domain spectroscopy, Appl. Opt. 38 (2) (1999) 409–415. https://doi.org/10.1364/ao.38.000409
+
+34. J. Chen, D. Gong, X. Liu, G. Sun, W. Sun, Quality and antioxidant activity evaluation of dandelion by HPLC with five-wavelength fusion fingerprint, New J. Chem. 45 (22) (2021) 9856–9863. https://doi.org/10.1039/d1nj01422f
+
+35. S. Muralidharan, J. Kalaimani, S. Parasuraman, S.A. Dhanaraj, Development and validation of acyclovir HPLC external standard method in human plasma: application to pharmacokinetic studies, Adv. Pharmaceutic. (2014) 1–5. https://doi.org/10.1155/2014/284652
+
+36. Z.M. Wang, H.M. Gao, X.T. Fu, W.H. Wang, Multi-components quantitation by one marker new method for quality evaluation of Chinese herbal medicine, Zhongguo Zhong Yao Za Zhi 31 (23) (2006) 1925–1928.
+
+37. C.P. Commission, Pharmacopoeia of the People's Republic of China, China Medical Science and Technology Press, 2020, Beijing.
+
+38. D.C. Zhou, G. Zheng, L.Y. Jia, X. He, C.F. Zhang, C.Z. Wang, C.S. Yuan, Comprehensive evaluation on anti-inflammatory and anti-angiogenic activities in vitro of fourteen flavonoids from daphne genkwa based on the combination of efficacy coefficient method and principal component analysis, J. Ethnopharmacol. 268 (2021) 113683. https://doi.org/10.1016/j.jep.2020.113683
+
+39. N. Samanta, D. Das Mahanta, S. Choudhury, A. Barman, R.Kumar Mitra, Collective hydration dynamics in some amino acid solutions: a combined GHz-THz spectroscopic study, J. Chem. Phys. 146 (12) (2017) 125101. https://doi.org/10.1063/1.4978900
+
+40. F. Wang, X. Sun, J. Zan, M. Li, Y. Liu, J. Chen, Terahertz spectra and weak intermolecular interactions of nucleosides or nucleoside drugs, Spectrochim. Acta A Mol. Biomol. Spectrosc. 265 (2022) 120344. https://doi.org/10.1016/j.saa.2021.120344
+
+41. K. Nowak, E.F. Plinski, B. Karolewicz, P.P. Jarzab, S. Plinska, B. Fuglewicz, M.J. Walczakowski, L. Augustyn, L.A. Sterczewsk, M.P. Grzelczak, M. Hruszowiec, G. Beziuk, M. Mikulic, N. Palka, M. Szustakowski, Selected aspects of terahertz spectroscopy in pharmaceutical sciences, Acta Pol. Pharm. 72 (5) (2015) 851–866.
 
 ## 訳者補足（本稿の位置づけ）
 
