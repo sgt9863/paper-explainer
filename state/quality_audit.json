@@ -16,12 +16,12 @@
   },
   "figures_only_blocked": {
     "_comment": "本文（全訳密度）・参考文献は是正済み。残るは図の抽出のみで、これはPyMuPDF＝PDFバイナリが必要。Driveバイナリ取得EP不調＋外部直DL(HTTP 000)不可のため図だけ保留。EP回復時に図を抽出して埋め込む。",
-    "shd-spectrum-effect-fingerprint-ciri": "全訳密度(10363字)・参考文献(39件・[N]リンク)は read_file_content 本文から再構築済(2026-07-16)。図(Figure1-14)のみ未抽出＝バイナリ取得不可(Drive session expired/ACS直DL HTTP000)",
-    "xecq-qbd-fullchain-machinevision-qc": "全訳密度・参考文献は既存。図のみ未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で保留"
+    "shd-spectrum-effect-fingerprint-ciri": "全訳密度(10363字)・参考文献(39件・[N]リンク)は read_file_content 本文から再構築済(2026-07-16)。図(Figure1-14)のみ未抽出。2026-07-16再挑戦: download_file_content は今回「File too large for download, over limit of 10 MB」と明確に返却（原本は約11.9MB、フロントマターの指示どおり10MB上限超）。代替としてACS Omega OA本文ページへのWebFetch／curl直DLも試したが、いずれもエージェントプロキシが403（組織の egress ポリシーによる拒否）を返し取得不可。Drive・Web直取得の両方が塞がっており、図の抽出は依然として不可能。ページには手を付けていない（本文・文献は既に是正済のため据え置き）。",
+    "xecq-qbd-fullchain-machinevision-qc": "全訳密度・参考文献は既存。図のみ未抽出。原本(9.5MB、10MB上限内)はDrive有。2026-07-16再挑戦: download_file_content を7回試行し毎回 'MCP server \"Google-Drive\" session expired' で失敗（同じfileIdに対する get_file_metadata / search_files は同セッション内で正常応答したため、Drive自体の障害ではなくバイナリ取得エンドポイント固有の問題）。代替としてBMC(Chinese Medicine)のOA本文ページへのWebFetch／curl直DLも試したが、いずれもエージェントプロキシが403（組織の egress ポリシーによる拒否）を返し取得不可。Drive・Web直取得の両方が塞がっており、図の抽出はできなかった。ページには手を付けていない。"
   },
   "retry": {
     "_comment": "10MB以下だがDriveのバイナリ取得EPが一時失敗。EP回復時に再挑戦（恒久除外ではない）。ssyxは2026-07-16にテキストEPから全訳密度・参考文献を是正済（図は既存6枚）。",
-    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。バイナリ取得EP不調で図だけ保留（本文・文献は既存）"
+    "xecq-qbd-fullchain-machinevision-qc": "図が未抽出。原本(9.5MB)はDrive有。2026-07-16に再挑戦したが download_file_content が7回連続 'session expired' で失敗（同セッションの get_file_metadata/search_files は成功、BMC OA本文ページへのWeb直DLも403でブロック）。図だけ保留を継続（本文・文献は既存）"
   },
   "reviewed_adequate": {
     "_comment": "quality_audit.pyのCJK文字数ヒューリスティックが「密度不足」と誤検知したが、原文と突き合わせて確認した結果、実際には原文の全セクション・全データを既に忠実に全訳済み（英語の化合物名・分子式・m/z値・保持時間等が本文中で大きな比率を占めるため機械的なCJK文字数が低く出るだけ）。追加の手直しは不要。2026-07-16 レビュー。",
