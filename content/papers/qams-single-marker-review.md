@@ -154,6 +154,54 @@ QAMS は化学・薬理・分子生物学・統計の交差する学際研究で
 
 ---
 
+## 参考文献
+
+1. Kong WJ, Wang JB, Zang QC, Xing XY, Zhao YL, Liu W, et al. Fingerprint–efficacy study of artificial Calculus bovis in quality control of Chinese materia medica. Food Chem 2011;127:1342–7.
+
+2. Jin R, Lin Q, Zhou J, Sun BY, Zhang B. Construction and application of the multidimensional table for knowledge discovery in ancient Chinese books on materia medica. Engineering 2013;5:1–6.
+
+3. Traditional Medicine Strategy 2002–2005. Geneva, Switzerland: World Health Organization; 2002 http://whqlibdoc.who.int/hq/2002/who edm trm
+
+4. Gan F, Ye RY. New approach on similarity analysis of chromatographic fingerprint of herbal medicine. J Chromatogr A 2006;1104:100–5.
+
+5. Liang YZ, Xie PS, Chan KL. Quality control of herbal medicines. J Chromatogr B 2004;812:53–70.
+
+6. Gong F, Liang YZ, Xie PS, Chau FT. Information theory applied to chromatographic fingerprint of herbal medicine for quality control. J Chromatogr A 2003;1002:25–40.
+
+7. Xiao PG, Liu CX. A re-understanding on the safety matters of Chinese herbal medicines. Chin J Integr Med 2004;10:242–5.
+
+8. Alaerts G, Matthijs N, Smeyers-Verbeke J, Vander Heyden Y. Chromatographic fingerprint development for herbal extracts: A screening and optimization methodology on monolithic columns. J Chromatogr A 2007;1172:1–8.
+
+9. Fan CJ. Application situation of multi-components quantitation by one marker new method for quality evaluation and control of Chinese herbal medicine. Pharm Clin Chin Mater Med 2013;4:18–20.
+
+10. Gao HM, Wang ZM, Li YJ, Qian ZZ. Overview of the quality standard research of traditional Chinese medicine. Front Med 2011;5:195–202.
+
+11. Yadav AK, Tiwari N, Srivastava P, Singh SC, Shanker K, Verma RK, et al. Iridoid glycoside-based quantitative chromatographic fingerprint analysis: A rational approach for quality assessment of Indian medicinal plant Gambhari (Gmelina arborea). J Pharm Biomed Anal 2008;47:841–6.
+
+12. Li SP, Zhao J, Yang B. Strategies for quality control of Chinese medicine. J Pharm Anal 2011;55:802–9.
+
+13. Wang ZM, Gao HM, Fu XT, Wang WH. Multi-components quantitation by one marker new method for quality evaluation of Chinese herbal medicine. Chin J Chin Mater Med 2006;31:1925–8.
+
+14. Zou GX, You XM, Zhang Y, Wang GH, Jian GH. New method of multi-components quantitation by one marker new method for quality evaluation of Guanmaikang capsule. Chin J Chin Mater Med 2008;33:1828–31.
+
+15. Wu WY, Guo DA. Strategies for elaboration of comprehensive quality standard system on traditional Chinese medicine. Chin J Chin Mater Med 2014;39:351–6.
+
+16. Zhao YY, Guo HZ, Chen YG, Fu XT, Li Z, Tian L, et al. A comparative study and suggestion on relative correction factor produced by different methods in quantitative analysis of multi-components. Drug Stand Chin 2014;15:245–51.
+
+17. National Commission of Chinese Pharmacopoeia. Pharmacopoeia of People’s Republic of China. vol. I. Beijing: China Medical Science Press; 2010:285.
+
+18. Tang AF, Li S, Wang YJ, Xu YY, Tang H, Wang SD. Progress and application of quantitative analysis of multi-components by single marker in pharmaceutical chemistry. Cent South Pharm 2014;12:145–7.
+
+19. Wen QY, Long W, Yang H, Li P. Advance in multi-components quantitation by one marker in the quality control of Chinese herbal medicine. Chin Pharm 2014;25:2185–8. C. Zhu et al/Multi-components by single marker for Chinese herbal medicine 11
+
+20. Zhu JJ, Wang ZM, Ma XY, Feng WH, Zhang QW. A quantitative method for simultaneous determination of four anthraquinones with one marker in Rhei Radix et Rhizoma. Chin Herb Med 2012;4:157–63.
+
+21. Shen XZ, Liu Y, Yang YJ, Yang F. Research advances in quantitative analysis of multi-components by single-maker. Chin Pharm 2013;22:1–5.
+
+22. Wang LN, Liu HY, Zhang J, LI J, Zhang YQ. Simultaneous determination of eight bioactive components in Lonicerae japonicae Flos by quantitative analysis of multi-components by single marker. Chin J Exp Tradit Med Formu 2014;20:57–61.
+
+23. Xu JJ, Xu C, Liu B. Simultaneous determination of four flavonoid glycosides in Mentha haplocalyx briq. by a quantitative analysis of multi-components by single marker. Chin Pharm J 2014;49:234–9.
+
 ## 訳者補足（実務向けメモ）
 
 > 以下は原文には無い、QC実務向けの整理（訳者注）。
