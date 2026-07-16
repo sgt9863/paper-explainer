@@ -60,7 +60,7 @@ RSMの予測最適: **デキストリン58.37%・エタノール濃度10.32%・�
 
 可溶性デンプンが液状エキスを固化し、マルトデキストリン・デキストリンが固有の結合能を与え、追加の結合剤なしに高成形性・良好な流動性を実現(「エキスの固形分が低く賦形剤比が高い」無糖造粒の核心課題を解決)。**パイロット3バッチ**: 成形性率 96.30/97.00/96.66%、溶出率 92.23/92.53/91.40%、吸湿性 8.59/8.76/8.42%、安息角 41.52/40.96/41.17°(規格適合・実験室結果と一致)。
 
-![図1. 重要工程パラメータ間の相互作用を示す応答曲面図。(A)デキストリン含量とエタノール濃度など。](assets/fcg-sugarfree-fingerprint-qams/fig1.jpeg)
+![図1. 重要工程パラメータ間の相互作用を示す応答曲面図。(A)デキストリン含量とエタノール濃度など。](assets/fcg-sugarfree-fingerprint-qams/fig1.png)
 
 ### 指紋・QAMSによる品質同等性
 
@@ -68,13 +68,13 @@ RSMの予測最適: **デキストリン58.37%・エタノール濃度10.32%・�
 
 無糖品と原(ショ糖)製剤の比較で——**指紋類似度 > 0.98**、8マーカー成分の含量変動 **RSD < 4%**、溶出プロファイル **f2 > 50**(同等)。QAMSとESM(外部標準法)も一致し、無糖品が原製剤と物質的基盤・溶出挙動で同等であることを確認した。
 
-![図2. 無糖FCGの代表的HPLC指紋。(A)15独立バッチの重ね合わせクロマトグラム、(B)対応する対照指紋。](assets/fcg-sugarfree-fingerprint-qams/fig2.jpeg)
+![図2. 無糖FCGの代表的HPLC指紋。(A)15独立バッチの重ね合わせクロマトグラム、(B)対応する対照指紋。](assets/fcg-sugarfree-fingerprint-qams/fig2.png)
 
-![図3. 15バッチ顆粒中の8成分の含量分布。クリプトクロロゲン酸(A)・クロロゲン酸(B)・シリンギン(C)・ネオクロロゲン酸ほか。](assets/fcg-sugarfree-fingerprint-qams/fig3.jpeg)
+![図3. 15バッチ顆粒中の8成分の含量分布。クリプトクロロゲン酸(A)・クロロゲン酸(B)・シリンギン(C)・ネオクロロゲン酸ほか。](assets/fcg-sugarfree-fingerprint-qams/fig3.png)
 
-![図4. 無糖版と含糖版のクロマト指紋の類似度評価。S1-S3=無糖FCG、S4-S6=含糖FCG。](assets/fcg-sugarfree-fingerprint-qams/fig4.jpeg)
+![図4. 無糖版と含糖版のクロマト指紋の類似度評価。S1-S3=無糖FCG、S4-S6=含糖FCG。](assets/fcg-sugarfree-fingerprint-qams/fig4.png)
 
-![図5. 含糖版と無糖版FCGの溶出プロファイル比較。(A)シリンギン、(B)シザンドリン、(C)ネオクロロゲン酸、(D)エレウテロシドE。](assets/fcg-sugarfree-fingerprint-qams/fig5.jpeg)
+![図5. 含糖版と無糖版FCGの溶出プロファイル比較。(A)シリンギン、(B)シザンドリン、(C)ネオクロロゲン酸、(D)エレウテロシドE。](assets/fcg-sugarfree-fingerprint-qams/fig5.png)
 
 ## 4. 結論（Conclusion）
 

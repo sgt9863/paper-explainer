@@ -38,11 +38,14 @@
 <h1>2. 実験計画（Experimental designs）</h1>
 <p>実験計画は、様々なプロセスの操作条件の最適化、クロマトグラフィー分離性能の改善、高抽出効率の達成に頻繁に用いられる[<a href="#ref-10" class="cite">10</a>]。多数の因子がプロセスに同時に効くなかで、実験計画による有意因子の同定・最適化が、少ない実験試行で有能な結果を得る最も効果的な方法である。実験計画は「問題を体系的に解き情報豊かな結果を得るアプローチ」と定義できる[<a href="#ref-11" class="cite">11</a>]。最小の労力・時間・資源で最適かつ妥当な結果を得ることが第一目的である[<a href="#ref-12" class="cite">12</a>]。</p>
 <p>目的により、全設計は <strong>スクリーニング設計</strong> と <strong>応答曲面設計（最適化設計）</strong> の2大カテゴリに分類される（原著 Fig. 1）。設計の種類と実験ドメインは原著 Table 1 に詳述。</p>
+<figure><img src="assets/experimental-designs-hplc-method-development-validation-overview/fig1.png" alt="図1. 実験計画法の分類（スクリーニング設計と最適化設計）。" loading="lazy"><figcaption>図1. 実験計画法の分類（スクリーニング設計と最適化設計）。</figcaption></figure>
 <h2>2.1. スクリーニング設計（Screening designs）</h2>
 <p>HPLC プロセスには膨大な因子が影響するため、有意な効果をもたない因子は除外すべき。最も影響力のある因子のスクリーニングが、HPLC で実験計画を用いる第一目的となる。<strong>完全実施要因設計（FFD）・一部実施要因設計（FrFD）・Plackett-Burman 設計（PBD）</strong> がスクリーニング設計として頻用される[<a href="#ref-8" class="cite">8</a>, <a href="#ref-13" class="cite">13</a>, <a href="#ref-14" class="cite">14</a>]。これら2水準設計は多数の因子を少ない実験でスクリーニングでき、ANOVA や回帰分析で因子効果を計算する。分離技術・製剤・製品・品質管理プロセスの改善、頑健性（robustness）・堅牢性（ruggedness）試験（5節）に頻繁に適用される。スクリーニング設計の手順は頑健性/堅牢性試験と同一で、2水準間の区間の取り方が異なるのみ。各スクリーニング設計の長所・短所は原著 Table 2 に要約。</p>
+<figure><img src="assets/experimental-designs-hplc-method-development-validation-overview/fig3.png" alt="図3. HPLCメソッド開発・バリデーションにおける実験計画（影響因子を整理したフィッシュボーン図）。" loading="lazy"><figcaption>図3. HPLCメソッド開発・バリデーションにおける実験計画（影響因子を整理したフィッシュボーン図）。</figcaption></figure>
 <h2>2.2. 応答曲面設計（Response surface designs）</h2>
 <p>最適化は、プロセスの最適条件・設定を推奨するケモメトリクスの追加実務で、通常はスクリーニング設計に続いて潜在因子を選ぶ[<a href="#ref-16" class="cite">16</a>, <a href="#ref-17" class="cite">17</a>]。応答曲面設計には <strong>対称設計</strong> と <strong>非対称設計</strong> がある。3水準 FFD・中心複合設計（CCD）・Box-Behnken 設計（BBD）・Taguchi 設計（TD）・Doehlert 設計は、実験誤差推定用の中心点をもつ対称ドメインをカバー。<strong>D-optimal 設計</strong> などの非対称設計は非対称ドメインで非対称形をとる（対称ドメインでは対称形にもなる）。<strong>混合物設計（mixture designs）</strong> は混合物変数（組成）のみの最適化に適用。</p>
 <p>応答曲面設計の統計解析は ANOVA・S/N 比・レンジ分析に基づく。<strong>レンジ分析</strong> は各因子の効果を求め最適水準を決定する（因子の平均のレンジ＝全水準の最大平均−最小平均。最大レンジの因子が最も強く性能に影響）。ただしレンジ分析は各因子の有意性を明確・定量的には決定できない。<strong>ANOVA</strong> では F 検定でデータを解析（各因子の F 値＝その因子の分散/実験誤差の分散）。各因子の寄与率＝総平方和に占めるその因子の平方和の割合。<strong>回帰分析</strong> は回帰関数で変数間の関係を推定（1次・2次モデルが一般的）。</p>
+<figure><img src="assets/experimental-designs-hplc-method-development-validation-overview/fig2.png" alt="図2. 実験計画における重回帰（MLR）モデリングの流れ（実験解析→分散分析→モデル選択）。" loading="lazy"><figcaption>図2. 実験計画における重回帰（MLR）モデリングの流れ（実験解析→分散分析→モデル選択）。</figcaption></figure>
 <p>HPLC での実験計画の実施は4段階：(i) 便利な設計の選択、(ii) 適切なソフトウェア、(iii) 実験試行・データ解析、(iv) 解釈。最適化設計の HPLC メソッド開発への使用は原著 Table 3 に要約。</p>
 <p><strong>主な応答曲面設計の特徴:</strong></p>
 <ul><li><strong>3水準完全実施要因設計（3ᵏ FFD）:</strong> 各因子を3水準（低・中・高）で総当たり。曲率を捉えられるが、因子数 k が増えると実験数 3ᵏ が急増し（3因子で27ラン）、実務では因子数が少ないときに限られる。</li><li><strong>中心複合設計（CCD, central composite design）:</strong> 最も広く使われる応答曲面設計。2水準要因設計（立方点）＋中心点＋軸上の星点（axial/star points, ±α）からなり、2次モデルを効率的に推定できる。星点の距離 α で「外接（circumscribed, CCC）」「内接（inscribed, CCI）」「面心（face-centered, CCF）」に分かれる。回転可能性（rotatability, 中心から等距離で予測分散が一定）をもつよう α を選べる。</li><li><strong>Box-Behnken 設計（BBD）:</strong> 各因子を3水準でとるが、CCD と違い<strong>因子の極端値の組合せ（立方体の頂点）を含まない</strong>ため、因子を同時に最高/最低にしたくない場合（試薬節約・安全上の制約）に有利。3因子で15ラン程度と経済的で、HPLC 最適化で CCD と並んで頻用。</li><li><strong>Doehlert 設計:</strong> 実験ドメインを均一に六角形状で埋める設計。因子ごとに水準数が異なる（1因子目は5水準、2因子目は3水準など）ため、より精密に調べたい因子に多水準を割り当てられる。2変数で7ランと少ない。</li><li><strong>Taguchi 設計（TD）:</strong> 直交配列（例 L16＝2¹⁵）を用い、制御因子とノイズ因子を分けて S/N 比（signal-to-noise ratio）で頑健な条件を探す。工業的な頑健設計に由来し、変動に強いメソッド設定に向く。</li><li><strong>D-optimal 設計:</strong> 情報行列の行列式を最大化するように実験点を選ぶ計算最適化設計。非対称な実験ドメイン（一部の因子組合せが物理的に不可能な場合など）や、既定のラン数に制約があるときに柔軟に対応できる。</li><li><strong>混合物設計（mixture designs）:</strong> 移動相組成のように「成分の合計が100%」という制約下で組成比を最適化する設計（Simplex-lattice・Simplex-centroid など）。各成分を独立に動かせないため専用の設計・モデルを用いる。</li></ul>
@@ -90,6 +93,7 @@
 <h1>5. HPLC メソッドバリデーション（Method validation）</h1>
 <h2>5.1. 頑健性（Robustness）</h2>
 <p><strong>「頑健性（robustness）」</strong> は、メソッドパラメータの小さな意図的変動に対して分析結果が影響を受けずに保たれる能力の尺度で、通常使用時の信頼性を示す。スクリーニング設計（FFD・FrFD・PBD）で複数因子（流速・pH・カラム温度・移動相組成など）の小変動が応答（分離度・保持時間・面積など）に及ぼす影響を同時に評価する。手順はスクリーニング設計と同一で、因子の2水準間区間を「小変動」に設定する点が異なる。文献の LC メソッド頑健性試験のレビューを提示。</p>
+<figure><img src="assets/experimental-designs-hplc-method-development-validation-overview/fig4.png" alt="図4. 頑健性試験とシステム適合性試験（SST）限界の決定。" loading="lazy"><figcaption>図4. 頑健性試験とシステム適合性試験（SST）限界の決定。</figcaption></figure>
 <h2>5.2. 堅牢性（Ruggedness）</h2>
 <p><strong>「堅牢性（ruggedness）」</strong> は、異なる実験室・分析者・装置・試薬ロット・日など、通常予想される異なる条件下で同一試料を分析したときの結果の再現性の程度。ISO 用語では中間精度/再現性に対応。DOE で複数の「外部」因子（分析者・装置・カラムバッチ・日）を同時に評価できる。</p>
 <hr>
@@ -99,6 +103,7 @@
 <h1>7. DOE から Quality by Design（QbD）への拡張</h1>
 <h2>7.1. LC メソッド開発の QbD パラダイム</h2>
 <p>QbD は、あらかじめ定めた目的（分析ターゲットプロファイル）から出発し、品質をプロセスに作り込む枠組みである。LC メソッド開発では、DOE で <strong>デザインスペース（design space）</strong>——その内側なら分析品質が保証される操作因子の多次元領域——を構築することが鍵となる[<a href="#ref-4" class="cite">4</a>]。原著 Fig. 5 は QbD 駆動のクロマトグラフィーメソッド開発の主要ステップ（分析ターゲットプロファイル定義→重要メソッド属性 CMA・重要メソッドパラメータ CMP の特定→リスクアセスメント→DOE によるデザインスペース構築→管理戦略）を示す。多くの例が「HPLC メソッド開発・バリデーションは QbD なしには不完全」であることを実証（Table 5）。イオン交換・疎水性相互作用クロマトグラフィー（IEX・HIC）の重要メソッドパラメータ（CMP）も批判的にレビューされている[<a href="#ref-106" class="cite">106</a>]。</p>
+<figure><img src="assets/experimental-designs-hplc-method-development-validation-overview/fig5.png" alt="図5. QbD駆動のクロマトグラフィーメソッド開発の主要ステップ（ATP定義→CMA/CMP特定→リスク評価→設計空間→管理戦略）。" loading="lazy"><figcaption>図5. QbD駆動のクロマトグラフィーメソッド開発の主要ステップ（ATP定義→CMA/CMP特定→リスク評価→設計空間→管理戦略）。</figcaption></figure>
 <hr>
 <h1>8. クロマトグラフィーにおけるシックスシグマ実務</h1>
 <p><strong>シックスシグマ（Six-Sigma）</strong> は、プロセスの統計的モデリングに関連するプロセス改善の技法・道具の集合である。元来、製造プロセスが規格内の出力を非常に高い割合で生産する能力を指し、<strong>シグマ格付け（sigma rating）</strong> は無欠陥出力の割合でプロセス歩留まりを示す。<strong>シックスシグマ・プロセスとは、全出力の 99.99966% が統計的に無欠陥と期待される——すなわち100万機会あたり 3.4 の不適合出力に相当する——プロセス</strong> である。ISO は2011年に「ISO 13053:2011」でシックスシグマ・プロセスを定義した。</p>
