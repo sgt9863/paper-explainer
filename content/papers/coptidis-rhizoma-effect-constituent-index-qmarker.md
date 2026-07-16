@@ -225,6 +225,51 @@ $$\mathrm{RI}_S = I_S / I_{\text{control}} \times 100\% \quad (10)$$
 
 未分化な（用途を区別しない）品質規格では、異なる臨床用途に応じた CHM の品質を反映するのは難しく、また、マーカーが互いに切り離されていると、異なる Q-marker によって評価結果が食い違うことがあるため実務での使用を妨げる。臨床効果に関連する化学的・生物学的情報の統合に基づく ECI という Q-marker は、効果の異なる用途に応じた黄連品質の個別評価を可能にし、品質規格を両面的（two-sided）に高度化できる。ECI という Q-marker を用いれば、生物効果指標を追加せずとも、活性成分のレベルを検出するだけで黄連の効果を決定できる。したがって ECI は、黄連の従来型・現代的評価法に対する有益な補完となりうる。本研究は、臨床効果に対応する比較的明確な効果と活性成分をもつ他の CHM の品質評価の基盤を築くものである。
 
+## 参考文献
+
+（原著は著者‐年方式の引用。以下は原著の文献リスト＝アルファベット順）
+
+- Chen, H., Ye, X., Cui, X., He, K., Jin, Y., Chen, Z., Li, X., 2012. Cytotoxicity and anti-hyperglycemic effect of minor constituents from Rhizoma Coptis in HepG2 cells. Fitoterapia 83, 67–73.
+- Cheung, F., 2011. TCM: made in China. Nature 480, S82–S83.
+- Chinese Pharmacopoeia Commission, 2015. Pharmacopoeia of the People's Republic of China. China Medical Science Press, pp. 303–305 (in Chinese).
+- Fukutake, F., Yokota, S., Kawamura, H., Iizuka, A., Amagaya, S., Fukuda, K., Komatsu, Y., 1998. Inhibitory effect of Coptidis Rhizoma and Scutellariae Radix on azoxymethane-induced aberrant crypt foci formation in rat colon. Biol. Pharm. Bull. 21, 814–817.
+- Furunstrand Tafin, U., Clauss, M., Hauser, P.M., Bille, J., Meis, J.F., Trampuz, A., 2012. Isothermal microcalorimetry: A novel method for real-time determination of antifungal susceptibility of Aspergillus species. Clin. Microbiol. Infect. 18, E241–E245.
+- Govindaraghavan, S., Sucher, N.J., 2015. Quality assessment of medicinal herbs and their extracts: criteria and prerequisites for consistent safety and efficacy of herbal medicines. Epilepsy. Behav. 52, 363–371.
+- He, Y.H., Zheng, X., Sit, C., Loo, W.T., Wang, Z.Y., Xie, T., Jia, B., Ye, Q.B., Tsui, K., Chow, L.W., Chen, J.P., 2012. Using association rules mining to explore pattern of Chinese medical formulae (prescription) in treating and preventing breast cancer recurrence and metastasis. J. Transl. Med. 10 (S12), 1–8.
+- Iizuka, N., Miyamoto, K., Okita, K., Tangoku, A., Hayashi, H., Yosino, S., Abe, T., Morioka, T., Hazama, S., Oka, M., 2000. Inhibitory effect of Coptidis Rhizoma and berberine on the proliferation of human esophageal cancer cell lines. Cancer. Lett. 148, 19–25.
+- Kamgang, R., Pouokam, K.E., Fonkoua, M.C., Penlap, N.B., Biwole, S.M., 2005. Shigella dysenteriae type 1-induced diarrhea in rats. Jpn. J. Infect. Dis. 58, 335–337.
+- Kim, Y.J., Kang, S.A., Hong, M.S., Park, H.J., Kim, M.J., Park, H.J., Kim, H.K., 2004. Coptidis rhizoma induces apoptosis in human colorectal cancer cells SNU-C4. Am. J. Chinese Med. 32, 873.
+- Kong, W., Li, Z., Xiao, X., Zhao, Y., Zhang, P., 2010. Activity of berberine on Shigella dysenteriae investigated by microcalorimetry and multivariate analysis. J. Therm. Anal. Calorim. 102, 331–336.
+- Kong, W., Wang, J., Xing, X., Jin, C., Xiao, X., Zhao, Y., Zhang, P., Zang, Q., Li, Z., 2011. Screening for novel antibacterial agents based on the activities of compounds on metabolism of Escherichia coli: A microcalorimetric study. J. Hazard. Mater. 185, 346–352.
+- Kong, W.J., Zhao, Y.L., Xiao, X.H., Jin, C., Li, Z.L., 2009a. Quantitative and chemical fingerprint analysis for quality control of Rhizoma Coptidis chinensis based on UPLC-PAD combined with chemometrics methods. Phytomedicine 16, 950–959.
+- Kong, W.J., Zhao, Y.L., Xiao, X.H., Ren, Y.S., 2009b. Action of palmatine on Tetrahymena thermophila BF5 growth investigated by microcalorimetry. J. Hazard. Mater. 168, 609–613.
+- Lee, Y.W., Chen, T.L., Vernon, Y.R., Tsai, C.L., Chang, C.C., Liang, H.H., Tseng, S.H., Chien, S.C., Wang, C.C., 2014. Adjunctive traditional Chinese medicine therapy improves survival in patients with advanced breast cancer: a population-based study. Cancer 120, 1338–1344.
+- Li, J.X., Yan, D., Ma, L.N., Xiong, Y., Yan, C.X., Li, B.C., Peng, C., Xiao, X.H., 2013. A quality evaluation strategy for Rhizoma coptidis from a variety of different sources using chromatographic fingerprinting combined with biological fingerprinting. Chin. Sci. Bull. 58, 4092–4100.
+- Liu, C., Cheng, Y., Guo, D., Zhang, T., Li, Y., Hou, W., Huang, L., Xu, H., 2017. A new concept on quality marker for quality assessment and process control of Chinese medicines. Chin. Herb. Med. 9, 3–13.
+- Ma, F., Li, C., Wang, X., Yang, Z., Sun, C., Liang, P., 2014. A Bayesian method for comprehensive water quality evaluation of the Danjiangkou Reservoir water source area, for the middle route of the South-to-North Water Diversion Project in China. Front. Earth Sci. 8, 242–250.
+- Miao, C., Sun, L., Yang, L., 2015. Evaluation method for coalmining-based cities ecosystem based on attribute mathematical model with Huainan City as an example. Ecol. Indic. 48, 17–21.
+- Periska, T., Murad, L., Decy, S., Buhari, O., 2003. Antimicrobial resistance of bacterial pathogens associated with diarrheal patients in Indonesia. Am. J. Trop. Med. Hyg. 68, 666–670.
+- Qian, X., Zhang, L., Tao, Y., Huang, P., Li, J., Chai, C., Li, W., Di, L., Cai, B., 2015. Simultaneous determination of ten alkaloids of crude and wine-processed Rhizoma Coptidis aqueous extracts in rat plasma by UHPLC-ESI-MS/MS and its application to a comparative pharmacokinetic study. J. Pharmaceut. Biomed. 105, 64–73.
+- Qin, Y., Wang, J.B., Zhao, Y.L., Shan, L.M., Li, B.C., Fang, F., Jin, C., Xiao, X.H., 2012. Establishment of a bioassay for the toxicity evaluation and quality control of Aconitum herbs. J. Hazard. Mater. 199, 350–357.
+- Ren, L., Xue, X., Liang, X., 2013. Characterization of protoberberine alkaloids in Coptidis Rhizoma (Huanglian) by HPLC with ESI-MS/MS. J. Sep. Sci. 36, 1389–1396.
+- State Administration of Traditional Chinese Medicine of the People's Republic of China, 1984. Standard of Specifications and Grades of 76 Chinese Materia Medica. Ministry of Health of the People's Republic of China, Beijing (in Chinese).
+- Tan, H.L., Chan, K.G., Pusparajah, P., Duangjai, A., Saokaew, S., Khan, T.M., Lee, L.H., Goh, B.H., 2016. Rhizoma Coptidis: A potential cardiovascular protective agent. Front. Pharmacol. 7, 362.
+- Tang, J., Feng, Y.B., Tsao, S.W., Wang, N., Curtain, R., Wang, Y.W., 2009. Berberine and Coptidis Rhizoma as novel antineoplastic agents: A review of traditional use and biomedical investigations. J. Ethnopharmacol. 126, 5–17.
+- U.S. Food and Drug Administration, 2015. Botanical Drug Development Guidance for Industry. Federal Register, Rockville.
+- Wang, J., Zhang, X., Chu, X., Huang, M., Jin, C., Yan, D., Xiao, X., Liu, T., 2010a. Delphi-based study on scientificity of organoleptic evaluation for rhubarb commercial specification. China J. Chin. Mater. Med. 35, 2657–2661 (in Chinese).
+- Wang, N., Feng, Y., Lua, E.P.W., Tsang, C., Ching, Y., Man, K., Tong, Y., Nagamastu, T., Su, W., Tsao, S., 2010b. F-actin reorganization and inactivation of Rho signaling pathway involved in the inhibitory effect of Coptidis Rhizoma on hepatoma cell migration. Integr. Cancer. Ther. 9, 354–364.
+- Wang, N., Tan, H.Y., Li, L., Yuen, M.F., Feng, Y., 2015. Berberine and Coptidis Rhizoma as potential anticancer agents: recent updates and future perspectives. J. Ethnopharmacol. 176, 35–48.
+- Wu, Y.W., Gao, W.Y., Xiao, X.H., Liu, Y., 2005. Calorimetric investigation of the effect of hydroxyanthraquinones in Rheum officinale Baill on Staphylococcus aureus growth. Thermochim. Acta 429, 167–170.
+- Xiong, Y., 2015. Establishment of an Integrated Method for Quality Evaluation of Chinese Materia Medica: with a Case Study of Coptidis Rhizoma. Beijing University of Chinese Medicine, Beijing (in Chinese).
+- Yan, D., Li, J., Xiong, Y., Zhang, C., Luo, J., Han, Y., Wang, R., Qian, H., Li, J., Qiu, L., Peng, C., Lin, Y., Song, X., Xiao, X., 2014. Promotion of quality standard of herbal medicine by constituent removing and adding. Sci. Rep. 4, 3668.
+- Yan, D., Li, W., Xiao, X.H., Zhou, D.L., Han, Y.M., 2009. Microcalorimetric investigation of effect of berberine alkalids from Coptis chinensis Franch on intestinal diagnostic flora growth. Chin. Sci. Bull. 54, 369–373.
+- Yi, J., Ye, X., Wang, D., He, K., Yang, Y., Liu, X., Li, X., 2013. Safety evaluation of main alkaloids from Rhizoma Coptidis. J. Ethnopharmacol. 145, 303–310.
+- Yi, L., Liang, Z.T., Peng, Y., Guo, P., Wong, L.L., Wan, X.J., Ho, H.M., Yi, T., Zhao, Z.Z., 2015. Histochemical evaluation of alkaloids in rhizome of Coptis chinensis using laser microdissection and liquid chromatography/mass spectrometry. Drug Test. Anal. 7, 519–530.
+- Zhang, L., Ma, L., Yan, D., Zhang, C., Gao, D., Xiong, Y., Sheng, F., Dong, X., Xiao, X., 2014a. Dynamic monitoring of the cytotoxic effects of protoberberine alkaloids from Rhizoma Coptidis on HepG2 cells using the xCELLigence system. Chin. J. Nat. Med. 12, 0428–0435.
+- Zhang, X.J., Liu, L.J., Song, T.T., Wang, Y.Q., Yang, X.H., 2014b. An approach based on antioxidant fingerprint–efficacy relationship and TLC bioautography assay to quality evaluation of Rubia cordifolia from various sources. J. Nat. Med. 68, 448–454.
+- Zhong, L., Hu, D., Xu, H., Han, Q., Bian, Z., 2014. Efficacy-driven quality control platform for Chinese herbal medicine. Pharm. Anal. Acta 5, 1–3.
+- Zhu, M., Wang, N., Tsao, S.W., Yuen, M.F., Feng, Y., Wan, T.S., Man, K., Feng, Y., 2011. Up-regulation of microRNAs, miR21 and miR23a in human liver cancer cells treated with Coptidis rhizoma aqueous extract. Exp. Ther. Med. 2, 27–32.
+
 ## 訳者補足（本稿の位置づけ）
 
 - **一言でいうと**: 従来の多成分定量は「量」だけを見て各成分を並列に扱うが、本論文は各成分の「効きやすさ（活性）」で重み付けした合成指標 **ECI（効果-成分指数）** を作り、これを薬効指向の **Q-marker** とした。しかも抗菌用（ECIS）と抗腫瘍用（ECIH）で重みを変え、**同じ生薬でも用途別に品質を評価**できるようにした点が新しい。
