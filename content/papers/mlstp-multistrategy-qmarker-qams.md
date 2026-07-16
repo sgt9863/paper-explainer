@@ -90,3 +90,76 @@ MLSTP経口投与後のラット血清で先行研究が **27のプロトタイ�
 **結論:** 血清薬物化学・ネットワーク薬理・薬効・UPLC指紋・QAMSを統合した多戦略プラットフォームを構築し、6つの潜在的Q-markerを同定、QAMSで定量法を確立した。MLSTPの品質管理・規格向上に有用な参照を提供し、TAOの臨床治療を支える。
 
 > 補足（実務的示唆）: 本研究の枠組みは「血中に移行し効く成分(血清薬物化学) × 薬効標的(ネットワーク薬理＋動物実験) × 測定可能性(指紋・QAMS)」の三位一体でQ-markerを絞る点が要点。実務的には、ベルベリンを内部標準としたQAMSで標準品コストを抑えつつ6成分を同時定量でき、ESMと相対誤差±5%以内で代替可能。経路(PI3K-AKT/VEGF/HIF-1)まで紐づけている点が、単なる化学指標でなく薬効連動の規格設定に資する。
+
+## 参考文献
+
+1. H.Y. Li, H. Sun, A.H. Zhang, L.W. He, S. Qiu, J.R. Xue, F. Wu, X.J. Wang, Therapeutic effect and mechanism of Si-Miao-Yong-An-Tang on thromboangiitis obliterans based on the urine metabolomics approach, Front. Pharmacol. 13 (2022) 827733.
+
+2. M. Arnoriaga-Rodriguez, J. Mayneris-Perxachs, A. Burokas, O. Contreras- Rodriguez, G. Blasco, C. Coll, C. Biarnes, R. Miranda-Olivos, J. Latorre, J. M. Moreno-Navarrete, A. Castells-Nobau, M. Sabater, M.E. Palomo-Buitrago, J. Puig, S. Pedraza, J. Gich, V. Perez-Brocal, W. Ricart, A. Moya, X. Fernandez-Real, L. Ramio-Torrenta, R. Pamplona, J. Sol, M. Jove, M. Portero-Otin, R. Maldonado, J. M. Fernandez-Real, Obesity impairs short-term and working memory through gut microbial metabolism of aromatic amino acids, Cell Metab. 32 (2020), 548-560 e7.
+
+3. D.G. Cacione, C.R. Macedo, F. do Carmo Novaes, J.C. Baptista-Silva, Pharmacological treatment for Buerger’s disease, Cochrane Database Syst. Rev. 5 (2020) Cd011033.
+
+4. Z.F. Li, X.J. Shu, W.H. Wang, S.Y. Liu, L. Dang, Y.Q. Shi, Y.W. Bai, Predictive value of serum VEGF, IL-1 and TNF-α in the treatment of thromboangiitis obliterans by revascularization, Exp. Ther. Med. 20 (2020) 232.
+
+5. X.L. Sun, B.Y. Law, I.R. de Seabra Rodrigues Dias, S.W.F. Mok, Y.Z. He, V.K. Wong, Pathogenesis of thromboangiitis obliterans: Gene polymorphism and immunoregulation of human vascular endothelial cells, Atherosclerosis 265 (2017) 258–265.
+
+6. X.B. Wang, M.L. Wang, Y.J. Chu, P.P. Zhou, X.Y. Zhang, J. Zou, L.H. Zuo, Y.Y. Shi, J. Kang, B. Li, W.B. Cheng, Z. Sun, X.J. Zhang, S.Z. Du, Integrated pharmacokinetics and pharmacometabolomics to reveal the synergistic mechanism of a multicomponent Chinese patent medicine, Mailuo Shutong pills against thromboangiitis obliterans, Phytomedicine 112 (2023) 154709.
+
+7. F.F. Hong, C.S. He, X.J. Liu, G.L. Tu, F.X. Guo, S.L. Yang, Protective effect of Shenfu injection on thromboangiitis obliterans model rats, J. Ethnopharmacol. 138 (2011) 458–462.
+
+8. X.Y. Zhang, Y.J. Chu, M.L. Wang, Y.Y. Shi, L.H. Zuo, Z.L. Li, J.Y. Liu, J. Kang, S. Z. Du, B. Li, Z. Sun, X.J. Zhang, Rapid and comprehensive identification of chemical constituents in Mai-Luo-Shu-Tong pill by UHPLC-Q-Orbitrap HRMS combined with a data mining strategy, Anal. Methods 14 (2022) 4990–5000.
+
+9. Y.J. Chu, M.L. Wang, X.B. Wang, X.Y. Zhang, L.W. Liu, Y.Y. Shi, L.H. Zuo, S.Z. Du, J. Kang, B. Li, W.B. Cheng, Z. Sun, X.J. Zhang, Identifying quality markers of Mailuoshutong pill against thromboangiitis obliterans based on chinmedomics strategy, Phytomedicine 104 (2022) 154313.
+
+10. C.X. Liu, Y.Y. Cheng, D.A. Guo, T.J. Zhang, Y.Z. Li, W.B. Hou, L.Q. Huang, H.Y. Xu, A new concept on quality marker for quality assessment and process control of Chinese medicines, Chin. Herb. Med. 9 (2017) 3–13.
+
+11. X.J. Wang, A.H. Zhang, L. Kong, J.B. Yu, H.L. Gao, Z.D. Liu, H. Sun, Rapid discovery of quality-markers from Kaixin San using chinmedomics analysis approach, Phytomedicine 54 (2019) 371–381.
+
+12. H. Xiong, A.H. Zhang, Q.Q. Zhao, G.L. Yan, H. Sun, X.J. Wang, Discovery of quality-marker ingredients of Panax quinquefolius driven by high-throughput chinmedomics approach, Phytomedicine 74 (2020) 152928.
+
+13. F.T. Yin, X.H. Zhou, S.Y. Kang, X.H. Li, J. Li, I. Ullah, A.H. Zhang, H. Sun, X. J. Wang, Prediction of the mechanism of Dachengqi Decoction treating colorectal cancer based on the analysis method of " into serum components -action target-key pathway", J. Ethnopharmacol. 293 (2022) 115286.
+
+14. G. Bai, T. Zhang, Y. Hou, G. Ding, M. Jiang, G. Luo, From quality markers to data mining and intelligence assessment: a smart quality-evaluation strategy for traditional Chinese medicine based on quality markers, Phytomedicine 44 (2018) 109–116.
+
+15. H. Zhu, Y. Qiu, D. Gong, J. Wang, G. Sun, A novel method for quality consistency evaluation of Yankening Tablet by multi-wavelength fusion profiling combined with overall components dissolution method and antioxidant activity analysis, J. Pharm. Biomed. Anal. 196 (2021) 113910.
+
+16. X. Li, H. Yang, X. Pang, G. Sun, Entirely control the quality consistency of Rong’e Yishen oral liquid by both quantified profiling and quantitative analysis of multi- components by single marker method, J. Pharm. Biomed. Anal. 193 (2021) 113719.
+
+17. S.-i Ashida, M. Ishihara, H. Ogawa, Y. Abiko, Protective effect of ticlopidine on experimentally induced peripheral arterial occlusive disease in rats, Thromb. Res. 18 (1980) 55–67.
+
+18. M.L. Wang, Y.J. Chu, L.H. Zuo, M.F. Zhao, J.Y. Liu, B. Li, Z. Sun, X.J. Zhang, S. Z. Du, Therapeutic effect of Mailuo Shutong pills in thromboangiitis obliterans model rats, Chin. J. Pharmacol. Toxicol. 36 (2022) 17–24.
+
+19. M. Fei, W. Kewei, S. Jianfeng, G. Wenfei, H. Mingkui, X. Jiang, L. Yu, Advances in diagnosis and treatment of thromboangiitis obliterans, J. Vasc. Endovasc. Surg. 7 (2021), 1296-1301+1306.
+
+20. Z. Wei, W. Jiang, H. Wang, H. Li, B. Tang, B. Liu, H. Jiang, X. Sun, The IL-6/STAT3 pathway regulates adhesion molecules and cytoskeleton of endothelial cells in thromboangiitis obliterans, Cell. Signal. 44 (2018) 118–126.
+
+21. G. De Caridi, A. Bitto, M. Massara, G. Pallio, G. Pizzino, R. Serra, D. Altavilla, F. Squadrito, F. Spinelli, Increased serum HMGB-1, ICAM-1 and metalloproteinase- 9 levels in Buerger’s patients, Curr. Vasc. Pharmacol. 14 (2016) 382–387.
+
+22. A. Aliee, F. Zahedi Avval, H. Taheri, S.M. Moghadam, M. Soukhtanloo, D. Hamidi Alamdari, B. Fazeli, The status of nitric oxide and its backup, heme oxygenase 1, in thromboangiitis obliterans, Rep. Biochem. Mol. Biol. 6 (2018) 197–202.
+
+23. Z. Hegab, S. Gibbons, L. Neyses, M.A. Mamas, Role of advanced glycation end products in cardiovascular disease, World J. Cardiol. 4 (2012) 90–102.
+
+24. G.F. Guidetti, I. Canobbio, M. Torti, PI3K/Akt in platelet integrin signaling and implications in thrombosis, Adv. Biol. Regul. 59 (2015) 36–52.
+
+25. Z. Li, X. Li, Y. Zhu, Q. Chen, B. Li, F. Zhang, Protective effects of acetylcholine on hypoxia-induced endothelial-to-mesenchymal transition in human cardiac microvascular endothelial cells, Mol. Cell. Biochem. 473 (2020) 101–110.
+
+26. R. Raja, S. Kale, D. Thorat, G. Soundararajan, K. Lohite, A. Mane, S. Karnik, G. C. Kundu, Hypoxia-driven osteopontin contributes to breast tumor growth through Y. Chu et al. Journal of Pharmaceutical and Biomedical Analysis 243 (2024) 116070 12 modulation of HIF1α-mediated VEGF-dependent angiogenesis, Oncogene 33 (2014) 2053–2064.
+
+27. N. Ferrara, H.P. Gerber, J. LeCouter, The biology of VEGF and its receptors, Nat. Med. 9 (2003) 669–676.
+
+28. M. Masoudian, B. Fazeli, H. Sharebiani, A. Rajabnejad, H. Ravari, M.M. Akbarin, M. Dadgarmoghaddam, Association of the five gene related endothelial cell dysfunction polymorphisms with Buerger’s disease development, Int. Angiol. 35 (2016) 205–211.
+
+29. R.A. Johns, E. Takimoto, L.W. Meuchel, E. Elsaigh, A. Zhang, N.M. Heller, G. L. Semenza, K. Yamaji-Kegan, Hypoxia-inducible factor 1α Is a critical downstream mediator for hypoxia-induced mitogenic factor (FIZZ1/RELMα)-induced pulmonary hypertension, Arterioscler. Thromb. Vasc. Biol. 36 (2016) 134–144.
+
+30. M. Naveed, V. Hejazi, M. Abbas, A.A. Kamboh, G.J. Khan, M. Shumzaid, F. Ahmad, D. Babazadeh, X. FangFang, F. Modarresi-Ghazani, L. WenHua, Z. XiaoHui, Chlorogenic acid (CGA): A pharmacological review and call for further research, Biomed. Pharmacother. 97 (2018) 67–74.
+
+31. L. Zhang, W. Wei, Anti-inflammatory and immunoregulatory effects of paeoniflorin and total glucosides of paeony, Pharmacol. Ther. 207 (2020) 107452.
+
+32. J. Qin, J. Chen, F. Peng, C. Sun, Y. Lei, G. Chen, G. Li, Y. Yin, Z. Lin, L. Wu, J. Li, W. Liu, C. Peng, X. Xie, Pharmacological activities and pharmacokinetics of liquiritin: a review, J. Ethnopharmacol. 293 (2022) 115257.
+
+33. J. Chen, H. Ma, Y. Meng, Q. Liu, Y. Wang, Y. Lin, D. Yang, W. Yao, Y. Wang, X. He, P. Li, Analysis of the mechanism underlying diabetic wound healing acceleration by Calycosin-7-glycoside using network pharmacology and molecular docking, Phytomedicine 114 (2023) 154773.
+
+34. D. Song, J. Hao, D. Fan, Biological properties and clinical applications of berberine, Front. Med. 14 (2020) 564–582.
+
+35. K.C. Tay, L.T. Tan, C.K. Chan, S.L. Hong, K.G. Chan, W.H. Yap, P. Pusparajah, L. H. Lee, B.H. Goh, Formononetin: A review of its anticancer potentials and mechanisms, Front. Pharmacol. 10 (2019) 820. [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#1](#1) [\#11](#11) [\#11](#11) [\#11](#11) [\#11](#11) [\#11](#11) [mailto:dushuzhang911@163.com](mailto:dushuzhang911@163.com) [mailto:sunzhi2013@163.com](mailto:sunzhi2013@163.com)
+
