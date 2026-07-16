@@ -278,6 +278,98 @@ QAMSは単一の内部参照標準品を用いて複数の標的化合物を同�
 
 本研究の多技術連結戦略は、既存手法の限界を解決するだけでなく、より重要なことに「成分検出–品質評価」という品質管理の新パラダイムを確立し、伝統中薬の品質標準化研究に革新的な方法論的参考を提供する。この新手法は、YQGの品質評価に強力な根拠を与え、単一指標評価より包括的な総合品質評価を実現できる。検査・試験担当者の日常検査の効率と正確性を向上させ、異なる業者の異なるロットの品質評価・管理に技術的支援を提供し、規制当局によるロット出荷検査に利用でき、単一成分試験への依存を減らし、他の関連中成薬の迅速評価にも本質的な参考を提供する。
 
+## 参考文献
+
+> 原文はFrontiers方式（本文中は著者・年号で引用）。以下は著者名アルファベット順の一覧。
+
+1. Chen, J., Yang, Y., and Shi, Y. P. (2011). Simultaneous quantification of twelve active components in yiqing granule by ultra-performance liquid chromatography: application to quality control study. Biomed. Chromatogr. 25 (9), 1045–1053. doi:10.1002/bmc.1569
+
+2. Commission, S. P. (2020). Pharmacopoeia of the People's Republic of China. Beijing: China Medical Science Press.
+
+3. Cuadros-Rodríguez, L., Ruiz-Samblás, C., Valverde-Som, L., Pérez-Castaño, E., and González-Casado, A. (2016). Chromatographic fingerprinting: an innovative approach for food identification and food authentication – A tutorial. Anal. Chim. Acta 909, 9–23. doi:10.1016/j.aca.2015.12.042
+
+4. Fan, X., Hong, T., Yang, Q., Wang, D., Peng, J., Xiao, W., et al. (2022). Quality assessment of fried licorice based on fingerprints and chemometrics. Food Chem. 378, 132121. doi:10.1016/j.foodchem.2022.132121
+
+5. Feng, J., Xu, W., Tao, X., Wei, H., Cai, F., Jiang, B., et al. (2010). Simultaneous determination of baicalin, baicalein, wogonin, berberine, palmatine and jatrorrhizine in rat plasma by liquid chromatography–tandem mass spectrometry and application in pharmacokinetic studies after oral administration of traditional Chinese medicinal preparations containing scutellaria–coptis herb couple. J. Pharm. Biomed. Anal. 53 (3), 591–598. doi:10.1016/j.jpba.2010.04.002
+
+6. Gan, Y., Xiao, Y., Wang, S., Guo, H., Liu, M., Wang, Z., et al. (2019). Protein-based fingerprint analysis for the identification of ranae oviductus using RP-HPLC. Molecules 24 (9), 1687. doi:10.3390/molecules24091687
+
+7. Gao, L., Wang, F., and Meng, M. (2020). Chromatographic fingerprinting and quantitative analysis for the quality evaluation of xinfeng capsule. Acta Chromatogr. 33 (1), 37–43. doi:10.1556/1326.2020.00743
+
+8. Gong, D., Hong, Y., Sun, G., and Zhang, J. (2017). Novel strategy for quality consistency evaluation of Chinese medicine "YIQING" tablet that combines the simultaneous quantification and screening of ten bioactive constituents. J. Sep. Sci. 40 (15), 3064–3073. doi:10.1002/jssc.201700291
+
+9. Han, J., Xu, K., Yan, Q., Sui, W., Zhang, H., Wang, S., et al. (2022). Qualitative and quantitative evaluation of Flos puerariae by using chemical fingerprint in combination with chemometrics method. J. Pharm. Anal. 12 (3), 489–499. doi:10.1016/j.jpha.2021.09.003
+
+10. Huang, J., Yin, L., Dong, L., Quan, H., Chen, R., Hua, S., et al. (2018). Quality evaluation for Radix astragali based on fingerprint, indicative components selection and QAMS. Biomed. Chromatogr. 32 (11), e4343. doi:10.1002/bmc.4343
+
+11. Li, C., Tian, Y., Zhao, C., Li, S., Wang, T., Qiao, B., et al. (2021). Application of fingerprint combined with quantitative analysis and multivariate chemometric methods in quality evaluation of dandelion (Taraxacum mongolicum). R. Soc. Open Sci. 8 (10), 210614. doi:10.1098/rsos.210614
+
+12. Li, Y., Wu, T., Zhu, J., Wan, L., Yu, Q., Li, X., et al. (2010). Combinative method using HPLC fingerprint and quantitative analyses for quality consistency evaluation of an herbal medicinal preparation produced by different manufacturers. J. Pharm. Biomed. Anal. 52 (4), 597–602. doi:10.1016/j.jpba.2010.01.018
+
+13. Li, Y. X., Gong, X. H., Li, Y., Zhang, R. Q., Yuan, A., Zhao, M. J., et al. (2015). The influence of Aconitum carmichaelii debx. on the pharmacokinetic characteristics of main components in Rheum palmatum L. Phytother. Res. 29 (8), 1259–1264. doi:10.1002/ptr.5369
+
+14. Liu, X., Yang, T., Chen, L., Lan, L., Sun, G., and Guo, P. (2024). A strategy takes "Yiqing" tablets as an example to carry out simpler multi-component quantification and use fingerprint technology for comprehensive quality consistency evaluation. J. Pharm. Biomed. Anal. 238, 115809. doi:10.1016/j.jpba.2023.115809
+
+15. Liu, Z., Qu, J., Ke, F., Zhang, H., Zhang, Y., Zhang, Q., et al. (2022). Material basis elucidation and quantification of dandelion through spectrum–effect relationship study between UHPLC fingerprint and antioxidant activity via multivariate statistical analysis. Molecules 27 (9), 2632. doi:10.3390/molecules27092632
+
+16. Luan, L., Shen, X., Liu, X., Wu, Y., and Tan, M. (2018). Qualitative analysis of psoraleae fructus by HPLC-DAD/TOF-MS fingerprint and quantitative analysis of multiple components by single marker. Biomed. Chromatogr. 32 (2), e4059. doi:10.1002/bmc.4059
+
+17. Luo, J., Cao, W. G., Yu, B., Chen, H., Wu, Y. Q., Li, Y. H., et al. (2023). Quality evaluation of Hawk tea from different months and regions based on quantitative analysis of multiple components with a single marker (QAMS) combined with HPLC fingerprint. Phytochem. Anal. 34 (7), 884–897. doi:10.1002/pca.3261
+
+18. Mai, J., Liang, J., Liu, X., Tan, L., Xu, H., Li, Y., et al. (2020). Simultaneous determination of 5 components in the leaves of Dimocarpus longan by quantitative analysis of multicomponents by single marker (QAMS) based on UPLC and HPLC. J. Anal. Methods Chem. 2020, 3950609. doi:10.1155/2020/3950609
+
+19. Men, L., Liu, Y., Qiu, Y., and Yuan, X. (2021). An effective UPLC method for the quantification and fingerprint analysis of amides in a South China native medicinal herb, abri herba. J. Food Compos. Anal. 96, 103723. doi:10.1016/j.jfca.2020.103723
+
+20. Peng, Y., Dong, M., Zou, J., and Liu, Z. (2018). Analysis of the HPLC fingerprint and QAMS for Sanhuang gypsum soup. J. Anal. Methods Chem. 2018, 5890973. doi:10.1155/2018/5890973
+
+21. Qu, H., Ma, Y., Yu, K., and Cheng, Y. (2007). Simultaneous determination of eight active components in Chinese medicine 'YIQING' capsule using high-performance liquid chromatography. J. Pharm. Biomed. Anal. 43 (1), 66–72. doi:10.1016/j.jpba.2006.06.013
+
+22. Si, W., Qiao, Y., Liu, Z., Jin, G., Liu, Y., Xue, X., et al. (2020). Combination of multi-model statistical analysis and quantitative fingerprinting in quality evaluation of shuang-huang-lian oral liquid. Anal. Bioanal. Chem. 412, 7073–7083. doi:10.1007/s00216-020-02841-z
+
+23. Stekolshchikova, E., Turova, P., Shpigun, O., Rodin, I., and Stavrianidi, A. (2018). Application of quantitative analysis of multi-component system approach for determination of ginsenosides in different mass-spectrometric conditions. J. Chromatogr. A 1574, 82–90. doi:10.1016/j.chroma.2018.09.005
+
+24. Sun, J., Tian, F., Zhang, Y., Wu, M., Mao, R., Le, Z., et al. (2019). Chromatographic fingerprint and quantitative analysis of commercial Pheretima aspergillum (Guang Dilong) and its adulterants by UPLC-DAD. Int. J. Anal. Chem. 2019, 4531092. doi:10.1155/2019/4531092
+
+25. Trawiński, J., and Skibiński, R. (2019). Photodegradation study of sertindole by UHPLC-ESI-Q-TOF and influence of some metal oxide excipients on the degradation process. Pharmaceutics 11 (7), 299. doi:10.3390/pharmaceutics11070299
+
+26. Wang, C. Q., Jia, X.-H., Zhu, S., Komatsu, K., Wang, X., and Cai, S. Q. (2015). A systematic study on the influencing parameters and improvement of quantitative analysis of multi-component with single marker method using notoginseng as research subject. Talanta 134, 587–595. doi:10.1016/j.talanta.2014.11.028
+
+27. Wang, D., Gu, X., Fang, K., Fu, B., Liu, Y., and Di, X. (2023). Study on quality control of Zuojin pill by HPLC fingerprint with quantitative analysis of multi-components by single marker method and antioxidant activity analysis. J. Pharm. Biomed. Anal. 225, 115075. doi:10.1016/j.jpba.2022.115075
+
+28. Wang, J., Wang, L., Lou, G. H., Zeng, H. R., Hu, J., Huang, Q. W., et al. (2019). Coptidis Rhizoma: a comprehensive review of its traditional uses, botany, phytochemistry, pharmacology and toxicology. Pharm. Biol. 57 (1), 193–225. doi:10.1080/13880209.2019.1577466
+
+29. Wang, Y., Yu, Y., Sun, G., and Guo, Y. (2020). Quality evaluation of powdered poppy capsule extractive by systematic quantified fingerprint method combined with quantitative analysis of multi-components by single marker method. J. Pharm. Biomed. Anal. 185, 113247. doi:10.1016/j.jpba.2020.113247
+
+30. Wang, Z. L., Wang, S., Kuang, Y., Hu, Z. M., Qiao, X., and Ye, M. (2018). A comprehensive review on phytochemistry, pharmacology, and flavonoid biosynthesis of Scutellaria baicalensis. Pharm. Biol. 56 (1), 465–484. doi:10.1080/13880209.2018.1492620
+
+31. Wu, C., Xu, B., Li, Z., Song, P., and Chao, Z. (2021). Gender discrimination of Populus tomentosa barks by HPLC fingerprint combined with multivariate statistics. Plant Direct 5 (3), e00311. doi:10.1002/pld3.311
+
+32. Xiong, W., Yan, R., Liu, Y., Peng, S., Jiang, Z., Chai, X., et al. (2014). Establishment and validation of quantitative analysis of multi-components by single-marker for quality assessment of compound danshen preparations. Acta Chromatogr. 26 (4), 695–710. doi:10.1556/achrom.26.2014.4.11
+
+33. Xu, X., Yang, L., Zhao, D., Wang, Y., Dai, L., Li, S., et al. (2024). New quality evaluation of Qizhi Xiangfu pills based on fingerprint with chemometric analysis and quantitative analysis of multi-components by single marker. J. Chromatogr. Sci. 62, 854–863. doi:10.1093/chromsci/bmae005
+
+34. Yang, L., Li, Y., Hou, Y., Wu, Y., Tan, L., Mu, Z., et al. (2023). Multicomponent analysis of Liuwei Dihuang pills by a single marker quantification method and chemometric discrimination of fingerprints. J. Anal. Methods Chem. 2023, 6648668. doi:10.1155/2023/6648668
+
+35. Yang, Y., Vong, C. T., Zeng, S., Gao, C., Chen, Z., Fu, C., et al. (2021). Tracking evidences of Coptis chinensis for the treatment of inflammatory bowel disease from pharmacological, pharmacokinetic to clinical studies. J. Ethnopharmacol. 268, 113573. doi:10.1016/j.jep.2020.113573
+
+36. Zeng, Y., Zhao, L., Hao, M., Maimaiti, M., Li, Z., Zhang, M., et al. (2024). Analysis of an aqueous extract from Turkish galls based on multicomponent qualitative and quantitative analysis combined with network pharmacology and chemometric analysis. J. Anal. Methods Chem. 2024, 9962574. doi:10.1155/2024/9962574
+
+37. Zhang, C. Y., Li, X. X., Li, P., Jiang, Y., and Li, H. J. (2021). Consistency evaluation between dispensing granule and traditional decoction from Coptidis Rhizoma by using an integrated quality-based strategy. Phytochem. Anal. 32 (2), 153–164. doi:10.1002/pca.2905
+
+38. Zhang, F., Wu, R., Liu, Y., Dai, S., Xue, X., Li, Y., et al. (2023). Nephroprotective and nephrotoxic effects of Rhubarb and their molecular mechanisms. Biomed. Pharmacother. 160, 114297. doi:10.1016/j.biopha.2023.114297
+
+39. Zhang, R. T., Qing, W. W., Yang, L., Zou, J. J., Shi, Y. T., Xu, X. L., et al. (2022). Fingerprint combining with quantitative analysis of multi-components by single marker for quality control of Chenxiang Huaqi tablets. Phytochem. Anal. 33 (3), 335–343. doi:10.1002/pca.3090
+
+40. Zhang, X., Wang, L., Zong, R., Zhang, Z., Cheng, F., Song, C., et al. (2024). A rapid protocol for distinguishing the quality of Sanshengyin and identifying potential markers by the "three-in-one" fingerprint profiles with antioxidant activity. J. Chromatogr. A 1740, 465553. doi:10.1016/j.chroma.2024.465553
+
+41. Zheng, G. D., Li, K., Li, Y. S., and Liu, E. H. (2012). Fast profiling of chemical constituents in Yiqing Capsule by ultra-performance liquid chromatography coupled to electrospray ionization tandem mass spectrometry. J. Sep. Sci. 35 (1), 174–183. doi:10.1002/jssc.201100736
+
+42. Zhu, C., Li, X., Zhang, B., and Lin, Z. (2017). Quantitative analysis of multi-components by single marker—a rational method for the internal quality of Chinese herbal medicine. Integr. Med. Res. 6 (1), 1–11. doi:10.1016/j.imr.2017.01.008
+
+43. Zhu, J., Zhu, F., Li, L., Cheng, L., Zhang, L., Sun, Y., et al. (2019). Highly discriminant rate of Dianhong black tea grades based on fluorescent probes combined with chemometric methods. Food Chem. 298, 125046. doi:10.1016/j.foodchem.2019.125046
+
+44. Zou, J. J., Xu, X. L., Yang, L., Wang, Y. W., Li, Y., Dai, L., et al. (2023). Comprehensive quality evaluation of qizhi xiangfu pills based on quantitative analysis of multi-components by a single marker combined with GC fingerprints and chemometrics. J. AOAC Int. 106 (5), 1414–1423. doi:10.1093/jaoacint/qsad043
+
 ## 訳者補足
 
 > 補足（本稿の位置づけ）: 本論文は2011年の双黄連口服液（SHL）の研究（本サイトに別掲）と同系統の「指紋＋多成分定量」だが、10年以上を経て手法が明確に進化している。相違点は3つ：（1）定量が**外部標準法（ESM）からQAMSへ**移行し、12成分をベルベリン1種類の標準品だけで定量してコストと標準品依存を削減している（RCFを各条件で検証しRSD<5%を確認）、（2）**HPLCからUPLCへ**移行し分析時間を約0.5時間まで短縮、（3）類似度分析だけでなく**HCA・PCA・OPLS-DAのケモメトリクス**でロットを判別し、VIP>1の差異マーカーを抽出している。「類似度は全ロット>0.9で一見そろって見えるが、量には業者差があり、多変量解析で2群に分かれる」という論理は、指紋の限界（並び順は見えるが量の差を捉えにくい）を定量とケモメトリクスで補うという、近年のQC論文の典型的な構成である。
