@@ -262,6 +262,66 @@ HPLC指紋分析は複数バッチで安定・再現可能なプロファイル�
 
 本研究はHPLC指紋とケモメトリクスに基づきSHXXDの包括的植物化学評価戦略を確立した。SHXXDの化学的一貫性と特徴成分プロファイルを系統的に特性化し、分析安定性と構造代表性からレイン・アロエエモジン・エモジン・クリソファノールなど複数の代表化合物を潜在的Q-markerとして提案。クロマト指紋と多変量統計解析の統合により、伝統生薬方剤の品質評価の方法論的枠組みを提供。このアプローチはSHXXDと関連製剤の証拠ベースの標準化・近代化を促進し、複雑な植物製剤のより厳密な品質管理を支援しうる。
 
+## 参考文献
+
+> 原文はWiley方式（本文中は著者・年号で引用）。以下は著者名アルファベット順の一覧。
+
+1. Al Hasani, S., Z. Al-Attabi, M. Waly, N. Al-Habsi, L. Al-Subhi, and M. S. Rahman. 2023. "Polyphenol and Flavonoid Stability of Wild Blueberry (Sideroxylon mascatense) During Air- and Freeze-Drying and Storage Stability as a Function of Temperature." Foods 12, no. 4: 871. https://doi.org/10.3390/foods12040871
+
+2. Chen, Z. J., W. Li, M. S. Lin, et al. 2016. "Research Status of Sanhuang Xiexin Decoction and Analysis of Its Key Technologies and Core Issues." Chinese Traditional and Herbal Drugs 47, no. 22: 4111–4117.
+
+3. Feng, Y., Y. Ju, Z. Yan, et al. 2022. "Protective Role of Wogonin Following Traumatic Brain Injury by Reducing Oxidative Stress and Apoptosis via the PI3K/Nrf2/HO-1 Pathway." International Journal of Molecular Medicine 49, no. 4: 53. https://doi.org/10.3892/ijmm.2022.5109
+
+4. Gao, B., Y. C. Qu, M. Y. Cai, et al. 2023. "Phytochemical Interventions for Post-Traumatic Stress Disorder: A Cluster Co-Occurrence Network Analysis Using CiteSpace." Journal of Integrative Medicine 21, no. 4: 385–396. https://doi.org/10.1016/j.joim.2023.06.006
+
+5. Gao, Y., S. Q. Liu, J. L. Wang, et al. 2024. "In Vitro UPLC Analysis and Mass Spectrometry Identification, and In Vivo or Cellular Immune Anti-Inflammatory Function of Sanhuang Xiexin Decoction." Journal of Ethnopharmacology 318: 117002. https://doi.org/10.1016/j.jep.2023.117002
+
+6. Guan, H., Q. Wang, Y. Mei, et al. 2024. "A Multistep Approach for Exploring Quality Markers of Shengjiang Xiexin Decoction by Integrating Plasma Pharmacochemistry, Pharmacokinetics and Pharmacology." Journal of Pharmaceutical and Biomedical Analysis 241: 115999. https://doi.org/10.1016/j.jpba.2024.115999
+
+7. Guan, Y. Y., X. Q. Luo, L. Huang, et al. 2022. "Exploring the Mechanism of Sanhuang Xiexin Decoction in Treating Intracerebral Hemorrhage Based on Network Pharmacology." World Journal of Integrated Traditional and Western Medicine 17, no. 11: 2190–2205. https://doi.org/10.13935/j.cnki.sjzx.221112
+
+8. Laein, G. D., E. Boumeri, S. Ghanbari, et al. 2025. "Neuroprotective Effects of Berberine in Preclinical Models of Ischemic Stroke: A Systematic Review." BMC Pharmacology and Toxicology 26, no. 1: 40. https://doi.org/10.1186/s40360-025-00843-0
+
+9. Li, L., Y. Wang, L. Zhao, et al. 2022. "Sanhuang Xiexin Decoction Ameliorates Secondary Liver Injury in DSS-Induced Colitis Involving Regulation of Inflammation and Bile Acid Metabolism." Journal of Ethnopharmacology 299: 115682. https://doi.org/10.1016/j.jep.2022.115682
+
+10. Li, X., S. Chu, Y. Liu, and N. Chen. 2019. "Neuroprotective Effects of Anthraquinones From Rhubarb in Central Nervous System Diseases." Evidence-Based Complementary and Alternative Medicine 2019: 3790728. https://doi.org/10.1155/2019/3790728
+
+11. Li, Y., J. Fan, H. Jin, F. Wei, and S. Ma. 2024. "New Vision for TCM Quality Control: Elemental Fingerprints and Key Ingredient Combination Strategy for Identification and Evaluation of TCMs." European Journal of Medicinal Chemistry 281: 117006. https://doi.org/10.1016/j.ejmech.2024.117006
+
+12. Li, Z. T., P. C. Zhao, X. X. Wang, et al. 2025. "Insights Into Q-Marker of Shensong Yangxin Capsule in Treating Cardiac Arrhythmias Based on a Linear Substitution Strategy in Quantification of Multiple Components." Phytomedicine 138: 156382. https://doi.org/10.1016/j.phymed.2025.156382
+
+13. Liu, H., T. A. Zhang, W. Y. Zhang, H. S. Huang, Y. Hu, and J. Sun. 2023. "Rhein Attenuates Cerebral Ischemia-Reperfusion Injury via Inhibition of Ferroptosis Through NRF2/SLC7A11/GPX4 Pathway." Experimental Neurology 369: 114541. https://doi.org/10.1016/j.expneurol.2023.114541
+
+14. Liu, L., P. Hu, M. Chen, et al. 2025. "Rapid Characterization and Identification of the Chemical Constituents in San-Huang-Xie-Xin-Tang by HPLC-ESI-QTOF-MS/MS." Journal of Chromatographic Science 63, no. 4: bmae056. https://doi.org/10.1093/chromsci/bmae056
+
+15. Noviana, E., G. Indrayanto, and A. Rohman. 2022. "Advances in Fingerprint Analysis for Standardization and Quality Control of Herbal Medicines." Frontiers in Pharmacology 13: 853023. https://doi.org/10.3389/fphar.2022.853023
+
+16. Ou, H., C. Liu, S. Ye, et al. 2025. "A Novel Approach to Assessing Quality Issues and Component Annotation in TCM Prescription: Insights From 100 Common TCM Products." Journal of Pharmaceutical Analysis 15, no. 10: 101332. https://doi.org/10.1016/j.jpha.2025.101332
+
+17. Shang, Y., D. Liu, W. Zhang, et al. 2026. "Baicalein Attenuates Neuroinflammation in Thrombotic Stroke by Downregulating the TLR4/MyD88/NF-κB Signaling Pathway." Journal of Chinese Pharmaceutical Sciences 35, no. 1: 38–53. https://doi.org/10.5246/jcps.2026.01.003
+
+18. Tang, D., M. Chen, X. Huang, et al. 2023. "SRplot: A Free Online Platform for Data Visualization and Graphing." PLoS ONE 18, no. 11: e0294236. https://doi.org/10.1371/journal.pone.0294236
+
+19. Tang, X. Y., X. X. Wang, Z. X. Tan, et al. 2025. "Excavation of Q-Markers From Ba-Zi-Bu-Shen Capsule Through Efficacy Evaluation, Chemical Profile, Three-Dimensions-Overall Analysis and Anti-Osteoporosis Bioactivity Based on Combinatorial Algorithm." Journal of Ethnopharmacology 350: 120061. https://doi.org/10.1016/j.jep.2025.120061
+
+20. Tran, K. N., G. L. Mac, Y. A. Munni, and I. J. Yang. 2026. "Q-Marker Identification Strategies in Traditional Chinese Medicines: A Systematic Review of Research From 2020 to 2024." Frontiers in Medicine 12: 1709969. https://doi.org/10.3389/fmed.2025.1709969
+
+21. Wang, J., J. Gong, J. Liu, et al. 2025. "An Integrated Strategy for Quality Control of Bletillae Rhizoma Based on Q-Marker." Journal of Pharmaceutical and Biomedical Analysis 267: 117174. https://doi.org/10.1016/j.jpba.2025.117174
+
+22. Xu, Y., Y. Wang, X. Yue, H. Yang, P. Lv, and H. Bao. 2021. "Application of a New Validated HPLC-DAD Method for Simultaneous Determination of Ten Active Components in Xiedu San." Pakistan Journal of Pharmaceutical Sciences 34, no. 6: 2235–2245. https://doi.org/10.36721/PJPS.2021.34.6.REG.2235-2245.1
+
+23. Yan, L., Z. Ou, Y. Wang, Y. Tong, J. Wang, and D. Liu. 2025. "Analysis of Potential Q-Markers for Salt-Processed Alismatis Rhizoma in Diuresis Based on Fingerprinting Technology and Network Analysis." Current Issues in Molecular Biology 47, no. 9: 783. https://doi.org/10.3390/cimb47090783
+
+24. Yao, Y., M. Li, L. Zhang, et al. 2026. "Fingerprinting Combined With Chemometrics: New Strategies and Advances in Quality Evaluation of Traditional Chinese Medicine." Analytical Methods 18, no. 4: 774–785. https://doi.org/10.1039/d5ay01692d
+
+25. Yuan, Y., W. Men, X. Shan, et al. 2020. "Baicalein Exerts Neuroprotective Effect Against Ischaemic/Reperfusion Injury via Alteration of NF-κB and LOX and AMPK/Nrf2 Pathway." Inflammopharmacology 28, no. 5: 1327–1341. https://doi.org/10.1007/s10787-020-00714-6
+
+26. Zhang, L., Y. Hu, J. Zhang, M. Cai, L. Lan, and G. Sun. 2025. "Application of Chemical Pattern Recognition and Similarity Evaluation in Electrochemical and HPLC-DAD Fingerprints for Quality Consistency Study of Herbal Medicines." Analytica Chimica Acta 1349: 343830. https://doi.org/10.1016/j.aca.2025.343830
+
+27. Zhang, T., G. Bai, and C. Liu. 2024. "Innovation Theory, Technical Methods and Industrial Application of Quality Marker of Traditional Chinese Medicine." Chinese Herbal Medicines 17, no. 1: 84–86. https://doi.org/10.1016/j.chmed.2024.12.001
+
+28. Zhou, G., J. Zhang, H. Guo, et al. 2024. "Discovery and Validation of Potential Serum Biomarkers for Heart Failure by Untargeted Metabolomics." Cardiovascular Therapeutics 2024: 7004371. https://doi.org/10.1155/2024/7004371
+
 ## 訳者補足
 
 - **三黄瀉心湯（さんおうしゃしんとう）とは**: 大黄・黄連・黄芩の3味から成る古典漢方方剤で、日本でも医療用漢方製剤として広く使われる（清熱・瀉火・止血の作用）。名の「三黄」は3つの生薬名（大黄・黄連・黄芩）に「黄」が入ることに由来。本論文はこの方剤を「産地・バッチが違っても中身が一定か」をHPLC指紋で確かめ、品質の目印（Q-marker）を科学的に選んだ研究。
