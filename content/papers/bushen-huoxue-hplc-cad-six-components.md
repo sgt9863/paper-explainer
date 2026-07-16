@@ -173,6 +173,66 @@ $$S = \frac{4.4 \times 10^5}{\rho} \times d_p^{3.6} \tag{3}$$
 
 本実験でHPLC-CADに基づくBHP中6成分定量法を、高精度・良好な再現性・簡便な操作で確立し、BHPの品質基準改善の参照を提供する。TCM複方方剤（特に非発色団を含むもの）や他の複雑化学系の定量でのCAD応用は合理的でアクセス可能である。
 
+## 参考文献
+
+1. J.L. Ren, A.H. Zhang, X.J. Wang, Traditional Chinese medicine for COVID-19 treatment, Pharmacol. Res. 155 (2020), 104743.
+
+2. H.M. Gao, Z.M. Wang, Y.J. Li, Z.Z. Qian, Overview of the quality standard research of traditional Chinese medicine, Front. Med. (Lausanne) 5 (2) (2011) 195–202.
+
+3. J.L. Wolfender, HPLC in natural product analysis: the detection issue, Planta Med. 75 (7) (2009) 719–934.
+
+4. Charged aerosol detection for liquid chromatography and related separation techniquesH.A. Azeem, Paul H. Gamache (Eds.), Anal. Bioanal. Chem. 410 (11) (2018) 2663–2664.
+
+5. K. Filip, G. Grynkiewicz, M. Gruza, K. Jatczak, B. Zagrodzki, Comparison of ultraviolet detection and charged aerosol detection methods for liquid-chromatographic determination of protoescigenin, Acta Pol. Pharm. 71 (6) (2014) 933–940.
+
+6. I.A. Haidar Ahmad, A. Blasko, J. Tam, N. Variankaval, H.M. Halsey, R. Hartman, E.L. Regalado, Revealing the inner workings of the power function algorithm in charged aerosol detection: a simple and effective approach to optimizing power function value for quantitative analysis, J. Chromatogr. A 1603 (2019) 1–7.
+
+7. H.Y. Eom, S.Y. Park, M.K. Kim, J.H. Suh, H. Yeom, J.W. Min, U. Kim, J. Lee, J.R. Youm, S.B. Han, Comparison between evaporative light scattering detection and charged aerosol detection for the analysis of saikosaponins, J. Chromatogr. A 1217 (26) (2010) 4347–4354.
+
+8. S. Almeling, D. Ilko, U. Holzgrabe, Charged aerosol detection in pharmaceutical analysis, J. Pharm. Biomed. Anal. 69 (2012) 50–63.
+
+9. R. Yang, Z.N. Wu, Y.Q. Pu, T. Zhang, B. Wang, Fast and non-derivative method based on high-performance liquid chromatography-charged aerosol detection for the determination of fatty acids from Agastache rugosa (Fisch. et Mey.) O. Ktze. seeds, Nat. Prod. Res. 33 (13) (2019) 1969–1974.
+
+10. S. Martin-Torres, A.M. Jimenez-Carvelo, A. Gonzalez-Casado, L. Cuadros-Rodriguez, Differentiation of avocados according to their botanical variety using liquid chromatographic fingerprinting and multivariate classification tree, J. Sci. Food Agric. 99 (11) (2019) 4932–4941.
+
+11. Y.J. Yang, X.G. Sun, J. Yang, Q. Li, J. Zhang, Y. Zhao, B.P. Ma, B.L. Guo, Determination of three saponins in rhizoma and fibrous root of Trillium tschonoskii and Trillium kamtschaticum, Zhongguo Zhong Yao Za Zhi 42 (6) (2017) 1146–1151.
+
+12. Z.N. Wu, L. Li, N. Li, T. Zhang, Y.Q. Pu, X.T. Zhang, Y. Zhang, B. Wang, Optimization of ultrasonic-assisted extraction of fatty acids in seeds of Brucea Javanica (L.) Merr. from different sources and simultaneous analysis using high-performance liquid chromatography with charged aerosol detection, Molecules 22 (6) (2017) 931.
+
+13. S.D. Jia, J. Li, N. Yunusova, J.H. Park, S.W. Kwon, J. Lee, A new application of charged aerosol detection in liquid chromatography for the simultaneous determination of polar and less polar ginsenosides in ginseng products, Phytochem. Anal. 24 (4) (2013) 374–380.
+
+14. H.Y. Fung, Y. Lang, H.M. Ho, T.L. Wong, D.L. Ma, C.H. Leung, Q.B. Han, Comprehensive quantitative analysis of 32 chemical ingredients of a Chinese patented drug Sanhuang tablet, Molecules 22 (1) (2017) 111.
+
+15. Y. Li, Preliminary Study on the Chemical Composition in Vivo and Vitro of Bushen Huoxue Prescription and the Mechanism of Treating DR, Chengdu University of Traditional Chinese Medicine, 2018 (in Chinses).
+
+16. S.Y. Liu, Study on the Basis of the Efficacy of Bushen Huoxue Prescription in the Prevention and Treatment of DR Based on the Multi-dimensional Spectrum-Effect Relationship, Chengdu University of Traditional Chinese Medicine, 2019 (in Chinses).
+
+17. L.F. Ouyang, Z.L. Wang, J.G. Dai, L. Chen, Y.N. Zhao, Determination of total ginsenosides in ginseng extracts using charged aerosol detection with post-column compensation of the gradient, Chin. J. Nat. Med. 12 (11) (2014) 857–868.
+
+18. X.J. Xie, M. Zhang, M.F. Wang, The Invention Relates to a Chinese Traditional Medicine Composition and a Preparation Method Thereof. China, 2021.
+
+19. Z. Long, Z.M. Guo, I.N. Acworth, X.D. Liu, Y. Jin, X.G. Liu, L. Liu, L. Liang, A non-derivative method for the quantitative analysis of isosteroidal alkaloids from Fritillaria by high performance liquid chromatography combined with charged aerosol detection, Talanta 151 (2016) 239–244.
+
+20. N. Vervoort, D. Daemen, G. Torok, Performance evaluation of evaporative light scattering detection and charged aerosol detection in reversed phase liquid chromatography, J. Chromatogr. A 1189 (2008) 92–100.
+
+21. C. Asthana, G.M. Peterson, M. Shastri, R.P. Patel, Development and validation of a novel high performance liquid chromatography-coupled with corona charged aerosol detector method for quantification of glucosamine in dietary supplements, PLoS One 14 (5) (2019), e0216039.
+
+22. S.D. Jia, W.J. Lee, W.E. Ji, J.H. Park, S.W. Kwon, J. Lee, Comparison of ultraviolet detection, evaporative light scattering detection and charged aerosol detection methods for liquid-chromatographic determination of anti-diabetic drugs, J. Pharm. Biomed. Anal. 51 (4) (2010) 973–978.
+
+23. S. Furota, N.O. Ogawa, Y. Takano, T. Yoshimura, N. Ohkouchi, Quantitative analysis of underivatized amino acids in the subto several-nanomolar range by ion-pair HPLC using a corona-charged aerosol detector (HPLC-CAD), J Chromatogr B 1095 (2018) 191–197.
+
+24. C.E. Zhang, L.J. Liang, X.H. Yu, H. Wu, P.F. Tu, Z.J. Ma, K.J. Zhao, Quality assessment of astragali radix from different production areas by simultaneous determination of thirteen major compounds using tandem UV/charged aerosol detector, J. Pharm. Biomed. Anal. 165 (2019) 233–241.
+
+25. J. Fibigr, D. Satinsky, P. Solich, A UHPLC method for the rapid separation and quantification of phytosterols using tandem UV/Charged aerosol detection - a comparison of both detection techniques, J. Pharm. Biomed. Anal. 140 (2017) 274–280.
+
+26. S. Granica, J.P. Piwowarski, A.K. Kiss, Determination of C-glucosidic ellagitannins in Lythri herba by ultra-high performance liquid chromatography coupled with charged aerosol detector: method development and validation, Phytochem. Anal. 25 (3) (2014) 201–206.
+
+27. Y. Wang, Y.X. Liu, H.S. Yue, W.Y. Xu, J.M. Cao, H.Y. Jin, S.C. Ma, Comparison between the charged aerosol detector and evaporative light scattering detector for the analysis of sugar in Zhusheyong Yiqifumai and the study on the accuracy of methods, Zhongguo Zhong Yao Za Zhi 45 (2020) 5511–5517.
+
+28. Z.Y. Wang, C.Q. Li, M.J. Mu, J.Y. Dong, M.L. Liu, M. Zhang, X.J. Xie, Simultaneous determination of the content of danshensu, puerarin, daidzin and salvianolic acid B in Bushen Huoxue prescription by HPLC wavelength switching technology, Chin. J. Pharm. Anal. 36 (6) (2016) 1020–1026 (in Chinese).
+
+29. S.Y. Liu, X. Wang, Y.L. Li, Y.X. Pan, Y. Li, X.J. Xie, M. Zhang, HPLC-UV-ELSD fingerprint of different Bushen Huoxue prescriptions with different ratios, Liaoning J. Tradit. Chin. Med. 46 (02) (2019), 362-365+447 (in Chinese). 9
+
 ## 訳者補足
 
 - **なぜCADなのか**: 補腎活血方には性質が大きく異なる成分が混在する——プエラリン（UV吸収あり・葛根）、サルビアノール酸B（酸性基多数・丹参）、そして**UV吸収をほとんど持たないジンセノシド類（人参）**。UV検出器（DAD）ではジンセノシドが見えにくい。CAD（荷電化エアロゾル検出器）は「分離後に溶媒を蒸発させ、残った粒子を帯電させて数える」万能検出器なので、UV発色団の有無に関係なく質量ベースで一括定量できる。これが本論文の技術的キモ。生薬の多成分定量で「発色団のない成分をどう測るか」という定番の悩みへの実践解。

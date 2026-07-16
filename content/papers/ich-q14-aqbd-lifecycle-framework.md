@@ -225,6 +225,54 @@ AQbDへのリスクベースアプローチは、開発過程での意思決定�
 
 著者らは、最新の規制ガイドラインと整合する、分析法開発・バリデーションへの近代的でリスクベースのアプローチを実装する包括的ロードマップを提示した。このアプローチは効率向上・リスク低減・承認後変更の柔軟性向上を含む潜在的便益を提供する。
 
+## 参考文献
+
+1. Validation of Analytical Procedures: Text and Methodology Q2(R1). International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use, 2005. ICH Harmonised Tripartite Guidelines.
+
+2. Guidance for Industry: Q8(R2), Pharmaceutical Development. International Conference on Harmonisation, Docket No. FDA-2005D-0154, 2009. ICH Harmonised Tripartite Guidelines.
+
+3. Guidance for Industry: Q10, Pharmaceutical Quality System. International Conference on Harmonisation, 2008. ICH Harmonised Tripartite Guidelines.
+
+4. Guidance for Industry: Q12, Technical and Regulatory Considerations for Pharmaceutical Product Lifecycle Management. International Conference on Harmonisation, Docket No. FDA-2018-D-1609, 2019. ICH Harmonised Tripartite Guidelines.
+
+5. Analytical Procedure Development Q14. International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use, 2024. ICH Harmonised Tripartite Guidelines.
+
+6. Validation of Analytical Procedures Q2(R2). International Conference on Harmonisation of Technical Requirements for Registration of Pharmaceuticals for Human Use, 2023. ICH Harmonised Tripartite Guidelines. Analytical Chemistry pubs.acs.org/ac Perspective https://doi.org/10.1021/acs.analchem.4c04521 Anal. Chem. 2025, 97, 12−21 20
+
+7. United States Pharmacopeia (USP). General Chapter, ⟨1220⟩ Analytical Procedure Lifecycle; USP-NF: Rockville, MD, 2022.
+
+8. Jackson, P.; Borman, P.; Campa, C.; Chatfield, M.; Godfrey, M.; Hamilton, P.; Hoyer, W.; Norelli, F.; Orr, R.; Schofield, T. Anal. Chem. 2019, 91, 2577−2585.
+
+9. Borman, P.; Campa, C.; Delpierre, G.; Hook, E.; Jackson, P.; Kelley, W.; Protz, M.; Vandeputte, O. Anal. Chem. 2022, 94, 559− 570.
+
+10. Verch, T.; Campa, C.; Chéry, C. C.; Frenkel, R.; Graul, T.; Jaya, N.; Nakhle, B.; Springall, J.; Starkey, J.; Wypych, J.; Ranheim, T. AAPS J. 2022, 24, 34.
+
+11. Quality Risk Management Q9(R1). International Conference on Harmonisation, Docket No. FDA-2022-D-0705, 2023. ICH Harmonised Tripartite Guidelines
+
+12. Food and Drug Administration. Manual of Policies and Procedures: Establishing Impurity Acceptance Criteria as Part of Specifications for NDAs, ANDAs, and BLAs Based on Clinical Relevance; MAPP 5017.2 Rev. 1, Office of Pharmaceutical Quality, Center for Drug Evaluation and Research, May 1, 2020.
+
+13. EFPIA Position Paper on ICH Q6 A/B Revision, Version 1.0; European Federation of Pharmaceutical Industries and Associations/ Vaccines Europe, 2023.
+
+14. Food and Drug Administration. Comparability Protocols for Postapproval Changes to the Chemistry, Manufacturing, and Controls Information in an NDA, ANDA, or BLA. Docket Number FDA-2016D-0973, Center for Biologics Evaluation and Research, Center for Drug Evaluation and Research, Oct. 2022.
+
+15. European Medicines Agency Post-Authorisation Procedural Advice for Users of the Centralized Procedure. Report No. EMEA-H-19984/03, Rev. 108; European Medicine Agency, Human Medicines Evaluation Division, June 21, 2024.
+
+16. Beirle, J.; Cauchon, N.; Graul, T.; Hedberg, Y.; Holm, M. B.; Lepore, J. V.; MacKenzie, R.; Mistry, K.; Qian, X.; Robinson, K.; Rullo, G.; Tang, K.; Watson, J. N. Pharm. Eng. 2022, 42, 20−31.
+
+17. International Council for Harmonisation of Technical Requirements for Pharmaceuticals for Human Use. Quality Guidelines ICH. Available via the Internet at: www.ich.org/page/quality-guidelines. Accessed August 9, 2024.
+
+18. Acharya, G.; Pincus, M.; Gressard, H.; Borman, P. Pharm. Technol. 2024, 2024, 26−34.
+
+19. ISPE Good Practice Guide: Knowledge Management in the Pharmaceutical Industry; ISPE: Tampa, FL, 2021.
+
+20. Lipa, M. J.; Kane, P.; Greene, A. Effective Knowledge Transfer during Biopharmaceutical Technology TransferHow Well Do We Do It? J. Valid. Technol. 2019, 25, DOI: 10.21427/1djx-tc14.
+
+21. Schmelzer, B.; Mischo, A.; Innerbichler, F. PDA J. Pharm. Sci. Technol. 2021, 75, 341−356.
+
+22. Borman, P. J.; Guiraldelli, A. M.; Weitzel, J.; Thompson, S.; Ermer, J.; Roussel, J.-M.; Marach, J.; Sproule, S.; Pappa, H. N. Anal. Chem. 2024, 96, 966−979.
+
+23. Draft Toolbox Guidance on Scientific Elements and Regulatory Tools to Support Quality Data Packages for PRIME Marketing Authorization Applications; No. EMA/CHMP/BWP/QWP/IWG/ 69114/2019, European Medicine Agency, Feb. 2, 2021. Analytical Chemistry pubs.acs.org/ac Perspective https://doi.org/10.1021/acs.analchem.4c04521 Anal. Chem. 2025, 97, 12−21 21
+
 ## 訳者補足
 
 - **この論文の要点を一言で**: 「分析法バリデーション」は長らくICH Q2(R1)（2005年）の"一発検証"型だったが、新ガイドライン群（Q14/Q2(R2)/USP〈1220〉）は"ライフサイクル型"（開発〜承認後まで一貫管理）に変わる。全部やると大変なので、**費用対効果の高い4要素（①ATP＝分析の目標仕様書、②知識管理、③リスク評価、④性能モニタリング）だけをリスクに応じて選んで導入せよ**、というのが製薬企業（AbbVie）からの実務提言。
