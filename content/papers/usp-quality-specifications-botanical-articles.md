@@ -349,3 +349,85 @@ USP 生薬 DS・HMC HM モノグラフは、同一性・生物活性成分/品�
 - USP 一般試験法（GC）：〈7〉Labeling、〈11〉USP Reference Standards、〈203〉HPTLC Procedure for Identification of Articles of Botanical Origin、〈233〉Elemental Impurities—Procedures、〈467〉Residual Solvents、〈561〉Articles of Botanical Origin、〈565〉Botanical Extracts、〈621〉Chromatography、〈659〉Packaging and Storage Requirements、〈731〉Loss on Drying、〈921〉Water Determination、〈1225〉Validation of Compendial Procedures、〈2021〉〈2022〉〈2023〉Microbial tests、〈2232〉Elemental Contaminants in Dietary Supplements（USP 40–NF 35）。
 - USP モノグラフ：Cinnamomum cassia Twig、Dong Quai Root、Japanese Honeysuckle Flower、Rhodiola crenulata Root and Rhizome、Rhodiola rosea、HMC Polygonum multiflorum Root。
 - HMC/DS 命名ガイドライン（USP 2014, 2016）、Herbs of Commerce（Foster et al. 1992; McGuffin et al. 2000）、MPNS（Medicinal Plant Names Services, 2017）。
+
+---
+
+## 参考文献
+
+Ashakirin, S.N., Tripathy, M., Patil, U.K., Majeed, A.B.A., 2017. Chemistry and bioactivity of cinnamaldehyde: a natural molecule of medicinal importance. Int. J. Pharm. Sci. Res. 8, 2333–2340.
+
+Chai, X.Y., Li, S.L., Li, P., 2005. Quality evaluation of Flos Lonicerae through a simultaneous determination of seven saponins by HPLC with ELSD. J. Chromatogr. A. 1070, 43–48.
+
+European Commission (EC) Directorate-General For Health and Food Safety, 2017. Guidance document on analytical quality control and method validation procedures for pesticides residues analysis in food and feed, SANTE/11813/2017.
+
+Foster, S., Moley, T., Awang, D., 1992. Herbs of Commerce. American Herbal Products Association, Austin, TX.
+
+Gao, W., Yang, H., Qi, L.W., Liu, E.H., Ren, M.T., Yan, Y.T., Chen, J., Li, P., 2012. Unbiased metabolite profiling by liquid chromatography-quadrupole time-of-flight mass spectrometry and multivariate data analysis for herbal authentication: classification of seven Lonicera species flower buds. J. Chromatogr. A. 1245, 109–116.
+
+Li, X.Q., Sun, X.H., Cai, S., Ying, X.X., Li, F.M., 2009. Investigation on the chemical constituents and variation of the flower buds of Lonicera species by UPLC-ESI-MS/MS and principle component analysis. Yaoxue Xuebao 44, 895–904.
+
+McGuffin, M., Kartesz, J., Leung, A., Tucker, A., 2000. Herbs of Commerce, 2nd ed. American Herbal Products Association, Silver Spring, MD.
+
+MPNS, Medicinal Plant Names Services, 2017.
+
+Ren, M.T., Chen, J., Song, Y., Sheng, L.S., Li, P., Qi, L.W., 2008. Identification and quantification of 32 bioactive compounds in Lonicera species by high performance liquid chromatography coupled with time-of-flight mass spectrometry. J. Pharm. Biomed. Anal. 48, 1351–1360.
+
+United States Environmental Protection Agency (EPA), 1996. Residue chemistry test guidelines: OPPTS 860.1340 residue analytical method [EPA 712-C-96-174].
+
+United States Government Publishing Office (US GPO) Electronic Code of Federal Regulations. Code of Federal Regulations Title 21 § 101.4 (h), 2017a.
+
+United States Government Publishing Office (US GPO) Electronic Code of Federal Regulations. Code of Federal Regulations Title 40 § 180, 2017b.
+
+USP, 2014. Guideline for Assigning Titles to USP Herbal Medicines Compendium Monographs. Version 1.0: May 7, 2014.
+
+USP, 2015. USP Dietary Supplements Compendium.
+
+USP, 2016. Guideline for Assigning Titles to USP Dietary Supplement Monographs.
+
+USP, 2017a. Articles of Botanical Origin 〈561〉. United States Pharmacopeial Convention, Rockville, MD, pp. 426–440 USP 40–NF 35.
+
+USP, 2017b. Botanical Extracts 〈565〉. USP, Rockville, MD, pp. 452–454 USP 40–NF 35.
+
+USP, 2017c. Chromatography 〈621〉. USP, Rockville, MD, pp. 8071–8082 USP 40–NF 35, First supplement.
+
+USP, 2017d. Cinnamomum cassia Twig. USP, Rockville, MD, pp. 8443–8445 USP 40–NF 35, First supplement.
+
+USP, 2017e. Dong Quai root. Pharm Forum 43 (5).
+
+USP, 2017f. Elemental Contaminants in Dietary Supplements 〈2232〉. USP, Rockville, MD, pp. 2278–2282 USP 40–NF 35.
+
+USP, 2017g. Elemental Impurities—Procedures 〈233〉. USP, Rockville, MD, pp. 298–301 USP 40–NF 35.
+
+USP, 2017h. Guideline for the Admission of Dietary Supplement Ingredients to the USP–NF Monograph Development Process.
+
+USP, 2017i. High-Performance Thin-Layer Chromatography Procedure for Identification of Articles of Botanical Origin 〈203〉. USP, Rockville, MD, pp. 258–260 USP 40–NF 35.
+
+USP, 2017j. Japanese Honeysuckle Flower. USP, Rockville, MD, pp. 7055–7057 USP 40–NF 35.
+
+USP, 2017k. Labeling 〈7〉. USP, Rockville, MD, pp. 98–104 USP 40–NF 35.
+
+USP, 2017l. Loss on Drying 〈731〉. USP, Rockville, MD, pp. 614–615 USP 40–NF 35.
+
+USP, 2017m. Microbiological Attributes of Nonsterile Nutritional and Dietary Supplements 〈2023〉. USP, Rockville, MD, pp. 2256–2259 USP 40–NF 35.
+
+USP, 2017n. Microbial Enumeration Tests—Nutritional and Dietary Supplements 〈2021〉. USP, Rockville, MD, pp. 2245–2250 USP 40–NF 35.
+
+USP, 2017o. Microbiological Procedures for Absence of Specified Microorganisms—Nutritional and Dietary Supplements 〈2022〉. USP, Rockville, MD, pp. 2250–2256 USP 40–NF 35.
+
+USP, 2017p. Packaging and Storage Requirements 〈659〉. USP, Rockville, MD, pp. 529–534 USP 40–NF 35.
+
+USP, 2017q. Residual Solvents 〈467〉. USP, Rockville, MD, pp. 369–384 USP 40–NF 35.
+
+USP, 2017r. Rhodiola crenulata Root and Rhizome. USP, Rockville, MD, pp. 8904–8906 USP 40–NF 35, Second supplement.
+
+USP, 2017s. Rhodiola rosea. USP, Rockville, MD, pp. 7149–7151 USP 40–NF 35.
+
+USP, 2017t. USP Reference Standards 〈11〉. USP, Rockville, MD, pp. 104–106 USP 40–NF 35.
+
+USP, 2017u. Validation of Compendial Procedures 〈1225〉. USP, Rockville, MD, pp. 8094–8099 USP 40–NF 35, First supplement.
+
+USP, 2017v. Water Determination 〈921〉. USP, Rockville, MD, pp. 815–820 USP 40–NF 35.
+
+U.S. Pharmacopeial Convention Herbal Medicines Compendium, 2017. Polygonum multiflorum Root.
+
+Zhang, L., Du, J.R., Wang, J., Yu, D.K., Chen, Y.S., He, Y., Wang, C.Y., 2009. Z-ligustilide extracted from Radix Angelica Sinensis decreased platelet aggregation induced by ADP ex vivo and arterio-venous shunt thrombosis in vivo in rats. Yakugaku Zasshi 129, 855–859.
