@@ -112,16 +112,29 @@ Design Expert 11.0で2つの追加仮想因子を用いたDSDにより、ラン�
 
 Table IIIに生産収率・原料利用率・生産水分含量の6因子・交互作用モデルのANOVA結果をまとめる。p値前進回帰で非有意項を除去（有意水準0.1）。回帰モデル（式3-8）は良好に機能し、決定係数R²は0.87超（Table III）。予測R²（>0.5）は調整R²（>0.8）とよく一致し、新観測への良好な予測とデータ適合を示す。
 
-**Table II. DSD実験計画と応答（抜粋）**
+**Table II. DSD実験計画と応答（全19実験）**
 
-| Run | X1 | X2 | X3 | X4 | X5 | X6 | Y1(収率%) | Y2(利用率%) | Y3(水分%) |
-|---|---|---|---|---|---|---|---|---|---|
-| 2 | 70 | 2 | 5 | 25 | 65 | 30 | 99.76 | 90.04 | 0.98 |
-| 6 | 50 | 1 | 20 | 25 | 70 | 30 | 73.43 | 71.65 | 4.47 |
-| 7 | 60 | 2 | 20 | 55 | 70 | 30 | 99.41 | 97.03 | 1.46 |
-| 9 | 50 | 1 | 20 | 55 | 65 | 5 | 65.68 | 64.97 | 4.02 |
-| 14 | 70 | 2 | 5 | 55 | 60 | 5 | 99.91 | 94.79 | 1.34 |
-| 17 | 60 | 1.5 | 12.5 | 40 | 65 | 17.5 | 99.74 | 95.90 | 2.09 |
+| Run | パターン | X1 | X2 | X3 | X4 | X5 | X6 | Y1(収率%) | Y2(利用率%) | Y3(水分%) |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | -++00- | 50 | 2 | 20 | 40 | 60 | 5 | 98.31 | 94.79 | 3.13 |
+| 2 | ++--0+ | 70 | 2 | 5 | 25 | 65 | 30 | 99.76 | 90.04 | 0.98 |
+| 3 | -+0--+ | 50 | 2 | 12.5 | 25 | 60 | 30 | 99.79 | 93.42 | 1.9 |
+| 4 | -0--+- | 50 | 1.5 | 5 | 25 | 70 | 5 | 99.71 | 93.51 | 2.4 |
+| 5 | +0++-+ | 70 | 1.5 | 20 | 55 | 60 | 30 | 97.78 | 95.49 | 2.14 |
+| 6 | --+-++ | 50 | 1 | 20 | 25 | 70 | 30 | 73.43 | 71.65 | 4.47 |
+| 7 | 0+++++ | 60 | 2 | 20 | 55 | 70 | 30 | 99.41 | 97.03 | 1.46 |
+| 8 | ---+-+ | 50 | 1 | 5 | 55 | 60 | 30 | 99.81 | 94.92 | 1.8 |
+| 9 | --++0- | 50 | 1 | 20 | 55 | 65 | 5 | 65.68 | 64.97 | 4.02 |
+| 10 | 0----- | 60 | 1 | 5 | 25 | 60 | 5 | 99.87 | 96.17 | 2.1 |
+| 11 | +-+--0 | 70 | 1 | 20 | 25 | 60 | 17.5 | 89.94 | 88.59 | 2.62 |
+| 12 | +--0++ | 70 | 1 | 5 | 40 | 70 | 30 | 99.75 | 93.85 | 1.23 |
+| 13 | -+-++0 | 50 | 2 | 5 | 55 | 70 | 17.5 | 99.81 | 91.77 | 1.73 |
+| 14 | ++-+-- | 70 | 2 | 5 | 55 | 60 | 5 | 99.91 | 94.79 | 1.34 |
+| 15 | +++-+- | 70 | 2 | 20 | 25 | 70 | 5 | 98.43 | 95.53 | 2.18 |
+| 16 | +-0++- | 70 | 1 | 12.5 | 55 | 70 | 5 | 98.44 | 96.17 | 2.41 |
+| 17 | 000000 | 60 | 1.5 | 12.5 | 40 | 65 | 17.5 | 99.74 | 95.90 | 2.09 |
+| 18 | 000000 | 60 | 1.5 | 12.5 | 40 | 65 | 17.5 | 99.44 | 94.85 | 2.29 |
+| 19 | 000000 | 60 | 1.5 | 12.5 | 40 | 65 | 17.5 | 97.16 | 92.58 | 2.49 |
 
 **Table III. 回帰係数とp値（R²）**
 
@@ -137,6 +150,10 @@ Table IIIに生産収率・原料利用率・生産水分含量の6因子・交�
 
 $$Y_1 = 98.01 + 3.39x_1 + 4.89x_2 - 5.40x_3 - 2.27x_1x_2 + 2.89x_1x_3 + 4.73x_2x_3 - 3.28x_3^2 \tag{3}$$
 
+実測値スケール（復元）の式（式4）:
+
+$$Y_1 = 74.56 + 0.54X_1 + 21.24X_2 - 3.46X_3 - 0.45X_1X_2 + 0.04X_1X_3 + 1.26X_2X_3 - 0.06X_3^2 \tag{4}$$
+
 主要パラメータは噴霧給気温度(X1)・霧化圧(X2)・結合剤噴霧速度(X3)。影響順は **X3>X2>X1**、因子間に交互作用。交互作用項（X1X2, X1X3, X2X3）と二次項（X3²）が寄与。X3の主項・二次項とも収率に負の影響（X3増で収率減）、X1・X2増で収率増。低温はより大きくふわふわで密な顆粒、高給気温度は結合剤の急速蒸発で小さく脆い顆粒を生む。低霧化圧・高噴霧速度で大きな噴霧液滴が生じ固体粉末と衝突して過大粒子を形成——規格外で収率低下。低噴霧速度・高霧化圧では微細液滴が生じ、高霧化圧の剪断力が小さな湿潤域とより多くの微粉を生み流動空気で吹き飛ばされ収率低下。実生産では霧化圧を過度に高くしなかった。
 
 ![図2. 生産収率に対する各独立変数の影響を示す応答等高線図（a-c: X2・X3の効果、d-f: X1・X4ほか）。](assets/xiaochaihu-qbd-fluid-bed-granulation-dsd/fig2.png)
@@ -146,6 +163,10 @@ $$Y_1 = 98.01 + 3.39x_1 + 4.89x_2 - 5.40x_3 - 2.27x_1x_2 + 2.89x_1x_3 + 4.73x_2x
 回帰式（正規化式5、復元式6）:
 
 $$Y_2 = 91.37 + 3.53x_1 + 3.65x_2 - 3.36x_3 - 2.58x_1x_2 + 2.89x_1x_3 + 4.96x_2x_3 \tag{5}$$
+
+実測値スケール（復元）の式（式6）:
+
+$$Y_2 = 72.01 + 0.65X_1 + 21.75X_2 - 4.74X_3 - 0.52X_1X_2 + 0.04X_1X_3 + 1.32X_2X_3 \tag{6}$$
 
 主要パラメータはX1・X2・X3で効果係数は類似。**交互作用項X2X3が正に最も有意**。X3増で明確に低下、X1・X2増で上昇。高X2・低X3では小さな液滴・活性湿潤域で凝集が少なく微粉が多く利用率が低下、逆に低X2・高X3では反対。高噴霧給気温度が他因子のどの水準でも利用率向上に寄与。
 
@@ -157,21 +178,77 @@ $$Y_2 = 91.37 + 3.53x_1 + 3.65x_2 - 3.36x_3 - 2.58x_1x_2 + 2.89x_1x_3 + 4.96x_2x
 
 $$Y_3 = 2.25 - 0.47x_1 - 0.42x_2 + 0.60x_3 - 0.13x_4 - 0.26x_6 + 0.15x_1x_3 - 0.25x_2x_3 \tag{7}$$
 
+実測値スケール（復元）の式（式8）:
+
+$$Y_3 = 3.28 - 0.02X_1 - 0.03X_2 + 0.30X_3 - 0.008X_4 - 0.02X_6 + 0.002X_1X_3 - 0.07X_2X_3 \tag{8}$$
+
 主要パラメータはX1・X2・X3・X4・X6。影響順は **X3>X1>X2>X6>X4**。X1・X2・X4・X6が負、X3が正の効果。高噴霧速度・低霧化圧で大液滴・遅い蒸発が粒子内の水蓄積を招く。乾燥時間が水分に影響するが、乾燥給気温度(X5)は有意な効果なし（設定範囲が狭くバイカリン安定性確保のため低温維持）。噴霧・乾燥終了時の材料温度差は噴霧終了時17.08℃から乾燥終了時10.66℃に縮小し、温度の水分への影響を弱めた。
 
 ![図4. 生産時水分含量に対する各独立変数の影響を示す応答等高線図（a-i）。](assets/xiaochaihu-qbd-fluid-bed-granulation-dsd/fig4.png)
 
 ### 設計空間の開発と検証
 
-設計空間はDoEデータ解析の直接的成果で品質を保証し、設計空間内のパラメータ移動は届出対象の変更とみなされない。生産収率・原料利用率の下限を90%、水分含量の上限を4%に設定（Table IV）。設計空間計算法で、標準到達確率90%超のパラメータ組み合わせを設計空間内で達成（Fig.6、不規則形状）。
+設計空間はDoEデータ解析の直接的成果で品質を保証し、設計空間内のパラメータ移動は届出対象の変更とみなされない。生産収率・原料利用率の下限を90%、水分含量の上限を4%に設定（Table IV）。
+
+**Table IV. 従属変数の制約条件**
+
+| 従属変数 | 制約 | 最適化方向 |
+|---|---|---|
+| Y1: 生産収率(%) | 90 ≤ Y1 | 最大化 |
+| Y2: 原料利用率(%) | 90 ≤ Y2 | 最大化 |
+| Y3: 生産水分含量(%) | Y3 ≤ 4 | 該当なし |
+
+設計空間計算法で、標準到達確率90%超のパラメータ組み合わせを設計空間内で達成（Fig.6、不規則形状）。
 
 ![図6. XCHの流動層造粒・乾燥プロセスの設計空間（色付き領域が不規則形状の設計空間。各パネルは固定条件違い）。](assets/xiaochaihu-qbd-fluid-bed-granulation-dsd/fig6.png)
 
-検証実験3件（設計空間内2・外1、Table V）。平均絶対誤差（MAE, 式9）で実験値と予測値の偏差を表現。実験値(y)と予測値(ŷ)は概ね一致（Table VI）——モデルの予測性能が良好。**設計空間外の検証点は規格を満たさず、設計空間内の点は適格製品を製造**。ただし高霧化圧・高噴霧速度などの極端条件は乱流・過湿潤を招き堅牢性を保証できないため、実応用では設計空間内のパラメータ選択時に過程堅牢性を考慮すべき。
+検証実験3件（設計空間内2・外1、Table V）。
+
+**Table V. 検証実験の操作条件**
+
+| No. | X1 | X2 | X3 | X4 | X5 | X6 |
+|---|---|---|---|---|---|---|
+| 1（設計空間内） | 60 | 1.8 | 20 | 30 | 60 | 5 |
+| 2（設計空間内） | 60 | 1.2 | 10 | 30 | 65 | 10 |
+| 3（設計空間外） | 50 | 1 | 12.5 | 30 | 60 | 5 |
+
+平均絶対誤差（MAE、式9）で実験値と予測値の偏差を表現:
+
+$$MAE = \frac{1}{n}\sum\left|x_{exp} - x_{pre}\right| \tag{9}$$
+
+（$x_{exp}$：実験値、$x_{pre}$：回帰モデルによる予測値）
+
+実験値(y)と予測値(ŷ)は概ね一致（Table VI）——モデルの予測性能が良好。
+
+**Table VI. 検証実験の結果（各条件で3反復）**
+
+| No. | Y1実測(y) | Y1予測(ŷ) | Y1 MAE | Y2実測(y) | Y2予測(ŷ) | Y2 MAE | Y3実測(y) | Y3予測(ŷ) | Y3 MAE |
+|---|---|---|---|---|---|---|---|---|---|
+| 1-1（設計空間内） | 96.77 | 95.10 | 2.08 | 94.45 | 93.18 | 1.76 | 3.66 | 2.79 | 0.74 |
+| 1-2（設計空間内） | 96.89 | 95.10 | — | 94.83 | 93.18 | — | 3.56 | 2.79 | — |
+| 1-3（設計空間内） | 97.89 | 95.10 | — | 95.53 | 93.18 | — | 3.37 | 2.79 | — |
+| 2-1（設計空間内） | 97.73 | 97.45 | 0.52 | 94.6 | 91.29 | 3.02 | 2.59 | 2.49 | 0.17 |
+| 2-2（設計空間内） | 98.54 | 97.45 | — | 94.2 | 91.29 | — | 2.51 | 2.49 | — |
+| 2-3（設計空間内） | 97.63 | 97.45 | — | 94.13 | 91.29 | — | 2.87 | 2.49 | — |
+| 3-1（設計空間外） | 81.87 | 87.46 | 4.80 | 80.04 | 81.61 | 1.70 | 4.55 | 3.48 | 0.85 |
+| 3-2（設計空間外） | 81.61 | 87.46 | — | 79.16 | 81.61 | — | 4.06 | 3.48 | — |
+| 3-3（設計空間外） | 84.51 | 87.46 | — | 82.68 | 81.61 | — | 4.37 | 3.48 | — |
+
+（MAEは各条件3反復の代表値として1行目にのみ記載。原文の表構成に準拠）
+
+——モデルの予測性能が良好。**設計空間外の検証点は規格を満たさず、設計空間内の点は適格製品を製造**。ただし高霧化圧・高噴霧速度などの極端条件は乱流・過湿潤を招き堅牢性を保証できないため、実応用では設計空間内のパラメータ選択時に過程堅牢性を考慮すべき。
 
 ### APIの定量
 
-バイカリン含量をHPLC分析。検量線R²>0.9998（14.15–566.14 µg/mL）で優れた直線性。精度・試料安定性のRSD<1%。バイカリン平均回収率98.04±3.34%（RSD 3.41%）で良好な正確性。DSD・検証実験で製造した顆粒のバイカリン含量は**31.81〜34.10 mg/g（平均32.94 mg/g）**。原料のバイカリン含量に対し偏差1.35 mg/gは許容範囲——造粒・乾燥過程での有効成分の安定性を実証。全試料が薬典基準（下限5 mg/g）のバイカリン含量を満たし、開発過程の製品が薬典の品質要求を満たすことを示した。
+バイカリン含量をHPLC分析。検量線R²>0.9998（14.15–566.14 µg/mL）で優れた直線性。精度・試料安定性のRSD<1%。バイカリン平均回収率98.04±3.34%（RSD 3.41%）で良好な正確性。結果は Table VII（n=9）にまとめられる。
+
+**Table VII. 分析精度・試料安定性・正確性試験の結果（平均値±SD, n=9）**
+
+| 分析対象 | 注入精度RSD(%) | 併行精度RSD(%) | 試料安定性RSD(%) | 回収率 平均値(%) | 回収率RSD(%) |
+|---|---|---|---|---|---|
+| バイカリン | 0.13 | 0.80 | 0.79 | 98.04 ± 3.34 | 3.41 |
+
+DSD・検証実験で製造した顆粒のバイカリン含量は**31.81〜34.10 mg/g（平均32.94 mg/g）**。原料のバイカリン含量に対し偏差1.35 mg/gは許容範囲——造粒・乾燥過程での有効成分の安定性を実証。全試料が薬典基準（下限5 mg/g）のバイカリン含量を満たし、開発過程の製品が薬典の品質要求を満たすことを示した。
 
 ![図7. 試料と標準溶液の代表的HPLCクロマトグラム（a: 標準溶液、b: XCH試料）。](assets/xiaochaihu-qbd-fluid-bed-granulation-dsd/fig7.png)
 
@@ -183,7 +260,7 @@ $$Y_3 = 2.25 - 0.47x_1 - 0.42x_2 + 0.60x_3 - 0.13x_4 - 0.26x_6 + 0.15x_1x_3 - 0.
 
 ## 参考文献
 
-1. The Chinese Pharmacopoeia. Commission CP, editor. Beijing, China: China Medical Science Press;
+1. The Chinese Pharmacopoeia. Commission CP, editor. Beijing, China: China Medical Science Press; 2020. 604 p.
 
 2. Zheng C. The effects of the Xiaochaihu capsule on immunoglobulin A nephropathy. Clin J Chin Med. 2020;12(26):63–4.
 
@@ -259,7 +336,33 @@ $$Y_3 = 2.25 - 0.47x_1 - 0.42x_2 + 0.60x_3 - 0.13x_4 - 0.26x_6 + 0.15x_1x_3 - 0.
 
 38. Shao J, Qu H, Gong X. Comparison of two algorithms for development of design space-overlapping method and probability-based method. China J Chin Materia Med. 2018;43(10):2074–80.
 
-39. Chordiya M, Gangurde H, Sancheti V. Quality by design: a roadmap for quality pharmaceutical products. J Rep Pharma Sci. 2019;8(2):289. 40 Fukuda IM, Pinto CFF, Moreira CdS, Saviano AM, Lourenço FR. Design of experiments (DoE) applied to pharmaceutical and analytical quality by design (QbD). Braz J Pharm Sci. 2018;54:e01006. AAPS PharmSciTech (2023) 24:210 1 3 210 Page 14 of 14
+39. Chordiya M, Gangurde H, Sancheti V. Quality by design: a roadmap for quality pharmaceutical products. J Rep Pharma Sci. 2019;8(2):289.
+
+40. Fukuda IM, Pinto CFF, Moreira CdS, Saviano AM, Lourenço FR. Design of experiments (DoE) applied to pharmaceutical and analytical quality by design (QbD). Braz J Pharm Sci. 2018;54:e01006.
+
+41. Kim JY, Choi DH. Quality by design approach with multivariate analysis and artificial neural network models to understand and control excipient variability. J Pharm Investig. 2023;53(3):389–406.
+
+42. Parikh DM. Handbook of pharmaceutical granulation technology. 3rd ed. Ellicott City, Maryland, USA: CRC Press; 2010.
+
+43. Zeng J, Ming L, Wang J, Huang T, Liu B, Feng L, et al. Empirical prediction model based process optimization for droplet size and spraying angle during pharmaceutical fluidized bed granulation. Pharm Dev Technol. 2020;25(6):720–8.
+
+44. Teresa J, Christelle T, Elisabeth D. Particles agglomeration in a conical fluidized bed in relation with air temperature profiles. Chem Eng Sci. 2006;61(18):5954–61.
+
+45. Bemrose CR, Bridgwater J. A review of attrition and attrition test methods. Powder Technol. 1987;49(2):97–126.
+
+46. Stefan H, Jan B, Markus H, Matthias I, Mirko P, Lothar M. Study of dynamic multi-dimensional temperature and concentration distributions in liquid-sprayed fluidized beds. Chem Eng Sci. 2003;58(23):5135–60.
+
+47. Chen W, Chang S-Y, Kiang S, Early W, Paruchuri S, Desai D. The measurement of spray quality for pan coating processes. J Pharm Innov. 2008;3(1):3–14.
+
+48. Henrik E, Jussi L, Osmo A, Heikki R, Jyrki H, Jouko Y. In situ droplet size and speed determination in a fluid-bed granulator. Int J Pharm. 2010;391(1):148–54.
+
+49. Karine L, Cédric B, Thierry G, Jérôme B, Pierre G, Maurice B. Experimental measurement of droplet vaporization kinetics in a fluidized bed. Chem Eng Process: Process Intensif. 2004;43(6):693–9.
+
+50. Qiu F, Tang X, He Z, Li H. Stability of baicalin aqueous solution by validated RP-HPLC. J Chin Pharm Sci. 2004;02:134–7.
+
+51. Yu LX, Amidon G, Khan MA, Hoag SW, Polli J, Raju GK, et al. Understanding Pharmaceutical Quality by Design. AAPS J. 2014;16(4):771–83.
+
+52. Sonawane A, Pathak S, Pradhan RC. Bioactive compounds in bael fruit pulp waste: ultrasound-assisted extraction, characterization, modeling, and optimization approaches. Biointerface Res Appl Chem. 2021;11(2):9318–34.
 
 ## 訳者補足
 
@@ -273,4 +376,4 @@ $$Y_3 = 2.25 - 0.47x_1 - 0.42x_2 + 0.60x_3 - 0.13x_4 - 0.26x_6 + 0.15x_1x_3 - 0.
 
 - **小柴胡湯（ショウサイコトウ）とは**: 柴胡・半夏・黄芩・党参（人参）・甘草・生姜・大棗の7味から成る張仲景の古典方剤で、少陽病（往来寒熱など）に用いる代表的な和解剤。日本でも医療用漢方として広く使われる。
 
-- 図Fig.2-4（応答等高線）・Fig.6（設計空間）・Fig.7-8（HPLC・含量）を本文に埋め込み。Fig.1（石川図）・Fig.5（材料温度）と検証データ（Table V-VII）の詳細は原文参照。
+- 図Fig.2-4（応答等高線）・Fig.6（設計空間）・Fig.7-8（HPLC・含量）を本文に埋め込み。Fig.1（石川図）・Fig.5（材料温度）はベクター/散布図のため図としての埋め込みは割愛（本文の該当箇所に数値・関係性は文章化）。検証データ（Table V・VI）・分析バリデーションデータ（Table VII）は本文中の表として掲載済み。

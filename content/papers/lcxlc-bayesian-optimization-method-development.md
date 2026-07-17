@@ -160,6 +160,43 @@ LC×LC の法開発・最適化は多数の設計判断を要し、日常分析�
 
 BO を適用し、新規クロマト応答関数を最大化して LC×LC の8勾配パラメータを最適化できることを示した。50成分×4サンプルで異なるシードの100試行により最悪ケース性能を評価し、グリッド探索（11,664実験）・乱択探索とベンチマーク。100反復の予算で BO は概して乱択を上回り、しばしばグリッドを改善。**全試行でグリッド最大に達するのに A例で700反復・B-D例で250反復未満**（グリッド比10〜100倍の高速化）で、多くはさらに速い（B-D は80%以上が<100反復で収束）。初期化実験の選択を工夫すればさらに改善しうる。BO は多パラメータの保持モデリング最適化、ひいては単純〜中程度の分離問題の直接実験最適化に有効な手法である。本研究は単純化したクロマト（ガウスピーク・等濃度・生成成分）で行ったため、続報では非理想性の影響を本結果を基準に評価する必要がある。直接実験最適化への適用には、ピーク検出・ピークトラッキング等のデータ処理アルゴリズムが分離の質の正確・一貫した評価に不可欠。とはいえ BO が自動の直接実験最適化で重要な役割を果たしうることは明らかである。
 
+## 参考文献
+
+1. A. D'Attoma, C. Grivel, S. Heinisch, On-line comprehensive two-dimensional separations of charged compounds using reversed-phase high performance liquid chromatography and hydrophilic interaction chromatography. Part I: orthogonality and practical peak capacity considerations, J. Chromatogr. A 1262 (2012) 148–159, https://doi.org/10.1016/j.chroma.2012.09.028.
+2. R.J. Vonk, A.F. Gargano, E. Davydova, H.L. Dekker, S. Eeltink, L.J. De Koning, P.J. Schoenmakers, Comprehensive two-dimensional liquid chromatography with stationary-phase-assisted modulation coupled to high-resolution mass spectrometry applied to proteome analysis of Saccharomyces cerevisiae, Anal. Chem. 87 (10) (2015) 5387–5394, https://doi.org/10.1021/acs.analchem.5b00708.
+3. P. Dugo, N. Fawzy, F. Cichello, F. Cacciola, P. Donato, L. Mondello, Stop-flow comprehensive two-dimensional liquid chromatography combined with mass spectrometric detection for phospholipid analysis, J. Chromatogr. A 1278 (2013) 46–53, https://doi.org/10.1016/j.chroma.2012.12.042.
+4. M.J. den Uijl, P.J. Schoenmakers, G.K. Schulte, D.R. Stoll, M.R. van Bommel, B.W. Pirok, Measuring and using scanning-gradient data for use in method optimization for liquid chromatography, J. Chromatogr. A 1636 (2021) 461780, https://doi.org/10.1016/j.chroma.2020.461780.
+5. B.W. Pirok, S.R. Molenaar, L.S. Roca, P.J. Schoenmakers, Peak-tracking algorithm for use in automated interpretive method-development tools in liquid chromatography, Anal. Chem. 90 (23) (2018) 14011–14019, https://doi.org/10.1021/acs.analchem.8b03929.
+6. J.W. Dolan, D.C. Lommen, L.R. Snyder, DryLab® computer simulation for high-performance liquid chromatographic method development. II. Gradient elution, 1989, https://doi.org/10.1016/S0021-9673(01)89134-2.
+7. B.W. Pirok, S. Pous-Torres, C. Ortiz-Bolsico, G. Vivó-Truyols, P.J. Schoenmakers, Program for the interpretive optimization of two-dimensional resolution, J. Chromatogr. A 1450 (2016) 29–37, https://doi.org/10.1016/j.chroma.2016.04.061.
+8. W. Hao, B. Li, Y. Deng, Q. Chen, L. Liu, Q. Shen, Computer aided optimization of multilinear gradient elution in liquid chromatography, J. Chromatogr. A 1635 (2021) 461754, https://doi.org/10.1016/j.chroma.2020.461754.
+9. B. Huygens, K. Efthymiadis, A. Nowé, G. Desmet, Application of evolutionary algorithms to optimise one- and two-dimensional gradient chromatographic separations, J. Chromatogr. A 1628 (2020) 461435, https://doi.org/10.1016/j.chroma.2020.461435.
+10. J. Bergstra, R. Bardenet, Y. Bengio, B. Kégl, Algorithms for hyper-parameter optimization, Adv. Neural Inf. Process. Syst. 24 (2011).
+11. D. Lizotte, T. Wang, M. Bowling, D. Schuurmans, Automatic gait optimization with Gaussian process regression, IJCAI International Joint Conference on Artificial Intelligence (2007) 944–949.
+12. R. Marchant, F. Ramos, Bayesian optimisation for intelligent environmental monitoring, IEEE International Conference on Intelligent Robots and Systems (2012) 2242–2249, https://doi.org/10.1109/IROS.2012.6385653.
+13. J. Azimi, A. Jalali, X. Fern, Hybrid batch Bayesian optimization, Proceedings of the 29th International Conference on Machine Learning, ICML 2012, 2 (2012) 1215–1222.
+14. S. Daulton, M. Balandat, E. Bakshy, Differentiable expected hypervolume improvement for parallel multi-objective Bayesian optimization, arXiv (2020).
+15. A. Kensert, G. Collaerts, K. Efthymiadis, G. Desmet, D. Cabooter, Deep Q-learning for the selection of optimal isocratic scouting runs in liquid chromatography, J. Chromatogr. A 1638 (2021) 461900, https://doi.org/10.1016/j.chroma.2021.461900.
+16. P. Nikitas, A. Pappa-Louisi, Retention models for isocratic and gradient elution in reversed-phase liquid chromatography, J. Chromatogr. A 1216 (10) (2009) 1737–1755, https://doi.org/10.1016/j.chroma.2008.09.051.
+17. U.D. Neue, H.J. Kuss, Improved reversed-phase gradient retention modeling, J. Chromatogr. A 1217 (24) (2010) 3794–3803, https://doi.org/10.1016/j.chroma.2010.04.023.
+18. U.D. Neue, D.H. Marchand, L.R. Snyder, Peak compression in reversed-phase gradient elution, J. Chromatogr. A 1111 (1) (2006) 32–39, https://doi.org/10.1016/j.chroma.2006.01.104.
+19. H. Poppe, J. Paanakker, M. Bronckhorst, Peak width in solvent-programmed chromatography: I. General description of peak broadening in solvent-programmed elution, J. Chromatogr. A 204 (C) (1981) 77–84, https://doi.org/10.1016/S0021-9673(00)81641-6.
+20. J. Snoek, H. Larochelle, R.P. Adams, Practical Bayesian optimization of machine learning algorithms, Adv. Neural Inf. Process. Syst. 4 (2012) 2951–2959.
+21. C. Oh, E. Gavves, M. Welling, BOCK: Bayesian optimization with cylindrical kernels, Proceedings of Machine Learning Research (2018) 3868–3877.
+22. C.E. Rasmussen, Gaussian Processes in Machine Learning, Springer Verlag, 2004, pp. 63–71, https://doi.org/10.1007/978-3-540-28650-9_4.
+23. B. Shahriari, K. Swersky, Z. Wang, R.P. Adams, N. De Freitas, Taking the human out of the loop: a review of Bayesian optimization, Proc. IEEE 104 (1) (2016) 148–175, https://doi.org/10.1109/JPROC.2015.2494218.
+24. A.D. Bull, Convergence rates of efficient global optimization algorithms, Journal of Machine Learning Research 12 (2011) 2879–2904.
+25. J. Bergstra, Y. Bengio, Random search for hyper-parameter optimization, Journal of Machine Learning Research 13 (2012) 281–305.
+26. M. Balandat, B. Karrer, D.R. Jiang, S. Daulton, B. Letham, A.G. Wilson, E. Bakshy, BoTorch: a framework for efficient Monte-Carlo Bayesian optimization, Adv. Neural Inf. Process. Syst. 33 (2020).
+27. J.R. Gardner, G. Pleiss, D. Bindel, K.Q. Weinberger, A.G. Wilson, GPyTorch: black-box matrix-matrix Gaussian process inference with GPU acceleration, in: Advances in Neural Information Processing Systems, volume 2018-Decem, 2018, pp. 7576–7586.
+28. B.W. Pirok, S.R. Molenaar, R.E. van Outersterp, P.J. Schoenmakers, Applicability of retention modelling in hydrophilic-interaction liquid chromatography for algorithmic optimization programs with gradient-scanning techniques, J. Chromatogr. A 1530 (2017) 104–111, https://doi.org/10.1016/j.chroma.2017.11.017.
+29. J.T. Matos, R.M. Duarte, A.C. Duarte, Trends in data processing of comprehensive two-dimensional chromatography: state of the art, Journal of Chromatography B: Analytical Technologies in the Biomedical and Life Sciences 910 (2012) 31–45, https://doi.org/10.1016/j.jchromb.2012.06.039.
+30. J.T. Matos, R.M. Duarte, A.C. Duarte, Chromatographic response functions in 1D and 2D chromatography as tools for assessing chemical complexity, Trends in Analytical Chemistry 45 (2013) 14–23, https://doi.org/10.1016/j.trac.2012.12.013.
+31. M.R. Schure, Quantification of resolution for two-dimensional separations, J. Microcolumn Sep. 9 (3) (1997) 169–176, https://doi.org/10.1002/(sici)1520-667x(1997)9:3<169::aid-mcs5>3.0.co;2-23.
+32. G. Vivó-Truyols, S. Van Der Wal, P.J. Schoenmakers, Comprehensive study on the optimization of online two-dimensional liquid chromatographic systems considering losses in theoretical peak capacity in first- and second-dimensions: a pareto-optimality approach, Anal. Chem. 82 (20) (2010) 8525–8536, https://doi.org/10.1021/ac101420f.
+
+> 補足: 原文の参考文献は全 32 件（[1]〜[32]、本文中の脚注番号もこの範囲に対応）で、Drive の自然言語抽出テキストは単一列でほぼ乱れなく読み取れた（[10][11][13][14][20][21][24][25][27] は原文に DOI リンクが無く Elsevier 内部の refhub アンカーのみだったため、上記でも DOI を付していない）。[31] の DOI 末尾（"2-23"）は原文中のハイパーリンク先を複数箇所で確認した値をそのまま転記しており、慣例的な SICI チェック桁（通常は "2-3" の1桁）と異なる可能性がある。
+
 ## 訳者補足（実務者向けの読みどころ）
 
 > 以下は原文に無い、生薬・漢方QC実務の観点からの補足である（本文の訳と混ぜない）。
