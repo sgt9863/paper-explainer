@@ -255,6 +255,33 @@ TCM の近代化・国際化は、活性成分の不明確さや品質管理法�
 
 本 AI 主導戦略は TCM の科学的理解を進めるだけでなく、治療効果の一貫性を担保する。ただし、ゼブラフィッシュモデルによる血管新生促進への注力は知見を与える一方、他の潜在的生物活性を見落としている。今後は抗炎症・抗酸化・神経保護などの活性の探索が考えられる。また、7 活性成分を発見したものの、その作用機序、とりわけ細胞シグナル経路に関するより深い探索が必要である。加えて、本 NIRS システムは実験変動や外部要因に敏感でありうるモデル・アルゴリズムに依拠しており、これらの精緻化・検証は継続中である。今後、より高度な AI アルゴリズムとマルチオミクスアプローチの統合が、TCM のより全体論的な特徴づけをもたらし、精密医療・個別化治療への道を開く大きな可能性を秘めている。
 
+## 参考文献
+
+1. C. Yang, X. Chen, W. Zhao, W. Han, Y. Zhang, J. Li, S. Zhou, Research on quality of traditional Chinese medicine preparations based on control of source, Chin. Tradit. Herb. Drugs 52 (2021) 321–326, https://doi.org/10.7501/j.issn.0253-2670.2021.02.002.
+2. A. Zhao, C. Guo, L. Wang, S. Chen, Q. Xu, J. Cheng, J. Zhang, J. Jiang, J. Di, H. Zhang, F. Chen, J. Su, L. Jiang, L. Liu, Y. Liu, A. Liu, Xiebai San alleviates acute lung injury by inhibiting the phosphorylation of the ERK/Stat3 pathway and regulating multiple metabolisms, Phytomedicine (2024) 128, https://doi.org/10.1016/j.phymed.2024.155397.
+3. P. Hao, F. Jiang, J. Cheng, L. Ma, Y. Zhang, Y. Zhao, Traditional Chinese medicine for cardiovascular disease, J. Am. Coll. Cardiol. 69 (2017) 2952–2966, https://doi.org/10.1016/j.jacc.2017.04.041.
+4. W.H. Organization, Cardiovasc. Dis. (2024).
+5. X. Saiyang, W. Deng, T. Qizhu, Sirtuin 6: a potential therapeutic target for cardiovascular diseases, Pharmacol. Res. 163 (2021) 105214, https://doi.org/10.1016/j.phrs.2020.105214.
+6. Y. Lan, F.-K. Luo, Y. Yu, X.-Y. Wang, P.-Q. Wang, X.-J. Xiong, Coronary heart disease: innovative understanding from traditional Chinese medicine and treatment by classic formulas, Zhongguo Zhongyao Zazhi 49 (2024) 3684–3692, https://doi.org/10.19540/j.cnki.cjcmm.20240326.501.
+7. Q. Wu, J. Li, Discussion on the theory of strengthening yang and activating blood therapy for coronary heart disease, J. Tradit. Chin. Med. 60 (2019) 935–938, https://doi.org/10.13288/j.11-2166/r.2019.11.008.
+8. J. Wang, S. Zhou, C. Liu, X. Hui, H. He, Connotation and clinical application of tong (Dredging) Method in treatment of coronary heart disease, Chin. J. Exp. Tradit. Med. Formulae 28 (2022) 1–6, https://doi.org/10.13422/j.cnki.syfjx.20220291.
+9. M.M. Shoja, R.S. Tubbs, G. Shokouhi, M. Loukas, Wang Qingren and the 19th century Chinese doctrine of the bloodless heart, Int. J. Cardiol. 145 (2010) 305–306, https://doi.org/10.1016/j.ijcard.2009.10.042.
+10. L. Zhao, X. Qiu, R. Wang, D. Wang, ¹H NMR-based metabolomics study of the dynamic effect of Xue-Fu-Zhu-Yu capsules on coronary heart disease rats induced by high-fat diet, coronary artery ligation, J. Pharmaceut. Biomed. 195 (2021), https://doi.org/10.1016/j.jpba.2020.113869.
+11. S. Childs, J.N. Chen, D.M. Garrity, M.C. Fishman, Patterning of angiogenesis in the zebrafish embryo, Development 129 (2002) 973–982, https://doi.org/10.1242/dev.129.4.973.
+12. B. Cao, H. Kong, C. Shen, G. She, S. Tian, H. Liu, L. Cui, Y. Zhang, Q. He, Q. Xia, K. Liu, Dimethyl phthalate induced cardiovascular developmental toxicity in zebrafish embryos by regulating MAPK and calcium signaling pathways, Sci. Total Environ. 926 (2024), https://doi.org/10.1016/j.scitotenv.2024.171902.
+13. K. Howe, M.D. Clark, C.F. Torroja, et al., The zebrafish reference genome sequence and its relationship to the human genome, Nature 496 (2013) 498–503, https://doi.org/10.1038/nature12111.
+14. C.-S. Zhu, Z.-J. Lin, M.-L. Xiao, H.-J. Niu, B. Zhang, The spectrum-effect relationship — a rational approach to screening effective compounds, reflecting the internal quality of Chinese herbal medicine, Chin. J. Nat. Med. 14 (2016) 177–184, https://doi.org/10.1016/s1875-5364(16)30014-0.
+15. L. Lan, J. Zhang, T. Yang, D. Gong, Z. Zheng, G. Sun, P. Guo, H. Zhang, Compound synthesizing profiling based on quantitative HPLC fingerprints combined with antioxidant activity analysis for Zhizi Jinhua pills, Phytomedicine (2022) 105, https://doi.org/10.1016/j.phymed.2022.154340.
+16. C.-J. Li, R.-R. Zhai, X.-Y. Zhu, Z.-F. Guo, H. Yang, Discovery of effective combination from Renshen-Fuzi herbal pair against heart failure by spectrum-effect relationship analysis and zebrafish models, J. Ethnopharmacol. 317 (2023), https://doi.org/10.1016/j.jep.2023.116832.
+17. H. Feng, Z. Zhang, X. Gao, X. Guo, Y. Li, Z. Li, Y. Hu, W. Li, Rapid quality assessment of Succus Bambusae oral liquid based on near infrared spectroscopy and chemometrics, Ind. Crop. Prod. 189 (2022), https://doi.org/10.1016/j.indcrop.2022.115862.
+18. W. Li, H. Han, L. Zhang, Y. Zhang, H. Qu, A feasibility study on the non-invasive analysis of bottled Compound E Jiao oral liquid using near infrared spectroscopy, Sensor Actuat B-Chem. 211 (2015) 131–137, https://doi.org/10.1016/j.snb.2015.01.073.
+19. J. Yue, L. Gao, L. Zhong, R. Huang, X. Yang, W. Tian, G. Cao, Z. Meng, L. Nie, H. Zang, Comparison of qualitative and quantitative performance of two portable near-infrared spectrometers for intact Rehmanniae Radix and calibration transfer, Microchem. J. 204 (2024), https://doi.org/10.1016/j.microc.2024.111130.
+20. A.C.C. Fulgencio, G.A.P. Resende, M.C.F. Teixeira, B.G. Botelho, M.M. Sena, Screening method for the rapid detection of diethylene glycol in beer based on chemometrics and portable near-infrared spectroscopy, Food Chem. 391 (2022) 133258, https://doi.org/10.1016/j.foodchem.2022.133258.
+21. D. Pan, Y. Guo, Y. Fan, H. Wan, Development and application of traditional Chinese medicine using AI machine learning and deep learning strategies, Am. J. Chin. Med. 52 (2024) 605–623, https://doi.org/10.1142/s0192415x24500265.
+22. X. Guo, X. Zhao, X. Lu, L. Zhao, Q. Zeng, F. Chen, Z. Zhang, M. Xu, S. Feng, T. Fan, W. Wei, X. Zhang, J. Pang, X. You, D. Song, Y. Wang, J. Jiang, A deep learning-driven discovery of berberine derivatives as novel antibacterial against multidrug-resistant Helicobacter pylori, Signal Transduct. Targeted Ther. 9 (2024) 183, https://doi.org/10.1038/s41392-024-01895-0.
+
+> 補足: 原文の参考文献は全 46 件（[1]〜[46]）。本リストの [1]〜[22] は Drive の自然言語抽出テキストから確実に復元できた（1段組で抽出され、文の連続性・DOIとも整合）。一方 [23]〜[46] は抽出テキスト上で2段組レイアウトが行送りごとに左右列を交互に結合する形で乱れており（別々の文献の著者名・タイトル・誌名・DOIが行単位で混線）、機械的に読み解こうとすると実際に矛盾する組み合わせ（あるタイトルに無関係な分野のDOIが付くなど）が生じることを確認した。誤った著者名・年・DOIを捏造して掲載するリスクを避けるため、[23]〜[46] の掲載は見送った。完全な参考文献リストは原文（DOI: https://doi.org/10.1016/j.talanta.2025.127627）を参照されたい。
+
 ## 訳者補足
 
 - **位置づけ**: 本論文は 2025 年の研究で、単なる「指紋＋多成分定量」に留まらず、**「化学（HPLC 指紋）→薬効（ゼブラフィッシュの血管新生）→両者を結ぶ AI 解析（スペクトル効果）→機序検証（ネットワーク薬理・分子ドッキング）→現場向け非破壊 QC（NIR＋深層学習）」という一連の縦串を一つの戦略として提示**した点に新規性がある。品質規格の成分を「薬効に紐づく活性成分」から選ぶという発想（活性成分ベースの QC）は、Q-marker 探索の思想と親和的である。

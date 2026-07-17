@@ -129,6 +129,8 @@ DS モノグラフの表題は、品目が商業で最もよく知られる名�
 
 各生薬について、USP はしばしば **モノグラフのファミリー** を策定する。ファミリーは未加工植物材料と加工植物材料（粉末植物材料・植物エキス・さらに加工した植物エキスを含む）で構成される。DS モノグラフファミリーの例（精製度が上がり複雑さが減る階層。原著 Fig.1）：
 
+![Fig.1. 生薬系栄養補助食品モノグラフのファミリー（原著Fig.1、ウコン根茎の例）。左から「全形生薬（ウコン根茎）」→「粉末化（根茎末）」→「含水エタノール抽出（乾燥エキス）」→「さらに加工（クルクミノイド抽出物）」→「単離（クルクミノイド類）」→「さらに精製（クルクミン単一化合物）」の順に複雑さが減り精製度が上がる。下部の三角形は「複雑さの程度」（左が高い）と「精製の程度」（右が高い）を示す。](assets/usp-quality-specifications-botanical-articles/fig1_monograph_family.jpg)
+
 **「Turmeric Rhizome（ウコン根茎）」**（未加工生薬原料）→ 粉砕 →**「Turmeric Rhizome Powder」**→ 含水エタノール抽出 →**「Turmeric Rhizome Dry Extract」**→ 追加加工 →**「Turmeric Rhizome Curcuminoids Extract」**（部分精製天然複合体）→ 単離 →**「Curcuminoids」**（化合物クラス）→ さらに精製 →**「Curcumin」**（単一単離化学物質）。未加工原料を除く各品目は「Turmeric Rhizome Powder Capsules」「Curcumin Tablets」等の最終経口剤形にも製剤化できる。モノグラフ策定上、植物材料から単離され単一化学物質で表される精製成分は生薬品目の定義から除外される。
 
 ## 2. Definition（定義）
@@ -181,6 +183,8 @@ HPTLC 試験の頑健な再現には、USP 一般試験法（GC）〈203〉「�
 
 **許容基準の例:** 試料溶液は、標準溶液 B のシンナムアルデヒドに対応する保持時間で最も強いピークを示す；標準溶液 A のケイヒ酸に対応する保持時間でピーク；標準溶液 B の各成分に対応する保持時間でクマリン・シンナミルアルコール・2-メトキシケイヒ酸・2-メトキシシンナムアルデヒドのピーク。これら成分のケイヒ酸に対する含量比は Table 3 の典型比範囲内。シンナムアルデヒドの含量は総フェニルプロパノイドの NLT 65%。
 
+![Fig.2. USP Cinnamomum cassia Twig Powder RS のフェニルプロパノイド類HPLCクロマトグラム。クマリン・シンナミルアルコール・ケイヒ酸・2-メトキシケイヒ酸・シンナムアルデヒド（最大ピーク）・2-メトキシシンナムアルデヒドのピークが同定されている。](assets/usp-quality-specifications-botanical-articles/fig2_cinnamon_hplc.jpg)
+
 #### 原著 Table 3：USP モノグラフの COMPOSITION（assay）下の HPLC 同定追加情報（桂皮）
 
 | 分析対象 | 概略相対保持時間 | 換算係数 | 典型含量範囲(%) | ケイヒ酸に対する含量比 |
@@ -200,19 +204,45 @@ HPTLC は金銀花を近縁 Lonicera 種（L. macranthoides, L. fulvotomentosa�
 - **イリドイド HPLC 法:** USP セコキシロガニン RS と同エキス RS との比較でイリドイドの有無を試験（Fig.4）。
 - **HPTLC 法:** USP クロロゲン酸 RS・ルチン RS・ルテオリン 7-O-グルコシド RS・同エキス RS との比較でカフェオイルキナ酸とフラボン配糖体の有無を試験（Fig.5）。
 
+![Fig.3. USP Lonicera japonica Flower Dry Extract RS のカフェオイルキナ酸類HPLCクロマトグラム。ネオクロロゲン酸・クロロゲン酸・クリプトクロロゲン酸・3,4-ジ-O-カフェオイルキナ酸・3,5-ジ-O-カフェオイルキナ酸・4,5-ジ-O-カフェオイルキナ酸のピークが同定されている。](assets/usp-quality-specifications-botanical-articles/fig3_lonicera_caffeoylquinic_hplc.jpg)
+
+![Fig.4. USP Lonicera japonica Flower Dry Extract RS のイリドイド類HPLCクロマトグラム。Sweroside・Secoxyloganin・Centaurosideのピークが同定されている。](assets/usp-quality-specifications-botanical-articles/fig4_lonicera_iridoid_hplc.jpg)
+
+![Fig.5. Lonicera japonica Flower Dry Extract RS のカフェオイルキナ酸類・フラボン配糖体HPTLC（7レーン）。](assets/usp-quality-specifications-botanical-articles/fig5_lonicera_hptlc.jpg)
+
 市場では他の近縁 Lonicera 種がしばしば金銀花を偽和する。文献（Li et al., 2009）は金銀花と近縁 Lonicera 種が非常に類似したカフェオイルキナ酸・フラボン配糖体・イリドイドを含むと報告し、上記陽性同定試験では区別が困難な場合がある。文献（Chai et al., 2005 ほか）によれば、近縁 Lonicera 種は金銀花に欠けるトリテルペノイドサポニンを含む。そこで、**トリテルペノイドサポニンの限度試験（limit test）** をモノグラフに含め、近縁種から区別した（Fig.6。混合標準：macranthoidin B・macranthoidin A・dipsacoside B）。
+
+![Fig.6. 金銀花（Lonicera japonica）と近縁Lonicera種の花のトリテルペノイドサポニン限度試験HPTLC（11レーン。混合標準：macranthoidin B・macranthoidin A・dipsacoside B）。](assets/usp-quality-specifications-botanical-articles/fig6_lonicera_saponin_hptlc.jpg)
 
 ### 実例3：紅景天（Rhodiola crenulata と R. rosea の根・根茎）の HPTLC 判別
 
 **R. crenulata 根・根茎** は TCM「紅景天（Hong-Jing-Tian）」で、シベリア・チベット高地の過酷環境に生育し、抗疲労・抗低酸素剤として用いられる。**R. rosea 根・根茎** は強力なアダプトゲンとして知られ、欧州・アジアの寒冷山地に生育、世界で最もよく知られる Rhodiola。両者は市場でしばしば混同される。しかし生物活性マーカー化合物の HPTLC で効率的に区別できる。
 
-両者とも **サリドロシド・チロソール・没食子酸** を含む（Fig.7）が、R. rosea はさらに **rosarin・rosavin・rosin**（R. crenulata に欠ける）を含む（Fig.8）。USP Rhodiola rosea モノグラフの HPTLC 同定では、USP ロサビン RS・サリドロシド RS に対応するバンドの存在と同エキス RS と類似のクロマトグラムで R. rosea を陽性同定。USP Rhodiola crenulata モノグラフでは、サリドロシド RS 対応バンドの存在と **ロサビン RS 対応バンドの不在** で R. crenulata を R. rosea から区別（Fig.9）。
+両者とも **サリドロシド・チロソール・没食子酸** を含む（Fig.7）が、R. rosea はさらに **rosarin・rosavin・rosin**（R. crenulata に欠ける）を含む（Fig.8）。
+
+![Fig.7. フェニルエタノイド類と没食子酸の構造（サリドロシド・チロソール・没食子酸）。R. crenulata・R. rosea の双方に共通して含まれる成分。](assets/usp-quality-specifications-botanical-articles/fig7_salidroside_structures.png)
+
+![Fig.8. フェニルプロペノイド配糖体の構造（ロシン・ロサリン・ロサビン）。R. rosea に特徴的でR. crenulataには欠ける成分。](assets/usp-quality-specifications-botanical-articles/fig8_rosavin_structures.png)
+
+USP Rhodiola rosea モノグラフの HPTLC 同定では、USP ロサビン RS・サリドロシド RS に対応するバンドの存在と同エキス RS と類似のクロマトグラムで R. rosea を陽性同定。USP Rhodiola crenulata モノグラフでは、サリドロシド RS 対応バンドの存在と **ロサビン RS 対応バンドの不在** で R. crenulata を R. rosea から区別（Fig.9）。
+
+![Fig.9. Rhodiola crenulataとR. roseaの根・根茎エキスのHPTLC（6レーン）。(1) USPサリドロシドRS；(2) USPロサビンRS；(3) サリドロシド＋ロサビン混合標準；(4) Rhodiola crenulata根・根茎乾燥エキス；(5) USP Rhodiola rosea根・根茎乾燥エキスRS；(6) メタノール（ブランク）。](assets/usp-quality-specifications-botanical-articles/fig9_rhodiola_hptlc.jpg)
 
 ### 実例4：何首烏（Polygonum multiflorum・P. cuspidatum・P. cillinerve の根）の判別
 
 **Polygonum multiflorum 根** は TCM「Fo-Ti / He-Shou-Wu（何首烏）」で、未加工または黒豆と煮て供される。潜在的混同物質と区別するため、HMC の HPTLC 同定法で Pteroxygonum giraldii（5）・P. cillinerve（6）・P. cuspidatum（7）・Fagopyrum esculentum（8）・Cynanchum auriculatum（9）の根を試験した。
 
-結果（Fig.10）：5・8・9 は明確に区別されたが、6 と 7 は何首烏と類似の HPTLC プロファイルをもち、3種はアントラキノンの同じマーカー成分に対応する赤・黄バンドを示した。何首烏の **2,3,5,4'-テトラヒドロキシスチルベン-2-O-β-D-グルコシド（TSG）** の青バンドは、6・7 に存在する **ポリダチン（PD）** のバンドと構造類似のため位置・色が類似（Fig.11）。同モノグラフのスチルベン配糖体 HPLC 同定法を用いると、TSG と PD が逆相 HPLC で良好分離されるため3種を効率的に区別できた。何首烏は USP TSG RS 対応の主ピーク1本、P. cuspidatum は USP ポリダチン RS 対応の主ピーク1本、P. cillinerve は3本の主ピーク（1本はポリダチン RS 対応）を示した（Fig.12）。
+結果（Fig.10）：5・8・9 は明確に区別されたが、6 と 7 は何首烏と類似の HPTLC プロファイルをもち、3種はアントラキノンの同じマーカー成分に対応する赤・黄バンドを示した。
+
+![Fig.10. Polygonum multiflorum根と潜在的混同物質のHPTLC（9レーン）。(1) TSG；(2) エモジン；(3) 混合標準：フィシオン・エモジン・エモジン-8-O-グルコシド・TSG（Rf降順）；(4) P. multiflorum；(5) Pteroxygonum giraldii；(6) P. cillinerve；(7) P. cuspidatum；(8) Fagopyrum esculentum；(9) Cynanchum auriculatum。](assets/usp-quality-specifications-botanical-articles/fig10_polygonum_hptlc.jpg)
+
+何首烏の **2,3,5,4'-テトラヒドロキシスチルベン-2-O-β-D-グルコシド（TSG）** の青バンドは、6・7 に存在する **ポリダチン（PD）** のバンドと構造類似のため位置・色が類似（Fig.11）。
+
+![Fig.11. スチルベン配糖体の構造（TSG＝2,3,5,4'-テトラヒドロキシスチルベン-2-O-β-D-グルコシド、PD＝ポリダチン）。両者は構造類似のためHPTLCでは判別困難。](assets/usp-quality-specifications-botanical-articles/fig11_tsg_pd_structures.png)
+
+同モノグラフのスチルベン配糖体 HPLC 同定法を用いると、TSG と PD が逆相 HPLC で良好分離されるため3種を効率的に区別できた。何首烏は USP TSG RS 対応の主ピーク1本、P. cuspidatum は USP ポリダチン RS 対応の主ピーク1本、P. cillinerve は3本の主ピーク（1本はポリダチン RS 対応）を示した（Fig.12）。
+
+![Fig.12. P. multiflorum・P. cuspidatum・P. cillinerveの根のスチルベン配糖体HPLC（6トレース）。(1) USP 2,3,5,4'-テトラヒドロキシスチルベン-2-O-β-D-グルコシドRS（TSG）；(2) P. multiflorum根；(3) TSG＋PD；(4) USPポリダチンRS（PD）；(5) P. cuspidatum根；(6) P. cillinerve根。](assets/usp-quality-specifications-botanical-articles/fig12_polygonum_species_hplc.jpg)
 
 ## 4. Composition（assay＝含量）
 
@@ -230,9 +260,17 @@ LC プロファイルのピーク保持時間は、定量ピーク全部のベ�
 
 ### 実例5：当帰（Dong Quai Root・Angelica sinensis）のブチリデンフタリドとフェニルプロパノイドの同時 HPLC 定量
 
-当帰はブチリデンフタリド類（Z-ligustilide・E-ligustilide・Z-butylidenephthalide・E-butylidenephthalide・senkyunolide H・senkyunolide I）を含む（Fig.13）。**Z-ligustilide** が主要ブチリデンフタリド成分で、血小板凝集低下・血行促進・瘀血除去が報告され、当帰の伝統的用途に対応。USP Dong Quai Root モノグラフでは Z-ligustilide とその類縁体を定量用の生物活性マーカーに選定。senkyunolide H・I は当帰に特徴的で同定に有用だが、6炭素環の2ヒドロキシ基が極性を大きく変え生物活性の不確かさを高めるため定量には含めない。**フェルラ酸と coniferyl ferulate**（Fig.14）を第2の定量対象二次代謝産物群に選定。coniferyl ferulate はフェルラ酸に容易に分解するため、両者の相対含量は植物材料の安定性の品質指標として有用。
+当帰はブチリデンフタリド類（Z-ligustilide・E-ligustilide・Z-butylidenephthalide・E-butylidenephthalide・senkyunolide H・senkyunolide I）を含む（Fig.13）。
+
+![Fig.13. ブチリデンフタリド類の構造（Z-ligustilide・E-ligustilide・Z-butylidenephthalide・E-butylidenephthalide・senkyunolide H・senkyunolide I）。](assets/usp-quality-specifications-botanical-articles/fig13_butylidenephthalide_structures.png)
+
+**Z-ligustilide** が主要ブチリデンフタリド成分で、血小板凝集低下・血行促進・瘀血除去が報告され、当帰の伝統的用途に対応。USP Dong Quai Root モノグラフでは Z-ligustilide とその類縁体を定量用の生物活性マーカーに選定。senkyunolide H・I は当帰に特徴的で同定に有用だが、6炭素環の2ヒドロキシ基が極性を大きく変え生物活性の不確かさを高めるため定量には含めない。**フェルラ酸と coniferyl ferulate**（Fig.14）を第2の定量対象二次代謝産物群に選定。coniferyl ferulate はフェルラ酸に容易に分解するため、両者の相対含量は植物材料の安定性の品質指標として有用。
+
+![Fig.14. フェニルプロパノイド類の構造（フェルラ酸・coniferyl ferulate）。](assets/usp-quality-specifications-botanical-articles/fig14_ferulic_coniferyl_structures.png)
 
 当帰モノグラフでは、ブチリデンフタリドとフェニルプロパノイドを同一クロマトグラフィー系で決定するが、適切な換算係数で別々に算出。Z-ligustilide をブチリデンフタリド定量の RS、フェルラ酸をフェニルプロパノイド定量の RS に使用。Fig.15（USP Angelica sinensis 根粉末 RS の HPLC クロマトグラム）が当帰の典型クロマトグラム。
+
+![Fig.15. USP Angelica sinensis Root Powder RS のブチリデンフタリド・フェニルプロパノイドHPLCクロマトグラム。フェルラ酸・senkyunolide I・senkyunolide H・coniferyl ferulate・E-ligustilide・E-butylidenephthalide・Z-ligustilide（最大ピーク）・Z-butylidenephthalideのピークが同定されている。](assets/usp-quality-specifications-botanical-articles/fig15_angelica_hplc.jpg)
 
 ## 5. Contaminants（汚染物質）
 
