@@ -25,12 +25,39 @@
 <h2>要旨（Abstract）</h2>
 <p>アレクチニブ（ALEC）は最も一般的な第二世代の未分化リンパ腫キナーゼ（ALK）阻害薬で、種々の ALK 変異に有効で、非小細胞肺がん（NSCLC）の治療に用いられる。本研究では、新規 HPLC 法を開発し、アレクチニブとその不純物 <strong>5-トリフルオロアセテート（IMP5）</strong> の同時定量を実現した。固定相は Ascentis® Express 90 Å C8（10 cm × 4.6 mm, 2.7 µm）、分離はアセトニトリルと酢酸アンモニウム緩衝液から成る移動相のグラジエントで達成し、PDA 検出器を波長 269 nm で記録した。最適化は Box–Behnken 計画（BBD）で行い、最適条件は満足度関数（desirability function）に従って選定した。バリデーションは ICH Q2(R2) ガイドラインで実施。LOD は 0.1 および 0.3 µg/mL、LOQ は 0.3 および 0.5 µg/mL（それぞれ ALEC と不純物）。回収試験は Alecensa® カプセル（150 mg アレクチニブ/カプセル）で行い、高い回収率で優れた精度・正確性を示した。測定不確かさの推定には<strong>ボトムアップ</strong>アプローチを用い、不確かさの源とクロマト応答に影響する因子を特定・定量した。得られた回帰モデルは妥当と判断され、モンテカルロ法で操作可能設計領域を定義するのに用いた。提案法のエコフレンドリー性は ComplexGAPI・AGREE・BAGI の各グリーンネス評価ツールで、また新規の White Analytical Chemistry（WAC）ツールで白色度を算出して検証した。本法は QC ラボにおけるアレクチニブと不純物の定量に利用できる。</p>
 <p><strong>キーワード</strong>: HPLC、アレクチニブ、不純物、Box–Behnken</p>
+<figure><img src="assets/alectinib-hplc-bbd-uncertainty-greenness/graphical-abstract.jpg" alt="Graphical Abstract. 原著の要旨図（左上：HPLC装置、上中央：ICHガイドライン、右上：グリーンケミストリー、左下：Box–Behnken計画の立方体、右下：測定不確かさの分布曲線）— 本研究の5要素（HPLC分析・ICH準拠バリデーション・環境調和性・実験計画法・測定不確かさ）を象徴する原著掲載の図" loading="lazy"><figcaption>Graphical Abstract. 原著の要旨図（左上：HPLC装置、上中央：ICHガイドライン、右上：グリーンケミストリー、左下：Box–Behnken計画の立方体、右下：測定不確かさの分布曲線）— 本研究の5要素（HPLC分析・ICH準拠バリデーション・環境調和性・実験計画法・測定不確かさ）を象徴する原著掲載の図</figcaption></figure>
 <h2>序論（Introduction）</h2>
 <p>肺がんは世界で最も一般的で致死的ながんの一つで、全新規がん診断の約 13%、がん関連死の約 25% を占める[<a href="#ref-1" class="cite">1</a>]。非小細胞肺がん（NSCLC）は米国の全肺がんの 84% を占め、高い死亡率の主要因である。分子標的治療の登場で、遺伝的に規定された NSCLC サブセットの治療成績が向上した。ALK 遺伝子の再構成が発がんドライバーとして同定され、EML4-ALK 融合遺伝子が NSCLC の一部で見いだされた[<a href="#ref-2" class="cite">2</a>]。クリゾチニブが最初の ALK 阻害薬だが、血液脳関門透過などの課題があり、第二世代の開発が必要とされた。承認された最初がセリチニブ、次いでアレクチニブ（ALEC、Alecensa®、日本が 2014 年 7 月に ALK 再構成 NSCLC の治療に承認）[<a href="#ref-2" class="cite">2</a>]。ALEC は ALK チロシンキナーゼの経口 ATP 競合阻害薬で、ALK に対しクリゾチニブの 5 倍の効力を持ち、クリゾチニブ耐性の獲得 ALK 変異の多くを阻害しうる[<a href="#ref-3" class="cite">3</a>]。</p>
 <p>医薬品の安全性と有効性は薬物治療の 2 大要件である。医薬品中の不純物はしばしば望ましくない薬理・毒性作用を示し、治療上の利点を打ち消しうるため、不純物の監視・管理が必須である[Rao &amp; Nagaraju 2003]。ALEC 不純物に関する文献情報は乏しいが、TLC Pharmaceutical Standards Ltd. は約 15 種の ALEC 不純物を製品として挙げ、分子量は 412.54〜562.69 g/mol、うち 7 種が CAS 番号を持つ（Table S1）[<a href="#ref-4" class="cite">4</a>]。</p>
 <p>分析法開発の目的は、低濃度の分析対象を満足な正確性で定量することにある。どの方法論でも、グリーンケミストリー原則と経済コストを考慮し、試験回数と時間を減らして最適条件を見いだす必要がある。ケモメトリクス手法は、検討因子の重要性・統計的有意性と交互作用効果を評価する数理モデルの構築を助ける。多変量最適化は検討変数の評価から始まり、Doehlert 行列・中心複合計画・三水準計画（Box–Behnken 計画など）で理想の操作条件を決める。各応答に満足度関数（D、0〜1）を計算し、幾何平均で総合 D を導き、これを最適化するアルゴリズムで最適変数値を特定する。BBD は三水準不完全要因計画に由来する二次（ほぼ回転可能）計画で、二次モデルパラメータの推定・逐次計画・モデル不備の同定・ブロック化を可能にする[<a href="#ref-23" class="cite">23</a>]。</p>
 <p>健康と環境への科学的関心は 1990 年代初頭に始まり、有害化学物質の悪影響への認識から過去 20 年で大きく高まって「グリーン分析化学（GAC）」の語と持続可能な開発（SD）概念を生んだ。GAC は分析工程から有害化学物質を減らす・除くことで、方法性能を損なわず環境調和性を高めることを指す。AGREE・GAPI・NEMI などの指標ツールが GAC 適合度を測るが、これらは方法の潜在能力を包括的に捉えられず持続可能性の程度を測れない。近年、GAC・SD 原則を含む全基準をアルゴリズムで評価する Red–Green–Blue（RGB）モデルが導入され、これに着想を得て緑・他の残る基準を含めた White Analytical Chemistry（WAC）が開発された。WAC は赤・青・緑で表される全原則を包含し、それらの交わりから生じる白色で SD 原則を評価できる[<a href="#ref-25" class="cite">25</a>]。</p>
-<p>ALEC の分解挙動を論じた研究は文献で 3 件のみ。1 件目は ALEC 塩酸塩溶液を各種ストレスに曝し、酸化条件で 4 つの新規分解物（アミド・N-オキシド・N-ヒドロキシ・エポキシド不純物）を HPLC で分離、NMR・FTIR・LC–MS で構造同定[<a href="#ref-26" class="cite">26</a>]。2 件目は錠剤・原薬中 ALEC の UPLC 法（直線 1〜100 μg/mL、LOQ 0.07 μg/mL）で、光分解を除くほぼ全ストレスで分解を確認（酸 5.18%・アルカリ 3.10%・過酸化物 3.29%・熱 4.13%）[<a href="#ref-27" class="cite">27</a>]。3 件目は安定性指示法の開発を核とする包括的論文。従来、ALEC・その不純物・両者を同時に定量する分析法は存在しない。よって本研究は、ALEC と ALEC 不純物 5-トリフルオロアセテート（IMP5）を<strong>同時に</strong>定量する新規・高感度・環境調和型 HPLC 法の開発を目的とする。PDA 検出器は両分析対象が UV–VIS 域に吸収を持ち検出器が普及していることから選択。不純物の物理化学的性質が不明なため、最適化段階での BBD 利用が有益であった。</p>
+<p>ALEC の分解挙動を論じた研究は文献で 3 件のみ。1 件目は ALEC 塩酸塩溶液を各種ストレスに曝し、酸化条件で 4 つの新規分解物（アミド・N-オキシド・N-ヒドロキシ・エポキシド不純物）を HPLC で分離、NMR・FTIR・LC–MS で構造同定[<a href="#ref-26" class="cite">26</a>]。2 件目は錠剤・原薬中 ALEC の UPLC 法（直線 1〜100 μg/mL、LOQ 0.07 μg/mL）で、光分解を除くほぼ全ストレスで分解を確認（酸 5.18%・アルカリ 3.10%・過酸化物 3.29%・熱 4.13%）[<a href="#ref-27" class="cite">27</a>]。3 件目は安定性指示法の開発を核とする包括的論文。表1は他の研究で用いられたALEC濃度定量法をまとめたもの（原著Table 1）。従来、ALEC・その不純物・両者を同時に定量する分析法は存在しない。よって本研究は、ALEC と ALEC 不純物 5-トリフルオロアセテート（IMP5）を<strong>同時に</strong>定量する新規・高感度・環境調和型 HPLC 法の開発を目的とする。PDA 検出器は両分析対象が UV–VIS 域に吸収を持ち検出器が普及していることから選択。不純物の物理化学的性質が不明なため、最適化段階での BBD 利用が有益であった。</p>
+<p><strong>表1. ALEC濃度定量に関する既往文献一覧</strong>（原著Table 1。「—」＝原文空欄）</p>
+<table>
+<thead><tr><th>分析対象</th><th>マトリックス</th><th>手法</th><th>直線範囲（µg/mL）</th><th>LOD（µg/mL）</th><th>LOQ（µg/mL）</th><th>文献</th></tr></thead>
+<tbody>
+<tr><td>ALEC</td><td>ヒト血漿</td><td>HPLC–PDA</td><td>0.1–20.0</td><td>0.05</td><td>0.1</td><td>[<a href="#ref-5" class="cite">5</a>]</td></tr>
+<tr><td>TKI 5種</td><td>ヒト血漿</td><td>HPLC–MS/MS</td><td>0.1–2.0</td><td>—</td><td>0.1</td><td>[<a href="#ref-6" class="cite">6</a>]</td></tr>
+<tr><td>TKI 3種</td><td>ヒト血漿</td><td>LC–MS/MS</td><td>0.002–2.0</td><td>—</td><td>0.002</td><td>[<a href="#ref-1" class="cite">1</a>]</td></tr>
+<tr><td>ALEC</td><td>バルク・製剤</td><td>HPLC–PDA</td><td>10–50</td><td>0.77×10⁶</td><td>2.36×10⁶</td><td>[<a href="#ref-7" class="cite">7</a>]</td></tr>
+<tr><td>ALEC</td><td>バルク粉末・尿試料</td><td>MW-SFL¹／HPLC-FD²</td><td>0.03–0.5／0.005–1.0</td><td>0.00646／0.0026</td><td>0.01960／0.00781</td><td>[<a href="#ref-8" class="cite">8</a>]</td></tr>
+<tr><td>ALEC</td><td>血漿</td><td>LC–MS/MS</td><td>0.0375–1.5</td><td>—</td><td>0.0375</td><td>[<a href="#ref-9" class="cite">9</a>]</td></tr>
+<tr><td>ALECと代謝物M4</td><td>血漿</td><td>PDAG-PT-SPE-HPLC-UV³</td><td>0.05–5.0</td><td>0.0048</td><td>0.0161</td><td>[<a href="#ref-10" class="cite">10</a>]</td></tr>
+<tr><td>ALECと代謝物M4</td><td>尿</td><td>ハニカムPFR⁴スピンカラムSPE-HPLC</td><td>0.0200–5</td><td>0.00339</td><td>0.0113</td><td>[<a href="#ref-11" class="cite">11</a>]</td></tr>
+<tr><td>ALEC塩酸塩</td><td>カプセル製剤</td><td>HPTLC⁵</td><td>0.6–2.1（µg/band）</td><td>0.0175（µg/band）</td><td>0.0530（µg/band）</td><td>[<a href="#ref-12" class="cite">12</a>]</td></tr>
+<tr><td>TKI 3種</td><td>ラット血漿</td><td>UPLC–MS/MS</td><td>0.002–0.2</td><td>0.001</td><td>0.002</td><td>[<a href="#ref-13" class="cite">13</a>]</td></tr>
+<tr><td>TKI 8種</td><td>ヒト血漿</td><td>UPLC-MS/MS</td><td>0.025–6.250</td><td>—</td><td>25.00</td><td>[<a href="#ref-14" class="cite">14</a>]</td></tr>
+<tr><td>TKI 12種</td><td>血漿</td><td>LC–MS/MS</td><td>0.002–2</td><td>0.0002</td><td>0.002</td><td>[<a href="#ref-15" class="cite">15</a>]</td></tr>
+<tr><td>ALECと代謝物M4</td><td>ヒト尿</td><td>LC–MS/MS</td><td>0.0005–0.5</td><td>—</td><td>0.0005</td><td>[<a href="#ref-16" class="cite">16</a>]</td></tr>
+<tr><td>ALEC</td><td>ラット血漿</td><td>LC–MS</td><td>0.015–4</td><td>—</td><td>0.015</td><td>[<a href="#ref-17" class="cite">17</a>]</td></tr>
+<tr><td>TKI 39種</td><td>血漿</td><td>LC–MS/MS</td><td>0.004–0.8</td><td>—</td><td>0.004</td><td>[<a href="#ref-18" class="cite">18</a>]</td></tr>
+<tr><td>TKI 12種</td><td>ヒト血漿</td><td>LC–MS/MS</td><td>0.001–0.5</td><td>—</td><td>0.001</td><td>[<a href="#ref-19" class="cite">19</a>]</td></tr>
+<tr><td>TKI 21種</td><td>ヒト血漿・血清</td><td>LC–MS/MS</td><td>0.01–2</td><td>—</td><td>0.01</td><td>[<a href="#ref-20" class="cite">20</a>]</td></tr>
+<tr><td>TKI 15種</td><td>ヒト血漿</td><td>UPLC-MS/MS</td><td>0.0025–2.500</td><td>—</td><td>0.0025</td><td>[<a href="#ref-21" class="cite">21</a>]</td></tr>
+<tr><td>ALEC</td><td>Alecensa®カプセル</td><td>HPLC／LC–MS/MS</td><td>0.17–6.67／8.5×10³–340.0×10³</td><td>—</td><td>0.17／283×10³</td><td>[<a href="#ref-22" class="cite">22</a>]</td></tr>
+<tr><td><strong>本研究</strong></td><td>Alecensa®カプセル</td><td>HPLC–PDA</td><td>0.5–15</td><td>0.1</td><td>0.3</td><td>—</td></tr>
+</tbody></table>
+<blockquote>補足: 1=96ウェル分光蛍光法、2=蛍光検出HPLC、3=多孔質ポリドーパミン/酸化グラフェン複合体ピペットチップ固相抽出-UV検出HPLC、4=フェノールホルムアルデヒド樹脂、5=高性能薄層クロマトグラフィー（HPTLC）。TKI=チロシンキナーゼ阻害薬。[<a href="#ref-7" class="cite">7</a>]のLOD/LOQ値（0.77×10⁶・2.36×10⁶ µg/mL）および[<a href="#ref-22" class="cite">22</a>]のLC–MS/MS値（8.5×10³〜340.0×10³・283×10³ µg/mL）は原著の記載をそのまま転記した数値であり、単位・桁の妥当性含め原文ママ（本サイトで訂正・推測はしていない）。</blockquote>
 <h2>材料と方法（Materials and method）</h2>
 <h3>試薬</h3>
 <p>ALEC 標準（純度 ≥98%、Carbosynth）、IMP5（≥99%、TLC Pharmaceutical Standards）、LC グレードのギ酸アンモニウム・酢酸アンモニウム・ギ酸・酢酸（Sigma Aldrich）、HPLC グレードのアセトニトリル・メタノール・DMSO（CARLO ERBA）。ALEC 製剤 Alecensa®（150 mg、Roche）。</p>
@@ -95,6 +122,7 @@
 <blockquote>式(5) RsIMP5 = −0.1975A + 0.6618B + 5.95C + 2.06AB + 0.4445AC + 1.05BC − 2.22A² − 2.58B² − 3.83C² + 18.41</blockquote>
 <p><strong>最適条件の選定</strong>: 満足度に基づく複数解から選定。選ばれたパラメータは<strong>流速 0.55 mL/min・酢酸アンモニウム緩衝液 15 mM・pH 5.42</strong>。予測値は実験値（Table 4）とよく一致。BBD 外のパラメータは C8 カラム・カラム温度 40±1 ℃・注入量 5 µL・269 nm・アセトニトリル修飾剤・記載のグラジエントに設定。</p>
 <h3>方法バリデーション</h3>
+<figure><img src="assets/alectinib-hplc-bbd-uncertainty-greenness/fig1-chromatograms.png" alt="Fig. 1 ブランク(A)およびAlecensa®溶液(B)のクロマトグラム(ALEC 10 µg/mL・IMP5 10 µg/mLを含む)と、標準品IMP5(C)およびALEC(D)のUVスペクトル。(B)ではIMP5が保持時間3.241分、ALECが5.459分に溶出しており、本文Table 4の保持時間(IMP5 3.26分・ALEC 5.48分)と対応する。(C)IMP5の吸収極大は約208 nm(強い肩)・269 nm付近、(D)ALECの吸収極大は約231 nm・338 nm付近" loading="lazy"><figcaption>Fig. 1 ブランク(A)およびAlecensa®溶液(B)のクロマトグラム(ALEC 10 µg/mL・IMP5 10 µg/mLを含む)と、標準品IMP5(C)およびALEC(D)のUVスペクトル。(B)ではIMP5が保持時間3.241分、ALECが5.459分に溶出しており、本文Table 4の保持時間(IMP5 3.26分・ALEC 5.48分)と対応する。(C)IMP5の吸収極大は約208 nm(強い肩)・269 nm付近、(D)ALECの吸収極大は約231 nm・338 nm付近</figcaption></figure>
 <p><strong>システム適合性</strong>（Table 4、いずれも USP 許容内）:</p>
 <table>
 <thead><tr><th>パラメータ</th><th>ALEC</th><th>IMP5</th><th>許容基準（USP）</th></tr></thead>
@@ -109,7 +137,8 @@
 <tr><td>HETP</td><td>12221</td><td>1808.99</td><td>–</td></tr>
 <tr><td>USP 幅</td><td>0.11</td><td>0.18</td><td>≤ 1</td></tr>
 </tbody></table>
-<p><strong>LOD/LOQ・直線性・精度</strong>（Table 5）: LOD は ALEC 0.1・IMP5 0.3 µg/mL、LOQ は ALEC 0.3・IMP5 0.5 µg/mL（S/N=3 と 10、各 6 反復）。ALEC 最大 1 日 600 mg（第 3 カテゴリ）で不純物 LOQ は 1.2 mg 未満が要件、本法は閾値内。作業範囲は両者 0.5〜15 µg/mL、7 濃度（5〜150%）で検量。</p>
+<p>LOD は、ピーク（シグナル）は視認できるが濃度を確定できない濃度として、LOQ はその方法で濃度を定量できる最低濃度として定義される。LOD 値はシグナル対ノイズ比 1/3、LOQ 値は 1/10 で決定し、各6反復で分析した。ICH Q3A(R2)・Q3B(R2) ガイドラインは、原薬の最大1日用量に応じ不純物のLOQが超えてはならない割合を4区分で規定する: 最大1日用量が10 mg未満なら不純物LOQは1.0%以下、10〜100 mgなら0.5%以下、100 mg〜2 gなら0.2%以下、2 g超なら0.15%以下。本研究ではALECの最大1日用量を600 mg（Alecensa® 4カプセル相当）とし第3区分（100 mg〜2 g）に該当するため、不純物LOQは1.2 mg未満であればよく、本法の検出・定量限界はこの許容閾値内に収まった。</p>
+<p><strong>LOD/LOQ・直線性・精度</strong>（Table 5）: LOD は ALEC 0.1・IMP5 0.3 µg/mL、LOQ は ALEC 0.3・IMP5 0.5 µg/mL（S/N=3 と 10、各 6 反復）。作業範囲の第一点はICH Q2(R2)ガイドラインに従いLOQ以上とし、IMP5はLOQ(0.5 µg/mL)から、ALECは0.5 µg/mLから、両者とも15 µg/mLまで（検量線上の5〜150%に相当）7濃度で検量。検量線は3反復し一元ANOVAを実施。</p>
 <table>
 <thead><tr><th>パラメータ</th><th>ALEC</th><th>IMP5</th></tr></thead>
 <tbody>
@@ -125,18 +154,55 @@
 <tr><td>繰返し RSD（日間, n=18）</td><td>0.18%</td><td>0.28%</td></tr>
 </tbody></table>
 <p>日内・日間 ANOVA の F 比はいずれも自由度に対する期待 F 値 3.68 未満（95% 信頼水準で精度が許容内）。</p>
-<p><strong>室内再現精度・正確性</strong>（Table 6）: 別装置での再現性良好（Table S7）。カプセル溶液を 3 濃度で回収試験:</p>
+<p><strong>室内再現精度・正確性</strong>（Table 6）: 別装置での再現性良好（Table S7）。カプセル溶液を3濃度（80/100/120% ＝ 8.0/10.0/12.0 µg/mL）で、主装置（HPLC）と別装置（室内再現精度HPLC-2）それぞれ回収試験を実施:</p>
+<p><strong>表6. ALECとIMP5の正確性・室内再現精度データ</strong>（原著Table 6を全行転記。CI=95%信頼区間、SD=標準偏差、RSD=相対標準偏差）</p>
 <table>
-<thead><tr><th>分析対象</th><th>濃度（µg/mL）</th><th>回収率（%）HPLC</th><th>RSD %（室内再現）</th></tr></thead>
+<thead><tr><th>分析対象</th><th>装置</th><th>添加（µg/mL）</th><th>実測値（µg/mL）±CI</th><th>SD</th><th>RSD(%)</th><th>回収率(%)</th><th>誤差(%)</th></tr></thead>
 <tbody>
-<tr><td>ALEC</td><td>8.0 / 10.0 / 12.0</td><td>100.75 / 101.50 / 99.60</td><td>≤ 2.18</td></tr>
-<tr><td>IMP5</td><td>8.0 / 10.0 / 12.0</td><td>102.31 / 99.62 / 100.37</td><td>≤ 2.18</td></tr>
+<tr><td>ALEC</td><td>HPLC</td><td>8.0</td><td>8.06 ± 0.05</td><td>0.05</td><td>0.65</td><td>100.75</td><td>+0.75</td></tr>
+<tr><td>ALEC</td><td>HPLC</td><td>10.0</td><td>10.15 ± 0.14</td><td>0.14</td><td>1.40</td><td>101.50</td><td>+1.50</td></tr>
+<tr><td>ALEC</td><td>HPLC</td><td>12.0</td><td>11.95 ± 0.02</td><td>0.02</td><td>0.21</td><td>99.60</td><td>−0.40</td></tr>
+<tr><td>ALEC</td><td>室内再現精度HPLC-2</td><td>8.0</td><td>8.04 ± 0.07</td><td>0.05</td><td>0.66</td><td>100.56</td><td>+0.56</td></tr>
+<tr><td>ALEC</td><td>室内再現精度HPLC-2</td><td>10.0</td><td>10.02 ± 0.14</td><td>0.10</td><td>0.98</td><td>100.22</td><td>+0.22</td></tr>
+<tr><td>ALEC</td><td>室内再現精度HPLC-2</td><td>12.0</td><td>11.94 ± 0.36</td><td>0.26</td><td>2.18</td><td>99.51</td><td>−0.49</td></tr>
+<tr><td>IMP5</td><td>HPLC</td><td>8.0</td><td>8.18 ± 0.11</td><td>0.12</td><td>141(a)</td><td>102.31</td><td>+2.31</td></tr>
+<tr><td>IMP5</td><td>HPLC</td><td>10.0</td><td>9.96 ± 0.08</td><td>0.08</td><td>0.80</td><td>99.62</td><td>−0.38</td></tr>
+<tr><td>IMP5</td><td>HPLC</td><td>12.0</td><td>12.04 ± 0.13</td><td>0.14</td><td>1.15</td><td>100.37</td><td>+0.37</td></tr>
+<tr><td>IMP5</td><td>室内再現精度HPLC-2</td><td>8.0</td><td>8.04 ± 0.07</td><td>0.09</td><td>1.15</td><td>101.18</td><td>+1.18</td></tr>
+<tr><td>IMP5</td><td>室内再現精度HPLC-2</td><td>10.0</td><td>9.98 ± 0.13</td><td>0.10</td><td>0.97</td><td>99.77</td><td>−0.23</td></tr>
+<tr><td>IMP5</td><td>室内再現精度HPLC-2</td><td>12.0</td><td>11.87 ± 0.46</td><td>0.34</td><td>2.18</td><td>98.93</td><td>−1.07</td></tr>
 </tbody></table>
+<blockquote>補足(a): IMP5・HPLC・8.0 µg/mLのRSD「141」は原著PDFにそのまま印字されている数値（小数点なし）。同じ行のSD 0.12・実測値8.18に対する比から推定すると「1.41」の誤植の可能性が高いが、本サイトは原文の数値を訂正せず、印字されたとおり「141」として転記した。</blockquote>
 <p><strong>頑健性</strong>: 流速・有機相比・カラム温度・波長を微増減して 100% 濃度を 3 反復。保持時間・分離度・テーリング・容量因子への影響は無視でき、ピーク面積（定量に関わる）への影響のみ有意（Table S9）。流速以外に有意な偏りなし。ALEC の LOD/LOQ は文献の HPLC 法より低く、作業範囲も同等以上。IMP5 の分析法は本研究が初。</p>
 <h3>測定不確かさ</h3>
 <p>魚骨図で不確かさ源を可視化し合成不確かさを数式化、ボトムアップでモンテカルロを適用。拡張不確かさは 95% 信頼区間・k=2 で算出（Fig. 2）。モンテカルロのヒストグラムはほぼ正規分布を示し、測定不確かさが方法の感度・回収の重要な基礎であることを確認。文献の ALEC 分析法で測定不確かさを組み込んだ例はまだない。</p>
+<figure><img src="assets/alectinib-hplc-bbd-uncertainty-greenness/fig2-uncertainty.png" alt="Fig. 2 ALECとIMP5の測定不確かさとモンテカルロ法(n=100,000)による応答分布。左: 各不確かさ要因(Calibration較正・Precision精度・Bias偏り・Weighed秤量・Pure標準品純度)の相対標準不確かさの寄与度（棒グラフ）と数値表。右: 規格範囲(%)に対する頻度のモンテカルロシミュレーション、ほぼ正規分布を示す" loading="lazy"><figcaption>Fig. 2 ALECとIMP5の測定不確かさとモンテカルロ法(n=100,000)による応答分布。左: 各不確かさ要因(Calibration較正・Precision精度・Bias偏り・Weighed秤量・Pure標準品純度)の相対標準不確かさの寄与度（棒グラフ）と数値表。右: 規格範囲(%)に対する頻度のモンテカルロシミュレーション、ほぼ正規分布を示す</figcaption></figure>
+<p><strong>不確かさ要因の内訳</strong>（原著Fig. 2の数値表を転記。相対標準不確かさ、無次元）:</p>
+<table>
+<thead><tr><th>不確かさ要因</th><th>ALEC</th><th>IMP5</th></tr></thead>
+<tbody>
+<tr><td>Calibration（較正）</td><td>0.00039</td><td>0.00040</td></tr>
+<tr><td>Precision（精度）</td><td>1.0155</td><td>0.9423</td></tr>
+<tr><td>Bias（偏り）</td><td>0.0029</td><td>0.0029</td></tr>
+<tr><td>Weighed（秤量）</td><td>0.0150</td><td>0.0260</td></tr>
+<tr><td>Pure（標準品純度）</td><td>0.0058</td><td>0.0058</td></tr>
+<tr><td><strong>合成不確かさ（Combined uncertainty）</strong></td><td><strong>1.0156</strong></td><td><strong>0.9427</strong></td></tr>
+</tbody></table>
+<p>両分析対象とも精度（Precision）が合成不確かさの大部分を占め、秤量・標準品純度・較正・偏りの寄与は小さい。モンテカルロ法（n=100,000）による規格範囲（%）シミュレーションのヒストグラムは96.3〜105.2%の範囲でほぼ正規分布を示し、頻度のピークは規格値100%付近（約100.3〜100.9%帯で頻度300超）にあり、規格外（95〜105%を外れる）リスクは低いことが視覚的に確認できる。</p>
 <h3>持続可能性評価</h3>
+<figure><img src="assets/alectinib-hplc-bbd-uncertainty-greenness/fig3-greenness.jpg" alt="Fig. 3 提案法のグリーンネス・ブルーネス・ホワイトネスプロファイル。(A) GAPI（五芒星ピクトグラム、赤3・黄緑9）。(B) AGREE（時計状ピクトグラム、スコア0.65）。(C) BAGI（五角形ピクトグラム、スコア82.5）。(D) RGBモデルとWhite Analytical Chemistry（WAC）による赤(R)・緑(G)・青(B)各サブ指標の内訳棒グラフと数値、総合白色度83.8%" loading="lazy"><figcaption>Fig. 3 提案法のグリーンネス・ブルーネス・ホワイトネスプロファイル。(A) GAPI（五芒星ピクトグラム、赤3・黄緑9）。(B) AGREE（時計状ピクトグラム、スコア0.65）。(C) BAGI（五角形ピクトグラム、スコア82.5）。(D) RGBモデルとWhite Analytical Chemistry（WAC）による赤(R)・緑(G)・青(B)各サブ指標の内訳棒グラフと数値、総合白色度83.8%</figcaption></figure>
 <ul><li><strong>GAPI</strong>: 5 つの五芒星で全工程を評価。本法は赤 3・黄/緑 9（Fig. 3A）。</li><li><strong>AGREE</strong>: 12 の GAC 原則を 0〜1 で評価する時計状ピクトグラム。本法スコア <strong>0.65</strong>（グリーン、Fig. 3B）。</li><li><strong>BAGI</strong>: 分析法の実行可能性を青〜白で評価。スコア <strong>82.5</strong>（良好、Fig. 3C）。</li><li><strong>WAC</strong>: 効率（赤）・環境影響（緑）・経済性（青）の多次元評価。赤 <strong>87.5%</strong>（高感度＝低 LOD/LOQ）、緑 <strong>83.8%</strong>（少溶媒・少エネルギー・少廃棄）、青 <strong>80.2%</strong>。総合白色度 <strong>83.8%</strong>（高白色度、Fig. 3D）。</li></ul>
+<p><strong>WAC（White Analytical Chemistry）のサブ指標内訳</strong>（原著Fig. 3Dの数値表を転記。手法: HPLC）:</p>
+<table>
+<thead><tr><th>赤（R・効率）</th><th>値</th><th>緑（G・環境影響）</th><th>値</th><th>青（B・経済性）</th><th>値</th></tr></thead>
+<tbody>
+<tr><td>R1: 適用範囲（Scope of application）</td><td>100.0</td><td>G1: 試薬の毒性（Toxicity of reagents）</td><td>70.0</td><td>B1: コスト効率（Cost-efficiency）</td><td>80.0</td></tr>
+<tr><td>R2: LODおよびLOQ</td><td>75.0</td><td>G2: 試薬・廃棄物量（Amount of reagents and waste）</td><td>75.0</td><td>B2: 時間効率（Time-efficiency）</td><td>80.0</td></tr>
+<tr><td>R3: 精度（Precision）</td><td>85.0</td><td>G3: エネルギー・その他媒体（Energy and other media）</td><td>90.0</td><td>B3: 要件（Requirements）</td><td>92.5</td></tr>
+<tr><td>R4: 正確性（Accuracy）</td><td>90.0</td><td>G4: 直接的影響（Direct impacts）</td><td>100.0</td><td>B4: 操作の簡便性（Operational simplicity）</td><td>68.3</td></tr>
+<tr><td><strong>R合計</strong></td><td><strong>87.5</strong></td><td><strong>G合計</strong></td><td><strong>83.8</strong></td><td><strong>B合計</strong></td><td><strong>80.2</strong></td></tr>
+</tbody></table>
+<p>R・G・Bの平均から<strong>総合白色度 83.8%</strong>が算出される。R（効率）が最も高く、特にLOD/LOQ（感度）と適用範囲が高評価。G（環境影響）は試薬毒性・廃棄物量がやや低め。B（経済性）は操作の簡便性（B4）が相対的に低いが、要件（B3）は高評価。</p>
 <h2>結論（Conclusion）</h2>
 <p>非小細胞肺がん治療薬アレクチニブ（ALEC）と Alecensa® 中の不純物を、グリーンケミストリー原則（GAPI・BAGI・AGREE・WAC）を考慮して定量する HPLC 法を開発した。グラジエント溶出と短い分析時間で ALEC と不純物を分離・同定。BBD で立方設計に到達し、設計限界内での条件変更に対する結果予測と最適条件選定を可能にした。ICH Q2(R2) で検証し、不純物 LOQ は ICH Q3A(R2)・Q3B(R2) を満たすほど十分低い。本法は医薬品試料中の ALEC と不純物を正確に定量でき、将来は生体試料への適用も評価しうる。実試料分析にも適用し、ALEC 量は規制推奨範囲内、関連不純物は検出されなかった。研究ラボだけでなくルーチンの医薬品 QC ラボにも使える。方法最適化は <strong>AQbD</strong> の枠組みで実験計画により実施し、最適パラメータで最も理想的かつ短時間の方法をルーチン実用化した。<strong>測定不確かさ</strong>の付加は、不純物定量のような高感度試験に正確性だけでなく信頼性を与え、GMP ラボでの利用に道を拓く。分析化学は常に実験を要するが、環境への配慮と省力化の要請から、統計手法を用いてより正確・精密に測定・記述する結果を示すことが将来求められる——これが本研究の目標であり文献にもたらす視座である。</p>
 <h2>参考文献</h2>
