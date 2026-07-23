@@ -1104,6 +1104,41 @@
       "title": "生薬医薬品のための適正生薬加工規範（GHPP）に関するWHOガイドライン（WHO技術報告書1010・附属書1）",
       "date": "2026-07-15",
       "note": "3-PDFバッチ 3/3（全訳密度）。WHO Technical Report Series No.1010 (2018) Annex 1。学術論文でなくWHO公式規範文書のためIF該当なし。"
+    },
+    "upload-7c91798a-ssdmc-conv-factor": {
+      "source_pdf": "7c91798a-1s2.0S0021967311008739main.pdf",
+      "slug": "ssdmc-conversion-factor-ruggedness-salvia",
+      "title": "単一標準による多成分同時定量（SSDMC）における変換係数（conversion factor）の頑健性・堅牢性——丹参のタンシノン3成分を例に",
+      "date": "2026-07-23",
+      "note": "RRF/変換係数5本バッチ 1/5（全訳密度＋図6枚＋参考文献17＋[N]リンク＋ヒーロー）。J. Chromatogr. A 1218(2011)5618。IF約4.1。"
+    },
+    "upload-d4d62e67-correction-factors-rrf": {
+      "source_pdf": "d4d62e67-s1109401902023x.pdf",
+      "slug": "correction-factors-impurity-content-rrf-epshtein",
+      "title": "不純物含量の算出式における補正係数（correction factor）——その本質・決定法・限界",
+      "date": "2026-07-23",
+      "note": "RRF/変換係数5本バッチ 2/5（全訳＋図1＋参考文献20＋[N]リンク＋ヒーロー）。Pharm. Chem. J. 53(5)2019。IF約1.5。"
+    },
+    "upload-886cad14-rrf-mass-balance-fd": {
+      "source_pdf": "886cad14-1s2.0S0021967317309688main.pdf",
+      "slug": "rrf-mass-balance-forced-degradation-pda-elsd-ms",
+      "title": "強制分解試験における相対応答係数（RRF）と物質収支（mass balance）——LC/PDA/ELSD/MSマルチ検出によるglimepirideのケーススタディ",
+      "date": "2026-07-23",
+      "note": "RRF/変換係数5本バッチ 3/5（全訳＋図7＋参考文献21＋[N]リンク＋ヒーロー）。J. Chromatogr. A 1512(2017)61。IF約4.1。"
+    },
+    "upload-b9245951-rrf-multidetector-el": {
+      "source_pdf": "b9245951-1s2.0S0731708520304283main.pdf",
+      "slug": "rrf-multidetector-extractables-leachables-uncertainty-factor",
+      "title": "マルチ検出アプローチによる相対応答係数（RRF）変動の低減——抽出物・浸出物（E&L）分析で不確実性係数（UF）の必要性を軽減する",
+      "date": "2026-07-23",
+      "note": "RRF/変換係数5本バッチ 4/5（全訳11219字＋図6＋参考文献30＋[N]リンク＋ヒーロー）。JPBA 186(2020)113334。CC-BY。IF約3.4。"
+    },
+    "upload-241a710e-rrf-imatinib-robustness": {
+      "source_pdf": "241a710e-theroleofrelativeresponsefactorinrelated.pdf",
+      "slug": "rrf-imatinib-related-substances-robustness-hplc",
+      "title": "関連物質法開発における相対応答係数（RRF）の役割——イマチニブ不純物のHPLC条件変動によるRRFの揺れ",
+      "date": "2026-07-23",
+      "note": "RRF/変換係数5本バッチ 5/5（全訳＋図4＋参考文献7＋[N]リンク＋ヒーロー）。Rasayan J. Chem. 4(4)2011:919。表21個・保持時間全掲載。密度4215字は表・図主体のデータ報告のため(要約でなく完全全訳)。IF該当なし。"
     }
   }
 }

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>関連物質法開発における相対応答係数（RRF）の役割——イマチニブ不純物のHPLC条件変動によるRRFの揺れ</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="関連物質法開発における相対応答係数（RRF）の役割——イマチニブ不純物のHPLC条件変動によるRRFの揺れ">
+<meta property="og:description" content="相対応答係数（RRF）は、標準品が入手できない不純物を定量するために、不純物と主成分の検出器応答差を補正する分析パラメータ。本研究は抗がん剤イマチニブとその2不純物（F=デスメチル体、G=異性体）を例に、傾き法でRRF（F=0.83、G=0.93）を確立し、HPLCカラム15種と堅牢性8項目（流速・温度・波長・pH・緩衝液濃度・検出器・溶媒グレード・粒子径）を系統的に変えてRRFがどの条件でどれだけ揺れるかを実測。カラム変更と温度・流速で有意な変動が生じ、RRF確立時は原法条件を厳守すべきことを示した研究（Rasayan J. Chem. 2011）の全訳（＋訳者補足）。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/rrf-imatinib-related-substances-robustness-hplc/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="rrf-imatinib-related-substances-robustness-hplc"><h1>関連物質法開発における相対応答係数（RRF）の役割——イマチニブ不純物のHPLC条件変動によるRRFの揺れ</h1><div class="paper-meta"><span class="date">2026-07-23</span> <span class="tag">QC・品質評価</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">規制・薬事</span> &middot; <a href="https://www.rasayanjournal.com" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">241a710e-theroleofrelativeresponsefactorinrelated.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="rrf-imatinib-related-substances-robustness-hplc" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="rrf-imatinib-related-substances-robustness-hplc" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/rrf-imatinib-related-substances-robustness-hplc/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/rrf-imatinib-related-substances-robustness-hplc/ai-infographic.webp" alt="イマチニブの2不純物(F/G)のRRFを傾き法で確立し、カラム15種＋堅牢性8項目を系統的に振ってRRFがどこで大きく揺れるか(カラム・温度・流速)を実測" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。表・数値を保持。本文の[N]は原文の番号引用に対応し末尾の参考文献にリンクする。図は代表的なもの（構造・検量線・クロマトグラム）を原本から抽出。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: The Role of Relative Response Factor in Related Substances Method Development by High Performance Liquid Chromatography (HPLC)</li><li>著者: V. Kalyana Chakravarthy, G. Kishore Babu, R. Lakshmana Dasu, P. Prathyusha, G. Aparna Kiran（Natco Pharma Limited 分析研究開発部, ハイデラバード, インド）</li><li>掲載: <em>Rasayan Journal of Chemistry</em>, Vol. 4, No. 4 (2011), 919–943. ISSN 0974-1496</li><li>インパクトファクター: <strong>該当なし</strong>（<em>Rasayan J. Chem.</em> はオープンアクセスのインド化学系誌でJCR収載外。IF指標なし）</li></ul>
+<blockquote>補足: <strong>RRF（relative response factor, 相対応答係数）</strong> ＝不純物と主成分（API）の検出器応答の差を補正する係数。標準品が入手できない不純物を、主成分の応答から換算して定量するために使う。本論文は分析法バリデーションの実務書として、①RRFを傾き法でどう確立するか、②確立したRRFがHPLC条件（カラム・温度・流速など）を少し変えるだけでどれだけ揺れるか、を抗がん剤 <strong>イマチニブ（Imatinib）</strong> の2不純物で実証した実験報告。対象不純物は <strong>Impurity F（デスメチル体）</strong> と <strong>Impurity G（異性体）</strong>。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>高速液体クロマトグラフィー（HPLC）のクロマトグラフ条件——異なるHPLCカラム・流速・pH・温度・緩衝液濃度・検出波長・異なる検出器（UV・PDA）・異なる溶媒グレード——を変えて相対応答係数（RRF）の研究を行い、確立したRRFの変動を観測した。著者らは堅牢性パラメータとHPLCカラムを変えてRRFへの影響を調べ、全結果を比較した。比較研究は、方法条件のわずかな変動でも確立したRRF値に影響が観測されることを示した。</p>
+<p><strong>キーワード:</strong> RRF、相対応答係数、補正係数、応答係数、RRFの推定。</p>
+<h2>序論（Introduction）</h2>
+<p>相対応答係数（RRF）は、原薬・製剤中の不純物/分解物を管理するためクロマトグラフ手順で用いられる分析パラメータである。RRFは不純物と被検物ピークの検出器応答差を補正するのに使われ、線形範囲の溶液を用いた傾き法（slope method）で確立される。各薬局方はRRFという用語を異なる形で参照する。<strong>米国薬局方（USP）</strong> では、相対応答係数は等量の不純物と原薬の応答の比[<a href="#ref-1" class="cite">1</a>]で、USPはRRFを補正係数（Correction factor）・応答係数（Response factor）・相対応答係数のいずれでも呼ぶ。<strong>欧州薬局方（Ph.Eur）</strong> では、相対検出器応答係数（一般に応答係数と呼ぶ）は所与物質に対する検出器の感度を標準物質に対して表し、補正係数は応答係数の逆数[<a href="#ref-2" class="cite">2</a>]。<strong>英国薬局方（BP）</strong> では、応答係数は試験記載条件下での等重量の一方の物質の応答を他方に対して表す相対的な用語[<a href="#ref-3" class="cite">3</a>]である。</p>
+<p>RRFの確立が必要なのは、標準の安定性問題を避ける、不純物標準の調製・維持コストを減らす、不純物標準の入手困難・合成/単離の困難、利便性・時間短縮のためである。RRFは第1相〜第4相試験、薬物純度試験、物質収支試験、限度試験、安定性指示法など様々な段階で使われる。</p>
+<h2>実験（Experimental）</h2>
+<p>イマチニブ錠[<a href="#ref-5" class="cite">5</a>]について正確・精密な関連物質（RS）法を開発し、RRF値を確立した。実験薬物としてイマチニブメシル酸塩、Impurity F（デスメチル不純物）、Impurity G（異性体不純物）を用い、分析法に従いクロマトグラフ条件を設定。HPLCカラム（同一固定相・異なるメーカー）・検出波長・検出器・カラム温度・流速・pH・緩衝液濃度・溶媒グレードを変えてRRF値の変動を観測した。</p>
+<h3>RRFの推定（傾き法）</h3>
+<p>RRFは傾き法で推定する：(1) 試験法に従いブランク・分離能溶液・標準溶液を注入しシステム適合性を確立。(2) 試験濃度に対し0.1%〜1.0%（例：0.1・0.2・0.3・0.5・0.7・0.8・1.0%）の濃度範囲で、不純物と原薬を各7点以上調製し個別に注入（または規格レベルの上下各3点＋LOQ超を含む7点以上）。(3) 標準・不純物混合溶液も同様に調製・注入。(4) 標準・不純物の濃度対応答をプロット（ゼロ点は含めない）、最小二乗回帰で y=mx+c の直線を作り各傾きを決定。相関係数は標準・不純物とも0.995以上。</p>
+<p><strong>有用な式:</strong></p>
+<p>$$\text{API/不純物濃度} = \dfrac{\text{重量(mg)}}{\text{希釈(mL)}} \times \dfrac{\text{塩基の分子量}}{\text{塩の分子量}} \times \text{純度}$$</p>
+<p>$$\text{RRF（不純物）} = \dfrac{\text{不純物溶液の傾き}}{\text{標準溶液の傾き}}$$</p>
+<blockquote>補足: 不純物の傾きが分子にあるとき、RRF値は不純物定量式で「除数（割る係数）」として現れる。逆に標準の傾きを分子にした RRF＝(標準の傾き)/(不純物の傾き) を使う場合、RRF値は「乗数（掛ける係数）」として現れる（式のどちらに置くかは本サイトの <code>correction-factors-impurity-content-rrf-epshtein</code> 参照）。</blockquote>
+<h3>回収試験</h3>
+<p>確立したRRFが正しいことを確認するため回収試験は必須である。まず不純物の力価（potency）を、原薬・製剤の規格に記載のとおり算出する（遊離塩基は塩基として、塩は塩として、錯体は錯体として）。APIが塩や金属錯体で存在する場合は塩・錯体を含めて力価を算出する。不純物と原薬が同じ形（ともに塩基、ともに同じ塩形など）なら通常どおり算出する。不純物が塩基塩形で原薬が塩基形なら試験濃度に対し不純物に重量補正をかける。不純物が遊離塩基で原薬が塩基塩形なら原薬に重量補正をかける。両者が異なる形なら両方に重量補正をかける。</p>
+<p>次に非添加・添加試料を調製・注入し、RRF値を用いて非添加・添加試料の各既知不純物の%を算出、回収率を求める。回収率は95〜105%であるべきで、範囲外なら誤差要因を除いて再実験する。範囲内ならRRFを既知個別不純物の%算出に組み込む。構造類似性に基づきAPIに対するRRFを比較し、構造差で説明できない大きなRRF差があれば調査する。外部（薬局方標準を除く）から入手した不純物にはLC-MS・クロマトグラフ純度・TGA（熱重量分析）の確認が必要である。不純物量に制約がある場合は、原薬・製剤の規格レベルと、その上下のレベルでRRF確立を行う。RRFは2回目でも確認すべきである。</p>
+<p>本研究の回収試験（アナリスト1＝表7、アナリスト2＝表12）は、遠心分離および親水性PVDF（Millipore Millex-HV 0.45 µm）・ナイロン（Millipore Millex-HN 0.45 µm）ろ過での回収率を評価した。</p>
+<h3>表7・表12. 回収率（%）</h3>
+<table>
+<thead><tr><th>前処理</th><th>Impurity F（A1）</th><th>Impurity G（A1）</th><th>Impurity F（A2）</th><th>Impurity G（A2）</th></tr></thead>
+<tbody>
+<tr><td>遠心分離</td><td>99.7</td><td>99.8</td><td>99.6</td><td>99.7</td></tr>
+<tr><td>親水性PVDFろ過</td><td>99.9</td><td>102.1</td><td>100.1</td><td>102.0</td></tr>
+<tr><td>ナイロンろ過</td><td>99.0</td><td>104.1</td><td>99.1</td><td>103.9</td></tr>
+</tbody></table>
+<p>いずれも95〜105%の許容範囲内で、確立したRRF（F=0.83、G=0.93）が妥当であることを確認した。</p>
+<h3>RRFに影響するパラメータ[<a href="#ref-4" class="cite">4</a>]</h3>
+<p>(i) カラム変更（同一固定相・異なるメーカー）、(ii) カラム粒子径変更、(iii) 検出波長変更、(iv) 検出器変更、(v) 溶媒グレード変更、(vi) 緩衝液濃度変更、(vii) カラム温度変更、(viii) 流速変更、(ix) pH変動。</p>
+<h3>分析法</h3>
+<p>イマチニブメシル酸塩（分子式 C29H31N7O·CH3SO3H、分子量589.7 g/mol、抗腫瘍薬）の錠剤製剤を対象とし、2既知不純物 Impurity F（デスメチル）・Impurity G（異性体）を含む。装置は Waters 2695ポンプ＋2487 UV検出器＋Empower2[<a href="#ref-5" class="cite">5</a>]。カラムは X-Bridge C18（250×4.6 mm, 5 µm, Waters）。緩衝液：リン酸二水素ナトリウム二水和物3.0 gを水1000 mLに溶かしトリエチルアミンでpH 8.0±0.05に調整。溶媒混合：メタノール/アセトニトリル600:400。移動相A：緩衝液/溶媒混合550:450。移動相B：溶媒混合。カラム温度30℃、流速1.0 mL/min、注入量20 µL、UV 230 nm、実行時間60分（グラジエントは表1）。</p>
+<figure><img src="assets/rrf-imatinib-related-substances-robustness-hplc/fig1a_imatinib_structure.png" alt="図（原論文 Fig.1a）. イマチニブメシル酸塩の化学構造（4-メチルピペラジニルメチル基とピリジル-ピリミジニルアミノフェニル-ベンズアミド骨格のメシル酸塩）。" loading="lazy"><figcaption>図（原論文 Fig.1a）. イマチニブメシル酸塩の化学構造（4-メチルピペラジニルメチル基とピリジル-ピリミジニルアミノフェニル-ベンズアミド骨格のメシル酸塩）。</figcaption></figure>
+<h3>表1. グラジエントプログラム</h3>
+<table>
+<thead><tr><th>時間(分)</th><th>流速(mL/min)</th><th>移動相A(%)</th><th>移動相B(%)</th></tr></thead>
+<tbody>
+<tr><td>0.0</td><td>1.0</td><td>100</td><td>0</td></tr>
+<tr><td>25.0</td><td>1.0</td><td>100</td><td>0</td></tr>
+<tr><td>40.0</td><td>1.0</td><td>65</td><td>35</td></tr>
+<tr><td>45.0</td><td>1.0</td><td>65</td><td>35</td></tr>
+<tr><td>50.0</td><td>1.0</td><td>100</td><td>0</td></tr>
+<tr><td>60.0</td><td>1.0</td><td>100</td><td>0</td></tr>
+</tbody></table>
+<h3>表2. 各既知不純物の相対保持時間（RRT）とRRF（既存法）</h3>
+<table>
+<thead><tr><th>No.</th><th>成分</th><th>RRT</th><th>RRF</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Imatinib</td><td>1.00</td><td>1.00</td></tr>
+<tr><td>2</td><td>Impurity-F</td><td>0.54</td><td>0.83</td></tr>
+<tr><td>3</td><td>Impurity-G</td><td>0.87</td><td>0.93</td></tr>
+</tbody></table>
+<p>※イマチニブの保持時間は約18.5分。</p>
+<h2>RRFの確立（アナリスト1）と確認（アナリスト2）</h2>
+<p>イマチニブメシル酸塩・Impurity F・Impurity G を約5 mgずつ100 mLに秤取し、試験濃度に対し0.02%〜1.00%の濃度系列に希釈。検量線（濃度対面積）の相関係数はイマチニブ0.999・Impurity F 1.000・Impurity G 0.999。ストック溶液濃度の算出例：</p>
+<ul><li>イマチニブメシル酸塩：[5.002/100][99.0/100][493.6/589.7]×1000 = 41.45 ppm（係数493.6/589.7＝イマチニブ塩基/メシル酸塩の分子量比）</li><li>Impurity F：[4.978/100][94.8/100]×1000 = 47.19 ppm</li><li>Impurity G：[5.029/100][92.3/100]×1000 = 46.42 ppm</li></ul>
+<p><strong>RRF算出</strong>（= 不純物の傾き / 活性成分の傾き）：</p>
+<ul><li>Impurity F：61754.05/74167.65 = <strong>0.83</strong></li><li>Impurity G：68661.27/74167.65 = <strong>0.93</strong></li></ul>
+<p>アナリスト2（別秤量・別調製）でも相関係数0.999〜1.000、同じRRF（F=0.83、G=0.93）を再現。回収試験（表7・表12）はImpurity F・Gとも遠心/親水性PVDF/ナイロンろ過で99.0〜104.1%と良好であった。</p>
+<figure><img src="assets/rrf-imatinib-related-substances-robustness-hplc/fig7_linearity.png" alt="図（原論文 Fig.7）. イマチニブの検量線（アナリスト2）。y = 74042x − 1351.8、R² = 0.9995。0.02〜1.0%（約0.17〜8.5 µg/mL）で良好な直線性。" loading="lazy"><figcaption>図（原論文 Fig.7）. イマチニブの検量線（アナリスト2）。y = 74042x − 1351.8、R² = 0.9995。0.02〜1.0%（約0.17〜8.5 µg/mL）で良好な直線性。</figcaption></figure>
+<h3>表4–6. 検量線データ（アナリスト1、抜粋）</h3>
+<table>
+<thead><tr><th>濃度(%)</th><th>イマチニブ 面積</th><th>Impurity F 面積</th><th>Impurity G 面積</th></tr></thead>
+<tbody>
+<tr><td>0.02</td><td>12416</td><td>10913</td><td>14473</td></tr>
+<tr><td>0.10</td><td>59047</td><td>57650</td><td>62950</td></tr>
+<tr><td>0.20</td><td>122994</td><td>117962</td><td>123825</td></tr>
+<tr><td>0.40</td><td>244259</td><td>232984</td><td>254276</td></tr>
+<tr><td>0.80</td><td>487411</td><td>465288</td><td>511777</td></tr>
+<tr><td>1.00</td><td>610344</td><td>581793</td><td>637268</td></tr>
+<tr><td><strong>傾き</strong></td><td><strong>74167.65</strong></td><td><strong>61754.05</strong></td><td><strong>68661.27</strong></td></tr>
+<tr><td>相関係数</td><td>0.999</td><td>1.000</td><td>0.999</td></tr>
+</tbody></table>
+<figure><img src="assets/rrf-imatinib-related-substances-robustness-hplc/fig10_xbridge.png" alt="図（原論文 Fig.10）. X-Bridge C18カラムでのイマチニブと不純物の分離（アナリスト1）。Impurity F（保持時間10.104分）・Impurity G（16.139分）・Imatinib（18.406分）。後方の大きなうねりはグラジエント由来。" loading="lazy"><figcaption>図（原論文 Fig.10）. X-Bridge C18カラムでのイマチニブと不純物の分離（アナリスト1）。Impurity F（保持時間10.104分）・Impurity G（16.139分）・Imatinib（18.406分）。後方の大きなうねりはグラジエント由来。</figcaption></figure>
+<h2>RRF変動の研究</h2>
+<p>確立したRRFに影響するパラメータを変え、RRF値の逸脱を可視化した。</p>
+<h3>(1) カラム変更（同一固定相・異なるメーカー15種）</h3>
+<p>X-Bridge C18・X-Terra RP-18・Inert Sustain C18・Cosmicsil BDS/Aster/Agate・Purosphere star・Hypersil BDS・Kromasil 100・X-Bridge Shield・YMC Pack ODS AQ・Atlantis T3・X-Bridge C18(3.5µ)・Develosil ODS MG-5・Sunfire C18 の15カラム。イマチニブと不純物の保持時間が大きく変わり、RRF値に有意な変動が観測された。各メーカーのシリカが異なり、同一の保持挙動を示すカラムは2つとない（PQRIアプローチ[<a href="#ref-6" class="cite">6</a>]）。各カラムは相対保持・疎水性・立体相互作用・水素結合酸性/塩基性・相対シラノールイオン化/陽イオン交換能が異なりうる。</p>
+<figure><img src="assets/rrf-imatinib-related-substances-robustness-hplc/fig13_inertsustain.png" alt="図（原論文 Fig.13）. Inert Sustain C18カラムでの分離。Impurity F（16.723分）・Impurity G（30.046分）・Imatinib（32.449分）。X-Bridge（図10）に比べ保持時間が大きく後方へ移動し、RRFも変わる。" loading="lazy"><figcaption>図（原論文 Fig.13）. Inert Sustain C18カラムでの分離。Impurity F（16.723分）・Impurity G（30.046分）・Imatinib（32.449分）。X-Bridge（図10）に比べ保持時間が大きく後方へ移動し、RRFも変わる。</figcaption></figure>
+<h3>表13. カラム変更によるRRF変動</h3>
+<table>
+<thead><tr><th>カラム</th><th>RRF F</th><th>RRF G</th><th>変動% F</th><th>変動% G</th></tr></thead>
+<tbody>
+<tr><td>X-Bridge C18（基準）</td><td>0.83</td><td>0.93</td><td>—</td><td>—</td></tr>
+<tr><td>X-Terra RP-18</td><td>0.84</td><td>0.98</td><td>−1.2</td><td>−5.4</td></tr>
+<tr><td>Inert Sustain C18</td><td>0.82</td><td>0.97</td><td>1.2</td><td>−4.3</td></tr>
+<tr><td><strong>Cosmicsil BDS C18</strong></td><td><strong>0.59</strong></td><td>0.99</td><td><strong>28.9</strong></td><td>−6.5</td></tr>
+<tr><td>Purosphere Star C18</td><td>0.69</td><td>0.94</td><td>16.9</td><td>−1.1</td></tr>
+<tr><td>Cosmicsil Aster C18</td><td>0.75</td><td>0.97</td><td>9.6</td><td>−4.3</td></tr>
+<tr><td>Cosmicsil Agate C18</td><td>0.94</td><td>1.13</td><td>−13.3</td><td>−21.5</td></tr>
+<tr><td>Hypersil BDS C18</td><td>0.76</td><td>0.99</td><td>8.4</td><td>−6.5</td></tr>
+<tr><td>Kromasil 100-5 C18</td><td>0.74</td><td>0.94</td><td>10.8</td><td>−1.1</td></tr>
+<tr><td>X-Bridge Shield RP-18</td><td>0.80</td><td>0.94</td><td>3.6</td><td>−1.1</td></tr>
+<tr><td>YMC Pack ODS AQ</td><td>0.88</td><td>1.04</td><td>−6.0</td><td>−11.8</td></tr>
+<tr><td>Atlantis T3 C18</td><td>0.86</td><td>0.94</td><td>−3.6</td><td>−1.1</td></tr>
+<tr><td>Develosil ODS MG-5</td><td>0.81</td><td>0.98</td><td>2.4</td><td>−5.4</td></tr>
+<tr><td>Sunfire C18</td><td>0.75</td><td>0.94</td><td>9.6</td><td>−1.1</td></tr>
+</tbody></table>
+<blockquote>補足: カラム変更でImpurity FのRRFが0.83から最大0.59（Cosmicsil BDS、変動28.9%）まで動く。同じ「C18」でもメーカーが違えばRRFが3割変わりうる——これがRRFを移す際の最大の落とし穴。</blockquote>
+<h3>各カラムでの保持時間（原論文 図10–25より）</h3>
+<p>RRFが揺れる根本原因は、カラムごとに保持時間（分）が大きく変わることにある。原論文の各クロマトグラム（図10–25）から読み取った保持時間を一覧化する。X-Bridge基準では Impurity F 約10分・Impurity G 約16分・Imatinib 約18分だが、カラムによっては Imatinib が40分超まで遅れ、Kromasil では溶出順が逆転（Impurity G が F より先に溶出）する。</p>
+<table>
+<thead><tr><th>カラム</th><th>Impurity F</th><th>Impurity G</th><th>Imatinib</th></tr></thead>
+<tbody>
+<tr><td>X-Bridge C18（基準・A1）</td><td>10.104</td><td>16.139</td><td>18.406</td></tr>
+<tr><td>X-Bridge C18（A2）</td><td>10.305</td><td>16.472</td><td>18.761</td></tr>
+<tr><td>X-Terra RP-18</td><td>11.740</td><td>17.956</td><td>19.445</td></tr>
+<tr><td>Inert Sustain C18</td><td>16.723</td><td>30.046</td><td>32.449</td></tr>
+<tr><td>Cosmicsil BDS C18</td><td>28.183</td><td>31.733</td><td>33.266</td></tr>
+<tr><td>Purosphere star C18</td><td>20.108</td><td>33.500</td><td>35.425</td></tr>
+<tr><td>Cosmicsil Aster C18</td><td>19.551</td><td>32.153</td><td>34.187</td></tr>
+<tr><td>Cosmicsil Agate C18</td><td>33.883</td><td>38.183</td><td>39.181</td></tr>
+<tr><td>Hypersil BDS C18</td><td>11.418</td><td>16.728</td><td>18.664</td></tr>
+<tr><td>Kromasil 100-5 C18（溶出順逆転）</td><td>27.693</td><td>16.799</td><td>30.801</td></tr>
+<tr><td>X-Bridge Shield RP-18</td><td>13.959</td><td>20.492</td><td>22.659</td></tr>
+<tr><td>YMC Pack ODS AQ</td><td>35.108</td><td>40.385</td><td>41.290</td></tr>
+<tr><td>Atlantis T3 C18</td><td>23.409</td><td>36.261</td><td>37.420</td></tr>
+<tr><td>X-Bridge C18（3.5µ）</td><td>10.853</td><td>17.668</td><td>20.030</td></tr>
+<tr><td>Develosil ODS MG-5</td><td>33.833</td><td>40.449</td><td>41.367</td></tr>
+<tr><td>Sunfire C18</td><td>18.371</td><td>31.800</td><td>33.896</td></tr>
+</tbody></table>
+<h3>各堅牢性条件での保持時間（原論文 図26–39より）</h3>
+<table>
+<thead><tr><th>条件</th><th>Impurity F</th><th>Impurity G</th><th>Imatinib</th></tr></thead>
+<tbody>
+<tr><td>低流速 0.8 mL</td><td>12.630</td><td>20.341</td><td>23.184</td></tr>
+<tr><td>高流速 1.2 mL</td><td>8.568</td><td>13.820</td><td>15.737</td></tr>
+<tr><td>低温 25℃</td><td>10.773</td><td>17.602</td><td>20.209</td></tr>
+<tr><td>高温 35℃</td><td>9.814</td><td>15.669</td><td>17.701</td></tr>
+<tr><td>低波長 227 nm</td><td>10.347</td><td>16.606</td><td>18.951</td></tr>
+<tr><td>高波長 233 nm</td><td>10.344</td><td>16.609</td><td>18.950</td></tr>
+<tr><td>低pH 7.8</td><td>9.140</td><td>14.604</td><td>16.637</td></tr>
+<tr><td>高pH 8.2</td><td>9.906</td><td>15.111</td><td>17.206</td></tr>
+<tr><td>UV 2487検出器</td><td>10.104</td><td>16.139</td><td>18.406</td></tr>
+<tr><td>PDA 2998検出器</td><td>10.344</td><td>16.604</td><td>18.947</td></tr>
+<tr><td>低緩衝液濃度 18 mM</td><td>10.584</td><td>17.044</td><td>19.412</td></tr>
+<tr><td>高緩衝液濃度 22 mM</td><td>10.305</td><td>16.472</td><td>18.761</td></tr>
+<tr><td>溶媒 HPLCグレード</td><td>9.863</td><td>15.710</td><td>17.933</td></tr>
+<tr><td>溶媒 グラジエントグレード</td><td>10.104</td><td>16.139</td><td>18.406</td></tr>
+</tbody></table>
+<blockquote>補足: 流速・温度・pHの変更でも保持時間は動くが、その範囲は数分以内でRRFへの影響は数%に留まる（表15–21）。対してカラム変更は保持時間を2倍以上動かし（Imatinib 18分→41分）、RRFを最大29%動かす。「RRFはカラムに最も敏感」という結論が、この保持時間の動きから直感的に理解できる。</blockquote>
+<h3>(2) 堅牢性試験（8項目）</h3>
+<p>粒子径（30%変動）・流速（1.0±0.2 mL）・温度（30±5℃）・波長（230±3 nm）・pH（±0.2）・検出器（UV 2487 vs PDA 2998）・緩衝液濃度（±10%）・溶媒グレード（HPLC vs グラジエント）。</p>
+<h3>表15–21. 堅牢性各項目のRRF変動（基準 F=0.83／G=0.93）</h3>
+<table>
+<thead><tr><th>項目</th><th>条件</th><th>RRF F</th><th>RRF G</th><th>変動% F</th><th>変動% G</th></tr></thead>
+<tbody>
+<tr><td>粒子径</td><td>3.5µ</td><td>0.85</td><td>0.95</td><td>−2.4</td><td>−2.2</td></tr>
+<tr><td>流速</td><td>0.8 mL</td><td>0.86</td><td>0.96</td><td>−3.6</td><td>−3.2</td></tr>
+<tr><td>流速</td><td>1.2 mL</td><td>0.84</td><td>0.96</td><td>−1.2</td><td>−3.2</td></tr>
+<tr><td>温度</td><td>25℃</td><td>0.90</td><td>0.99</td><td>−8.4</td><td>−6.5</td></tr>
+<tr><td>温度</td><td>35℃</td><td>0.79</td><td>0.97</td><td>4.8</td><td>−4.3</td></tr>
+<tr><td>波長</td><td>227 nm</td><td>0.82</td><td>0.94</td><td>1.2</td><td>−1.1</td></tr>
+<tr><td>波長</td><td>233 nm</td><td>0.83</td><td>0.92</td><td>0.0</td><td>1.1</td></tr>
+<tr><td>pH</td><td>7.8</td><td>0.84</td><td>0.95</td><td>−1.2</td><td>−2.2</td></tr>
+<tr><td>pH</td><td>8.2</td><td>0.85</td><td>0.96</td><td>−2.4</td><td>−3.2</td></tr>
+<tr><td>検出器</td><td>PDA 2998</td><td>0.83</td><td>0.92</td><td>0.0</td><td>1.1</td></tr>
+<tr><td>緩衝液</td><td>18 mM</td><td>0.84</td><td>0.94</td><td>−1.2</td><td>−1.1</td></tr>
+<tr><td>緩衝液</td><td>22 mM</td><td>0.82</td><td>0.93</td><td>1.2</td><td>0.0</td></tr>
+<tr><td>溶媒グレード</td><td>HPLC</td><td>0.86</td><td>0.93</td><td>−3.6</td><td>0.0</td></tr>
+</tbody></table>
+<h2>結果と考察（Results and discussion）</h2>
+<p>各種HPLCカラムと堅牢性パラメータでRRFへの影響を調べた。<strong>カラム間変動</strong>（同一固定相・異なるメーカー）では、イマチニブと不純物の保持時間が劇的に変わるため、RRF値に有意な変動が観測された。HPLCカラムのシリカはメーカーごとに異なり、同一の保持挙動を示すカラムは2つとない（PQRIアプローチ[<a href="#ref-6" class="cite">6</a>]）。USBアプローチ[<a href="#ref-6" class="cite">6</a>]ではC18カラム評価にNIST標準物質SRM 870（Uracil・toluene・ethylbenzene・quinizarin・amitriptylineの5化合物混合）を用いる。<strong>カラム温度と流速</strong> の変更でも有意な変動が観測された。<strong>検出器・溶媒グレード・波長・粒子径・移動相pH・緩衝液濃度</strong> の変更では軽微な変動であった。検出器ランプエネルギーもRRFに影響する。</p>
+<p>米国薬局方フォーラム[<a href="#ref-7" class="cite">7</a>]は、RRFをいつ1.0に丸めてよいか示していない。スポンサーにより0.80–1.2、0.90–1.1、0.95–1.05の範囲で1.0に丸めるなど扱いが分かれる。RRF値は各条で、1.0以上なら小数第1位、1.0未満なら小数第2位（＝有効数字2桁）で記載する。ICH Q3A(R)は不純物結果を1.0以上なら小数第1位、1.0未満なら小数第2位で報告するとする。USPではRRFを記号「F」で表す。Ph.Eur[<a href="#ref-2" class="cite">2</a>]はRRFが0.8–1.2以外なら各条に含めることを要求する。BP[<a href="#ref-3" class="cite">3</a>]は応答係数0.2未満または5超は使わないとし、不純物と被検物の応答差がこの限度外なら、別の検出波長や別の可視化法など異なる決定法を用いる。</p>
+<h2>結論（Conclusion）</h2>
+<p>相対応答係数（RRF）は多くのクロマトグラフ手順で頻用される一般的な分析パラメータである。対応する標準品が入手できない場合が多いため、不純物の定量・限度試験に決定的に重要である。RRFパラメータは実験パラメータに敏感で、クロマトグラフ条件を逸脱すると値が変わる。RRFを確立する際は、原法条件から逸脱せず正確に従うべきである。</p>
+<blockquote>補足（実務的示唆）: 本論文は「RRFは条件に敏感で、少しの逸脱で揺れる」ことを、イマチニブ2不純物×（カラム15種＋堅牢性8項目）で網羅的に実測した実務データ集。要点は——①<strong>カラムが最大の揺れ要因</strong>（同じC18でもメーカーが違えばRRF最大29%変動、保持時間が大きく動くため）、②次いで<strong>温度（±5℃で最大8.4%）・流速</strong>、③<strong>波長・pH・緩衝液・検出器・溶媒グレードは軽微</strong>（数%以内）。したがってRRFを規格に載せるなら、カラムの銘柄・温度・流速まで含めて原法条件を固定し、移設時は回収試験（95–105%）で必ず再確認すべき。本サイトの <code>correction-factors-impurity-content-rrf-epshtein</code>（RRF/補正係数の正しい決め方＝切片aの有意性など）、<code>ssdmc-conversion-factor-ruggedness-salvia</code>（生薬での変換係数の実験室間ばらつき、統計計画で分解）、<code>rrf-multidetector-extractables-leachables-uncertainty-factor</code>（RRF変動を検出器の使い分けで回避）と併読すると、「RRFの揺れ」を定義・実測・回避の3面から理解できる。本論文はEpshtein 2019（<code>correction-factors-...</code>）の参考文献[10]として引用されている。</blockquote>
+<h2>参考文献（References）</h2>
+<ol class="references"><li id="ref-1">United States Pharmacopeia USP 34-NF 29, Chapter 621, 2011.</li><li id="ref-2">European Pharmacopoeia 7.0, Section 2.2.46 Chromatographic Separation Techniques, 2010.</li><li id="ref-3">British Pharmacopoeia, Control of Impurities, A530 Supplementary Chapter I A, 2008.</li><li id="ref-4">ICH Guidelines on Validation of Analytical Procedure: Text and Methodology Q2(R1), 2011.</li><li id="ref-5">L. R. Snyder, J. J. Kirkland, J. I. Glajch, <em>Practical HPLC Method Development</em>, 2nd ed., 1997.</li><li id="ref-6">HPLC Column Classification, B. Bindlingmeyer et al. (PQRI/USP Approach), <em>Pharmacopoeial Forum</em>, Vol. 32 (March–April 2005).</li><li id="ref-7">L. Bhattacharyya, H. Pappa, K. A. Russo, E. Sheinin, R. Williams, The Use of Relative Response Factors to Determine Impurities, <em>Pharmacopeial Forum</em>, 31(3), May–June 2005.</li></ol><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="correction-factors-impurity-content-rrf-epshtein.html">不純物含量の算出式における補正係数（correction factor）——その本質・決定法・限界</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="rrf-mass-balance-forced-degradation-pda-elsd-ms.html">強制分解試験における相対応答係数（RRF）と物質収支（mass balance）——LC/PDA/ELSD/MSマルチ検出によるglimepirideのケーススタディ</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="rrf-multidetector-extractables-leachables-uncertainty-factor.html">マルチ検出アプローチによる相対応答係数（RRF）変動の低減——抽出物・浸出物（E&amp;L）分析で不確実性係数（UF）の必要性を軽減する</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="aoac-2018-04-ginger-nonvolatile-constituents-lc-uv.html">食事成分・完成剤形中の非揮発性ショウガ成分の定量（AOAC公定法2018.04・First Action）——LC-UV法とSMPR 2017.012適合の検証</a><span class="rel-tags"><span class="rel-tag">規制・薬事</span><span class="rel-tag">メソッド開発・QbD</span><span class="rel-tag">HPLC・UPLC</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="rrf-imatinib-related-substances-robustness-hplc" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
