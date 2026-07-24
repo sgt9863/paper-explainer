@@ -24,7 +24,8 @@
     "_comment": "PyMuPDF(get_images/get_drawings/ページ描画)で原本PDF全ページを確認したが、出版社ロゴ・チェックマーク等の小さいUI画像以外に実質的な図が存在しないことを確認済み。②図0枚のまま quality_audit.py には要対応として出続けるが、捏造を避けるため図は追加していない。再確認不要。",
     "tcm-granules-extraction-processes-quality-review": "2026-07-17確認。Phytochemical Analysis誌の9頁レビュー。get_images/get_drawings/ページ描画すべてで実質的な図なし（~1135px²の更新チェックバッジのみ）。本文中に「Figure」「Fig.」の出現ゼロ。Table1・Table2は既に本文の表として再現済み。",
     "botanical-drug-cmc-four-approved-review": "2026-07-17確認。Botanical Drugs誌9頁のCMCレビュー。埋め込みラスター画像なし、本文に「Figure」「Fig.」の出現ゼロ、表罫線程度のベクター線画のみ。",
-    "folin-ciocalteu-total-polyphenols-critical-review": "2026-07-17確認。Talanta誌10頁のFolin-Ciocalteu法批判的レビュー。get_images()で全10ページを確認したが1ページ目の出版社ロゴ3点(いずれも7,000px²未満)以外に図は無し。本文の3つのデータ表(Table1〜3、対応する原文表を全行転記済み)が原文の情報の中心。"
+    "folin-ciocalteu-total-polyphenols-critical-review": "2026-07-17確認。Talanta誌10頁のFolin-Ciocalteu法批判的レビュー。get_images()で全10ページを確認したが1ページ目の出版社ロゴ3点(いずれも7,000px²未満)以外に図は無し。本文の3つのデータ表(Table1〜3、対応する原文表を全行転記済み)が原文の情報の中心。",
+    "bioassay-tcm-quality-control-review": "2026-07-23確認。中国中药杂志の綜述(5頁)。PyMuPDF get_imagesで全5ページ確認し埋め込み画像なし(「图」の出現は指纹图谱等の熟語)。生物活性測定QCの総説で図表なし、本文は全訳済み。"
   },
   "reviewed_adequate": {
     "_comment": "quality_audit.pyのCJK文字数ヒューリスティックが「密度不足」と誤検知したが、原文と突き合わせて確認した結果、実際には原文の全セクション・全データを既に忠実に全訳済み（英語の化合物名・分子式・m/z値・保持時間等が本文中で大きな比率を占めるため機械的なCJK文字数が低く出るだけ）。追加の手直しは不要。2026-07-16 レビュー。",
