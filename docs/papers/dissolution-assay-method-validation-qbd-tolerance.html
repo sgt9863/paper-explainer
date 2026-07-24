@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）">
+<meta property="og:description" content="溶出試験は製品品質・性能の継続的保証の鍵である。その溶出プロファイルを評価し 又は薬局方適合を検証する分析法のバリデーションは「2つのプロファイルを類似と 又は製品を規格適合と正しく判定できる」ことを示すべきだが ICH Q2は「バリデーション対象の分析法が最終目的に照らして有効か否かをどう判断するか」を説明していない。本稿（リエージュ大学/Arlenda の E. Rozet・B. Boulanger・Ph. Hubert らによる2012年のAnalytica Chimica Acta論文）は QbD原則に準拠して 溶出試験に関わる分析法のATP（分析目標プロファイル）を正しく定義し バリデーションを「開発した方法が意図した目的に適合することの自然な実証」に位置づける方法論を提案する。f2類似性係数による溶出プロファイル比較（最大許容 室内再現精度SDをATPに規定）と 即放性製剤の薬局方適合判定（二項分布とβ期待許容区間）の両方を シミュレーション・精度プロファイル・判定プロファイルと フルコナゾールHPLC-UV法への適用例（図1〜5をPyMuPDF抽出）とともに全訳（＋訳者補足）した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/dissolution-assay-method-validation-qbd-tolerance/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="dissolution-assay-method-validation-qbd-tolerance"><h1>溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）</h1><div class="paper-meta"><span class="date">2026-07-24</span> <span class="tag">QC・品質評価</span> <span class="tag">分析法・バリデーション</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">規制・ガイドライン</span> <span class="tag">製剤・製造</span> &middot; <a href="https://doi.org/10.1016/j.aca.2012.09.017" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S000326701201344X-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="dissolution-assay-method-validation-qbd-tolerance" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="dissolution-assay-method-validation-qbd-tolerance" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/dissolution-assay-method-validation-qbd-tolerance/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/dissolution-assay-method-validation-qbd-tolerance/ai-infographic.webp" alt="溶出プロファイルの「類似」や規格「適合」を正しく判定できる分析法か？——ICH Q2が答えない「バリデーションの合否判断」を QbD で埋める Rozet/Boulanger の方法論。f2類似性係数は室内再現精度SDだけで決まり その最大許容値をATPに置く" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Anal. Chim. Acta 原著）構成に沿って訳出。本文の[N]は原文の番号引用に対応し末尾の参考文献にリンクする。図1〜図5は原本PDFの埋め込み画像をPyMuPDFで抽出しReadで確認のうえ全訳キャプションで埋め込んだ。数式(f1/f2・ANOVA・二項)はKaTeXで再構成(1ブロック1式)。「&gt; 補足:」は訳者注。同著者の姉妹論文「分析法バリデーションとQbD」も本サイトに掲載。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Validation of analytical methods involved in dissolution assays: Acceptance limits and decision methodologies</li><li>著者: E. Rozet ᵃ\*・E. Ziemons ᵃ・R.D. Marini ᵃ・B. Boulanger ᵇ・Ph. Hubert ᵃ（ᵃ 分析化学研究室 CIRM 薬学研究所 リエージュ大学, ベルギー／ᵇ Arlenda SA, リエージュ, ベルギー）</li><li>掲載: <em>Analytica Chimica Acta</em> 751 (2012) 44–51. DOI: 10.1016/j.aca.2012.09.017</li><li>種別: 原著論文（Original article）</li><li>インパクトファクター: <strong>該当</strong>（分析化学の主要誌）</li><li>助成: ベルギー国立科学研究基金（FRS-FNRS。E. Rozet はポスドク研究員）</li></ul>
+<blockquote>補足: 本稿は、別掲の同著者論文「[分析法バリデーションとQuality by Design](/papers/analytical-procedure-validation-qbd-paradigm.html)」の姉妹編で、その QbD/許容区間の考え方を <strong>溶出試験（dissolution test）</strong> の分析法に具体的に適用したものである。溶出試験は、錠剤・カプセルが規定時間内にどれだけ有効成分を放出するかを測る、製剤QCの中核試験。本稿の問いはシンプルで、「<strong>その溶出試験用の分析法は、“2つの溶出プロファイルが似ている”や“製品が規格に適合している”を正しく判定できるのか？ そして、それをどう検証（バリデート）するのか？</strong>」。ICH Q2 は分析法バリデーションの項目（真度・精度など）を並べるが、「<strong>では、その方法が“合格”か“不合格”かをどう決めるのか</strong>」は書いていない——この空白を QbD で埋めるのが本稿である。日本の読者には、<strong>溶出試験の分析法バリデーションを「チェックリスト消化」から「目的適合性の統計的証明」へ変える実務方法論</strong>、と考えると位置づけが分かりやすい。用語を下に整理する。</blockquote>
+<h2>用語の整理（訳者による前置き）</h2>
+<ul><li><strong>溶出試験（dissolution test）</strong>＝製剤（錠剤等）を溶出媒体に入れ、経時的に溶け出す有効成分（API）量を測る試験。通常12個の製品単位を使う（FDA/USP推奨）。</li><li><strong>f1（差異係数）／f2（類似性係数）</strong>＝2つの溶出プロファイル（参照R・被験T）の類似度を測るモデル非依存の指標。<strong>f2 ≥ 50</strong> なら類似とみなす。</li><li><strong>ATP（Analytical Target Profile、分析目標プロファイル）</strong>＝分析法が「何を・どの性能で」測るべきかを定義。本稿では <strong>最大許容 室内再現精度SD</strong> を含める。</li><li><strong>室内再現精度（intermediate precision, IP）</strong>＝日・オペレータ・機器などを変えたときの総合的なばらつき（SD またはRSD%）。バイアス（系統誤差）とは別。</li><li><strong>精度プロファイル（precision profile）／判定プロファイル（decision profile）</strong>＝濃度に対し精度や許容区間をプロットして合否を判断する図。</li><li><strong>β期待許容区間（β-expectation tolerance interval）</strong>＝「将来の1回の結果」が確率 β で入る区間（＝予測区間）。</li><li><strong>Q＋5%</strong>＝薬局方の即放性製剤の適合基準（各単位の溶出率が Q＋5% 以上）。<strong>Q</strong>＝規定時間での最低溶出率（%表示）。<strong>信頼できない領域（unreliability region）／ガードバンド</strong>＝受入限界の周りで誤判定リスクが許容超になる幅。</li></ul>
+<h2>要旨（Abstract）</h2>
+<p>溶出試験は、製品品質・性能を継続的に保証する鍵となる要素である。その究極の目的は、定義された規格基準の中で一貫した製品品質を保証することである。製品の溶出プロファイルを評価し、又は薬局方適合を検証することを目的とする分析法のバリデーションは、この分析法が <strong>2つの溶出プロファイルを正しく「類似」と宣言でき、又は製品を規格に「適合」と正しく宣言できる</strong> ことを実証すべきである。これらの分析法が目的に適合（fit for purpose）であることを保証することが不可欠であり、方法バリデーションはこの保証を提供することを目指す。しかし、ICH Q2 ガイドラインでさえ、バリデーション対象の方法が最終目的に照らして有効か否かをどう判断するかの情報がない。溶出試験用の品質管理（QC）分析法が有効であることを保証するのに、バリデーション基準の全項目が必要なのか？ これらの基準にどの受入限界を設定すべきか？ 方法の有効性をどう判断するか？——これらが本稿の答えようとする問いである。焦点は、製薬産業における QbD（Quality by Design）原則の現行実装に準拠して、溶出試験に関わる分析法のATP（分析目標プロファイル）を正しく定義できるようにすることに置かれる。そうすれば、分析法バリデーションは、開発した方法が意図した目的に適合することの自然な実証となり、製品の販売承認取得に必要な申請を完成させるために今なお一般に行われている「軽率なチェックリスト式バリデーション」ではなくなる。</p>
+<ul><li><strong>キーワード</strong>: Quality by Design／許容区間／方法バリデーション／分析目標プロファイル（ATP）／受入限界／溶出試験法</li></ul>
+<h2>1. 序論</h2>
+<p>溶出試験は、製剤の性能を特性評価し、バッチ間品質を評価し、処方や製造工程の変更などの後に製品品質・性能が継続していることを保証するために必要である[<a href="#ref-1" class="cite">1</a>]。溶出試験の手順は次のとおり。製品単位（錠剤やカプセル）を、専用の溶出装置に入れた既知容量の適切な溶出媒体に置く。溶出につれ、生じた溶液を経時的にサンプリングする。これらのサンプルを通常HPLCや分光光度法でAPI（有効成分）量について分析する[<a href="#ref-2" class="cite">2</a>]。溶出は、複数の時点での溶出API平均量として測定される。使用する製品単位数は、FDAやUSPの推奨で一般に12に設定される[<a href="#ref-1" class="cite">1</a>,<a href="#ref-3" class="cite">3</a>]。</p>
+<p>これらの試験の究極の目的は、定義された規格基準の中で一貫した製品品質を保証することである。溶出試験は一般に、溶出プロファイル比較——製剤の類似性の確立——に用いられる[<a href="#ref-1" class="cite">1</a>-<a href="#ref-9" class="cite">9</a>]。2つのモデル非依存法によるプロファイル比較には、<strong>差異係数 f1</strong> と <strong>類似性係数 f2</strong> が実務で高頻度に用いられる[<a href="#ref-1" class="cite">1</a>,<a href="#ref-3" class="cite">3</a>]。加えて、溶出試験は、経口投与の即放性製剤の溶出要件への適合判定にも薬局方[<a href="#ref-10" class="cite">10</a>,<a href="#ref-11" class="cite">11</a>] で要求される。</p>
+<p>製品の溶出プロファイルを評価し、又は即放性製剤の薬局方適合を検証する分析法のバリデーションは、その方法が科学的に健全で、正確・精密・再現性ある結果を保証し、何より許容できる製品品質を保証することを実証すべきである。最終的に、この分析法は、<strong>2つの溶出プロファイルを正しく「類似」と宣言する能力、又は即放性製品を薬局方規格に「適合」と正しく宣言する能力</strong> を実証すべきである。異なる時点の溶出媒体を分析しAPI放出量を定量する分析法が目的に適合であることが不可欠である。</p>
+<p>方法バリデーションはこの保証を提供することを目指す。しかし、ICH Q2 ガイドライン[<a href="#ref-12" class="cite">12</a>] でさえ、バリデーション対象の方法が最終目的に有効か否かをどう判断するかの情報がない。溶出試験用のQC分析法が有効であることを保証するのにバリデーション基準の全項目が必要か？ どの受入限界を設定すべきか？ 有効性をどう判断するか？——これらが本稿の問いである。</p>
+<h2>2. 計算</h2>
+<p>すべての計算・シミュレーションは R v2.11.1（CRAN）と RStudio v0.92.44 で行った。</p>
+<h2>3. 溶出プロファイルの比較</h2>
+<p>差異係数 f1 と類似性係数 f2 は溶出プロファイル比較に高頻度に用いられる。式は次のとおり（式1・式2）：</p>
+<p>$$f_1 = \frac{\sum_{t=1}^{n}|R_t - T_t|}{\sum_{t=1}^{n}R_t} \times 100 \tag{1}$$</p>
+<p>$$f_2 = 50 \times \log\left\{\left[1 + \frac{1}{n}\sum_{t=1}^{n}(R_t - T_t)^2\right]^{-0.5} \times 100\right\} \tag{2}$$</p>
+<p>ここで $R_t$・$T_t$ は選択した $n$ 時点における参照製品・被験製品の溶出率（%）。これらは参照製品（R）と被験製品（T）の測定値の <strong>差</strong> に基づく。各製品 R・T の測定結果は次のように書ける（式3・式4）：</p>
+<p>$$x_{ij,R} = R + \delta + B + \varepsilon_W \tag{3}$$</p>
+<p>$$x_{ij,T} = T + \delta + B + \varepsilon_W \tag{4}$$</p>
+<p>ここで $x_{ij,k}$ は系列 $i$ の $j$ 番目の測定結果、$R$・$T$ は参照・被験製品の真値、$\delta$ は方法のバイアス（系統誤差）、$B$ は測定方法による系列間ランダム効果（$N(0,\sigma_B^2)$）、$\varepsilon_W$ は系列内（併行精度）ランダム誤差（$N(0,\sigma_W^2)$）。R・T を同じ方法で分析するので、バイアス・系列間・系列内のランダム効果は同一と仮定される。</p>
+<p>f1・f2 はいずれも、同一分析法で異なる製品（R・T）に得た結果の <strong>差</strong> に依存するため、この差は方法の <strong>精度のみ</strong> に依存し、バイアスにはもはや依存しない。これは、<strong>溶出プロファイル比較を目的とする分析法の目的適合性は、方法の室内再現精度標準偏差の大きさだけで測るべき</strong> であることを意味する。したがって、最大許容 室内再現精度標準偏差 $\sigma$ を方法のATP[<a href="#ref-13" class="cite">13</a>,<a href="#ref-14" class="cite">14</a>] に規定し、方法の有効性は、その室内再現精度がこの最大SD値を満たすか否かで判断すべきである。ATPは、方法開発を方向づけるすべての方法性能基準の組み合わせで[<a href="#ref-13" class="cite">13</a>]、方法が何を測り、どの性能水準が要求されるか（精度・真度・作業範囲・定量限界）を定義する[<a href="#ref-15" class="cite">15</a>]。薬局方は f2 での比較を推奨する[<a href="#ref-3" class="cite">3</a>] ため、本稿の残りは f2 に焦点を絞る。</p>
+<h3>3.1 シミュレーション</h3>
+<p>溶出プロファイル比較を目的とする分析法の有効性を評価するシミュレーションを行った。f2 による溶出プロファイル類似性比較は FDA/USP 推奨[<a href="#ref-1" class="cite">1</a>,<a href="#ref-3" class="cite">3</a>] に従う。溶出の5・20・50・75・90・100%を表す6時点を定義。各時点で12検体（各々が1製品単位＝錠剤/カプセル）を、被験（T＝変更後）・参照（R＝変更前）製品の両方についてシミュレート[<a href="#ref-1" class="cite">1</a>]。議論のため単位数を24に増やす・6に減らす場合も検討。各製品で各時点の平均を計算し f2 を式2で計算。類似の規則は f2 ≥ 50[<a href="#ref-1" class="cite">1</a>,<a href="#ref-3" class="cite">3</a>]。被験製品の真の溶出値は真の f2 が15〜100を覆うようシミュレートした。</p>
+<p>各製品 R・T の分析法の結果は、次の一元配置分散分析（ANOVA）ランダムモデルで生成（式5）：</p>
+<p>$$x_{ij} = \mu + B + \varepsilon_W \tag{5}$$</p>
+<p>$\mu$ は各選択時点（5・20・50・75・90・100%）の真の溶出率、$B \sim N(0,\sigma_B^2)$、$\varepsilon_W \sim N(0,\sigma_W^2)$。室内再現精度SDを0〜15で変え、系列間分散/系列内分散の比は $\rho=1$ に固定。各状況で2000回シミュレート。各シミュレーションで6時点の結果を R・T について生成し f2 を計算して閾値50と比較。2000回中 f2 ≥ 50 の件数を数え、総数で割って「T・R プロファイルを類似と宣言する確率」を得て、対応する <strong>オペレーティング特性曲線（OC曲線）</strong> を得る。</p>
+<h3>3.2 シミュレーション結果</h3>
+<p>QC法として製品溶出プロファイルの検証・比較に使う分析法のバリデーションの目的は、<strong>真に類似のとき高確率で類似と宣言し、真に異なるとき異なると宣言する</strong> ことを保証することである。シミュレーションから、方法の有効性判断で確認すべき核心基準は <strong>精度、より正確には室内再現精度標準偏差の値</strong> であることが分かる。</p>
+<figure><img src="assets/dissolution-assay-method-validation-qbd-tolerance/fig1.png" alt="図1　（a）確率マップと（b）オペレーティング特性曲線。f2類似性係数によるサンプル数12単位での2溶出プロファイルの類似性評価（f2≥50で類似）。横軸=真のf2値、縦軸=方法の室内再現精度SD(σ)。（a）左半分「Different profiles（異なるプロファイル）」赤、右半分「Similar profiles（類似）」淡黄、境界f2=50付近に等高線（類似と宣言する確率 0.1〜1）。σが増すほど正しく類似判定できる確率が下がる。（b）真のf2に対し類似と宣言する確率の曲線——σが増すと（矢印σ↑）判定が甘くなる（真に異なるf2&lt;50でも類似と誤判定しやすくなる）。" loading="lazy"><figcaption>図1　（a）確率マップと（b）オペレーティング特性曲線。f2類似性係数によるサンプル数12単位での2溶出プロファイルの類似性評価（f2≥50で類似）。横軸=真のf2値、縦軸=方法の室内再現精度SD(σ)。（a）左半分「Different profiles（異なるプロファイル）」赤、右半分「Similar profiles（類似）」淡黄、境界f2=50付近に等高線（類似と宣言する確率 0.1〜1）。σが増すほど正しく類似判定できる確率が下がる。（b）真のf2に対し類似と宣言する確率の曲線——σが増すと（矢印σ↑）判定が甘くなる（真に異なるf2&lt;50でも類似と誤判定しやすくなる）。</figcaption></figure>
+<p>図1a は FDA推奨の12検体の場合の確率マップで、真の f2 と真の方法精度（IP）の関数として2プロファイルを類似と宣言する確率を与える。図1b は同じ挙動をOC曲線で示す。両図から、室内再現精度SDが増すと、溶出プロファイルを適切に類似と宣言する確率が下がることが分かる。例：真の f2 = 60（真に類似）のとき、方法の室内再現精度SD（縦軸）が増すと類似と宣言する確率が下がる。逆に、真に異なる（f2 = 45）のに類似と宣言する確率は、室内再現精度SDが増すと上がる。</p>
+<h3>3.3 判定方法論</h3>
+<p>これら2つのリスクを制御する方法論が必要である。<strong>2つの f2 値とそれぞれの確率</strong> を定義することで行える。第1の対は「高確率で正しく類似と宣言すべき最大の真の f2 値」（例：$f_2^+ = 60$、$\pi_{f_2}^+ = 0.95$）。第2の対は「真に異なるのに類似と宣言する確率が小さくあるべき最小の真の f2 値」（例：$f_2^- = 45$、$\pi_{f_2}^- = 0.05$）。この2対から、分析法に許容できる <strong>最大 室内再現精度SD $\sigma$</strong> を見つけられ、これをバリデーションの受入限界とする。$\sigma$ を得る式はないので、3.1のシミュレーション枠組みで求める。</p>
+<p>方法の有効性判断は <strong>精度プロファイル</strong>[<a href="#ref-16" class="cite">16</a>] で行う。x軸にバリデーション標準の濃度、y軸に方法の室内再現相対標準偏差（RSD%）。受入限界は、先に得た最大 室内再現精度SD $\sigma$ をRSD値で表したもの。</p>
+<figure><img src="assets/dissolution-assay-method-validation-qbd-tolerance/fig2.png" alt="図2　3つの受入限界をもつ精度プロファイルの例。長破線：SD=0.1（最も厳しい）で得た受入限界、短破線：SD=20（最も緩い）、実線：2つの臨界対（f2⁺=60かつ確率0.95・f2⁻=45かつ確率0.05）から得た方法精度に対応する受入限界（σ=14.3）。x軸=バリデーション標準の濃度、y軸=室内再現精度RSD(%)。" loading="lazy"><figcaption>図2　3つの受入限界をもつ精度プロファイルの例。長破線：SD=0.1（最も厳しい）で得た受入限界、短破線：SD=20（最も緩い）、実線：2つの臨界対（f2⁺=60かつ確率0.95・f2⁻=45かつ確率0.05）から得た方法精度に対応する受入限界（σ=14.3）。x軸=バリデーション標準の濃度、y軸=室内再現精度RSD(%)。</figcaption></figure>
+<p>図2は3つの受入限界をもつ精度プロファイルの例。厳しい方（長破線）はSD=0.1、緩い方（短破線）はSD=20、中間（実線）は先の2臨界対に対応し <strong>σ = 14.3</strong>。受入限界 $\sigma$ を定めた後の判定方法論は次のとおり：</p>
+<ul><li>バリデーション中に調べた各濃度水準で、室内再現精度SDをバリデーションデータから推定する[<a href="#ref-12" class="cite">12</a>,<a href="#ref-17" class="cite">17</a>,<a href="#ref-18" class="cite">18</a>]。</li><li>各室内再現精度SDの <strong>片側95%信頼区間の上限</strong> を計算する（詳細式は[<a href="#ref-19" class="cite">19</a>,<a href="#ref-20" class="cite">20</a>]）。</li><li>これらの上限を、先に定めた受入限界 $\sigma$ と比較する（図4）。95%上限がすべて受入限界 $\sigma$ より小さければ方法は有効、そうでなければ無効。</li></ul>
+<p>精度が受入限界内に収まらない場合の解決策：①方法開発に戻って精度を改善、②製品比較に使うサンプル数を変える。FDAは12検体を推奨[<a href="#ref-1" class="cite">1</a>] するが、これを増やす手もある。図3a・bはサンプル数24でのf2の確率マップとOC曲線。サンプル数が増えると、分析法に許容される室内再現精度SDが大きくなる（24で最大SDが20を超える。12では14.3だった）。つまり <strong>精度の低い方法でも有効と宣言できるが、溶出試験のコスト増と引き換え</strong> になる。逆に精度が受入限界に十分収まるなら、サンプル数を減らせる（図3c・d、各製品6単位）。</p>
+<figure><img src="assets/dissolution-assay-method-validation-qbd-tolerance/fig3.png" alt="図3　（a）確率マップと（b）OC曲線（サンプル数24単位）、（c）確率マップと（d）OC曲線（サンプル数6単位）。f2類似性係数による2溶出プロファイルの類似性評価（f2≥50で類似）。σ=室内再現精度SD。サンプル数を24に増やすと許容SDが大きく（緩く）なり、6に減らすと厳しくなる。" loading="lazy"><figcaption>図3　（a）確率マップと（b）OC曲線（サンプル数24単位）、（c）確率マップと（d）OC曲線（サンプル数6単位）。f2類似性係数による2溶出プロファイルの類似性評価（f2≥50で類似）。σ=室内再現精度SD。サンプル数を24に増やすと許容SDが大きく（緩く）なり、6に減らすと厳しくなる。</figcaption></figure>
+<h3>3.4 適用例</h3>
+<p>上記方法論を、ある製剤中の <strong>フルコナゾール</strong> の溶出値を定量する <strong>HPLC-UV法</strong> のバリデーションに適用する（方法・バリデーションプロトコル・古典的バリデーション結果は[<a href="#ref-21" class="cite">21</a>]）。受入限界を、$f_2^+ = 60$ かつ確率0.95・$f_2^- = 45$ かつ確率0.05 を満たすSD、すなわち <strong>$\sigma = 14.3$</strong> とし、比較のサンプル数はFDA推奨の12単位に設定。</p>
+<figure><img src="assets/dissolution-assay-method-validation-qbd-tolerance/fig4.png" alt="図4　フルコナゾール定量HPLC-UV法の有効性判断に用いた精度プロファイル。受入限界は上記条件を満たすSD。点線＝室内再現精度SDの受入限界 σ=14.3（RSD%表示）。実線＝バリデーション標準の分析から推定した室内再現精度RSD。破線＝室内再現精度RSDの片側95%信頼区間上限。すべての破線（95%上限）が点線（σ=14.3）を下回るため、この方法は完全に有効。" loading="lazy"><figcaption>図4　フルコナゾール定量HPLC-UV法の有効性判断に用いた精度プロファイル。受入限界は上記条件を満たすSD。点線＝室内再現精度SDの受入限界 σ=14.3（RSD%表示）。実線＝バリデーション標準の分析から推定した室内再現精度RSD。破線＝室内再現精度RSDの片側95%信頼区間上限。すべての破線（95%上限）が点線（σ=14.3）を下回るため、この方法は完全に有効。</figcaption></figure>
+<p>図4のとおり、フルコナゾール溶出試験のHPLC-UV法は完全に有効：室内再現精度SDの片側95%信頼上限（破線）がすべて精度受入限界 $\sigma = 14.3$（点線）より小さい。さらにこの優れた性能に基づけば、溶出プロファイル比較のサンプル数を減らせ、分析スループット向上・コスト削減を製品品質を保ちつつ実現できる。</p>
+<h2>4. 即放性製剤</h2>
+<p>即放性製剤の被験単位から溶出したAPI量が薬局方規格[<a href="#ref-10" class="cite">10</a>,<a href="#ref-11" class="cite">11</a>] に適合するかを検証する分析法は、製品の適合について正しい判断を実際に下せることを実証してバリデートすべきである。USP/EPのサンプリング計画の <strong>第1段階</strong> への適合は、被験6単位の各溶出API率が <strong>Q＋5%以上</strong> なら実証される。Q は規定溶出時間での最低API溶出量（表示含量に対する%）で、薬局方の個別各条又は製薬企業自身の規格で規定される。</p>
+<p>これは、方法の有効性判断に使う受入限界が、この段階では <strong>$\lambda = Q + 5\%$</strong> であることを意味する。方法が目的に有効と示すには、真に非適合の検体（濃度が Q＋5%未満）を非適合と実際に宣言し、真に適合の検体（Q＋5%以上）を適合と分類することを示す必要がある（図5a）。</p>
+<p>偽適合リスク・偽非適合リスクを各5%とする。適合検体では、真に適合のとき6つの溶出率すべてが規格限界以上である確率が95%（式6）：</p>
+<p>$$P\left[(Q_1 \cap \dots \cap Q_i \cap \dots \cap Q_6) \ge Q+5\%\right] = 0.95 \tag{6}$$</p>
+<p>方法バリデーションでは、将来の各結果が確率 β で入る区間を推定できる[<a href="#ref-22" class="cite">22</a>-<a href="#ref-24" class="cite">24</a>]（<strong>β期待許容区間</strong>＝予測区間、[L; U]、[<a href="#ref-25" class="cite">25</a>,<a href="#ref-26" class="cite">26</a>]）。判定規則は Rozet ら[<a href="#ref-14" class="cite">14</a>] の <strong>判定プロファイル</strong> に従う。式6を満たすには、単一結果が $Q_i \ge Q+5\%$ を満たす確率 $\beta_L$ を、二項分布 $\text{Bi}(6, \beta_L)$ から求める：</p>
+<p>$$\beta_L^6 = 0.95 \iff \beta_L = \sqrt[<a href="#ref-6" class="cite">6</a>]{0.95} = 0.9914876 \approx 0.992$$</p>
+<p>したがって、$\beta_L = 0.992$ で計算した片側 β期待許容区間の <strong>下限</strong> を、バリデーション受入限界 $\lambda = Q+5\%$ と比較する（図5a）。Q＋5%以上の濃度のバリデーション標準で下限が規格限界を跨がなければ、方法は有効。</p>
+<p>非適合検体でも同様に、真に非適合のとき6つのうち少なくとも1つが規格限界未満である確率が95%（式7）：</p>
+<p>$$1 - P\left[(Q_1 \cap \dots \cap Q_6) \ge Q+5\%\right] = 0.95 \iff P\left[(Q_1 \cap \dots \cap Q_6) \ge Q+5\%\right] = 0.05 \tag{7}$$</p>
+<p>単一結果が $Q_i \ge Q+5\%$ を満たす確率 $\beta_U$：</p>
+<p>$$\beta_U^6 = 0.05 \iff \beta_U = \sqrt[<a href="#ref-6" class="cite">6</a>]{0.05} = 0.6069622 \approx 0.61$$</p>
+<p>有効と定義するには、$\beta_U = 0.61$ で計算した片側 β期待許容区間の <strong>上限</strong> が、Q＋5%未満のバリデーション標準で受入限界 $\lambda = Q+5\%$ を跨がないこと（図5a）。</p>
+<figure><img src="assets/dissolution-assay-method-validation-qbd-tolerance/fig5.png" alt="図5　（a）製剤中フルコナゾール定量HPLC-UV法の有効性評価の判定プロファイルと（b）ルーチン分析結果の信頼できない領域（unreliability region）。破線＝上側（βU=0.61）・下側（βL=0.992）の片側β期待許容区間。対角の実線＝恒等直線 y=x。λ＝即放性製剤溶出試験の受入限界で λ=85%に設定。受入限界周りに誤判定リスクが5%を超える“信頼できない領域”＝ガードバンド（例78.8〜86.4%）が生じる。" loading="lazy"><figcaption>図5　（a）製剤中フルコナゾール定量HPLC-UV法の有効性評価の判定プロファイルと（b）ルーチン分析結果の信頼できない領域（unreliability region）。破線＝上側（βU=0.61）・下側（βL=0.992）の片側β期待許容区間。対角の実線＝恒等直線 y=x。λ＝即放性製剤溶出試験の受入限界で λ=85%に設定。受入限界周りに誤判定リスクが5%を超える“信頼できない領域”＝ガードバンド（例78.8〜86.4%）が生じる。</figcaption></figure>
+<h3>4.1 適用例</h3>
+<p>3.4と同じ例で、即放性製剤単位から溶出したAPIの定量法バリデーションを示す。製薬企業が規定する溶出API率を <strong>Q = 80%</strong> とし、HPLC-UV法の受入限界を <strong>$\lambda = 85\%$</strong>（＝Q＋5%）とする。偽適合・偽非適合リスクを各5%とすると、下側・上側 β期待許容限界の確率は $\beta_L = 0.992$、$\beta_U = 0.61$。</p>
+<p>図5aは得られた判定プロファイル[<a href="#ref-14" class="cite">14</a>]。この方法は有効。ただし受入限界 $\lambda$ に達すると、方法は期待より保証が下がる。図5bはHPLC-UV法の <strong>信頼できない領域（unreliability region）</strong>[<a href="#ref-15" class="cite">15</a>]——受入限界周りで、先に定めた偽適合・偽非適合の最大リスク5%を超える不確実な判定が下される幅——を示す。これにより、ルーチン使用向けに受入限界の周りに <strong>ガードバンド</strong> を提案でき、最大許容 信頼できない領域と比較できる。ルーチン分析で、溶出API率の結果が <strong>78.8〜86.4%</strong>（HPLC-UV法）に入るときは、誤判定リスクが過大なため信頼できない。</p>
+<h2>5. 結論</h2>
+<p>溶出試験に関わる分析法の有効性を評価する本提案の方法論は、QbD概念に完全に準拠する。方法の有効性評価はその <strong>最終用途</strong> に照らして行われ、適合性の測定は、方法が意図した目的を実際に果たせるかを検証して行う。</p>
+<p><strong>f2 類似性係数による溶出プロファイル比較</strong> では、第1ステップは2対の（f2値・確率）を定義すること。第1対は「高確率で正しく類似と宣言すべき最大の真 f2」、第2対は「真に異なるのに類似と宣言する確率が小さくあるべき最小の真 f2」。これらから、分析法がもちうる <strong>最大 室内再現精度SD</strong> をシミュレーションで求め、精度プロファイルの受入限界に使う。ゆえに最大 室内再現精度SD値を、溶出プロファイル比較用の方法のATP[<a href="#ref-13" class="cite">13</a>,<a href="#ref-14" class="cite">14</a>] に含めるべきである。</p>
+<p><strong>即放性製剤の溶出評価</strong> の分析法のATPには、偽適合・偽非適合リスクと信頼できない領域の最大サイズを制御するため、<strong>個別結果が受入限界内に入る確率</strong> を含めるべきである。</p>
+<p>本方法論に従ってバリデートすれば、製品適合について下す判断の信頼性が高まり、分析法の鍵的役割の理解が進む。方法バリデーションは、今なお一般に行われる機械的で軽率なチェックリスト式ではなく、<strong>分析法ライフサイクルの有用で報われるステップ</strong> として位置づけられる。</p>
+<blockquote>補足: 本稿の核心を一言でまとめると——「<strong>溶出試験の分析法が“使える”かどうかは、室内再現精度（ばらつき）ひとつで決まる。だから“どこまでのばらつきなら許容できるか（受入限界σ）”をシミュレーションで求めてATPに書き、精度プロファイルの95%上限がそれを下回るかで合否を判断せよ</strong>」ということ。ポイントは3つ——①f2比較ではバイアスは相殺されるので<strong>精度だけ</strong>を見ればよい（σ=14.3の例）。②サンプル数（12/24/6）を変えると許容精度が変わり、<strong>コストと厳しさがトレードオフ</strong>になる。③薬局方適合（Q+5%）の判定は、6単位すべてが基準を満たす確率から<strong>二項分布で単一結果の必要確率（βL=0.992／βU=0.61）</strong>を逆算し、β期待許容区間で判定する。加えて受入限界の周りには必ず“<strong>信頼できない領域（ガードバンド）</strong>”があり、そこに落ちた結果は信じてはいけない。姉妹論文（分析法バリデーションとQbD）の一般論を、溶出試験という具体例で“数字で”示した実務の教科書である。</blockquote>
+<h2>参考文献</h2>
+<p>原著の引用順に対応する。本文中の [N] は各項目にリンクする。</p>
+<ol class="references"><li id="ref-1">Food and Drug Administration (FDA). Guidance for Industry, Dissolution Testing for Immediate Release Solid Oral Dosage Forms. CDER, FDA, Rockville, 1997, pp. 1–17.</li><li id="ref-2">B. Vaghela, R. Kayastha, N. Bhatt, N. Pathak, D. Rathod. J. Appl. Pharm. Sci. 1 (2011) 50–56.</li><li id="ref-3">The United States Pharmacopoeia (USP) 33 NF 28 S1, 2007. USP–NF General Chapter &lt;1090&gt;, Section 178.</li><li id="ref-4">V.P. Shah. Dissol. Technol. (2001) 1–2.</li><li id="ref-5">P. Costa, J.M. Sousa Lobo. Eur. J. Pharm. Sci. 13 (2001) 123–133.</li><li id="ref-6">J. Menegola, M. Steppe, E.E.S. Schapoval. Eur. J. Pharm. Biopharm. 67 (2007) 524–530.</li><li id="ref-7">M. Siewert, L. Weinandy, D. Whiteman, C. Judkins. Eur. J. Pharm. Biopharm. 53 (2002) 9–14.</li><li id="ref-8">T. Tay, A. Allahham, D.A.V. Morton, P.J. Stewart. Eur. J. Pharm. Biopharm. 79 (2011) 674–682.</li><li id="ref-9">P.J. Salústio, H.M. Cabral-Marques, P.C. Costa, J.F. Pinto. Eur. J. Pharm. Biopharm. 78 (2011) 58–66.</li><li id="ref-10">The United States Pharmacopoeia (USP) 33 NF 28 S1, 2007. USP–NF General Chapter &lt;711&gt;.</li><li id="ref-11">The European Pharmacopoeia 7.0, Chapter 2.9.3.</li><li id="ref-12">ICH. Topic Q2(R1): Validation of Analytical Procedures: Text and Methodology. Geneva, 2005.</li><li id="ref-13">M. Schweitzer, M. Pohl, M. Hanna-Brown, P. Nethercote, P. Borman, G. Hansen, K. Smith, J. Larew. Pharm. Technol. 34 (2010) 52–59.</li><li id="ref-14">E. Rozet, E. Ziemons, R.D. Marini, B. Boulanger, Ph. Hubert. Anal. Chem. 84 (2012) 106–112.</li><li id="ref-15">J. Ermer. Eur. Pharm. Rev. 16 (2011) 16–24.</li><li id="ref-16">J.W.A. Findlay, W.C. Smith, J.W. Lee, G.D. Nordblom, I. Das, B.S. DeSilva, M.N. Khan, R.R. Bowsher. J. Pharm. Biomed. Anal. 21 (2000) 1249–1273.</li><li id="ref-17">A. Bouabidi, E. Rozet, M. Fillet, E. Ziemons, E. Chapuzet, B. Mertens, R. Klinkenberg, A. Ceccato, M. Talbi, B. Streel, A. Bouklouze, B. Boulanger, Ph. Hubert. J. Chromatogr. A 1217 (2010) 3180–3192.</li><li id="ref-18">E. Rozet, R.D. Marini, E. Ziemons, B. Boulanger, Ph. Hubert. J. Pharm. Biomed. Anal. 55 (2011) 848–858.</li><li id="ref-19">R. Burdick, F. Graybill. Confidence Interval on Variance Components. Marcel Dekker, New York, 1992.</li><li id="ref-20">E. Rozet, W. Dewé, E. Ziemons, A. Bouklouze, B. Boulanger, Ph. Hubert. J. Chromatogr. B 877 (2009) 2214–2223.</li><li id="ref-21">A. Bouabidi, E. Ziemons, R. Marini, C. Hubert, M. Talbi, A. Bouklouze, H. Bourichi, M. El Karbane, B. Boulanger, Ph. Hubert, E. Rozet. Anal. Chim. Acta 714 (2012) 47–56.</li><li id="ref-22">B. Boulanger, E. Rozet, F. Moonen, S. Rudaz, Ph. Hubert. J. Chromatogr. B 877 (2009) 2235–2243.</li><li id="ref-23">W. Dewé, B. Govaerts, B. Boulanger, E. Rozet, P. Chiap, Ph. Hubert. Chemom. Intell. Lab. Syst. 85 (2007) 262–268.</li><li id="ref-24">E. Rozet, B. Govaerts, P. Lebrun, K. Michail, E. Ziemons, R. Wintersteiger, S. Rudaz, B. Boulanger, Ph. Hubert. Anal. Chim. Acta 705 (2011) 193–206.</li><li id="ref-25">G.J. Hahn, W.Q. Meeker. Statistical Intervals, A Guide for Practitioners. Wiley, New York, 1991.</li><li id="ref-26">R.W. Mee. Technometrics 26 (1984) 251.</li></ol><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="weighing-in-pharmaceutical-industry-npl-guide.html">製薬産業における「はかり（天びん）」の計量ベストプラクティス——NPL Good Practice Guide No.70 全訳</a><span class="rel-tags"><span class="rel-tag">製剤・製造</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="analytical-procedure-validation-qbd-paradigm.html">分析法バリデーションとQuality by Design（QbD）——バリデーションはQbDの一部であり「目的適合性」の証明である</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="conformal-prediction-distribution-free-uncertainty.html">コンフォーマル予測と分布フリー不確かさ定量化への やさしい入門</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="personalized-tcm-preparations-gmp-quality-system.html">中薬「臨方製剤」（オーダーメイド調剤）の生産規範と品質管理体系への考察</a><span class="rel-tags"><span class="rel-tag">製剤・製造</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="dissolution-assay-method-validation-qbd-tolerance" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

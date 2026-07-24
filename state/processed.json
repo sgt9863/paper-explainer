@@ -1200,6 +1200,12 @@
       "title": "コンフォーマル予測と分布フリー不確かさ定量化への やさしい入門（Angelopoulos & Bates 2022）",
       "source_pdf": "2107.07511v6.pdf",
       "date": "2026-07-24"
+    },
+    "upload-S000326701201344X-dissolution-validation": {
+      "slug": "dissolution-assay-method-validation-qbd-tolerance",
+      "title": "溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）（Rozet 2012）",
+      "source_pdf": "1-s2.0-S000326701201344X-main.pdf",
+      "date": "2026-07-24"
     }
   }
 }
