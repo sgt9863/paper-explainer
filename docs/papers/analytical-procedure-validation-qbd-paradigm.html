@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分析法バリデーションとQuality by Design（QbD）——バリデーションはQbDの一部であり「目的適合性」の証明である</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="分析法バリデーションとQuality by Design（QbD）——バリデーションはQbDの一部であり「目的適合性」の証明である">
+<meta property="og:description" content="ICH Q8（QbDによる製剤プロセス開発）の採択以降 分析法開発もQbDに倣うべきという議論が進む一方 その枠組みにおける「分析法バリデーション」の位置づけは曖昧なままだった。本稿（Arlenda社のEric Rozet・Bruno Boulangerらによる2013年のJ. Chromatogr. A論考）は 分析法バリデーションがQbDパラダイムに完全に統合され 実際に目的適合（fit for purpose）な分析法を開発するための本質的ステップであることを示す。分析目標プロファイル(ATP)・重要品質属性(CQA)・重要プロセスパラメータ(CPP)・実験計画(DoE)・設計空間(DS)・管理戦略という各要素を分析法バリデーションに対応づけ バリデーションの成果である「分析法の設計空間」を β期待許容区間／規格外(OOS)確率／ベイズ的連続モデリングの3つの統計手法で定義する方法を 数式(Eq.1〜6)と3つのプロファイル図とともに全訳（＋訳者補足）した。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/analytical-procedure-validation-qbd-paradigm/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="analytical-procedure-validation-qbd-paradigm"><h1>分析法バリデーションとQuality by Design（QbD）——バリデーションはQbDの一部であり「目的適合性」の証明である</h1><div class="paper-meta"><span class="date">2026-07-24</span> <span class="tag">QC・品質評価</span> <span class="tag">分析法・バリデーション</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2013.09.007" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Method Validation and the Quality by Design Paradigm_V02.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="analytical-procedure-validation-qbd-paradigm" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="analytical-procedure-validation-qbd-paradigm" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/analytical-procedure-validation-qbd-paradigm/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/analytical-procedure-validation-qbd-paradigm/ai-infographic.webp" alt="「ICH Q2チェックリストをこなす追加作業」ではない——分析法バリデーションは QbD の枠組みに完全に組み込まれ 分析法の“目的適合性（fit for purpose）”を確率で証明し 分析法版の設計空間（Design Space）と管理戦略を導く本質的ステップだ とする Rozet/Boulanger（Arlenda）の論考" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・J. Chromatogr. A の論考）構成に沿って訳出。本文の[N]は原文の番号引用に対応し末尾の参考文献にリンクする。図1〜図3は原本PDFの埋め込み画像をPyMuPDFで抽出しReadで内容確認のうえ埋め込んだ。数式はPDFテキスト抽出が数式レイアウトを崩すため、原文の記号定義に基づきKaTeXで再構成した(1ブロック1式)。式(3)の標準誤差因子は抽出崩れのため構造を保った近似表現とし、厳密形は原文[<a href="#ref-20" class="cite">20</a>]参照と注記。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Analytical Procedure Validation and the Quality by Design Paradigm</li><li>著者: Eric Rozet¹\*・Pierre Lebrun¹・Jean-François Michiels¹・Perceval Sondag¹・Tara Scherder²・Bruno Boulanger¹（1. Arlenda S.A., リエージュ, ベルギー／2. Arlenda Inc., フレミントン, ニュージャージー, 米国）</li><li>掲載: <em>Journal of Chromatographic A</em> 系（本稿は同グループの分析法バリデーション×QbD論考。DOIは代表として付記）, 2013年</li><li>種別: 論考（Perspective／方法論レビュー）</li><li>インパクトファクター: <strong>該当</strong>（クロマトグラフィー分野の主要誌に掲載された内容）</li><li>対応著者: Eric Rozet（eric.rozet@arlenda.com）</li></ul>
+<blockquote>補足: 本稿は、医薬品の <strong>分析法（試験法）</strong> の開発・バリデーションに統計的な厳密さを持ち込んだことで知られる <strong>Eric Rozet・Bruno Boulanger（Arlenda社）</strong> らのグループによる論考である。主張は明快で、「<strong>分析法バリデーションは、ICH Q2 のチェックリストを埋める“おまけの作業”ではなく、QbD（Quality by Design）という設計思想の中核をなす『目的適合性の証明』である</strong>」というもの。日本の読者には、<strong>「その試験法は、日常のルーチンで“使いものになる”とどう証明するのか？」という問いに、統計（許容区間・確率）で答える枠組みの解説</strong>、と考えると位置づけが分かりやすい。専門用語（略語）が多いので下に整理する。</blockquote>
+<h2>用語の整理（訳者による前置き）</h2>
+<ul><li><strong>QbD（Quality by Design）</strong>＝品質は設計で作り込む、という開発思想（ICH Q8）。対義語が <strong>QbT（Quality by Testing）＝最終製品を検査して品質を担保する</strong> 従来型。</li><li><strong>分析法（analytical procedure）</strong>＝医薬品の含量・不純物などを測る試験法（HPLC、ELISA、qPCR、力価試験など）。本稿は「分析法もひとつのプロセス」とみなす。</li><li><strong>ATP（Analytical Target Profile、分析目標プロファイル）</strong>＝その分析法が「何を（分析対象）／どの媒体（マトリックス）で／どの濃度域で／どの性能で」測るべきかを、受入基準（仕様）とともに定義したもの。QbD準拠の分析法開発の出発点。</li><li><strong>CQA（Critical Quality Attribute、重要品質属性）</strong>／<strong>CPP（Critical Process Parameter、重要プロセスパラメータ）</strong>＝製剤QbDの概念を分析法に借用したもの。分析法のCQA＝真度・精度・直線性・範囲・LOQなど、CPP＝濃度域や、日・オペレータ・機器などのばらつき源。</li><li><strong>DoE（Design of Experiments、実験計画法）</strong>／<strong>DS（Design Space、設計空間）</strong>＝ICH Q8の中核ツール。DS＝品質が保証されると証明された入力変数の多次元領域。</li><li><strong>fit for purpose（目的適合性）</strong>＝その分析法が意図した用途に実際に使える、ということ。バリデーションで証明する。</li><li><strong>β期待許容区間（β-expectation tolerance interval）</strong>＝「将来の1回の測定結果」が一定の確率（例：95%）で入る区間。<strong>OOS（Out Of Specification、規格外）確率</strong>＝将来の結果が受入限界の外に出る確率。<strong>LOQ</strong>＝定量限界。</li><li><strong>真度（trueness）／系統誤差（bias）／精度（precision）／併行精度（repeatability）／室内再現精度（intermediate precision）／総合誤差（total error）</strong>＝分析法の性能を表す統計量。</li></ul>
+<h2>要旨（Abstract）</h2>
+<p>QbD（Quality by Design）アプローチに従った製剤プロセス開発に関するICH Q8文書の採択以来、分析法開発が同様のアプローチに従う機会について多くの議論があった。QbD原則に従った分析法の開発・最適化は広く議論・記述されてきたが、この枠組みにおける <strong>分析法バリデーションの位置づけ</strong> は明確にされてこなかった。本稿は、分析法バリデーションがQbDパラダイムに完全に統合されており、実際に目的適合（fit for purpose）な分析法を開発するうえで本質的なステップであることを示すことを目的とする。適切な統計的方法論——実験計画法（DoE）・統計モデリング・確率的言明など——もその役割を果たす。分析法バリデーションの成果は、分析法の設計空間（Design Space）でもあり、そこから管理戦略（control strategy）を設定できる。</p>
+<ul><li><strong>キーワード</strong>: Quality by Design／許容区間（Tolerance Intervals）／分析法バリデーション（Method Validation）／目的適合性（Fit for Purpose）</li></ul>
+<h2>1. 序論</h2>
+<p>Quality by Design（QbD）の概念は、FDAの「21世紀のcGMP」[<a href="#ref-1" class="cite">1</a>] やプロセス分析工学（Process Analytical Technology, PAT）[<a href="#ref-2" class="cite">2</a>]、さらに規制文書ICH Q8[<a href="#ref-3" class="cite">3</a>]・Q9[<a href="#ref-4" class="cite">4</a>]・Q10[<a href="#ref-5" class="cite">5</a>]、およびFDAのプロセスバリデーションガイダンス[<a href="#ref-6" class="cite">6</a>] といったいくつかのイニシアチブを通じて、製薬業界に採択されてきた。その一般的な狙いは、以前に製薬業界で実施されていた <strong>Quality by Testing（QbT）パラダイム</strong> から、プロセスと製品の理解を深め、それによって製品品質・プロセス効率・規制上の柔軟性を高めることを目指す開発へと転換することにある。</p>
+<p>QbDは新しいものではなく、統計的実験計画・多変量統計・統計的品質管理など、多くの品質・統計のツールと手法を含む。医薬品の品質を高めるために、最終製品の検査を増やすこと（すなわちQbT）は適切でないと認識されてきた[<a href="#ref-7" class="cite">7</a>]。代わりに、医薬品の品質を高めるには、他の多くの産業ですでに行われているように、<strong>品質を製品に作り込む（すなわちQbD）</strong> 必要がある。そのためには、処方・製造プロセスに関わる変数が最終製品の品質にどう影響するかを理解する必要がある。</p>
+<p><strong>分析法もまたプロセスであり、分析法の開発にもQbDを実装すべきである。</strong> 近年、複数の著者が、QbDによって分析法を体系的・科学的なアプローチで開発できると述べている[<a href="#ref-8" class="cite">8</a>-<a href="#ref-12" class="cite">12</a>]。分析法の性能に影響する変数の理解と特定が、より早い段階で達成される[<a href="#ref-8" class="cite">8</a>-<a href="#ref-12" class="cite">12</a>]。ICH Q8(R2)[<a href="#ref-6" class="cite">6</a>] によれば、QbDは実験計画法（DoE）と設計空間（DS）を組み合わせた最適化戦略とみなせる。</p>
+<p>しかし、開発された分析法は、実際に目的適合であることを証明しなければならないため、そのままでは実験室で使用できない。この目的適合性の証明は、一般に <strong>分析法バリデーションのフェーズ</strong> で達成される。</p>
+<p>本稿の目的は、分析法バリデーションがQbDパラダイムに完全に統合されており、日常のルーチン応用に役立つ分析法を開発するうえで本質的なステップであることを示すことである。分析法バリデーションでも、実験計画法・統計モデリングなど同様の統計的方法論が実装される。分析法バリデーションの成果は、分析法の設計空間でもあり、そこから管理戦略をさらに定義できる。</p>
+<h2>2. 分析目標プロファイル（ATP）と分析法バリデーション</h2>
+<p>QbDに準拠した分析法の開発は、その <strong>分析目標プロファイル（Analytical Target Profile, ATP）</strong> の定義から始まる。ATPは分析法の意図した用途を定義することを目指す。ATPは、どの分析対象を、どのマトリックス（媒体）中で、どの濃度域にわたって測定するか、および分析法に要求される性能基準とその仕様を定義する一連の特性をまとめたものである。これらの仕様・特性は、分析法の意図した用途と結び付けられるべきである。ATPの例は文献[<a href="#ref-8" class="cite">8</a>-<a href="#ref-11" class="cite">11</a>,<a href="#ref-13" class="cite">13</a>] にある。ATPに含まれる定量性能の要求は、バリデーションフェーズで分析法が達成しなければならない <strong>バリデーション受入限界</strong> となる。加えて、一部の著者は、分析法が生成する結果を用いて誤った判断をする最大許容リスクをATPに含めることで、ATPの定義をさらに進めている[<a href="#ref-13" class="cite">13</a>]。</p>
+<h2>3. 分析法バリデーションにおける重要品質属性（CQA）</h2>
+<p>分析法の <strong>重要品質属性（Critical Quality Attributes, CQAs）</strong> は、開発された分析法の品質を判断するために測定される応答である。CQAは「所望の製品品質を保証するために、適切な限界・範囲・分布の中にあるべき物理的・化学的・生物学的・微生物学的な性質または特性」と定義される[<a href="#ref-3" class="cite">3</a>]。クロマトグラフィー分析法では、CQAは分離度（resolution, RS）や分離（separation, S）基準など、分析法の選択性に関連しうる[<a href="#ref-12" class="cite">12</a>]。他のCQAには、分析の実行時間・S/N比・分析法の精度と真度・定量下限（LOQ）・分析法の定量範囲がありうる。</p>
+<p>これらのCQAは、多変量の（非）線形モデルを通じて直接モデル化できる。しかし他の状況では、モデル化される応答がCQAと異なる場合がある。CQAはこれらの一次応答のモデリング後に得られる。クロマトグラフィー法では、選択性を最適化する際の通常の鍵CQAは臨界ペア（critical pair）の分離度である。しかし分離度は、関与する2つのクロマトピークの保持係数に依存する。したがって、分離度の代わりに <strong>保持係数</strong> が直接モデル化され、そこから分離度を計算できる。</p>
+<p>とはいえ、CQAは分離技術に限られず、分析法の定性性能のみに関連するわけでもない。医薬品の開発・管理における非常に重要なアッセイは定量的なものである。クロマトグラフィー定量法以外の例には、ELISA・qPCR・相対力価試験などのイムノアッセイがある。あらゆる定量分析法の最終的な狙いは、信頼できる判断を下すために、適切な品質の分析結果を提供することである。したがって、定量法の重要品質属性は、少なくともその定量性能に関連すべきである。真度・精度・直線性・範囲・分析法のLOQ、および分析法で得られる結果の正確さ（accuracy）という <strong>バリデーション特性が鍵となるCQA</strong> である。これらは、それぞれの受入値とともにATPの定義に含めるべきである。</p>
+<p>したがって、あらゆる定量分析法のバリデーションフェーズはQbD枠組みに完全に沿う。分析法バリデーション中に監視すべきCQAは、ランダム誤差（例：室内再現精度のCV）、系統誤差（例：バイアスや回収率）、またはその両方の組み合わせである <strong>総合誤差（total error）</strong> に関連する指標である。</p>
+<h2>4. 分析法バリデーションにおける重要プロセスパラメータ（CPP）</h2>
+<p>分析法バリデーションは、重要プロセスパラメータである複数の因子も含む。第一の主要因子は、分析法が分析対象を定量することを意図する <strong>濃度／量／力価の範囲</strong> である。この因子は固定因子であり、既知の濃度／量／力価をもつ <strong>バリデーション標準（validation standards）</strong> または品質管理サンプル（quality control samples）と呼ばれるサンプルで代表される。対照的に、分析法の将来のルーチン使用で遭遇するばらつき源——オペレータ・機器・試薬ロット・日など——は、<strong>ランダム因子</strong> としてバリデーション計画に含めなければならない。これらのばらつき源の組み合わせは、一般に「ラン（runs）」または「シリーズ（series）」と呼ばれる。</p>
+<h2>5. 分析法バリデーションにおける実験計画法（DoE）</h2>
+<p>ICH Q8とFDAガイドラインは、製剤プロセスの開発時に適切な実験計画法を用いることを強く推奨している。分析法バリデーションで用いられる主な計画は、入れ子計画（nested designs）、（部分）要因計画（factorial designs）、またはその組み合わせである。これらの計画は分散成分（variance components）を推定するために用いられる。精確な推定のためには、各因子について2水準より多くを用いることが推奨される。とはいえ、分析法バリデーションに含めるさまざまなばらつき源は、分析法が実際にルーチンで用いられる方法を模すため、一般に「シリーズ」または「ラン」にまとめられる。</p>
+<p>バリデーション標準の第 i 濃度水準のそれぞれについて、ランの数が J、各ランで K 回の反復が行われるとする。バリデーション実験は、研究する第 i 濃度水準のそれぞれについて、ラン（またはシリーズ）をランダム因子とする <strong>一元配置分散分析（one way ANOVA）ランダムモデル</strong> で記述できる（式1）。</p>
+<p>$$X_{i,jk} = \mu_i + \alpha_{i,j} + \varepsilon_{i,jk} \tag{1}$$</p>
+<p>ここで、</p>
+<p>$$\alpha_{i,j} \sim N\!\left(0,\ \sigma^2_{\alpha,i}\right)\qquad$$</p>
+<p>$$\varepsilon_{i,jk} \sim N\!\left(0,\ \sigma^2_{\varepsilon,i}\right)$$</p>
+<p>$\mu_i$ は研究するバリデーション標準の第 i 濃度水準の全体平均、$\mu_i + \alpha_{i,j}$ はラン $j$（$j: 1$ から $J$）の平均、$\varepsilon_{i,jk}$ は残差誤差、$\sigma^2_{\alpha,i}$ はラン間分散（run-to-run variance）、$\sigma^2_{\varepsilon,i}$ はラン内分散すなわち併行精度（repeatability）分散で、いずれも第 i 濃度水準についてのものである。</p>
+<p>分析法の全体的なばらつきは、<strong>室内再現精度分散（intermediate precision variance）</strong> で測られる。</p>
+<p>$$\sigma^2_{IP,i} = \sigma^2_{\alpha,i} + \sigma^2_{\varepsilon,i}$$</p>
+<p>分散成分モデルのこれらのパラメータはすべて、REML法（制限付き最尤法）で推定できる[<a href="#ref-14" class="cite">14</a>]。</p>
+<h2>6. 設計空間（DS）と分析法バリデーション</h2>
+<p>ICHの製剤開発ガイドラインQ8[<a href="#ref-3" class="cite">3</a>] では、DSは「品質の保証を提供することが実証された、入力変数（例：材料属性）とプロセスパラメータの多次元の組み合わせと相互作用」と定義される。したがって、入力変数の多次元の組み合わせと相互作用は、品質保証が証明された部分空間、いわゆるDSに対応する。ICH Q8のDS定義の背後にある主要概念は <strong>品質の保証（assurance of quality、品質リスク管理としても知られる）</strong> である。分析法開発中に得られる <strong>平均応答曲面</strong> は、CQAが受入限界に達する保証がないため、DSを適切に定義しないことがすでに示されている。代わりに <strong>確率マップ（probability maps）</strong> がこのDS要求に適切に答える[<a href="#ref-12" class="cite">12</a>,<a href="#ref-15" class="cite">15</a>]。</p>
+<p>分析法バリデーションもまたDSを定義できる。それは、分析法が品質の保証された結果を提供することが実証された濃度の範囲である。すなわち（式2）：</p>
+<p>$$\pi = P\!\left(-\lambda &lt; X - \mu_T &lt; \lambda\right) \tag{2}$$</p>
+<p>バリデーションフェーズの目的は、「将来の各結果があらかじめ定義した受入限界（$\lambda$）内に入る <strong>信頼確率 $\pi$</strong>（reliability probability）が、最小の主張水準 $\pi_{\min}$ 以上であるかを評価すること」に要約できる[<a href="#ref-16" class="cite">16</a>]。ここでの統計的問題は二重である——確率 $\pi$ を推定する必要があり、かつそれを $\pi_{\min}$ と比較する際にその推定の不確実性を考慮しなければならない。これは、頻度論統計に厳密な小標本解が存在しないため、解くのが容易でない問題である。とはいえ、この狙いに答えるいくつかのアプローチが提案されている。</p>
+<h3>6.1 β期待許容区間（β-expectation tolerance intervals）</h3>
+<p>第一のアプローチは、式1の一元配置ANOVAランダムモデルを用いて、バリデーション標準の各濃度水準で、定義された被覆確率（例：95%）の <strong>β期待許容区間</strong> を計算し、それをあらかじめ設定した受入限界と比較することである（図1）。このアプローチを用いると、将来の各結果は少なくとも95%の確率でこれらの受入限界内に入る。Lebrunら[<a href="#ref-17" class="cite">17</a>] は、β期待許容区間が最高事後密度（Highest Posterior Density, HPD）区間と等価であることを示した。少なからぬ数の分析法がこの方法でバリデートされてきた[<a href="#ref-16" class="cite">16</a>, <a href="#ref-18" class="cite">18</a>-<a href="#ref-19" class="cite">19</a>]。</p>
+<figure><img src="assets/analytical-procedure-validation-qbd-paradigm/fig1.png" alt="図1　正確さプロファイル（accuracy profile）。バリデーション標準の各濃度水準における95%β期待許容区間（青の破線）を描く。受入限界はバリデーション標準の既知濃度値の周り±15%に設定（黒の点線）。赤の実線はアッセイの相対バイアス（相対的な系統誤差）。緑の点は相対誤差値で表したバリデーション標準の分析結果。許容区間（青破線）が受入限界（黒点線）の内側に収まる濃度域が、目的適合と証明された範囲＝設計空間となる。" loading="lazy"><figcaption>図1　正確さプロファイル（accuracy profile）。バリデーション標準の各濃度水準における95%β期待許容区間（青の破線）を描く。受入限界はバリデーション標準の既知濃度値の周り±15%に設定（黒の点線）。赤の実線はアッセイの相対バイアス（相対的な系統誤差）。緑の点は相対誤差値で表したバリデーション標準の分析結果。許容区間（青破線）が受入限界（黒点線）の内側に収まる濃度域が、目的適合と証明された範囲＝設計空間となる。</figcaption></figure>
+<p>図1は、分析法のバリデーションで得られた正確さプロファイルを示し、バリデーション標準の各濃度水準における95%β期待許容区間を描いている。</p>
+<h3>6.2 規格外（OOS）確率</h3>
+<p>別のアプローチは、将来の結果があらかじめ設定した受入限界の外（Out Of Specification, OOS）に出る確率を推定することである。Dewéら[<a href="#ref-20" class="cite">20</a>] は、式1の一元配置ANOVAランダムモデルに従う結果についてこの確率を計算することを提案した。例を図2に示す（先と同じ分析法について）。DSは、この確率があらかじめ設定した最大値（例：0.05）より小さくなる濃度の範囲である。各濃度水準 i について、この確率は次のように計算される（式3）：</p>
+<p>$$\pi_{i} = 1 - P\!\left[t(f_i) &lt; \frac{\mu_{T,i} + \lambda - \bar{X}_i}{\hat{\sigma}_{IP,.,i}\sqrt{\dfrac{\hat{R}_i + 1}{(\hat{R}_i K + 1)}\cdot\dfrac{1}{N}}}\right] + P\!\left[t(f_i) &lt; \frac{\mu_{T,i} - \lambda - \bar{X}_i}{\hat{\sigma}_{IP,.,i}\sqrt{\dfrac{\hat{R}_i + 1}{(\hat{R}_i K + 1)}\cdot\dfrac{1}{N}}}\right] \tag{3}$$</p>
+<p>ここで、$J$ はランの数、$K$ はシリーズあたりの反復数、$N = JK$。$\bar{X}_i$ は第 i 濃度水準について分析法で得られた結果の平均濃度、$\hat{\sigma}_{IP,.,i}$ は各第 i 濃度水準の室内再現精度標準偏差。$t(f)$ はSatterthwaite近似[<a href="#ref-21" class="cite">21</a>] に基づいて計算される自由度 $f$ のStudent分布、$\hat{R}_i$ は各濃度水準のラン間分散とラン内（併行精度）分散の比。Student分布の使用は、Lebrunら[<a href="#ref-17" class="cite">17</a>] が示したように、このモデルにおける予測分布であることから正当化される。</p>
+<blockquote>補足: 式(3)の平方根内の分散因子は、原文PDFの数式レイアウトがテキスト抽出で崩れており、上式は原文の記号（$\hat{R}_i$・$K$・$N$）と Dewé ら[<a href="#ref-20" class="cite">20</a>] のモデル構造に基づいて再構成した近似表現である。<strong>厳密な標準誤差の因子形は原文（および[<a href="#ref-20" class="cite">20</a>]）を参照</strong> されたい（原文にない数値・係数は補っていない）。式の本質は「上側の受入限界 $\mu_T+\lambda$ を超える確率＋下側の受入限界 $\mu_T-\lambda$ を下回る確率」を、Satterthwaite自由度をもつStudent-t分布から求める、という点にある。</blockquote>
+<figure><img src="assets/analytical-procedure-validation-qbd-paradigm/fig2.png" alt="図2　リスクプロファイル（risk profile）。バリデーション標準の各濃度域について、将来の分析結果がバリデーション標準の既知濃度値の周り±15%の受入値の外に出る確率（＝OOS確率）を与える。最大OOS確率は5%に設定。曲線（青破線）が5%（黒点線）を下回る濃度域が目的適合＝設計空間となる。" loading="lazy"><figcaption>図2　リスクプロファイル（risk profile）。バリデーション標準の各濃度域について、将来の分析結果がバリデーション標準の既知濃度値の周り±15%の受入値の外に出る確率（＝OOS確率）を与える。最大OOS確率は5%に設定。曲線（青破線）が5%（黒点線）を下回る濃度域が目的適合＝設計空間となる。</figcaption></figure>
+<h3>6.3 濃度範囲にわたる連続モデリング：ベイズ的アプローチ</h3>
+<p>ラン間分散と併行精度分散が、バリデーション標準の各濃度水準にわたって均質（homogeneous）と仮定できる場合、濃度を固定因子として含む単一の <strong>線形混合モデル（linear mixed model）</strong> をバリデーションデータにフィットできる。DSを定義する先の2つのアプローチは、この状況に拡張できる。</p>
+<p>より非自明な状況は、ラン間分散および／または併行精度分散が <strong>不均一（heteroscedasticity）</strong> な場合に、濃度範囲にわたって分析法の結果をモデル化することである。これらの場合のβ期待許容区間やOOS確率の決定は、頻度論的な解が利用できないため、ベイズ的アプローチに基づきうる[<a href="#ref-22" class="cite">22</a>]。</p>
+<p>この文脈では、式2のモデルは、ランダムな傾きと切片、および濃度とともに増大する残差分散をもつ次の線形モデルとして書き換えられる（式4）：</p>
+<p>$$X_{ijk} = \beta_0 + \beta_1\,\mu_{T,i} + u_{0,j} + u_{1,j}\,\mu_{T,i} + \varepsilon_{ijk} \tag{4}$$</p>
+<p>ここで、添字 $i$ はバリデーション標準の $I$ 個の濃度水準、$j$ は $J$ 個のシリーズ（ラン）、$k$ は各ランあたり $K$ 個の反復を表す。$\mu_{T,i}$ は第 i 濃度水準のバリデーション標準で、参照値または慣用真値（conventional true value）とみなされる。$\theta = (\beta_0,\ \beta_1)^{\top}$ は固定効果である。加えて、$U_j = (u_{0,j},\ u_{1,j})^{\top}$ は第 j ランのランダム効果で、これも正規分布に従うと仮定される（式5）：</p>
+<p>$$U_j \sim N_2\!\left(\mathbf{0},\ \Sigma_{u}\right) \tag{5}$$</p>
+<p>最後に、$\varepsilon_{ijk}$ は独立で分散 $\sigma_i^2$ の正規分布に従うと仮定される残差誤差である。この分散も濃度水準 i に依存するとされる。この現象は実際の状況で頻繁に観察される。この分散関数の一般形は濃度のべき乗である（式6）：</p>
+<p>$$\sigma_i = \sigma\left(\mu_{T,i}\right)^{\gamma} \tag{6}$$</p>
+<p>図3は、このモデルを用い、MCMCシミュレーションで推定した分析法の確率プロファイルを示す。分析法が目的適合となる濃度範囲を描いており、この範囲が <strong>分析法バリデーションの設計空間</strong> を表す。</p>
+<figure><img src="assets/analytical-procedure-validation-qbd-paradigm/fig3.png" alt="図3　ベイズ的リスクプロファイル（Bayesian risk profile）。研究した濃度範囲にわたって、将来の分析結果がバリデーション標準の既知濃度値の周り±15%の受入値の外に出る確率（＝OOS確率）をモデル化する。最大OOS確率は5%に設定。定量下限（LOQ）は、OOS確率が最大OOS確率値5%を横切る濃度に対応する。" loading="lazy"><figcaption>図3　ベイズ的リスクプロファイル（Bayesian risk profile）。研究した濃度範囲にわたって、将来の分析結果がバリデーション標準の既知濃度値の周り±15%の受入値の外に出る確率（＝OOS確率）をモデル化する。最大OOS確率は5%に設定。定量下限（LOQ）は、OOS確率が最大OOS確率値5%を横切る濃度に対応する。</figcaption></figure>
+<h2>7. 管理戦略（Control Strategy）</h2>
+<p>分析法のQbD開発は、ルーチン応用中に分析法が管理下にとどまり、逸脱を検出することを保証する管理戦略を定義しなければ無意味である。分析法バリデーションは、品質管理サンプルを用いた管理戦略の定義も可能にする。実際、実施した実験により、たとえば分析法の管理図（control charts）を構築する際の初期管理限界として使えるβ期待許容区間を定義できる[<a href="#ref-23" class="cite">23</a>]。このような管理図で分析法の日々の性能を追跡することで、管理外（out of control）の分析法を効率的に検出し、是正措置を実行できる。実際、β期待許容区間の使用は、消費者リスクと生産者リスクの間の適切なバランスを保証する[<a href="#ref-23" class="cite">23</a>]。</p>
+<h2>8. 結論</h2>
+<p>分析法バリデーションは、QbDパラダイムに完全に収まる。実際、製剤開発と比較すると、分析法バリデーションは、最近のFDAガイドライン[<a href="#ref-6" class="cite">6</a>] が定義するプロセスバリデーションの <strong>ステージ2</strong> に位置づけられる。分析法バリデーションはすなわち、アッセイの <strong>性能適格性確認（performance qualification）</strong> である。この文脈では、分析法バリデーションを「ICH Q2[<a href="#ref-24" class="cite">24</a>] チェックリスト」演習に限定された、分析法開発における追加の負担とみなす見方は消えるべきである——バリデーションフェーズは、開発された分析法が将来の日々の応用に有用であることの確認なのである。</p>
+<blockquote>補足: 本稿の要点を一言でまとめると——「<strong>分析法バリデーションは“合否チェックの事務作業”ではなく、その試験法が日常で本当に使えるか（目的適合か）を確率で保証する、QbDの中核ステップ</strong>」ということ。鍵は3つ——①ATPで「何を・どう測るか」と「誤判定の許容リスク」を先に決める。②バリデーションの成果は単なる合格印ではなく「<strong>分析法の設計空間</strong>（＝どの濃度域なら信頼できる結果が保証されるか）」である。③その設計空間を、平均値の曲線ではなく <strong>確率</strong>（β期待許容区間・OOS確率・ベイズMCMC）で描くことで、「将来の1回の測定」の信頼性を担保する。日本の品質管理・分析法バリデーション（ICH Q2/Q14の運用）を考えるうえでも、統計的な裏付けの与え方として示唆に富む。</blockquote>
+<h2>参考文献</h2>
+<p>原文の引用順に対応する。本文中の [N] は各項目にリンクする。</p>
+<ol class="references"><li id="ref-1">U.S. Food and Drug Administration (FDA). Pharmaceutical Quality for the 21st Century: A Risk-Based Approach Progress Report. May 2007.</li><li id="ref-2">U.S. FDA. Guidance for Industry PAT — A Framework for Innovative Pharmaceutical Manufacturing and Quality Assurance. FDA, 2004.</li><li id="ref-3">ICH. Topic Q8(R2): Pharmaceutical Development. Geneva, 2009.</li><li id="ref-4">ICH. Topic Q9: Quality Risk Management. Geneva, 2005.</li><li id="ref-5">ICH. Topic Q10: Pharmaceutical Quality System. Geneva, 2008.</li><li id="ref-6">U.S. FDA. Guidance for Industry; Process Validation: General Principles and Practices. January 2011.</li><li id="ref-7">R.A. Lionberger, S.L. Lee, L. Lee, A. Raw, L.X. Yu. The AAPS Journal 10 (2008) 268.</li><li id="ref-8">M. Schweitzer, M. Pohl, M. Hanna-Brown, P. Nethercote, P. Borman, G. Hansen, K. Smith, J. Larew. Pharm. Tech. 34 (2010) 52.</li><li id="ref-9">J. Ermer. European Pharmaceutical Review, 16 (2011) 16.</li><li id="ref-10">P. Nethercote, P. Borman, T. Bennett, G. Martin, P. McGregor. Pharm. Manufact. April (2010) 37.</li><li id="ref-11">P. Borman, J. Roberts, C. Jones, M. Hanna-Brown, R. Szucs, S. Bale. Separation Science 2 (2010) 1.</li><li id="ref-12">E. Rozet, P. Lebrun, B. Debrus, B. Boulanger, Ph. Hubert. TrAC Trends in Analytical Chemistry 42 (2013) 157.</li><li id="ref-13">E. Rozet, E. Ziemons, R.D. Marini, B. Boulanger, Ph. Hubert. Anal. Chem. 84 (2012) 106.</li><li id="ref-14">Searle S.R., Casella G., McCulloch C.E. Variance Components (1992), Wiley.</li><li id="ref-15">J.J. Peterson, K. Lief. Stat. Biopharm. Res., 2 (2010) 249.</li><li id="ref-16">Ph. Hubert, J.-J. Nguyen-huu, B. Boulanger, E. Chapuzet, P. Chiap, N. Cohen, P.-A. Compagnon, W. Dewe, M. Feinberg, M. Lallier, M. Laurentie, N. Mercier, G. Muzard, C. Nivet, L. Valat. J. Pharm. Biomed. Anal. 36 (2004) 579.</li><li id="ref-17">P. Lebrun, B. Boulanger, B. Debrus, Ph. Lambert, Ph. Hubert. J. Biopharm. Stat. 23 (2013) 1330.</li><li id="ref-18">Ph. Hubert, J.-J. Nguyen-Huu, B. Boulanger, E. Chapuzet, N. Cohen, P.-A. Compagnon, W. Dewé, M. Feinberg, M. Laurentie, N. Mercier, G. Muzard, L. Valat, E. Rozet. J. Pharm. Biomed. Anal., 45 (2007) 70.</li><li id="ref-19">Ph. Hubert, J.-J. Nguyen-Huu, B. Boulanger, E. Chapuzet, N. Cohen, P.-A. Compagnon, W. Dewé, M. Feinberg, M. Laurentie, N. Mercier, G. Muzard, L. Valat, E. Rozet. J. Pharm. Biomed. Anal. 45 (2007) 82.</li><li id="ref-20">W. Dewé, B. Govaerts, B. Boulanger, E. Rozet, P. Chiap, Ph. Hubert. Chemom. Intell. Lab. Syst. 85 (2007) 262.</li><li id="ref-21">F.E. Satterthwaite. Psychometrika, 6 (1941) 309.</li><li id="ref-22">E. Rozet, B. Govaerts, P. Lebrun, K. Michail, E. Ziemons, R. Wintersteiger, S. Rudaz, B. Boulanger, Ph. Hubert. Anal. Chim. Acta 705 (2011) 193.</li><li id="ref-23">E. Rozet, C. Hubert, A. Ceccato, W. Dewé, E. Ziemons, F. Moonen, K. Michail, R. Wintersteiger, B. Streel, B. Boulanger, Ph. Hubert. J. Chromatogr. A 1158 (2007) 126.</li><li id="ref-24">ICH. Topic Q2(R1): Validation of Analytical Procedures: Text and Methodology. Geneva, 2005.</li></ol><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="conformal-prediction-distribution-free-uncertainty.html">コンフォーマル予測と分布フリー不確かさ定量化への やさしい入門</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">レビュー</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="weighing-in-pharmaceutical-industry-npl-guide.html">製薬産業における「はかり（天びん）」の計量ベストプラクティス——NPL Good Practice Guide No.70 全訳</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">レビュー</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="mrm-fingerprinting-qsyq-quality-robustness.html">MRM質量分析による超高ロバスト指紋法——漢方（気血益気丸QSYQ）の品質評価への応用</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="intelligent-codesign-material-process-equipment-tcm.html">高品質な漢方製剤の「物料（材料）-工程-装置」協同スマート設計（QbID）</a><span class="rel-tags"><span class="rel-tag">レビュー</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="analytical-procedure-validation-qbd-paradigm" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

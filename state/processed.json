@@ -1139,6 +1139,67 @@
       "title": "関連物質法開発における相対応答係数（RRF）の役割——イマチニブ不純物のHPLC条件変動によるRRFの揺れ",
       "date": "2026-07-23",
       "note": "RRF/変換係数5本バッチ 5/5（全訳＋図4＋参考文献7＋[N]リンク＋ヒーロー）。Rasayan J. Chem. 4(4)2011:919。表21個・保持時間全掲載。密度4215字は表・図主体のデータ報告のため(要約でなく完全全訳)。IF該当なし。"
+    },
+    "1R7487TQEgQBEsSWygZ2jhdX9ko-VMQLv": {
+      "source_pdf": "1R7487TQEgQBEsSWygZ2jhdX9ko-VMQLv.pdf",
+      "slug": "bioassay-tcm-quality-control-review",
+      "title": "生物活性測定（バイオアッセイ）による漢方・中薬の品質管理——研究進展レビュー",
+      "date": "2026-07-23",
+      "note": "Drive新着11本バッチ n1/10（全訳6642字＋参考文献40件[N]リンク＋ヒーロー、総説で図なし）。中国中药杂志 2018,43(3)。中文誌IF該当なし。"
+    },
+    "11EIk18jC4YA8MN92GBYT3sWyDS72htqZ": {
+      "slug": "tcm-chromatographic-fingerprint-similarity-review",
+      "title": "中薬クロマトグラフィー指紋図の相似度評価法——30年の研究進展レビュー（邹纯才）",
+      "source_pdf": "中药色谱指纹图谱相似度评价方法研究进展_邹纯才.pdf",
+      "date": "2026-07-24"
+    },
+    "1uoqI0rujWfwVli6w4ABn4QF091z5jAaW": {
+      "slug": "reference-sample-classical-formula-tcm-preparations",
+      "title": "古代経典名方目録で管理する漢方複方製剤の「基準サンプル」研究——中薬3.1類の規制科学解説（赵晓霞）",
+      "source_pdf": "试论按古代经典名方目录管理...中药复方制剂的基准样品研究_赵晓霞.pdf",
+      "date": "2026-07-24"
+    },
+    "1EESQB1EdomXfq0jcdn2y5dCV9aMNPfTH": {
+      "slug": "tcm-formula-granules-standards-industrial-analysis",
+      "title": "産業化実践に基づく500余種の中薬配方顆粒標準の剖析と応用の考察（刘勇）",
+      "source_pdf": "基于产业化实践的500余种...配方颗粒标准剖析及应用思考_刘勇.pdf",
+      "date": "2026-07-24"
+    },
+    "1VNkXtzp8NqxnmuVhz7k6kVE9cKoLURTL": {
+      "slug": "personalized-tcm-preparations-gmp-quality-system",
+      "title": "中薬「臨方製剤」（オーダーメイド調剤）の生産規範と品質管理体系への考察（王優杰）",
+      "source_pdf": "中药临方制剂生产规范与质量管理体系的思考_王优杰.pdf",
+      "date": "2026-07-24"
+    },
+    "1Y6HIWfNsZ_Q78n52_CYWKpRuZuv6DDeC": {
+      "slug": "intelligent-codesign-material-process-equipment-tcm",
+      "title": "高品質な漢方製剤の「物料（材料）-工程-装置」協同スマート設計（QbID）（徐冰）",
+      "source_pdf": "高品质中药制剂物料-工艺-装备协同智能设计_徐冰.pdf",
+      "date": "2026-07-24"
+    },
+    "1hRMUheyzcK6LmT3qfSAUstiNXDa2PbjQ": {
+      "slug": "analytical-procedure-validation-qbd-paradigm",
+      "title": "分析法バリデーションとQuality by Design（QbD）——バリデーションは目的適合性の証明（Rozet 2013）",
+      "source_pdf": "Method Validation and the Quality by Design Paradigm_V02.pdf",
+      "date": "2026-07-24"
+    },
+    "19f2e_7agdLoT5Z8LgpB51xls5UGEUloY": {
+      "slug": "weighing-in-pharmaceutical-industry-npl-guide",
+      "title": "製薬産業における「はかり（天びん）」の計量ベストプラクティス——NPL Good Practice Guide No.70（Scorer/Perkin/Buckley）",
+      "source_pdf": "mgpg70.pdf",
+      "date": "2026-07-24"
+    },
+    "1RJmVELq_9KHqKjhQwbU5fzjLzwue5oq5": {
+      "slug": "mrm-fingerprinting-qsyq-quality-robustness",
+      "title": "MRM質量分析による超高ロバスト指紋法——漢方（気血益気丸QSYQ）の品質評価（Li/Fan/Cheng 2021）",
+      "source_pdf": "1-s2.0-S2095177919306811-main.pdf",
+      "date": "2026-07-24"
+    },
+    "1AoZFsRGfnzijJm7V8yLoA7YuRwaAJ7pn": {
+      "slug": "conformal-prediction-distribution-free-uncertainty",
+      "title": "コンフォーマル予測と分布フリー不確かさ定量化への やさしい入門（Angelopoulos & Bates 2022）",
+      "source_pdf": "2107.07511v6.pdf",
+      "date": "2026-07-24"
     }
   }
 }
