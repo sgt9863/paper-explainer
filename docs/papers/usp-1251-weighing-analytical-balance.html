@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>USP〈1251〉分析天びんによる秤量（Weighing on an Analytical Balance）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="USP〈1251〉分析天びんによる秤量（Weighing on an Analytical Balance）">
+<meta property="og:description" content="秤量は分析手順の中で頻出する工程であり 天びんは実験室に不可欠な機器である。USP-NF の一般章〈1251〉「分析天びんによる秤量」は 分析手順で用いる電子天びんに直接適用される一般情報をまとめたもので 正確に量ることを要求される材料に用いる天びん（〈41〉Balances）に限らず すべての分析手順で用いる天びんに当てはまる。本ページは同章（2018年5月1日発効版）の全訳（＋訳者補足）である。適格性確認（据付＝支持面と設置場所／運転時適格性確認OQ／性能適格性確認PQ）を軸に PQの推奨4試験と受入基準（表1：感度・直線性・偏心・併行精度）と系統誤差への秤量許容差の配分（50%配分＝許容差÷2）、認証分銅（OIML R111／ASTM E617）と「受入基準の1/3」ルール、天びんチェック、最小秤量の式（mmin＝k·s÷必要秤量許容差 と 0.41d の下限、〈41〉での mmin＝2000×s）、さらに秤量容器（固体／液体）・秤量の種類（定量分析用／添加秤量／分注秤量／重量式ドージング）・難物試料（帯電・揮発性・温冷・吸湿性・無菌/バイオハザード・腐食性）・秤量時の安全上の配慮までを網羅する。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/usp-1251-weighing-analytical-balance/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="usp-1251-weighing-analytical-balance"><h1>USP〈1251〉分析天びんによる秤量（Weighing on an Analytical Balance）</h1><div class="paper-meta"><span class="date">2026-08-03</span> <span class="tag">QC・品質評価</span> <span class="tag">分析法・バリデーション</span> <span class="tag">規制・ガイドライン</span> <span class="tag">製剤・製造</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.31003/USPNF_M99963_03_01" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">USP_1251.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="usp-1251-weighing-analytical-balance" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="usp-1251-weighing-analytical-balance" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/usp-1251-weighing-analytical-balance/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/usp-1251-weighing-analytical-balance/ai-infographic.webp" alt="分析天びんは「どこに置くか」から「どこまで小さく量れるか」まで——USP一般章〈1251〉が定める 据付・OQ・PQ（感度／直線性／偏心／併行精度）・天びんチェック・最小秤量 と 秤量容器・秤量のやり方・難物試料・安全までの実務要件を全訳" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・USP-NF 一般章）の節構成に沿って訳出。原本PDFはテキスト層を持たない（本文がベクター描画）ため、PyMuPDFで全6ページを画像化し内容を読み取って訳出した。図版は無く、表1（推奨性能試験と受入基準）と補助情報の連絡先表のみ（埋め込み画像3点/頁はいずれもUSPロゴと「NO LONGER OFFICIAL」透かしで、実質的な図ではない）。数式はKaTeXで再構成。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: 〈1251〉 WEIGHING ON AN ANALYTICAL BALANCE</li><li>出典: <strong>USP-NF（米国薬局方–国民医薬品集）一般章（General Chapter）</strong></li><li>発効日（Official Date）: 2018年5月1日</li><li>状態: 取得した印刷版には <strong>&quot;No Longer Official&quot;（現行の公式版ではない）</strong> の表示あり。最新の収載は <em>Pharmacopeial Forum</em> Volume No. 50(5)</li><li>DOI: 10.31003/USPNF_M99963_03_01</li><li>担当専門委員会: GCPALDS2025 Pharmaceutical Analysis Lifecycle and Data Science（医薬品分析のライフサイクルとデータサイエンス）</li><li>著作権: © USPC（United States Pharmacopeial Convention）</li></ul>
+<blockquote>補足: <strong>USP〈1251〉</strong> は、米国薬局方の「一般章（General Chapter）」のうち番号が1000番台のもの、すなわち <strong>情報提供的（informational）な章</strong> である。1000番未満の章（例：〈41〉Balances）が試験・規格として <strong>強制力をもつ</strong> のに対し、1000番台は「推奨・解説」の位置づけで、直接の適合義務は課されない。本章はその情報章として、分析天びんの据付から日常運用までの実務を体系的にまとめている。  本ページで頻出する <strong>〈41〉Balances</strong> は、これに対して強制力のある章で、「正確に量る（accurately weighed）」ことを要求される材料に用いる天びんの要件（併行精度と正確さ）を定める。本章の受入基準の多くが「〈41〉が適用される場合は…」という条件つきで書かれているのはこのためである。  なお本ページの底本は USP-NF オンラインの印刷出力（© USPC、&quot;Do not distribute&quot; 表示あり）であり、公式・正文はあくまで USP が公開する英語原文である。本ページは日本語での理解を助ける私的な解説訳として作成した。実務判断には必ず現行の公式版を参照されたい。</blockquote>
+<h2>用語の整理（訳者による前置き）</h2>
+<ul><li><strong>天びん（balance）</strong>＝本章の対象。特に <strong>分析天びん（analytical balance）</strong>＝高分解能の実験室用電子天びん。</li><li><strong>適格性確認（Qualification）</strong>＝機器が意図した用途に適することを文書で確認する一連の作業。<strong>OQ（Operational Qualification、運転時適格性確認）／PQ（Performance Qualification、性能適格性確認）</strong>。</li><li><strong>秤量許容差（weighing tolerance）</strong>＝規格・法規等が許す、量るべき量の目標値からの最大許容偏差。本章の受入基準はすべてこれを基準に決まる。</li><li><strong>感度（sensitivity）／直線性（linearity）／偏心（eccentricity）／併行精度（repeatability）</strong>＝PQで評価する4特性。前3者が <strong>系統誤差（systematic deviation）</strong> を、併行精度が <strong>ばらつき</strong> を担う。</li><li><strong>最小秤量（minimum weight, $m_{\min}$）</strong>＝必要な秤量許容差を満たせなくなる下限の正味試料量。これを下回る量は量ってはならない。</li><li><strong>目量（scale interval, $d$）</strong>＝デジタル表示の最小刻み。<strong>包含係数（coverage factor, $k$）</strong>＝不確かさを拡張する係数（通常2以上）。</li><li><strong>NMT</strong>＝not more than（〜以下）。<strong>NLT</strong>＝not less than（〜以上）。</li><li><strong>秤量容器（receiver）</strong>＝試料を載せる皿・舟・容器の総称。<strong>風袋（tare）</strong>＝容器の重さを差し引く操作・その容器。</li></ul>
+<h2>〈1251〉分析天びんによる秤量</h2>
+<h3>はじめに（INTRODUCTION）</h3>
+<p>秤量は分析手順において頻繁に行われる工程であり、天びんは実験室機器の不可欠な一つである。ここに述べる一般情報は、<strong>分析手順で使用される電子天びん</strong> に直接適用される。本章の多くの部分はすべての天びんに適用できるが、一部は分析天びんにのみ適用される。</p>
+<p>本章は網羅的とみなすべきではなく、分析者が秤量操作を行い、又は秤量手順を実施する際には、他の情報源（例：米国国立標準技術研究所〈US National Institute of Science and Technology〉や天びん製造業者）も有用かつ適用可能でありうる。本章に示す情報は、**正確に量ることを要求される材料に用いる天びん（<em>Balances</em>〈41〉参照）だけでなく、すべての分析手順で用いる天びんにも当てはまる**。</p>
+<blockquote>補足: 冒頭のこの一文が本章の適用範囲を決めている。〈41〉は「accurately weighed（正確に量る）」と指示された場合の天びん要件を定める強制規定だが、<strong>〈1251〉はそれに限らず、日常のあらゆる秤量に及ぶ</strong>。つまり「正確に量れ」と書かれていない場面の秤量にも、本章の考え方は適用してよい（すべき）ということ。</blockquote>
+<h2>適格性確認（QUALIFICATION）</h2>
+<p>利用者は、適格性確認の計画を立てる際、<em>Analytical Instrument Qualification</em>〈1058〉（分析機器の適格性確認）、標準作業手順書（SOP）、および製造業者の推奨事項を参照すべきである。</p>
+<h3>据付（Installation）</h3>
+<p>天びんの性能は、それが据え付けられる施設の条件に依存する。分析者は天びんを据え付ける前に、製造業者が提供する情報を参照すべきである。</p>
+<h4>支持面（SUPPORT SURFACE）</h4>
+<p>天びんは、<strong>振動の伝達を最小化する、堅固で水平な非磁性の面</strong>（例：床置きの花崗岩製秤量台）に据え付けるべきである。金属製の支持面を用いる場合は、<strong>静電気の蓄積を防ぐため、その面を接地（アース）すべき</strong> である。</p>
+<h4>設置場所（LOCATION）</h4>
+<p>可能であれば、天びんは <strong>温度・湿度が管理された部屋</strong> に設置すべきである。設置場所には清浄で安定した電源が供給されているべきである。設置場所は気流のない場所とし、オーブン・炉・空調ダクト・機器やコンピュータの冷却ファンの近くであってはならない。天びんには <strong>直射日光が当たらないよう、外窓から離して</strong> 配置すべきである。天びんは、<strong>電磁放射源</strong>（高周波発生器・電動モーター・携帯型通信機器〈コードレス電話・携帯電話・トランシーバーを含む〉など）の近くに据え付けるべきではない。また、実験室の分析機器その他の装置によって誘導される <strong>磁場</strong> の近くに設置してはならない。</p>
+<p>天びんの性能は、<strong>据付後かつ使用前に評価</strong> し、十分な性能を示すことを実証すべきである。状況によっては、天びんを最適な環境に配置することが不可能な場合もある。施設側の問題となりうる例には次のものがある。</p>
+<ol><li>実験室に気流が存在することがある。</li><li>実験室の温度変動が過大である（温度感度について製造業者の文献を確認すること）。</li><li>湿度が極端に低いか極端に高い。いずれの状態でも、水分の吸収・喪失によって試料重量が変動する速度が増しうる。<strong>低湿度は静電気の蓄積を増大させる</strong>。</li><li>隣接する作業が振動を生じさせている。</li><li>腐食性物質が近くで使用され、又は日常的に秤量されている。</li><li>腐食性物質・危険物を量るために、天びんがドラフトチャンバー（フューム フード）内に設置されている。</li><li>天びんが磁場を発生する装置（例：マグネチックスターラー）に隣接している。</li><li>直射日光が天びんに当たっている。</li></ol>
+<p>振動・気流・電磁放射・磁場、又は温湿度の変化を誘発する機器やシステムの近くに天びんが設置されている場合、<strong>それらのシステムを稼働させた状態で評価を行い、最悪条件（worst-case scenario）を再現すべき</strong> である。</p>
+<h3>運転時適格性確認（Operational Qualification, OQ）</h3>
+<p>機器の据付後、OQは利用者又は資格のある第三者ベンダーのいずれかが実施すべきである。</p>
+<p>最低限、使用前に電源を投入し、<strong>製造業者の指示に従って天びんを平衡させる（天びんの種類により1〜24時間）</strong> 必要がある。天びんに応じて、分析者はOQに次の手順を含めるべきである。</p>
+<ol><li>すべての可動部の機械的可動性</li><li>安定表示の制御</li><li>内蔵分銅による手動トリガー又は自動の調整</li><li>付属機器の動作</li><li>風袋（タール）機能</li><li>初期校正</li></ol>
+<p>電子分析天びんのいくつかの型式は、手動トリガー又は自動の調整のために <strong>内蔵分銅</strong> を用いる。この調整は通常、<strong>経時的な天びんのドリフト</strong> の低減と、<strong>周囲温度の変動に起因するドリフト</strong> の補償のために適用される。</p>
+<p>校正は通常OQの一環として実施されるが、その後も定期的に実施できる。<strong>校正は、天びんが通常の運用で使用される場所で実施すべき</strong> である。</p>
+<h3>性能適格性確認（Performance Qualification, PQ）</h3>
+<p>表1は、PQにおいて評価すべき最も重要な天びん特性の一覧である。<strong>用途のリスクと必要な秤量プロセス許容差に応じて、これらの試験の一部は省略できる</strong>。また、当該特性が秤量性能にごくわずかしか影響しないという根拠がある場合も、試験は省略できる。用いる手順はいずれも、社内のSOPと整合し、当該天びんに適用可能で、かつ十分に正当化されるべきである。PQはSOPに記載のとおり定期的に実施すべきであり、<strong>個々の試験の頻度は、その特性の重要度に応じて異なってよい</strong>。</p>
+<p>試験に用いる分銅は、<strong>汚染を最小化する方法で保管・取り扱う</strong> べきである。試験の実施前に、技術者は分銅を天びんの近くに適切な時間置き、十分な熱平衡に達させるべきである。可能であれば、<strong>取扱い誤差を最小化するため単一の試験分銅で試験を行うべき</strong> だが、複数の試験分銅を用いることも許容される。</p>
+<p>試験は、<strong>天びんの性能追跡と、必要に応じた実験室の調査（investigation）の支援</strong> に容易に使えるようデータを記録すべきである。意味のある受入基準は、<strong>必要な秤量許容差</strong>——すなわち、量るべき量について規格・法規等が許す目標値からの最大許容偏差——に応じて設定できる。試験結果が許容範囲外となった場合に対処し、<strong>天びんの清浄度と環境が結果に影響していないことを保証する手順</strong> を整えておくべきである。また、<strong>観測結果が許容範囲を外れた場合に天びんを運用から外す手順</strong> も整えておくべきである。</p>
+<p><strong>表1　推奨性能試験と受入基準（Suggested Performance Tests and Acceptance Criteria）</strong></p>
+<table>
+<thead><tr><th>特性（Property）</th><th>定義（Definition）</th><th>例（Examples）</th><th>受入基準（Acceptance Criteria）</th></tr></thead>
+<tbody>
+<tr><td><strong>感度</strong>（Sensitivity）</td><td>表示値の変化を、その変化を生じさせた天びん上の荷重で割ったもの。</td><td>試験荷重は天びんの容量と等しいか、十分に近い値。</td><td>〈41〉が適用される場合、<strong>1（正しく調整された天びんの感度）からの偏差が NMT 0.05%</strong>。その他の用途では、<strong>それぞれの許容差要求を2で割った値</strong>。</td></tr>
+<tr><td><strong>直線性</strong>（Linearity）</td><td>荷重と表示秤量値との間の直線関係に、天びんが追従する能力。非直線性は通常、試験区間内の直線性偏差の最大値として表される。</td><td>天びんの範囲にわたって3〜6点。</td><td>〈41〉が適用される場合、<strong>偏差が NMT 0.05%</strong>。その他の用途では、<strong>それぞれの許容差要求を2で割った値</strong>。</td></tr>
+<tr><td><strong>偏心</strong>（Eccentricity）</td><td>偏心荷重によって生じる測定値の偏差。すなわち、荷重の重心が荷重受け（ロードレシーバ）に対して非対称に置かれることによる偏差。偏心は通常、所与の試験荷重における、中心から外れた位置での読みと中心での読みとの差の最大値として表される。</td><td>重心位置と4つの象限（長方形の皿の場合）、又は他の皿形状では類似の位置で実施。<strong>試験荷重は通常、天びん容量の30%以上</strong> とすべき（上限の可能性については製造業者のマニュアルを参照）。</td><td>〈41〉が適用される場合、<strong>偏差が NMT 0.05%</strong>。その他の用途では、<strong>それぞれの許容差要求を2で割った値</strong>。</td></tr>
+<tr><td><strong>併行精度</strong>（Repeatability）</td><td>同一の対象を同一条件下（同一測定手順・同一操作者・同一測定システム・同一運転条件・短期間における同一場所）で繰り返し秤量したときに、計量器が同一の測定値を表示する能力。併行精度は通常、複数回秤量の標準偏差として表される。</td><td><strong>10回の反復秤量</strong>（天びんの公称容量の数パーセントの試験分銅を使用）。</td><td>該当する場合は <strong>〈41〉の要求</strong>。その他の用途では、<strong>利用者が指定する要求</strong> が適用される。</td></tr>
+</tbody></table>
+<p>感度・直線性・偏心はいずれも <strong>系統誤差（systematic deviations）</strong> を説明するものである。すなわち、これらは天びんの <strong>正確さ（accuracy）</strong> を制限する（<em>Validation of Compendial Procedures</em>〈1225〉および ICH Q2 における正確さの定義に基づく）。国際計量計測用語（VIM）や国際標準化機構（ISO）の文書では、この概念は <strong>真度（trueness）</strong> と呼ばれる。</p>
+<p>これらの偏差は互いにおおむね独立であるため、<strong>すべての偏差が同時に発生し、かつ同じ符号をもつ可能性は低い</strong>。したがって、天びんの正確さを評価するために個々の偏差を <strong>算術的に加算</strong> するのは、かなり保守的なアプローチとなる。個々の偏差の <strong>二乗和（quadratic addition）</strong> の方がより現実的なアプローチである。</p>
+<p><strong>秤量許容差の予算（budget）の50%を、個々の特性（感度・直線性・偏心）の受入基準に配分することで、分析者は必要な秤量許容差の遵守を確保する。</strong> したがって、系統誤差を説明する個々の特性の受入基準は、<strong>秤量許容差を2で割った値</strong> に設定される。これらの特性——又はその一部——は、〈41〉に記載された正確さ要求を満たすためにも用いることができる。この場合、受入基準は感度・直線性・偏心について <strong>最大0.05%の偏差</strong> を許容する。</p>
+<p><strong>併行精度は、天びん容量の数パーセントの試験分銅で試験することが望ましい。</strong> 測定範囲の下端では、実験室用天びんの性能は <strong>有限な併行精度によって律速</strong> され、系統誤差による制限は通常無視できる。したがって、<strong>秤量許容差の予算の全量を、併行精度試験の受入基準に配分できる</strong>。</p>
+<blockquote>補足: ここが本章の統計的な要である。系統誤差（感度・直線性・偏心）は「許容差の半分」に、ばらつき（併行精度）は「許容差の全部」に配分する——という配分の使い分けは、<strong>測定範囲のどこで量るか</strong> で効いてくる。容量近くの大きな量を量るときは系統誤差が効くので「許容差÷2」で縛り、下端の微量を量るときは併行精度が支配的なので許容差を全部そちらに回してよい、という設計思想である。</blockquote>
+<p>上記の感度試験および直線性試験について、分析者は <strong>適切な分銅等級の認証分銅</strong> を使用すべきである（例：国際法定計量機関〈OIML〉R111 又は 米国材料試験協会〈ASTM〉E617 による。それぞれ www.oiml.org、www.astm.org から入手可能）。［<strong>注</strong>：直線性試験に差分法（differential method）を用いる場合、認証分銅は必ずしも必要とされない。］</p>
+<p>受入基準によっては、<strong>試験分銅の公称値のみを考慮すれば十分な場合がある</strong>。試験分銅の公称値を考慮する場合、分析者は <strong>最大許容誤差が受入基準の1/3を超えない</strong> ことを確認すべきである。あるいは、試験分銅の認証値を考慮する場合、その <strong>校正不確かさが受入基準の1/3を超えない</strong> べきである。<strong>複数の分銅</strong> を用いて試験を行う場合は、それらの分銅の <strong>校正不確かさを合算</strong> しなければならず、その合計が受入基準の1/3を超えないべきである。偏心や併行精度のような試験については、認証分銅の使用は任意であるが、分析者は <strong>試験中に分銅の質量が変化しないことを確実にしなければならない</strong>。</p>
+<p>上記の試験は、適用されるcGMP要求を満たすために、<strong>正式な定期校正に含めることもできる</strong>。</p>
+<h3>天びんチェック（Balance Checks）</h3>
+<p><strong>外部分銅を用いた天びんチェック</strong> は、天びんが秤量許容差の要求を満たしていることの確認に役立つ。天びんチェックは、適用されるSOPに基づき適切な間隔で実施される。天びんチェックの頻度は、<strong>用途のリスクと必要な秤量許容差</strong> に依存する。</p>
+<p>外部分銅によるチェックは、<strong>内蔵分銅による自動又は手動トリガーの調整によって部分的に代替できる</strong>。分析者が外部分銅で天びんチェックを行う場合、上記の感度試験で述べたのと同じ受入基準が適用されうる。</p>
+<h3>最小秤量（Minimum Weight）</h3>
+<p>分析天びんの <strong>最小正味試料量</strong>——略して <strong>最小秤量</strong> $m_{\min}$——は、次式で表せる。</p>
+<p>$$m_{\min} = \frac{k \times s}{\text{必要秤量許容差}}$$</p>
+<p>ここで $k$ は <strong>包含係数（coverage factor、通常2以上）</strong>、$s$ は試験分銅の <strong>10回以上（NLT 10）の反復測定の標準偏差</strong>（質量単位、例：mg）である。</p>
+<p>得られた標準偏差が <strong>$0.41d$（$d$ は目量）未満の場合、標準偏差は $0.41d$ に置き換える</strong>。標準偏差の下限 $0.41d$ は、<strong>計量器のデジタル表示の丸め誤差</strong> に由来する。単一の読取りに割り当てられる丸め誤差は $0.29d$ と計算される。<strong>秤量は常に2回の読取り</strong>——試料を皿に載せる前と載せた後（又は取り除く前後）——からなり、2つの表示値の差が正味試料量となることに注意されたい。2つの個別の丸め誤差は通常 <strong>二乗和的に加算</strong> され、$0.41d$ となる。なお、風袋容器を皿に載せた後に機器を風袋引きしても、<strong>ゼロ表示もまた丸められる</strong> ため、丸め誤差には影響しない。</p>
+<p><strong>最小秤量は、必要な秤量許容差が守られなくなる天びんの下限値を表す。</strong> 上式は、測定範囲の下端における分析天びんの性能が <strong>有限な併行精度によって制限される</strong> ことを考慮している。</p>
+<p>正確に量ることを要求される材料について、<strong>〈41〉は「秤量値の標準偏差の2倍を、望まれる最小正味量（利用者がその天びんで使用する予定の最小正味量）で割った値が 0.10% を超えなければ、併行精度は満足である」と規定</strong> している。この基準に対して、上式は次のように簡略化される。</p>
+<p>$$m_{\min} = 2000 \times s$$</p>
+<p>得られた標準偏差が $0.41d$（$d$ は目量）未満の場合、標準偏差は $0.41d$ に置き換えられる。</p>
+<p><strong>〈41〉の要求の対象でない場合</strong>、最小秤量の値は、必要な秤量許容差とその天びんの具体的な使い方に応じて変わりうる。</p>
+<p>取扱いを容易にするため、<strong>併行精度試験に用いる試験分銅は最小秤量の値である必要はなく、それより大きくてもよい</strong>。併行精度の標準偏差は試験分銅の値の弱い関数にすぎないからである。</p>
+<p>必要な秤量許容差を満たすため、試料を量る際には <strong>試料の質量（すなわち正味量）が最小秤量と等しいか、それより大きくなければならない</strong>。<strong>最小秤量は試料の重量に適用され、風袋や総重量には適用されない。</strong></p>
+<p>天びんの使用中に併行精度に影響を与えうる要因には、次のものがある。</p>
+<ol><li>天びんの性能——したがって最小秤量——は、<strong>環境条件の変化により経時的に変動しうる</strong>。</li><li><strong>操作者が異なれば秤量の仕方も異なりうる</strong>。すなわち、異なる操作者が決定した最小秤量は異なりうる。</li><li>有限回の反復秤量の標準偏差は、<strong>真の標準偏差（未知）の推定値にすぎない</strong>。</li><li>試験分銅による最小秤量の決定は、<strong>実際の秤量用途を完全に代表しているとは限らない</strong>。</li><li><strong>風袋容器</strong> もまた、環境と風袋容器表面との相互作用により、最小秤量に影響を与えうる。</li></ol>
+<p>これらの理由から、可能な場合は <strong>最小秤量より大きい値で秤量を行うべき</strong> である。すなわち、利用者がその天びんで使用する予定の最小正味量は、最小秤量より大きくすべきである。</p>
+<blockquote>補足: 最小秤量は、この分野で最も実務に直結する概念である。要点は3つ——①式の分子は「不確かさ（$k \cdot s$）」、分母は「許してよい相対誤差」。<strong>必要な精度が厳しいほど、量ってよい最小量は大きくなる</strong>。②$0.41d$ の下限は、どんなに天びんが良くても <strong>デジタル表示の丸めが効く</strong> ことによる物理的な床。③〈41〉の $m_{\min} = 2000 \times s$ は、$k=2$・許容差 $0.10\%$（＝0.001）を代入した $2s/0.001$ そのもの。別掲の [NPL 計量ベストプラクティスガイド](/papers/weighing-in-pharmaceutical-industry-npl-guide.html) が扱う USP Monograph 41 の「3×SD÷秤量値 ≤ 0.001」判定と、同じ思想を別の書き方で表したものと理解するとよい。</blockquote>
+<h2>分析天びんの運用（OPERATION OF THE ANALYTICAL BALANCE）</h2>
+<p>必要な量と性能に合った適切な天びんを選択すること。一般章〈41〉は、正確に量ることを要求される材料に用いる天びんの要求を規定している。天びんの使用者は、使用前に <strong>天びんの環境（振動・気流・清浄度）と校正の状態</strong> を確認すべきである。</p>
+<h3>秤量容器（Receivers）</h3>
+<p>試料の重量測定において適切な性能を確保するため、分析者は <strong>その材料に適した秤量容器の選択</strong> を検討すべきである。</p>
+<h4>一般的特徴（GENERAL CHARACTERISTICS）</h4>
+<p>すべての秤量容器は <strong>清浄・乾燥・不活性</strong> でなければならない。<strong>秤量容器と試料の総重量が、天びんの最大容量を超えてはならない。</strong></p>
+<p>適切に維持・調整された実験室用天びんでは、小さな試料——すなわち、典型的には天びん容量の数パーセントを超えない質量の正味量——の <strong>秤量不確かさは、本質的に併行精度によって決まる</strong>。しかし、併行精度は <strong>秤量される対象の大きさと表面積に依存</strong> する。このため、大きい又は重い秤量容器は、秤量容器を考慮せずに併行精度が決定された条件からの逸脱をもたらす。</p>
+<p>したがって、<strong>質量が小さく表面積の小さい秤量容器を用いる</strong>（特に軽量の試料を測定する場合）か、<strong>秤量容器を秤量皿にプリロードとして載せた状態で併行精度試験を実施する</strong> かのいずれかとすべきである。</p>
+<p>秤量容器は、<strong>電子天びん部品への磁気的干渉を防ぐため非磁性材料</strong> で作られるべきである。秤量容器は、<strong>秤量室内の気流の発生を防ぐため、周囲温度で使用</strong> すべきである。</p>
+<h4>固体試料（SOLID SAMPLES）</h4>
+<p>固体材料を秤量するための容器には、秤量紙・秤量皿（weighing dish）・秤量ファネル（weighing funnel）、又はボトル・バイアル・フラスコを含む密閉容器がある。<strong>吸湿性の紙は、観測結果に有害な影響を及ぼしうるため、秤量には推奨されない。</strong></p>
+<p>秤量皿は通常、ポリマー又はアルミニウム製である。静電気を保持する材料の測定用に、<strong>静電気防止（antistatic）秤量皿</strong> が入手できる。秤量ファネルは通常ガラス又はポリマー製である。この型の容器の設計は、秤量皿と移送ファネルの属性を組み合わせたもので、<strong>秤量した粉体を容量フラスコのような細口容器へ分析的に移送する作業を簡略化</strong> できる。</p>
+<p>揮発性又は潮解性の固体試料については、分析者は <strong>密閉容器の中に材料を量り取らなければならない</strong>。実務上可能な場合、分析者は、<strong>揮発による試料重量の損失や、大気中の水分の吸着・吸収による重量増加を減らすため、開口部の小さい密閉容器を使用</strong> すべきである。</p>
+<h4>液体試料（LIQUID SAMPLES）</h4>
+<p>液体試料の秤量容器は通常、不活性な密閉容器である。揮発性又は潮解性の液体試料については、分析者は <strong>開口部の小さい密閉容器</strong> を使用し、材料の移送後は <strong>速やかに封をし直す</strong> べきである。</p>
+<p>秤量容器と封（enclosure）が <strong>液体試料と適合する材料</strong> で作られていることを確実にするため、特別な注意を払うべきである。秤量容器と封は、<strong>低粘度・低表面張力・低沸点の液体からの漏れを防ぐのに十分なシール</strong> を備えていなければならない。</p>
+<h3>秤量の種類（Types of Weighing）</h3>
+<h4>定量分析のための秤量（WEIGHING FOR QUANTITATIVE ANALYSIS）</h4>
+<p>多くの定量分析の最初の工程は、<strong>指定された量の試料を正確に量ること</strong> である。<em>General Notices</em>（総則）6.50.20 Solutions は、定量測定のための溶液は <strong>正確に量られた分析対象物を用いて調製しなければならない</strong> と規定している。すなわち、分析者は <strong>〈41〉の基準を満たす天びんを使用しなければならない</strong>。試料の秤量中に導入された誤差は、<strong>その後のすべての分析測定の正確さに影響しうる</strong>。</p>
+<h4>添加秤量（ADDITION WEIGHING）</h4>
+<p>添加秤量は通常、<strong>固体試料、又は揮発性が問題とならない液体試料</strong> に用いられる。秤量容器を天びんに載せる。天びんの表示が安定した後、分析者は次を行うべきである——天びんを風袋引きする／所望の量の材料を秤量容器に加える／天びんの表示を安定させる／重量を記録する／材料を適切な容器へ定量的に移送する。<strong>全量が移送されたことを保証できない場合は、秤量容器を再度秤量して重量差を記録する。</strong></p>
+<h4>分注秤量（DISPENSE WEIGHING）</h4>
+<p>分注秤量は通常、<strong>乳剤や、軟膏のような粘性液体</strong> の秤量に用いられる。こうした状況では、材料を通常の秤量容器に量り入れることが現実的でない。したがって分析者は次を行うべきである——天びんを風袋引きする／外側を清拭した適切な容器（例：ボトル・チューブ・移送ピペット・シリンジ）に入れた試料を天びんに載せる／天びんの表示が安定した後に重量を記録する／所望量の試料を適切な受け容器（例：容量フラスコ）へ移送する／ピペット又はシリンジを天びんに戻す。<strong>この2回の秤量の差が、移送された試料の重量に等しい。</strong></p>
+<h4>重量式ドージング（GRAVIMETRIC DOSING）</h4>
+<p>重量式ドージングは通常、<strong>試料・標準の調製やカプセル充填</strong> に用いられる。このような秤量のために、分析者は容量フラスコ・バイアル・カプセル殻を天びんに載せ、天びんの表示が安定した後に風袋引きし、<strong>ドージングユニットによって固体又は液体成分を容器に加え</strong>、それぞれの重量を記録する。</p>
+<h3>難物試料（Problem Samples）</h3>
+<h4>帯電した試料と秤量容器（ELECTRICALLY CHARGED SAMPLES AND RECEIVERS）</h4>
+<p>乾燥した微細な粉体は静電気を帯びることがあり、その粉体が秤量容器や天びんに <strong>引きつけられたり反発されたり</strong> して、不正確な重量測定や移送中の試料損失を招く。<strong>天びんの読みのドリフト</strong> は、材料が静電気を帯びている可能性を操作者に警告するものである。</p>
+<p>この問題の解決には、<strong>静電気除去装置を内蔵した市販の天びん</strong> を使用できる。そのような装置は、<strong>圧電素子</strong> や、<strong>ごく微量の放射性元素（通常はポロニウム）</strong> を用いてイオン流を発生させ、秤量される粉体の上を通過させて静電荷を散逸させる。<strong>静電気防止の秤量ボート・除電ガン・除電スクリーン</strong> も市販されている。</p>
+<p>静電荷は <strong>実験室の相対湿度</strong> にも依存し、それはまた大気条件に依存する。特定の条件下では、<strong>操作者が着用する衣類</strong> によって静電荷が生じ、この電荷が秤量に大きな誤差を引き起こしうる。<strong>ホウケイ酸ガラス製品やプラスチック製の秤量容器は、特に低相対湿度において静電荷を拾いやすいことがよく知られている。</strong> 操作者保護に用いる <strong>手袋</strong> もまた、静電荷の問題を増大させる可能性がある。<strong>容器を金属製ホルダーに入れると静電荷を遮蔽するのに役立つ</strong> ことがあり、<strong>静電気防止手袋</strong> も問題の緩和に役立ちうる。</p>
+<h4>揮発性試料（VOLATILE SAMPLES）</h4>
+<p>沸点の低い液体を量る際、分析者は <strong>小口径の気密な封を備えた容器</strong> に試料を受け取らなければならない。分析者はその後、<strong>容器と封を風袋引きし</strong>、所望量の試料を加え、封をし直す。天びんの表示が安定した後、分析者は試料の重量を記録する。</p>
+<h4>温かい試料・冷たい試料（WARM OR COOL SAMPLES）</h4>
+<p>温かい、又は冷たい試料は <strong>実験室内で平衡させるべき</strong> であり、そうしないと重量の読みが誤りうる。温かい試料については、<strong>熱対流のため見かけの重量が真の重量より小さくなる</strong>。例えば、周囲の空気より温かいフラスコはその空気を温め、温まった空気はフラスコに沿って上昇し、<strong>粘性摩擦によって内容物の見かけの重量を減らす</strong>。</p>
+<h4>吸湿性試料（HYGROSCOPIC SAMPLES）</h4>
+<p>吸湿性物質は大気中の水分を容易に吸収し、<strong>露出したままにすると着実に重量が増加する</strong>。したがって吸湿性試料は、<strong>速やかに秤量する</strong> か、<strong>気密な封を備えた容器に入れる</strong> かのいずれかとしなければならない。気密容器の場合、分析者は容器と封を風袋引きし、所望量の試料を加え、封をし直すべきである。天びんの表示が安定した後、分析者は試料の重量を記録できる。</p>
+<h4>無菌試料・バイオハザード試料（ASEPTIC OR BIOHAZARDOUS SAMPLES）</h4>
+<p>無菌又は生物学的危害のある試料の秤量は、<strong>クリーンベンチ・バイオセーフティキャビネット・アイソレーター等の封じ込め装置の内部</strong> で行うべきである。<strong>フード内の気流は天びんの不安定を引き起こしうる</strong> ため、フードの下に天びんを設置した後、分析者は <strong>適切な分銅（weight artifact）を用いた厳密な適格性確認試験（〈41〉参照）を実施</strong> し、その環境における天びん性能の許容性を判断すべきである。</p>
+<h4>腐食性物質の秤量（WEIGHING CORROSIVE MATERIALS）</h4>
+<p>塩類など多くの化学物質は腐食性であり、この種の材料は <strong>天びんの皿の上や筐体内部にこぼしてはならない</strong>。この種の材料を秤量する際は特別な注意が不可欠である。分析者は、<strong>秤量瓶やシリンジのような密閉容器の使用</strong> を検討すべきである。<strong>こぼれが生じた場合、こぼれた物質の性質によっては、天びんの再適格性確認（requalification）が必要となりうる。</strong></p>
+<h3>秤量時の安全上の配慮（Safety Considerations When Weighing）</h3>
+<p>秤量中、分析者は <strong>高濃度の純物質に曝露される可能性</strong> がある。分析者は常にこの可能性を慎重に考慮し、秤量前に当該物質の <strong>安全データシート（MSDS）</strong> に記載された注意事項に精通している必要がある。</p>
+<p><strong>危険物は、適切な空気ろ過を備えた囲い（エンクロージャー）内で取り扱うべき</strong> である。多くの毒性物質——場合によってはアレルギーを引き起こす物質——は、液体又は微細な粒子として存在する。これらの物質を秤量する際、分析者は <strong>物質の吸入を防ぐため鼻と口を覆うマスク</strong> を使用し、<strong>皮膚への接触を防ぐため手袋</strong> を使用すべきである。</p>
+<p>［<strong>注</strong>：手袋の使用は、あらゆる化学物質を取り扱う際の good practice である。秤量対象の容器を扱う必要がある場合、分析者は <strong>自己防護のためだけでなく、水分や皮脂が秤量容器に付着するのを防ぐためにも</strong> 手袋を着用すべきである。］</p>
+<blockquote>補足: 最後の注が地味に重要である。<strong>素手で秤量容器に触れると、指紋の皮脂や水分がそのまま重量として乗る</strong>——分析天びんの分解能（0.1 mg や 0.01 mg）ではこれが実測に効く。手袋は「作業者を守るため」だけでなく「測定を守るため」でもある、という指摘。</blockquote>
+<h2>補助情報（Auxiliary Information）</h2>
+<p>USPへ問い合わせる前に、FAQで該当する質問を確認することが推奨されている。</p>
+<table>
+<thead><tr><th>トピック／質問</th><th>連絡先</th><th>専門委員会</th></tr></thead>
+<tbody>
+<tr><td>〈1251〉WEIGHING ON AN ANALYTICAL BALANCE</td><td>Yang Liu（Scientific Liaison）</td><td>GCPALDS2025 Pharmaceutical Analysis Lifecycle and Data Science</td></tr>
+<tr><td>REFERENCE STANDARDS SUPPORT</td><td>RS Technical Services（RSTECH@usp.org）</td><td>GCPALDS2025 Pharmaceutical Analysis Lifecycle and Data Science</td></tr>
+</tbody></table>
+<ul><li><strong>最新の収載</strong>: <em>Pharmacopeial Forum</em> Volume No. 50(5)</li><li><strong>DOI</strong>: https://doi.org/10.31003/USPNF_M99963_03_01</li></ul>
+<blockquote>補足: 本章を実務に落とすときの流れを一言でまとめると——<strong>「置き場所を決める → 据えたら性能を確かめる（OQ/PQ）→ 日々チェックする → “どこまで小さく量ってよいか（最小秤量）”を知る → 試料の性質に応じて容器と手順を選ぶ」</strong>。  特に押さえるべき数字は3つ。①<strong>PQの受入基準は「必要な秤量許容差 ÷ 2」</strong>（〈41〉適用時は感度・直線性・偏心とも NMT 0.05%）。②<strong>試験分銅の誤差・不確かさは受入基準の1/3以下</strong>（複数分銅なら合算して1/3以下）。③<strong>最小秤量 $m_{\min} = k \cdot s \div$ 必要秤量許容差</strong>、〈41〉なら $m_{\min} = 2000 \times s$、ただし $s$ の床は $0.41d$。  本サイトには関連文書として、英国NPLの[製薬産業における秤量ベストプラクティス（GPG No.70）](/papers/weighing-in-pharmaceutical-industry-npl-guide.html)——USP Monograph 41 の最小秤量判定や不確かさバジェット（GUM準拠）をより詳しく扱う——も収録しているので、あわせて読むと理解が立体的になる。</blockquote>
+<h2>参考文献</h2>
+<p>本章には文献リストが無いため、本文中で参照される USP-NF の章・外部文書を言及順に一覧化した。</p>
+<ol class="references"><li id="ref-1"><em>Balances</em>〈41〉——正確に量ることを要求される材料に用いる天びんの要求（併行精度・正確さ）。本章の受入基準の多くが参照する。</li><li id="ref-2"><em>Analytical Instrument Qualification</em>〈1058〉——分析機器の適格性確認。適格性確認計画の立案時に参照。</li><li id="ref-3"><em>Validation of Compendial Procedures</em>〈1225〉および ICH Q2——正確さ（accuracy）の定義。</li><li id="ref-4"><em>General Notices</em>（総則）6.50.20 Solutions——定量測定用の溶液は正確に量られた分析対象物で調製すること。</li><li id="ref-5">OIML R111（国際法定計量機関）——分銅の等級。www.oiml.org</li><li id="ref-6">ASTM E617（米国材料試験協会）——分銅の等級。www.astm.org</li><li id="ref-7">VIM（国際計量計測用語）および ISO 文書——真度（trueness）の概念。</li></ol><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="weighing-in-pharmaceutical-industry-npl-guide.html">製薬産業における「はかり（天びん）」の計量ベストプラクティス——NPL Good Practice Guide No.70 全訳</a><span class="rel-tags"><span class="rel-tag">製剤・製造</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">レビュー</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="dissolution-assay-method-validation-qbd-tolerance.html">溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）</a><span class="rel-tags"><span class="rel-tag">製剤・製造</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="personalized-tcm-preparations-gmp-quality-system.html">中薬「臨方製剤」（オーダーメイド調剤）の生産規範と品質管理体系への考察</a><span class="rel-tags"><span class="rel-tag">製剤・製造</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">レビュー</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="rozet-total-error-bioanalytical-validation-abstract.html">Total Error（総合誤差）アプローチによるバイオアナリティカル法バリデーションの妥当性判定——学会抄録（Rozet ら, 2009）</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="usp-1251-weighing-analytical-balance" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

@@ -1212,6 +1212,12 @@
       "title": "溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）（Rozet 2012）",
       "source_pdf": "1-s2.0-S000326701201344X-main.pdf",
       "date": "2026-07-24"
+    },
+    "upload-USPNF-M99963-1251-weighing": {
+      "slug": "usp-1251-weighing-analytical-balance",
+      "title": "USP〈1251〉分析天びんによる秤量（Weighing on an Analytical Balance）",
+      "source_pdf": "USP_1251.pdf",
+      "date": "2026-08-03"
     }
   }
 }
