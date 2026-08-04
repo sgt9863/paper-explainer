@@ -1218,6 +1218,12 @@
       "title": "USP〈1251〉分析天びんによる秤量（Weighing on an Analytical Balance）",
       "source_pdf": "USP_1251.pdf",
       "date": "2026-08-03"
+    },
+    "upload-1752-153X-6-150-clematichinenoside-ar": {
+      "slug": "clematichinenoside-ar-related-impurities-hplc",
+      "title": "クレマチクネノシドAR と類縁不純物のHPLC定量法の開発とバリデーション——補正係数の安定性（Zhou 2012）",
+      "source_pdf": "1752153X6150.pdf",
+      "date": "2026-08-04"
     }
   }
 }

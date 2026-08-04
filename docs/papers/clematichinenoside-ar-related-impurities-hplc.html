@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>クレマチクネノシドAR と類縁不純物のHPLC定量法の開発とバリデーション——補正係数（相対感度係数）の安定性</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="クレマチクネノシドAR と類縁不純物のHPLC定量法の開発とバリデーション——補正係数（相対感度係数）の安定性">
+<meta property="og:description" content="クレマチクネノシドAR（clematichinenoside AR）は 威霊仙（Radix et Rhizoma Clematidis）の基原植物 Clematis manshurica Rupr. の根から得られるトリテルペンサポニンで 関節リウマチ治療のリード化合物として有望視される。しかし原薬中の類縁不純物についての体系的研究は不足していた。本稿（中国薬科大学 天然薬物国家重点実験室の周洋・劉麗芳らによる2012年の Chemistry Central Journal 論文・オープンアクセス）は 工業スケールで製造したAR原薬（AR含量90%超）から5種の類縁不純物を単離・構造決定し（Imp-2 = clematomandshurica saponin F は新規トリテルペンサポニン） ARと5不純物を20分で全分離する簡便なRP-HPLC法を開発・バリデーションした。系統適合性・特異性（強制分解）・直線性（r²&gt;0.9992）・精度（RSD&lt;1.63%）・真度（回収率95.60〜104.76%）・頑健性・LOD/LOQを検証し 3社のC18カラムを比較。さらに 外部標準法（方法I）と ARを単一標準とする補正係数法（方法II）で3ロットの原薬を定量し 補正係数の頑健性・堅牢性（カラム・波長・温度・流速）と濃度依存性を詳細に検討して 「補正係数は比較的安定な濃度域で使うべき」という実務的結論を導いた。全訳（＋訳者補足）。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/clematichinenoside-ar-related-impurities-hplc/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="clematichinenoside-ar-related-impurities-hplc"><h1>クレマチクネノシドAR と類縁不純物のHPLC定量法の開発とバリデーション——補正係数（相対感度係数）の安定性</h1><div class="paper-meta"><span class="date">2026-08-04</span> <span class="tag">生薬</span> <span class="tag">QC・品質評価</span> <span class="tag">分析法・バリデーション</span> <span class="tag">天然物化学</span> &middot; <a href="https://doi.org/10.1186/1752-153X-6-150" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1752153X6150.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="clematichinenoside-ar-related-impurities-hplc" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="clematichinenoside-ar-related-impurities-hplc" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/clematichinenoside-ar-related-impurities-hplc/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/clematichinenoside-ar-related-impurities-hplc/ai-infographic.webp" alt="関節リウマチのリード化合物になりうる威霊仙由来トリテルペンサポニン「AR」の原薬に潜む5つの類縁不純物を単離・構造決定（うち1つは新規サポニン）——20分で全分離するRP-HPLC法を組み立て 補正係数が「どの濃度域なら信用できるか」まで踏み込んで検証" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Chemistry Central Journal 原著、オープンアクセスCC-BY）の節構成に沿って訳出。本文の[N]は原文の番号引用に対応し末尾の参考文献にリンクする。図1〜図3は原本PDFからPyMuPDFで抽出（図1は2つの埋め込み画像＋置換基表が1枚の図を構成するため該当領域をレンダリング）しReadで内容確認のうえ全訳キャプションで埋め込んだ。表1〜表6は全行・全数値を転記。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Development and validation of a chromatographic method for determining Clematichinenoside AR and related impurities</li><li>著者: Yang Zhou（周洋）・Yue Guan・Ji Shi・Xiaolin Zhang・Lan Yao・<strong>Lifang Liu（劉麗芳）\</strong>*（中国薬科大学 天然薬物国家重点実験室〈The State Key Laboratory of Natural Medicines, China Pharmaceutical University〉, 南京 210009, 中国）</li><li>掲載: <em>Chemistry Central Journal</em> 2012, <strong>6</strong>:150. DOI: 10.1186/1752-153X-6-150</li><li>受理: 2012年9月24日受付／11月27日受理／12月8日公開</li><li>種別: 原著論文（Research Article）／<strong>オープンアクセス（CC-BY 2.0）</strong></li><li>助成: 「重大新薬創製」科技重大特定項目（第11次5カ年計画, No. 2009ZX09103-371）／国家自然科学基金（No. 30772770）／青藍工程（2010）</li><li>利益相反: 著者らは申告なし</li></ul>
+<blockquote>補足: <strong>クレマチクネノシドAR（clematichinenoside AR、以下AR）</strong> は、生薬「<strong>威霊仙（いれいせん、Wei-Ling-Xian）</strong>」——キンポウゲ科センニンソウ属（<em>Clematis</em>）の根——に含まれるトリテルペンサポニンである。威霊仙は中医で古くから抗炎症・抗腫瘍・鎮痛に用いられてきた生薬で、ARはその中でも <strong>関節リウマチ治療のリード化合物</strong> として注目されている。  本論文が扱うのは、<strong>その「原薬（bulk drug substance）」の品質管理</strong> である。天然物を医薬品として開発する場合、主成分だけでなく <strong>一緒に混ざってくる類縁化合物（不純物）の構造と量を全部特定せよ</strong>、というのが規制当局（中国SFDA、およびICH Q3A）の要求になる。本論文はそれに応えて、①5つの不純物を単離して構造を決め（うち1つは新規化合物）、②それらを20分で分離するHPLC法を作り、③<strong>標準品が高価で全種そろえられない</strong> という現実的制約に対して「AR1つを標準に、補正係数で他を換算する」方法が使えるかを検証した——という3段構えの研究である。  本サイトには、この③の考え方を扱った論文群（RRF＝相対感度係数／補正係数）が複数収録されている。特に本論文が引用する文献[<a href="#ref-18" class="cite">18</a>]（Hou ら 2011, <em>J. Chromatogr. A</em>）は、「SSDMCにおける換算係数の頑健性・堅牢性」として本サイトに全訳がある。あわせて読むと、中国の「一標多測（SSDMC）」の系譜が見えて理解が深まる。</blockquote>
+<h2>用語の整理（訳者による前置き）</h2>
+<ul><li><strong>原薬（bulk sample / bulk drug）</strong>＝製剤化する前の医薬品有効成分そのもの。<strong>類縁不純物（related impurities / related substances）</strong>＝主成分と構造が近い副生成物・未反応原料・中間体など。</li><li><strong>補正係数（correction factor, $f$）／換算係数（conversion factor）／相対感度係数（RRF）</strong>＝標準品が入手できない不純物を、主成分1つの標準品で定量するための換算係数。本論文では $f$ を「内標準物質の応答（$A_s/C_s$）と 標準物質の応答（$A_R/C_R$）の比」と定義する。</li><li><strong>安定性指示（stability-indicating）法</strong>＝分解物が生じても主成分と分離でき、正しく定量できる分析法。<strong>強制分解（forced degradation）試験</strong>＝酸・塩基・酸化・光・熱で意図的に分解させ、この能力を確かめる試験。</li><li><strong>系統適合性（system suitability）</strong>＝分析システムが所期の性能を出しているかの確認。<strong>Rs</strong>＝分離度、<strong>As</strong>＝テーリング係数、<strong>α</strong>＝分離係数、<strong>k&#x27;</strong>＝容量因子、<strong>NTP</strong>＝理論段数、<strong>RRT</strong>＝相対保持時間。</li><li><strong>アグリコン（aglycone）</strong>＝サポニンから糖鎖を外した骨格部分。本論文では <strong>オレアノール酸（oleanolic acid）</strong> と <strong>ヘデラゲニン（hederagenin、オレアノール酸のC-23がCH₂OH化したもの）</strong> が登場する。</li><li><strong>Ara</strong>＝アラビノース、<strong>Rha</strong>＝ラムノース、<strong>Rib</strong>＝リボース、<strong>Glc</strong>＝グルコース。</li></ul>
+<h2>要旨（Abstract）</h2>
+<p><strong>背景</strong>：クレマチクネノシドARは関節リウマチ治療の有望なリード化合物である。AR原薬中の類縁不純物についての体系的研究はいまだ不足している。この天然物を将来の臨床実践で安全に使用するためには、主成分だけでなくAR原薬中の不純物についても、各構成成分の構造と含量を詳細に特性評価しなければならない。</p>
+<p><strong>結果</strong>：<em>Clematis manshurica</em> Rupr.（キンポウゲ科）の根由来の天然物で関節リウマチ治療の可能性をもつクレマチクネノシドAR（AR）の純度を測定するため、<strong>簡便で安定性指示能をもつRP-HPLC法</strong> を開発・バリデーションした。<strong>5つの不純物を特性評価</strong> し、<strong>不純物2（clematomandshurica saponin F）は本製品から単離された新規トリテルペンサポニン</strong> である。ARと5つの類縁不純物の最適分離は、Agilent オクタデシルシリル結合シリカゲルカラム（TC-C18、4.6 mm×150 mm、5 μm）でグラジエントHPLC法を用いて実施した。バリデーション結果は、良好な感度・特異性・<strong>直線性（r²&gt;0.9992）</strong>・<strong>精度（RSD&lt;1.63%）</strong>・<strong>真度（回収率95.60〜104.76%）</strong>・頑健性を示した。すべての不純物を含む3つのAR原薬を2つの方法で試験し、類縁不純物の定量における <strong>補正係数の安定性</strong> を論じた。提案する安定性指示法は、この天然物の品質管理に適していた。</p>
+<p><strong>結論</strong>：クレマチクネノシドARの5つの類縁不純物を特性評価し、そのなかにはAR原薬から初めて見出された新規トリテルペンサポニンが含まれる。原薬中のARとその類縁不純物を測定する簡便なクロマトグラフ法において、<strong>補正係数は比較的安定な濃度域での品質管理により適していた</strong>。</p>
+<p><strong>キーワード</strong>: クレマチクネノシドAR／類縁不純物／HPLC-UV／補正係数</p>
+<h2>背景（Background）</h2>
+<p><strong>威霊仙（Radix et Rhizoma Clematidis、Wei-Ling-Xian）</strong> は、中医薬（TCM）において抗炎症・抗腫瘍・鎮痛薬として長い歴史をもって用いられてきた[<a href="#ref-1" class="cite">1</a>,<a href="#ref-2" class="cite">2</a>]。<strong>トリテルペンサポニン</strong> はセンニンソウ属（<em>Clematis</em>）植物の根抽出物における主要な生理活性成分と考えられており、近年の薬理学的研究により、一部のトリテルペンサポニンが有意な抗炎症・抗腫瘍・鎮痛活性をもつことが明らかにされている[<a href="#ref-3" class="cite">3</a>-<a href="#ref-7" class="cite">7</a>]。</p>
+<p>クレマチクネノシドAR——<strong>3-O-β-[(O-α-L-ラムノピラノシル-(1→6)-O-β-D-グルコピラノシル-(1→4)-O-β-D-グルコピラノシル-(1→4)-O-β-D-リボピラノシル-(1→3)-α-O-L-ラムノピラノシル-(1→2)-α-L-アラビノピラノシル)オキシ]オレアノール酸 28-O-α-L-ラムノピラノシル-(1→4)-β-D-グルコピラノシル-(1→6)-β-D-グルコピラノシルエステル</strong>——は、<em>Clematis chinensis</em> Osbeck および <em>Clematis manshurica</em> Rupr.（キンポウゲ科）の根から単離される典型的なトリテルペンサポニンである。</p>
+<p>これまでの薬理学的研究によれば、クレマチクネノシドARは関節炎ラットにおいて潜在的な抗炎症効果をもち、その機序には <strong>NF-κB p65サブユニット・TNF-α・COX-2の発現抑制</strong> が関与する可能性がある[<a href="#ref-8" class="cite">8</a>-<a href="#ref-11" class="cite">11</a>]。著者らは先行研究において、中国産センニンソウ属のトリテルペンサポニンを分析する <strong>HPLC-ELSD法</strong>[<a href="#ref-12" class="cite">12</a>] と、経口投与後のラットにおけるクレマチクネノシドARを検出する <strong>LC-MS/MS法</strong>[<a href="#ref-13" class="cite">13</a>] を確立している。著者らの先行研究は、クレマチクネノシドARが関節リウマチ治療の有望なリード化合物であることを明らかにした。</p>
+<p>この天然物を将来の臨床実践で安全に使用するためには、<strong>中国国家食品薬品監督管理局（SFDA）が要求するとおり</strong>、主成分だけでなくAR原薬中の不純物についても、各構成成分の構造と含量を詳細に特性評価しなければならない。この目的のため、<strong>工業スケールの製造手順を用いてAR原薬を調製</strong>（HPLC定量でAR含量90%超）した。クロマトグラフィーで <strong>5つの類縁不純物</strong> が観測され、<strong>0.1%を超える実在不純物の構造を特性評価</strong> した[<a href="#ref-14" class="cite">14</a>]。さらに、新規化合物である <strong>clematomandshurica saponin F</strong> が初めて単離され、分光学的手法（MS、¹H NMR、¹³C NMR、COSY、DEPT、HMBC、HSQC、ROESY）により新規トリテルペンサポニンであることが確認された。</p>
+<blockquote>補足: 「0.1%を超える不純物の構造を特性評価」というのは ICH Q3A（新原薬中の不純物）の <strong>構造決定閾値（identification threshold）</strong> の考え方である。原薬に対して一定割合を超える不純物は、「何なのか分からないもの」のまま放置してはならず、構造を決めなければならない。本論文が5つ全部の構造を決めているのはこのためである。</blockquote>
+<h2>実験（Experimental）</h2>
+<h3>材料および試薬</h3>
+<p>クレマチクネノシドARおよび類縁物質を含むすべての化学標準物質は著者らの研究室で調製し、各化合物の純度はHPLCにより <strong>98%超</strong> であることを確認した。AR原薬の3ロットは正大天晴薬業（Chia Tai Tianqing Pharmaceutical Company）より供与された。HPLCグレードのアセトニトリルはMerck（ダルムシュタット, ドイツ）から、その他の分析グレード試薬は南京化学試剤有限公司（南京, 中国）から購入した。</p>
+<h3>装置およびクロマトグラフ条件</h3>
+<p>分析は主に <strong>Agilent 1200 HPLCシステム</strong>（Agilent Technologies, CA, USA）で、可変波長検出器（VWD）を装着して実施した。HPLC分離法は Agilent 逆相オクタデシルシリカカラム（<strong>TC-C18、4.6 mm×150 mm、5 μm</strong>）で開発した。</p>
+<p>移動相は溶媒A（水）と溶媒B（アセトニトリル）からなり、グラジエントプログラムは次のとおり。</p>
+<table>
+<thead><tr><th>時間</th><th>%B（アセトニトリル）</th></tr></thead>
+<tbody>
+<tr><td>0〜5 分</td><td>30%</td></tr>
+<tr><td>5〜12 分</td><td>30% → 35%</td></tr>
+<tr><td>12〜17 分</td><td>35% → 60%</td></tr>
+<tr><td>17〜20 分</td><td>60%</td></tr>
+</tbody></table>
+<p>流速 <strong>1.0 mL/min</strong>、カラム温度 <strong>30℃</strong>、UV検出 <strong>203 nm</strong>、注入量 <strong>20 μL</strong>。</p>
+<h3>類縁不純物の単離・精製</h3>
+<p>単離には、ODS材を充填したガラスカラムと、Agilent 1200 に Agilent Eclipse XDB-C18（9.4×250 mm、5 μm、USA）を装着した分取HPLC装置を用いて、不純物を濃縮・精製した。AR原薬（ロット: 20110610）を水に溶解し、ODSカラムクロマトグラフィーに供して <strong>水–メタノールのグラジエント</strong> で溶出した。回収した各フラクションをTLCとHPLCで分析した。同一化合物のフラクションをまとめ、HPLC装置で精製した。これらの不純物は、<strong>TOF-MSとNMRによる構造解明</strong> の後、以降の研究で標準物質として用いた。</p>
+<h3>標準溶液の調製</h3>
+<p>AR標準原液（2.0 mg/mL）および5つの不純物溶液（1.0 mg/mL）を、それぞれアセトニトリル–水混液（30:70, v/v）で調製し標準原液とした。各原液から適量を5 mLメスフラスコに移し、移動相で希釈して混合標準溶液を得た。これにより <strong>AR 1.0 mg/mL と各不純物 0.05 mg/mL（ARに対して5.0%濃度）</strong> を含む標準溶液とした。</p>
+<h2>結果と考察（Results and discussion）</h2>
+<h3>類縁不純物の構造解明</h3>
+<h4>不純物2（Impurity 2）の構造解明</h4>
+<p><strong>不純物2（clematomandshurica saponin F）</strong> は白色の非晶質粉末で、水とメタノールに易溶、<strong>融点 231–232℃</strong>。旋光度 $[\alpha]^{20}_{D}$ は <strong>−38.1</strong>（c 0.10、30%アセトニトリル）。IRスペクトルは <strong>3425 cm⁻¹ に水酸基</strong>、<strong>1640 cm⁻¹ にカルボニル基</strong> の存在を示した。</p>
+<p>HR-ESI MSは <strong>m/z 1821.8175</strong> に強い分子イオンを与え、分子式は <strong>C₈₂H₁₃₄O₄₄</strong> と示唆された。NMRスペクトルは Bruker AV-500 NMR（¹H NMR 500 MHz、¹³C NMR 125 MHz）で <strong>303 K</strong>、ピリジン-d₅ 中で測定した。</p>
+<p>表1に示す¹³C NMRスペクトルデータは文献[<a href="#ref-15" class="cite">15</a>]のものと一致した。構造の詳細は¹Hおよび¹³C NMRスペクトルの解析によりさらに解明した。<strong>¹³C NMRスペクトルは82個の炭素シグナル</strong> を示した。</p>
+<ul><li>高磁場側（δ 0–60）に <strong>28シグナル</strong>。うち25シグナルがアグリコン由来、3シグナルが3つのラムノースのC-6由来（δ 18.4, 18.5, 18.6）。</li><li>δ 60〜90に <strong>39シグナル</strong>。うち δ 81.9 と δ 63.9 がアグリコン由来。</li><li>δ 90〜100に <strong>9シグナル</strong>（δ 95.6, 101.4, 102.7, 102.7, 103.2, 104.6, 104.7, 104.8, 104.9）——糖のアノマー炭素のシグナル。</li><li>δ 110〜150に <strong>2シグナル</strong>（アグリコン由来）。</li><li><strong>δ 176.5</strong> のシグナルはカルボニル基由来。</li></ul>
+<p>表1の¹³C NMRデータは文献[<a href="#ref-15" class="cite">15</a>]と一致し、アグリコンが <strong>ヘデラゲニン（hederagenin）</strong> であることを示唆した。</p>
+<p>¹H NMRスペクトルは糖のアノマープロトンの9シグナルを示した——δ 5.04（1H, m, Ara の H-1）、6.25（1H, brs, Rha の H-1）、5.80（1H, brs, Rib の H-1）、4.91（1H, m, Glc の H-1）、5.07（1H, d, Glc&#x27; の H-1）、5.40（1H, brs, Rha&#x27; の H-1）、6.20（1H, d, Glc&quot; の H-1）、4.97（1H, d, Glc&quot;&#x27; の H-1）、5.81（1H, s, Rha&quot; の H-1）。また3つのラムノースのメチルシグナルが δ 1.67（3H, d, J=6.1 Hz, Rha&quot; の Me-6）、1.57（3H, d, J=6.0 Hz, Rha&#x27; の Me-6）、1.51（3H, d, J=6.0 Hz, Rha の Me-6）に現れた。さらにアグリコンの6つのメチルシグナルが δ 1.15（3H, s, Me-27）、1.10（3H, s, Me-24）、1.06（3H, s, Me-26）、0.94（3H, s, Me-25）、0.87（3H, s, Me-30）、0.85（3H, s, Me-29）に示された。</p>
+<p><strong>C-3の低磁場シフトとC-28の高磁場シフト</strong> は、C-3の水酸基とC-28のカルボニル基がいずれも配糖化されていることを示唆した。<strong>C-23の化学シフトは水酸化のため δ 63.96 の低磁場に移動</strong> した。酸加水分解により、アラビノース・グルコース・ラムノース・リボースの存在が示された。</p>
+<p>文献[<a href="#ref-5" class="cite">5</a>]のデータと比較し、正確な糖配列とアグリコンへの結合位置を2D NMRスペクトルの詳細な解析により解決した。<strong>HMBCスペクトル</strong> は次の相関を示した——H-Rha&#x27;-1 → C-Glc&#x27;-6、H-Ara-1 → C-3、H-Ara-2 → C-Rha-1、H-Rha-1 → C-Ara-2、H-Rha-3 → C-Rib-1、H-Glc-1 → C-Rib-4、H-Glc&#x27;-1 → C-Glc-4、H-Glc&quot;-1 → C-28、H-Glc&quot;&#x27;-1 → C-Glc&quot;-6、H-Rha&quot;-1 → C-Glc&quot;&#x27;-4。</p>
+<p>これらの解析に基づき、本化合物の構造は <strong>3-O-β-[(O-α-L-ラムノピラノシル-(1→6)-O-β-D-グルコピラノシル-(1→4)-O-β-D-グルコピラノシル-(1→4)-O-β-D-リボピラノシル-(1→3)-O-α-L-ラムノピラノシル-(1→2)-α-L-アラビノピラノシル)オキシ]ヘデラゲニン 28-O-α-L-ラムノピラノシル-(1→4)-O-β-D-グルコピラノシル-(1→6)-β-D-グルコピラノシルエステル</strong> と解明された。スペクトルデータの帰属を表1に示す。</p>
+<blockquote>補足: ARとImp-2の違いは <strong>アグリコンのC-23が CH₃（オレアノール酸）か CH₂OH（ヘデラゲニン）か</strong> の一点だけである（図1の R2 が H か HO か）。分子式は $C_{82}H_{134}O_{44}$ で Imp-1 と同じだが、水酸基の付く位置が異なる位置異性体の関係にある。糖鎖は9個もつながっており、その連結順序を <strong>HMBC の遠隔相関（糖のアノマープロトンから、結合先の炭素へ）</strong> で1本ずつ確定していく——というのが上記の相関リストの意味である。</blockquote>
+<p><strong>表1　clematomandshurica saponin F の ¹H・¹³C NMR スペクトルデータ（ピリジン-d₅）</strong></p>
+<p><em>アグリコン部（ヘデラゲニン）</em></p>
+<table>
+<thead><tr><th>位置</th><th>δC/ppm</th><th>δH/ppm</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>39.13</td><td>1.06, 1.51</td></tr>
+<tr><td>2</td><td>26.39</td><td>1.99, 2.20</td></tr>
+<tr><td>3</td><td>81.93</td><td>4.13</td></tr>
+<tr><td>4</td><td>43.62</td><td>—</td></tr>
+<tr><td>5</td><td>47.73</td><td>1.67</td></tr>
+<tr><td>6</td><td>18.17</td><td>1.26, 1.28</td></tr>
+<tr><td>7</td><td>32.78</td><td>1.51, 1.52</td></tr>
+<tr><td>8</td><td>39.94</td><td>—</td></tr>
+<tr><td>9</td><td>48.24</td><td>1.71</td></tr>
+<tr><td>10</td><td>36.92</td><td>—</td></tr>
+<tr><td>11</td><td>23.39</td><td>1.88</td></tr>
+<tr><td>12</td><td>123.72</td><td>5.37</td></tr>
+<tr><td>13</td><td>144.12</td><td>—</td></tr>
+<tr><td>14</td><td>42.15</td><td>—</td></tr>
+<tr><td>15</td><td>28.31</td><td>2.20</td></tr>
+<tr><td>16</td><td>23.85</td><td>1.99</td></tr>
+<tr><td>17</td><td>47.05</td><td>—</td></tr>
+<tr><td>18</td><td>41.67</td><td>3.12, 3.15</td></tr>
+<tr><td>19</td><td>46.22</td><td>1.19, 1.67</td></tr>
+<tr><td>20</td><td>30.74</td><td>—</td></tr>
+<tr><td>21</td><td>34.03</td><td>1.28</td></tr>
+<tr><td>22</td><td>32.57</td><td>1.70, 1.85</td></tr>
+<tr><td>23</td><td>63.96</td><td>4.24, 3.89（CH₂OH）</td></tr>
+<tr><td>24</td><td>14.09</td><td>1.10, s</td></tr>
+<tr><td>25</td><td>16.21</td><td>0.94, s</td></tr>
+<tr><td>26</td><td>17.56</td><td>1.06, s</td></tr>
+<tr><td>27</td><td>26.07</td><td>1.15, s</td></tr>
+<tr><td>28</td><td>176.51</td><td>—</td></tr>
+<tr><td>29</td><td>33.11</td><td>0.85, s</td></tr>
+<tr><td>30</td><td>23.72</td><td>0.87, s</td></tr>
+</tbody></table>
+<p><em>3-O-糖鎖</em></p>
+<table>
+<thead><tr><th>糖・位置</th><th>δC/ppm</th><th>δH/ppm</th></tr></thead>
+<tbody>
+<tr><td>Ara 1</td><td>104.95</td><td>5.04</td></tr>
+<tr><td>Ara 2</td><td>75.18</td><td>4.52</td></tr>
+<tr><td>Ara 3</td><td>74.77</td><td>4.24</td></tr>
+<tr><td>Ara 4</td><td>69.28</td><td>4.28</td></tr>
+<tr><td>Ara 5</td><td>66.25</td><td>3.65, 4.22</td></tr>
+<tr><td>Rha 1</td><td>101.41</td><td>6.25, brs</td></tr>
+<tr><td>Rha 2</td><td>71.95</td><td>4.82</td></tr>
+<tr><td>Rha 3</td><td>82.02</td><td>4.67</td></tr>
+<tr><td>Rha 4</td><td>72.77</td><td>4.37</td></tr>
+<tr><td>Rha 5</td><td>69.87</td><td>4.63</td></tr>
+<tr><td>Rha 6</td><td>18.45</td><td>1.51, d, 6.0 Hz</td></tr>
+<tr><td>Rib 1</td><td>104.63</td><td>5.80, brs</td></tr>
+<tr><td>Rib 2</td><td>72.64</td><td>4.38</td></tr>
+<tr><td>Rib 3</td><td>69.71</td><td>4.54</td></tr>
+<tr><td>Rib 4</td><td>76.55</td><td>3.85</td></tr>
+<tr><td>Rib 5</td><td>61.97</td><td>4.40</td></tr>
+<tr><td>Glc 1</td><td>103.22</td><td>4.91, m</td></tr>
+<tr><td>Glc 2</td><td>74.14</td><td>4.28</td></tr>
+<tr><td>Glc 3</td><td>76.69</td><td>4.28</td></tr>
+<tr><td>Glc 4</td><td>81.05</td><td>4.63</td></tr>
+<tr><td>Glc 5</td><td>75.36</td><td>3.91</td></tr>
+<tr><td>Glc 6</td><td>61.75</td><td>4.20</td></tr>
+<tr><td>Glc&#x27; 1</td><td>104.85</td><td>5.07, d, 8.1 Hz</td></tr>
+<tr><td>Glc&#x27; 2</td><td>74.24</td><td>3.83</td></tr>
+<tr><td>Glc&#x27; 3</td><td>78.37</td><td>4.16</td></tr>
+<tr><td>Glc&#x27; 4</td><td>71.95</td><td>4.70</td></tr>
+<tr><td>Glc&#x27; 5</td><td>76.80</td><td>4.02</td></tr>
+<tr><td>Glc&#x27; 6</td><td>68.57</td><td>3.92, 4.60</td></tr>
+<tr><td>Rha&#x27; 1</td><td>102.74</td><td>5.40, brs</td></tr>
+<tr><td>Rha&#x27; 2</td><td>71.75</td><td>4.68</td></tr>
+<tr><td>Rha&#x27; 3</td><td>72.56</td><td>4.52</td></tr>
+<tr><td>Rha&#x27; 4</td><td>73.89</td><td>4.18</td></tr>
+<tr><td>Rha&#x27; 5</td><td>69.75</td><td>4.27</td></tr>
+<tr><td>Rha&#x27; 6</td><td>18.52</td><td>1.57, d, 6.0 Hz</td></tr>
+</tbody></table>
+<p><em>28-O-糖鎖</em></p>
+<table>
+<thead><tr><th>糖・位置</th><th>δC/ppm</th><th>δH/ppm</th></tr></thead>
+<tbody>
+<tr><td>Glc&quot; 1</td><td>95.65</td><td>6.20, d, 8.0 Hz</td></tr>
+<tr><td>Glc&quot; 2</td><td>73.83</td><td>4.07</td></tr>
+<tr><td>Glc&quot; 3</td><td>78.75</td><td>4.14</td></tr>
+<tr><td>Glc&quot; 4</td><td>70.95</td><td>4.24</td></tr>
+<tr><td>Glc&quot; 5</td><td>78.05</td><td>4.07</td></tr>
+<tr><td>Glc&quot; 6</td><td>69.28</td><td>4.62</td></tr>
+<tr><td>Glc&quot;&#x27; 1</td><td>104.71</td><td>4.97, d, 7.8 Hz</td></tr>
+<tr><td>Glc&quot;&#x27; 2</td><td>74.85</td><td>3.88</td></tr>
+<tr><td>Glc&quot;&#x27; 3</td><td>76.40</td><td>3.85</td></tr>
+<tr><td>Glc&quot;&#x27; 4</td><td>78.22</td><td>4.38</td></tr>
+<tr><td>Glc&quot;&#x27; 5</td><td>77.16</td><td>3.63</td></tr>
+<tr><td>Glc&quot;&#x27; 6</td><td>61.35</td><td>4.07</td></tr>
+<tr><td>Rha&quot; 1</td><td>102.76</td><td>5.81</td></tr>
+<tr><td>Rha&quot; 2</td><td>72.56</td><td>4.07</td></tr>
+<tr><td>Rha&quot; 3</td><td>72.83</td><td>4.50</td></tr>
+<tr><td>Rha&quot; 4</td><td>74.09</td><td>3.95</td></tr>
+<tr><td>Rha&quot; 5</td><td>70.32</td><td>4.91</td></tr>
+<tr><td>Rha&quot; 6</td><td>18.62</td><td>1.67, d, 6.1 Hz</td></tr>
+</tbody></table>
+<h4>不純物1・3・4・5の構造解明</h4>
+<p>不純物1・3・4・5は白色の非晶質粉末として得られた。TOF-MSにより、不純物1・3・4は <strong>2価の分子イオン</strong> を m/z <strong>933.4001</strong>、<strong>852.3874</strong>、<strong>794.3646</strong> に示し、不純物5は分子イオンを m/z <strong>1335.6913</strong> に与えた。これらはそれぞれ分子式 <strong>C₈₂H₁₃₄O₄₄</strong>、<strong>C₇₆H₁₂₄O₃₉</strong>、<strong>C₆₉H₁₂₄O₃₄</strong>、<strong>C₆₄H₁₀₄O₂₉</strong> に対応する。</p>
+<p>これらの化学構造は、質量スペクトルデータを文献のものと比較することにより、それぞれ <strong>clematichinenoside AR6</strong>[<a href="#ref-3" class="cite">3</a>]、<strong>clematomandshurica saponin C</strong>[<a href="#ref-4" class="cite">4</a>]、<strong>clematichinenoside C</strong>[<a href="#ref-16" class="cite">16</a>]、<strong>clematichinenoside AR2</strong>[<a href="#ref-5" class="cite">5</a>] と示唆された。これら類縁物質の構造は、上に示した各標準物質とHPLCクロマトグラムで <strong>同一の保持時間</strong> を示すことによりさらに確認された。これら類縁物質の化学構造を図1に示す。</p>
+<figure><img src="assets/clematichinenoside-ar-related-impurities-hplc/fig1.png" alt="図1　クレマチクネノシドARとその類縁不純物の化学構造。上段：トリテルペン骨格（オレアノール酸型）に 3-O位のAra–Rha–Rib糖鎖（末端がOR4）と C-28位のCOOR3 が付いた共通骨格。中段の置換基表：AR（R1=H, R2=H, R3=S1, R4=S3）／Imp-1（R1=OH, R2=H, S1, S3）／Imp-2（R1=H, R2=HO すなわちC-23がCH2OHのヘデラゲニン型, S1, S3）／Imp-3（H, H, S1, S2）／Imp-4（H, H, S1, S4）／Imp-5（H, H, R3=H すなわち28-O-糖鎖なし, S3）。下段：糖鎖の内訳——S1＝Rha&quot;-Glc&quot;&#x27;-Glc&quot;の三糖、S2＝Glc&#x27;-Glcの二糖、S3＝Rha&#x27;-Glc&#x27;-Glcの三糖、S4＝Glc単糖。" loading="lazy"><figcaption>図1　クレマチクネノシドARとその類縁不純物の化学構造。上段：トリテルペン骨格（オレアノール酸型）に 3-O位のAra–Rha–Rib糖鎖（末端がOR4）と C-28位のCOOR3 が付いた共通骨格。中段の置換基表：AR（R1=H, R2=H, R3=S1, R4=S3）／Imp-1（R1=OH, R2=H, S1, S3）／Imp-2（R1=H, R2=HO すなわちC-23がCH2OHのヘデラゲニン型, S1, S3）／Imp-3（H, H, S1, S2）／Imp-4（H, H, S1, S4）／Imp-5（H, H, R3=H すなわち28-O-糖鎖なし, S3）。下段：糖鎖の内訳——S1＝Rha&quot;-Glc&quot;&#x27;-Glc&quot;の三糖、S2＝Glc&#x27;-Glcの二糖、S3＝Rha&#x27;-Glc&#x27;-Glcの三糖、S4＝Glc単糖。</figcaption></figure>
+<blockquote>補足: 図1を読むと、5つの不純物が <strong>ARの「どこか1か所だけ」違う近縁体</strong> であることが一目で分かる。Imp-1は骨格に水酸基が1つ多い、Imp-2はC-23がCH₂OHになっている（ヘデラゲニン型）、Imp-3とImp-4は3-O側の糖鎖が短い（S3→S2、S3→S4）、Imp-5は <strong>C-28の糖鎖エステル（S1）がまるごと外れている</strong>。  ここで面白いのは溶出順序で、<strong>最も分子量が小さいImp-5が最も遅く（18.4分）溶出する</strong>（表2）。糖が取れた分だけ親水性が下がり、逆相カラムに強く保持されるためで、「分子量が小さい＝早く出る」ではないことがよく分かる例である。</blockquote>
+<h3>HPLC法の開発とバリデーション</h3>
+<p>原薬中のARと5つの不純物を試験するため、簡便・効率的で信頼性のある方法を開発した。<strong>ARとその類縁不純物はすべて203 nmに最大吸収</strong> を示した。したがって検出波長を203 nmに設定し、簡便なクロマトグラフ条件で、近接して溶出する不純物について望ましい分離度とテーリング係数を達成するよう、流速とカラム温度を最適化した。この条件下ですべてのピークが明瞭に分離された。</p>
+<p>提案法は、<strong>系統適合性・特異性・頑健性・直線性・真度・精度・LOD・LOQ</strong> についてバリデーションした。図2にARと5つの潜在的不純物の典型的クロマトグラムを示す。ARとすべての添加不純物成分について、<strong>20分以内</strong> に良好なピーク対称性と分離度が観測された。結果を表2にまとめる。</p>
+<figure><img src="assets/clematichinenoside-ar-related-impurities-hplc/fig2.png" alt="図2　クレマチクネノシドAR原薬の典型的クロマトグラム。左から Imp-1（2.5分）・Imp-2（3.9分）・AR（9.8分）・Imp-3（10.5分）・Imp-4（11.2分）・Imp-5（18.4分）の順に溶出し、20分以内に全成分が分離している。" loading="lazy"><figcaption>図2　クレマチクネノシドAR原薬の典型的クロマトグラム。左から Imp-1（2.5分）・Imp-2（3.9分）・AR（9.8分）・Imp-3（10.5分）・Imp-4（11.2分）・Imp-5（18.4分）の順に溶出し、20分以内に全成分が分離している。</figcaption></figure>
+<h4>3種のC18カラムの影響</h4>
+<p>最適化条件下での分離とテーリング係数に対するHPLCカラムの影響を調べるため、<strong>3社のオクタデシルシリカゲルカラム</strong> をARとその不純物の分析について評価した。用いたHPLCカラムは、(1) Thermo ODS Hypersil（4.6 mm×150 mm、5 μm、USA）、(2) Diamonsil C18（4.6 mm×150 mm、5 μm、China）、(3) Agilent TC-C18（4.6 mm×150 mm、5 μm、USA）である。</p>
+<p>実験室のHPLCシステムでの結果に基づくと、<strong>すべての分離度は1.50超</strong> であったが、<strong>Agilent TC-C18が最良の分離度</strong> を与えた。Agilent TC-C18カラムで得られたARと不純物のテーリング係数は <strong>0.8〜1.2</strong> の間にあり、すべての化合物で良好なピーク形状を示した。</p>
+<ul><li><strong>Diamonsil C18</strong> では Imp-1・5 のテーリング係数が0.8未満であり、Imp-2・3・4 とAR の理論段数は Agilent TC-C18 で得られたものより少なかった。</li><li><strong>Thermo ODS Hypersil</strong> では Imp-1・5 のテーリング係数が1.5より大きく、テーリング係数の要求に適さなかった。</li></ul>
+<p>したがって、Agilent TC-C18カラムが望ましい性能を示し、以降の研究に選択された。結果を表3に示す。</p>
+<p><strong>表2　クレマチクネノシドARとその類縁不純物の方法バリデーションデータ</strong></p>
+<table>
+<thead><tr><th>パラメータ</th><th>Imp-1</th><th>Imp-2</th><th>AR</th><th>Imp-3</th><th>Imp-4</th><th>Imp-5</th></tr></thead>
+<tbody>
+<tr><td><strong>系統適合性</strong></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>RT（保持時間/分）ᵇ</td><td>2.533±0.008</td><td>3.934±0.016</td><td>9.793±0.041</td><td>10.518±0.037</td><td>11.206±0.037</td><td>18.449±0.011</td></tr>
+<tr><td>RRT（相対保持時間）ᵇ·ᶜ</td><td>0.259±0.0003</td><td>0.402±0.0002</td><td>1.000±0.0000</td><td>1.074±0.0008</td><td>1.144±0.0012</td><td>1.884±0.0071</td></tr>
+<tr><td>Rs（分離度）ᵇ·ᶜ</td><td>—</td><td>6.79±0.050</td><td>18.33±0.175</td><td>1.99±0.008</td><td>2.06±0.008</td><td>26.91±0.381</td></tr>
+<tr><td>As（テーリング係数）ᵇ·ᶜ</td><td>1.124±0.004</td><td>1.047±0.057</td><td>0.838±0.003</td><td>0.964±0.003</td><td>0.974±0.004</td><td>1.012±0.0091</td></tr>
+<tr><td>α（分離係数）ᵇ·ᶜ</td><td>—</td><td>1.872±0.434</td><td>1.872±0.434</td><td>1.080±0.008</td><td>1.070±0.006</td><td>1.686±0.056</td></tr>
+<tr><td>k&#x27;（容量因子）ᵇ·ᶜ</td><td>0.693±0.005</td><td>1.630±0.011</td><td>5.547±0.028</td><td>6.032±0.025</td><td>6.492±0.025</td><td>11.335±0.007</td></tr>
+<tr><td>NTP（理論段数）ᵇ·ᶜ</td><td>4009±44</td><td>3889±107</td><td>10299±174</td><td>14992±321</td><td>19418±130</td><td>248207±2222</td></tr>
+<tr><td><strong>直線性</strong></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>r²</td><td>0.9998</td><td>0.9994</td><td>0.9994</td><td>0.9998</td><td>0.9994</td><td>0.9992</td></tr>
+<tr><td>傾き（Slope）</td><td>2.9525</td><td>2.9072</td><td>2.9442</td><td>3.1068</td><td>3.5708</td><td>4.9601</td></tr>
+<tr><td>切片（Intercept）</td><td>−0.0324</td><td>−2.3100</td><td>0.2528</td><td>−0.9281</td><td>−2.0499</td><td>0.3703</td></tr>
+<tr><td><strong>精度</strong>（RSD, n=6, %）</td><td>0.76</td><td>1.04</td><td>0.22</td><td>0.76</td><td>0.45</td><td>1.63</td></tr>
+<tr><td><strong>LOD</strong>（μg·mL⁻¹）</td><td>0.55</td><td>1.87</td><td>0.49</td><td>0.57</td><td>0.53</td><td>1.04</td></tr>
+<tr><td><strong>LOQ</strong>（μg·mL⁻¹）</td><td>1.10</td><td>2.80</td><td>0.99</td><td>1.13</td><td>1.06</td><td>2.08</td></tr>
+<tr><td><strong>真度</strong>（80%）</td><td>99.88%</td><td>99.54%</td><td>98.73%</td><td>100.29%</td><td>95.60%</td><td>104.76%</td></tr>
+<tr><td><strong>真度</strong>（100%）</td><td>99.30%</td><td>100.36%</td><td>99.44%</td><td>100.23%</td><td>99.56%</td><td>96.15%</td></tr>
+<tr><td><strong>真度</strong>（120%）</td><td>101.23%</td><td>96.50%</td><td>103.56%</td><td>102.67%</td><td>98.08%</td><td>98.08%</td></tr>
+</tbody></table>
+<p>RT＝保持時間/分、RRT＝相対保持時間、Rs＝分離度、As＝テーリング係数、α＝分離係数、k&#x27;＝容量因子、NTP＝理論段数。ᵇ 5回測定の平均。ᶜ 平均±SD（n=5）。</p>
+<p><strong>表3　最適化条件下での3種カラムの比較</strong></p>
+<table>
+<thead><tr><th>カラム</th><th>化合物</th><th>Rs</th><th>As</th><th>α</th><th>k&#x27;</th><th>NTP</th></tr></thead>
+<tbody>
+<tr><td><strong>Thermo ODS Hypersil</strong>&lt;br&gt;(4.6 mm×150 mm, 5 μm)</td><td>Imp-1</td><td>—</td><td>1.681</td><td>—</td><td>0.279</td><td>8610</td></tr>
+<tr><td></td><td>Imp-2</td><td>3.62</td><td>1.281</td><td>1.234</td><td>0.579</td><td>3280</td></tr>
+<tr><td></td><td>AR</td><td>9.49</td><td>0.879</td><td>2.583</td><td>2.178</td><td>3162</td></tr>
+<tr><td></td><td>Imp-3</td><td>1.60</td><td>1.036</td><td>1.119</td><td>2.559</td><td>3255</td></tr>
+<tr><td></td><td>Imp-4</td><td>1.63</td><td>0.934</td><td>1.116</td><td>2.979</td><td>3615</td></tr>
+<tr><td></td><td>Imp-5</td><td>40.03</td><td>2.778</td><td>3.215</td><td>10.974</td><td>127412</td></tr>
+<tr><td><strong>Diamonsil C18</strong>&lt;br&gt;(4.6 mm×150 mm, 5 μm)</td><td>Imp-1</td><td>—</td><td>0.707</td><td>—</td><td>0.237</td><td>5722</td></tr>
+<tr><td></td><td>Imp-2</td><td>3.37</td><td>1.135</td><td>1.283</td><td>0.586</td><td>2009</td></tr>
+<tr><td></td><td>AR</td><td>9.41</td><td>0.878</td><td>3.051</td><td>2.786</td><td>2167</td></tr>
+<tr><td></td><td>Imp-3</td><td>1.52</td><td>0.977</td><td>1.135</td><td>3.297</td><td>2448</td></tr>
+<tr><td></td><td>Imp-4</td><td>1.90</td><td>0.951</td><td>1.157</td><td>3.977</td><td>2948</td></tr>
+<tr><td></td><td>Imp-5</td><td>27.88</td><td>0.691</td><td>2.341</td><td>10.740</td><td>159346</td></tr>
+<tr><td><strong>Agilent TC-C18</strong>&lt;br&gt;(4.6 mm×150 mm, 5 μm)</td><td>Imp-1</td><td>—</td><td>1.124</td><td>—</td><td>0.693</td><td>4009</td></tr>
+<tr><td></td><td>Imp-2</td><td>6.79</td><td>1.047</td><td>1.872</td><td>1.630</td><td>3889</td></tr>
+<tr><td></td><td>AR</td><td>18.33</td><td>0.838</td><td>2.856</td><td>5.547</td><td>10299</td></tr>
+<tr><td></td><td>Imp-3</td><td>1.99</td><td>0.964</td><td>1.080</td><td>6.032</td><td>14992</td></tr>
+<tr><td></td><td>Imp-4</td><td>2.06</td><td>0.974</td><td>1.070</td><td>6.492</td><td>19418</td></tr>
+<tr><td></td><td>Imp-5</td><td>26.91</td><td>1.012</td><td>1.686</td><td>11.335</td><td>248207</td></tr>
+</tbody></table>
+<p>Rs＝分離度、As＝テーリング係数、α＝分離係数、k&#x27;＝容量因子、NTP＝理論段数。</p>
+<h4>系統適合性（System suitability）</h4>
+<p>系統適合性試験は、AR（1.0 mg/mL）と5つの不純物（各0.05 mg/mL）を含む作業溶液を用い、最適化した方法で <strong>5回の繰り返し注入</strong> により実施した。<strong>すべての化合物のテーリング係数は0.8〜1.2</strong>、<strong>分離度は1.50超</strong> であることが観測された。これらの結果は、原薬中のARと類縁不純物の分離・定量に対するHPLC法の要求を満たした。</p>
+<h4>特異性（Specificity）</h4>
+<p>類縁化合物とARの特異性は、文献[<a href="#ref-17" class="cite">17</a>]に記載の条件下での <strong>強制分解試験</strong> により評価した。</p>
+<table>
+<thead><tr><th>分解条件</th><th>条件</th></tr></thead>
+<tbody>
+<tr><td>塩基分解</td><td>0.1 N NaOH、60℃、40分</td></tr>
+<tr><td>酸分解</td><td>1 N HCl、60℃、30分</td></tr>
+<tr><td>酸化分解</td><td>3% H₂O₂、60℃、1時間</td></tr>
+<tr><td>光分解</td><td>120万 lux·hr の照射、10日間</td></tr>
+<tr><td>熱分解</td><td>60℃、8時間</td></tr>
+</tbody></table>
+<p>光分解・熱分解試験は、試料を溶液（1.0 mg/mL）と固体状態の両方で曝露して実施した。適切な時間に試料を採取し、pHを中性に調整して、適切に希釈（1.0 mg/mL）した後にHPLC分析に供し、ARを潜在的不純物から分離する提案法の能力を評価した。</p>
+<p>原薬および分解試料は、<strong>DAD検出器を用いたピーク純度試験</strong> により調べた。ARピークから得られた <strong>純度係数（purity factor）は閾値より高く</strong>、スペクトルの均一性を実証した。</p>
+<ul><li><strong>60℃での分解および120万 lux·hr の照射</strong> は、新鮮な試料と比較してクロマトグラフ挙動に差を示さなかった。</li><li>しかし <strong>酸性・塩基性条件では、Imp-5の含量が有意に増加</strong> した。</li><li>さらに、<strong>酸性条件でクレマチクネノシドARはImp-4に変換</strong> された。</li></ul>
+<p>すべての結果は、ストレス試験中に生成した分解生成物がARから良好に分離されることを実証し、採用した方法が特異的であることを証明した（図3）。</p>
+<figure><img src="assets/clematichinenoside-ar-related-impurities-hplc/fig3.png" alt="図3　ストレス条件下でのクレマチクネノシドARの典型的クロマトグラム。(a) 酸化分解（3% H2O2・60℃・1時間）、(b) 酸加水分解（1N HCl・60℃・30分）、(c) 塩基加水分解（0.1N NaOH・60℃・40分）、(d) 熱分解（60℃・8時間）、(e) 光分解（120万 lux·hr・10日間）。いずれもARピーク（約9.8分）とImp-2/3/4/5が明瞭に分離している。(b)酸と(c)塩基ではImp-5（約18.4分）のピークが顕著に増大しており、(d)熱と(e)光では新鮮試料と大きな差がない。" loading="lazy"><figcaption>図3　ストレス条件下でのクレマチクネノシドARの典型的クロマトグラム。(a) 酸化分解（3% H2O2・60℃・1時間）、(b) 酸加水分解（1N HCl・60℃・30分）、(c) 塩基加水分解（0.1N NaOH・60℃・40分）、(d) 熱分解（60℃・8時間）、(e) 光分解（120万 lux·hr・10日間）。いずれもARピーク（約9.8分）とImp-2/3/4/5が明瞭に分離している。(b)酸と(c)塩基ではImp-5（約18.4分）のピークが顕著に増大しており、(d)熱と(e)光では新鮮試料と大きな差がない。</figcaption></figure>
+<blockquote>補足: 強制分解の結果は化学的に筋が通っている。Imp-5は「<strong>C-28の糖鎖エステルが外れた形</strong>」なので、<strong>酸・塩基でエステルが加水分解されればImp-5が増える</strong> のは当然である。またARが酸性でImp-4（3-O側の糖鎖が短い＝Glc単糖のS4）に変わるのも、<strong>グリコシド結合の酸加水分解</strong> として理解できる。つまりこの原薬は「熱と光には比較的強いが、酸・塩基には弱い」——保存条件や製造工程のpH管理で注意すべき点が、この試験から直接読み取れる。</blockquote>
+<h4>精度（Precision）</h4>
+<p>方法の再現性は、各不純物を5.0%濃度（0.05 mg/mL）で添加したAR溶液（1.0 mg/mL）で精度を測定して評価した。表2に示すとおり、<strong>すべての成分のピーク面積のRSD(%)は2.0%未満</strong> であり、良好な方法再現性を示唆した。</p>
+<h4>LODとLOQ</h4>
+<p>ARと不純物の両方を含む標準溶液を注入し、各成分のピーク高さを記録した。ARと5つの不純物の <strong>検出限界（LOD）と定量限界（LOQ）</strong> は、S/N比を <strong>LODは3、LOQは10</strong> に規格化して算出した（表2）。<strong>すべての化合物のLOQ濃度でのRSDは5.0%未満</strong> であった。</p>
+<h4>直線性（Linearity）</h4>
+<p>試験溶液の直線性は6濃度水準で調製した——<strong>ARは0.01〜2.0 mg/mL</strong>、<strong>不純物2と1は6〜60 μg·mL⁻¹</strong>、<strong>不純物3・4・5は10〜100 μg·mL⁻¹</strong>。採用した方法は、クレマチクネノシドAR（<strong>r²&gt;0.9994</strong>）と5つの不純物成分（<strong>r²&gt;0.9992</strong>）について良好な直線性を示した。</p>
+<h4>真度（Accuracy）</h4>
+<p>方法の真度は、すべての化合物を含む試料に既知濃度を3水準（<strong>80%・100%・120%</strong>）添加して確認し、ピーク面積を記録した。各水準で得られた平均分析種回収率とその回収率は表2に詳述する。真度と回収率の結果は定量HPLC法に適していた。</p>
+<h4>頑健性（Robustness）</h4>
+<p>分析法が頑健であるためには、典型的な試験室で起こりうる <strong>実験パラメータの小さな変化にもかかわらず定量結果を出せる</strong> 必要がある。方法の頑健性は実験計画を用いて研究し、<strong>カラム温度（25℃〜35℃）</strong> と <strong>移動相の流速（0.8〜1.2 mL·min⁻¹）</strong> を意図的に小さく変更した。温度・流速・およびその複合効果の3因子を、ARとその不純物のクロマトグラムの特性について研究した。<strong>すべての化合物のテーリング係数は0.8〜1.2、分離度は1.50超</strong> であった。</p>
+<h3>補正係数の適用（Application of correction factors）</h3>
+<h4>補正係数の算出</h4>
+<p>すべての類縁標準品を調製することは困難で高価であるため、外部標準法の適用は制限される。そこで類縁物質の定量に <strong>補正係数</strong> を用いた。<strong>ICHの指導原則によれば、原薬と関連不純物の応答係数が近くない場合、補正係数を提供したうえで原薬を標準として不純物量を推定できる。</strong> 補正係数の算出方法は換算係数（conversion factor）と同じである[<a href="#ref-18" class="cite">18</a>]。</p>
+<p>補正係数 $f$ は、内標準物質の応答（$A_s/C_s$）と標準物質の応答（$A_R/C_R$）の比である。</p>
+<p>$$f = \frac{A_s / C_s}{A_R / C_R}$$</p>
+<p>$A_s$: 内標準物質のピーク面積、$C_s$: 内標準物質の濃度、$A_R$: 標準物質のピーク面積、$C_R$: 標準物質の濃度。</p>
+<p>本研究では <strong>ARを内標準として選択</strong> し、各類縁不純物を標準とした。各物質の補正係数は、<strong>5つの異なる濃度から算出した平均値</strong> として得た。5段階濃度からの結果は次を示した。</p>
+<ul><li><strong>Imp-1（F1）＝ 1.00 ± 0.04</strong></li><li><strong>Imp-2（F2）＝ 1.13 ± 0.02</strong></li><li><strong>Imp-3（F3）＝ 1.00 ± 0.02</strong></li><li><strong>Imp-4（F4）＝ 0.90 ± 0.04</strong></li><li><strong>Imp-5（F5）＝ 0.61 ± 0.02</strong></li></ul>
+<p><strong>すべての化合物の補正係数のRSDは5%未満</strong> であった。</p>
+<p>加えて、補正係数を算出する他の2つのアプローチも用いた。<strong>第1は、ARと不純物の検量線の傾きの比</strong> から算出するもので、F1＝1.00、F2＝1.01、F3＝0.95、F4＝0.82、F5＝0.59となった。上記の結果は、<strong>F1とF5は類似していたが、その他は有意な差があった</strong> ことを示す。直線性データは <strong>不純物2と4の切片が1以上</strong> であることを示しており、<strong>切片の影響を無視できない</strong> ことを示した。</p>
+<p><strong>第2は、単一濃度溶液のみによる算出</strong> である。しかし表4が明確に示すように、<strong>F1の値は濃度の増加とともに増加し、F5の変化はまったく逆</strong> であった。<strong>F2は濃度が10 μg/mLを超えるとより安定</strong> であった。この理由は、<strong>サポニンの吸収値が極めて低い</strong> ことに関係すると考えられる。分析種の濃度が10 μg/mL未満になると、RSDが増加する。</p>
+<p>したがって著者らは、<strong>補正係数は比較的安定な濃度範囲で適用すべき</strong> であり、<strong>原薬中の不純物2の濃度が低すぎる場合は外部標準法が望ましい</strong> と提案する。</p>
+<p><strong>表4　類縁不純物の補正係数</strong></p>
+<table>
+<thead><tr><th>#</th><th>Imp-1 (μg/mL)</th><th>F1</th><th>Imp-2 (μg/mL)</th><th>F2</th><th>AR (μg/mL)</th><th>F0</th><th>Imp-3 (μg/mL)</th><th>F3</th><th>Imp-4 (μg/mL)</th><th>F4</th><th>Imp-5 (μg/mL)</th><th>F5</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>6.41</td><td>0.96</td><td>6.26</td><td>1.15</td><td>9.52</td><td>1</td><td>9.83</td><td>1.01</td><td>6.50</td><td>0.94</td><td>5.98</td><td>0.60</td></tr>
+<tr><td>2</td><td>12.82</td><td>0.97</td><td>12.53</td><td>1.13</td><td>19.05</td><td>1</td><td>19.66</td><td>1.02</td><td>13.01</td><td>0.91</td><td>11.95</td><td>0.60</td></tr>
+<tr><td>3</td><td>26.70</td><td>1.00</td><td>26.10</td><td>1.13</td><td>39.68</td><td>1</td><td>40.96</td><td>0.99</td><td>27.10</td><td>0.89</td><td>24.90</td><td>0.63</td></tr>
+<tr><td>4</td><td>40.05</td><td>1.02</td><td>39.15</td><td>1.11</td><td>59.52</td><td>1</td><td>61.44</td><td>1.00</td><td>40.65</td><td>0.89</td><td>37.35</td><td>0.61</td></tr>
+<tr><td>5</td><td>53.40</td><td>1.03</td><td>52.20</td><td>1.12</td><td>79.36</td><td>1</td><td>81.92</td><td>0.99</td><td>54.20</td><td>0.89</td><td>49.80</td><td>0.60</td></tr>
+<tr><td><strong>RSD(%)</strong></td><td></td><td>3.06</td><td></td><td>1.31</td><td></td><td></td><td></td><td>1.30</td><td></td><td>2.42</td><td></td><td>2.14</td></tr>
+<tr><td><strong>平均</strong></td><td></td><td><strong>1.00</strong></td><td></td><td><strong>1.13</strong></td><td></td><td></td><td></td><td><strong>1.00</strong></td><td></td><td><strong>0.90</strong></td><td></td><td><strong>0.61</strong></td></tr>
+</tbody></table>
+<blockquote>補足: この表が本論文で最も実務的に重要な部分である。<strong>補正係数は「定数」ではなく、濃度によって少しずつ動く</strong> ——F1は0.96→1.03と上がり、F5は逆に動く。原因として著者らは「サポニンはUV吸収が極めて弱いため、低濃度ではSNが悪くRSDが増える」ことを挙げている。  つまり補正係数法は「便利だが万能ではない」。<strong>不純物の濃度が十分にある場合は補正係数で節約でき、低すぎる場合は素直に外部標準法を使う</strong> ——という使い分けの指針を、実データで示したのが本論文の貢献である。</blockquote>
+<h4>ラギッドネスと頑健性（Ruggedness and robustness）</h4>
+<p>この天然物の品質管理において、<strong>補正係数の値は異なる試験室で実施すると大きく変わりうる</strong>。したがって、補正係数の安定性を <strong>ラギッドネス試験と頑健性試験</strong> で調べた。</p>
+<p><strong>ラギッドネス試験</strong> では、<strong>5本のカラム</strong>（Agilent TC-18 の異なる3本、Thermo ODS Hypersil、Diamonsil C18）を調べた。これらのカラムはすべて、表3に示した系統適合性パラメータの要求を満たした。</p>
+<p><strong>頑健性試験</strong> では3つの関連因子を研究した——<strong>カラム温度（25℃〜35℃）</strong>、<strong>移動相の流速（0.8〜1.2 mL·min⁻¹）</strong>、<strong>UV検出波長（200 nm〜206 nm）</strong>。結果を表5に示す。</p>
+<p>すべてのAgilent TC-C18カラムで、5つの不純物の平均補正係数はそれぞれ <strong>1.00、1.12、1.00、0.90、0.62</strong> であった。この結果は、<strong>異なるAgilent TC-C18カラム間ですべての補正係数が安定</strong> であることを明らかにした。</p>
+<p>さらに、<strong>F3とF4の値は、異なるブランドのクロマトカラムや変更した実験パラメータで実施しても安定</strong> であった。この理由は、<strong>Imp-3とImp-4の構造がARに非常に近い</strong> ことによると考えられる。</p>
+<p>流速とカラム温度に関する因子は <strong>Imp-2にいくらか影響</strong> を及ぼした。</p>
+<ul><li>流速を 1.2 → 0.8 mL/min に <strong>減少</strong> させると、Imp-2の補正係数は <strong>1.10 → 1.16 に増加</strong>。</li><li>カラム温度を 25℃ → 35℃ に <strong>上昇</strong> させると、Imp-2の補正係数は <strong>1.16 → 1.1 に減少</strong>。</li></ul>
+<p>考えられる理由は <strong>積分パラメータ</strong> に関係する可能性がある——実験パラメータが小さく変化したとき、同じ積分パラメータのままではピーク面積が変わってしまう。</p>
+<p><strong>表5　ラギッドネスおよび頑健性試験の結果</strong></p>
+<table>
+<thead><tr><th>条件</th><th>Imp-1</th><th>Imp-2</th><th>Imp-3</th><th>Imp-4</th><th>Imp-5</th></tr></thead>
+<tbody>
+<tr><td>Diamonsil</td><td>0.98</td><td>1.02</td><td>0.92</td><td>0.80</td><td>0.58</td></tr>
+<tr><td>Thermo</td><td>1.08</td><td>1.12</td><td>1</td><td>0.9</td><td>0.77</td></tr>
+<tr><td>206 nm</td><td>1.03</td><td>1.11</td><td>0.99</td><td>0.89</td><td>0.66</td></tr>
+<tr><td>200 nm</td><td>1.02</td><td>1.07</td><td>0.99</td><td>0.89</td><td>0.72</td></tr>
+<tr><td>35℃</td><td>1.04</td><td>1.1</td><td>0.99</td><td>0.89</td><td>0.68</td></tr>
+<tr><td>25℃</td><td>1.02</td><td>1.16</td><td>0.99</td><td>0.89</td><td>0.71</td></tr>
+<tr><td>1.2 mL/min</td><td>0.99</td><td>1.10</td><td>0.98</td><td>0.88</td><td>0.68</td></tr>
+<tr><td>0.8 mL/min</td><td>1.03</td><td>1.16</td><td>0.99</td><td>0.90</td><td>0.67</td></tr>
+<tr><td>TC-C18</td><td>0.99</td><td>1.12</td><td>1.00</td><td>0.90</td><td>0.63</td></tr>
+<tr><td>TC-C18</td><td>1.02</td><td>1.12</td><td>0.99</td><td>0.90</td><td>0.62</td></tr>
+<tr><td>TC-C18</td><td>1.00</td><td>1.13</td><td>1.00</td><td>0.90</td><td>0.61</td></tr>
+</tbody></table>
+<blockquote>補足: 表5を縦に眺めると、<strong>F5（Imp-5）だけがカラム間で大きく振れている</strong>（Diamonsil 0.58／Thermo 0.77／TC-C18 0.61〜0.63）のが目につく。ARと構造が最も遠い（C-28の糖鎖がまるごと無い）不純物ほど、カラムの選択性の違いに敏感になる——というのは直感に合う。逆に <strong>ARと構造が近いImp-3・Imp-4のF値はどの条件でもほぼ不動</strong>（0.98〜1.00／0.88〜0.90）。  ここから引ける実務的な教訓は明快で、<strong>補正係数法は「主成分と構造が近い不純物」ほど安全に使える</strong> ということ。構造が離れた不純物については、試験室間・カラム間の移管時に値を再確認すべきである。</blockquote>
+<h3>クレマチクネノシドAR原薬3ロットの分析</h3>
+<p>バリデーション済みの方法を、AR原薬3ロット中の不純物定量に、次の2つの方法で適用した。</p>
+<ul><li><strong>方法I</strong>：外部標準法（external standard method）</li><li><strong>方法II</strong>：<strong>5つの補正係数による単一標準品法</strong>（single reference standard by five correction factors）</li></ul>
+<p>試料溶液は 1 mg/mL で調製した。ARに対する不純物の含量を表6にまとめる。</p>
+<p><strong>2つの方法で得た5化合物の合計含量のRSDは、各試料とも2%未満</strong> であった。一方、<strong>Imp-1・Imp-4・Imp-5のRSDは5%超</strong> であった。その理由は、試料中の不純物濃度が低いことに関係すると考えられる。しかし、<strong>合計含量のRSDが要求を満たすため、品質管理上この差は無視できる</strong>。したがって、<strong>補正係数による単一標準品法は類縁不純物の品質管理に使用できる</strong>。</p>
+<p><strong>国家食品薬品監督管理局（SFDA）の規定によれば、ARの含量は90.0%以上でなければならない。</strong> したがって、すべての試料が限度に適合した。</p>
+<p><strong>表6　3ロットの原薬中のクレマチクネノシドARとその類縁不純物の含量</strong></p>
+<table>
+<thead><tr><th>成分</th><th>Bulk-1&lt;br&gt;方法I</th><th>Bulk-1&lt;br&gt;方法II</th><th>Bulk-1&lt;br&gt;RSD</th><th>Bulk-2&lt;br&gt;方法I</th><th>Bulk-2&lt;br&gt;方法II</th><th>Bulk-2&lt;br&gt;RSD</th><th>Bulk-3&lt;br&gt;方法I</th><th>Bulk-3&lt;br&gt;方法II</th><th>Bulk-3&lt;br&gt;RSD</th></tr></thead>
+<tbody>
+<tr><td>Imp-1 (%)</td><td>0.65</td><td>0.67</td><td>2.14</td><td>1.11</td><td>0.99</td><td>8.08</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Imp-2 (%)</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>2.47</td><td>2.36</td><td>3.22</td></tr>
+<tr><td><strong>クレマチクネノシドAR (%)</strong></td><td><strong>93.01</strong></td><td>—</td><td>—</td><td><strong>92.22</strong></td><td>—</td><td>—</td><td><strong>95.03</strong></td><td>—</td><td>—</td></tr>
+<tr><td>Imp-3 (%)</td><td>4.38</td><td>4.57</td><td>3.00</td><td>4.17</td><td>4.34</td><td>2.83</td><td>2.08</td><td>2.12</td><td>1.35</td></tr>
+<tr><td>Imp-4 (%)</td><td>1.24</td><td>1.35</td><td>6.01</td><td>1.22</td><td>1.39</td><td>9.21</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>Imp-5 (%)</td><td>1.02</td><td>0.89</td><td>9.63</td><td>1.03</td><td>0.94</td><td>6.46</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td><strong>合計 (%)</strong></td><td><strong>7.28</strong></td><td><strong>7.48</strong></td><td><strong>1.92</strong></td><td><strong>7.53</strong></td><td><strong>7.66</strong></td><td><strong>1.21</strong></td><td><strong>4.55</strong></td><td><strong>4.48</strong></td><td><strong>1.10</strong></td></tr>
+</tbody></table>
+<blockquote>補足: 表6は「個々の不純物では方法IとIIの差が最大9.6%出るが、<strong>合計にすると差は2%未満に収まる</strong>」という、実務判断のうえで重要な事実を示している。個別値のずれは低濃度側で相対的に大きく出るが、品質管理で問われるのは主として <strong>総不純物量</strong> なので、そこが合っていれば補正係数法で足りる——という論法である。  なおロット3だけ検出される不純物のパターンが違う（Imp-2が2.47%あり、Imp-1/4/5は不検出）。同じ工程でもロットにより不純物プロファイルが変わることを示す例で、だからこそ <strong>不純物を1つずつ特定・定量する</strong> 意義がある。</blockquote>
+<h2>結論（Conclusions）</h2>
+<p>原薬の品質は、採用した製造手順のみならず、<strong>副反応生成物・未反応原料・中間体</strong> にも依存する。これらは望ましくない毒性影響をもたらしうるからである。したがって、<strong>類縁不純物の徹底的な検討は、最終製品における原薬の品質管理においてきわめて重要な役割を果たす</strong>[<a href="#ref-14" class="cite">14</a>,<a href="#ref-19" class="cite">19</a>]。</p>
+<p>不純物はカラムクロマトグラフィーと分取HPLC法によりAR原薬から単離された。<strong>5つの類縁不純物を特性評価</strong> し、そのなかには新規化合物として確認された <strong>3-O-β-[(O-α-L-ラムノピラノシル-(1→6)-O-β-D-グルコピラノシル-(1→4)-O-β-D-グルコピラノシル-(1→4)-O-β-D-リボピラノシル-(1→3)-O-α-L-ラムノピラノシル-(1→2)-α-L-アラビノピラノシル)オキシ]ヘデラゲニン 28-O-α-L-ラムノピラノシル-(1→4)-O-β-D-グルコピラノシル-(1→6)-β-D-グルコピラノシルエステル</strong> が含まれる。</p>
+<p>Imp-1・3・4・5は威霊仙（Rhizoma Clematidis）から単離された <strong>4つの既知トリテルペンサポニン</strong> であり、<strong>Imp-2（clematomandshurica saponin F）はAR原薬から初めて見出された新規トリテルペンサポニン</strong> で、<strong>生薬原料に由来する可能性がある</strong>。</p>
+<p>本論文では、原薬中のARとその類縁不純物を同時定量する簡便なグラジエントRP-HPLC法を開発・バリデーションした。実験計画を用いることで最適な分離が達成され、<strong>ARの5つの不純物を20分以内に、満足すべき分離度・直線性・感度で分離</strong> できた。</p>
+<p>さらに、外部標準法と補正係数による単一標準品法という2つの方法を、3ロットのAR原薬中の不純物定量に適用した。<strong>測定の正確さを確保し、分析を高速化し、実験手順のコストを削減するためには、比較的安定な濃度範囲では補正係数が類縁物質の定量により適していた</strong>。これは、AR原薬の品質管理と将来の安全な臨床使用にきわめて有用となりうる。</p>
+<blockquote>補足: 本論文を実務目線で3行にまとめると——①<strong>天然物を医薬品にするなら、原薬に混ざる近縁体を1つずつ単離して構造まで決めろ</strong>（ICH Q3A の要求。本論文では5種、うち1種は新規化合物だった）。②<strong>そのうえで全部を分離できる安定性指示HPLC法を作れ</strong>（本論文は20分・203 nm・TC-C18で達成し、酸/塩基に弱いという製剤設計上の知見も得た）。③<strong>標準品を全種そろえられないなら補正係数で代用してよいが、濃度域と構造の近さで信頼性が変わる</strong>（構造が近いImp-3/4は不動、遠いImp-5はカラムで振れる／10 μg/mL未満はRSDが増える）。  特に③は、中国薬局方が推進する「<strong>一標多測（SSDMC、単一標準による多成分同時定量）</strong>」の実践的な限界を具体的な数字で示したもので、本サイト収録の本サイト収録の「SSDMCにおける換算係数の頑健性・堅牢性」（Hou ら 2011＝本論文の文献[<a href="#ref-18" class="cite">18</a>]）——と直接つながる。あわせて読むことを勧めたい。</blockquote>
+<h2>略語（Abbreviations）</h2>
+<p>HPLC: 高速液体クロマトグラフィー／ICH: 日米EU医薬品規制調和国際会議／UV: 紫外／LOD: 検出限界／LOQ: 定量限界／SD: 標準偏差／RSD: 相対標準偏差／ELSD: 蒸発光散乱検出器／RP-HPLC: 逆相高速液体クロマトグラフィー／LC-MS/MS: 液体クロマトグラフィー–タンデム質量分析／TOF-MS: 飛行時間型質量分析／HMBC: 異核多重結合相関／HR-ESI MS: 高分解能エレクトロスプレーイオン化質量分析／Rs: 分離度／As: テーリング係数／α: 分離係数／k&#x27;: 容量因子／NTP: 理論段数／AR: クレマチクネノシドAR。</p>
+<h2>参考文献</h2>
+<p>原著の引用順に対応する。本文中の [N] は各項目にリンクする。</p>
+<ol class="references"><li id="ref-1">The State Pharmacopoeia Commission of The People&#x27;s Republic of China: <em>Pharmacopoeia of the People&#x27;s Republic of China</em>. China Medical Science, 2010, Volume 1: 234.</li><li id="ref-2">Shi S, Jiang D, Zhao M, et al. Preparative isolation and purification of triterpene saponins from <em>Clematis mandshurica</em> by high-speed counter-current chromatography coupled with evaporative light scattering detection. <em>J Chromatogr B</em> 2007, 852: 679–683.</li><li id="ref-3">Mimaki Y, Yokosuka A, Hamanaka M, et al. Triterpene saponins from the roots of <em>Clematis chinensis</em>. <em>J Nat Prod</em> 2004, 67: 1511–1516.</li><li id="ref-4">Shi S, Jiang D, Dong C, et al. Triterpene saponins from <em>Clematis mandshurica</em>. <em>J Nat Prod</em> 2006, 69: 1591–1595.</li><li id="ref-5">Liu L, Ma X, Wang YX, et al. Triterpenoid saponins from the roots of <em>Clematis chinensis</em> Osbeck. <em>J Asian Nat Prod Res</em> 2009, 11: 389–396.</li><li id="ref-6">Wu W, Xu X, Dai Y, et al. Therapeutic effect of the saponin fraction from <em>Clematis chinensis</em> Osbeck roots on osteoarthritis induced by monosodium iodoacetate through protecting articular cartilage. <em>Phytother Res</em> 2010, 24: 538–546.</li><li id="ref-7">Fu Q, Zan K, Zhao M, et al. Triterpene saponins from <em>Clematis chinensis</em> and their potential anti-inflammatory activity. <em>J Nat Prod</em> 2010, 73: 1234–1239.</li><li id="ref-8">Peng C, Perera PK, Li Y, et al. Anti-inflammatory effects of <em>Clematis chinensis</em> Osbeck extract (AR-6) may be associated with NF-κB, TNF-α, and COX-2 in collagen-induced arthritis in rat. <em>Rheumatol Int</em> 2012, 32: 3119–3125.</li><li id="ref-9">Lu X, Fang W, Li Y, et al. Analgesic and anti-inflammatory effect of clematichinenoside. <em>Chinese Journal of New Drugs</em> 2009, 18: 1535–1539.</li><li id="ref-10">Sun S, Li Y, Fang W, et al. Effect and mechanism of AR-6 in experimental rheumatoid arthritis. <em>Clin Exp Med</em> 2010, 10: 113–121.</li><li id="ref-11">Dong C, Liu L, Li M, et al. The preparation and preliminary pharmacodynamics of clematichinenoside microemulsion. <em>Chinese Traditional Patent Medicine</em> 2011, 33(7): 1159–1163.</li><li id="ref-12">Ma X, Xie L, Liu L, et al. Simultaneous quantification of seven main triterpenoid saponins in Radix et Rhizoma Clematidis by LC–ELSD. <em>Chromatographia</em> 2009, 69: 437–443.</li><li id="ref-13">Wang D, Li F, Li P, et al. Validated LC-MS/MS assay for the quantitative determination of clematichinenoside AR in rat plasma and its application to a pharmacokinetic study. <em>Biomed Chromatogr</em> 2012, 26(10): 1282–1285.</li><li id="ref-14">ICH: <em>Q3A Impurities in New Drug Substances</em>. Proceedings of the international conference on harmonization. 2006: 1–22.</li><li id="ref-15">Kizu H, Shimana H, Tommimori T. Studies on the constituents of <em>Clematis</em> Species IV. The Constituents of <em>Clematis stans</em> Sieb. et Zucc. <em>Chem Pharm Bull</em> 1995, 43(12): 2187–2194.</li><li id="ref-16">Shao B, Qin G, Xu R, et al. Triterpenoid saponins from <em>Clematis chinensis</em>. <em>Phytochemistry</em> 1995, 38(6): 1473–1479.</li><li id="ref-17">ICH: <em>Q1A Stability Testing of New Drug Substances and Products</em>. Proceedings of the international conference on harmonization. 2003: 1–15.</li><li id="ref-18">Hou J, Wu W, Da J, et al. Ruggedness and robustness of conversion factors in method of simultaneous determination of multi-components with single reference standard. <em>J Chromatogr A</em> 2011, 1218: 5618–5627.</li><li id="ref-19">ICH: <em>Q3B Impurities in New Drug Products</em>. Proceedings of the international conference on harmonization. 2006: 1–12.</li></ol><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="mrm-fingerprinting-qsyq-quality-robustness.html">MRM質量分析による超高ロバスト指紋法——漢方（気血益気丸QSYQ）の品質評価への応用</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">生薬</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="usp-1251-weighing-analytical-balance.html">USP〈1251〉分析天びんによる秤量（Weighing on an Analytical Balance）</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="analytical-procedure-validation-qbd-paradigm.html">分析法バリデーションとQuality by Design（QbD）——バリデーションはQbDの一部であり「目的適合性」の証明である</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="conformal-prediction-distribution-free-uncertainty.html">コンフォーマル予測と分布フリー不確かさ定量化への やさしい入門</a><span class="rel-tags"><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="clematichinenoside-ar-related-impurities-hplc" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
