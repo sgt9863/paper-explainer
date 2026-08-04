@@ -25,7 +25,7 @@ summary: 本稿は E. Rozet・B. Boulanger・S. Rudaz・R. Marini・E. Ziemons�
 - インパクトファクター: 該当なし——2009年時点の学会抄録集は通常JCR評価対象外。現行の後継誌「*Toxicologie Analytique et Clinique*」（旧 *Annales de Toxicologie Analytique*）は近年IF 1.0〜1.7程度と報告されているが、出典により値が異なり本抄録発表当時の評価とは無関係なため、ここでは参考として明記するに留め本文の評価には用いない
 - 受理経過 / ライセンス: 原本より確認できず（学会抄録集のページ抽出のため）
 
-> 補足: 本抄録は、本サイトに既掲載の2篇——「[分析法バリデーションとQuality by Design（QbD）](/papers/analytical-procedure-validation-qbd-paradigm.html)」（Hubert ら, *J. Chromatogr. A* 2013）と「[溶出試験に関わる分析法のバリデーション](/papers/dissolution-assay-method-validation-qbd-tolerance.html)」（Rozet ら, *Anal. Chim. Acta* 2012）——と同じ研究グループ（リエージュ大学 CIRM／Rozet・Boulanger・Hubert ら）が、より早い2009年の学会で発表した「総合誤差（Total Error）による分析法バリデーション判定」の方法論の要旨にあたる。上記2篇で使われている「正確性プロファイル」「β期待許容区間」という中核概念の原点を示す短い抄録として、参考情報として全訳する。
+> 補足: 本抄録は、本サイトに既掲載の2篇——「「分析法バリデーションとQuality by Design（QbD）」」（Hubert ら, *J. Chromatogr. A* 2013）と「「溶出試験に関わる分析法のバリデーション」」（Rozet ら, *Anal. Chim. Acta* 2012）——と同じ研究グループ（リエージュ大学 CIRM／Rozet・Boulanger・Hubert ら）が、より早い2009年の学会で発表した「総合誤差（Total Error）による分析法バリデーション判定」の方法論の要旨にあたる。上記2篇で使われている「正確性プロファイル」「β期待許容区間」という中核概念の原点を示す短い抄録として、参考情報として全訳する。
 
 ## 抄録本文（O75, 全訳）
 
