@@ -2,10 +2,10 @@
   "_comment": "処理済みPDFの記録。Drive file id をキーに、生成した解説のメタ情報を保持する。夜間パイプラインはここに無いPDFのみを新規対象として処理する。",
   "processed": {
     "1pSruIasO72wEHJxSn-DaJaqtwdOTLpSo": {
-      "slug": "rozet-total-error-bioanalytical-validation-abstract",
       "title": "Total Error（総合誤差）アプローチによるバイオアナリティカル法バリデーションの妥当性判定——学会抄録（Rozet ら, 2009）",
       "source_pdf": "ERozet_ATA_2009.pdf",
-      "date": "2026-07-24"
+      "date": "2026-07-24",
+      "removed": "2026-08-05 ユーザー指示により解説ページを削除（学会抄録のみで本文が存在しないため）。再処理しないようエントリは残す。"
     },
     "1QJg_a20rUMWPWBlALlY2l8qJwgkMWzqz": {
       "slug": "jge-hplc-pda-qc",
