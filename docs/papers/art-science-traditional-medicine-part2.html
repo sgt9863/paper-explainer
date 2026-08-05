@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>伝統医学の技と科学 パート2——伝統医学研究のための学際的アプローチ（Science 特別増刊 全10編）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="伝統医学の技と科学 パート2——伝統医学研究のための学際的アプローチ（Science 特別増刊 全10編）">
+<meta property="og:description" content="本稿は Science 誌（AAAS）が2015年に刊行したスポンサー付き特別増刊「The Art and Science of Traditional Medicine, Part 2: Multidisciplinary Approaches for Studying Traditional Medicine」（Science 347巻6219号 補冊 S26–S52）の全訳である。全3部構成の第2部にあたり 生薬ゲノミクスという新分野 伝統中医薬の品質管理と標準化 そして「小分子医薬と同じ基準でボタニカル（伝統医薬を含む）を新薬に育てる」というFDAの実務的枠組みを軸に 10編の総説を収める。特筆すべきは第3編で FDA CDER の審査当事者（Sau L. Lee・Jinhui Dou・Robert Temple・Janet Woodcock ら）が Veregen と Fulyzaq の承認事例に即して「証拠の総体」アプローチを説明している点。ほかに インフルエンザに対する中医薬（板藍根）の多標的作用 君臣佐使を単純化した「君使」創薬モデル 麝香保心丸の還元論的・システム生物学的解析 PHY906（黄芩湯）によるイリノテカン治療係数の向上 がん管理における中薬の4標的（細胞毒性・免疫調節・血管新生阻害・転移抑制） 生薬の統合毒性評価とファーマコビジランス &#x27;omicsと比較効果研究（CER）・P4医療の接続 が並ぶ。全訳（＋訳者補足）。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/art-science-traditional-medicine-part2/ai-infographic.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="art-science-traditional-medicine-part2"><h1>伝統医学の技と科学 パート2——伝統医学研究のための学際的アプローチ（Science 特別増刊 全10編）</h1><div class="paper-meta"><span class="date">2026-08-05</span> <span class="tag">漢方</span> <span class="tag">生薬</span> <span class="tag">QC・品質評価</span> <span class="tag">規制・ガイドライン</span> <span class="tag">ゲノミクス</span> <span class="tag">臨床試験</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://www.science.org/do/10.5555/article.2452668/full/traditional_medicine_part2-1644861585110.pdf" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Science-347-6219-Suppl-Art-Science-Traditional-Medicine-Part2.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="art-science-traditional-medicine-part2" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="art-science-traditional-medicine-part2" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/art-science-traditional-medicine-part2/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/art-science-traditional-medicine-part2/ai-infographic.webp" alt="生薬ゲノミクス／全体論的品質管理／FDAの「証拠の総体」／インフルエンザ漢方／君使モデル／麝香保心丸／PHY906／がん漢方／統合毒性評価／&#x27;omics×比較効果研究——伝統医学を近代科学に接続する10の視角を Science 増刊が一望する" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Science/AAAS Custom Publishing Office 制作のスポンサー付き特別増刊、査読外）の10編の節構成に沿って訳出。図は原本PDFからPyMuPDFで埋め込み画像を xref 抽出しReadで内容確認のうえ全訳キャプションで埋め込んだ（11点）。表1（FDAのIND件数）・インフルエンザ対照表・中薬の標的表・統合毒性評価戦略表は全行を転記。各編の参考文献は原文の並び順で全件を掲げる。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>この増刊について</h2>
+<ul><li>原題: <strong>The Art and Science of Traditional Medicine — Part 2: Multidisciplinary Approaches for Studying Traditional Medicine</strong></li><li>掲載: <em>Science</em> <strong>347</strong>(6219 Suppl), S26–S52（2015年）／制作: Science/AAAS Custom Publishing Office</li><li>引用形式（原文指定）: [Author Name(s)], <em>Science</em> <strong>347</strong> (6219 Suppl), Sxx–Sxx (2015).</li></ul>
+<blockquote><strong>原文の注記（重要）</strong>: 本特別スポンサー付きセクションに含まれる内容は、Science/AAAS Custom Publishing Office が委託・編集・出版したものである。<strong>Science 誌の編集スタッフによる査読も評価も受けていない。</strong> ただし全原稿は、プロジェクト編集者が選任した伝統医学研究の専門家からなる国際編集チームによる批判的評価を受けている。本セクションの意図は、世界各国の機関の著者が、この急成長分野における最近の進展を強調する総説／展望型の論文を通じて、最先端の伝統医学研究を示す手段を提供することにある。<strong>科学的内容と記載された事実の正確性については、編集チームと著者が全責任を負う。</strong></blockquote>
+<p><strong>編集チーム</strong></p>
+<table>
+<thead><tr><th>役割</th><th>氏名・所属</th></tr></thead>
+<tbody>
+<tr><td>ゲストプロジェクト編集者</td><td>Tai-Ping Fan 博士（英国ケンブリッジ大学）</td></tr>
+<tr><td>編集委員</td><td>Josephine Briggs 医学博士（米国NIH 国立補完代替医療センター〈NCCAM〉）</td></tr>
+<tr><td>編集委員</td><td>Liang Liu 医学博士・博士（マカオ科技大学, 中国マカオ特別行政区）</td></tr>
+<tr><td>編集委員</td><td>Aiping Lu 医学博士・博士（香港浸会大学, 中国香港特別行政区）</td></tr>
+<tr><td>編集委員</td><td>Jan van der Greef 博士（オランダ ライデン大学・TNO）</td></tr>
+<tr><td>編集委員</td><td>Anlong Xu 博士（北京中医薬大学, 中国）</td></tr>
+<tr><td>編集</td><td>Sean Sanders 博士／編集補 Tianna Hicklin 博士／校正 Yuse Lajiminmuhip／デザイン Amy Hardcastle</td></tr>
+</tbody></table>
+<p><strong>この増刊の狙い（原文の巻頭言）</strong></p>
+<p>全3部からなる特別増刊の第2部にあたる本号では、<strong>伝統生薬その他の本草（materia medica）の研究——ひいてはその利用——に革命をもたらす新たなアプローチとしての「生薬ゲノミクス（herbal genomics）」</strong>、および<strong>その品質管理と標準化の進展</strong>を強調する。中心的な焦点となるのは、<strong>小分子医薬と同じ基準に基づいて、ボタニカル（伝統医薬を含む）を新薬へと発展させるための、米国食品医薬品局（FDA）の実務的な枠組み</strong>である。伝統療法からの創薬・医薬品開発への機構論的研究の応用について、<strong>前臨床毒性評価・ファーマコビジランス・比較効果研究・「P4」医療の実践</strong>——特にインフルエンザ・虚血性心疾患・脳卒中・がんの文脈において——に重点を置いて論じる。</p>
+<p><strong>収録論文（全10編）</strong></p>
+<table>
+<thead><tr><th>頁</th><th>表題</th></tr></thead>
+<tbody>
+<tr><td>S27</td><td>生薬ゲノミクス——伝統医薬の生物学を検証する</td></tr>
+<tr><td>S29</td><td>伝統中医薬の品質管理に対する全体論的アプローチ</td></tr>
+<tr><td>S32</td><td>伝統医薬からボタニカルドラッグへの進化</td></tr>
+<tr><td>S35</td><td>伝統中医薬を用いたインフルエンザ治療の開発</td></tr>
+<tr><td>S38</td><td>伝統医学の哲学に着想を得た新規創薬戦略</td></tr>
+<tr><td>S40</td><td>古代の組み合わせ処方を読み解く——麝香保心丸</td></tr>
+<tr><td>S43</td><td>伝統中医薬処方 PHY906 の開発から得られた教訓</td></tr>
+<tr><td>S45</td><td>がん管理における中薬の潜在的役割</td></tr>
+<tr><td>S47</td><td>生薬医薬の安全性評価——統合的毒性学アプローチ</td></tr>
+<tr><td>S50</td><td>&#x27;omics と比較効果研究の結合——中医薬のためのエビデンスに基づく臨床研究の意思決定</td></tr>
+</tbody></table>
+<blockquote>補足: この増刊の位置づけを、日本の読者向けに整理しておきたい。  <strong>これは Science 誌の査読論文ではない。</strong> 巻頭に明記されているとおり、AAAS のカスタム出版部門がスポンサーを得て制作した「特別セクション」であり、Science 本誌の編集部による査読を経ていない。したがって個々の主張の強度は、通常の Science 掲載論文と同列には扱えない。  <strong>にもかかわらず読む価値が高い</strong>理由は2つある。第一に、<strong>第3編の著者陣が FDA CDER の当事者そのもの</strong>であること——Sau L. Lee、Jinhui Dou、Robert Temple、Julie Beitz、Charles Wu、Lawrence X. Yu、そして当時の CDER 所長 <strong>Janet Woodcock</strong> が名を連ねている。規制当局が自ら「複雑混合物の品質をどう担保しているか」を説明した文書であり、実務上の一次情報に近い。第二に、生薬ゲノミクス・品質管理・創薬・臨床・安全性・研究方法論という<strong>この分野の論点がひととおり揃っている</strong>ため、地図として使える。  なお本サイトには、同じ論点を扱う関連ページが複数ある——「ボタニカルドラッグ（植物薬）の開発——総説」（McChesney・Dou・Harrington 2019）、「植物由来製品をがん診療に組み込む」（Berman ら 2025）。Dou Jinhui は本増刊 第3編と McChesney 2019 の両方に名を連ねており、Veregen/Fulyzaq の事例は3本すべてで繰り返し登場する。読み比べると、<strong>2015年（本増刊）→2019年→2025年</strong>と規制環境がどう動いたかが見えてくる。</blockquote>
+<hr>
+<h1>第1編　生薬ゲノミクス——伝統医薬の生物学を検証する</h1>
+<p><strong>原題</strong>: Herbal genomics: Examining the biology of traditional medicines（S27）</p>
+<p><strong>著者</strong>: Shilin Chen（陳士林）¹\<em>・Jingyuan Song ²・Chao Sun ²・Jiang Xu ¹・Yingjie Zhu ¹・Rob Verpoorte ³・Tai-Ping Fan ⁴\</em></p>
+<ul><li>¹ WHO伝統医学協力センター, 中国中医科学院 中薬研究所（中国 北京）</li><li>² 中国医学科学院・北京協和医学院 薬用植物研究所（中国 北京）</li><li>³ ライデン大学 IBL 天然物研究室（オランダ ライデン）</li><li>⁴ ケンブリッジ大学 薬理学科（英国 ケンブリッジ）</li><li>\*責任著者: slchen@implad.ac.cn（S.C.）／tpf1000@cam.ac.uk（T.F.）</li></ul>
+<h2>導入</h2>
+<p>植物や真菌をもとにした伝統生薬は、<strong>5000年以上</strong>にわたって用いられてきた。しかしながら、大半の伝統生薬について、<strong>遺伝的背景・農業形質・薬効品質はほとんど理解されていない</strong>。</p>
+<p><strong>ハイスループットシーケンシング技術の急速な進歩と大幅なコスト低下</strong>により、「<strong>生薬ゲノミクス（herbal genomics）</strong>」と呼ばれる新しい学問分野が出現した。研究者らは現在、薬用生薬のゲノムをシーケンス・アセンブル・アノテーションし、その遺伝子機能を解析することによって、薬用生薬を体系的に分類しつつある。</p>
+<p>**霊芝（Lingzhi、<em>Ganoderma lucidum</em>、「不老不死のキノコ」）<strong> など、一般に使われるいくつかの生薬のゲノムはすでにシーケンスされている。この種は、</strong>薬用真菌種における二次代謝産物の生合成経路の研究を促進する、有効なモデル系**を提供してきた [1]。</p>
+<p>したがって、<strong>ゲノム情報を、トランスクリプトーム・プロテオーム・メタボロームのデータと合わせて用いることで、二次代謝産物の生合成経路とその制御を予測でき</strong>、生薬の遺伝学と生物学を理解することを目指す発見主導型研究に革命を引き起こす。</p>
+<p>生薬ゲノミクスは、<strong>1つを超える活性成分を含みうる複雑な生薬製品の化学的・生物学的解析を支える有効なプラットフォーム</strong>を提供する。そのため現在、生薬関連の生物学研究の多くの領域に応用され、伝統医薬の品質の理解や、<strong>生薬遺伝子バンクの構築を通じた分子レベルでの生薬同定</strong>に役立っている。</p>
+<p>さらに、<strong>機能的生薬ゲノミクス</strong>は、<strong>モデル生薬研究プラットフォーム・道地薬材（geoherbal）研究・ゲノミクス支援生薬育種・生薬合成生物学</strong>に貢献しうる。これらはいずれも、将来にわたって薬用植物とその活性化合物の供給を確保するために重要である。</p>
+<h2>モデル生薬を創る</h2>
+<p>バイオテクノロジーとゲノミクスの近年の発展により、***Ganoderma lucidum<em>（霊芝）・</em>Salvia miltiorrhiza<em>（丹参）・</em>Catharanthus roseus*（ニチニチソウ）<strong> を含むいくつかの種が、</strong>生薬の遺伝学と代謝活性を研究するための価値あるモデル<strong>として浮上してきた。これらの種は、</strong>トリテルペン・ジテルペンキノン・インドールアルカロイド**を含む活性医薬成分を合成することが示されている。</p>
+<p>生薬における二次代謝産物の<strong>中核的な生合成経路は保存されている</strong>ものの、<strong>下流の経路は進化し、高度に多様化した</strong> [2]。したがって、薬用生薬の異なる栽培品種や進化的に近縁な種に由来する遺伝子を、これらの生薬モデルを用いて評価し、<strong>自然変異の背後にある機構を理解できる</strong>。</p>
+<p>これらのモデル系はまた、<strong>近縁の生薬種における収斂的な二次代謝産物の新規生合成経路を同定する</strong>ためにも使える。<strong>ゲノム編集</strong>の最近の進歩は、特定の対立遺伝子を導入・改変することによる実行可能なアプローチを提供しており、それによって<strong>代謝産物に対する遺伝的制御</strong>を検討できる [3]。</p>
+<p>生合成経路の解明は最も魅力的な特徴の1つではあるが、モデル生薬は、<strong>多年生の習性・発達パターン・栽培要件・環境的または生物学的ストレスへの抵抗性</strong>についての情報も提供しうる（<strong>図1</strong>）。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig1-1.png" alt="図1　モデル生薬システムとその応用。左側「モデル生薬系に望まれる属性」＝ゲノム情報（染色体アラインメント）・変異体ライブラリー・組織培養・遺伝子形質転換（アグロバクテリウム法によるTi プラスミド／バイナリーベクターからの染色体への導入）。中央＝モデル生薬プラットフォーム。右側「モデル生薬プラットフォームの応用」＝二次代謝産物の生合成（タンシノン類の構造式）および生薬栽培。" loading="lazy"><figcaption>図1　モデル生薬システムとその応用。左側「モデル生薬系に望まれる属性」＝ゲノム情報（染色体アラインメント）・変異体ライブラリー・組織培養・遺伝子形質転換（アグロバクテリウム法によるTi プラスミド／バイナリーベクターからの染色体への導入）。中央＝モデル生薬プラットフォーム。右側「モデル生薬プラットフォームの応用」＝二次代謝産物の生合成（タンシノン類の構造式）および生薬栽培。</figcaption></figure>
+<h2>道地薬材（geoherbalism）の生物学的基盤</h2>
+<p>中国の<strong>「道地薬材（geoherbalism）」</strong> の概念は、<strong>特定の地域または環境で生産された「正品」あるいは「優良」な生薬</strong>を用いて、高い効能をもつ治療製品を生み出すことを包含する。</p>
+<p>新しい &#x27;omics 技術を道地薬材に適用することで、<strong>薬用製品の最適な生育条件と特定の生薬遺伝子型についての情報</strong>が得られ、生薬の生育を考える際に<strong>遺伝的要因と環境的要因の両方を考慮に入れる</strong>ことが可能になる。&#x27;omics は、道地薬材の背後にある分子基盤を解明し、優良品種を選抜するための、新しく強力な道具を提供する。</p>
+<p><strong>生薬のパンゲノム</strong>——ある種に属するすべての系統の遺伝コード全体——を作成することで、その種の「<strong>コアゲノム</strong>」と「<strong>ディスペンサブルゲノム（可欠ゲノム）</strong>」の同定、および異なる地域や生態的環境に存在する個々の遺伝的変異についての洞察が得られる。</p>
+<p>環境ストレスは<strong>エピジェネティックな修飾</strong>をもたらしうる。<strong>DNAメチロームの解析、クロマチン免疫沈降（ChIP）シーケンシング、small RNAシーケンシング</strong>といった技術が、エピジェネティック要因の影響を調べるのに有用である。</p>
+<p>加えて、<strong>土壌微生物</strong>が生薬の環境に影響しうる。土壌微生物集団の<strong>メタゲノム解析</strong>は、生育条件を変えうる微生物と生薬の重要な相互作用を指し示しうる [4]。</p>
+<blockquote>補足: 「道地薬材（どうちやくざい）」は、日本の生薬でいえば「産地指定」に近い概念だが、より強い。中医では <strong>同じ植物種でも産地が違えば別物</strong>という扱いで、例えば四川産の川芎、河南産の懐山薬、といった具合に、生薬名に産地が組み込まれているものすらある。  本節が言っているのは、この経験知を <strong>パンゲノム＋エピゲノム＋土壌メタゲノム</strong>で説明しようという試みである。産地差の原因を、①遺伝的変異（コアゲノム／可欠ゲノム）②環境ストレスによるエピジェネティック修飾 ③根圏微生物叢——の3層に分解する枠組みは筋がよい。  なお、本サイト収録の McChesney ら（2019）は、<em>Tithonia diversifolia</em> では環境が代謝プロファイルを直接動かした一方、<em>Copaifera langsdorffii</em> では10産地由来の種子を同一圃場で育てると代謝産物が一様になった、という対照的な2例を紹介している。<strong>種によって遺伝と環境の効き方が違う</strong>ので、「道地」の必要性は生薬ごとに検証すべきだ、ということになる。</blockquote>
+<h2>標的を絞った生薬育種</h2>
+<p><strong>分子育種</strong>には、多型マーカーおよび／または形質関連遺伝子の情報が必要である。生薬は<strong>マイナー作物</strong>とみなされているため、コストの高さゆえにゲノミクス支援の改良が限られてきた。しかし、<strong>次世代シーケンシングとその手頃さの向上</strong>により、遺伝的多様性の価値ある貯蔵庫を代表する野生変種や異なる栽培品種のシーケンシングを通じて、<strong>マーカー選抜育種プログラムが劇的に加速した</strong>。</p>
+<p>生薬 &#x27;omics 研究は、モデル種における多くの機能遺伝子の同定を加速し、また<strong>望ましい化合物の生産に特異的な機能マーカーの開発</strong>を可能にした。この情報は標的を絞った分子育種に使える [5]。</p>
+<h2>生薬合成生物学の研究</h2>
+<p>生薬は新規および既知の治療用化合物の供給源であるが、<strong>供給（sourcing）の問題は一般的</strong>である。バイオテクノロジーと遺伝子工学は、代替的な生産方法へのアプローチを提供する。</p>
+<p>薬用植物の<strong>代謝工学</strong>は広く研究されており、例えば ***Atropa belladonna*（ベラドンナ）にアトロピンではなくスコポラミンを生産させる<strong>といった成果が得られている。しかしながら、植物化合物の全体的な生産を向上させるには、</strong>経路中の一次コード遺伝子や制御遺伝子を過剰発現させるだけでは不十分<strong>であることが明らかである。</strong>区画化（compartmentalization）・輸送・貯蔵・補因子の利用可能性**が重要な律速因子となりうるからである。</p>
+<p>関与する経路をよりよく理解することが、代謝工学へのより包括的なアプローチの基盤を築くだろう。これが<strong>生薬合成生物学</strong>の目標であり、それは<strong>ゲノムの改変あるいは de novo 合成</strong>を伴い、資源と純度の問題に対処する可能性をもつ。</p>
+<p>さらに、創薬のための天然物は、<strong>植物の代謝経路を細菌や酵母などの他の生物に組み込み・導入することによって構造的に多様化できる</strong> [6]。生薬合成生物学における従来の実践は、異種の生合成経路を、産物を生産できる発現系に導入することである。しかし、純粋化合物の大規模生産のための異なるアプローチとしては、***Mycoplasma* について記述されたような、まったく新しい合成ゲノムの構築**がありうる [7]。</p>
+<h2>分子的アイデンティティを定義する</h2>
+<p><strong>DNAバーコーディング</strong>は、「<strong>一配列一種（one sequence, one species）</strong>」の概念を利用して、生薬同定の実務に革命をもたらしつつある。標準化されたDNAバーコーディング同定システムは利用可能だが、その過程は煩雑になりうる。</p>
+<p><strong>プラスチドゲノムを「スーパーバーコード」として解析すること</strong>は、従来のDNAバーコーディングでは明確に区別できない近縁種や栽培品種にとって、有望な代替手段である [8, 9]。</p>
+<p>DNAバーコードの利用可能性が高まることで、<strong>劣悪な代替品・混和物・偽造品の使用に起因する、生薬医薬の現在の市場問題を解決できる</strong>可能性がある。全体として、<strong>DNAバーコーディングに基づく標準化された同定システムは、生薬原料の正確な同定を通じて、伝統医薬の品質管理に重要な役割を果たしうる</strong>。</p>
+<h2>生薬遺伝子バンクの構築</h2>
+<p>生薬の遺伝情報は加速度的に蓄積されつつあり、<strong>すべての &#x27;omics データへの統合的・統一的なアクセスのための共通プラットフォームの必要性が最重要</strong>となっている。</p>
+<p>現在の資源を分類するために、いくつかの生薬関連データベースがすでに開発されている。</p>
+<table>
+<thead><tr><th>データベース</th><th>内容</th><th>URL</th></tr></thead>
+<tbody>
+<tr><td>ゲノム情報</td><td>生薬ゲノム</td><td>http://herbalgenomics.org</td></tr>
+<tr><td>トランスクリプトーム情報</td><td>薬用植物ゲノミクス</td><td>http://medicinalplantgenomics.msu.edu</td></tr>
+<tr><td>DNAバーコードデータベース</td><td>中薬バーコード</td><td>http://tcmbarcode.cn/en</td></tr>
+<tr><td>代謝経路データベース</td><td>CathaCyc</td><td>http://cathacyc.org</td></tr>
+</tbody></table>
+<p>しかしながら、<strong>これら分散した資源は長期的な維持管理の対象になっておらず、使用にはバイオインフォマティクスのスキルが必要</strong>である。<strong>生薬医薬の分子・生物学データを保存する、包括的でアクセスしやすいデータベースが必要</strong>である。生薬のDNA／タンパク質配列とメタボロームを、そうしたデータベースに統合できる [10, 11]。</p>
+<p>バイオインフォマティクスのアプローチが改善されれば、<strong>ゲノム情報と化学情報を用いて二次代謝産物の生合成経路を同定でき</strong>、植物・真菌ベースの治療薬について、より効率的で標的を絞った探索の設計につながる [12]。</p>
+<h2>課題と展望</h2>
+<p>これまでの成功にもかかわらず、<strong>生薬ゲノミクスはなお重大な技術的・倫理的課題に直面している</strong>。</p>
+<p>例えば、<strong>十分にアセンブルされた生薬ゲノムはこれまでにごくわずかしか公開されていない</strong>。一部にはその複雑性のためである。<strong>高いヘテロ接合性・反復配列に富むDNA配列・倍数性</strong>が、ショートリードの全ゲノムショットガンシーケンシングからのデータアセンブリを妨げる要因である。</p>
+<p>さらに、<strong>ハイスループット手法の欠如</strong>が、二次代謝産物の生合成に関与する酵素と経路の同定効率を下げている。<strong>合成生物学については、科学コミュニティと市民の双方から倫理的・バイオセキュリティ上の懸念</strong>も表明されている。</p>
+<p>それでもなお、<strong>生薬ゲノミクスは、伝統生薬医薬の使用と受容に革命をもたらす前例のない機会を提供し</strong>、同時にさらなるプロテオーム・メタボローム研究に不可欠な知識基盤に貢献する。</p>
+<h3>第1編の引用文献</h3>
+<ol><li>S. Chen et al., <em>Nat. Commun.</em> <strong>3</strong>, 913 (2012).</li><li>S. J. Gagne et al., <em>Proc. Natl. Acad. Sci. U.S.A.</em> <strong>109</strong>, 12811 (2012).</li><li>Q. Shan, Y. Wang, J. Li, C. Gao, <em>Nat. Protoc.</em> <strong>9</strong>, 2395 (2014).</li><li>P. R. Hirsch, T. H. Mauchline, <em>Nat. Biotechnol.</em> <strong>30</strong>, 961 (2012).</li><li>R. K. Varshney, A. Graner, M. E. Sorrells, <em>Trends Plant Sci.</em> <strong>10</strong>, 621 (2005).</li><li>F. Geu-Flores, N. H. Sherden, V. Courdavault, <em>Nature</em> <strong>492</strong>, 138 (2012).</li><li>D. G. Gibson et al., <em>Science</em> <strong>329</strong>, 52 (2010).</li><li>X. Li et al., <em>Biol. Rev. Camb. Philos. Soc.</em> doi:10.1111/brv.12104 (2014).</li><li>S. Chen et al., <em>Biotechnol. Adv.</em> <strong>32</strong>, 1237 (2014).</li><li>B. Berger, J. Peng, M. Singh, <em>Nat. Rev. Genet.</em> <strong>14</strong>, 333 (2013).</li><li>M. Yandell, D. Ence, <em>Nat. Rev. Genet.</em> <strong>13</strong>, 329 (2012).</li><li>L. Chae, T. Kim, R. Nilo-Poyanco, S. Y. Rhee, <em>Science</em> <strong>344</strong>, 510 (2014).</li></ol>
+<hr>
+<h1>第2編　伝統中医薬の品質管理に対する全体論的アプローチ</h1>
+<p><strong>原題</strong>: A holistic approach to the quality control of traditional Chinese medicines（S29）</p>
+<p><strong>著者</strong>: De-an Guo（果徳安）¹\*・Wan-Ying Wu ¹・Min Ye ²・Xuan Liu ¹・Geoffrey A. Cordell ³</p>
+<ul><li>¹ 中薬標準化技術国家工程実験室, 中国科学院 上海薬物研究所（中国 上海）</li><li>² 北京大学 薬学院（中国 北京）</li><li>³ Natural Products Inc.（米国イリノイ州 Evanston 60203）およびフロリダ大学薬学部 薬科学科（米国フロリダ州 Gainesville）</li><li>\*責任著者: daguo@simm.ac.cn</li></ul>
+<h2>QSEC——品質・安全性・有効性・一貫性</h2>
+<p>植物と伝統医薬（TM）は、疾病の予防と治療のために世界中で用いられ、また数多くの処方薬・一般用医薬品の供給源となっている [1]。多くの場合、これらのTMは<strong>数千年にわたって使用されており、なお大部分が野生から採取されている</strong>。</p>
+<p>しかしながら、<strong>大半のTMの生育と単離についての品質管理は貧弱か、あるいは存在しない</strong>。患者も施術者も同様に、TMの <strong>QSEC——品質（Quality）・安全性（Safety）・有効性（Efficacy）・一貫性（Consistency）</strong> に確信をもつ必要があり、それには<strong>植物調製のあらゆる側面の標準化</strong>が必要である。</p>
+<p>これは<strong>正しい植物の同定</strong>から始まり、<strong>すべての生物活性成分の単離と特性評価</strong>を含む。TMのQSECを判定するエビデンスに基づく基準は、<strong>世界中で大きく異なっている</strong>。その結果、TM製品の販売に要求されるエビデンスの水準は、<strong>国ごとに大きく変わりうる</strong>。</p>
+<p>有名なシカゴの建築家 <strong>ルイス・サリヴァン</strong>が言ったように、「<strong>形は永遠に機能に従う（form forever follows function）</strong>」。患者と施術者にとって、TMへの期待は「<strong>効くこと（機能）</strong>」でなければならない。その結果を保証するための戦略（形）には、<strong>強固なエビデンス基盤</strong>が必要であり、成功へのある種の障壁を克服することが求められる。</p>
+<p>多くの社会において、<strong>TMの受容は医療システムへの統合に先行しており</strong>、そのために——少なくとも部分的にはエビデンス基盤の欠如ゆえに——<strong>哲学的・規制的障壁に直面</strong>している。</p>
+<p><strong>世界保健機関（WHO）</strong> はこれらの問題のいくつかを認識しており [1, 2]、<strong>北京宣言</strong>を通じて、<strong>エビデンスに基づくTMの各国医療システムへの統合</strong>を奨励し、「<strong>伝統医学の適切・安全・有効な使用を確保する</strong>」規制と基準を推進してきた [3]。</p>
+<h2>克服すべき「思い込み」</h2>
+<p>TMを各国の医療システムに完全に統合し、その使用にエビデンスに基づく正当化を与えるためには、<strong>根強く定着した慣習と信念のいくつかに対処する必要</strong>がある。それらには以下が含まれる。</p>
+<ul><li><strong>数千年にわたって使われてきた伝統医薬は安全で有効に違いない</strong>、という考え</li><li>単に「<strong>正しい</strong>」植物を使えば十分である、という考え</li><li><strong>生物学的効果は、植物の地理的起源・使用部位・調製方法によらず一貫している</strong>、という考え</li><li><strong>古いあるいは栽培された植物材料は、新鮮な野生植物より効果が劣る</strong>、という考え</li><li><strong>複雑な植物混合物は有効性のために必要だが、標準化できない</strong>、という考え</li><li><strong>伝統知識と特定の薬用植物は常に入手可能であり続ける</strong>、という考え</li></ul>
+<p>現代の情報を、<strong>植物学的・化学的・生物学的・臨床的研究</strong>と合わせて適用することが、施術者と患者の双方に資するエビデンスに基づく伝統医学の研究アジェンダを提供する [4]。</p>
+<p>次の段階は<strong>標準化</strong> [5] であり、これには <strong>DNAバーコーディングによる適切な植物の真正性確認</strong> [6, 7] と、材料中の<strong>すべての生物活性成分の化学的プロファイリングと定量</strong> [8, 9] が含まれる。</p>
+<blockquote>補足: 6つの「思い込み」の列挙は、この分野で仕事をする人にとって耳の痛いリストである。特に3番目——<strong>産地・部位・調製法によらず効果は一貫している</strong>——は、前編の道地薬材の議論と正面から衝突する。そして5番目の「複雑だから標準化できない」は、まさに本増刊全体が反証しようとしている命題である。  「form follows function」を引くくだりは洒落ているが、論旨は真剣である。<strong>「効くこと」が目的なら、それを保証する仕組み（形）を作らねばならない</strong>——伝統だから、経験があるから、では通らない、という宣言になっている。</blockquote>
+<h2>還元主義と全体論の合流</h2>
+<p><strong>伝統中医薬（TCM）</strong> は、経験的評価を通じて確立された古代の全体論的治療体系であり、<strong>大中華圏・日本・韓国・ベトナム・マレーシア・シンガポール</strong>で多くの関連する形で存在している。それは<strong>薬用植物・真菌・動物性生産物・鉱物</strong>の使用を通じて、<strong>気（エネルギー）</strong> と<strong>陰陽（バランス）</strong> を回復させようとするものであり、表面的には西洋医学の還元主義的アプローチとはかなり異なって見える。</p>
+<p>しかしながら、<strong>現代の生物医科学は今や「システム生物学」の概念を受け入れつつある</strong>。システム生物学は、<strong>ヒトの疾患を恒常性における多因子的な不安定性の結果として捉える</strong> [10]。がんやHIV-AIDSの治療は現在、<strong>異なる作用機序を標的とする薬剤のカクテル</strong>を伴う。</p>
+<p>同時に、<strong>TCMは「ネットワーク薬理学」を受け入れつつある</strong>。ネットワーク薬理学は、<strong>ある植物（あるいは複数の植物）の主要成分が、いかにして様々な生物学的経路に作用し、複数の相乗的な作用を生み出すか</strong>を研究する [11, 12]。</p>
+<p><strong>TCMの品質管理（QC）は圃場から始まり、生産工程全体を通じて継続されるべき</strong>である。TM製剤のQCシステムの開発は、<strong>生物学的・臨床的研究に適した標準化製品の製造にとって、決定的かつ基礎的な段階</strong>である。</p>
+<p>典型的なTM製剤は、しばしば複数植物の混合からなり、<strong>観察される治療効果をもたらすために相乗的に働く膨大な化学成分の配列</strong>を代表する。そうした複雑なTM製剤について、化学的・生物学的な品質規格を確立することは、<strong>分析上の途方もない挑戦</strong>である。したがって、TMの品質規格を確立するためのパラダイムとして機能する、<strong>化学的・代謝的・生物学的手法を統合した包括的な分析アプローチ</strong>が開発された。</p>
+<h2>系統的な分析法の開発</h2>
+<p><strong>複雑な製剤の各成分の化学的フィンガープリントを提供できる包括的な分析アッセイ</strong>が、TMの品質と生物学的一貫性を監視するために必要である（<strong>図1</strong>）[13, 14]。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig2-1.png" alt="図1　系統的な伝統中医薬（TCM）品質研究のアプローチ——包括的研究から簡略化された規格へ。図の下半分（土壌下の根の部分）が「包括的研究（Comprehensive Research）」＝化学分析／植物化学プロファイリング・代謝分析／代謝物フィンガープリント・生物学的分析／バイオレスポンスフィンガープリント。それらが「活性マーカーのプール（Pool of Active Markers）」に集約され 地上部の「簡略化された規格（Simplified Standard）」として結実する。目指すのは「科学的（Scientific）」かつ「実行可能（Feasible）」なTCM品質管理規格である。" loading="lazy"><figcaption>図1　系統的な伝統中医薬（TCM）品質研究のアプローチ——包括的研究から簡略化された規格へ。図の下半分（土壌下の根の部分）が「包括的研究（Comprehensive Research）」＝化学分析／植物化学プロファイリング・代謝分析／代謝物フィンガープリント・生物学的分析／バイオレスポンスフィンガープリント。それらが「活性マーカーのプール（Pool of Active Markers）」に集約され 地上部の「簡略化された規格（Simplified Standard）」として結実する。目指すのは「科学的（Scientific）」かつ「実行可能（Feasible）」なTCM品質管理規格である。</figcaption></figure>
+<p>我々の研究室では、<strong>液体クロマトグラフィー／多段階質量分析（LC-MSⁿ）</strong> の技術を用いて、様々なTM植物材料の化学プロファイルを探索してきた。</p>
+<p><strong>ニンジン（人参）・三七（サンシチニンジン）・アメリカニンジン（西洋参）</strong>（<em>Panax</em> 属, ウコギ科）は、TCM処方で一般的に用いられ、活性成分としてトリテルペンおよびステロイドサポニンであるジンセノシド類を含む。<strong>これら3つの類似した植物は臨床的効能が異なり、特に加工後の形態では混同されやすい</strong>。</p>
+<p><strong>3植物から合計 623種のジンセノシド（うち 437種は新規ジンセノシド候補）が特性評価され</strong>、それらを明確に区別できる特異的バイオマーカーの開発が可能になった [15]。この技術は、***Salvia miltiorrhiza<em>（丹参）・</em>Ganoderma lucidum<em>（霊芝）・</em>Glycyrrhiza uralensis<em>（甘草）・</em>Rheum palmatum*（大黄）** を含む多数のTM生薬にも同様に適用された。</p>
+<p>ある事例では、<strong>代謝フィンガープリンティング技術</strong>により、***S. miltiorrhiza*（丹参）を経口投与した後のラットにおいて、主要なタンシノン類とサルビアノール酸類の代謝産物70種<strong>が同定され、</strong>代謝経路と排泄経路の決定**が可能になった [16, 17]。</p>
+<p><strong>化学的解析と生物学的解析を組み合わせることは、活性成分を明らかにする有効な戦略</strong>を提供する。<em>S. miltiorrhiza</em> の複雑な代謝マトリクスを考慮し、<strong>単一化合物・抽出画分・生薬全体の解析を伴う三層戦略</strong>が採用された。薬理学・分子生物学・システム生物学を統合した<strong>多層的な生物学的アプローチ</strong>が用いられた。</p>
+<p>標的タンパク質と作用機序は、<strong>分子・細胞・組織・個体レベル</strong>で影響を受けることが判明し、<strong>TMが複数の経路を通じて複数の標的に作用する</strong>という主張を裏づけた。<em>S. miltiorrhiza</em> の場合、<strong>サルビアノール酸B</strong>は、<strong>マトリックスメタロプロテアーゼ9・上皮成長因子受容体・インテグリン</strong>を含むいくつかの分子標的を調節することが判明し [18]、<strong>主要なタンシノン誘導体は心保護作用と抗酸化作用をもつ</strong>ことが見出された [19]。</p>
+<h2>全体的な品質規格の作成</h2>
+<p><strong>バッチ間一貫性を監視する分析フィンガープリンティング</strong>と、<strong>真正性と品質を保証する多成分アッセイ</strong>を組み合わせた新しい品質管理モデルが開発され、いくつかの中国生薬原料とその製剤に有効に適用されてきた（<strong>図2</strong>）。</p>
+<p>サルビアノール酸類とタンシノン類に基づき、***S. miltiorrhiza* の全体的な品質規格が、SSDMC（single standard to determine multicomponents、一標多測）法<strong>を用いて確立された。SSDMCは</strong>単一の標準物質を用いて混合物中の多数の関連化合物の含量を定量する<strong>方法であり、</strong>中国薬局方と米国薬局方の双方で採用されている**。</p>
+<p><strong>臨床評価には薬局方品質の材料のみを用いること</strong>が、製品の一貫性と安全性を確保するために推奨される。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig2-2.png" alt="図2　伝統中医薬のための全体論的品質管理モデル。上半分「真偽（Authentication）」＝巨視的・微視的鑑定 と TLC（薄層クロマトグラフィー）分析が 薬局方規格（中国薬典・USP NF・欧州薬局方）へ向かう。下半分「優劣（Quality Evaluation）」＝フィンガープリント分析＋ケモメトリクス解析（左）と マルチマーカーアッセイ＋LC-MSⁿ 分析（右） そして中央のバイオレスポンスフィンガープリント（ヒートマップとクラスタリング）が薬局方規格を支える。TLC＝薄層クロマトグラフィー LC-MSⁿ＝液体クロマトグラフィー／多段階質量分析。" loading="lazy"><figcaption>図2　伝統中医薬のための全体論的品質管理モデル。上半分「真偽（Authentication）」＝巨視的・微視的鑑定 と TLC（薄層クロマトグラフィー）分析が 薬局方規格（中国薬典・USP NF・欧州薬局方）へ向かう。下半分「優劣（Quality Evaluation）」＝フィンガープリント分析＋ケモメトリクス解析（左）と マルチマーカーアッセイ＋LC-MSⁿ 分析（右） そして中央のバイオレスポンスフィンガープリント（ヒートマップとクラスタリング）が薬局方規格を支える。TLC＝薄層クロマトグラフィー LC-MSⁿ＝液体クロマトグラフィー／多段階質量分析。</figcaption></figure>
+<blockquote>補足: 図2の構成が秀逸で、漢字2文字ずつで論点を整理している。上半分が <strong>「真偽」</strong>（これは本物か＝基原の鑑定）、下半分が <strong>「優劣」</strong>（品質は良いか＝定量的評価）。この2つは別の問題であり、別の手法が要る、という主張が一目で分かる。  <strong>SSDMC（一標多測）</strong> は、本サイトでも繰り返し登場する手法である——標準品を1つだけ買い、他の成分は相対応答比（補正係数）で換算する。標準品コストが劇的に下がるが、低濃度・高濃度で誤差が膨らむという弱点をもつ。この弱点を検量線の切片誤差を組み込むことで解決したのが <strong>MAML</strong> で、本サイト収録の「双黄連口服液の総合的品質評価」（<em>J. Chromatogr. A</em> 2023）が詳しい。  中国薬局方と米国薬局方の双方が SSDMC を採用しているという記述は重要である。日本薬局方では同種の考え方（相対感度係数を用いた定量）が個別の医薬品各条で限定的に使われている。</blockquote>
+<h2>結論</h2>
+<p><strong>多数の内在的・外在的要因が、薬用植物とその代謝産物の品質・一貫性・安定性に影響する</strong> [12, 13]。<strong>GACP（適正農業規範・採取規範）・GLP（適正試験所基準）・GMP（適正製造規範）・GCP（適正臨床試験実施基準）</strong> の規制された適用が、施術者と患者のために<strong>高品質で安全・有効・一貫したTCM製品</strong>を保証するために必要である [5]。</p>
+<p>TCM製品が<strong>グローバルでエビデンスに基づく医療システムに受け入れられる</strong>ためには、その<strong>生育・採取・加工・投与を統括する強固な国際基準と手順が開発されることが不可欠</strong>である。</p>
+<p>さらに、<strong>TCMの極度の複雑性は、生物活性成分の適切な解析のための新技術と戦略の統合を必要とし</strong>、それによって影響を受ける標的と経路を完全に理解できるようになる [20]。</p>
+<h3>第2編の引用文献</h3>
+<ol><li>World Health Organization, <em>The Regional Strategy for Traditional Medicine in the Western Pacific (2011–2020)</em>. WHO Regional Office for the Western Pacific, Manila, Republic of the Philippines. 71 pp. (2012).</li><li>World Health Organization, <em>WHO Traditional Medicine Strategy 2014–2023</em>. WHO, Geneva, Switzerland. 71 pp. (2014).</li><li>World Health Organization, http://www.who.int/medicines/areas/traditional/congress/beijing_declaration/en/ (2008). 2014年8月15日アクセス.</li><li>G. A. Cordell, <em>Phytochem. Lett.</em>, Epub before print (2014), doi:10.1016/j.phytol.2014.06.002.</li><li>H. Uzuner et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 458 (2012).</li><li>N. Techen, I. Parveen, Z. Q. Pan, I. A. Khan, <em>Curr. Opin. Biotech.</em> <strong>25</strong>, 103 (2014).</li><li>Ž. F. Pečnikar, E. V. Buzan, <em>J. Appl. Genet.</em> <strong>55</strong>, 43 (2014).</li><li>J. Liang et al., <em>J. Chromatogr. A</em> <strong>1294</strong>, 58 (2013).</li><li>J. Jing, W. C. Ren, S. B. Chen, M. Wei, H. S. Parekh, <em>Trends Anal. Chem.</em> <strong>44</strong> (2013).</li><li>J. van der Greef, <em>Nature</em> <strong>480</strong>, S87 (2011).</li><li>G. B. Zhang, Q. Y. Li, Q. L. Chen, S. B. Su, <em>Evid. Based Complement. Alternat. Med.</em>, id: 621423 (2013), doi:10.1155/2013/621423.</li><li>S. Li, B. Zhang, <em>Chin. J. Nat. Med.</em> <strong>11</strong>, 110 (2013).</li><li>G. A. Cordell, <em>Planta Med.</em> <strong>77</strong>, 1129 (2011).</li><li>G. A. Cordell, M. D. Colvard, <em>J. Nat. Prod.</em> <strong>75</strong>, 514 (2012).</li><li>W. Z. Yang et al., <em>Anal. Chim. Acta</em> <strong>739</strong>, 56 (2012).</li><li>M. Yang, C. R. Cheng, J. L. Yang, D. A. Guo, <em>Curr. Drug Metab.</em> <strong>13</strong>, 535 (2012).</li><li>X. Qiao et al., <em>AAPS J.</em> <strong>16</strong>, 101 (2014).</li><li>L. X. Feng et al., <em>Proteomics</em> <strong>11</strong>, 1473 (2011).</li><li>X. Liu, W. Y. Wu, B. H. Jiang, M. Yang, D. A. Guo, <em>Trends Pharmacol. Sci.</em> <strong>34</strong>, 620 (2013).</li><li>R. Tilton et al., <em>Chin. Med.</em> <strong>5</strong>, 30 (2010).</li></ol>
+<hr>
+<h1>第3編　伝統医薬からボタニカルドラッグへの進化</h1>
+<p><strong>原題</strong>: Evolution of traditional medicines to botanical drugs（S32）</p>
+<p><strong>著者</strong>: **Sau L. Lee\<em>・Jinhui Dou\</em>・Rajiv Agarwal・Robert Temple・Julie Beitz・Charles Wu・Andrew Mulberg・Lawrence X. Yu・Janet Woodcock**（米国食品医薬品局 医薬品評価研究センター〈CDER〉, 米国メリーランド州 Silver Spring）</p>
+<ul><li>\*責任著者: sau.lee@fda.hhs.gov（S.L.L.）／jinhui.dou@fda.hhs.gov（J.D.）</li></ul>
+<blockquote>補足: <strong>本増刊の白眉</strong>である。著者9名全員が <strong>FDA CDER</strong> の所属で、しかも <strong>Janet Woodcock</strong>（当時のCDER所長、後にFDA長官代行）、<strong>Robert Temple</strong>（CDER 臨床科学担当副所長）、<strong>Lawrence X. Yu</strong>（CDER 医薬品品質局 副局長）という、米国の医薬品規制の中枢にいた面々が名を連ねている。<strong>規制当局が自ら「複雑混合物の品質をどう担保するか」を説明した文書</strong>であり、実務上の一次情報に極めて近い。</blockquote>
+<h2>ボタニカル審査チームと10年間の実績</h2>
+<p><strong>ボタニカルは新薬の重要な供給源を構成する</strong> [1, 2]。ボタニカルドラッグ開発を促進するため、<strong>米国食品医薬品局（FDA）の医薬品評価研究センター（CDER）は 2003年に「ボタニカル審査チーム（Botanical Review Team）」を設置</strong>し、<strong>2004年に最初の「Guidance for Industry: Botanical Drug Products」を公表した</strong> [3]。</p>
+<p>このガイダンスはFDAの考え方を示すものであり、<strong>治験薬申請（IND）および新薬承認申請（NDA）のプロセスを通じたボタニカル新薬開発に伴う、品質・非臨床・臨床その他の独自の側面についての推奨</strong>を提供する。</p>
+<p><strong>2004年から2013年にかけて、CDERは 400件を超えるボタニカルIND申請とpre-IND会合要請を受理した（表1）。</strong> <strong>INDの大半は、患者における治験ボタニカル製品の予備的な安全性と有効性の評価のため、第2相臨床試験への移行が許可された。</strong></p>
+<p>FDAは、<strong>2006年に Veregen（シネカテキン）の最初のボタニカルNDA</strong> [4, 5]、<strong>2012年に Fulyzaq（クロフェレマー）の2番目のボタニカルNDA</strong> [6, 7] を承認した。<strong>これら2件のNDA承認は、天然の複雑混合物に由来する新しい治療法が、品質・安全性・有効性についての現代FDA基準を満たすように開発されうることを示している。</strong> 現在、少数のINDが第3相臨床試験にあり、将来さらなるNDAにつながる可能性がある。</p>
+<p><strong>表1　CDERに提出されたボタニカルpre-INDおよびINDの件数（2004–2013年）</strong></p>
+<table>
+<thead><tr><th>提出区分</th><th>2004</th><th>2005</th><th>2006</th><th>2007</th><th>2008</th><th>2009</th><th>2010</th><th>2011</th><th>2012</th><th>2013</th><th>合計</th></tr></thead>
+<tbody>
+<tr><td>Pre-IND</td><td>12</td><td>6</td><td>11</td><td>7</td><td>14</td><td>10</td><td>10</td><td>8</td><td>5</td><td>8</td><td><strong>91</strong></td></tr>
+<tr><td>IND</td><td>21</td><td>38</td><td>22</td><td>39</td><td>27</td><td>27</td><td>27</td><td>33</td><td>33</td><td>51</td><td><strong>318</strong></td></tr>
+<tr><td>Pre-IND および IND</td><td>33</td><td>44</td><td>33</td><td>46</td><td>41</td><td>37</td><td>37</td><td>41</td><td>38</td><td>59</td><td><strong>409</strong></td></tr>
+</tbody></table>
+<blockquote>補足: 表1の数字は貴重である。<strong>10年間で409件の申請があり、承認に至ったのは2件</strong>。本サイト収録の Berman ら（2025）が引く FDA の解析では「<strong>商業ボタニカルINDのうち第3相まで進むのは5%未満</strong>」とされている。表1と併せると、ボタニカルドラッグ開発の「漏斗」の細さが具体的に見えてくる。  なお2013年に IND が 51件と急増している。2016年のガイダンス改訂（早期相試験の柔軟化）へ向けた期待の高まりを反映している可能性がある。</blockquote>
+<h2>「証拠の総体（Totality-of-Evidence）」アプローチ</h2>
+<p>米国で医薬品として販売されることを意図した新規ボタニカル製品について、申請者は<strong>小分子製品に期待されるのと同水準の安全性と有効性のエビデンスを提供する必要がある</strong>。</p>
+<p>ボタニカル製品はまた、<strong>製品品質の基準を満たす必要がある</strong>。それによって、市販される製品バッチが、臨床試験で試験された製品バッチで観察されたのと一貫した治療効果をもたらす（すなわち<strong>治療的一貫性, therapeutic consistency</strong>）ようにするためである。</p>
+<p>しかしながら、<strong>ボタニカル製品の品質管理は困難</strong>である。これらの製品は、<strong>活性成分が既知でないかもしれない複雑混合物</strong>を含み、また<strong>バッチ間で相当の変動（例: 化学組成）</strong> をもちうるからである。小分子製品の品質確保に用いられる<strong>従来のCMC（化学・製造・品質管理）データ（主に化学試験による）は、ボタニカル製品には不十分でありうる</strong>。</p>
+<p>この課題に対処するため、FDAは、<strong>ボタニカルINDおよびNDA提出の審査から得た知識と経験に基づき、「証拠の総体（totality-of-evidence）」アプローチを開発した</strong>。</p>
+<p>この統合的アプローチは、従来のCMCデータに加えて、以下を含む<strong>他のエビデンス</strong>を考慮する。</p>
+<ul><li><strong>原料管理（raw material control）</strong></li><li><strong>臨床的に関連する生物学的アッセイ（clinically relevant bioassay(s)）</strong></li><li><strong>その他の非CMCデータ</strong>（医薬品製品の複数バッチに基づいて生成された用量反応の臨床データを含む）</li></ul>
+<p><strong>これら他のデータへの依存の度合いは、そのボタニカル混合物をどの程度まで特性評価・定量できるかによって決まる。</strong> そうした統合的アプローチは、<strong>FDAの最初の2件のボタニカルNDAの経験を通じて説明・例示するのが最良</strong>である。</p>
+<h2>Veregen（シネカテキン）</h2>
+<p><strong>Veregen（シネカテキン）軟膏</strong>は、<strong>外性器および肛門周囲の尖圭コンジローマの外用治療</strong>について承認された [4, 5]。<strong>15%（w/w）のシネカテキン</strong>を含有する。シネカテキンは、**チャノキ <em>Camellia sinensis</em>（L.）Kuntze（ツバキ科）の緑茶葉の水抽出物の部分精製画分**であるボタニカル物質である。</p>
+<p>シネカテキンは、<strong>カテキン類（総原薬の重量で85〜95%）とその他の緑茶成分の混合物</strong>である。これらのカテキン類には、<strong>55%超のエピガロカテキンガレート（EGCG）</strong> と他のカテキン誘導体が含まれる（<strong>図1A</strong>）[4]。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig3-1a.png" alt="図1A　シネカテキンに含まれる既知のカテキン類の構造式。R1〜R5 の置換基の組み合わせで 8種のカテキン誘導体が定義される。G はガロイル基（3,4,5-トリヒドロキシベンゾイル基）を表す。" loading="lazy"><figcaption>図1A　シネカテキンに含まれる既知のカテキン類の構造式。R1〜R5 の置換基の組み合わせで 8種のカテキン誘導体が定義される。G はガロイル基（3,4,5-トリヒドロキシベンゾイル基）を表す。</figcaption></figure>
+<p><strong>図1A の置換基表（原文 Figure 1A の一覧）</strong></p>
+<table>
+<thead><tr><th>成分</th><th>略号</th><th>R1</th><th>R2</th><th>R3</th><th>R4</th><th>R5</th></tr></thead>
+<tbody>
+<tr><td>(−)-エピガロカテキンガレート</td><td>(−)-EGCg</td><td>—</td><td>—</td><td>G</td><td>OH</td><td>—</td></tr>
+<tr><td>(−)-エピカテキンガレート</td><td>(−)-ECg</td><td>—</td><td>—</td><td>G</td><td>H</td><td>—</td></tr>
+<tr><td>(−)-エピガロカテキン</td><td>(−)-EGC</td><td>—</td><td>—</td><td>H</td><td>OH</td><td>—</td></tr>
+<tr><td>(−)-エピカテキン</td><td>(−)-EC</td><td>—</td><td>—</td><td>H</td><td>H</td><td>—</td></tr>
+<tr><td>(−)-ガロカテキンガレート</td><td>(−)-GCg</td><td>G</td><td>OH</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>(−)-ガロカテキン</td><td>(−)-GC</td><td>H</td><td>OH</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>(−)-カテキンガレート</td><td>(−)-Cg</td><td>G</td><td>H</td><td>—</td><td>—</td><td>—</td></tr>
+<tr><td>(+)-カテキン</td><td>(+)-C</td><td>—</td><td>—</td><td>—</td><td>—</td><td>H</td></tr>
+</tbody></table>
+<blockquote>補足: 原本PDFのテキスト層では、この置換基表の列と行の対応が組版の都合で入れ替わって抽出される（成分名・略号・R1〜R5 の値が縦一列に並ぶ）。上の表は、<strong>カテキン類の化学構造の一般則</strong>（エピ体は R3/R4 位、ガロカテキン体は R1/R2 位、カテキンは R5 位で表現される）と原文の値の並び順から再構成したものである。<strong>置換基の割り当ての細部は原著の Figure 1A を参照されたい。</strong> 原文に無い値を補ってはいない。</blockquote>
+<h3>承認の根拠</h3>
+<p>FDA承認のため、<strong>Veregen の安全性と有効性は、2件の無作為化・二重盲検・基剤対照臨床試験</strong>で確立された。試験結果は、<strong>Veregen を投与された治療群が、基剤対照群と比較して有意に高い奏効率を示した（53.6% vs 35.3%）</strong> ことを示した [4]。<strong>奏効率</strong>は、<strong>16週までにすべての外性器および肛門周囲疣贅（ベースラインおよび新規）が完全に臨床的（視覚的）に消失した患者の割合</strong>と定義された。</p>
+<p>緑茶の広範なヒト摂取経験とカテキン類に関する文献研究データが、カテキン類の外用の安全性についてかなりの安心材料を提供したものの、<strong>この情報は Veregen の NDA 承認を支持するには十分とはみなされなかった</strong>。<strong>Veregen の安全性を支持するために標準的な非臨床試験が実施された。</strong></p>
+<h3>品質をどう担保したか</h3>
+<p><strong>活性成分が十分に定義されていない天然の混合物</strong>として、Veregen 中に同定された個々の主要・微量化学成分は、<strong>市販される各製品バッチについて監視・管理される必要がある</strong>。</p>
+<p><strong>化学的性質と臨床反応を相関づけるデータがない状況では、これら成分の許容範囲は、主として臨床試験で試験された複数バッチで観察された水準に基づいて設定された。</strong></p>
+<p><strong>異なる栽培品種の茶葉からカテキン類その他の化学成分に有意な変動が同定されている</strong> [8] ことから、このボタニカル製品は<strong>相当なバッチ間変動（例: 総カテキン量と異なるカテキン類の比率）</strong> をもちうる。</p>
+<p>加えて、成分の大半は適切に特性評価・定量できるものの、<strong>シネカテキン中の微量成分の化学的性質については、なお残存する不確実性がありうる</strong>。したがって Veregen の一貫した品質を確保するため、FDAは申請書からの<strong>他の2つの重要な情報</strong>を考慮した。以下に要約する。</p>
+<ul><li><strong>将来の市販製品バッチ向けのボタニカル原料は、Veregen の臨床試験で使用された栽培品種に限定された。</strong> これらの栽培品種は、茶園で採取された標本の特徴と履歴に基づいて、植物学者と茶の専門家によって同定された。<strong>栽培地または農園は、適正農業規範・採取規範（GACP）の原則に従うべきである</strong>ことが強調された。これらの管理措置は、<strong>植物および原料のレベルでの化学組成の変動を低減する</strong>ため、市販される製品バッチは、臨床試験で使用されたバッチで観察された範囲と同様の自然変動を示すことになる。</li><li><strong>臨床試験の有効性結果は、2つの用量（すなわち 10% と 15%）の間で臨床反応に有意差がないことを示した。</strong> この観察は、<strong>特性評価されていない画分の微妙な変動が治療効果に影響を及ぼさないかもしれない</strong>ことを示唆している。</li></ul>
+<h2>Fulyzaq（クロフェレマー）</h2>
+<p><strong>Fulyzaq（クロフェレマー）</strong> は、<strong>抗レトロウイルス療法を受けているHIV/AIDS患者における非感染性下痢の症状緩和</strong>について、FDAが初めて承認した医薬品である [6, 7]。<strong>125 mg のクロフェレマーを含有する徐放性錠剤</strong>として利用可能である。</p>
+<p>クロフェレマーは、**南米の樹木 <em>Croton lechleri</em> Müll.Arg.（トウダイグサ科）の赤い樹液<strong>に由来するボタニカル原薬である。クロフェレマーは、</strong>(+)-カテキン・(−)-エピカテキン・(+)-ガロカテキン・(−)-エピガロカテキン<strong>のモノマー単位が</strong>ランダムな配列で結合した、オリゴマー性プロアントシアニジンの混合物<strong>である（</strong>図1B**）[6]。</p>
+<p>この赤い樹液は、一般に「<strong>竜血（Dragon&#x27;s Blood）</strong>」として知られ、<strong>南米で下痢治療の生薬医薬として広く用いられてきた</strong> [9, 10]。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig3-1b.png" alt="図1B　クロフェレマー中のプロアントシアニジン。カテキン／ガロカテキン単位が C4→C8 結合で連結したオリゴマー構造で 角括弧の外に n（重合度）が示される。R = H または OH であり n の範囲は平均5.5。" loading="lazy"><figcaption>図1B　クロフェレマー中のプロアントシアニジン。カテキン／ガロカテキン単位が C4→C8 結合で連結したオリゴマー構造で 角括弧の外に n（重合度）が示される。R = H または OH であり n の範囲は平均5.5。</figcaption></figure>
+<p><strong>無作為化・二重盲検・プラセボ対照およびプラセボフリーの臨床試験</strong>の結果は、（下痢の既往をもち、安定した抗レトロウイルス療法を受けている）HIV陽性患者のうち、<strong>クロフェレマー 125 mg 1日2回群の割合が、プラセボ群より有意に高い臨床反応を経験した（17.6% vs 8.0%）</strong> ことを示した [6]。<strong>臨床反応</strong>は、<strong>プラセボ対照期の4週のうち少なくとも2週にわたって、週あたり水様便が2回以下</strong>であることと定義された。</p>
+<h3>特性評価がさらに困難だった</h3>
+<p>シネカテキンと比較して、<strong>クロフェレマーの化学的特性評価はさらに大きな課題を突きつけた</strong>。この医薬品は、<strong>組成・配列・長さが変動するオリゴマーの混合物</strong>からなり、そのため<strong>複数の従来型クロマトグラフィー法に基づくプロアントシアニジンオリゴマーの適切な分離と定量が不可能</strong>であった。</p>
+<p><strong>当時の分析技術の最先端をおそらく代表する、追加のクロマトグラフィー・分光法・質量分析・酸加水分解法</strong>が、クロフェレマーの包括的な特性評価のために必要とされた。これらの分析法は集合的に、クロフェレマーの<strong>構造的シグネチャー</strong>（例: プロアントシアニジンオリゴマーの組成）についての広範な情報を明らかにしたが、<strong>最終的にはこの複雑なボタニカル混合物の特性評価と品質管理を支持するには不十分</strong>とみなされた（例: 分子レベルでのプロアントシアニジンの定量の困難さ、最適とはいえない収率しか与えない加水分解法の限界）[11]。</p>
+<h3>生物学的アッセイの導入</h3>
+<p><strong>クロフェレマーの化学的特性評価に関する不確実性の程度は、シネカテキンと比較してはるかに大きかった</strong>ため、FDAは、<strong>原料管理と複数用量・複数製品バッチからの臨床データに加えて、医薬品製品の活性を評価する臨床的に関連する生物学的アッセイ（bioassay）が、Fulyzaq の承認のために正当化される</strong>と結論した。</p>
+<p>FDAが Fulyzaq の品質の一貫性を確保するために依拠した非CMCデータを以下に要約する。</p>
+<ul><li><strong>Veregen と同様、ボタニカル原料管理には、GACPの実装と、ボタニカル原料の採取を特定の生態地理区（eco-geographic regions, EGRs）に限定すること</strong>が含まれた。これらの管理措置は、<strong>植物および原料のレベルでの変動を低減する</strong>助けとなる。</li><li><strong>クロフェレマーの作用機序（MOA）</strong> は、文献において、<strong>腸細胞の管腔側膜における、cAMP刺激性の嚢胞性線維症膜貫通調節因子（CFTR）クロライドイオンチャネルおよびカルシウム活性化クロライドイオンチャネルの双方の強力な阻害剤</strong>として報告されていた [12]。<strong>クロフェレマーのMOAの知識が、臨床的に関連する生物学的アッセイの重要な開発につながり</strong>、それによって<strong>臨床的に関連する規格の設定が可能になった</strong>。臨床的に関連する生物学的アッセイの存在は、<strong>製造業者が承認後の変更（例: ボタニカル原料の供給を増やし多様化するためのEGRの拡大）を行う際に、より大きな柔軟性を与えうる</strong>。</li><li><strong>複数用量（125〜500 mg 1日2回）からの臨床データは、本薬の効果が試験された用量に対して感受性でないことを示した。</strong> これは <em>in vitro</em> の観察および臨床薬理データと整合しており、<strong>経口投与（125 mg 1日2回）後の消化管内の推定薬物濃度が、最大クロライドイオンチャネル阻害に用いられる濃度の数倍高く、作用部位における薬物の飽和をもたらす</strong>ことを示唆している [7, 12, 13]。<strong>クロフェレマーの複数バッチからの臨床データも、異なる原薬バッチを用いて製造された医薬品バッチ間に、目立った差を示さなかった。</strong> 以上の情報は、<strong>クロフェレマーで観察された自然変動が、Fulyzaq の有効性に有意な影響を及ぼす可能性は低い</strong>ことを示唆した。</li></ul>
+<blockquote>補足: <strong>Veregen と Fulyzaq の対比が、この論文の教育的な核</strong>である。両者は「証拠の総体」の<strong>依存の度合い</strong>が異なる。  | | Veregen（シネカテキン） | Fulyzaq（クロフェレマー） | |---|---|---| | 化学的特性評価 | 大半の成分を特性評価・定量できる | オリゴマー混合物で分離・定量が困難 | | 原料管理 | 臨床試験と同じ栽培品種に限定＋GACP | GACP＋<strong>生態地理区（EGR）に限定</strong> | | 生物学的アッセイ | 不要 | <strong>必須</strong>（CFTR/CaCC クロライドチャネル阻害） | | 用量反応 | 10% と 15% で差なし | 125〜500 mg で差なし（作用部位が飽和） |  論理は明快である。<strong>化学分析で分かることが少ないほど、他の証拠で埋め合わせる必要が増す。</strong> クロフェレマーは化学的にお手上げに近かったので、「作用機序に基づく生物学的アッセイ」という別の軸を持ち込んだ。しかもそのアッセイがあるおかげで、<strong>承認後に原料の産地を拡げる余地</strong>まで生まれている——品質を「産地の固定」ではなく「機能の測定」で担保できるようになったからである。  なお、両剤とも<strong>用量反応曲線が平坦</strong>であることを積極的に活用している点は共通する。これは本サイト収録の McChesney ら（2019）でも同じ論法として詳述されている。</blockquote>
+<h2>結論</h2>
+<p><strong>Veregen と Fulyzaq の承認は、FDAの科学に基づく「証拠の総体」規制アプローチが、製品品質の一貫性——ひいてはボタニカルドラッグの治療効果——を確保できることを実証した。</strong></p>
+<p>品質管理の目的において、<strong>原料管理・臨床的に関連する生物学的アッセイ・臨床データを含む他のエビデンスに依拠することで、利用可能な分析技術に基づいてボタニカル混合物全体またはその活性成分を特性評価する能力の限界を克服できる。</strong></p>
+<p>これら2件のボタニカルNDAの承認は、統合的アプローチの成功を実証し、<strong>小分子医薬と同じFDA基準に従って、ボタニカル（伝統医薬を含む）を新薬へと発展させるための実務的な枠組みを産業界に提供する</strong>ものである。</p>
+<h3>第3編の引用文献</h3>
+<ol><li>S. T. Chen et al., <em>Nat. Biotechnol.</em> <strong>26</strong>, 1077 (2008).</li><li>D. J. Newman, G. M. Cragg, <em>J. Nat. Prod.</em> <strong>75</strong>, 311 (2012).</li><li>FDA Guidance for Industry — Botanical Drug Products. http://www.fda.gov/downloads/Drugs/GuidanceComplianceRegulatoryInformation/Guidances/ucm070491.pdf（2014年6月28日アクセス）</li><li>Approved Labeling for Veregen (NDA 021902). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021902s000_prntlbl.pdf（2014年6月28日アクセス）</li><li>Drugs@FDA: Veregen (NDA 021902). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021902s000TOC.cfm（2014年6月28日アクセス）</li><li>Approved Labeling for Fulyzaq (NDA 202292). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/202292Orig1s000Lbl.pdf（2014年6月28日アクセス）</li><li>Drugs@FDA: Fulyzaq Delayed-Release Tablets (NDA 202292). http://www.accessdata.fda.gov/drugsatfda_docs/nda/2012/202292Orig1s000TOC.cfm（2014年6月28日アクセス）</li><li>L. Chen, Z. X. Zhou, <em>Plant Foods Hum. Nutr.</em> <strong>60</strong>, 31 (2005).</li><li>K. Jones, <em>J. Altern. Complement. Med.</em> <strong>9</strong>, 877 (2003).</li><li>D. Gupta, B. Bleakley, R. K. Gupta, <em>J. Ethnopharmacol.</em> <strong>115</strong>, 361 (2008).</li><li>J. A. Kennedy, G. P. Jones, <em>J. Agric. Food Chem.</em> <strong>49</strong>, 1740 (2001).</li><li>L. Tradtrantip, W. Namkung, A. S. Verkman, <em>Mol. Pharmacol.</em> <strong>77</strong>, 69 (2010).</li><li>J. Cottreau, A. Tucker, R. Crutchley, K. W. Garey, <em>Expert Rev. Gastroenterol. Hepatol.</em> <strong>6</strong>, 17 (2012).</li></ol>
+<hr>
+<h1>第4編　伝統中医薬を用いたインフルエンザ治療の開発</h1>
+<p><strong>原題</strong>: Developing influenza treatments using traditional Chinese medicine（S35）</p>
+<p><strong>著者</strong>: Zi-Feng Yang（楊子峰）¹‡・Elaine Lai-Han Leung ²‡・Liang Liu ¹・Zhi-Hong Jiang ¹・<strong>Nanshan Zhong（鍾南山）\</strong>* ²</p>
+<ul><li>¹ 呼吸疾病国家重点実験室・呼吸器疾患国家臨床研究センター, 広州医科大学附属第一病院（中国 広東省広州）</li><li>² 中薬質量研究国家重点実験室, マカオ科技大学（中国マカオ特別行政区）</li><li>‡ 同等に貢献　\*責任著者: nanshan@vip.163.com</li></ul>
+<blockquote>補足: 責任著者の <strong>鍾南山（Nanshan Zhong）</strong> は、2003年のSARS流行時に中国の対応を主導した呼吸器科医で、中国で最も著名な医師の一人である（後の COVID-19 でも中枢的役割を担った）。その人物が「インフルエンザに対する中医薬」を論じている点に、この論文の位置づけがよく表れている。</blockquote>
+<h2>中医薬と西洋薬の作用様式の違い</h2>
+<p>人類はその存在を通じて、インフルエンザのような<strong>流行病（エピデミック）</strong> の脅威に直面してきた。<strong>伝統中医薬（TCM）</strong> の施術者は、中国医学の古典『<strong>黄帝内経（Emperor Internal Medical Classic）</strong>』において、流行病に関する診断・治療の原則を記録し始めた [1]。インフルエンザと闘うために用いられた独自の治療法と生薬処方は、<strong>新薬開発のための情報と着想の源泉</strong>となりうる [2]。</p>
+<p><strong>西洋と中国のインフルエンザ治療の主要な違いは、その作用様式と標的にある。</strong> 最初の抗ウイルス化学薬は <strong>1960年代半ば</strong>に西洋で登場した。それ以来、多数の<strong>単一標的</strong>治療薬が設計されてきたが、<strong>薬剤耐性が一般的</strong>である。これを回避するため、西洋医学は<strong>併用療法</strong>を用いて複数の分子標的を1つの治療に組み込むようになり、この実践は現在では西洋でよく受け入れられている。</p>
+<p>一方、<strong>中国生薬処方（Chinese herbal formulas, CHFs）は、しばしば複数の様式を通じて作用し、ウイルスだけでなく宿主の免疫応答の様々な構成要素をも標的とし（表1）、相乗効果を生み出す</strong>。</p>
+<p>例えば、<strong>金柴カプセル（jinchai capsules）</strong> は、<strong>ビリオンの吸着を阻害し、ウイルスによる痛覚過敏誘発性の膜融合を防ぐ</strong>ことで、ウイルス複製を鈍らせる [3]。一方、<strong>エボジアミン（evodiamine、呉茱萸由来）</strong> は、<strong>ウイルス誘発性オートファジーと関連する AMPK/TSC2/mTOR シグナル伝達経路に干渉する</strong>ことで、ウイルスの作用を阻止する [4]。<strong>図1</strong>は、インフルエンザ治療における CHF の作用点を要約している。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig4-1.png" alt="図1　インフルエンザを治療するための全体論的介入。中央上部から「生薬処方および生薬活性成分」が2方向へ分岐する。赤枠＝ウイルスを標的とするCHF（左側）——「ウイルス侵入の阻止」に金柴カプセル（金柴胶囊）と Commelina communis L.（鴨跖草）アルカロイド 「細胞・組織・臓器内でのウイルス阻害」に連花清瘟カプセル（ウイルス放出阻害）と呉茱萸由来エボジアミン（ウイルス複製阻害）。緑枠＝症状の緩和（右上）——発熱期間の短縮に麻黄湯・銀翹散・麻杏石甘−銀翹散・連花清瘟カプセル。青枠＝免疫調節（右下）——粘膜防御と免疫の増強に小青竜湯 IL-1α の抑制に銀翹散と葛根湯 毒性ラジカルの防止に温脾湯 RLH経路の調節にパチョリアルコール（広藿香）。" loading="lazy"><figcaption>図1　インフルエンザを治療するための全体論的介入。中央上部から「生薬処方および生薬活性成分」が2方向へ分岐する。赤枠＝ウイルスを標的とするCHF（左側）——「ウイルス侵入の阻止」に金柴カプセル（金柴胶囊）と Commelina communis L.（鴨跖草）アルカロイド 「細胞・組織・臓器内でのウイルス阻害」に連花清瘟カプセル（ウイルス放出阻害）と呉茱萸由来エボジアミン（ウイルス複製阻害）。緑枠＝症状の緩和（右上）——発熱期間の短縮に麻黄湯・銀翹散・麻杏石甘−銀翹散・連花清瘟カプセル。青枠＝免疫調節（右下）——粘膜防御と免疫の増強に小青竜湯 IL-1α の抑制に銀翹散と葛根湯 毒性ラジカルの防止に温脾湯 RLH経路の調節にパチョリアルコール（広藿香）。</figcaption></figure>
+<h2>板藍根（Isatis indigotica 根）とインフルエンザ</h2>
+<p>***Isatis indigotica* の根（IIR、板藍根 Banlangen）<strong> は、中国において季節性インフルエンザの治療に長く用いられてきた。現在までに </strong>IIR の化学成分100種以上<strong>が同定されている。そのうち、</strong>エピゴイトリン（epigoitrin）・2,4(1H,3H)-キナゾリンジオン・4(3H)-キナゾリノン・クレマスタニンB（clemastanin B）<strong> の化合物が、</strong>インフルエンザウイルスを殺すか、有意に阻害する**ことが実証されている。</p>
+<p>我々の研究室の研究は、<strong>IIR から抽出した多糖類が、ヘマグルチニンを介する過程を通じて、インフルエンザウイルスが宿主細胞表面に付着するのを防ぐ</strong>ことを示した [5]。さらに、<strong>インドールアルカロイド</strong>が宿主細胞へのウイルス感染を防ぐ主要な役割を果たすことが見出され [6]、また <strong>IIR 由来の化合物は、主として NF-κB シグナル伝達の調節を通じて、複製の初期段階におけるヌクレオカプシドタンパク質の移行を阻止し</strong>、ウイルス複製を阻害しうる [7]。</p>
+<p>加えて、**IIR は <em>in vitro</em> および <em>in vivo</em> で免疫調節作用を発揮する<strong>ことが示されている。</strong>リポ多糖（LPS）刺激 RAW264.7 マウスマクロファージ<strong>において、IIR のメタノール抽出物は、</strong>IκBα の分解と、一酸化窒素・プロスタグランジンE2・インターロイキン（IL）6 の産生を阻害した** [8]。</p>
+<p>IIR 由来の多糖類は、マウスモデルにおいて<strong>リンパ球とマクロファージの増殖、および IL-2 とインターフェロン（IFN）γ の産生を促進</strong>しえた [9]。<strong>インジルビン（indirubin）とその誘導体</strong>は、感染したヒト気管支上皮細胞・ヒト末梢血由来マクロファージ・肺胞上皮細胞において、<strong>多数の炎症性サイトカイン／ケモカインを抑制</strong>しうる（<strong>表1</strong>）[10, 11]。</p>
+<p>以上を総合すると、これらのデータは、<strong>IIR が、ウイルスと宿主の双方を標的とすることによって、ウイルス感染から防御する多様な役割を果たす</strong>ことを含意する——<strong>市販の化学合成薬とは著しく異なる作用である</strong>。</p>
+<p><strong>表1　TCMと西洋の抗インフルエンザ薬の例</strong></p>
+<table>
+<thead><tr><th>区分</th><th>抗ウイルス薬／生薬</th><th>標的</th><th>標的対象</th><th>作用機序または治療効果</th><th>記録年</th><th>文献</th></tr></thead>
+<tbody>
+<tr><td><strong>西洋の抗インフルエンザ化合物</strong></td><td>シアノビリン-N（Cyanovirin-N）</td><td>エンベロープウイルスの表面糖タンパク質</td><td>ウイルス</td><td>ウイルス侵入を阻害</td><td>1997</td><td>12</td></tr>
+<tr><td></td><td>ニタゾキサニド（Nitazoxanide）</td><td>インフルエンザ ヘマグルチニン</td><td>ウイルス</td><td>ヘマグルチニンの細胞内輸送を障害</td><td>2009</td><td>13</td></tr>
+<tr><td></td><td>DAS181</td><td>インフルエンザウイルス受容体</td><td>宿主</td><td>ウイルス受容体を除去</td><td>2006</td><td>14</td></tr>
+<tr><td></td><td>アマンタジン／リマンタジン</td><td>インフルエンザ M2タンパク質</td><td>ウイルス</td><td>M2のプロトン伝導を阻害</td><td>1965</td><td>15, 16</td></tr>
+<tr><td></td><td>ファビピラビル（T-705）</td><td>インフルエンザ RNAポリメラーゼ</td><td>ウイルス</td><td>ウイルスRNAポリメラーゼ活性を阻害</td><td>2002</td><td>17, 18</td></tr>
+<tr><td></td><td>オセルタミビル／ペラミビル／ザナミビル／ラニナミビル</td><td>インフルエンザ ノイラミニダーゼ</td><td>ウイルス</td><td>ウイルスの放出を阻止</td><td>1996／2000／1993／2005</td><td>19–22</td></tr>
+<tr><td><strong>中国の抗インフルエンザ生薬処方・化合物・成分</strong></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>単味生薬: <strong>板藍根</strong>（<em>Isatis indigotica</em> 根）</td><td>メタノール抽出物</td><td>NF-κB シグナル伝達</td><td>宿主</td><td>マクロファージにおける一酸化窒素・プロスタグランジンE2 の産生と NF-κB シグナル伝達を阻害</td><td>1260年代</td><td>8</td></tr>
+<tr><td></td><td>多糖類</td><td>—</td><td>宿主</td><td>リンパ球の形質転換、IL-2 と IFN-γ の産生を促進</td><td></td><td>9</td></tr>
+<tr><td></td><td>クレマスタニンB</td><td>—</td><td>—</td><td>インフルエンザ リボヌクレオタンパク質の核外輸送を阻止、感染マウスの平均生存期間を延長</td><td></td><td>7, 23</td></tr>
+<tr><td></td><td>インジルビン</td><td>NF-κB シグナル伝達</td><td>宿主</td><td>ウイルス誘発性の p38 MAPキナーゼ活性化と NF-κB 転移を中断し、ヒト気管支上皮細胞における CCL5 の発現を低減</td><td></td><td>10</td></tr>
+<tr><td></td><td>インジルビン誘導体</td><td>—</td><td>宿主</td><td>炎症性サイトカインとケモカインを抑制</td><td></td><td>11</td></tr>
+<tr><td>単味生薬: <strong>大青葉</strong>（Folium isatidis）</td><td>モノマー</td><td>—</td><td>—</td><td>インフルエンザウイルス感染マウスの死亡率を低減</td><td>紀元前202–220年</td><td>24</td></tr>
+<tr><td>単味生薬: <strong>金銀花</strong>（<em>Lonicera japonica</em>）</td><td>エタノール抽出物</td><td>マウス血清中の抗ウイルス・免疫調節・抗炎症タンパク質</td><td>宿主</td><td>インフルエンザウイルス感染マウスの肺指数を低減し、肺病変を緩和</td><td>1400年代</td><td>25</td></tr>
+<tr><td>単味生薬: <strong>連翹</strong>（<em>Forsythia suspensa</em>）</td><td>エタノールおよび水抽出物</td><td>—</td><td>宿主</td><td>H1N1ウイルス感染 A549細胞における CCL5 と MCP-1 の分泌を調節</td><td></td><td>26</td></tr>
+<tr><td><strong>複合生薬処方</strong></td><td>麻杏石甘湯＋銀翹散</td><td>—</td><td>—</td><td>H1N1インフルエンザウイルス感染患者の解熱までの時間を短縮</td><td>2011</td><td>27</td></tr>
+<tr><td></td><td>連花清瘟カプセル</td><td>—</td><td>—</td><td>H1N1インフルエンザウイルス感染患者の解熱までの時間を短縮</td><td>2004</td><td>28</td></tr>
+</tbody></table>
+<blockquote>補足: 表1の対比は示唆に富む。<strong>西洋薬はすべて「ウイルス」を標的にしている</strong>（DAS181 のみ宿主受容体を除去）。対して<strong>中国生薬は大半が「宿主」を標的にしている</strong>——免疫調節、炎症性サイトカインの抑制、粘膜防御の増強。  この違いは薬剤耐性の観点で決定的である。ウイルスを直接叩けば、ウイルスは変異して逃れる（オセルタミビル耐性株の出現がその典型）。<strong>宿主側を調整するなら、ウイルスに耐性を獲得する余地は原理的に少ない。</strong> 本節末尾が「複数の作用部位をもつ治療法を用いることが、耐性ウイルス株の発生を防ぐか遅らせうる」と述べるのは、この含意である。  なお、<strong>金銀花と連翹</strong>が登場するが、この2生薬に黄芩を加えたものが<strong>双黄連口服液</strong>である。本サイトには、その品質評価を扱った論文（<em>J. Chromatogr. A</em> 2023）の全訳を収録している。  表中の「1260年代」「紀元前202–220年」「1400年代」といった記録年は、その生薬が文献に初出した年代を指しており、西洋薬の発見年（1965年など）と並べることで<strong>使用の歴史の長さを対比</strong>させる意図がある。</blockquote>
+<h2>TCMを用いた創薬戦略</h2>
+<p><strong>高い品質の一貫性・治療の有効性・安全性の保証・患者にとっての手頃さ</strong>が、医薬品開発の鍵となる要因である。TCMは以下の点でこれらの領域の研究に情報を与えうる。</p>
+<p><strong>第一に</strong>、TCMベースのインフルエンザ治療に用いられる<strong>トランスレーショナル研究の戦略と原則は、より広く適用できる</strong>だろう。2つのアプローチがありうる——標準的な<strong>ボトムアップのベンチ・トゥ・ベッドサイド戦略</strong>か、あるいは<strong>TCMの経験的医学知識をエビデンスに基づく研究戦略へと移行させる、より革新的なアプローチ</strong>である。<strong>我々は後者のほうが、基礎科学とTCMの臨床経験の間の現実世界の相互作用をよりよく反映すると考える。</strong></p>
+<p><strong>第二に</strong>、CHFに関する<strong>基礎研究と臨床研究は並行して実施できる</strong>だろう。例えば、一般的に処方される CHF の<strong>抽出物および／または活性化合物の組み合わせの効果</strong>を、文書化された臨床経験に基づく<strong>標準化された臨床試験と同時に</strong>検討できる。</p>
+<p><strong>第三に</strong>、CHFの<strong>品質・有効性・安全性の標準化された評価のための、明確に定義された方法論がなお欠けている</strong>。<strong>基礎研究プロジェクトや臨床試験に含める前に、CHF中の生薬の組成と活性成分の水準を標準化し、データの完全性を維持することが重要</strong>である。</p>
+<p><strong>最後に</strong>、TCM研究は複雑である。したがって、<strong>すべての研究者が学際的・革新的・協働的な研究プロジェクトを開発すること</strong>が求められる。それを通じてTCMの科学的基盤を解明し、<strong>現代医科学を組み込んだ新しい枠組み</strong>を構築できる。</p>
+<p>我々は、IIR を用いて上記の戦略を実装しようとする先駆者であり、<strong>2010年に中国で最初の無作為化対照試験を開始した</strong>。生物活性化合物の探索には様々な &#x27;omics 技術が同時に用いられており、将来的に独自の薬学的活性をもつ活性成分がさらに見つかることを期待している。</p>
+<p>我々はまた、<strong>現代技術の応用とTCMの臨床経験を組み合わせて</strong>きた。例えば施術者は、<strong>IIR が疾患の発症早期に投与されると有益な臨床効果を示すように見える</strong>ことに気づいている [9]。これらの研究は、<strong>IIR の作用機序のさらなる調査が正当化される</strong>ことを示唆する。重要なことに、<strong>複数の作用部位をもつ治療法を用いることは、耐性ウイルス株の発生を防ぎ、あるいは遅らせうる。</strong></p>
+<p><strong>謝辞</strong>: データ収集と図の作成について Runfeng Li と Zhou Rong に感謝する。財政支援は、広東省自然科学基金（S2012010008276）、中国国家自然科学基金（U1201227）、第12次5か年計画「重大新薬創製」国家科技重大特定項目（2013ZX09201021）、マカオ特別行政区科学技術発展基金（019/2013/A1、ZNS宛）による。</p>
+<h3>第4編の引用文献</h3>
+<ol><li>J. Curran, G. P. Locum, Glasgow, <em>Brit. Med. J.</em> <strong>336</strong>, 777 (2008).</li><li>L. Jiang, L. Deng, T. Wu, <em>Cochrane Database Syst. Rev.</em> <strong>3</strong>, CD004559 (2013).</li><li>J. Zhong, X. Cui, Y. Shi, Y. Gao, H. Cao, <em>J. Tradit. Chin. Med.</em> <strong>33</strong>, 200 (2013).</li><li>J. P. Dai et al., <em>PLOS ONE</em> <strong>7</strong>, e42706 (2012).</li><li>Z. Yang et al., <em>Mol. Med. Rep.</em> <strong>5</strong>, 793 (2012).</li><li>Q. Zhu et al., Chinese Patent CN 102836168 A (2012).</li><li>Z. Yang et al., <em>Int. J. Mol. Med.</em> <strong>31</strong>, 867 (2013).</li><li>E. K. Shin, D. H. Kim, H. Lim, H. K. Shin, J. K. Kim, <em>Inflammation</em> <strong>33</strong>, 110 (2010).</li><li>Y. L. Zhao et al., <em>Chin. J. Integr. Med.</em> <strong>14</strong>, 207 (2008).</li><li>N. K. Mak et al., <em>Biochem. Pharmacol.</em> <strong>67</strong>, 167 (2004).</li><li>C. K. Mok et al., <em>Antiviral Res.</em> <strong>106</strong>, 95 (2014).</li><li>B. R. O&#x27;Keefe et al., <em>Antimicrob. Agents Chemother.</em> <strong>47</strong>, 2518 (2003).</li><li>J. F. Rossignol, S. La Frazia, L. Chiappa, A. Ciucci, M. G. Santoro, <em>J. Biol. Chem.</em> <strong>284</strong>, 29798 (2009).</li><li>M. P. Malakhov et al., <em>Antimicrob. Agents Chemother.</em> <strong>50</strong>, 1470 (2006).</li><li>R. R. Grunert, J. W. McGahen, W. L. Davies, <em>Virology</em> <strong>26</strong>, 262 (1965).</li><li>J. R. Schnell, J. J. Chou, <em>Nature</em> <strong>451</strong>, 591 (2008).</li><li>Y. Furuta et al., <em>Antimicrob. Agents Chemother.</em> <strong>46</strong>, 977 (2002).</li><li>Y. Furuta et al., <em>Antimicrob. Agents Chemother.</em> <strong>49</strong>, 981 (2005).</li><li>C. U. Kim et al., <em>J. Am. Chem. Soc.</em> <strong>119</strong>, 681 (1997).</li><li>Y. S. Babu et al., <em>J. Med. Chem.</em> <strong>43</strong>, 3482 (2000).</li><li>M. von Itzstein et al., <em>Nature</em> <strong>363</strong>, 418 (1993).</li><li>M. Yamashita et al., <em>Antimicrob. Agents Chemother.</em> <strong>53</strong>, 186 (2009).</li><li>D. D. Sun, S. H. Yan, J. W. Chen, X. Li, L. W. He, <em>J. Nanjing Univ. TCM</em> <strong>29</strong>, 53 (2013).</li><li>Z. Liu, Z. Q. Yang, H. Xiao, <em>Virol. Sin.</em> <strong>25</strong>, 445 (2010).</li><li>H. Zhang, J. Song, J. Shi, <em>Chin. J. Chin. Materia Medica</em> <strong>36</strong>, 1071 (2011).</li><li>H. C. Ko, B. L. Wei, W. F. Chiou, <em>J. Ethnopharmacol.</em> <strong>102</strong>, 418 (2005).</li><li>C. Wang et al., <em>Ann. Intern. Med.</em> <strong>155</strong>, 217 (2011).</li><li>H. X. Ouyang, Q. Y. Tang, Y. Z. Chen, Y. Wei, G. S. Li, <em>Chin. Med. Herald</em> <strong>30</strong>, 7 (2010).</li></ol>
+<hr>
+<h1>第5編　伝統医学の哲学に着想を得た新規創薬戦略</h1>
+<p><strong>原題</strong>: A novel drug discovery strategy inspired by traditional medicine philosophies（S38）</p>
+<p><strong>著者</strong>: Xinfeng Zhao ¹†・Xiaohui Zheng ¹†・<strong>Tai-Ping Fan ²\</strong><em>・Zijian Li ³・Youyi Zhang ³・<strong>Jianbin Zheng ¹\</strong></em></p>
+<ul><li>¹ 西北大学（中国 西安）</li><li>² ケンブリッジ大学 薬理学科（英国 ケンブリッジ）</li><li>³ 北京大学第三病院 血管医学研究所／衛生部 心血管分子生物学・調節ペプチド重点実験室／教育部 分子心血管科学重点実験室／北京市 心血管受容体研究重点実験室（中国 北京）</li><li>† 同等に貢献　\*責任著者: tpf1000@cam.ac.uk（T.F.）／zhengjb@nwu.edu.cn（J.Z.）</li></ul>
+<h2>還元主義の限界</h2>
+<p>数千年にわたり、<strong>中国（伝統中医薬, TCM）・日本（漢方医学, Kampō medicine）・韓国（伝統韓医学）・インドネシア（ジャムウ, Jamu）・インド（アーユルヴェーダ医学）・北米（植物療法）・欧州（ハーバリズム）</strong> の伝統医学は、健康の維持ならびにヒト疾患の予防・治療のための主要な手段であった [1]。</p>
+<p>時とともに、天然物の医学的応用から得られた経験的知識は、<strong>各文化に固有の自然理解によって特徴づけられる複雑な医学知識体系——本草（materia medica）——へと組み込まれていった</strong>。</p>
+<p><strong>ほぼ200年にわたり、天然物の伝統的使用は有効な医薬品の供給源でもあり続けてきた</strong> [2–5]。この戦略は、天然物からの活性成分の単離・精製、ハイスループット・ハイコンテントスクリーニング、そして米国食品医薬品局その他の規制当局のガイドラインに従った後続の解析と試験を通じた、<strong>新規医薬品の同定と開発への成功したアプローチ</strong>を代表する [6–8]。</p>
+<p>しかしながら、<strong>フィトコンプレックス（植物複合体）の薬理学的活性成分は、必ずしも元の天然分子であるとは限らず、宿主特異的な代謝産物や、他の生薬との併用後に形成される分子複合体でありうる</strong>。この複雑性が、天然物の研究において重大な科学的課題を生み出してきた [9, 10]。</p>
+<p><strong>伝統医薬の多成分性は、複数の潜在的な分子相互作用・複数の標的・多数の代謝副産物</strong>をもたらすため、<strong>従来の還元主義的アプローチは活性成分の同定において限界をもち</strong>、より<strong>ネットワーク志向の全体論的アプローチ</strong>が好ましいことが示唆される [12]。</p>
+<h2>君臣佐使と七情——「君使」モデルの提案</h2>
+<p>天然物の複雑な組成に内在する課題に対処するため、<strong>TCMの根底にある理論的原則</strong>から着想を得た [13]。これには<strong>臨床観察の緻密な記録</strong>が含まれ、それが伝統的治療の実践に情報を与え、ガイドラインと原則の構築を助ける。これらの実践の原則は、<strong>実際の臨床問題にうまく適用されたときに検証される</strong> [13]。</p>
+<p>我々はこのアプローチを、<strong>TCMの複方（Fufang、複合処方）を作る際に、異なる本草を特定の様式で組み合わせる「君臣佐使（Jun-Chen-Zuo-Shi）」の原則</strong>の解析に適用した。さらに、創薬の戦略として、<strong>TCM処方のうち血流に到達する成分と、体内で及ぼしうる薬理効果を同定するための、単純化した「君使（Jun-Shi）」モデル</strong>を提案する。</p>
+<p><strong>君臣佐使</strong>と<strong>七情（Qiqing、相性のよい生薬を組み合わせる7つの方法）</strong> は、TCM治療の処方構成の背後にある基礎理論である。君臣佐使理論は、<strong>各生薬の治癒的・薬理学的特性と成分に基づいて、複方における異なる生薬の組み合わせを導く</strong>。</p>
+<table>
+<thead><tr><th>構成</th><th>役割</th></tr></thead>
+<tbody>
+<tr><td><strong>君（Jun、皇帝）</strong></td><td>疾患の主症状を標的とする<strong>主たるフィトコンプレックス</strong>。単一処方として投与される君薬の種類はごく少数で、通常は<strong>大量</strong>に用いられる。</td></tr>
+<tr><td><strong>臣（Chen、大臣）</strong></td><td>君と相乗して<strong>治療効果を強化</strong>し、副次的な症状も治療しうる。</td></tr>
+<tr><td><strong>佐（Zuo、補佐）</strong></td><td>君および／または臣の<strong>有害作用・毒性作用を軽減または排除</strong>しつつ、それらの効果も高め、時に副次的症状を治療する。</td></tr>
+<tr><td><strong>使（Shi、使者）</strong></td><td>主要成分の<strong>病変部位への送達を促進</strong>し、あるいは他の成分の全体的な作用を促進する [14, 15]。</td></tr>
+</tbody></table>
+<p><strong>七情</strong>の原則は、生薬が<strong>独立して用いられうること</strong>、他の生薬の効果を<strong>「相須（reinforce）」</strong>（両生薬が類似の特性をもつ場合）あるいは<strong>「相使（enhance）」</strong>（主たる薬物の効能が改善される場合）できること、または望ましくない負の副作用に<strong>「拮抗（antagonize）」</strong> できることを記述する。実際上、七情は<strong>処方における2つの生薬の最適な組み合わせと比率を決定する</strong>のに役立つ。</p>
+<p><strong>我々は、君臣佐使と七情の原則を組み合わせて「君使（Jun-Shi）生薬ペア」という概念を創出し、単一の生薬と比較してより良い治療効能を提供することを提案する</strong> [16]。</p>
+<p>君使生薬ペアはまた、<strong>複方の相乗的特性</strong>をもち、活性植物化学成分を指定された作用部位に標的化する。同時に、<strong>君使生薬ペアのより単純な組成は、科学的解析のためのより複雑さの低い処方</strong>を提供し、TCM関連の供給源から新薬を探索する際の複雑さと困難を軽減するはずである。</p>
+<p>これらの理論に基づき、我々は<strong>君使生薬ペアからの生体内エフェクター化合物のスクリーニングを通じた、革新的な新薬発見戦略</strong>を提案する。<strong>君薬が主要な作用を担い、使薬が、君薬の物理化学的性質を修飾するか、薬理学的標的との相互作用を促進することによって、その活性を増強する。</strong> したがって、<strong>使薬の有無で君薬の作用と効能を比較することにより、薬理学的に意味のある差を同定できる。</strong></p>
+<blockquote>補足: 「君臣佐使」を4要素すべて扱うのではなく、<strong>君と使の2要素に絞る</strong>——これが本編の技術的な工夫である。  理由は単純で、<strong>成分数を減らせば解析可能になる</strong>からである。4成分の複方なら組み合わせは膨大だが、2生薬のペアなら「使を入れた／入れない」の比較だけで済む。しかも君使の関係は「主作用 vs 送達・増強」と役割がはっきりしているので、<strong>差分（differential compounds）</strong> として現れやすい。  つまり伝統理論を「信じる」のではなく、<strong>解析可能な最小単位を切り出すための設計指針として使う</strong>——という態度である。TCM理論の扱い方として、かなり実務的で節度がある。</blockquote>
+<h2>君使モデルの検証——丹参＋氷片</h2>
+<p><strong>複方丹参滴丸（Fufang Danshen Diwan、Dantonic pill）</strong> は、<strong>米国で第2相臨床試験を完了し、現在第3相試験が進行中</strong>であり [17]、我々の創薬戦略を試験する完璧な候補となった。</p>
+<p>我々は、この丸剤に含まれる **丹参（Danshen、<em>Radix Salviae miltiorrhizae</em>）と 氷片（Bingpian、ボルネオール）の生薬ペア<strong>に焦点を当て、君使相性モデルを検討することにした。その過程を</strong>図1**に示す。</p>
+<p><strong>氷片の併用投与により、ウサギ心臓において、丹参由来のフェノール酸——3-(3,4-ジヒドロキシフェニル)-2-ヒドロキシプロピオン酸（ダンシェンス, Danshensu）など——の濃度が上昇する</strong>ことが見出された。</p>
+<p>加えて、複方丹参滴丸における<strong>ダンシェンスの新規代謝産物、イソプロピル 3-(3,4-ジヒドロキシフェニル)-2-ヒドロキシプロパノエート（IDHP）</strong> が同定された [18]。</p>
+<p><strong>薬物動態研究は、この新規化合物が心臓組織と脳組織に優先的に見出される</strong>ことを示した。これは、<strong>TCMの原則に従ってこの処方が標的とすると期待される病変部位と一致している</strong>。</p>
+<p>さらに、<strong>合成 IDHP が生成され、心筋虚血傷害および脳虚血傷害に対する保護機能をもつことが示された</strong> [19, 20]。このことは、<strong>IDHP が複方丹参滴丸中の丹参−氷片の生薬処方におけるエフェクター化合物である</strong>ことを強く示唆する。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig5-1.png" alt="図1　君使生薬相性モデルを用いた生体内エフェクター化合物の同定に基づく創薬戦略の模式図（瓢箪型の図）。右上から時計回りに——複方丹参処方から君使相性モデルの原則により君薬と使薬（丹参−ボルネオール）を研究対象として選択 → LC-MS/MS で生体内・生体外の化合物を解析 → 主成分分析で差異化合物を抽出 → グレンジャー因果性検定などの因果関係解析 → エフェクター化合物の同定 → 受容体アフィニティクロマトグラフィーによる生物活性スクリーニング → 古典的な機能薬理アッセイによる活性評価 → 薬理学的活性化合物（心筋切片） → FDAガイドラインに従った治験新薬（IDHP錠） → モデルの広範な適用可能性 → 他の君使生薬ペアへ。" loading="lazy"><figcaption>図1　君使生薬相性モデルを用いた生体内エフェクター化合物の同定に基づく創薬戦略の模式図（瓢箪型の図）。右上から時計回りに——複方丹参処方から君使相性モデルの原則により君薬と使薬（丹参−ボルネオール）を研究対象として選択 → LC-MS/MS で生体内・生体外の化合物を解析 → 主成分分析で差異化合物を抽出 → グレンジャー因果性検定などの因果関係解析 → エフェクター化合物の同定 → 受容体アフィニティクロマトグラフィーによる生物活性スクリーニング → 古典的な機能薬理アッセイによる活性評価 → 薬理学的活性化合物（心筋切片） → FDAガイドラインに従った治験新薬（IDHP錠） → モデルの広範な適用可能性 → 他の君使生薬ペアへ。</figcaption></figure>
+<p><strong>図1の凡例（原文全訳）</strong>: 我々はまず、君使生薬相性モデルの原則を用いて、複雑な複方から<strong>君薬と使薬</strong>を研究対象として選択した。君使生薬ペアの生体内・生体外の化合物を、<strong>高速液体クロマトグラフィー質量分析（LC-MS）と核磁気共鳴</strong>によって解析した。LC-MSで得られたデータを抽出し、<strong>主成分分析</strong>（総パラメータ分散の再現を目指す分散重視の手続きで、各成分は各パラメータの共通分散と固有分散の両方を反映する）によってさらに解析し、<strong>差異化合物</strong>を明らかにした。得られた化合物を、<strong>グレンジャー因果性検定</strong>などの因果関係解析を用いて検討した。同定されたエフェクター化合物の生物活性は、<strong>受容体アフィニティクロマトグラフィー</strong>によってスクリーニングされ、<strong>古典的な機能薬理学的アッセイ</strong>によって確認されて、関心のあるリード化合物を同定した。1つのリードである <strong>IDHP</strong> は、米国食品医薬品局その他の規制当局が定めた治験新薬開発のガイドラインに従って、さらに評価された。<strong>IDHP の作用機序が、君使生薬相性モデルの創薬への広範な適用可能性をさらに確認することを期待する。</strong></p>
+<h2>結論と今後の展望</h2>
+<p>ここに述べた研究は、<strong>TCM生薬処方における活性物質の同定に基づく新規の創薬戦略</strong>を提案する。この戦略は、<strong>君使生薬ペアの選択、因果関係解析のための定量モデルの確立、受容体アフィニティクロマトグラフィーによる活性物質同定システム</strong>からなる（図1）[21, 22]。</p>
+<p>還元主義的アプローチを用いる従来の創薬手順と比較して、現行の戦略は、<strong>君臣佐使と七情の原則を用いて君使生薬相性モデルを考案し、活性成分同定のための標的の数を減らす</strong>。これにより、<strong>創薬過程の恣意性を減らし、その効率を向上させる</strong>ことができる。重要なことに、これは<strong>TCM理論をさらに豊かにし、複雑な生物医学的問題の研究に新しい視点を提供しうる</strong>。</p>
+<p><strong>IDHP での成功した研究に基づき</strong>、我々は創薬戦略に従って、<strong>ダンシェンス・カフェ酸・ロスマリン酸といった丹参の活性化合物の構造にボルネオールを組み込むことにより</strong>、<strong>1,7,7-トリメチルビシクロ[2.2.1]ヘプタン-2-イル 3-(3,4-ジヒドロキシフェニル)-2-ヒドロキシプロパノエート</strong>を含む一連の<strong>君使化合物</strong>をさらに合成した。</p>
+<p>これらの化合物の<strong>特許は、米国（No. 8017786）・カナダ（No. 2652299）・ロシア（No. 2421443）・欧州連合（No. 2019090）を含む 34の国・地域で承認</strong>されている。予備的な薬理学的研究は、これらの化合物のいくつかが <strong>ApoE⁻/⁻ マウスにおけるアテローム性プラーク形成に対して有効</strong>であることを示している（Yonggong Zhai、未発表の観察）。</p>
+<p>結果は、これらの<strong>君使化合物が、創薬のための組み合わせ型TCM由来分子のデータベース構築の潜在的候補</strong>となりうることを示している。</p>
+<p><strong>謝辞</strong>: 君使相互作用のモデル化について陝西省人民病院の Qinshe Liu、IDHP の薬物動態と組織分布の研究への協力について山東省科学院生物研究所の Kechun Liu と西安交通大学の Weijin Zang・Xiaopu Zheng、IDHP の合成について西安石油大学の Qunzheng Zhang に感謝する。本研究は、中国国家自然科学基金（21275116, 21475103, 81030001）、長江学者と大学革新研究チーム推進計画（IRT1174）、陝西省研究技術革新研究チームプロジェクト（2013KCT-24）、中国国家重大科学機器設備開発プロジェクト（2013YQ170525）の助成を受けた。</p>
+<h3>第5編の引用文献</h3>
+<ol><li>H. Itokawa, S. L. Morris-Natschke, T. Akiyama, K. H. Lee, <em>J. Nat. Med.</em> <strong>62</strong>, 263 (2008).</li><li>W. Lam et al., <em>Sci. Transl. Med.</em> <strong>45</strong>, 1 (2010).</li><li>W. H. J. Li, J. C. Vederas, <em>Science</em> <strong>325</strong>, 161 (2009).</li><li>D. Normile, <em>Science</em> <strong>299</strong>, 188 (2003).</li><li>V. D. Luca, V. Salim, S. M. Atsumi, F. Yu, <em>Science</em> <strong>336</strong>, 1658 (2012).</li><li>F. E. Koehn, G. T. Carter, <em>Nat. Rev. Drug Discov.</em> <strong>4</strong>, 207 (2005).</li><li>Editorial, <em>Nat. Rev. Drug Discov.</em> <strong>6</strong>, 3 (2007).</li><li>L. Paterson, E. A. Anderson, <em>Science</em> <strong>310</strong>, 451 (2005).</li><li>G. Le, L. Zhang, S. B. Su, <em>Mod. Tradit. Chin. Med. Mater. Med.</em> <strong>12</strong>, 15 (2010).</li><li>J. P. Zhu, R. Ken, <em>Clin. Acupunct. Orient. Med.</em> <strong>3</strong>, 77 (2002).</li><li>S. Prizker, <em>Clin. Acupunct. Orient. Med.</em> <strong>3</strong>, 99 (2002).</li><li>S. E. Phelan, <em>Emergence</em> <strong>3</strong>, 120 (2001).</li><li>Y. Jiang, <em>Inform. Tech.</em> <strong>11</strong>, 20 (2001).</li><li>L. Wang et al., <em>Proc. Natl. Acad. Sci. U.S.A.</em> <strong>105</strong>, 4826 (2008).</li><li>T. P. Fan, J. C. Yeh, K. W. Leung, P. Y. K. Yue, R. N. S. Wong, <em>Trends Pharmacol. Sci.</em> <strong>27</strong>, 297 (2006).</li><li>S. P. Wang et al., <em>J. Ethnopharmacol.</em> <strong>143</strong>, 412 (2012).</li><li>http://www.clinicaltrials.gov/ct2/show/study/NCT01659580</li><li>X. H. Zheng et al., <em>J. Sep. Sci.</em> <strong>30</strong>, 851 (2007).</li><li>S. P. Wang et al., <em>Eur. J. Pharmacol.</em> <strong>579</strong>, 283 (2008).</li><li>J. W. Tian et al., <em>Neurosci. Lett.</em> <strong>442</strong>, 279 (2008).</li><li>X. H. Zheng et al., <em>Chinese Sci. Bull.</em> <strong>53</strong>, 842 (2008).</li><li>X. F. Zhao et al., <em>J. Chromatogr. B</em> <strong>878</strong>, 2029 (2010).</li></ol>
+<hr>
+<h1>第6編　古代の組み合わせ処方を読み解く——麝香保心丸</h1>
+<p><strong>原題</strong>: Deciphering ancient combinatorial formulas: The Shexiang Baoxin pill（S40）</p>
+<p><strong>著者</strong>: Runhui Liu ¹‡・R. Scott Runyon ²‡・Yuchong Wang ³・Stephen G. Oliver ³・<strong>Tai-Ping Fan ²\</strong><em>・<strong>Weidong Zhang（張衛東）¹\</strong></em></p>
+<ul><li>¹ 第二軍医大学 薬学院（中国 上海）</li><li>² ケンブリッジ大学 薬理学科（英国 ケンブリッジ）</li><li>³ ケンブリッジ・システム生物学センター／生化学科, ケンブリッジ大学（英国 ケンブリッジ）</li><li>‡ 同等に貢献　\*責任著者: tpf1000@cam.ac.uk（T.F.）／wdzhangy@hotmail.com（W.Z.）</li></ul>
+<h2>複方とポリピル</h2>
+<p><strong>古代の組み合わせ処方（複方, Fufang）は、西洋医学で用いられる「ポリピル（polypill）」と類似点をもつ。</strong> ポリピルとは、<strong>複数の医薬品治療を1つに含む単一の薬剤</strong>であり、単一あるいは複数の疾患の治療を意図しうる。</p>
+<p>ポリピルの例が <strong>Polycap</strong> で、<strong>アスピリン・シンバスタチン・ラミプリル・アテノロール・ヒドロクロロチアジド</strong>からなり、高血圧の治療と心臓発作・脳卒中の予防に用いられる [1]。</p>
+<p><strong>伝統中医薬（TCM）</strong> において、<strong>複方</strong>は、複数の植物・鉱物、時に動物由来の供給源から得られる治療用化合物の集合を指す。例えば、<strong>四硫化四砒素（As₄S₄）・インジルビン・タンシノンIIA</strong> を含む処方「<strong>雄黄−青黛（Realgar-Indigo naturalis）</strong>」は、<strong>前骨髄球性白血病の有効な治療法</strong>であることが実証されている [2]。</p>
+<p>欧州では、**キバナノクリンザクラ（<em>Primula veris/elatior</em>）・キバナリンドウ（<em>Gentiana lutea</em>）・セイヨウニワトコ（<em>Sambucus nigra</em>）・スイバ属（<em>Rumex</em> 種）・クマツヅラ（<em>Verbena officinalis</em>）<strong> の5生薬処方が、</strong>欧州医薬品庁 生薬製品委員会<strong>により</strong>副鼻腔炎および気管支炎**に承認されている。</p>
+<h2>麝香保心丸（SBP）とは</h2>
+<p>組み合わせ処方の有効性と生物活性を研究するため、<strong>麝香保心丸（Shexiang Baoxin Pill, SBP）</strong> を試験例として選んだ。</p>
+<p>SBPは、<strong>南宋時代（10〜12世紀）に呼吸困難を伴う胸痛の治療に用いられた『太平恵民和剤局方（Prescriptions of the Bureau of Taiping People&#x27;s Welfare Pharmacy）』に記録された古典的な古代処方「蘇合香丸（Suhexiang Pill）」に由来する</strong>。</p>
+<p>現代型のSBPは、<strong>1981年に戴瑞鴻（Rui-Hong Dai）教授の指導のもとで開発され</strong> [3]、<strong>7種の中国本草</strong>からなる（<strong>図1</strong>）。</p>
+<p>今日の中国において、SBPは、<strong>安定狭心症、および冠動脈疾患（CHD）に起因する胸痛・胸部不快感</strong>の治療のために広く用いられる複方となっている。<strong>いくつかの無作為化前向き臨床研究</strong>は、SBPが <strong>CHDによる狭心症の頻度と日々のニトログリセリン使用を減少させうる</strong> [4, 5] こと、さらには<strong>心電図と灌流イメージングで測定される虚血性心筋変化を軽減しうる</strong> [6] ことを強く示唆している。</p>
+<p>しかしながら、多くの複方と同様、<strong>SBPが食品医薬品規制の厳格な国々の患者集団に届くためには、数多くの問いに答えねばならない</strong>。</p>
+<p><strong>現代の西洋医薬品では、活性成分が合成され、併用投与される前に臨床試験で個別に検討される。TCMではこの過程が逆になっている。</strong> 現在の課題は、<strong>SBPの組成・薬力学・薬物動態、そして処方であるがゆえに存在しうる薬力学的シナジーを定義すること</strong>である。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig6-1.png" alt="図1　麝香保心丸（SBP）の組成。SBPを構成する比較的豊富な15化合物と、それらが由来する本草を示す。純化合物は SBP の高速液体クロマトグラフィー質量分析により同定された（文献7, 11）。中央の「麝香保心丸」から7つの生薬へ線が伸びる——蟾酥（Bufonis Venenum）: ブファリン・シノブファギン・ガマブフォタリン／人参（Ginseng Radix）: ジンセノシド Rb1・Re・Rb2／肉桂（Cinnamomi Cortex）: 桂皮酸・シンナムアルデヒド／蘇合香（Styrax）: 安息香酸ベンジル／牛黄（Bovis Calculus）: コール酸・ウルソデオキシコール酸・ケノデオキシコール酸・デオキシコール酸／麝香（Moschus）: ムスコン／氷片（Borneolum）: ボルネオール。太字の化合物が簡略化処方の候補。（画像提供 www.tcmwiki.com）" loading="lazy"><figcaption>図1　麝香保心丸（SBP）の組成。SBPを構成する比較的豊富な15化合物と、それらが由来する本草を示す。純化合物は SBP の高速液体クロマトグラフィー質量分析により同定された（文献7, 11）。中央の「麝香保心丸」から7つの生薬へ線が伸びる——蟾酥（Bufonis Venenum）: ブファリン・シノブファギン・ガマブフォタリン／人参（Ginseng Radix）: ジンセノシド Rb1・Re・Rb2／肉桂（Cinnamomi Cortex）: 桂皮酸・シンナムアルデヒド／蘇合香（Styrax）: 安息香酸ベンジル／牛黄（Bovis Calculus）: コール酸・ウルソデオキシコール酸・ケノデオキシコール酸・デオキシコール酸／麝香（Moschus）: ムスコン／氷片（Borneolum）: ボルネオール。太字の化合物が簡略化処方の候補。（画像提供 www.tcmwiki.com）</figcaption></figure>
+<h2>還元主義的アプローチ——SBPを分解する</h2>
+<p><strong>ガスクロマトグラフィー・液体クロマトグラフィーと質量分析を組み合わせた高度な分離・解析技術</strong>により、複方ベースの治療法を構成する正確な化学種を同定することが可能になった。</p>
+<p>現在までに、<strong>SBPから 70種を超える不揮発性化学種と 40種を超える揮発性化学種</strong>が同定されている [7, 8]。ラットへのSBPの経口投与後、これら純化合物のうち <strong>22種と 8種の代謝産物が血漿中に観察</strong>されえた [9, 10]。</p>
+<p>これらの分析技術は、<strong>SBPの「化学的フィンガープリント」の確立</strong>に役立ち、個々の本草と得られた薬剤の<strong>バッチ間比較</strong>を可能にする。これは製造における品質管理 [11, 12]、および<strong>再現性のある安全性と有効性</strong>に向けた重要な一歩である。</p>
+<p>そうした化学的フィンガープリントは、<strong>活性成分の同定にとっても不可欠</strong>である。例えば、SBPで同定された主要な化合物クラスには、<strong>ブファジエノリド類・ジンセノシド類・胆汁酸類</strong>が含まれる（図1）。</p>
+<p>同定された2つの胆汁酸、<strong>ウルソデオキシコール酸とケノデオキシコール酸</strong>は、米国食品医薬品局（FDA）により承認され、それぞれ<strong>ウルソジオール（ursodiol）とケノジオール（chenodiol）</strong> として販売されている。<strong>胆石の予防と管理</strong>のために処方されるこれらの胆汁酸は、<strong>コレステロールの産生を減少させ、CHDの強力な危険因子である高トリグリセリド血症を軽減する</strong> [13]。</p>
+<p>**蟾酥（<em>V. bufonis</em>）とSBPに豊富な ブファジエノリド類<strong> [11] は</strong>強心配糖体<strong>であり、植物由来の強心配糖体でFDA承認のクラスV抗不整脈薬かつ陽性変力作用薬である</strong>ジゴキシン**と類似点をもつ [14]。<em>V. bufonis</em> の主要なブファジエノリドである<strong>ブファリン（bufalin）</strong> はまた、<strong>Na⁺,K⁺-ATPase 阻害剤</strong>であり、<strong>心収縮力を増加させ</strong> [15]、<strong>心不全時にレニン−アンジオテンシン系を保護的にダウンレギュレートしうる</strong> [16]。</p>
+<p>**肉桂（<em>Cortex cinnamomi</em>）に豊富な小分子 シンナムアルデヒド<strong> [7] は、</strong>強力な血管拡張物質<strong>であることが示されており [17]、</strong>侵害受容に関与する一過性受容体電位チャネル（TRPV1 と TRPA1）を活性化する** [18, 19]。</p>
+<p><strong>疼痛知覚の能動的な低減、コレステロール・トリグリセリド値の低下、収縮力への効果</strong>は、SBPの生物活性成分が心保護効果を発揮するいくつかの経路を代表しうる。</p>
+<p>任意の複方についての還元主義的アプローチの一部として、<strong>同定された生物活性成分が疾患過程にどう影響するかをより深く検討することが、処方の作用機序を特徴づけるうえで不可欠</strong>でありうる。</p>
+<blockquote>補足: SBPの構成生薬には、<strong>麝香（ジャコウジカの分泌物）・蟾酥（ヒキガエルの毒腺分泌物）・牛黄（ウシの胆石）</strong> という動物由来生薬が含まれる。第3編で見たとおり、FDAのボタニカル定義は動物由来成分を原則除外するが、「<strong>伝統的なボタニカル調製物の軽微な部分を構成する場合を除く</strong>」という例外があり、SBPのような処方はこの例外に該当しうる。  また、麝香はワシントン条約（CITES）附属書の対象で、国際流通には制約がある。日本薬局方にも麝香は収載されているが、実際の製剤では入手性が課題になる。</blockquote>
+<h2>システム生物学的アプローチ——SBPを丸ごと保つ</h2>
+<p><strong>システム生物学は、複方の作用機序を探索する追加の戦略を提供</strong>し、すでに<strong>2つの抗狭心症薬 ラノラジンとイバブラジン</strong>の開発成功に貢献している [20]。</p>
+<p>複雑系をその個々の構成要素を調べることで研究する還元主義的アプローチとは対照的に、<strong>システム生物学は、トランスクリプトミクス・プロテオミクス・メタボロミクス・バイオインフォマティクスのデータと解析を統合することによって、より広い文脈で生物学的ネットワークを理解することに焦点を当てる</strong> [20, 21]。</p>
+<p>最近我々は、<strong>ケモゲノミクス（chemogenomic）アプローチ</strong>を用いた、複方の生体内機構のより包括的な研究を開始した（<strong>図2</strong>）。</p>
+<p>例えば、**出芽酵母 <em>Saccharomyces cerevisiae</em> における薬物誘発性ハプロ不全プロファイリング（drug-induced haploinsufficiency profiling）<strong> [22] を用いれば、</strong>機能喪失アッセイから機能情報を得て、SBPの個々の生物活性実体または組み合わせたサブセットに対する細胞応答を体系的に検討**できる。</p>
+<p><strong>SBPに対して過敏性を示すヘテロ接合株は、薬剤に応答する経路と標的を明らかにしうる</strong>ため、細胞という文脈におけるその作用様式についての手がかりを提供する。<strong>低分子に対する細胞応答の既存の集成（compendium）</strong> により、確立された薬剤とのプロファイル類似性に基づいて、新規化合物の機構を推論できる [23]。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig6-2.png" alt="図2　ケモゲノミクスによるプロファイリング。左端＝複方に含まれる複雑な化学成分（重ね合わせた構造式）→ モデル生物（酵母）を用いた「ケモゲノミクスプロファイリング」→ 複方の発現プロファイル（階層クラスタリング付きヒートマップ）→ 上方向は「薬剤発現プロファイルの集成」との照合によるシグネチャー同定 下方向は機能ネットワーク（タンパク質合成・シグナル伝達・細胞呼吸のモジュール）→ 両者が合流して「システムレベルでの作用様式」に至る。" loading="lazy"><figcaption>図2　ケモゲノミクスによるプロファイリング。左端＝複方に含まれる複雑な化学成分（重ね合わせた構造式）→ モデル生物（酵母）を用いた「ケモゲノミクスプロファイリング」→ 複方の発現プロファイル（階層クラスタリング付きヒートマップ）→ 上方向は「薬剤発現プロファイルの集成」との照合によるシグネチャー同定 下方向は機能ネットワーク（タンパク質合成・シグナル伝達・細胞呼吸のモジュール）→ 両者が合流して「システムレベルでの作用様式」に至る。</figcaption></figure>
+<p><strong>メタボロミクス的手法は、すでにSBPの特性評価に有用であることが証明されている。</strong> ラットの<strong>急性心筋梗塞（MI）モデル</strong>において、<strong>酸化的傷害・エネルギー代謝およびアミノ酸代謝の機能不全・炎症</strong>に関与する多数の血漿・尿中バイオマーカーが、<strong>部分最小二乗判別分析（PLS-DA）プロット</strong>を用いて同定されている [24, 25]。</p>
+<p><strong>MI前に経口投与されたSBPは、同定されたこれらのバイオマーカーの多く——乳酸・ホモシステイン・プロスタグランジンE2 を含む——の変化を有意に反転させ、ほぼ正常値に戻すことができた</strong> [25]。</p>
+<p><strong>SBPその他の複方のケモゲノミクスおよびメタボロミクスの応答シグネチャーの解析は、より広い細胞過程への影響を明らかにし、潜在的な標的を同定しうる。</strong></p>
+<h2>複雑さから単純さへ——複方の新しい開発戦略</h2>
+<p><strong>複方のすべての成分が活性であるわけではない</strong>ため、<strong>その活性成分の組み合わせが、治療標的と作用機序のより容易な同定を促進する「簡略化された複方」を提供しうる</strong>。</p>
+<p><strong>SBPの簡略化処方を開発する初期の試み</strong>（図1の太字の分子）は、ラットMIモデルにおいて<strong>いくらか有望な結果</strong>を示しており [26]、複方の開発における<strong>還元主義的アプローチとシステム生物学的アプローチの統合の可能性</strong>を示している。</p>
+<p>究極的には、<strong>厳格な品質管理と精製を実施し、余分な化合物を除去することにより、そうしたアプローチは他の疾患のための新世代のポリピルを創出するのにも等しく適用できる</strong>だろう。</p>
+<blockquote>補足: 本編の戦略は「<strong>複方 → 簡略化複方 → ポリピル</strong>」という一本の道筋である。伝統処方をそのまま医薬品にするのではなく、<strong>活性成分だけを残した簡略版</strong>を作って開発対象にする。  これは第3編のFDAアプローチ（混合物のまま「証拠の総体」で承認する）とは<strong>思想が異なる</strong>点に注意したい。FDAは「全体をAPIとみなす」、本編は「活性なものだけ残す」。前者は伝統処方の姿を保つが品質管理が難しく、後者は品質管理が容易だが伝統からは離れる。<strong>どちらが正しいという話ではなく、開発の目標次第</strong>である。  なお図1で太字になっている簡略化候補は、<strong>ブファリン・ジンセノシドRb1・ジンセノシドRe・桂皮酸・コール酸・ムスコン・ボルネオール</strong>の7成分。7生薬から1成分ずつ選んだ格好になっている。</blockquote>
+<h3>第6編の引用文献</h3>
+<ol><li>N. J. Wald, D. S. Wald, <em>Postgrad. Med. J.</em> <strong>86</strong>, 257 (2010).</li><li>L. Wang et al., <em>Proc. Natl. Acad. Sci. U.S.A.</em> <strong>105</strong>, 4826 (2008).</li><li>X. P. Luo, H. M. Shi, E. H. Fan, R. H. Dai, <em>Chin. J. Integ. Trad. Wester. Med.</em> <strong>22</strong>, 718 (2002).</li><li>S. Y. Wang et al., <em>Chin. J. Integ. Trad. Wester. Med.</em> <strong>16</strong>, 717 (1996).</li><li>H. Zhu et al., <em>Chin. J. Integ. Trad. Wester. Med.</em> <strong>30</strong>, 474 (2010).</li><li>L. J. Wang et al., <em>Chin. J. Integ. Med. Cardio-/Cerebrovascular Disease</em> <strong>6</strong>, 129 (2008).</li><li>P. Jiang et al., <em>Chromatogr.</em> <strong>70</strong>, 133 (2009).</li><li>R. H. Liu et al., <em>Chem. Nat. Compd.</em> <strong>45</strong>, 599 (2009).</li><li>L. A. Guo et al., <em>J. Pharm. Practice</em> <strong>30</strong>, 207 (2012).</li><li>P. Jiang et al., <em>Biomed. Chromatogr.</em> <strong>23</strong>, 1333 (2009).</li><li>S. K. Yan, W. D. Zhang, R. H. Liu, Y. C. Zhan, <em>Chem. Pharm. Bull.</em> <strong>54</strong>, 1058 (2006).</li><li>S. K. Yan, Y. Yang, Y. W. Wu, R. H. Liu, W. D. Zhang, <em>J. Anal. Chem.</em> <strong>64</strong>, 141 (2009).</li><li>M. Watanabe et al., <em>J. Clin. Invest.</em> <strong>113</strong>, 1408 (2004).</li><li>A. P. Ambrosy et al., <em>J. Am. Coll. Cardiol.</em> <strong>63</strong>, 1823 (2014).</li><li>A. R. Patel, T. Kurashina, J. P. Granger, K. A. Kirchner, <em>Hypertension</em> <strong>27</strong>, 668 (1996).</li><li>M. M. Kau, J. R. Wang, S. C. Tsai, C. H. Yu, P. S. Wang, <em>Br. J. Pharmacol.</em> <strong>165</strong>, 1868 (2012).</li><li>A. Yanaga et al., <em>Biol. Pharm. Bull.</em> <strong>29</strong>, 2415 (2006).</li><li>A. Szallasi, D. N. Cortright, C. A. Blum, S. R. Eid, <em>Nat. Rev. Drug Discov.</em> <strong>6</strong>, 357 (2007).</li><li>F. Sui et al., <em>J. Asian Nat. Prod. Res.</em> <strong>12</strong>, 76 (2010).</li><li>C. Macilwain, <em>Cell</em> <strong>144</strong>, 839 (2011).</li><li>E. Holmes, I. D. Wilson, J. K. Nicholson, <em>Cell</em> <strong>134</strong>, 714 (2008).</li><li>G. Giaever et al., <em>Nature</em> <strong>418</strong>, 387 (2002).</li><li>A. Y. Lee et al., <em>Science</em> <strong>344</strong>, 208 (2014).</li><li>P. Jiang et al., <em>Mol. Biosyst.</em> <strong>7</strong>, 824 (2011).</li><li>L. Xiang et al., <em>Mol. Biosyst.</em> <strong>8</strong>, 2434 (2012).</li><li>L. Xiang et al., <em>Alt. Integr. Med.</em> <strong>6</strong>, doi:10.4172/2327-5162.1000127 (2013).</li></ol>
+<hr>
+<h1>第7編　伝統中医薬処方 PHY906 の開発から得られた教訓</h1>
+<p><strong>原題</strong>: Lessons from the development of the traditional Chinese medicine formula PHY906（S43）</p>
+<p><strong>著者</strong>: Wing Lam・Shwu-Huey Liu・Zaoli Jiang・<strong>Yung-Chi Cheng（鄭永齊）\</strong>*（イェール大学医学部 薬理学科, 米国コネチカット州 New Haven）</p>
+<ul><li>\*責任著者: yccheng@yale.edu</li></ul>
+<h2>黄芩湯からPHY906へ</h2>
+<p><strong>伝統中医薬（TCM）は数千年にわたって実践されてきた。</strong> TCMの歴史的な使用はよく文書化されているものの、<strong>主流の医師には広く受け入れられていない</strong>。彼らは、<strong>TCM製品の品質と一貫性、使用の科学的根拠、エビデンスに基づく臨床研究の欠如</strong>を疑問視している。</p>
+<p>それでもなお、TCM処方は現在、<strong>下痢・悪心・嘔吐・疲労を含む、化学療法に起因する非血液学的毒性の副作用を緩和するために使用されている</strong>。我々は、<strong>化学療法におけるTCMの作用機序をさらに探索し、補助療法としての潜在的使用の基礎を築く</strong>ことにした。</p>
+<p>上記の症状の治療のために、<strong>一般的な生薬から構成されるいくつかのTCM処方を選択した</strong>。長い使用の歴史を考慮すれば、これらの処方は<strong>比較的安全である</strong>はずである。<strong>品質管理を容易にし、作用機序の解析を単純化するため、限られた数の生薬からなる単純な処方</strong>を用いた。</p>
+<p>これらの処方のうち、<strong>黄芩湯（Huang-Qin Tang）</strong> が、<strong>転移性結腸・直腸がんの化学療法剤であるイリノテカンの治療係数（therapeutic index）を高めうる</strong>ことを見出した。</p>
+<p>この<strong>4生薬処方</strong>（***Glycyrrhiza uralensis<em> Fisch（甘草）・</em>Paeonia lactiflora<em> Pall（芍薬）・</em>Scutellaria baicalensis<em> Georgi（黄芩）・</em>Ziziphus jujuba* Mill（大棗）<strong>）は、</strong>およそ1800年にわたって消化器疾患の治療に用いられてきた<strong>。</strong>PHY906<strong> と名づけられたこの処方は、</strong>標準作業手順書に従い、現行の適正製造規範（cGMP）基準に準拠して製造された**。</p>
+<blockquote>補足: <strong>黄芩湯</strong>は『傷寒論』に収載される古方で、日本の漢方でもよく知られる。イェール大学の鄭永齊（Yung-Chi Cheng）教授がこれを <strong>PHY906</strong> として医薬品開発の俎上に載せた取り組みは、TCMの近代的開発の代表例として国際的に引用されている。  <strong>「治療係数（therapeutic index）を高める」</strong> という表現が的確である。PHY906 単独で抗腫瘍作用を狙うのではなく、<strong>イリノテカンの副作用（下痢）を減らしつつ抗腫瘍効果を上げる</strong>——つまり有効用量と毒性用量の比を広げる。補助療法（adjuvant）としての位置づけが最初から明確な点が、この開発の特徴である。</blockquote>
+<h2>TCMの品質管理——Phytomics QC</h2>
+<p><strong>TCMの作用部位と生物活性化合物は必ずしも既知でない</strong>ため、品質管理（QC）の目的で<strong>化学 [1, 2] または生物学的解析 [3] のいずれか一方だけに依拠するのでは不十分</strong>である。</p>
+<p>そこで我々は、**化学データと生物学データ（<em>in vitro</em> および <em>in vivo</em> 研究から）の双方を統合し、新規の統計手法を用いてTCMの一貫性を評価する解析システム「Phytomics QC」を開発した** [4]。</p>
+<p>このシステムを用いて、<strong>10年以上にわたる PHY906 処方のバッチが、Phytomics 類似度指数（Phytomics Similarity Index, PSI）0.9 超</strong>（1が完全一致、0が類似性なし）であることを実証した。</p>
+<p>興味深いことに、**市販の黄芩湯製品は PSI の幅がより広く、PHY906 と比較して <em>in vivo</em> 生物活性が一貫していなかった。**</p>
+<blockquote>補足: この対比が <strong>PHY906 の最大の成果</strong>かもしれない。「TCM処方は複雑だから一貫した製品は作れない」という主流医学側の疑念に対し、<strong>10年以上・PSI 0.9超</strong>という具体的な数字で反証している。しかも同時に、<strong>市販の黄芩湯製品はばらついていた</strong>ことも示しており、「TCM一般が一貫している」と主張しているわけではない——<strong>cGMP のもとで作れば一貫する</strong>、という条件付きの主張である。誠実な提示の仕方だと言える。  PSI（Phytomics 類似度指数）は、化学的フィンガープリント（LC-MS 等）と生物学的応答（遺伝子発現等）の<strong>両方</strong>を統合した指標である点が、化学だけを見る通常の類似度と異なる。</blockquote>
+<h2>処方中のすべての生薬は必要か</h2>
+<p>TCMの原則に基づけば、処方は<strong>「君（imperial）」生薬（主成分）・「臣（ministerial）」生薬（君の補助）・「佐（assistant）」生薬（主生薬の副作用を軽減）・「使（servant）」生薬（他の生薬の調和を助ける）</strong> の適切な比率をもち、最良の治療効果を達成すべきである [5]。</p>
+<p><strong>1つの生薬を除いた処方</strong>と<strong>単味生薬製剤</strong>を比較することにより、<strong>イリノテカンと組み合わせて最適な治療効果を達成する PHY906 の処方が見出された</strong> [6]。</p>
+<p><strong>異なる生薬が、抗腫瘍活性の増強、および体重減少と死亡に対する保護において、それぞれ異なる役割を果たしているように見える</strong> [6]。これらの知見は、<strong>TCM処方において各生薬が特定の役割を果たしうるという理論を支持</strong>し、PHY906 の作用には<strong>複数の標的と、各標的に対する複数の活性化合物</strong>が関与していることを示唆する。</p>
+<p><strong>TJ14（半夏瀉心湯）</strong> は7生薬のTCM処方で、<strong>化学療法に起因する下痢と口腔粘膜炎を軽減する可能性</strong>をもつ [7–9]。TJ14 は PHY906 と3つの生薬を共有するが、<strong>我々の予備研究ではイリノテカンの治療係数を増加させなかった</strong>（未発表データ）。</p>
+<h2>TCMの科学的検証</h2>
+<p>前臨床研究において、<strong>PHY906 は、複数の炎症過程を阻害することおよび／または腸の回復を促進することによって、イリノテカンまたは放射線照射後の下痢と腸損傷を軽減する</strong>ことが見出された [10, 11]。</p>
+<p>これらの PHY906 の前臨床研究は、<strong>黄芩湯が下痢の治療に有効である理由の説明</strong>に役立ちうる。これらの知見に基づき、<strong>炎症性腸疾患の治療と幹／前駆細胞の増殖刺激における PHY906 の使用</strong>が探索されている。</p>
+<p>前臨床研究は、**PHY906 が <em>in vivo</em> において広範な抗がん剤の抗腫瘍活性を増強しうる<strong>ことを示している [12]。</strong>PHY906 とイリノテカンの併用は、強いマクロファージ浸潤を伴う腫瘍細胞アポトーシスを増加させ、腫瘍における急性炎症を誘導しうる** [13]。</p>
+<p><strong>PHY906 の化学物質と代謝産物は、検討する組織によって異なっており</strong>、これが<strong>腸と腫瘍組織で PHY906 に対する炎症応答が異なる理由</strong>を部分的に説明しうる [13]。</p>
+<p>PHY906 と同様、<strong>他の多くの生薬処方も複数の効果をもつことが報告されている</strong>。<strong>TJ14</strong> は、様々な生物活性化合物を通じて<strong>シクロオキシゲナーゼ経路の複数の標的を阻害する</strong>と考えられている [14]。<strong>TJ48（補中益気湯）</strong> は、<strong>化学療法後の患者の宿主免疫と生活の質を改善し</strong> [15]、腫瘍における<strong>抗血管新生活性</strong>をもつ [16] とともに、<strong>造血幹細胞の増殖を刺激する</strong> [17] ことが示された。</p>
+<p><strong>TCMは患者を全体論的に治療する機会を提供する。</strong> TCMの多化学物質性（polychemical nature）により、<strong>吸収と代謝がかなり異なりうる複数の臓器を標的にできる</strong>。加えて、**異なる組織（肝・脾・腫瘍）にわたるRNA発現への PHY906 の <em>in vivo</em> 影響は多様であった** [13]。</p>
+<p><strong>生薬処方に対する異なる臓器・組織の応答をより詳細に解析することは、特定の生薬に対して特定の臓器で優先的な応答がありうるというTCM理論を支持しうる。</strong> この研究は<strong>TCMの新しい応用</strong>につながりうる。</p>
+<blockquote>補足: 「異なる臓器で異なる応答」という知見は、TCMの<strong>帰経（きけい）</strong> 理論——生薬が特定の臓腑・経絡に作用するという考え方——を思わせる。本編はそこまで踏み込んでいないが、「特定の生薬に対して特定の臓器で優先的な応答がありうるというTCM理論を支持しうる」という控えめな書き方で示唆している。  実際、PHY906 が<strong>腸では炎症を抑え、腫瘍では炎症を誘導する</strong>という正反対の作用を示したのは驚くべき結果である。単一の分子ではこうはならない。<strong>組織ごとに到達する成分と代謝産物が違う</strong>ことが、多成分製剤ならではの「使い分け」を生んでいる、という説明になっている。</blockquote>
+<h2>TCM臨床試験の課題</h2>
+<p><strong>伝統的に、TCMは施術者の診断と個々の患者のニーズに基づいて煎じ薬（decoction）として処方される。</strong> したがって、<strong>無作為化・プラセボ対照・用量漸増試験を設計することは困難</strong>である。</p>
+<p>生薬処方は長年カプセル形態で投与されてきたため、<strong>カプセル化した製品を用いて臨床研究を開始するのが理にかなっていた</strong>。</p>
+<p>米国における<strong>第1/2相または第2相臨床試験</strong>は、<strong>カプセル化された PHY906 が、進行結腸直腸がん・肝細胞がん・膵がんに対してイリノテカンまたはカペシタビンで治療されるがん患者に有益な効果をもちうる</strong>ことを示唆した [18–22]。</p>
+<p>最近、<strong>結腸直腸がん・肝がん・直腸がんに対する、イリノテカン・ソラフェニブまたは放射線と PHY906 を併用する臨床試験が米国で開始された</strong>。これらは<strong>包括的なシステム生物学的アプローチ</strong>を用いて、<strong>免疫サイトカイン・メタボロームプロファイル・生薬代謝産物・循環腫瘍DNA</strong> を含む、PHY906 治療に関連する<strong>予測的な薬力学バイオマーカー</strong>を同定しようとしている。これらの結果は、<strong>活性化合物の同定と、治療前の患者集団の層別化</strong>に役立ちうる。</p>
+<p><strong>様々な臨床開発段階にある生薬製品</strong>には、<strong>Dantonic（T89）</strong> [23]、<strong>Selected Vegetable and Herb Mix</strong>（NCT00246727）、***Rhodiola rosea* 抽出物<strong>（NCT01098318）、</strong>扶正化瘀（Fuzheng Huayu）<strong>（NCT00854087）、</strong>HMPL-004**（NCT01805791）が含まれる。</p>
+<p>これまでのところ、<strong>米国食品医薬品局（FDA）は、明確に定義された多化学物質をもつ高度精製ボタニカルドラッグを2剤のみ承認している</strong>——<strong>Veregen 軟膏</strong>（尖圭コンジローマの外用治療のための緑茶抽出物、2006年）と、<strong>Fulyzaq（クロフェレマー）</strong>（HIV患者の下痢治療のための <em>Croton lechleri</em> 由来の精製オリゴマー性プロアントシアニジン、2012年）である（<strong>S32ページ〔本増刊 第3編〕参照</strong>）。</p>
+<p><strong>FDAは、経口投与される生薬混合物について特定の品質管理ガイダンスを提供していない。</strong> しかし、<strong>一貫した有効性を実証するため、生薬製品の複数バッチを第3相臨床試験にかけることを推奨している</strong>。現在のところ<strong>生薬混合物からの活性成分を同定することは要求されていない</strong>が、<strong>将来FDAがより詳細な研究からの情報を要求することが予想される</strong>。</p>
+<p>要約すると、<strong>TCM処方はしばしば変動するものの、PHY906 が例示するように、一貫した調製物を作ることは可能である</strong>。TCMはしばしば<strong>複数の作用部位</strong>をもち、各部位で作用する活性化合物は異なりうる。<strong>将来の医療応用に向けてTCMの価値を完全に探索するには、システム生物学と現代のバイオインフォマティクス技術が必要</strong>である。</p>
+<p><strong>謝辞</strong>: 本原稿の批判的な通読について Sharon Lin と Peikwen Cheng に感謝する。本研究は、米国国立がん研究所（PO1CA154295-01A1）、国立補完代替医療センター（NCCAM）、米国国立衛生研究所の栄養補助食品オフィスの支援を受けた。Yung-Chi Cheng は米国国立がん研究財団のフェローである。</p>
+<h3>第7編の引用文献</h3>
+<ol><li>J. Wang et al., <em>J. Pharm. Biomed. Anal.</em> <strong>83</strong>, 57 (2013).</li><li>X. Cheng et al., <em>Sci. Rep.</em> <strong>4</strong>, 5147 (2014).</li><li>A. Buriani et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 535 (2012).</li><li>R. Tilton et al., <em>Chin. Med.</em> <strong>5</strong>, 30 (2010).</li><li>H. Y. H. Hsu, C. S. Hsu, <em>Commonly used Chinese herb formulas with illustrations</em>. Oriental Healing Art Institute, Long Beach, CA, 1980.</li><li>S. H. Liu, Y. C. Cheng, <em>J. Ethnopharmacol.</em> <strong>140</strong>, 614 (2012).</li><li>Y. Sakata, H. Suzuki, T. Kamataki, <em>Cancer &amp; Chemotherapy</em> <strong>21</strong>, 1241 (1994).</li><li>T. Aoyama et al., <em>Cancer Chemother. Pharmacol.</em> <strong>73</strong>, 1047 (2014).</li><li>K. Mori et al., <em>Cancer Chemother. Pharmacol.</em> <strong>51</strong>, 403 (2003).</li><li>W. Lam et al., <em>Sci. Transl. Med.</em> <strong>2</strong>, 45 (2010).</li><li>S. Rockwell et al., <em>Int. J. Radiat. Biol.</em> <strong>89</strong>, 16 (2013).</li><li>S. H. Liu et al., <em>Proc. Am. Assoc. Cancer Res.</em> <strong>45</strong>, 128 (2004).</li><li>E. Wang et al., <em>BMC Med. Genomics</em> <strong>4</strong>, 38 (2011).</li><li>T. Kono et al., <em>Integr. Cancer Ther.</em> <strong>13</strong>, 435 (2014).</li><li>J. J. Gao et al., <em>Drug Discov. Ther.</em> <strong>6</strong>, 1 (2012).</li><li>H. Kamiyama et al., <em>Biol. Pharm. Bull.</em> <strong>28</strong>, 2111 (2005).</li><li>H. Hisha et al., <em>Blood</em> <strong>90</strong>, 1022 (1997).</li><li>M. P. Farrell, S. Kummar, <em>Clin. Colorectal Cancer</em> <strong>2</strong>, 253 (2003).</li><li>S. Kummar et al., <em>Clin. Colorectal Cancer</em> <strong>10</strong>, 85 (2011).</li><li>M. W. Saif et al., <em>Phytomedicine</em> <strong>17</strong>, 161 (2010).</li><li>Y. Yen et al., <em>Anticancer Res.</em> <strong>29</strong>, 4083 (2009).</li><li>M. W. Saif et al., <em>Cancer Chemother. Pharmacol.</em> <strong>73</strong>, 373 (2014).</li><li>S. Ling et al., <em>J. Cardiovasc. Pharmacol.</em> <strong>60</strong>, 513 (2012).</li></ol>
+<hr>
+<h1>第8編　がん管理における中薬の潜在的役割</h1>
+<p><strong>原題</strong>: The potential role of Chinese herbal medicines in cancer management（S45）</p>
+<p><strong>著者</strong>: <strong>Clara Bik-San Lau（劉碧珊）</strong> ¹˒²\*・Grace Gar-Lee Yue ¹˒²・Kwok-Pui Fung ¹˒²˒³・Ning-Hua Tan ⁴・Ping Chung Leung（梁秉中）¹˒²</p>
+<ul><li>¹ 中医薬研究所、² 華西植物化学・植物資源国家重点実験室（CUHK）、³ 生物医学院——香港中文大学（中国香港）</li><li>⁴ 華西植物化学・植物資源国家重点実験室, 中国科学院 昆明植物研究所（中国 昆明）</li><li>\*責任著者: claralau@cuhk.edu.hk</li></ul>
+<h2>補完代替医療（CAM）の利用実態</h2>
+<p>がんの管理には、<strong>外科・化学療法・放射線療法・分子標的療法・生物学的療法・全身療法</strong>を含む複数の診療科が関わる。これらの治療の科学的進歩とエビデンスに基づく実践にもかかわらず、<strong>そのベネフィットには依然として限界があり</strong>、その結果、<strong>がん患者とサバイバーによる補完代替医療（CAM）の使用が増加している</strong> [1]。</p>
+<p>過去10年間に、CAMの数多くの前臨床・臨床研究が文書化されてきた [1, 2]。最近の調査は、<strong>がん患者におけるCAM使用の全体的な有病率が、ドイツで 77%</strong> [3]、<strong>アイルランドで 32.5%</strong> [4] であることを明らかにした。米国における他の前向き・多施設研究では、<strong>がん患者の 52〜54% がCAM使用を報告</strong>している [5, 6]。</p>
+<p>中国のがん患者で一般的に使われるモダリティの1つが <strong>中薬（Chinese herbal medicines, CHMs）</strong> である。中国南西部のがん患者でも<strong>同様の割合（53%）がCHMを使用している</strong>ことが報告されている [7]。しかしながら、<strong>がん治療としてのCHMの潜在的ベネフィットについての研究は十分ではない</strong>。</p>
+<p>本稿は、<strong>がん管理におけるCHMの潜在的役割と、従来のがん治療における補助的価値</strong>を例示することを目的とする。</p>
+<h2>がん管理におけるCHMの想定される標的</h2>
+<p><strong>CHMから様々な活性抗腫瘍化合物が単離されている</strong> [8] ものの、<strong>CHMを用いたがん治療の治療的根拠は細胞毒性だけに限られない</strong>。他の治療原則には、<strong>宿主の自然免疫応答の増強・生活の質の改善・術後の再発予防</strong>が含まれる [8–10]。</p>
+<p>過去10年間、科学者（我々の研究グループを含む）は、異なる実験系を用いて、<strong>がん治療におけるCHMの4つの想定される標的</strong>——<strong>細胞毒性（多剤耐性の解除を含む）・免疫調節・血管新生阻害・転移抑制</strong>——を検討する一連の研究を行ってきた（<strong>表1</strong>）[11–24]。</p>
+<p><strong>表1　実験系における中薬（CHMs）の想定される標的とその意義</strong></p>
+<table>
+<thead><tr><th>想定される標的</th><th>CHMまたは単離化合物の例</th><th>実験系</th><th>測定した主要パラメータ</th><th>意義</th></tr></thead>
+<tbody>
+<tr><td><strong>細胞毒性</strong></td><td>・アンドログラフォリド（<em>Andrographis paniculata</em> 穿心蓮 由来）[11]&lt;br&gt;・クルクミン（<em>Curcuma longa</em> ウコン 由来）[12]&lt;br&gt;・エリオカリキシンB（<em>Isodon eriocalyx</em> 由来）[13]</td><td>・がん細胞株&lt;br&gt;・担がん動物</td><td>◊ 増殖阻害&lt;br&gt;◊ アポトーシス誘導</td><td>原発巣における腫瘍増殖の阻害</td></tr>
+<tr><td></td><td>・<em>Hedyotis corymbosa</em>（傘房花耳草）[14]&lt;br&gt;・<em>Scutellaria barbata</em>（半枝蓮）[15]</td><td>多剤耐性 肝がん細胞</td><td>◊ P-糖タンパク質を介する多剤耐性の解除&lt;br&gt;◊ アポトーシス誘導</td><td>化学療法の有効性の向上</td></tr>
+<tr><td><strong>免疫調節</strong></td><td>・<em>Astragalus</em> 属（黄耆）[16]&lt;br&gt;・<em>Coriolus versicolor</em>（雲芝）[17]&lt;br&gt;・<em>Ganoderma sinense</em>（紫芝）[18]</td><td>・免疫細胞（リンパ球・樹状細胞など）&lt;br&gt;・担がん動物</td><td>◊ サイトカインおよび／またはケモカインの産生&lt;br&gt;◊ 特定の免疫細胞型の集団変化</td><td>免疫応答の改善、がん細胞に対する免疫細胞の攻撃システムの強化</td></tr>
+<tr><td><strong>血管新生阻害</strong></td><td>・ビゲロビン（<em>Inula helianthus-aquatica</em> 由来）[19]&lt;br&gt;・n-ブチリデンフタリド（<em>Angelica sinensis</em> 当帰 由来）[20]&lt;br&gt;・シクロペプチド RA-V（<em>Rubia yunnanensis</em> 由来）[21]</td><td>内皮細胞</td><td>◊ 阻害——増殖／管腔形成／遊走</td><td>腫瘍に向かう、および腫瘍内部の新生血管形成の阻害</td></tr>
+<tr><td></td><td></td><td>・ゼブラフィッシュ胚&lt;br&gt;・担がん動物</td><td>◊ 血管の成長の阻害</td><td></td></tr>
+<tr><td><strong>転移抑制</strong></td><td>・<em>Andrographis paniculata</em>（穿心蓮）[22]&lt;br&gt;・<em>Camellia sinensis</em>（チャノキ）[23]&lt;br&gt;・<em>Ganoderma lucidum</em>（霊芝）[24]</td><td>浸潤性がん細胞株</td><td>◊ 阻害——遊走／浸潤</td><td>腫瘍細胞の原発巣から他臓器への遊走の防止</td></tr>
+<tr><td></td><td></td><td>担がん動物</td><td>◊ 転移の阻害</td><td></td></tr>
+</tbody></table>
+<p><strong>中国では数百のCHMが臨床でがん患者の治療に用いられている</strong> [25] にもかかわらず、<strong>国際的な品質基準（二重盲検・プラセボ対照）を満たす臨床試験を実施しているのはごく一握り</strong>である。</p>
+<p>一例が我々自身の臨床試験で、<strong>雲芝−丹参カプセル（Yunzhi-Danshen capsule）の経口摂取が、上咽頭がん患者の従来治療後の免疫学的機能の促進に有益であった</strong>ことを実証した [26]。</p>
+<p>米国では、<strong>PHY906（黄芩湯）</strong> が最近、<strong>結腸直腸がん患者での第1相試験</strong> [27] と<strong>膵がん患者での第2相試験</strong> [28] を通過した。さらに、<strong>漢方処方 TJ14（半夏瀉心湯）が日本で胃がん患者を対象とした第2相試験を実施中</strong>である [29]。</p>
+<h2>単一作用機序 vs 多標的アプローチ</h2>
+<p><strong>生薬は、単独で用いられる場合も、他の生薬と組み合わせて用いられる場合も、がん治療のCAMとして機能しうる。</strong> 生薬から単離された活性化合物は、しばしば特定の標的を狙う<strong>抗がん剤として開発されうる</strong> [8]。</p>
+<p><strong>構成分子の複雑な配列を含む単味生薬の特定の抽出物</strong>は、<strong>直接的または間接的な抗腫瘍活性を示す</strong>ことが示されている [30, 31]。この場合、<strong>その抽出物は多標的併用療法とみなしうる</strong>。</p>
+<p><strong>CHMは一般に複数の生薬の組み合わせとして投与され</strong>、これは<strong>複数の標的を治療しつつ内的な調和を保護する</strong>というCAMの原則の1つを強調している。<strong>CHMの多成分・多標的・相乗的な性質は、こうして完全に活用できる</strong>。特に、我々の研究室の活発な研究領域である<strong>多因子的な転移の管理</strong>においてそうである。</p>
+<h2>補助療法としてのCHM</h2>
+<p><strong>CHMは化学療法・放射線療法と併用される機会が増えており</strong>、治療の有害作用を緩和あるいは排除し、また全体的な有効性を改善することが期待されている [1, 32]。</p>
+<p>これまでのメタ解析は、**黄耆（<em>Astragalus</em>）ベースのCHMが、プラチナベース化学療法の有効性を高めうる<strong>ことを示唆している [33]。最近の研究は、</strong>化学療法とCHMを併用したがん患者において、抗腫瘍効果の増強<strong> [27, 28]、</strong>予後の改善<strong> [34]、</strong>生存への有益な効果<strong> [35] を示しており、</strong>がん治療におけるCHMの補助的役割の潜在的な有益性**を強調している。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig8-1.png" alt="図1　がん管理における中薬（CHM）の価値と今後の発展。左側の大円「がん管理（Cancer management）」の中に 化学療法・放射線療法・中薬 の3つの円が重なる。中薬の円には役割として 細胞毒性・免疫調節・血管新生阻害・転移抑制 が列挙され 重なり合う濃紺の領域が「補助療法（Adjuvant therapy）——✓有効性の増強 ✓副作用の緩和」を表す。右側は今後の発展としての「多標的CHM処方の開発」を中心に エビデンスに基づく有効性研究・&#x27;omicsベース研究・バイオアベイラビリティ・安全性と生薬-薬物相互作用・標準化と品質管理 の5要素が取り巻く。" loading="lazy"><figcaption>図1　がん管理における中薬（CHM）の価値と今後の発展。左側の大円「がん管理（Cancer management）」の中に 化学療法・放射線療法・中薬 の3つの円が重なる。中薬の円には役割として 細胞毒性・免疫調節・血管新生阻害・転移抑制 が列挙され 重なり合う濃紺の領域が「補助療法（Adjuvant therapy）——✓有効性の増強 ✓副作用の緩和」を表す。右側は今後の発展としての「多標的CHM処方の開発」を中心に エビデンスに基づく有効性研究・&#x27;omicsベース研究・バイオアベイラビリティ・安全性と生薬-薬物相互作用・標準化と品質管理 の5要素が取り巻く。</figcaption></figure>
+<h2>今後の方向性</h2>
+<p>がん管理におけるCHMの潜在的役割を<strong>図1</strong>に要約する。CHMの今後の発展には、<strong>エビデンスに基づく有効性研究・標準化と品質管理・作用機序に関する &#x27;omics ベースの研究・バイオアベイラビリティ研究・安全性と生薬-薬物相互作用の綿密な検討</strong>といった、広範なさらなる研究が必要である。</p>
+<p><strong>今後の研究は、予後と生存アウトカムを改善するための多標的療法アプローチに向けたCHM処方の開発に焦点を当てるべき</strong>であると提案する。<strong>CHMと化学療法剤の相互作用に関するさらなる研究</strong>は、補助療法の安全性および／または潜在的ベネフィットについてより多くの情報を提供しうる。</p>
+<p>このようにして、<strong>がん管理における中薬の全体論的ベネフィットを完全に実現できる</strong>。</p>
+<h3>第8編の引用文献</h3>
+<ol><li>G. Deng, B. Cassileth, <em>Nat. Rev. Clin. Oncol.</em> <strong>10</strong>, 656 (2013).</li><li>U. Werneke, D. Ladenheim, T. McCarthy, <em>Cancer Therapy</em> <strong>2</strong>, 475 (2004).</li><li>J. Huebner et al., <em>Oncol. Res. Treat.</em> <strong>37</strong>, 304 (2014).</li><li>K. H. Chang et al., <em>BMC Cancer</em> <strong>11</strong>, 196 (2011).</li><li>M. S. Moran et al., <em>Int. J. Radiat. Oncol. Biol. Phys.</em> <strong>85</strong>, 40 (2013).</li><li>A. Naing et al., <em>Cancer</em> <strong>117</strong>, 5142 (2011).</li><li>T. G. Liu et al., <em>Evid. Based Complement. Alternat. Med.</em> <strong>2012</strong>, 769042 (2012).</li><li>D. J. Newman, G. M. Cragg, <em>J. Nat. Prod.</em> <strong>75</strong>, 311 (2012).</li><li>Z. Wang et al., <em>Evid. Based Complement. Alternat. Med.</em> <strong>2013</strong>, 268963 (2013).</li><li>L. Y. Wong et al., <em>Patient Prefer. Adherence</em> <strong>4</strong>, 223 (2010).</li><li>J. C. Lim et al., <em>Clin. Exp. Pharmacol. Physiol.</em> <strong>39</strong>, 300 (2012).</li><li>S. Prasad et al., <em>Biotechnol. Adv.</em> <strong>32</strong>, 1053 (2014).</li><li>L. Li et al., <em>Curr. Mol. Med.</em> <strong>14</strong>, 673 (2014).</li><li>G. G. Yue et al., <em>Xenobiotica</em> <strong>42</strong>, 562 (2012).</li><li>P. M. Tang et al., <em>Mol. Cancer</em> <strong>8</strong>, 56 (2009).</li><li>F. Hong et al., <em>Planta Med.</em> <strong>77</strong>, 817 (2011).</li><li>G. Ragupathi et al., <em>Vaccine</em> <strong>26</strong>, 4860 (2008).</li><li>G. G. Yue et al., <em>Nutr. Cancer</em> <strong>65</strong>, 765 (2013).</li><li>G. G. Yue et al., <em>Eur. J. Med. Chem.</em> <strong>59</strong>, 243 (2013).</li><li>J. C. Yeh et al., <em>Angiogenesis</em> <strong>14</strong>, 187 (2011).</li><li>G. G. Yue et al., <em>Br. J. Pharmacol.</em> <strong>164</strong>, 1883 (2011).</li><li>G. G. Yue et al., <em>Planta Medica</em> <strong>78</strong>, 1183 (2012).</li><li>K. W. Luo et al., <em>J. Nutr. Biochem.</em> <strong>25</strong>, 395 (2014).</li><li>J. Loganathan et al., <em>Int. J. Oncol.</em> <strong>44</strong>, 2009 (2014).</li><li>X. Li et al., <em>PLOS ONE</em> <strong>8</strong>, e60338 (2013).</li><li>Y. X. Bao et al., <em>J. Altern. Complement. Med.</em> <strong>12</strong>, 771 (2006).</li><li>S. Kummar et al., <em>Clin. Colorectal Cancer</em> <strong>10</strong>, 85 (2011).</li><li>M. W. Saif et al., <em>Cancer Chemother. Pharmacol.</em> <strong>73</strong>, 373 (2014).</li><li>T. Aoyama et al., <em>Cancer Chemother. Pharmacol.</em> <strong>73</strong>, 1047 (2014).</li><li>Y. Niu, Q. X. Meng, <em>J. Asian Nat. Prod. Res.</em> <strong>15</strong>, 550 (2013).</li><li>C. C. Lin et al., <em>In Vivo</em> <strong>25</strong>, 633 (2011).</li><li>J. Chiu, T. Yau, R. Epstein, <em>Support Care Cancer</em> <strong>17</strong>, 231 (2009).</li><li>M. McCulloch et al., <em>J. Clin. Oncol.</em> <strong>24</strong>, 419 (2006).</li><li>H. Guo et al., <em>Integr. Cancer Ther.</em> <strong>10</strong>, 127 (2011).</li><li>L. Zhao et al., <em>Evid. Based Complement. Alternat. Med.</em> <strong>2014</strong>, 625493 (2014).</li></ol>
+<hr>
+<h1>第9編　生薬医薬の安全性評価——統合的毒性学アプローチ</h1>
+<p><strong>原題</strong>: Evaluating the safety of herbal medicines: Integrated toxicological approaches（S47）</p>
+<p><strong>著者</strong>: <strong>Elizabeth M. Williamson ¹\</strong><em>・Kelvin Chan ²・Qihe Xu ³・Amandine Nachtergael ⁴・Valérian Bunel ⁵˒⁶・Li Zhang ⁷・Moustapha Ouedraogo ⁵˒⁸・Joëlle Nortier ⁶・Fan Qu ⁹・Debbie Shaw ¹⁰・Xinmin Liu ¹¹・Caroline Stévigny ⁵・Joseph Kahumba ¹²・Olavi Pelkonen ¹³・<strong>Pierre Duez ⁴˒⁵\</strong></em></p>
+<ul><li>¹ レディング大学 薬学部（英国）／² 西シドニー大学 薬学部（オーストラリア）／³ キングス・カレッジ・ロンドン 腎臓科学科（英国）／⁴ モンス大学 治療化学・生薬学科（ベルギー）／⁵ ブリュッセル自由大学（ULB）生薬学・食品学・人間栄養学研究室（ベルギー）／⁶ ブリュッセル自由大学 実験腎臓学研究室（ベルギー）／⁷ 中国食品薬品監督管理総局 薬品再評価センター（中国 北京）／⁸ ワガドゥグ大学 薬理学・毒性学研究室（ブルキナファソ）／⁹ 浙江大学医学院 婦人病院（中国）／¹⁰ Guy&#x27;s and St Thomas NHS Trust（英国 ロンドン）／¹¹ 中国医学科学院 薬用植物研究所（中国 北京）／¹² ルブンバシ大学 生薬学科（コンゴ民主共和国）／¹³ オウル大学 薬理学・毒性学科（フィンランド）</li><li>\*責任著者: e.m.williamson@reading.ac.uk（E.M.W.）／pierre.duez@umons.ac.be（P.D.）</li><li>‡ 本稿を、2014年1月に逝去した近しい同僚かつ共著者 Moustapha Ouedraogo に捧げる。</li></ul>
+<h2>生薬の安全性をめぐる現状</h2>
+<p><strong>多くの複雑な生薬混合物が、プライマリ・ヘルスケアあるいは補完代替医療として、すでに世界中で広く用いられている</strong> [1]。古代の伝統療法——とりわけ<strong>伝統中医薬（TCM）とアーユルヴェーダ</strong>——は、長い臨床使用の歴史を通じて伝えられ洗練されてきた。</p>
+<p><strong>しばしば無害と認識されているが、一部の生薬は遅発性あるいは蓄積性の毒性を示す</strong>。それは明らかに生薬に起因するとは限らず、<strong>偶然あるいは不幸な臨床所見によって同定される</strong>ことがある。</p>
+<p><strong>市場に出回る生薬製品の数の多さと、これまで研究に利用可能な予算が比較的少なかったことを考えると、現代のガイドラインに従った安全性評価が実施された生薬は比較的少ない</strong> [2]。</p>
+<p>これらの懸念にもかかわらず、<strong>欧州と中国の施術者を対象とした最近の調査</strong>は——範囲は限定的ながら——<strong>日常的に使用される生薬の大多数が比較的安全であることが知られている</strong>という、いくらかの安心材料を提供している [3]。TCMに関する重篤な有害事象の報告は、主として<strong>欧州ではごく稀にしか使われず、中国では極めて慎重に使われる生薬</strong>に関わるものである [4]。</p>
+<p><strong>内在的な生薬毒性と、不適正な実践（malpractice）を区別することも重要</strong>である。<strong>香港の最近の研究では、トリカブト（aconite）中毒の52件の臨床症例報告のうち、大半が実際には品質の悪い生薬・不適切な処方実践・調剤ミスに関連していた</strong> [5]。</p>
+<p><strong>欧州では、有害事象は主として汚染された製品と施術者の力量不足に起因しており、生薬医薬が本質的に危険であることによるのではない</strong>。生薬製品の臨床使用における安全性が損なわれうる理由を<strong>図1</strong>に要約する。</p>
+<p><strong>生薬医薬についてのファーマコビジランス（医薬品安全性監視）体制はごく最近確立されたばかり</strong>であり、そのため<strong>有害事象の真の発生率は過小報告されている可能性がある</strong>。それでもなお、利用可能なデータは、<strong>混和された製品や既に毒性が知られている生薬に関わる、広く報道された事件から示唆されるよりも、その全体的な安全性は良好である</strong>ことを示している。</p>
+<figure><img src="assets/art-science-traditional-medicine-part2/fig9-1.png" alt="図1　生薬医薬の毒性に影響する要因。中央に「生薬（Herbal drug、緑）」「治療（Treatment、青）」「患者（Patient、赤）」の三角形が置かれ それぞれに関連する要因が枠で囲まれる。緑（生薬）＝誤った植物同定・加工の誤り・混和・活性化合物への標準化の欠如／定性的・定量的組成のばらつき／汚染物質（マイコトキシン・重金属・微生物・農薬）。青（治療）＝調製方法と投与経路／過量または過少投与 過度に長い使用期間／誤った診断／多成分かつ可変な生薬混合物／慢性治療。赤（患者）＝臨床状態（腎・肝機能障害など）と併用薬（相互作用・代謝変化・相加的または相乗的活性のリスク）／民族的・地理的起源による主要代謝段階の多型。" loading="lazy"><figcaption>図1　生薬医薬の毒性に影響する要因。中央に「生薬（Herbal drug、緑）」「治療（Treatment、青）」「患者（Patient、赤）」の三角形が置かれ それぞれに関連する要因が枠で囲まれる。緑（生薬）＝誤った植物同定・加工の誤り・混和・活性化合物への標準化の欠如／定性的・定量的組成のばらつき／汚染物質（マイコトキシン・重金属・微生物・農薬）。青（治療）＝調製方法と投与経路／過量または過少投与 過度に長い使用期間／誤った診断／多成分かつ可変な生薬混合物／慢性治療。赤（患者）＝臨床状態（腎・肝機能障害など）と併用薬（相互作用・代謝変化・相加的または相乗的活性のリスク）／民族的・地理的起源による主要代謝段階の多型。</figcaption></figure>
+<blockquote>補足: 図1の「<strong>生薬・治療・患者の三角形</strong>」という整理が秀逸である。<strong>生薬そのものが毒だから事故が起きる</strong>のではなく、<strong>三角形のどの頂点が崩れても事故は起きる</strong>——という視点は、リスク管理の考え方として正しい。  香港のトリカブト中毒52例の内訳（大半が品質不良・処方不適切・調剤ミス）は、この主張を具体的に裏づけている。トリカブト（附子・烏頭）は確かに有毒だが、<strong>適切に修治（加工）され、適切に処方され、適切に調剤されれば使える</strong>——実際に日本の漢方でも附子は日常的に使われている。事故の原因を「生薬が危険」に還元してしまうと、対策を誤ることになる。</blockquote>
+<h2>前臨床毒性評価が不十分な現状</h2>
+<p><strong>生薬医薬の前臨床および臨床の毒性学研究は、大半の場合、公式の医薬品登録要件を満たすには不十分あるいは不完全</strong>である。</p>
+<p>安全性は主として、<strong>合理的な臨床使用・薬物相互作用の回避・正しい植物学的同定と表示の確保・混和物と汚染物質（とりわけマイコトキシンと重金属）に対する品質管理・時に複雑な加工法の習熟・新たな構造アラート（structural alerts）の検出・既知の毒性発現団（toxicophore）をもつ種の回避</strong>に依拠してきた。</p>
+<p>しかしながら、<strong>これらの措置は、組成が不完全にしか分かっていない複雑混合物を評価するには不十分</strong>であり、また<strong>有害事象が現れるまでに数か月あるいは数年を要しうる場合</strong>にも不十分である [2, 4]。</p>
+<h2>薬用生薬の前臨床毒性評価</h2>
+<p><strong>伝統的に調製され臨床的に用いられる形の生薬医薬について、その毒性を現実的に評価する必要がある。</strong> ファーマコビジランスでは容易に検出されない<strong>潜行性の毒性</strong>——<strong>遺伝毒性・発がん性・発生毒性</strong>を含む——には特別の注意を払わねばならない [6]。</p>
+<p><strong>生薬医薬の複雑性は安全性評価の主要な問題</strong>である。しばしば多数の成分が、様々な標的に対して<strong>多様な効力と親和性</strong>をもつためである。<strong>毒性は、有効性と同様、単一の化学実体ではなく活性化合物の混合物の結果でありうる</strong>。したがって、<strong>古典的な医薬品リスク評価で日常的に用いられる方法を置き換え、あるいは補完する、異なる試験法が必要</strong>である。</p>
+<p><strong>生薬材料の個々の成分の毒性学的・薬物動態学的研究は、適切な分析手法</strong> [7]、***in vitro<em> および </em>in silico* 手法<strong> [2]、</strong>現代のスクリーニング技術<strong> [8] を用いて、</strong>抽出物全体の定性的・定量的プロファイリングデータと比較されねばならない**。</p>
+<p>**細胞内小器官やヒト由来細胞系を用いる <em>in vitro</em> モデル<strong>は、薬理学的・毒性学的スクリーニングの基礎をなし、一般に</strong>低コスト・効率的・扱いやすい<strong>。しかしながら、これらは</strong>還元主義的な技術<strong>であり、細胞レベルでの非特異的な現象に焦点を当て、</strong>活性成分の性質と濃度に影響する臨床条件に関連する薬物動態学的・薬力学的側面を無視する**。</p>
+<p>したがって、**生体内の細胞微小環境をシミュレートする、最近開発された <em>in vitro</em> 3次元組織モデルや臓器チップ（organ-on-a-chip）モデル<strong>も、生薬の毒性学的・薬理学的評価のために考慮すべきである。</strong>生薬マトリクス効果**も毒性スクリーニングの実験計画において考慮されねばならない。</p>
+<p>**したがって <em>in vitro</em> および <em>in silico</em> モデルは、毒性学的リスクを直接推定するためではなく、毒性プロファイルの比較や、分子レベルでの毒性作用の解読のためにのみ用いるべきである。**</p>
+<p>**成分と潜在的標的を結びつける <em>in silico</em> 手法**は、複数成分をもつことに起因しうる有害作用の兆候を提供し、関連する毒性学的・薬理学的問題のより詳細な調査の必要性を知らせうる。</p>
+<p><strong>代謝・輸送・活性成分の体内動態・マトリクス効果の速度論的特性の測定</strong>は、***in vivo* 研究がこれらの決定的なパラメータを効果的に統合することを確保するために必要な情報<strong>を提供し、様々な臓器における現実的な曝露レベルと、</strong>ヒトの消費に関連する濃度における生物活性**を考慮する機会を与えるはずである [9, 10]。</p>
+<p>**ゼブラフィッシュ・ショウジョウバエ・線虫（<em>Caenorhabditis elegans</em>）** といった <em>in vivo</em> モデルは、<strong>ハイスループット毒性評価のための便利な手法</strong>を提供し、さらなる毒性学的検討に情報を与えるが、<strong>ヒト生理学との差異のため慎重に解釈されねばならない</strong>。</p>
+<p>したがって、**生薬医薬の前臨床の薬理学的・毒性学的評価は、&#x27;omics・バイオインフォマティクス・ネットワーク中心のシステム生物学を、<em>in vitro</em> および <em>in vivo</em> アッセイと組み合わせ<strong>、動物実験から同定されたバイオマーカーに対象を絞った研究を行う必要がある [11–13]。</strong>表1**に要約する。</p>
+<p><strong>すべての段階において、生薬療法の多成分性と可変性を念頭に置くことが不可欠</strong>であり、また<strong>誤同定・誤加工・汚染・混和された調製物を用いた研究は、毒性学的評価にとって無益であるばかりか誤解を招く</strong>ことを忘れてはならない [14]。</p>
+<p><strong>表1　生薬医薬の毒性学的評価のための統合的戦略</strong></p>
+<table>
+<thead><tr><th>戦略</th><th>得られる情報</th></tr></thead>
+<tbody>
+<tr><td><strong>分析化学</strong></td><td>・化学プロファイル、関心のあるあるいは懸念される成分の同定</td></tr>
+<tr><td><strong>_in vitro_・_in silico_ 手法および非哺乳類動物モデル</strong>（最終的には &#x27;omics ベースの手法と組み合わせる）</td><td>・主要な薬理学的・毒性学的問題の同定&lt;br&gt;・毒性プロファイルの比較&lt;br&gt;・分子レベルでの毒性作用の解読</td></tr>
+<tr><td><strong>哺乳類モデル</strong>（最終的には &#x27;omics ベースの手法と組み合わせる）</td><td>・単回および反復投与毒性（動物モデルのみ）&lt;br&gt;・薬物動態データ、代謝&lt;br&gt;・薬理学的・毒性学的問題の同定&lt;br&gt;・曝露バイオマーカーまたは毒性バイオマーカーの同定&lt;br&gt;・遺伝毒性、発がん性、生殖・発生毒性</td></tr>
+<tr><td><strong>臨床研究</strong>（最終的には &#x27;omics ベースの個別化手法と組み合わせる）／<strong>ファーマコエピデミオロジーとファーマコビジランス</strong></td><td>・臨床使用における安全性の評価&lt;br&gt;・臨床的に関連する有害作用の同定</td></tr>
+</tbody></table>
+<h2>ファーマコビジランスと臨床評価</h2>
+<p><strong>生薬医薬の安全性評価の不足を補うため、ファーマコビジランスを通じた経験的な臨床評価が実施されねばならない。</strong> これは、<strong>生薬製品と施術者が何らかの形で規制され、有害事象を特定の医薬品または実践に遡って追跡できる場合にのみ可能</strong>である。</p>
+<p><strong>継続的な専門教育（continuing professional development）を義務化</strong>し、施術者その他の医療従事者が患者に安全かつ適切な助言を提供できるようにすべきである。</p>
+<p><strong>臨床的文脈における生薬の毒性学的リスクを評価する新しい技術</strong>が開発されつつある。<strong>尿メタボロミクス</strong>は、<strong>特定の臓器毒性の予測のための有望な非侵襲的ツール</strong>であるように見える [15]。この種の<strong>能動的サーベイランス</strong>は、<strong>因果関係のより良い評価と、治療の有害成分となりうるものの検出を可能にし</strong>、他の生薬医薬にも適応できる。</p>
+<p><strong>大半の生薬伝統において、生薬の特定の組み合わせは毒性を軽減すると信じられ、他の組み合わせは毒性を増強すると信じられている。</strong> 処方を合理化し安全性を高めるには、<strong>生薬混合物（および混合物の混合物）の中で起こる複雑な化学的相互作用を、システムベースのアプローチを用いて考慮に入れることが決定的に重要</strong>である。</p>
+<blockquote>補足: 「毒性を軽減する組み合わせ／増強する組み合わせ」という記述は、TCMの<strong>七情</strong>——相殺・相畏（毒性を減らす）と相反・相悪（害をなす）——に対応している。第5編で扱った「君臣佐使」の<strong>佐薬</strong>（君・臣の毒性を軽減する）もこの文脈である。  日本漢方でも、附子の毒性を甘草や乾姜が軽減する（四逆湯の構成）といった経験知がある。本編はこれを「システムベースのアプローチで検証すべき」と述べているわけで、経験知を頭ごなしに否定も肯定もしない態度が一貫している。</blockquote>
+<h2>結論</h2>
+<p><strong>生薬の安全性は、「生薬医薬－施術者－患者」の三角形のいずれかの要素が損なわれたときに危うくなる。</strong> この課題に応えるには、<strong>新興のシステムベース技術を従来の手段と統合することが不可欠</strong>である。</p>
+<p><strong>中期および長期の主要な毒性の指標を迅速に特定し、警告シグナルを生み出し、さらなる毒性学的調査を要する生薬とその処方を同定できる、新規の手法への明確かつ緊急の必要が残されている。</strong></p>
+<p><strong>&#x27;omics とバイオインフォマティクス技術の最近の進歩により、有効性と毒性を個体レベルで、かつ個別化された方法で調査することが可能になった。</strong> これらの手法がさらに発展・検証されれば、<strong>潜行性の毒性の検出を高め、効果的なファーマコビジランスに必要な背景情報を提供し、特定の生薬医薬の機構論的研究を助ける</strong>はずである。</p>
+<h3>第9編の引用文献</h3>
+<ol><li>Q. Xu et al., <em>BMC Complement. Altern. Med.</em> <strong>13</strong>, 132 (2013).</li><li>M. Ouedraogo et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 492 (2012).</li><li>E. M. Williamson, A. Lorenc, A. Booker, N. Robinson, <em>J. Ethnopharmacol.</em> <strong>149</strong>, 453 (2013).</li><li>D. Shaw, <em>Planta Med.</em> <strong>76</strong>, 2012 (2010).</li><li>S. P. Chen et al., <em>Drug Safety</em> <strong>35</strong>, 575 (2012).</li><li>J. Zhou, M. Ouedraogo, F. Qu, P. Duez, <em>Phytother. Res.</em> <strong>27</strong>, 1745 (2013).</li><li>Y. Z. Liang, P. S. Xie, K. Chan, <em>Comb. Chem. High Throughput Screen.</em> <strong>13</strong>, 943 (2010).</li><li>V. Bunel, M. Ouedraogo, A. T. Nguyen, C. Stevigny, P. Duez, <em>Planta Med.</em> <strong>80</strong>, 1210 (2014).</li><li>O. Pelkonen et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 587 (2012).</li><li>I. C. Munro, A. G. Renwick, B. Danielewska-Nikiel, <em>Toxicol. Lett.</em> <strong>180</strong>, 151 (2008).</li><li>M. L. Coghlan et al., <em>PLOS Genet.</em> <strong>8</strong>, e1002657 (2012).</li><li>K. M. Wu, J. G. Farrelly, R. Upton, J. Chen, <em>Phytomed.</em> <strong>14</strong>, 273 (2007).</li><li>S. G. Newmaster, M. Grguric, D. Shanmughanandhan, S. Ramalingam, S. Ragupathy, <em>BMC Med.</em> <strong>11</strong>, 222 (2013).</li><li>K. Chan et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 469 (2012).</li><li>S. C. Hsieh, J. N. Lai, P. C. Chen, H. J. Chen, J. D. Wang, <em>Pharmacoepidemiol. Drug Saf.</em> <strong>15</strong>, 889 (2006).</li></ol>
+<hr>
+<h1>第10編　&#x27;omics と比較効果研究の結合——中医薬のためのエビデンスに基づく臨床研究の意思決定</h1>
+<p><strong>原題</strong>: Combining &#x27;omics and comparative effectiveness research: Evidence-based clinical research decision-making for Chinese medicine（S50）</p>
+<p><strong>著者</strong>: <strong>Claudia M. Witt ¹˒²˒³\</strong>*・Jianping Liu ⁴・Nicola Robinson ⁴˒⁵</p>
+<ul><li>¹ チューリッヒ大学病院・チューリッヒ大学 補完統合医療研究所（スイス チューリッヒ）</li><li>² メリーランド大学医学部 統合医療センター（米国メリーランド州ボルチモア）</li><li>³ シャリテ－ベルリン医科大学 社会医学・疫学・保健経済学研究所（ドイツ ベルリン）</li><li>⁴ 北京中医薬大学 エビデンスに基づく中医薬センター（中国 北京）</li><li>⁵ ロンドン・サウスバンク大学 保健・社会ケア学部（英国 ロンドン）</li><li>\*責任著者: claudia.witt@uzh.ch</li></ul>
+<h2>問題の所在</h2>
+<p><strong>中医薬の臨床試験のシステマティックレビューとメタ解析は、一貫した品質の問題と、伝統的治療の実践と研究の間のエビデンスギャップを実証してきた。</strong></p>
+<p><strong>臨床実践は、知識・臨床経験・患者の選好の上に築かれており、これらはすべて価値観と信念体系の影響を受けうる。</strong></p>
+<p>臨床医学研究における現在の潮流である「<strong>比較効果研究（comparative effectiveness research, CER）</strong>」は、<strong>臨床現場でのより情報に基づいた意思決定と、より妥当な保健政策を可能にする、エビデンスに基づく推奨の開発を支持する</strong>。これは「<strong>P4医療（predictive 予測的・preventive 予防的・personalized 個別化・participatory 参加型）</strong>」の実践基準も満たす。</p>
+<p><strong>ステークホルダーの視点を考慮に入れ、患者中心のアプローチに従い、混合研究法（mixed methods）の方法論を用い、システム生物学ベースの &#x27;omics 技術のような現代の科学技術を組み合わせた、中医薬のための現代的で戦略的な研究枠組みを創出することは、中医薬理論と現代の臨床研究方法論の間のギャップを埋めるのに有益</strong>であろう。</p>
+<h2>背景——「一疾患一治療」モデルの限界</h2>
+<p><strong>最も卓越した医学研究モデルは「一疾患一治療（one disease, one treatment）」を比較する</strong>ものである。しかしながら、<strong>この戦略はしばしば比較可能な臨床実践をもたない</strong>。</p>
+<p>さらに、そうした研究モデルに基づく臨床試験は、通常、<strong>注意深く選択された患者群を対象に標準化された設定で実施され</strong>、しばしば<strong>一般化可能でもなく、臨床ケアを導き情報を与えることもできない結果を生み出す</strong>。</p>
+<p>そうした試験を要約するシステマティックレビューとメタ解析は、<strong>様々な慢性疾患について、とりわけ糖尿病・心血管疾患・疼痛のような複雑な状態——複数の併存疾患をもち、多数の異なる治療を受けている患者にしばしば生じる——については、誤解を招くことさえありうる</strong>。</p>
+<p><strong>意思決定者——臨床医・患者・支払者——は、現実の設定における実際の治療選択肢と比較可能な研究を必要としている</strong> [1]。</p>
+<p><strong>比較効果研究（CER）は、臨床医と患者が個人のニーズと選好に最も適した選択肢を選ぶのを助ける、現実世界のエビデンスを提供することを意図している</strong> [2]。CERは、<strong>すべての関連する段階でステークホルダーのニーズを取り込み</strong>、臨床試験を含む多くの異なる種類の研究デザインを含む。</p>
+<p>いわゆる「<strong>プラグマティック試験（pragmatic trials）</strong>」は、以下によって特徴づけられる。</p>
+<ul><li><strong>併存疾患をもち併用薬を使用している患者を含む、日常臨床ケアに現れるより「現実的」な患者を含める</strong></li><li><strong>より個別化された治療を提供する</strong></li><li><strong>患者にとって関連する（patient-relevant）アウトカムを用いる</strong></li><li><strong>日常臨床ケアと「整合した」設定で実施される</strong> [3]</li></ul>
+<h2>中医薬とシステム生物学</h2>
+<p><strong>中医薬は歴史的に記述的・現象学的アプローチに基づいており</strong>、生薬医薬の複雑な混合物のみならず、<strong>鍼灸や生活指導のような非薬物的介入</strong>にも依拠してきた。</p>
+<p>中医薬の個々の治療構成要素（例: 鍼灸）についての研究は、すでにCERのエビデンスに関連する貢献をしており [4]、さらなる鍼灸CERの設計への指針を提供している [5]。</p>
+<p>しかしながら、<strong>臨床実践において中医薬は複雑な介入であり、生理学的経路や単一標的ではなく、システム全体の組織化に焦点を当てる</strong>。治療は、<strong>古典籍・専門家・臨床経験・患者の選好から蓄積された知識</strong>の上に築かれ、それらは価値観と信念体系の影響を受ける [6]。</p>
+<p><strong>中医薬には基本的な患者参加の要素があり</strong>、複雑な介入戦略に<strong>一般的な生活面（例: 食事と運動）</strong> を含む。</p>
+<p><strong>伝統中医学的診断（あるいは「弁証（syndrome differentiation）」）</strong>——中医薬の観点からの臨床情報の包括的な解析（例: 問診、脈診・舌診から得られる情報）——が、<strong>個別化された治療選択肢を導くために用いられる</strong> [7]。<strong>各証は、それ自身の固有の治療プロトコルを決定する症状から構成される。</strong></p>
+<p><strong>弁証を現代臨床実践の生物医学的技術と統合することは、個別化治療の決定に有用</strong>であろう [8]。<strong>国際疾病分類（ICD）11のベータ版は、西洋の診断に加えて中医学的な証のコーディングをすでに可能にしている</strong> [9]。</p>
+<p>現在、これらの中医学的証は<strong>疾患予測の重要なツール</strong>とみなされており [10, 11]、<strong>測定可能なバイオマーカーとの相関づけ</strong>の取り組みが進行中である。最近、<strong>システム生物学ベースのアプローチが中医薬の弁証研究に利用され、患者集団の層別化を可能にしている</strong> [8]。</p>
+<p>この戦略は、<strong>特定の介入にどの患者が最も適切かを判定する能力をもつことによって、臨床試験デザインの最適化</strong>を研究者に助けうる。</p>
+<p><strong>システム生物学的アプローチの1つの利点は、伝統医学のような動的で非線形なシステム内における個々の構成要素の連結性と相互依存性、および異なる組織化レベルで出現する特性の双方を理解しようとする点にある。</strong></p>
+<p>加えて、<strong>&#x27;omics 技術（ゲノミクス・プロテオミクス・メタボロミクス・トランスクリプトミクス・リピドミクスを含む）の使用は、中医薬の概念と実践に非常に近く整合する</strong> [8]。中医薬に &#x27;omics ベースの技術を用いることは、<strong>個別化された診断とシステムベースの介入の双方をよりよく理解する独自の機会</strong>を提供する [12]。</p>
+<p><strong>関節リウマチに関する最近の2つの研究</strong>は、従来医学に対するこのアプローチの可能性を実証した。<strong>中医学的な証の診断を、バイオマーカーの同定と、診断サブグループを決定するためのゲノミクスの使用と組み合わせる</strong>ことによって、<strong>より良い治療アウトカムの機会が提供された</strong> [13, 14]。</p>
+<h2>P4医療との接続</h2>
+<p><strong>将来、P4医療が、後手に回る医療（reactive health care）ではなく、疾患の予測と予防を可能にすることが期待されている</strong> [15]。</p>
+<p><strong>個人のゲノム的差異が、その人の環境曝露とともに、どのように生物学的システムに影響するかを理解することは、医療専門職が患者特異的な予測を行い、それに続く個別化治療、あるいはさらに良いことに予防的介入を行うことを可能にする潜在力をもつ。</strong></p>
+<p>将来、医療の消費者は、<strong>ゲノム配列・罹患組織の分子プロファイル・バイオマーカーパネル</strong>を含む個人の健康情報をますます装備するようになるだろう [16]。<strong>この新しい医療の時代のために臨床的・保健政策的な指針を提供するには、すべての主要ステークホルダーの参加が必要</strong>となる。</p>
+<p>さらに、<strong>CERが恩恵を受けうる1つの戦略は、将来の研究アプローチの一部として少なくともゲノミクスを組み込むこと</strong>である [17]。<strong>&#x27;omics 技術をCERに含めることは、中医薬にとって新しい領域</strong>であり、方法論的なCERガイダンスにはまだ組み込まれていない [18]。それは、<strong>中医薬理論の個別化アプローチと西洋科学の間のギャップを直接埋めうる</strong>。</p>
+<p><strong>CERにおけるP4医療への潮流</strong>はまた、<strong>大規模で現実的な集団からの情報を提供する理想的な設定</strong>を創り出す。さらに、<strong>P4医療の特徴は中医薬の基礎とよく噛み合う。</strong></p>
+<h2>提言（Recommendations）</h2>
+<p>以下に、<strong>CERの根底にある概念と、システム生物学ベースの &#x27;omics 技術を組み合わせて、伝統医学の使用を広げ臨床的意思決定を最適化するために使える、中医薬の科学的エビデンスを収集するための提言</strong>を示す。</p>
+<p><strong>ある治療について十分なエビデンスがない場合、既存の試験データと文献のシステマティックレビューの双方の組み合わせを用いて、将来の研究に情報を与え、臨床的意思決定を支持すべきである。</strong> これには以下が必要となる。</p>
+<ul><li><strong>研究の文脈と、結果がどの程度一般化可能かの双方について包括的な情報を提供する、システマティックレビューとメタ解析のためのツール</strong></li><li><strong>中医薬における弁証・他の患者特性・疾患進行の間の可能な関連を同定するために、システム生物学的アプローチを利用した既存研究の二次データ解析</strong></li></ul>
+<p><strong>中医薬に関する将来の臨床研究は、発展しつつあるCER方法論・現代のシステム生物学 &#x27;omics アプローチ・日常ケアにおける患者のニーズを組み合わせることから恩恵を受けるだろう。</strong> 実際上、これには以下が必要となる。</p>
+<p><strong>1. 戦略的な臨床試験デザイン</strong></p>
+<ul><li><strong>不均質で「現実的な」患者標本を含み、患者の日常ケアを反映する設定で実施され、さらなるサブグループ解析を容易にする標本サイズをもつ試験</strong></li><li><strong>研究の種類と、関連する診断シナリオの文脈</strong>を、<strong>定性的情報</strong>（例: 中医学的弁証・患者の選好・期待）と<strong>定量的パラメータ</strong>（例: &#x27;omics 解析を含むシステム生物学）の双方とバランスさせた試験デザイン</li><li><strong>将来の研究のための適切なアウトカム指標についてのガイダンスの開発</strong></li><li><strong>生活因子を含む複雑な介入の使用を可能にし、日常臨床実践中に患者が経験する変化を反映する、個別化ケアモデルへと患者治療を移行させる現実的な治療プロトコル</strong>。<strong>複雑な生薬製剤によって活性化される複雑な薬理学的ネットワークについての未解決の問いに答えるため、&#x27;omics ベースの解析を用いるべきである</strong> [12]</li><li><strong>中医薬からの予測因子が現代の定量的パラメータとどう相関するかを学ぶため、診断に焦点を当てた研究がさらに必要</strong></li></ul>
+<p><strong>2. ステークホルダーの関与</strong></p>
+<ul><li><strong>各ステークホルダー（患者・臨床医・政府・支払者）のニーズが、研究の焦点の同定・臨床試験デザインの計画・結果の解釈において考慮されるべきである。</strong> ステークホルダーの視点を高い水準で体系的に包含するには、<strong>定性的・定量的の双方の研究方法論を適用する必要がある</strong> [19]</li></ul>
+<p><strong>謝辞</strong>: 本研究は、欧州連合 第7次フレームワークプログラムが資金提供する協調活動「ポストゲノム時代の伝統中医薬研究における良好な実践（GP-TCM）」（223154）の支援を受けた。Claudia Witt は、CERに関する方法論的研究について、The Institute for Integrative Health（米国メリーランド州ボルチモア）から旅費助成を受けた。</p>
+<h3>第10編の引用文献</h3>
+<ol><li>M. Helfand et al., <em>Clin. Transl. Sci.</em> <strong>4</strong>, 188 (2011).</li><li>P. H. Conway, C. Clancy, <em>N. Engl. J. Med.</em> <strong>361</strong>, 330 (2009).</li><li>M. Zwarenstein et al., <em>BMJ</em> <strong>337</strong>, a2390 (2008).</li><li>C. M. Witt et al., <em>PLOS ONE</em> <strong>7</strong>, e32399 (2012).</li><li>C. M. Witt et al., <em>BMC Complement. Altern. Med.</em> <strong>12</strong>, 148 (2012).</li><li>N. Robinson et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 604 (2012).</li><li>M. Jiang et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 634 (2012).</li><li>J. van der Greef, <em>Nature</em> <strong>480</strong>, S87 (2011).</li><li>ICD-11 Beta. http://apps.who.int/classifications/icd11/browse/f/en (2012).</li><li>J. Dai et al., <em>Evid. Based Complement. Alternat. Med.</em> 706762 (2013).</li><li>S. Sun et al., <em>Evid. Based Complement. Alternat. Med.</em> 453503 (2012).</li><li>A. Buriani et al., <em>J. Ethnopharmacol.</em> <strong>140</strong>, 535 (2012).</li><li>H. A. van Wietmarschen et al., <em>PLOS ONE</em> <strong>7</strong>, e44331 (2012).</li><li>H. A. van Wietmarschen et al., <em>J. Clin. Rheumatol.</em> <strong>15</strong>, 330 (2009).</li><li>C. Auffray, D. Charron, L. Hood, <em>Genome Med.</em> <strong>2</strong>, 57 (2010).</li><li>L. Hood, Q. Tian, <em>Genomics Proteomics Bioinformatics</em> <strong>10</strong>, 181 (2012).</li><li>N. I. Simonds et al., <em>J. Natl. Cancer Inst.</em> <strong>105</strong>, 929 (2013).</li><li>C. M. Witt et al., <em>Trials</em> <strong>15</strong>, 169 (2014).</li><li>P. A. Deverka et al., <em>J. Comp. Eff. Res.</em> <strong>1</strong>, 181 (2012).</li></ol>
+<hr>
+<h2>訳者による総括</h2>
+<p>10編を通読して見えてくるのは、<strong>伝統医学を近代科学に接続しようとする試みが、「どこで接続するか」によって大きく3つの流派に分かれる</strong>ということである。</p>
+<p><strong>(1) 上流で接続する——ゲノミクスと品質管理（第1・2編）</strong> 生薬という「モノ」の段階で標準化する。DNAバーコーディングで基原を確定し、&#x27;omics で道地薬材の生物学的基盤を解明し、LC-MSⁿ で全成分をプロファイルし、SSDMC で規格に落とす。<strong>伝統処方の姿を変えずに、その品質を測れるようにする</strong>アプローチである。郭代安らの図2（「真偽」と「優劣」の二層）が、この流派の到達点をよく示している。</p>
+<p><strong>(2) 中流で接続する——創薬（第5・6編）</strong> 複雑な処方から<strong>活性成分だけを取り出す</strong>。君使モデルで解析可能な最小単位に絞り、差分から IDHP を見つけて単一化合物の新薬にする（第5編）。あるいは麝香保心丸を7成分の「簡略化複方」に還元してポリピル化する（第6編）。<strong>伝統処方を出発点にはするが、最終製品は近代薬</strong>になる。</p>
+<p><strong>(3) 下流で接続する——規制と臨床（第3・7・10編）</strong> 混合物を混合物のまま医薬品にする。FDAの「証拠の総体」（第3編）、PHY906 の Phytomics QC（第7編）、CER と &#x27;omics の結合（第10編）。<strong>成分が全部分からなくても、品質の一貫性と臨床効果を担保できる仕組みを作る</strong>という発想である。</p>
+<p>この3つは競合するのではなく、<strong>目的が違う</strong>。医薬品として承認を取りたいなら(3)、新規化合物を見つけたいなら(2)、既存製品の品質を上げたいなら(1)。本増刊の編集の巧みさは、この3層を並置して読者に選択肢を見せている点にある。</p>
+<p>個別に最も価値が高いのは、やはり<strong>第3編</strong>である。<strong>FDA CDER の当事者が、Veregen と Fulyzaq という2つの実例に即して「証拠の総体」の中身を説明している</strong>——化学的特性評価が困難になるほど、原料管理（GACP・生態地理区の限定）と生物学的アッセイへの依存を増やす、という原理が具体的に示されている。しかも生物学的アッセイを持てば承認後に原料産地を拡げられる、という規制上の実利まで書かれている。</p>
+<p><strong>第9編</strong>の「生薬－施術者－患者の三角形」も実務的である。香港のトリカブト中毒52例の大半が品質不良・処方不適切・調剤ミスに起因したという知見は、<strong>「生薬が危険か否か」という問いの立て方自体が間違っている</strong>ことを示す。</p>
+<p>一方、限界も明記しておくべきである。冒頭に断られているとおり、<strong>本増刊は Science 誌の査読を受けていないスポンサー付き特別セクション</strong>であり、各編は総説・展望型で、個々の主張の一次データは引用元に当たる必要がある。特に第5編・第6編は著者ら自身の研究の紹介という色彩が強く、未発表データへの言及もある。第4編の表1にある記録年（「1260年代」「紀元前202–220年」）のような数値も、出典の性質上そのまま検証はできない。</p>
+<p>日本の読者にとって具体的に効くのは、<strong>第7編の PHY906</strong> だろう。黄芩湯という日本でも馴染みのある古方が、cGMP のもとで10年以上 PSI 0.9超の一貫性を保ち、米国で第2相まで進んだ——という事実は、「漢方エキス製剤を国際的な医薬品開発の俎上に載せる」ことが不可能ではないと示している。同時に「市販の黄芩湯製品はばらつきが大きく生物活性も不安定だった」という対比が、<strong>何が決め手なのか（製造管理と品質評価システム）</strong> を明確にしている。</p>
+<h2>参考文献</h2>
+<p>本増刊は10編の総説からなり、<strong>各編がそれぞれ独自の文献リストをもつ</strong>。原文の並び順のまま、各編の末尾に「<strong>第N編の引用文献</strong>」として全件を掲げてある。内訳は以下のとおり（合計188件）。</p>
+<table>
+<thead><tr><th>編</th><th>表題</th><th>文献数</th></tr></thead>
+<tbody>
+<tr><td>第1編</td><td>生薬ゲノミクス——伝統医薬の生物学を検証する</td><td>12</td></tr>
+<tr><td>第2編</td><td>伝統中医薬の品質管理に対する全体論的アプローチ</td><td>20</td></tr>
+<tr><td>第3編</td><td>伝統医薬からボタニカルドラッグへの進化</td><td>13</td></tr>
+<tr><td>第4編</td><td>伝統中医薬を用いたインフルエンザ治療の開発</td><td>28</td></tr>
+<tr><td>第5編</td><td>伝統医学の哲学に着想を得た新規創薬戦略</td><td>22</td></tr>
+<tr><td>第6編</td><td>古代の組み合わせ処方を読み解く——麝香保心丸</td><td>26</td></tr>
+<tr><td>第7編</td><td>伝統中医薬処方 PHY906 の開発から得られた教訓</td><td>23</td></tr>
+<tr><td>第8編</td><td>がん管理における中薬の潜在的役割</td><td>35</td></tr>
+<tr><td>第9編</td><td>生薬医薬の安全性評価——統合的毒性学アプローチ</td><td>15</td></tr>
+<tr><td>第10編</td><td>&#x27;omics と比較効果研究の結合</td><td>19</td></tr>
+</tbody></table>
+<p>増刊全体の引用形式は、原文の指定により次のとおり。</p>
+<blockquote>[Author Name(s)], <em>Science</em> <strong>347</strong> (6219 Suppl), Sxx–Sxx (2015).</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="integrating-botanicals-oncology-fda.html">植物由来製品をがん診療に組み込む——FDAによるボタニカル製品規制とボタニカル臨床試験の論点</a><span class="rel-tags"><span class="rel-tag">臨床試験</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">生薬</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="shuanghuanglian-hplc-uv-quantum-fingerprint.html">双黄連口服液を例とした漢方製剤と中間体の総合的品質評価——HPLC5波長融合フィンガープリント＋UV量子フィンガープリント＋抗酸化活性</a><span class="rel-tags"><span class="rel-tag">漢方</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="botanical-drug-development-review.html">ボタニカルドラッグ（植物薬）の開発——総説：「魔法の弾丸」から混合物へ、耐性を防ぐアントラージュ効果とCMCの壁</a><span class="rel-tags"><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">生薬</span><span class="rel-tag">ケモメトリクス</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="reference-sample-classical-formula-tcm-preparations.html">古代経典名方目録で管理する漢方複方製剤の「基準サンプル」研究——中薬3.1類の規制科学解説</a><span class="rel-tags"><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">生薬</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="art-science-traditional-medicine-part2" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
