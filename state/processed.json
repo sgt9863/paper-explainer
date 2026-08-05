@@ -1254,6 +1254,18 @@
       "title": "定量分析法バリデーションのためのTotal Error アプローチ——両側β含有許容区間（Hoffman & Kringle 2007）",
       "source_pdf": "Hoffman-Kringle-2007-Total-Error-Approach.pdf",
       "date": "2026-08-05"
+    },
+    "upload-sfstp-part4-2008": {
+      "slug": "sfstp-part4-accuracy-profile-examples",
+      "title": "定量分析法バリデーション戦略の調和——SFSTP提案 パートIV：適用例（正確性プロファイルの実践7例）（Hubert 2008）",
+      "source_pdf": "1-s2.0-S0731708508003956-main.pdf",
+      "date": "2026-08-05"
+    },
+    "upload-rozet-advances-2011": {
+      "slug": "bioanalytical-validation-risk-uncertainty",
+      "title": "バイオ分析法のバリデーション・リスク・不確かさ評価の進歩（Rozet 2011）",
+      "source_pdf": "1-s2.0-S0731708510007235-main.pdf",
+      "date": "2026-08-05"
     }
   }
 }

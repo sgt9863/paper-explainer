@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>定量分析法バリデーション戦略の調和——SFSTP提案 パートIV：適用例（正確性プロファイルの実践7例）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="定量分析法バリデーション戦略の調和——SFSTP提案 パートIV：適用例（正確性プロファイルの実践7例）">
+<meta property="og:description" content="本稿（J. Pharm. Biomed. Anal. 48巻 2008年・リエージュ大学 Ph. Hubert ら SFSTP委員会13名）は 「正確性プロファイル（accuracy profile）を判断ツールとする分析法バリデーションの調和アプローチ」を提示したSFSTP 4部作の完結編である。パートI・IIが方法論と実験計画 パートIIIが統計とアルゴリズムを扱ったのに対し 本パートIVは7つの実データ適用例を通じて手法を実演する——①1992年の旧データの再解析 ②錠剤中2成分のHPLC-UV定量 ③ヒドロコルチゾン軟膏（検量線プロトコルが正確性プロファイルに与える影響を6通り比較） ④豚血漿アクリルアミドのLC-MS（行列効果を補正係数1.457で補正） ⑤神経疾患バイオマーカータンパク質のELISA（4パラメータロジスティック） ⑥医薬品中不純物のHPLC-UV（分割実施要因計画） ⑦血漿リン酸の比色定量。結論では 正確性プロファイルがISO 17025のバリデーション定義に正確に合致すること 濃度レベルごとに性能指標を計算するため分散不均一でも広範囲に適用できること 真度と精度の対立が一枚のグラフで解消されること 回収率補正は「行ってよく かつ行うべき」でありその代償として測定不確かさが増えることを明示する。全訳（＋訳者補足）。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="sfstp-part4-accuracy-profile-examples"><h1>定量分析法バリデーション戦略の調和——SFSTP提案 パートIV：適用例（正確性プロファイルの実践7例）</h1><div class="paper-meta"><span class="date">2026-08-05</span> <span class="tag">分析法・バリデーション</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">QC・品質評価</span> <span class="tag">規制・ガイドライン</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2008.07.018" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0731708508003956-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="sfstp-part4-accuracy-profile-examples" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="sfstp-part4-accuracy-profile-examples" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">「真度は合格 精度も合格 でも本当に使えるのか」——正確性プロファイル（accuracy profile）を実データ7例で回してみせる SFSTP4部作の完結編。1992年の旧データの再解析から HPLC-UV・LC-MS・ELISA・比色法まで 回収率補正・行列効果・非線形検量線・定量限界の算出をすべて具体的な数字で示す</p><div class="digest-stats"><div class="stat"><span class="stat-value">3程度（J. Pharm. Biomed. Anal.・2008年時点）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">2008年（SFSTP委員会 リエージュ大学 Hubert ら13名）</span><span class="stat-label">発表</span></div><div class="stat"><span class="stat-value">7例（医薬品品質管理／不純物／バイオ分析／食品分析）</span><span class="stat-label">適用例</span></div><div class="stat"><span class="stat-value">HPLC-UV・LC-MS・ELISA（4パラメータロジスティック）・可視分光</span><span class="stat-label">手法</span></div><div class="stat"><span class="stat-value">図16点・表10点</span><span class="stat-label">図表</span></div><div class="stat"><span class="stat-value">許容区間が受容限界に完全に収まるかどうかの一点で判断</span><span class="stat-label">判定</span></div></div><ul class="digest-points"><li>正確性プロファイルは「真度」と「精度」を1枚のグラフに統合し 各濃度レベルでβ期待許容区間の上下限を結んだ曲線が 事前に決めた受容限界（±5%など）の内側に完全に収まるかどうかで合否を判定する。従来法のように真度と精度を別々の検定にかけないので 「真度は合格だが精度が不合格」という宙ぶらりんな結論が生じない。1992年の旧データを再解析した第1例では 旧法だと平均回収率の信頼区間が100%を含まないため真度が不合格だったが 正確性プロファイルでは許容区間が±3%の内側に完全に収まり「有効」と判定される</li><li>実務で最も効くのが「部分的に有効」を数値で出せること。錠剤中2成分の例では 成分Aは±5%で全域有効だが 成分Bは公称値の120%を超えると許容区間が受容限界を割る——受容限界と許容区間の交点から上限定量限界121%が算出される（図5）。豚血漿アクリルアミドのLC-MS例では 生データの許容区間が−25%線の完全に外側にあり不合格（図8）だが 回収率の傾き0.686から補正係数1.457を求めて補正すると 14.05〜5000 mg/L の範囲で有効になる（図10）</li><li>検量線の作り方が結果を決める。ヒドロコルチゾン軟膏の例（図6）では マトリックス有無×校正レベル（80-120%/100%/120%）の6通りの正確性プロファイルを並べ 「マトリックスなし・120%単一点校正」が最良と選択している。ELISAでは4パラメータロジスティック（4-PL）を最尤法で当てはめ POM重み付けを使う——結論に列挙されるとおり 検量線の直線性仮定は完全に放棄でき 分散が濃度によって不均一でも扱える</li></ul></section><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・J. Pharm. Biomed. Anal. 原著）の節構成に沿って訳出。図1〜図16は原本PDFから PyMuPDF で埋め込み画像を xref 抽出（xref の並び順とキャプション順が一致しないため、キャプション矩形の直上にある画像を位置から対応づけて再マッピング）し Read で内容確認のうえ全訳キャプションで埋め込んだ。表1〜表10のうち本文の論旨に直結するものを全数値転記し、PDFテキスト層の抽出が壊れている箇所・原文の数値が内部で矛盾する箇所は訳注で明示した。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Harmonization of strategies for the validation of quantitative analytical procedures: A SFSTP proposal — <strong>Part IV. Examples of application</strong></li><li>著者: <strong>Ph. Hubert\</strong>* ᵃ・J.-J. Nguyen-Huu ᵇ・B. Boulanger ᶜ・E. Chapuzet ᵈ・N. Cohen ᵉ・P.-A. Compagnon ᶠ・W. Dewé ᵍ・M. Feinberg ʰ・M. Laurentie ⁱ・N. Mercier ᵈ・G. Muzard ʲ・L. Valat ᵏ・<strong>E. Rozet</strong> ᵃ</li><li>ᵃ リエージュ大学 薬学部 分析化学研究室・バイオ分析化学研究ユニット（ベルギー リエージュ）</li><li>ᵇ サノフィ・アベンティス（フランス Vitry sur Seine）／ᶜ UCB Pharma SA（ベルギー Braine-L&#x27;alleud）</li><li>ᵈ Qualilab（フランス Olivet／オルレアン）／ᵉ Expanscience（フランス Epernon）</li><li>ᶠ <strong>フランス保健製品安全庁（AFSSAPS）</strong>（フランス St Denis）</li><li>ᵍ GlaxoSmithKline Biologicals（ベルギー Rixensart）／ʰ <strong>フランス国立農学研究所（INRA）</strong> Met@risk（フランス パリ）</li><li>ⁱ <strong>フランス食品安全庁（AFSSA）</strong> LERMDV（フランス Fougères）</li><li>ʲ Merck-Theramex（モナコ）／ᵏ Manufacturing（フランス Mérignac）</li><li>責任著者: Ph. Hubert（Tel +32 4 366 43 16／ph.Hubert@ulg.ac.be）</li><li>掲載: <em>Journal of Pharmaceutical and Biomedical Analysis</em> <strong>48</strong> (2008) 760–771. DOI: 10.1016/j.jpba.2008.07.018</li><li>受理: 2008年6月23日受付／7月21日受理／7月30日オンライン公開</li><li>キーワード: バリデーション／総合誤差（Total error）／正確性プロファイル（Accuracy profile）／液体クロマトグラフィー／ELISA</li></ul>
+<blockquote>補足: <strong>SFSTP（Société Française des Sciences et Techniques Pharmaceutiques、フランス製薬科学技術協会）</strong> の委員会がまとめた4部作の最終巻である。著者13名の顔ぶれが特徴的で、<strong>アカデミア（リエージュ大学、INRA）・製薬企業（サノフィ・アベンティス、UCB、GSK、Merck-Theramex）・受託分析会社（Qualilab）・そして規制当局（AFSSAPS＝フランス版FDA、AFSSA＝フランス食品安全庁）</strong> が同じテーブルについている。産官学が合意した「実務の作法」という性格をもつ。  4部作の構成は次のとおり。  | パート | 内容 | 掲載 | |---|---|---| | I | 方法論と概念、用語の定義 | <em>J Pharm Biomed Anal</em> <strong>36</strong> (2004) 579–586 | | II | 最小限の実験計画（V1〜V4プロトコル） | <em>J Pharm Biomed Anal</em> <strong>45</strong> (2007) 70–81 | | III | 統計とアルゴリズム、全計算式 | <em>J Pharm Biomed Anal</em> <strong>45</strong> (2007) 82–96 | | <strong>IV（本稿）</strong> | <strong>7つの実データ適用例</strong> | <em>J Pharm Biomed Anal</em> <strong>48</strong> (2008) 760–771 |  本サイトには、同じ「総合誤差」の考え方を<strong>β含有許容区間</strong>として定式化した [Hoffman &amp; Kringle（2007）] の全訳も収録している。本稿の <strong>β期待許容区間</strong>との違いは、そちらのページの総括で表にまとめてある。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>分析手順のバリデーションに関する SFSTP 委員会によって、<strong>正確性プロファイル（accuracy profile）に基づく分析法バリデーションの調和されたアプローチ</strong>が導入された。<strong>この第4の、そして最後の文書は、この方法論と用いられる統計を例示すること</strong>を目的とする。そのため、<strong>医薬品の品質管理・原薬中の不純物の定量・バイオ分析・栄養素の測定</strong>といった実際の事例における分析法のバリデーションを提示する。さらに、提案アプローチが<strong>液体クロマトグラフィー（LC-UV、LC–MS）・分光光度法・ELISA</strong> といった広範な手法に適用可能であることを実証するため、<strong>異なる種類の分析法</strong>を用いる。</p>
+<h2>1. 緒言（Introduction）</h2>
+<p>本刊行物は、<strong>分析法バリデーション（施設内）の新しい調和された全体的アプローチ</strong>を記述しようとするガイドの最終部にあたる。</p>
+<p><strong>最初の2部</strong>は、このアプローチの<strong>方法論的・概念的側面</strong>を提示することを目的としており、その中心点は<strong>判断ツールとしての正確性プロファイル</strong>である。その用語法、および適用可能な最小限の実験計画を規定した [<a href="#ref-1" class="cite">1</a>, <a href="#ref-2" class="cite">2</a>]。<strong>第3部</strong>は本アプローチの<strong>統計的・アルゴリズム的側面</strong>を提示し、実務上の実装に不可欠なすべての計算式を読者に提供する [<a href="#ref-3" class="cite">3</a>]。</p>
+<p><strong>この第4部</strong>は、<strong>医薬品管理・原材料中の不純物定量・生物学的分析・食品分析</strong>という様々な分野における、<strong>すでに実運用されている一連の適用例</strong>を提示する。<strong>各例は、分析者が古典的に直面する特定の状況を例示するために選ばれている。</strong></p>
+<p>すべての例は同じ方法で提示される。</p>
+<ol><li>分析手順の簡潔な要約により、用いた分析技術の種類と達成すべき目標を示す</li><li>一般に、生データと適用した実験計画の種類を、<strong>検量データとバリデーションデータを表す図</strong>で示す</li><li>次に<strong>正確性プロファイル</strong>を別の図で示し、分析法バリデーションに関する解釈と意思決定を可能にする</li><li>最後に、対応する<strong>真度・精度・正確性のデータ、および許容区間の上下限</strong>を図表にまとめる</li></ol>
+<p>必要な場合には、<strong>定量限界</strong>を計算した。ただし、提案アプローチでは許されているものの [<a href="#ref-1" class="cite">1</a>–<a href="#ref-3" class="cite">3</a>]、<strong>検出限界は評価していない</strong>。</p>
+<p><strong>回収率が低いために補正係数を適用する必要があった場合</strong>には、直線性の直線がその係数をどう求めたかを理解させ、<strong>第2の正確性プロファイル</strong>が補正後にその方法をバリデートできるかどうかを示す。実際、様々な事例において、<strong>弱すぎる回収率を補償するために補正係数を適用することが不可欠</strong>であることが判明した。<strong>適用範囲全体について一貫した補正係数を決定できるという可能性が、本アプローチの威力を示している。</strong></p>
+<p>さらに今から述べておくべきこととして、<strong>データを補正すると、測定の不確かさが非常に目に見える形で増大する</strong>。これは不確かさの計算の背後にある計量学の理論と完全に整合している。加えて、<strong>測定の不確かさが許容区間の幅から容易に導出できる</strong>ことが実証されている。関心のある読者は Feinberg ら [<a href="#ref-4" class="cite">4</a>]、González と Herrador [<a href="#ref-5" class="cite">5</a>, <a href="#ref-6" class="cite">6</a>] の仕事を参照されたい。</p>
+<p>本刊行物は、<strong>SFSTP委員会が提案する調和されたアプローチが、実験室にとって——バリデートしなければならない分析手順が何であれ——重要な進歩となることを、よりよく理解する助けとなる一連のケーススタディを分析者に提供すること</strong>を目的とする。</p>
+<p>ただし、この<strong>普遍性への野心は、ISO 17025 規格の §5.4.3 項に掲げられた注記4</strong> ——「<strong>バリデーションは常にコスト・リスク・技術的可能性の間のバランスである</strong>」——を思い出すことによって、いくらか抑制されなければならない。提示された統計ツールが、リスク計算においてどれほど有効であろうと、<strong>分析者は常にバリデーションの経済的・実務的側面を考慮しなければならない。</strong></p>
+<p>したがって、ある文書が同日に10回の試行を実施することを推奨していても、その方法の技術的制約がそれを許さない場合、それはいかなるバリデーションも不可能であることを意味しない。<strong>いくつかの例を通じて、誤った結果を得るリスクが——たとえ大きくとも——許容可能である限り、全体的アプローチを適用することは常に可能である</strong>ことを示そうとした。</p>
+<blockquote>補足: 緒言の最後の一段落は、この論文の性格をよく表している。<strong>「理想的な実験計画が組めなくても、リスクを承知のうえでなら適用できる」</strong> と明言している。ISO 17025 の「バリデーションはコスト・リスク・技術的可能性のバランス」を引いてくるあたり、規制当局（AFSSAPS）が著者に入っていることの効果だろう。  <strong>正確性プロファイル（accuracy profile）</strong> の考え方を先に一言で説明しておく。横軸に濃度をとり、各濃度レベルで「<strong>将来の測定値の β%（例えば95%）がこの範囲に入る</strong>」という<strong>β期待許容区間</strong>を計算する。その上限を結んだ線と下限を結んだ線を描き、事前に決めた<strong>受容限界（例えば ±5%）</strong> の帯と重ねる。<strong>許容区間が受容限界の内側に完全に収まっていれば有効、はみ出せば無効</strong>——判定はこれだけである。  従来法は「真度（バイアス）」と「精度（RSD）」を別々に検定するので、片方だけ合格という宙ぶらりんな結果が起こる。正確性プロファイルは両者を1枚に統合するので、そういう事態が起きない。これが本手法の最大の売りである。</blockquote>
+<h2>2. 1992年 STP Pharma Pratiques のデータ</h2>
+<h3>2.1 目的と背景</h3>
+<p><strong>1992年に公表されたこの例のデータ</strong>は、当時提案されたバリデーション手順を例示するために用いられたものである [<a href="#ref-7" class="cite">7</a>]。したがって、<strong>正確性プロファイルにつながる2003年の新しいバリデーションアプローチ [<a href="#ref-1" class="cite">1</a>–<a href="#ref-3" class="cite">3</a>] を適用し、両者で得られる結論を比較する</strong>ために、これらを再訪することは興味深い。この比較は特に、<strong>真度（1992年には accuracy と呼ばれていた）と精度（併行精度と室内再現精度）の基準について得られる結果</strong>に関わる。</p>
+<p>結果は製剤開発部門から得られたもので、<strong>医薬品中の有効成分を定量することを目的とした高速液体クロマトグラフィー（HPLC）法のバリデーション</strong>中に得られた。</p>
+<h3>2.2 実験計画</h3>
+<p>2003年の最近のバリデーションアプローチ [<a href="#ref-2" class="cite">2</a>] で提案されたプロトコルを参照すると、1992年の論文で実施・例示された試行は <strong>V4プロトコル</strong>に近いが、いくつかの特殊性がある。最も重要なのは<strong>検量試行に反復がないこと</strong>である。</p>
+<p><strong>計画 P1</strong>——マトリックスなしの検量標準（1992年の用語では「有効成分単独の試料」）:</p>
+<ul><li>試験する製剤の公称値の <strong>60〜140% に分布する5濃度レベル</strong></li><li>室内再現精度条件下で実施した<strong>3系列</strong>（すなわち3つの異なる日）</li><li>これらの測定は<strong>反復なし</strong>で実施</li></ul>
+<p><strong>計画 P2</strong>——マトリックス中の検量標準、1992年の用語では「再構成試料」:</p>
+<ul><li><strong>60〜140% に分布する5濃度レベル</strong></li><li>室内再現精度条件下で実施した<strong>3系列</strong></li><li>これらの測定は<strong>反復なし</strong>で実施</li></ul>
+<p><strong>計画 P3</strong>——マトリックス中のバリデーション標準:</p>
+<ul><li><strong>公称値の100%における単一濃度レベル</strong></li><li>室内再現精度条件下で実施した<strong>3系列</strong></li><li>系列あたり<strong>6回の独立した反復</strong></li></ul>
+<p>P1・P2 計画は、<strong>応答関数（特に1992年の用語での直線性）・行列効果の有無・バイアスの評価</strong>を確認することを意図し、<strong>P3 計画は精度の評価</strong>を可能にした。</p>
+<p>これらの実験計画を考慮すると、<strong>室内再現精度の分散の計算は公称濃度（100%）でしか行えず、バリデーション範囲全体では行えない</strong>ことを指摘しておかねばならない。しかもこれは、後に <strong>ICH Q2A（現 ICH Q2(R1) [<a href="#ref-8" class="cite">8</a>]）</strong> が発行されたときに要求事項となった点である。<strong>図1</strong>にこれらの実験計画の全体像を示す。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig1.png" alt="図1　1992年 SFSTP データ。実験計画の図示。6本（2×3）の検量関数が図中に示されている。100%領域を拡大すると 検量データとバリデーションデータの位置が分かる。" loading="lazy"><figcaption>図1　1992年 SFSTP データ。実験計画の図示。6本（2×3）の検量関数が図中に示されている。100%領域を拡大すると 検量データとバリデーションデータの位置が分かる。</figcaption></figure>
+<h3>2.3 結果</h3>
+<p>P3 実験計画に由来するデータの活用法として、2通りが用いられた。<strong>第一は検量に単一濃度レベルのみを使う方法、第二は5レベルすべてを保持する方法</strong>である。ただし、バリデーション標準が単一濃度レベルしか含まないため、<strong>どちらの正確性プロファイルも公称濃度100%のレベルでしか描けない</strong>。</p>
+<p><strong>受容限界は任意に ±3% に設定</strong>され、<strong>許容区間に含まれるべき将来の結果の割合は 95%</strong> とした。<strong>表1</strong>に、図2で例示される各種統計量を示す。</p>
+<p><strong>表1　1992年 SFSTP データ（mg 表示）——2通りの検量関数（1レベルまたは5レベル）による バリデーション結果</strong></p>
+<table>
+<thead><tr><th>バリデーション基準</th><th>検量1レベル</th><th>検量5レベル</th></tr></thead>
+<tbody>
+<tr><td>レベル（公称濃度の %）</td><td>100</td><td>100</td></tr>
+<tr><td>導入濃度の平均</td><td>162.10</td><td>162.10</td></tr>
+<tr><td>β許容限界 下限</td><td>161.80</td><td>161.70</td></tr>
+<tr><td>β許容限界 上限</td><td>165.10</td><td>165.20</td></tr>
+<tr><td>相対β許容限界 下限（%）</td><td>−0.18</td><td>−0.24</td></tr>
+<tr><td>相対β許容限界 上限（%）</td><td>1.84</td><td>1.90</td></tr>
+<tr><td>併行精度 標準偏差</td><td>0.41</td><td>0.41</td></tr>
+<tr><td>室内再現精度 標準偏差</td><td>0.60</td><td>0.62</td></tr>
+<tr><td>併行精度 R.S.D.（%）</td><td>0.26</td><td>0.25</td></tr>
+<tr><td>室内再現精度 R.S.D.（%）</td><td>0.37</td><td>0.38</td></tr>
+<tr><td>予測濃度</td><td>163.40</td><td>163.40</td></tr>
+<tr><td>絶対バイアス</td><td>1.35</td><td>1.34</td></tr>
+<tr><td>相対バイアス（%）</td><td>0.83</td><td>0.83</td></tr>
+<tr><td>回収率（%）</td><td>100.80</td><td>100.80</td></tr>
+</tbody></table>
+<p>R.S.D.: 相対標準偏差。</p>
+<p><strong>1992年の方法論によれば</strong>、併行精度の相対標準偏差（R.S.D.）が <strong>0.25%</strong>、室内再現精度の R.S.D. が <strong>0.37%</strong> であったため、<strong>その方法の精度は非常に良好とみなされた</strong>。この計算は公称値でしか行えなかったことを再度想起されたい。</p>
+<p><strong>しかしながら、1992年のプロトコルによれば、真度は満足のいくものには見えなかった。</strong> 平均回収率の信頼区間が <strong>100.7〜100.9%</strong> の間に位置し、したがって<strong>目標値100%を含まなかった</strong>からである。この幾分か曖昧な結論については、文献 [<a href="#ref-1" class="cite">1</a>] で既に広く議論されている。</p>
+<p><strong>図2</strong>——2003年に提案されたアプローチを適用して得られたもの——では、<strong>どちらの正確性プロファイルも、用いた検量データ（1濃度レベルまたは5濃度レベル）にかかわらず、その方法が有効と宣言できたはずであることを実証している</strong>。どちらの場合も、<strong>許容区間は受容限界の内側に完全に含まれている</strong>。</p>
+<p>1992年のデータを使うことはいささか人為的である。当然ながら、用いられた実験計画は2003年アプローチで開発されたものとは合致しないからである。しかし、<strong>両アプローチの間の連続性を示すために、この演習を行うことは興味深かった</strong>。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig2.png" alt="図2　1992年 SFSTP データ。マトリックス外の2つの検量プロトコル——(1) 単一レベル (2) 5レベル——を用いて公称濃度で得られた正確性プロファイル（受容限界 ±3%）。横軸の1と2がそれぞれのプロトコル 縦軸は相対誤差（%）。破線が±3%の受容限界 短い横棒が許容区間の上下限 白丸が相対バイアス。どちらのプロトコルでも許容区間が±3%の内側に完全に収まっている。" loading="lazy"><figcaption>図2　1992年 SFSTP データ。マトリックス外の2つの検量プロトコル——(1) 単一レベル (2) 5レベル——を用いて公称濃度で得られた正確性プロファイル（受容限界 ±3%）。横軸の1と2がそれぞれのプロトコル 縦軸は相対誤差（%）。破線が±3%の受容限界 短い横棒が許容区間の上下限 白丸が相対バイアス。どちらのプロトコルでも許容区間が±3%の内側に完全に収まっている。</figcaption></figure>
+<blockquote>補足: <strong>第1例が本稿でいちばん重要</strong>かもしれない。同じデータについて、  - <strong>1992年の旧法</strong>: 「精度は非常に良好。しかし<strong>真度は不合格</strong>」——平均回収率の信頼区間 100.7〜100.9% が 100% を含まないから - <strong>2003年の新法</strong>: 「<strong>有効</strong>」——許容区間が ±3% の内側に完全に収まっているから  と正反対の結論が出る。旧法の何がまずいのか。<strong>信頼区間はサンプル数を増やせばいくらでも狭くなる</strong>ので、真のバイアスがどれほど小さくても、データを十分に取れば「100%を含まない」＝有意なバイアスあり、という結論が必ず出てしまう。この例の相対バイアスはわずか <strong>0.83%</strong> で、実務上まったく問題にならない大きさである。  正確性プロファイルは「バイアスがゼロか」ではなく「<strong>将来の測定値が受容限界に収まるか</strong>」を問うので、この罠にかからない。統計的有意性と実務的重要性を取り違えない設計になっている。</blockquote>
+<h2>3. 錠剤中の有効成分のHPLC定量</h2>
+<h3>3.1 装置と方法</h3>
+<p>この例は、錠剤あたり数 mg の有効成分を含む<strong>2つの有効成分 A と B の、錠剤中での定量</strong>に関する。定量は<strong>外部検量による HPLC-UV</strong> で行い、両物質を同時に定量できる。</p>
+<p>操作手順は、<strong>錠剤をアセトニトリルと水の混合溶液に溶解し、注入前にこの溶液をろ過する</strong>ことからなる。検量は、<strong>公称濃度（レベル100%）における有効成分標準物質の2つの独立した溶液</strong>で行う。</p>
+<h3>3.2 実験計画</h3>
+<p>バリデーション計画は <strong>3日 × 3レベル × 3反復（3×3×3）、すなわち 27試行</strong>からなる。これは <strong>V1プロトコル</strong> [<a href="#ref-2" class="cite">2</a>] である。選ばれた濃度レベルは<strong>公称濃度の 70・100・130%</strong> で、<strong>錠剤の含量均一性の規制管理に対応する濃度範囲、すなわち公称含量の 75〜125%（±25%）</strong> をカバーするためである。</p>
+<p>検量データについては、<strong>検量関数は100%の単一点をもつ直線</strong>である。この選択は、<strong>100%より高い濃度の予測が外挿によって行われる</strong>ことを含意する。製品Aに関するデータを<strong>図3</strong>に示す。化合物Bも同じプロトコルに従う。</p>
+<p>加えてこの図は、<strong>溶液が独立した秤量から独立して調製された</strong>ことを示している。同一の「レベル」について、応答が垂直に整列していないことが観察されるからである。<strong>提案するバリデーションアプローチには、存在する場合にこれら参照濃度のわずかな差を補償するための「再整列（realignment）」の段階が含まれる</strong> [<a href="#ref-3" class="cite">3</a>] ことを想起されたい。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig3.png" alt="図3　化合物Aの定量。1日目・2日目・3日目に収集したデータをそれぞれ四角・三角・丸で表す。挿入図は図の中央部分の拡大。" loading="lazy"><figcaption>図3　化合物Aの定量。1日目・2日目・3日目に収集したデータをそれぞれ四角・三角・丸で表す。挿入図は図の中央部分の拡大。</figcaption></figure>
+<h3>3.3 結果</h3>
+<p>これらのデータを [<a href="#ref-3" class="cite">3</a>] に記載の手順に従って処理することで、両分析物について各濃度レベルでの全性能基準を含む<strong>表2</strong>を構築できる。これら基準の大半は<strong>絶対値と相対値の両方</strong>で表される。相対値によって<strong>図4と図5</strong>を構築できる。</p>
+<p><strong>表2　両ホルモンについて得られたバリデーション結果（公称含量の % 表示）</strong></p>
+<table>
+<thead><tr><th>バリデーション基準</th><th>ホルモンA レベル1</th><th>A レベル2</th><th>A レベル3</th><th>ホルモンB レベル1</th><th>B レベル2</th><th>B レベル3</th></tr></thead>
+<tbody>
+<tr><td>導入濃度の平均</td><td>68.21</td><td>97.27</td><td>127.60</td><td>70.47</td><td>100.50</td><td>131.50</td></tr>
+<tr><td>β許容限界 下限</td><td>67.52</td><td>95.36</td><td>126.90</td><td>（抽出崩れ・原文参照）</td><td>98.74</td><td>122.80</td></tr>
+<tr><td>β許容限界 上限</td><td>68.83</td><td>98.97</td><td>129.80</td><td>71.37</td><td>（抽出崩れ・原文参照）</td><td>137.80</td></tr>
+<tr><td>相対β許容限界 下限（%）</td><td>−1.02</td><td>−1.97</td><td>−0.58</td><td>−1.91</td><td>−1.70</td><td>−6.64</td></tr>
+<tr><td>相対β許容限界 上限（%）</td><td>0.90</td><td>1.74</td><td>1.69</td><td>1.28</td><td>1.27</td><td>4.80</td></tr>
+<tr><td>併行精度 標準偏差</td><td>0.27</td><td>0.61</td><td>0.59</td><td>0.46</td><td>0.38</td><td>1.63</td></tr>
+<tr><td>室内再現精度 標準偏差</td><td>0.27</td><td>0.69</td><td>0.59</td><td>0.46</td><td>0.51</td><td>2.41</td></tr>
+<tr><td>併行精度 R.S.D.（%）</td><td>0.39</td><td>0.63</td><td>0.46</td><td>0.65</td><td>0.38</td><td>1.24</td></tr>
+<tr><td>室内再現精度 R.S.D.（%）</td><td>0.39</td><td>0.71</td><td>0.46</td><td>0.65</td><td>0.51</td><td>1.84</td></tr>
+<tr><td>予測濃度</td><td>68.17</td><td>97.16</td><td>128.30</td><td>70.24</td><td>（抽出崩れ・原文参照）</td><td>130.30</td></tr>
+<tr><td>絶対バイアス</td><td>0.00</td><td>−0.11</td><td>0.71</td><td>−0.22</td><td>−0.22</td><td>−1.21</td></tr>
+<tr><td>相対バイアス（%）</td><td>0.0</td><td>−0.1</td><td>0.6</td><td>−0.3</td><td>−0.2</td><td>−0.9</td></tr>
+<tr><td>回収率（%）</td><td>99.9</td><td>99.9</td><td>100.6</td><td>99.7</td><td>99.8</td><td>99.1</td></tr>
+</tbody></table>
+<blockquote>補足: 表2の<strong>ホルモンB の一部のセルは、原本PDFのテキスト層が壊れており正確に読み取れない</strong>。具体的には、B レベル1 の「β許容限界 下限」が <code>612</code> として抽出される（相対下限 −1.91% と導入濃度 70.47 から逆算すると <strong>69.1程度</strong>になるはずで、<code>69.12</code> の頭が欠けたものと推測される）。また B レベル2 の「β許容限界 上限」「予測濃度」がレベル3 の値と重複して抽出される。<strong>推測値を本文に書き込むことはせず、「抽出崩れ・原文参照」と明記した。</strong> 相対値の行（相対β許容限界・相対バイアス・回収率）はすべてクリーンに抽出できており、図4・図5 の判読と整合している。</blockquote>
+<p><strong>化合物Aの正確性プロファイル</strong>は、<strong>±5% の受容限界</strong>を設定すれば、<strong>その方法が有効であると結論できる</strong>（<strong>図4</strong>）。これらの受容限界を、プロファイル計算に用いた将来の結果の割合（すなわち95%の許容区間）と混同してはならないことを想起されたい。念のため——<strong>将来の測定値の期待される95%の割合が、許容区間の内側に含まれるとされている。</strong></p>
+<p><strong>逆に物質Bについては、公称値の120%を超えると、許容区間はもはや ±5% の受容限界の内側にない</strong>ことが観察できる（<strong>図5</strong>）。<strong>受容限界と許容区間の交点をとることで、上限定量限界を計算できる</strong>。この場合、それは<strong>製品公称値の 121%</strong> に等しい。結果として、<strong>この方法は検討した全範囲では有効でないが、60〜121% の間ではその目的を達成している</strong>と結論できる。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig4.png" alt="図4　物質A の正確性プロファイル（受容限界 ±5%）。横軸は公称含量（%） 縦軸は相対誤差（%）。破線が±5%の受容限界。許容区間の上下限を結んだ曲線が全域で受容限界の内側に収まっている。" loading="lazy"><figcaption>図4　物質A の正確性プロファイル（受容限界 ±5%）。横軸は公称含量（%） 縦軸は相対誤差（%）。破線が±5%の受容限界。許容区間の上下限を結んだ曲線が全域で受容限界の内側に収まっている。</figcaption></figure>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig5.png" alt="図5　物質B の正確性プロファイル（受容限界 ±5%）。横軸は公称含量（%） 縦軸は相対誤差（%）。破線が±5%の受容限界。130%付近で許容区間の下限が−5%線を割り込んでおり 交点から上限定量限界121%が算出される。" loading="lazy"><figcaption>図5　物質B の正確性プロファイル（受容限界 ±5%）。横軸は公称含量（%） 縦軸は相対誤差（%）。破線が±5%の受容限界。130%付近で許容区間の下限が−5%線を割り込んでおり 交点から上限定量限界121%が算出される。</figcaption></figure>
+<p><strong>100%を超える範囲で許容区間が広がること</strong>は、検量の実験計画に対してなされた選択によって合理的に解釈できる。実際、<strong>100%の単一レベルを使うと、より高いレベルの逆予測値を外挿によって計算せざるをえない</strong>。しかし、この方法が予測の品質を劣化させる傾向があることはよく知られている [<a href="#ref-9" class="cite">9</a>]。</p>
+<p>この状況から抜け出す1つの解決策は、<strong>90%の確率を選ぶこと</strong>であろう。これは許容区間を狭める結果になるが、<strong>日常の測定が受容限界を超えるリスクも増やす</strong>。同等の効果をもつ別の可能性は、<strong>すべての結果を2つ以上の独立した結果の平均として報告すること</strong>である。この場合、室内再現精度の分散が減少する。</p>
+<p>医薬品中の有効成分濃度の管理を目的としたこの分析法バリデーションの例は、<strong>新しい提案アプローチの柔軟性をよく例示している</strong>。正確性プロファイルの「潜在力（potentiality）」とさえ言ってよい。<strong>一枚の図の中に一連の性能指標を統合する</strong>という意味においてである。</p>
+<blockquote>補足: <strong>「有効／無効」の二択ではなく「どこまで有効か」を数値で返せる</strong>——これが実務上いちばん効く。物質Bは「不合格」ではなく「<strong>60〜121% の範囲で有効</strong>」と言える。錠剤の含量均一性試験が要求する範囲は 75〜125% なので、この方法では<strong>上端がわずかに足りない</strong>ことになる。改善するか、範囲を限定して使うか、という具体的な議論に進める。  なお、上限が足りない原因が「<strong>100%の1点だけで検量したので、それより上は外挿になっている</strong>」と特定されている点も重要である。次の第4例（ヒドロコルチゾン）は、まさにこの「検量点をどこに置くか」を系統的に比較している。</blockquote>
+<h2>4. 検量プロトコルが正確性プロファイルに与える影響——軟膏中ヒドロコルチゾンのHPLC-UV定量</h2>
+<h3>4.1 装置と方法</h3>
+<p><strong>ヒドロコルチゾン 0.1% の軟膏の品質管理</strong>の一環として、方法が開発・バリデートされた。定量は <strong>HPLC-UV</strong> で行う。操作手順は、<strong>有効成分を抽出して移動相に溶解する</strong>ことからなる。検量は有効成分標準物質の独立した標準で行う。<strong>検量範囲は軟膏 0.8〜1.2 mg/g</strong> に及ぶ。</p>
+<h3>4.2 実験計画</h3>
+<p>該当する実験計画（<strong>表3</strong>）は <strong>V4プロトコル</strong> [<a href="#ref-2" class="cite">2</a>] であり、<strong>3濃度レベル・レベルあたり2反復を3日間、すなわち合計18試行（3×2×3）</strong> で適用した。</p>
+<p><strong>検量標準はマトリックス中とマトリックス外の両方で調製</strong>された。行列効果の存在と、単一の検量レベルで有効成分を定量できる可能性について、<strong>情報が得られていなかった</strong>。その結果、試行数の点では<strong>最も安全だが最も重い選択肢</strong>が採られた。</p>
+<p>バリデーション標準は<strong>3レベル・3反復を3日間、すなわち27試行</strong>を含んだ。<strong>すべてのバリデーション標準（9個）は分析の各日に独立して調製された。</strong></p>
+<p><strong>表3　ヒドロコルチゾン定量に用いた実験計画の詳細</strong></p>
+<table>
+<thead><tr><th>試料の種類</th><th>レベル</th><th>ヒドロコルチゾン濃度（mg/g）</th><th>1日あたりの反復数</th><th>バリデーション3日間の試行数</th></tr></thead>
+<tbody>
+<tr><td>検量標準（マトリックス外）</td><td>SE1</td><td>0.8</td><td>2</td><td>6</td></tr>
+<tr><td></td><td>SE2</td><td>1</td><td>2</td><td>6</td></tr>
+<tr><td></td><td>SE3</td><td>1.2</td><td>2</td><td>6</td></tr>
+<tr><td>検量標準（マトリックス中）</td><td>SE1</td><td>0.8</td><td>2</td><td>6</td></tr>
+<tr><td></td><td>SE2</td><td>1</td><td>2</td><td>6</td></tr>
+<tr><td></td><td>SE3</td><td>1.2</td><td>2</td><td>6</td></tr>
+<tr><td>バリデーション標準</td><td>SV1</td><td>0.8</td><td>3</td><td>9</td></tr>
+<tr><td></td><td>SV2</td><td>1</td><td>3</td><td>9</td></tr>
+<tr><td></td><td>SV3</td><td>1.2</td><td>3</td><td>9</td></tr>
+<tr><td><strong>合計</strong></td><td></td><td></td><td></td><td><strong>63</strong></td></tr>
+</tbody></table>
+<h3>4.3 結果</h3>
+<p>収集したデータを V4 プロトコルに従って処理することで、<strong>異なる検量モデルを適用して様々なプロファイルを構築できる</strong>。実際、検量データを用いて次の回帰モデルを計算できる。</p>
+<ul><li><strong>(A) 公称濃度の 80〜120% の間</strong></li><li><strong>(B) この濃度の 100% において</strong></li><li><strong>(C) 120% において</strong></li></ul>
+<p>そして各場合について、<strong>マトリックス中またはマトリックス外で調製した検量標準から得たデータ</strong>を使える。合計で、<strong>6つの検量関数に基づく6つの正確性プロファイル</strong>を提案できることになる。すべての場合において、保持された検量モデルは<strong>直線</strong>である。</p>
+<p><strong>図6</strong>はこれらの図をまとめ、<strong>最も効率的な結果を提供するものを選択することを可能にする</strong>。最終的に、<strong>最もよく適合したプロファイルは、マトリックス外で調製した120%レベルのみで検量するもの</strong>であることが判明する。</p>
+<p><strong>表4</strong>は、検量モデルが公称値の120%の単一濃度レベルで構築される場合について、各濃度レベルでのこれら方法の性能基準をすべて含む。</p>
+<p><strong>医薬品製剤中の有効成分濃度を管理することを意図した、この古典的な方法のバリデーション例は、提案アプローチの柔軟性を再び例示している。</strong> それは、<strong>日常での最適な性能を確保するために、操作手順をどのように確定し検量手順を選択できるか</strong>を表現している。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig6.png" alt="図6　軟膏中のヒドロコルチゾン。異なる濃度レベルでマトリックス中／マトリックス外に調製した検量標準についての正確性プロファイル（受容限界 ±5%）。(a) 3濃度レベル 80・100・120% (b) 100%の1レベル (c) 120%の1レベル。各パネルで「with matrix（マトリックス中）」と「without matrix（マトリックス外）」の2本ずつの許容区間が示される。マトリックス中で検量したプロファイル（一点鎖線）はいずれの場合も上側が+5%線を超えるのに対し マトリックス外の120%単一点検量（パネルc の実線）が最も受容限界の内側に収まる。" loading="lazy"><figcaption>図6　軟膏中のヒドロコルチゾン。異なる濃度レベルでマトリックス中／マトリックス外に調製した検量標準についての正確性プロファイル（受容限界 ±5%）。(a) 3濃度レベル 80・100・120% (b) 100%の1レベル (c) 120%の1レベル。各パネルで「with matrix（マトリックス中）」と「without matrix（マトリックス外）」の2本ずつの許容区間が示される。マトリックス中で検量したプロファイル（一点鎖線）はいずれの場合も上側が+5%線を超えるのに対し マトリックス外の120%単一点検量（パネルc の実線）が最も受容限界の内側に収まる。</figcaption></figure>
+<blockquote>補足: <strong>図6が本稿でいちばん実践的な図</strong>である。同じデータから <strong>6通りの検量方法</strong>でプロファイルを描き、並べて見比べて最良を選ぶ。「検量線をどう引くか」が結果の合否を直接左右することが、視覚的に一目で分かる。  直感に反するのは、<strong>3点（80/100/120%）で検量するより、120%の1点だけで検量するほうが良かった</strong>という結果である。点数が多いほど良いとは限らない——これは前ページの [Hoffman &amp; Kringle] にもあった「D最適計画」の議論と通じる。線形モデルなら両端2点、二次モデルなら両端＋中央が最適で、闇雲に点を増やすことが最善ではない。  また <strong>「マトリックス中で検量したほうが悪かった」</strong> というのも面白い。行列効果を打ち消すためにマトリックス中で検量するのが定石だが、この事例ではマトリックス調製に伴うばらつきのほうが効いてしまったと読める。</blockquote>
+<h2>5. 豚血漿中アクリルアミドの LC–MS 定量</h2>
+<h3>5.1 装置と方法</h3>
+<p><strong>アクリルアミド</strong>は、一部の食品を調理する際に新たに生成する物質である。<strong>単糖（グルコース）とアスパラギンなどのアミノ酸が結合するメイラード反応</strong>に由来する。</p>
+<p>食品中のアクリルアミド濃度は様々な研究で文書化されているものの、<strong>摂取後のアクリルアミド吸収を定量できた研究はほとんどない</strong>。豚で実施される薬物動態研究により、<strong>アクリルアミドのバイオアベイラビリティを決定できる</strong>可能性がある。それに先立ち、<strong>豚血漿中のアクリルアミド濃度を定量する分析法が必要</strong>である。</p>
+<p>このアッセイを実施するために選択された方法は、<strong>HPLC と質量分析検出器を組み合わせたもの（LC–MS）</strong> を用いる。バリデーションは、<strong>10〜5000 mg/L に及ぶ非常に広い範囲</strong>で実施される。食品摂取後に観察されうる血漿レベルについて情報が不足しているためにこの範囲が選ばれた。</p>
+<p>参照物質がないため、<strong>対照豚血漿への添加（スパイク）量</strong>を用いることとした。<strong>検量標準とスパイクした血漿試料（バリデーション標準）</strong> の2組の標準を調製した。検量範囲は、<strong>ギ酸で pH 6 に調整した 0.01 M 酢酸アンモニウム溶液</strong>中で作成する。</p>
+<p><strong>試料前処理</strong>は次のとおり——血漿 200 μL に、飽和 ZnSO₄ 溶液 100 μL、アセトニトリル 1000 μL、次いで内部標準として用いる <strong>D5標識アクリルアミド</strong> 100 μL を加える。撹拌・遠心後、上清を蒸発させる。残渣を酢酸アンモニウム 200 μL（0.001 M、pH 6）で再処理する。</p>
+<p><strong>注入量 50 μL</strong>。用いた分析条件は、<strong>流速 0.2 mL/min</strong>、クロマトグラフィーカラムは <strong>Hypercarb カラム（50 mm × 2.0 mm i.d.、粒子径 5 μm）</strong>、MS検出は<strong>アクリルアミドの分子イオン m/z 72</strong> で実施する。</p>
+<h3>5.2 実験計画</h3>
+<p>実験計画は <strong>5日 × 6濃度レベル × 2反復（5×6×2）、すなわち検量標準とバリデーション標準について60実験</strong>からなる。提案された類型では、[<a href="#ref-2" class="cite">2</a>] に従えば <strong>V2プロトコル</strong>であるが、<strong>反復数（3ではなく2）と濃度レベル数（3ではなく6）が変更</strong>されている。<strong>図7</strong>はこの実験計画と、検量標準およびスパイクしたバリデーション標準について得られた応答の全体を示す。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig7.png" alt="図7　アクリルアミドの定量（補正前の生データ mg/L）。5日間・6レベル・レベルあたり2反復で得られた結果。" loading="lazy"><figcaption>図7　アクリルアミドの定量（補正前の生データ mg/L）。5日間・6レベル・レベルあたり2反復で得られた結果。</figcaption></figure>
+<h3>5.3 結果</h3>
+<p>データは<strong>3段階</strong>で処理した。</p>
+<ul><li><strong>生データの解析と正確性プロファイルの作図</strong></li><li><strong>回収率からマトリックス補正係数を決定する解析</strong></li><li><strong>濃度補正後の正確性プロファイルの計算</strong></li></ul>
+<h4>5.3.1 生データの解析</h4>
+<p>この例では、濃度と応答の関係を記述するのに<strong>最も適切な応答関数は、重み係数 1/X による重み付き二次回帰</strong>である（X は導入濃度）。<strong>図8</strong>は、この回帰モデルと 95% 許容区間を用いて得られた正確性プロファイルを表す。</p>
+<p>この図は、<strong>正確性プロファイルと ±25% に設定した受容限界の間に隔たり</strong>があることを示している。<strong>この隔たりは行列効果によるものである。</strong></p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig8.png" alt="図8　アクリルアミドの定量（mg/L）。生データで作成した正確性プロファイル。このままでは方法が有効でないことを示す。応答関数のモデル化には重み付き（1/X）二次回帰を用いた（受容限界 ±25%）。許容区間の帯が全域で−25%線より下にあり 受容限界から完全に外れている。" loading="lazy"><figcaption>図8　アクリルアミドの定量（mg/L）。生データで作成した正確性プロファイル。このままでは方法が有効でないことを示す。応答関数のモデル化には重み付き（1/X）二次回帰を用いた（受容限界 ±25%）。許容区間の帯が全域で−25%線より下にあり 受容限界から完全に外れている。</figcaption></figure>
+<h4>5.3.2 補正係数の計算</h4>
+<p><strong>この行列効果を補正するため、導入した理論濃度（ConcAdded）と、逆予測によって計算した回収濃度（ConcReco）を結ぶ直線性の式の傾きから補正係数を計算した。</strong> 適用する補正係数は、<strong>バリデーション標準で得られた傾きの逆数</strong>に対応する。<strong>図9</strong>にこれらの計算を示す。直線の式は</p>
+<p>$$ \mathrm{ConcReco} = 1.9829 + 0.686 \times \mathrm{ConcAdded} $$</p>
+<p>したがって適用すべき<strong>補正係数（Fc）は 1/0.686、すなわち 1.457</strong> である。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig9.png" alt="図9　アクリルアミドの定量（mg/L）。導入濃度と予測濃度の間の回帰直線。太い実線が理想（傾き1）の線 細い実線が実測の回帰直線で 図中に式「Recovered = 1.9829 + 0.686 × Added」が示される。傾き0.686 は回収率が約69%であることを意味する。" loading="lazy"><figcaption>図9　アクリルアミドの定量（mg/L）。導入濃度と予測濃度の間の回帰直線。太い実線が理想（傾き1）の線 細い実線が実測の回帰直線で 図中に式「Recovered = 1.9829 + 0.686 × Added」が示される。傾き0.686 は回収率が約69%であることを意味する。</figcaption></figure>
+<h4>5.3.3 補正後の正確性プロファイルの計算</h4>
+<p><strong>補正係数を考慮して新しい正確性プロファイルの計算を行う。</strong> 補正はバリデーションデータに対して実施する。<strong>図10</strong>にこの新しい正確性プロファイルを示す。</p>
+<p>補正係数を適用した後に得られた正確性プロファイルで例示されるとおり、<strong>この方法は検討した適用範囲の一部でのみ有効</strong>である。実際、<strong>濃度レベル 10 mg/L において、正確性プロファイルの下限が ±25% に設定した受容限界を超えている</strong>。</p>
+<p>下限・上限定量限界の計算は、それぞれ <strong>14.05 と 5000 mg/L</strong> を与える。したがって<strong>この方法は、定量限界が通常遭遇する濃度と適合しているため、定義された目的に適切に合致している</strong>。<strong>表5</strong>に、全濃度レベルについて得られた結果をまとめる。</p>
+<p><strong>この研究は、重み付き二次回帰モデルを用いる場合、14.05〜5000 μg/mL に設定された適用範囲で方法が完全に有効であることを実証した。</strong> また、<strong>行列効果は系統的であり、それを補正するために 1.457 の補正係数を適用しなければならない</strong>ことも示された。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig10.png" alt="図10　アクリルアミドの定量（mg/L）。補正後のデータで得られた正確性プロファイル。応答関数のモデル化には重み付き二次回帰（1/X型）を用いた（受容限界 ±25%）。最低濃度域を除き 許容区間が±25%の内側に収まっている。" loading="lazy"><figcaption>図10　アクリルアミドの定量（mg/L）。補正後のデータで得られた正確性プロファイル。応答関数のモデル化には重み付き二次回帰（1/X型）を用いた（受容限界 ±25%）。最低濃度域を除き 許容区間が±25%の内側に収まっている。</figcaption></figure>
+<p><strong>表5　生データ補正後のアクリルアミド（mg/L）定量について得られたバリデーション結果</strong></p>
+<table>
+<thead><tr><th>バリデーション基準</th><th>レベル1</th><th>レベル2</th><th>レベル3</th><th>レベル4</th><th>レベル5</th><th>レベル6</th></tr></thead>
+<tbody>
+<tr><td>導入濃度の平均</td><td>10</td><td>20</td><td>50</td><td>500 ※</td><td>1000</td><td>5000</td></tr>
+<tr><td>β許容限界 下限</td><td>6.98</td><td>16.52</td><td>44.93</td><td>192.50</td><td>894.80</td><td>4482.00</td></tr>
+<tr><td>β許容限界 上限</td><td>12.26</td><td>24.16</td><td>60.07</td><td>223.00</td><td>1145.00</td><td>5515.00</td></tr>
+<tr><td>相対β許容限界 下限（%）</td><td>−30.2</td><td>−17.4</td><td>−10.1</td><td>−3.8</td><td>−10.5</td><td>−10.4</td></tr>
+<tr><td>相対β許容限界 上限（%）</td><td>22.6</td><td>20.8</td><td>20.2</td><td>11.5</td><td>14.5</td><td>10.3</td></tr>
+<tr><td>併行精度 標準偏差</td><td>0.61</td><td>0.43</td><td>1.62</td><td>5.78</td><td>32.26</td><td>136.70</td></tr>
+<tr><td>室内再現精度 標準偏差</td><td>0.99</td><td>1.31</td><td>2.81</td><td>6.32</td><td>48.01</td><td>199.20</td></tr>
+<tr><td>併行精度 R.S.D.（%）</td><td>6.1</td><td>2.1</td><td>3.3</td><td>2.9</td><td>3.2</td><td>2.7</td></tr>
+<tr><td>室内再現精度 R.S.D.（%）</td><td>9.9</td><td>6.6</td><td>5.6</td><td>3.2</td><td>4.8</td><td>4.0</td></tr>
+<tr><td>予測濃度</td><td>9.62</td><td>20.34</td><td>52.50</td><td>207.70</td><td>1020.00</td><td>4999.00</td></tr>
+<tr><td>絶対バイアス</td><td>−0.38</td><td>0.34</td><td>2.50</td><td>7.73</td><td>19.78</td><td>−1.35</td></tr>
+<tr><td>相対バイアス（%）</td><td>−3.8</td><td>1.7</td><td>5.0</td><td>3.9</td><td>2.0</td><td>0.0</td></tr>
+<tr><td>回収率（%）</td><td>96.2</td><td>101.7</td><td>105.0</td><td>103.9</td><td>102.0</td><td>100.0</td></tr>
+</tbody></table>
+<blockquote>補足: <strong>※ レベル4 の「導入濃度の平均 500」は、原文の他のセルと矛盾する。</strong> 同じ列の値で検算すると——  - 許容限界下限 192.50 ÷ <strong>200</strong> = 96.25% → 相対下限 <strong>−3.8%</strong> ✓（原文と一致） - 許容限界上限 223.00 ÷ <strong>200</strong> = 111.5% → 相対上限 <strong>+11.5%</strong> ✓ - 予測濃度 207.70 ÷ <strong>200</strong> = 103.85% → 回収率 <strong>103.9%</strong> ✓  いずれも <strong>200</strong> で割ったときにのみ他のセルと整合する。したがってこのセルは <strong>200 の誤り</strong>である可能性が高い（濃度レベルの並びも 10・20・50・<strong>200</strong>・1000・5000 なら等比的で自然）。ただし<strong>原文の表記をそのまま転記し、検算結果を注記するにとどめる</strong>。原文に無い数値に書き換えることはしない。  なお本文は「14.05〜5000 <strong>mg/L</strong>」と「14.05〜5000 <strong>μg/mL</strong>」を両方使っているが、mg/L = μg/mL なので<strong>数値としては同じ</strong>である（単位表記の揺れ）。</blockquote>
+<h2>6. ELISA試験による神経疾患バイオマーカータンパク質の定量</h2>
+<h3>6.1 目的と方法</h3>
+<p><strong>神経疾患関連の治療プロジェクトに用いられる、バイオマーカーとなりうるタンパク質を正確に定量するため、「サンドイッチ」型 ELISA 試験が開発された。</strong></p>
+<p>ELISA 試験は、目的のタンパク質を捕捉するために、<strong>特異抗体をコーティングしたプレート上で試料をインキュベート</strong>することからなる。この段階に続いて、<strong>結合酵素によるタンパク質特異的結合の免疫学的検出と、光学濃度測定による発色産物の測定</strong>が行われる。</p>
+<p>この試験をバリデートするため、<strong>検量標準とバリデーション標準は、タンパク質ストック溶液から段階希釈によって適切なマトリックス中に調製された</strong> [<a href="#ref-10" class="cite">10</a>]。</p>
+<h3>6.2 実験計画</h3>
+<p>この手順は、<strong>4日間にわたり、試行あたり2プレートで、4つの独立した系列</strong>で実施された。<strong>すべての試行——検量標準・バリデーション標準のいずれも——は3重で実施</strong>された。</p>
+<h3>6.3 結果</h3>
+<p>データに（試行ごと・プレートごとに）<strong>最尤法により4パラメータロジスティック回帰（4-PL）</strong> を当てはめた。重み付けには<strong>観測レベルの指数関数（POM, power of the mean）</strong> を用いた。</p>
+<p>$$ Y = \alpha + \frac{\delta - \alpha}{1 + (\gamma / X)^{\beta}} $$</p>
+<p>ここで <strong>δ・α・γ・β</strong> はそれぞれ、<strong>上側漸近線・下側漸近線・曲線の変曲点に対応する濃度・その点における傾き</strong>である。</p>
+<p>4日間で実施した一連の測定について、検量曲線は<strong>図11</strong>のように現れる。バリデーション標準の推定濃度は、<strong>応答関数を逆に解く</strong>ことによって計算した。すなわち</p>
+<p>$$ x_{ijk,\text{calc}} = \frac{\hat{\gamma}_i}{\left( \left( (\hat{\delta}_i - \hat{\alpha}_i) / (y_{ijk} - \hat{\alpha}_i) \right) - 1 \right)^{1/\hat{\beta}_i}} $$</p>
+<p>希釈により試料の理論含量が既知であるため、<strong>バリデーション標準の各濃度レベルについて真度・精度・許容区間を計算した</strong>（<strong>表6</strong>）。正確性プロファイルを<strong>図12</strong>に示す。</p>
+<p><strong>95%許容区間は、すべての濃度レベルにおいて ±30% の受容限界の内側に含まれている。</strong></p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig11.png" alt="図11　ELISAアッセイ（ng/mL）。4日間の研究中に収集した一連の検量データに対する4パラメータロジスティックモデルの当てはめ。横軸が濃度 縦軸が光学濃度で S字型の曲線が4本（4日分）重ねて描かれている。" loading="lazy"><figcaption>図11　ELISAアッセイ（ng/mL）。4日間の研究中に収集した一連の検量データに対する4パラメータロジスティックモデルの当てはめ。横軸が濃度 縦軸が光学濃度で S字型の曲線が4本（4日分）重ねて描かれている。</figcaption></figure>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig12.png" alt="図12　バイオマーカータンパク質のELISA定量。正確性プロファイル（受容限界 ±30%）。許容区間が全濃度レベルで±30%の内側に収まっている。" loading="lazy"><figcaption>図12　バイオマーカータンパク質のELISA定量。正確性プロファイル（受容限界 ±30%）。許容区間が全濃度レベルで±30%の内側に収まっている。</figcaption></figure>
+<p><strong>表6　ELISAアッセイで得られたバリデーション結果（ng/mL）</strong>（原文 Table 6 のうちテキスト層がクリーンに抽出できた行）</p>
+<table>
+<thead><tr><th>バリデーション基準</th><th>Lv1</th><th>Lv2</th><th>Lv3</th><th>Lv4</th><th>Lv5</th><th>Lv6</th><th>Lv7</th><th>Lv8</th></tr></thead>
+<tbody>
+<tr><td>レベル</td><td>3.5</td><td>7</td><td>14.1</td><td>28</td><td>56</td><td>113</td><td>225</td><td>450</td></tr>
+<tr><td>導入濃度の平均</td><td>3.5</td><td>7</td><td>14.1</td><td>28</td><td>56</td><td>113</td><td>225</td><td>450</td></tr>
+<tr><td>予測濃度の平均</td><td>4.019</td><td>8.184</td><td>14.98</td><td>29.3</td><td>57.82</td><td>116.6</td><td>239.2</td><td>445.6</td></tr>
+<tr><td>絶対バイアス</td><td>0.5187</td><td>1.184</td><td>0.877</td><td>1.301</td><td>1.818</td><td>3.607</td><td>14.16</td><td>−4.367</td></tr>
+<tr><td>相対バイアス（%）</td><td>14.82</td><td>16.91</td><td>6.225</td><td>4.647</td><td>3.246</td><td>3.192</td><td>6.294</td><td>−0.9705</td></tr>
+<tr><td>回収率（%）</td><td>114.8</td><td>116.9</td><td>106.2</td><td>104.6</td><td>（以下は原文参照）</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<blockquote>補足: 表6 の下半分（回収率のレベル5以降、および許容限界・精度の各行）は、原本PDFのテキスト層で列の対応が崩れており、<strong>正確な転記ができないため「原文参照」とした</strong>。上半分は図12 の正確性プロファイルと整合している（低濃度側でバイアスが +15〜17% と大きく、濃度が上がるにつれ 0% に近づく）。  <strong>ELISAは検量線が非線形（S字型）</strong> なので、直線回帰を前提とする従来のバリデーション手法がそのままでは使えない。本稿の結論（第3項）が「<strong>検量関数の直線性仮定は完全に放棄できる</strong>」と強調するのは、まさにこの例が根拠である。受容限界が ±30% と緩いのも、リガンド結合アッセイの慣行（FDAガイダンスも大分子には ±20〜30% を認める）に沿っている。</blockquote>
+<h2>7. 医薬品中の不純物のHPLC-UV定量</h2>
+<h3>7.1 目的と方法</h3>
+<p><strong>バッチ出荷を目的とした品質管理</strong>の一環として、<strong>有効成分の濃度レベルが異なる2つの医薬品製剤中の不純物レベルを定量する方法</strong>が開発された。この方法は、<strong>259 nm の波長で動作するUV検出器と結合した逆相高速液体クロマトグラフィー</strong>に基づく。<strong>不純物は保持時間によって同定される。</strong></p>
+<p>試料前処理は次のとおり——<strong>錠剤20錠を粉砕した残渣から有効成分 20 mg を抽出</strong>し、<strong>メタノール 20 mL に溶解</strong>する。次いで、<strong>アセトニトリル・酢酸アンモニウム・氷酢酸からなる移動相</strong>を加える。<strong>注入量は 40 μL</strong>。</p>
+<p>このバリデーション研究は、<strong>95%の場合において結果が真値の ±10% 未満であることを保証する</strong>ことを目的とする。さらに、このバリデーションは<strong>定量限界の評価</strong>を可能にすべきである。</p>
+<h3>7.2 実験計画</h3>
+<p>このバリデーションでは、<strong>作業者・装置・日</strong>という異なる変動要因を考慮した。<strong>各要因について2水準</strong>を考えると、<strong>完全要因計画は8通りの組み合わせ</strong>を含む。<strong>分割実施要因計画（fractional factorial design）</strong> が選択され、<strong>表7</strong>に記述される。</p>
+<p>各系列について検量標準とバリデーション標準を調製した。<strong>検量標準はマトリックス外で、4濃度レベル——0.05%（100 ng/mL）・0.50%（1000 ng/mL）・1.25%（2500 ng/mL）・2.00%（4000 ng/mL）——で、各濃度レベルにつき2つの独立した調製</strong>で作成した。</p>
+<p><strong>不純物も賦形剤も純品として入手できなかった</strong>ため、バリデーション標準は<strong>有効成分単独から、5濃度レベル——0.01%（20 ng/mL）・0.05%・0.25%（500 ng/mL）・0.50%・1.25%——で、各濃度レベルにつき3つの独立した調製</strong>で作成した。</p>
+<p>したがって<strong>不純物は有効成分と類似の応答をもつと仮定された</strong>。試料は、実際の未知試料に見出されうる <strong>0.50% の不純物レベル</strong>（有効成分の理論量に対して）をシミュレートするため、医薬品製剤から調製した。試料調製は、<strong>一定数の錠剤を粉砕し、必要な濃度レベルを得るために希釈する一定量を抽出する</strong>ことからなる。<strong>この例は実務的というより教育的な目的で実施された。</strong></p>
+<p><strong>表7　医薬品製剤中の不純物のバリデーションに用いた実験計画</strong></p>
+<table>
+<thead><tr><th>系列</th><th>日</th><th>作業者</th><th>装置</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+<tr><td>2</td><td>1</td><td>2</td><td>2</td></tr>
+<tr><td>3</td><td>2</td><td>1</td><td>2</td></tr>
+<tr><td>4</td><td>（原文参照）</td><td></td><td></td></tr>
+</tbody></table>
+<h3>7.3 結果</h3>
+<p>検討した様々なモデルのうち、<strong>原点を通る線形回帰</strong>が目的に適合する結果を提供したものである。したがってこのタイプの回帰モデルが、<strong>検量曲線として 2% の単一濃度レベル</strong>を考慮して、各系列について当てはめられた。バリデーション標準の推定濃度は、<strong>信号を系列の回帰直線の推定傾きで単純に割ること</strong>によって計算した。</p>
+<p>試料の理論濃度が既知であるため、<strong>各濃度レベルについて真度・精度・許容区間を計算した</strong>（<strong>表8</strong>）。正確性プロファイルを<strong>図13</strong>に示す。</p>
+<p><strong>表8　医薬品製剤中の不純物の定量に関するバリデーション結果（ng/mL）</strong></p>
+<table>
+<thead><tr><th>バリデーション基準</th><th>レベル1</th><th>レベル2</th><th>レベル3</th><th>レベル4</th><th>レベル5</th></tr></thead>
+<tbody>
+<tr><td>レベル（%）</td><td>0.01</td><td>0.05</td><td>0.25</td><td>0.50</td><td>1.25</td></tr>
+<tr><td>導入濃度の平均</td><td>20.15</td><td>100.8</td><td>503.6</td><td>1008</td><td>2519</td></tr>
+<tr><td>予測濃度の平均</td><td>26.83</td><td>102.3</td><td>507.6</td><td>1004</td><td>2480</td></tr>
+<tr><td>絶対バイアス</td><td>6.674</td><td>1.488</td><td>4.036</td><td>−4.098</td><td>−39.1</td></tr>
+<tr><td>相対バイアス（%）</td><td>33.12</td><td>1.48</td><td>0.80</td><td>−0.41</td><td>−1.55</td></tr>
+<tr><td>回収率（%）</td><td>133.10</td><td>101.50</td><td>100.80</td><td>99.59</td><td>98.45</td></tr>
+<tr><td>併行精度 標準偏差</td><td>4.644</td><td>1.546</td><td>6.713</td><td>7.764</td><td>18.74</td></tr>
+<tr><td>室内再現精度 標準偏差</td><td>5.214</td><td>1.758</td><td>6.713</td><td>9.803</td><td>20.87</td></tr>
+<tr><td>併行精度 R.S.D.（%）</td><td>23.04</td><td>1.534</td><td>1.333</td><td>0.7704</td><td>0.7439</td></tr>
+<tr><td>室内再現精度 R.S.D.（%）</td><td>25.87</td><td>（以下は原文参照）</td><td></td><td></td><td></td></tr>
+</tbody></table>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig13.png" alt="図13　不純物の定量（ng/mL）。正確性プロファイル（受容限界 ±10%）。最低濃度レベル（0.01%）でバイアスが大きく 許容区間が受容限界から外れる。" loading="lazy"><figcaption>図13　不純物の定量（ng/mL）。正確性プロファイル（受容限界 ±10%）。最低濃度レベル（0.01%）でバイアスが大きく 許容区間が受容限界から外れる。</figcaption></figure>
+<blockquote>補足: 表8 の<strong>レベル1（0.01%、20 ng/mL）だけが際立って悪い</strong>——相対バイアス <strong>+33.12%</strong>、併行精度 R.S.D. <strong>23.04%</strong>。これは典型的な<strong>定量下限付近の挙動</strong>である。他の4レベルは相対バイアス 1.5% 以内、R.S.D. 1.5% 以内と極めて良好なので、この方法の実用的な下限は 0.05%（100 ng/mL）付近ということになる。  不純物試験でこの「下限がどこか」を数値で押さえられるのは大きい。ICH Q3A/Q3B の報告閾値・同定閾値・限度閾値を満たせるかどうかが、直接判断できる。</blockquote>
+<h2>8. 比色法による血漿リン酸の定量</h2>
+<h3>8.1 目的と方法</h3>
+<p><strong>リン酸二水素ナトリウム</strong>は、pH を中性に保ち凝固因子を安定化するため、一部の治療用血漿に添加される。しかし、<strong>高リン酸血症を避けるため、リン酸濃度は 5 mmol/L 前後に留まらなければならない</strong>。そこで、この管理を可能にすることを目的として、<strong>可視光における分光光度法による定量法</strong>が開発された。</p>
+<p>測定は、<strong>塩化スズ(II)で還元したリンモリブデン錯体</strong>について <strong>710 nm</strong> で行う。タンパク質は事前に<strong>トリクロロ酢酸沈殿と遠心</strong>によって除去される。<strong>検量範囲は 0.28〜0.70 μmol/mL</strong> に及ぶ。</p>
+<h3>8.2 実験計画</h3>
+<p>プロトコルは3日間で実施した <strong>V4プロトコル</strong> [<a href="#ref-2" class="cite">2</a>] である。検量標準は<strong>4レベル・2反復を、マトリックス中とマトリックス外でそれぞれ、すなわち24試行</strong>を含む。バリデーション標準は<strong>3レベル・3反復、すなわち27試行</strong>を含む（<strong>表9</strong>）。</p>
+<p><strong>各日、すべての検量標準（8個）とバリデーション標準（9個）は独立している。</strong> 検量標準について光学濃度（OD）単位で表した応答を<strong>図14</strong>に示す。</p>
+<p><strong>行列効果は事実上観察されず</strong>、各データセットについて計算した回帰式は非常に近い。加えて、<strong>応答が完全には整列していない</strong>ことも観察できる。これは濃度レベル間の差によるもので、添加溶液と標準溶液が<strong>正確な秤量（独立した試料）</strong> によって得られているためである。<strong>線形内挿によるデータ再整列の段階</strong>により、[<a href="#ref-3" class="cite">3</a>] で提案されているとおり、これらのわずかな差を補償できる。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig14.png" alt="図14　血漿リン酸（μmol/L）。マトリックス中とマトリックス外の検量標準。横軸が濃度 縦軸が光学濃度（OD）。両者の回帰直線がほぼ重なっており 行列効果が事実上ないことが読み取れる。" loading="lazy"><figcaption>図14　血漿リン酸（μmol/L）。マトリックス中とマトリックス外の検量標準。横軸が濃度 縦軸が光学濃度（OD）。両者の回帰直線がほぼ重なっており 行列効果が事実上ないことが読み取れる。</figcaption></figure>
+<h3>8.3 結果</h3>
+<p>最も適切な応答関数は、<strong>重み係数 1/X で重み付けした線形回帰</strong>である。重み付き線形逆関数によってバリデーション標準から予測された濃度は、<strong>わずかな行列効果があること</strong>を示す。実際、導入濃度（ConcAdded）と回収濃度（ConcReco）の関係から得られる直線性の式は、それぞれ次のとおりである。</p>
+<ul><li><strong>マトリックスなしの検量</strong>: $\mathrm{ConcReco} = 0.9589 \times \mathrm{ConcAdded} + 5.901$</li><li><strong>マトリックスありの検量</strong>: $\mathrm{ConcReco} = 0.9671 \times \mathrm{ConcAdded} + 5.359$</li></ul>
+<p><strong>しかし、図15・図16 に示すとおり無用であることが判明したため、補正係数を適用しないことが決定された。</strong> これら2つの正確性プロファイルは、<strong>±15% の受容限界と 90% の許容区間</strong>を用いて得られた。</p>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig15.png" alt="図15　血漿リン酸（nmol/L）。マトリックスなしの検量についての正確性プロファイル。受容限界±15%・許容区間90%。" loading="lazy"><figcaption>図15　血漿リン酸（nmol/L）。マトリックスなしの検量についての正確性プロファイル。受容限界±15%・許容区間90%。</figcaption></figure>
+<figure><img src="assets/sfstp-part4-accuracy-profile-examples/fig16.png" alt="図16　血漿リン酸。マトリックス中の検量についての正確性プロファイル（受容限界 ±15%）。" loading="lazy"><figcaption>図16　血漿リン酸。マトリックス中の検量についての正確性プロファイル（受容限界 ±15%）。</figcaption></figure>
+<p><strong>表10（抜粋）——血漿リン酸定量のバリデーション結果</strong>（原文 Table 10 のうちテキスト層がクリーンに抽出できた行）</p>
+<table>
+<thead><tr><th>バリデーション基準</th><th>レベル1</th><th>レベル2</th><th>レベル3</th></tr></thead>
+<tbody>
+<tr><td>室内再現精度 R.S.D.（%）</td><td>5.9</td><td>2.4</td><td>1.5</td></tr>
+<tr><td>予測濃度</td><td>277.40</td><td>407.50</td><td>546.50</td></tr>
+<tr><td>絶対バイアス</td><td>−4.19</td><td>−14.39</td><td>−15.75</td></tr>
+<tr><td>相対バイアス（%）</td><td>−1.5</td><td>−3.4</td><td>−2.8</td></tr>
+<tr><td>回収率（%）</td><td>98.5</td><td>96.6</td><td>97.2</td></tr>
+</tbody></table>
+<blockquote>補足: この例の教訓は <strong>「補正係数は、必要なときだけ使う」</strong> である。回帰の傾きが 0.9589／0.9671 と 1 から約 3〜4% ずれており、機械的に考えれば補正したくなる。しかし正確性プロファイルを描いてみると、<strong>補正しなくても許容区間が ±15% の内側に収まっている</strong>ので、補正は不要と判断された。  補正は「ただ」ではない。緒言にあるとおり <strong>補正すると測定の不確かさが増える</strong>（補正係数自体に不確かさがあるため、それが結果に伝播する）。だから<strong>必要でなければ補正しないほうが良い</strong>。第5例（アクリルアミド、回収率69%）のように補正が不可欠な場合と対比すると、判断基準がはっきりする。</blockquote>
+<h2>9. 結論（Conclusions）</h2>
+<p>SFSTP 委員会が開発した<strong>調和されたバリデーションアプローチは、既に多くの適用</strong>がなされている。他の適用例は文献に見出せる——<strong>UV・蛍光・質量分析といった様々な検出器を用いる液体クロマトグラフィー法</strong> [<a href="#ref-12" class="cite">12</a>–29]、<strong>赤外分光光度法</strong> [30–32]、<strong>比色法</strong> [32, 33]、<strong>ラマン法</strong> [34]、<strong>キャピラリー電気泳動</strong> [35, 36]、<strong>高速薄層クロマトグラフィー</strong> [37]、<strong>ガスクロマトグラフィー</strong> [38] など。</p>
+<p>本稿では、<strong>分析者が日常的に遭遇しうる様々な状況に応じて選んだ一連の適用例</strong>を提示した。これらの研究からいくつかの結論を引き出せる。</p>
+<p><strong>1.</strong> 大局的に見て、<strong>ISO 17025 規格が示すバリデーションの定義</strong>——すなわち「<strong>バリデーションとは、予見された特定の利用に関する個別の規定が満たされていることを、検査と有効な証拠によって確認すること</strong>」——を考えるなら、<strong>新しく提案されたアプローチはこの定義に極めて正確に合致する</strong>。実際、我々は次を行わなければならない。(1) <strong>受容限界の観点から達成すべき目標を明確に設定することから始める</strong>、(2) 様々な実験計画のおかげで<strong>有効な証拠を収集する</strong>、そして最後に (3) <strong>データを検査して、統計的かつ図的に方法の妥当性を確認あるいは反証する</strong>。</p>
+<p><strong>2.</strong> <strong>正確性プロファイルを確立するために性能指標をレベルごとに計算すること</strong>により、<strong>非常に広い濃度範囲をカバーできる</strong>。したがって、適用範囲が数桁に及びうる方法にも本アプローチは適用可能である。そして、<strong>濃度レベルによって分散が均一でない方法もバリデートできる</strong>。この点は非常に重要である。他の多くのアプローチでは、<strong>適用領域全体での分散の均一性の仮定が不可欠</strong>だからである。<strong>濃度と不確かさのこの依存関係は一般的な現象</strong>であり、その証拠は Horwitz と Albert によって明確に示され、モデル化されている [39]。</p>
+<p><strong>3.</strong> <strong>異なる、さらには非線形の検量モデル——4パラメータロジスティック関数のような——も使用できる。</strong> 実際、このアプローチによれば、<strong>バリデーションを行う際に検量関数の直線性仮定は完全に放棄できる</strong>。加えて、<strong>重み付き回帰の技法も使用でき</strong>、ここでも分散が均一でないデータを処理できる。同様に、<strong>公称値の 80〜120% で原薬を管理するというごく古典的な例において、最良の回帰モデルをどう選ぶか</strong>を見ることができた。</p>
+<p><strong>4.</strong> <strong>真度と精度の対立は単純に解決できる。</strong> 古典的なバリデーションアプローチは一般に<strong>真度と精度を別々に扱う</strong>。このため、<strong>2つの基準のうち片方だけが満足である場合に曖昧な結論</strong>につながりうる。<strong>正確性プロファイル法は、同じ1枚のグラフ上に両基準（あるいはこれらの基準の組み合わせ）を同時に表現することを可能にする。</strong> この理由で、本アプローチははるかに柔軟であり、<strong>常に真度と精度を組み合わせなければならない不確かさと正確性の定義に合致する</strong>。</p>
+<p><strong>5.</strong> 典型的に、<strong>古典的なバリデーションアプローチは、性能基準の参照値への適合性を検定すること</strong>からなる。統計的に言えば、これはこれらのパラメータについて<strong>帰無仮説を検定するだけ</strong>である。逆に、<strong>提案アプローチは、結果をエンドユーザーに提供される形のまま直接扱う</strong>。これは「<strong>顧客満足</strong>」を強調する新しい品質保証ガイドラインの要求により良く対応する。</p>
+<p>正確性プロファイルは、<strong>事前に設定された受容限界の間に収まらなければならない将来の結果の最小期待割合を設定すること</strong>からなる。ただし、<strong>これらの統計的基礎の上に顧客リスクを計算するという補完的アプローチも可能</strong>であろう。<strong>このリスクは、受容限界の外側の結果を得る可能性として表現できる</strong>ことを想起されたい。</p>
+<p><strong>6.</strong> 提示した例から、<strong>平均回収率の逆数から導出されうる補正係数を計算することが可能であった</strong>ことが際立っている。この点は、特に環境分析の分野で、<strong>回収率が 100% から大きく異なる場合に測定値を補正すべきか否か</strong>を知るために、多くの議論を呼んできた。</p>
+<p><strong>正確性プロファイルが提供する答えは明確である——回収率は考慮されてよく、かつ考慮されなければならない。</strong> 加えて、<strong>これを考慮することが不確かさの増大につながる</strong>ことを実験的に実証できた。これは計量学者の推奨と完全に調和している。</p>
+<h3>残された課題</h3>
+<p>正確性プロファイル法が提供する数多くの実践的な答えにもかかわらず、いくつかは<strong>未解決のまま</strong>である。</p>
+<p>例えば、<strong>食品衛生や臨床生物学で多用される微生物学的計数にどこまで適用できるか</strong>。加えて、<strong>代替法を「参照」法と比較することでバリデートすること</strong>は、認定を受けた実験室に対する古典的な要求である。この場合、<strong>理論値が不確かさをもって知られているという事実も計算に考慮に入れなければならない</strong>。したがって、<strong>正確性プロファイル法の普遍性をより良く主張するには、さらに多くの適用を実施する必要がある</strong>。</p>
+<p>最後に、<strong>バリデーションは常に方法の開発の後に行われなければならない</strong>ことを想起することが不可欠と思われる。<strong>まだよく分かっていない方法で試行を行おうとすれば、おそらく深刻な失望につながり、その方法が無効であるという結論を導きかねない。</strong></p>
+<blockquote>補足: 結論の第5項が、この手法の思想を最もよく表している。  <strong>古典的アプローチ</strong>: 「バイアスはゼロと言えるか？」「RSDは基準以下と言えるか？」——<strong>パラメータについての仮説検定</strong>。 <strong>正確性プロファイル</strong>: 「エンドユーザーが受け取る<strong>結果そのもの</strong>が、受容限界に収まるか？」——<strong>将来の測定値についての予測</strong>。  前者は統計学者の問い、後者は使う人の問いである。「顧客満足」という言葉を持ち出しているのは、ISO 9000系の品質保証の文脈を意識しているのだろう。  そして最後の一文——<strong>「バリデーションは方法開発の後に行う。まだよく分かっていない方法で試行しても失望するだけ」</strong>——は当たり前のようでいて、実務では驚くほど守られない。バリデーションを「開発の一部」として使ってしまい、失敗して方法自体を捨ててしまう、という失敗はよくある。QbD（Quality by Design）の考え方が後年に強調することを、2008年時点で端的に述べている。</blockquote>
+<h2>訳者による総括</h2>
+<p>本稿は「理論の説明」ではなく「<strong>やってみせる</strong>」ことに徹した論文である。SFSTP 4部作のうち、I・II が概念と実験計画、III が計算式を扱い、本稿 IV がそれを7つの実データで回してみせる。<strong>手を動かす人にとって最も価値があるのは、たぶんこの巻</strong>である。</p>
+<p>7例の性格を整理しておく。</p>
+<table>
+<thead><tr><th>例</th><th>手法</th><th>この例が教えること</th></tr></thead>
+<tbody>
+<tr><td>1. 1992年データの再解析</td><td>HPLC</td><td><strong>旧法で「真度不合格」だったものが新法では「有効」</strong> ——統計的有意性と実務的重要性の取り違えを避けられる</td></tr>
+<tr><td>2. 錠剤中2成分</td><td>HPLC-UV</td><td><strong>「どこまで有効か」が出せる</strong> ——成分Bは 60〜121% で有効、上限定量限界を交点から算出</td></tr>
+<tr><td>3. ヒドロコルチゾン軟膏</td><td>HPLC-UV</td><td><strong>検量線の引き方が合否を決める</strong> ——6通りを並べて最良を選ぶ（意外にも1点校正が最良）</td></tr>
+<tr><td>4. 豚血漿アクリルアミド</td><td>LC–MS</td><td><strong>回収率69%を補正係数1.457で救済</strong> ——ただし範囲は 14.05〜5000 mg/L に限定される</td></tr>
+<tr><td>5. バイオマーカーELISA</td><td>ELISA</td><td><strong>非線形（4-PL）検量線でも扱える</strong> ——直線性仮定は不要</td></tr>
+<tr><td>6. 医薬品中不純物</td><td>HPLC-UV</td><td><strong>分割実施要因計画で作業者・装置・日を織り込む</strong>／定量下限付近の挙動が明瞭に出る</td></tr>
+<tr><td>7. 血漿リン酸</td><td>可視分光</td><td><strong>補正が不要なら補正しない</strong> ——補正は不確かさを増やすコストを伴う</td></tr>
+</tbody></table>
+<p>実務者として持ち帰るべき原則は3つに絞れる。</p>
+<p><strong>第一に、受容限界を先に決めること。</strong> 結論の第1項が ISO 17025 の定義に沿って述べるとおり、手順は「①目標（受容限界）を設定 →②証拠を集める →③確認する」の順である。データを取ってから基準を考えるのでは、バリデーションの意味がない。</p>
+<p><strong>第二に、真度と精度を別々に検定しないこと。</strong> 第1例が示すとおり、真度の検定は「バイアスがゼロか」を問うが、実務が知りたいのは「結果が使えるか」である。バイアス 0.83% で不合格になる基準は、基準のほうがおかしい。</p>
+<p><strong>第三に、補正は必要なときだけ、範囲を明示して。</strong> 第4例（補正が不可欠）と第7例（補正が不要）の対比が明快である。そして「補正すると不確かさが増える」という代償を、著者らは繰り返し注意している。</p>
+<p>限界として著者ら自身が挙げているのは、<strong>微生物計数への適用可能性</strong>と、<strong>参照法との比較（理論値自体に不確かさがある場合）</strong> の2点である。前者は計数データが正規分布しないこと、後者は真値が不確かであることが、いずれも本手法の前提を崩す。</p>
+<p>なお本稿には、表2・表5・表6・表8・表10 に <strong>原本PDFのテキスト層の抽出崩れ</strong>があり、一部のセルは正確に読み取れなかった（本文中の訳注で該当箇所を明示した）。また表5 レベル4 の「導入濃度 500」は、同じ列の他のセルと検算が合わず <strong>200 の誤り</strong>と思われるが、<strong>原文の表記のまま転記して検算結果を注記するにとどめた</strong>。</p>
+<h2>参考文献</h2>
+<p>原文 References（全39件のうち、本文で直接参照される 1〜11 番を全訳し、12〜39 番は適用例の出典一覧として原文の書誌のまま掲げる）</p>
+<ol class="references"><li id="ref-1">Ph. Hubert, J.-J. Nguyen-Huu, B. Boulanger, E. Chapuzet, P. Chiap, N. Cohen, P.-A. Compagnon, W. Dewe, M. Feinberg, M. Lallier, M. Laurentie, N. Mercier, G. Muzard, C. Nivet, L. Valat, <em>J. Pharm. Biomed. Anal.</em> <strong>36</strong> (2004) 579–586.（<strong>SFSTP パートI</strong>）</li><li id="ref-2">Ph. Hubert, J.J. Nguyen-Huu, B. Boulanger, E. Chapuzet, P. Chiap, N. Cohen, P.A. Compagnon, W. Dewé, M. Feinberg, M. Lallier, M. Laurentie, N. Mercier, G. Muzard, C. Nivet, L. Valat, E. Rozet, <em>J. Pharm. Biomed. Anal.</em> <strong>45</strong> (2007) 70–81.（<strong>SFSTP パートII</strong>）</li><li id="ref-3">Ph. Hubert, J.-J. Nguyen-Huu, B. Boulanger, E. Chapuzet, N. Cohen, P.-A. Compagnon, W. Dewé, M. Feinberg, M. Laurentie, N. Mercier, G. Muzard, L. Valat, E. Rozet, <em>J. Pharm. Biomed. Anal.</em> <strong>45</strong> (2007) 82–96.（<strong>SFSTP パートIII</strong>）</li><li id="ref-4">M. Feinberg, B. Boulanger, W. Dewé, Ph. Hubert, <em>Anal. Bioanal. Chem.</em> <strong>380</strong> (2004) 502–514.</li><li id="ref-5">A.G. González, M.Á. Herrador, <em>TrAC Trends Anal. Chem.</em> <strong>26</strong> (2007) 227–238.</li><li id="ref-6">A.G. González, M.Á. Herrador, <em>Talanta</em> <strong>70</strong> (2006) 896–901.</li><li id="ref-7">J. Caporal-Gautier, J.M. Nivet, P. Algranti, M. Guilloteau, M. Histe, L. Lallier, J.J. N&#x27;Guyen-Huu, R. Russotto, <em>STP Pharma Pratiques</em> <strong>2</strong> (1992) 227–239.（<strong>1992年の旧バリデーション手順</strong>）</li><li id="ref-8">International Conference on Harmonization (ICH), Topic Q2 (R1): Validation of Analytical Procedures: Text and Methodology, Geneva, 2005.</li><li id="ref-9">J.S. Hunter, <em>J. AOAC</em> <strong>64</strong> (1981) 574–583.</li><li id="ref-10">A. da Silva, E.M. Quagliato, C. Lucio Rossi, <em>Microb. Infect. Dis.</em> <strong>37</strong> (2000) 87–92.</li><li id="ref-11">Guidance for Industry: Bioanalytical Method Validation, US FDA, CDER/CBER, Rockville, May 2001.</li><li id="ref-12">M.A. Bimazubute, E. Rozet, I. Dizier, P. Gustin, Ph. Hubert, J. Crommen, P. Chiap, <em>J. Chromatogr. A</em> <strong>1189</strong> (2008) 456–466.</li><li id="ref-13">E. Chéneau, J. Henri, Y. Pirotais, J.-P. Abjean, B. Roudaut, P. Sanders, M. Laurentie, <em>J. Chromatogr. B</em> <strong>850</strong> (2007) 15–23.</li><li id="ref-14">E. Rozet, R. Morello, F. Lecomte, G.B. Martin, P. Chiap, J. Crommen, K.S. Boos, Ph. Hubert, <em>J. Chromatogr. B</em> <strong>844</strong> (2006) 251–260.</li><li id="ref-15">R.D. Marini, P. Chiap, B. Boulanger, S. Rudaz, E. Rozet, J. Crommen, Ph. Hubert, <em>Talanta</em> <strong>68</strong> (2006) 1166–1175.</li><li id="ref-16">O. Rbeida, B. Christiaens, Ph. Hubert, D. Lubda, K.-S. Boos, J. Crommen, P. Chiap, <em>J. Pharm. Biomed. Anal.</em> <strong>36</strong> (2005) 947–954.</li></ol>
+<blockquote>補足: 文献 17〜39 は、本文9節で列挙される各種分析技術（IR分光・ラマン・キャピラリー電気泳動・HPTLC・GC など）への適用例および Horwitz–Albert の分散モデル（文献39）の出典である。原本PDFの参考文献欄はテキスト層の抽出が途中で切れているため、<strong>17番以降の完全な書誌は原文を参照されたい</strong>。捏造を避けるため、確認できた範囲のみを掲げた。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="bioanalytical-validation-risk-uncertainty.html">バイオ分析法のバリデーション・リスク・不確かさ評価の進歩——判定基準の解釈を整理し「目的に合わない分析法を通してしまうリスク」を減らす</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="total-error-tolerance-interval-validation.html">定量分析法バリデーションのためのTotal Error（総合誤差）アプローチ——両側β含有許容区間で「不適切な分析法を通してしまうリスク」を制御する</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="dissolution-assay-method-validation-qbd-tolerance.html">溶出試験に関わる分析法のバリデーション——受入限界と判定方法論（QbD準拠）</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="analytical-procedure-validation-qbd-paradigm.html">分析法バリデーションとQuality by Design（QbD）——バリデーションはQbDの一部であり「目的適合性」の証明である</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="sfstp-part4-accuracy-profile-examples" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
