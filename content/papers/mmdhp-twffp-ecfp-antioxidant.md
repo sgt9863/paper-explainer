@@ -136,7 +136,7 @@ f_si：補正係数、A_s：内標（または試料）のピーク面積、C_s�
 
 要するに、B-Z 反応は非平衡閉鎖系である。散逸物質としての CH₂(COOH)₂ は式(d)の反応を遅らせるが、適時に補充されないと系の反応速度を直接・間接に高め、反応は最終的に平衡に達する。生薬を加えると、サンプル中の還元性成分が BrO₃⁻ と反応して系の正常な動作を妨害し、巨視的には振動を抑制する現象を示す。活性成分含量の異なるサンプルは異なる抑制度をもたらし、したがって異なる電気化学指紋を示す。
 
-![Figure 1. B-Z 振動反応の機構（[Br⁻]>[Br⁻]_crit の式(a)–(d)・[Br⁻]<[Br⁻]_crit の式(e)–(g)・Br⁻ 再生の式(h)）と、代表的な ECFP（S15）および関連特徴パラメータ（A）、ならびに積分後の ECFP と20バッチ MMDHP サンプルの ECFP（B）。](assets/mmdhp-twffp-ecfp-antioxidant/fig1-bz-ecfp.jpeg)
+![Figure 1. B-Z 振動反応の機構（〔Br⁻〕>〔Br⁻〕_crit の式(a)–(d)・〔Br⁻〕<〔Br⁻〕_crit の式(e)–(g)・Br⁻ 再生の式(h)）と、代表的な ECFP（S15）および関連特徴パラメータ（A）、ならびに積分後の ECFP と20バッチ MMDHP サンプルの ECFP（B）。](assets/mmdhp-twffp-ecfp-antioxidant/fig1-bz-ecfp.jpeg)
 
 #### 2.4.4. 4つの Q-marker の含量百分率（P_i%）
 
