@@ -1230,6 +1230,30 @@
       "title": "双黄連口服液を例とした漢方製剤と中間体の総合的品質評価——HPLC5波長融合フィンガープリント＋UV量子フィンガープリント＋抗酸化活性（Wang 2023）",
       "source_pdf": "1-s2.0-S0021967323004223-main.pdf",
       "date": "2026-08-04"
+    },
+    "upload-botanical-drug-development-review": {
+      "slug": "botanical-drug-development-review",
+      "title": "ボタニカルドラッグ（植物薬）の開発——総説：混合物・アントラージュ効果・CMCの壁（McChesney 2019）",
+      "source_pdf": "the-development-of-botanical-drugs-a-review.pdf",
+      "date": "2026-08-05"
+    },
+    "upload-science-347-6219-suppl-tm-part2": {
+      "slug": "art-science-traditional-medicine-part2",
+      "title": "伝統医学の技と科学 パート2——伝統医学研究のための学際的アプローチ（Science 特別増刊 全10編・2015）",
+      "source_pdf": "Science-347-6219-Suppl-Art-Science-Traditional-Medicine-Part2.pdf",
+      "date": "2026-08-05"
+    },
+    "upload-berman-integrating-botanicals-oncology": {
+      "slug": "integrating-botanicals-oncology-fda",
+      "title": "植物由来製品をがん診療に組み込む——FDAのボタニカル製品規制とボタニカル臨床試験（Berman 2025）",
+      "source_pdf": "BermanIntegrativeOncologyManuscript.pdf",
+      "date": "2026-08-05"
+    },
+    "upload-hoffman-kringle-total-error-2007": {
+      "slug": "total-error-tolerance-interval-validation",
+      "title": "定量分析法バリデーションのためのTotal Error アプローチ——両側β含有許容区間（Hoffman & Kringle 2007）",
+      "source_pdf": "Hoffman-Kringle-2007-Total-Error-Approach.pdf",
+      "date": "2026-08-05"
     }
   }
 }
