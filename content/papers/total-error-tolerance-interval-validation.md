@@ -19,7 +19,7 @@ summary: 本稿（Pharmaceutical Research 誌 2007年6月号・sanofi-aventis �
 >
 > このページの原本は **Hoffman D, Kringle R. "A Total Error Approach for the Validation of Quantitative Analytical Methods." *Pharmaceutical Research* 24(6):1157–1164 (2007)** です。
 >
-> 本サイトには別途「[Total Error（総合誤差）アプローチによるバイオアナリティカル法バリデーションの妥当性判定——学会抄録（Rozet ら, 2009）]」というページがありますが、そちらは **Rozet・Boulanger・Hubert ら（リエージュ大学ほか）による2009年の学会抄録**で、**著者も掲載媒体も異なる別の文献**です。両者はいずれも「総合誤差による分析法バリデーション」という同じ考え方を扱っており、内容的には密接な姉妹関係にありますが、一方が他方の抄録／完全版という関係ではありません。本ページは Hoffman & Kringle の原著論文の全訳です。
+> よく混同されるものに、**Rozet・Boulanger・Rudaz・Marini・Ziemons・Hubert ら（リエージュ大学ほか）の "Total Error for the Validation of Bioanalytical Methods"**（*Annales de Toxicologie Analytique* 21(S1), p.35, 2009／演題 O75）がありますが、そちらは**学会の口頭発表抄録**であり、**著者も掲載媒体も異なる別の文献**です。両者はいずれも「総合誤差による分析法バリデーション」という同じ考え方を扱う密接な姉妹関係にありますが、**一方が他方の抄録／完全版という関係ではありません**。Rozet らの系統の考え方（β期待許容区間＋正確性プロファイル）を本文で読むには、末尾の「訳者による総括」に挙げた原著論文を参照してください。本ページは Hoffman & Kringle の原著論文の全訳です。
 
 ## 書誌情報
 
@@ -459,7 +459,27 @@ $$
 
 限界も率直に書かれている。3ラン×3反復では検出力が不足すること。多段階サンプリングの全体的な誤合格率は未検討であること。そして何より、**「4-6-15ルール自体を統計的に健全な手続き（シューハート法など）に置き換えるほうが本筋だ」** と、自分の提案が対症療法である面を認めている点は誠実である。
 
-なお本サイトには、同じ「総合誤差」の枠組みを **β期待許容区間（β-expectation tolerance interval）＋正確性プロファイル（accuracy profile）** として展開した Rozet・Hubert・Boulanger らの系統の解説も収録している。本稿の**β含有（β-content）** 許容区間と、彼らの**β期待**許容区間は厳密には別の統計量である（前者は「割合βを信頼度γで保証」、後者は「期待値としてβ%が入る」）。Hoffman & Kringle はより保守的な保証を与える一方、Rozet らのほうが計算が簡便で、正確性プロファイルとして視覚化しやすい。実務ではどちらを採るかで結論が変わりうるので、両者を並べて読む価値がある。
+### もう一つの系統——Rozet・Hubert らの β期待許容区間
+
+同じ「総合誤差」の枠組みを、**β期待許容区間（β-expectation tolerance interval）＋正確性プロファイル（accuracy profile）** として展開した系統がある。リエージュ大学の **Hubert・Rozet・Boulanger** らと、フランスの **SFSTP**（フランス製薬科学技術協会）による一連の仕事である。
+
+本稿の **β含有（β-content）** 許容区間と、彼らの **β期待（β-expectation）** 許容区間は、**厳密には別の統計量**である。
+
+| | β含有許容区間（本稿） | β期待許容区間（Rozet ら） |
+|---|---|---|
+| 保証の内容 | 「割合 β が区間内に入る」ことを**信頼度 γ で保証**する | 「区間内に入る割合の**期待値**が β」 |
+| 保守性 | より保守的（γ の分だけ広い） | より狭い |
+| 計算 | 分散分析＋正規・カイ二乗分位点 | より簡便 |
+| 可視化 | 濃度ごとに区間を出す | 濃度軸に沿って上下限を結び**正確性プロファイル**として図示 |
+
+**実務ではどちらを採るかで結論が変わりうる**ので、両者を並べて読む価値がある。Rozet らの系統を原著で読むなら、以下が入口として適している（いずれも本稿の参考文献 7〜11 と重なる系列の後続論文）。
+
+- Hubert P, Nguyen-Huu JJ, Boulanger B, et al. **Harmonization of strategies for the validation of quantitative analytical procedures: A SFSTP proposal — Part I〜IV.** *J Pharm Biomed Anal*（Part I: 2004; Part II: 2007; Part III: 2007; **Part IV: 2008, 48(3):760–771, DOI 10.1016/j.jpba.2008.07.018**）——Part IV が正確性プロファイルの適用例と統計を最もまとまった形で扱う
+- Rozet E, Hubert C, Ceccato A, et al. **Using tolerance intervals in pre-study validation of analytical methods to predict in-study results: The fit-for-future-purpose concept.** *J Chromatogr A* **1158**(1–2):126–137 (2007). DOI 10.1016/j.chroma.2007.03.102
+- Rozet E, Ceccato A, Hubert C, et al. **Analysis of recent pharmaceutical regulatory documents on analytical method validation.** *J Chromatogr A* **1158**(1–2):111–125 (2007)
+- Rozet E, Marini RD, Ziemons E, Boulanger B, Hubert P. **Advances in validation, risk and uncertainty assessment of bioanalytical methods.** *J Pharm Biomed Anal* **55**(4):848–858 (2011). DOI 10.1016/j.jpba.2010.12.018
+
+> 補足: 冒頭で触れた **Rozet ら 2009 の "Total Error for the Validation of Bioanalytical Methods"**（*Ann Toxicol Anal* 21(S1), p.35, 演題 O75）は**学会口頭発表の抄録**であり、これに対応する「本文」の論文は存在しない。抄録が要約している方法論の中身は、上に挙げた論文群で読める。
 
 ## 参考文献
 
