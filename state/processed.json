@@ -1278,6 +1278,24 @@
       "title": "書評：Snyder & Dolan『High-Performance Gradient Elution』（竹内 2007）",
       "source_pdf": "s00216-007-1557-8.pdf",
       "date": "2026-08-07"
+    },
+    "upload-jiang-danhong-qnmr-ipca-2014": {
+      "slug": "danhong-injection-qnmr-ipca-control-chart",
+      "title": "漢方注射剤の極性代謝物を定量プロファイリングし 独立主成分分析（IPCA）で多変量統計評価する——丹紅注射液をモデルとした1H NMR法",
+      "source_pdf": "pone.0105412.pdf",
+      "date": "2026-08-07"
+    },
+    "upload-fda-botanical-guidance-2016": {
+      "slug": "fda-botanical-drug-development-guidance-2016",
+      "title": "植物性医薬品開発 産業界向けガイダンス（米国FDA/CDER 2016年12月・改訂第1版）全訳",
+      "source_pdf": "BotanicalDrugDevelopmentGuidanceforIndustry.pdf",
+      "date": "2026-08-07"
+    },
+    "upload-science-tm-part1-2014": {
+      "slug": "art-science-traditional-medicine-part1",
+      "title": "伝統医学の技と科学 パート1——今日のTCM：統合への論拠（Science 特別増刊 全8編＋序文3編）",
+      "source_pdf": "TCM_Dec_19_issue_high_resolution.pdf",
+      "date": "2026-08-07"
     }
   }
 }
