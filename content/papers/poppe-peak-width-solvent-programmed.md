@@ -4,7 +4,7 @@ slug: poppe-peak-width-solvent-programmed
 source_pdf: 1-s2.0-S0021967300816416-main.pdf
 doi: https://doi.org/10.1016/S0021-9673(00)81641-6
 level: researcher
-date: 2026-08-05
+date: 2026-08-07
 published: 1981
 tags: [分析法・バリデーション, クロマトグラフィー理論, 統計・ケモメトリクス]
 digest_tagline: グラジエント溶出ではピークは「広がる」だけでなく「縮む」——ピーク先端が後端より弱い溶媒中を進むためである。この band compression（バンド圧縮）を 分散モデルの物質移動方程式から出発して たった1本の微分方程式に凝縮し LSSグラジエントの圧縮係数G とステップグラジエントの幅比を どちらも同じ式から導いてみせた1981年の理論論文

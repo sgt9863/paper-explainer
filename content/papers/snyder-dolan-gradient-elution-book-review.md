@@ -4,7 +4,7 @@ slug: snyder-dolan-gradient-elution-book-review
 source_pdf: s00216-007-1557-8.pdf
 doi: https://doi.org/10.1007/s00216-007-1557-8
 level: practitioner
-date: 2026-08-05
+date: 2026-08-07
 published: 2007
 tags: [クロマトグラフィー理論, 分析法・バリデーション, 書評]
 digest_tagline: グラジエント溶出の決定版教科書（496頁・全9章）を 岐阜大学の竹内豊英が2ページで評した書評。「図表の質は優れ 記述は正確」と評価しつつ 式2.7がおかしい・図2.8aの縦軸目盛がずれている・表9.3のカラム長が間違っている と具体的な誤りまで指摘する
