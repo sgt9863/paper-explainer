@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>分光分析における測定の不確かさ——試料前処理と「化学量→物理量」変換が結果を支配する（水中鉄の吸光光度法ケーススタディ）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="分光分析における測定の不確かさ——試料前処理と「化学量→物理量」変換が結果を支配する（水中鉄の吸光光度法ケーススタディ）">
+<meta property="og:description" content="リトアニア・カウナス工科大学 計量学研究所の Dobilienė ら（Measurement 43巻 2010年）が 分光分析の測定不確かさは「装置の技術仕様」ではなく「試料前処理＝化学量から物理量への変換」に支配されることを 水中鉄の吸光光度定量を題材に実験的に示した原著論文の全訳。ISO 6332（1・10-フェナントロリン法＝法A）とスルホサリチル酸法（法B）の2法について 温度・発色時間・試薬量・吸収層厚・pH・不純物を実験計画的に振り（Table 3・Table 4） 測定モデルを8個の補正係数で拡張し（式4） 検量線・参照物質・秤量・容量器具の不確かさを式(6)〜(17)で系統的に組み上げる。結果 相対合成標準不確かさは法A最大0.12／法B最大0.17（いずれも低濃度域）で 装置由来の寄与はほぼ無視できるほど小さかった。図7点・表4点・式17本を原文どおり収載。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="spectrophotometric-uncertainty-sample-preparation-iron"><h1>分光分析における測定の不確かさ——試料前処理と「化学量→物理量」変換が結果を支配する（水中鉄の吸光光度法ケーススタディ）</h1><div class="paper-meta"><span class="date">2026-08-08</span> <span class="tag">分析法・バリデーション</span> <span class="tag">QC・品質評価</span> <span class="tag">分光法</span> <span class="tag">統計・ケモメトリクス</span> &middot; <a href="https://doi.org/10.1016/j.measurement.2009.07.003" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Uncertainty_of_measurement_in_spectromet.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="spectrophotometric-uncertainty-sample-preparation-iron" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="spectrophotometric-uncertainty-sample-preparation-iron" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">「装置の精度が高いから結果も正確」ではない。水中鉄の吸光光度法を題材に 温度・pH・試薬量・発色時間・吸収層厚・不純物という前処理条件を実験的に振り、不確かさへの寄与を成分別に定量した。結論は明快で 装置由来の寄与はほぼ無視できるほど小さく 支配するのは前処理条件と検量線である</p><div class="digest-stats"><div class="stat"><span class="stat-value">約5（Measurement／JCR目安）</span><span class="stat-label">IF</span></div><div class="stat"><span class="stat-value">2010年・リトアニア</span><span class="stat-label">発表</span></div><div class="stat"><span class="stat-value">水中Feの吸光光度定量</span><span class="stat-label">題材</span></div><div class="stat"><span class="stat-value">法A ISO 6332 510 nm／法B スルホサリチル酸 400 nm</span><span class="stat-label">比較2法</span></div><div class="stat"><span class="stat-value">0.10〜2.00 mg/L</span><span class="stat-label">定量範囲</span></div><div class="stat"><span class="stat-value">8個</span><span class="stat-label">補正係数</span></div><div class="stat"><span class="stat-value">法A 0.12／法B 0.17（低濃度域）</span><span class="stat-label">相対合成標準不確かさ</span></div><div class="stat"><span class="stat-value">k=2（95%）</span><span class="stat-label">拡張不確かさ</span></div></div><ul class="digest-points"><li>測定モデルを「検量線から出る濃度」だけで終わらせず 前処理条件ごとの補正係数を掛ける形（式4: c = c0·d·fr·fT·fpH·ft·fφ·fb·fV）に拡張したのが本論文の核心。この8係数それぞれに標準不確かさを割り当て 誤差伝播で合成する</li><li>実験で条件を振った結果 温度の偏りは両法とも低濃度域（〜0.5 mg/L）で最も効き 特定点では公称値の20%に達した。試薬量の偏りは1 mg/L超で結果の40%（低濃度域では10%）に達し 不純物の影響は濃度が上がるほど小さくなった。発色時間は法Bでは（−1 +2）分なら影響せず 法Aでは1〜2 mg/Lで規定より短いと有意に効いた</li><li>Fig.6・Fig.7のヒストグラムが示す最大の教訓は「装置の性能諸元だけでは不確かさを評価できない」こと。measuring instrument の寄与は全濃度域でごく小さく 支配するのは低濃度域では検量線標準液濃度・マトリックス・温度・pH 高濃度域では試薬量・pH・マトリックスだった</li></ul></section><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Measurement 原著）の節構成に沿って訳出。図1〜7は原本PDFをpoppler（pdftoppm）で300 dpi描画・図領域を切り出し、各図をReadで目視確認のうえ全訳キャプションで埋め込んだ。表1〜4は全項目を転記（Table 2 の「+」印は拡大画像で列対応を確認）。式(1)〜(17)は記号定義とともに全て収載。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Uncertainty of measurement in spectrometric analysis: A case study</li><li>著者: <strong>J. Dobilienė</strong>（責任著者）・E. Raudienė・R.P. Žilinskas</li><li>カウナス工科大学 計量学研究所（Kaunas University of Technology, Metrology Institute, Studentu str. 50-253, Kaunas, Lithuania）</li><li>連絡先: justina.dobiliene@ktu.lt</li><li>掲載: <em>Measurement</em> <strong>43</strong> (2010) 113–121（Elsevier）</li><li>DOI: https://doi.org/10.1016/j.measurement.2009.07.003</li><li>インパクトファクター: <strong>約5</strong>（<em>Measurement</em>／JCR目安。計測・計量工学分野）</li><li>受理経過: 受領 2009-06-17 / 受理 2009-07-13 / オンライン公開 2009-07-17（誌面は2010年43巻）</li><li>キーワード: Uncertainty（不確かさ）, Spectrometry（分光分析）, Sample preparation（試料前処理）</li></ul>
+<blockquote>補足（この解説の位置づけ）: 本論文は漢方・生薬を扱いませんが、当サイトの品質管理（QC）系の解説すべての土台になるテーマを扱います。すなわち <strong>「その測定値はどれくらい信用できるのか（測定の不確かさ）」を、どの要因がどれだけ押し上げているかまで分解して示す</strong>という話です。題材は水中の鉄をフェナントロリン法で測るという古典的な吸光光度法ですが、結論——<strong>不確かさを支配するのは装置ではなく前処理条件と検量線</strong>——は、HPLCの多成分定量でも指紋分析でもそのまま通用します。[バイオ分析法のバリデーション・リスク・不確かさ評価](bioanalytical-validation-risk-uncertainty) と併せて読むと、「バリデーション」と「不確かさ」の関係が見えます。</blockquote>
+<blockquote>補足（用語の整理）: - <strong>測定の不確かさ（measurement uncertainty)</strong> … 測定結果に付随する「値のばらつきの幅」を定量化したもの。「誤差」（真値からのずれ、原理的には知り得ない）とは別概念で、<strong>測定結果と一緒に報告すべき数値</strong>。 - <strong>標準不確かさ u(x)</strong> … 個々の要因の不確かさを標準偏差の形で表したもの。 - <strong>合成標準不確かさ u(c)</strong> … 各要因の標準不確かさを誤差伝播則でまとめたもの。 - <strong>拡張不確かさ U</strong> … 合成標準不確かさに包含係数 k（本論文では k = 2）を掛けたもの。k = 2 で信頼の水準およそ95%。 - <strong>GUM</strong> … <em>Guide to the Expression of Uncertainty in Measurement</em>（ISO等の共同ガイド。参考文献[<a href="#ref-3" class="cite">3</a>]）。不確かさ評価の国際的な作法を定めた文書。 - <strong>EURACHEM/CITAC ガイド</strong> … GUMを分析化学向けに具体化した実務ガイド（参考文献[<a href="#ref-2" class="cite">2</a>]）。</blockquote>
+<h2>要旨（Abstract）</h2>
+<p>分光分析法は、簡便さ・分析の速さ・高い選択性から、さまざまな被検物（analyte）の課題を解くために用いられる測定法の一群に属する。<strong>あらゆる化学分析の正確さと信頼性は、分析対象試料をどのように調製するかに大きく依存する。</strong></p>
+<p>本研究の目的は、<strong>試料前処理と分光分析における化学的・物理的変換を考慮に入れて</strong>、物質濃度測定の不確かさと計量学的信頼性を評価することである。</p>
+<p>吸光光度法（spectrophotometric method）の計量学的性質を実験的に評価し、分析条件が測定結果に与える影響を記述した。</p>
+<h2>1. 序論（Introduction）</h2>
+<p>分光分析は、定性分析・定量分析に広く用いられる測定法である。</p>
+<p>分光分析結果の定性的評価には、<strong>試料前処理の技法・測定原理・被検物濃度・マトリックスの性質</strong>など、ありうる発生源と要因のすべての影響が含まれる。測定の不確かさは、これら挙げたすべてのパラメータに依存する[<a href="#ref-1" class="cite">1</a>]。</p>
+<p>どの測定においても測定装置の技術仕様は重要な役割を果たす。製造業者も使用者も、自分たちの測定機器の高い正確さを誇ることがしばしばある。<strong>しかし分光分析の結果を評価するとき、試料前処理の手順は不十分にしか考慮されていない。</strong>それは、最新・高速・自動化され、試料と試薬を最小量しか必要とせず、高い再現性を与える技術と測定装置が分析に適用されているという事実にもかかわらず起きている。</p>
+<p>不確かさの評価は、化学測定の特異性のために単純な作業ではない。<strong>化学的なパラメータは常に物理的なパラメータへ変換され、そのうえで初めてその値が測定される。</strong>さまざまな試料処理手順が実施され、それらは化学的・物理的変換によって測定結果に影響しうる。試料前処理の過程で、試料は機械的にも化学的にも調製される。<strong>多くの場合、これらの手順は実務では評価されていない。</strong></p>
+<p>化学測定結果の不確かさ評価という主題については多数の著者が発表しており、不確かさ推定に関するガイドもいくつか出版されている[<a href="#ref-2" class="cite">2</a>,<a href="#ref-3" class="cite">3</a>]。しかし雑誌論文で報告される内容はかなり一般的なものにとどまる。<strong>なぜなら、あらゆる化学測定はそれぞれ固有（exclusively specific）だからである。</strong>したがって不確かさは作業実務から切り離せない。不確かさに影響するありうるすべてのパラメータを評価し、そのすべてを考慮に入れることが非常に重要である。</p>
+<p>本論文は、分光分析における<strong>化学的・物理的変換の定性的評価と、それが測定結果の不確かさに与える影響</strong>を論じる。</p>
+<p>化学的・物理的変換の条件が測定不確かさに与える影響を実験的に示すために、<strong>吸光光度法による水試料中の鉄濃度の測定</strong>を選んだ。</p>
+<p>吸光光度測定の物理的基礎はよく知られている[<a href="#ref-4" class="cite">4</a>]。<strong>測定装置についての不確かさ源</strong>（分光光度計の読みの繰返し性、分光光度計のドリフト、迷光など）も同様によく知られている[<a href="#ref-5" class="cite">5</a>–<a href="#ref-7" class="cite">7</a>]。<strong>「古典的」な不確かさ源</strong>（秤量、容量操作など）は十分に見積もられている[<a href="#ref-7" class="cite">7</a>–<a href="#ref-9" class="cite">9</a>]。<strong>線形最小二乗検量に伴う測定不確かさ</strong>も見積もられている[<a href="#ref-2" class="cite">2</a>,<a href="#ref-7" class="cite">7</a>–<a href="#ref-9" class="cite">9</a>]。<strong>しかし日常業務の検査室における測定結果の不確かさ評価では、化学的・物理的変換の条件（試料pH、化学試薬の含量、調製した試料の放置時間など）に払われている注意が不十分である。</strong></p>
+<h2>2. 化学測定の特異性（Peculiarities of chemical measurements）</h2>
+<p>化学分析は他の測定と異なる。<strong>何かの「真値（true value）」を測る方法は存在しない。</strong>化学分析でできる最善は、経験上信頼できると分かっている技法を注意深く適用することである。同じ量を異なる方法で測った結果が互いに一致すれば、その結果が「真の」値に近いと確信できるようになる。<strong>しかし試料前処理の手順は、常にそれ自身の寄与を測定結果に持ち込む。</strong></p>
+<p>化学分析には、評価しなければならない<strong>3つの主要段階</strong>がある。</p>
+<ol><li><strong>化学的パラメータを物理的パラメータへ変換する段階</strong>（すべての試料前処理手順、補助反応など）。</li><li><strong>変換されたパラメータを測定する段階。</strong></li><li><strong>不確かさを含めて結果を評価する段階。</strong></li></ol>
+<h3>2.1 分光分析における化学的・物理的変換</h3>
+<p>分光分析は一連の方法群を含む。<strong>測定されるパラメータそのものが異なるため、分光法ごとに測定結果の不確かさに影響するパラメータも異なる。</strong>外部条件と測定装置の誤差はあらゆる分析に影響する。しかしその影響は、化学的・物理的変換ほど強くはない。</p>
+<p>化学的・物理的変換の段階は、<strong>機械的および化学的な試料前処理手順のすべて</strong>を含む。この変換の過程で、被検物濃度と直接関係づけられる物理的パラメータを測定できるように試料が調製される。</p>
+<p>化学機器分析のすべての方法は、<strong>分析信号を得てその強度を測ること</strong>、すなわちあらゆる物質の化学的・物理的特性に基づいている[<a href="#ref-10" class="cite">10</a>]。Fig. 1 は、被検物の測定濃度の不確かさに影響を与える手順を図示している。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig1-procedures-diagram.png" alt="図1. 結果に影響する手順の図（原文 Fig. 1）。太い横軸が最終量である「濃度（Concentration）」に向かい、そこへ上から「試料前処理（Sample preparation）＝化学的（Chemical）・機械的（Mechanical）」が、下から「物理パラメータの測定（Physical parameter measurement）」と「検量線の作成（Formation of calibration curve）」が合流する。濃度という結果は、この3系統すべての寄与を受けて決まることを示す。" loading="lazy"><figcaption>図1. 結果に影響する手順の図（原文 Fig. 1）。太い横軸が最終量である「濃度（Concentration）」に向かい、そこへ上から「試料前処理（Sample preparation）＝化学的（Chemical）・機械的（Mechanical）」が、下から「物理パラメータの測定（Physical parameter measurement）」と「検量線の作成（Formation of calibration curve）」が合流する。濃度という結果は、この3系統すべての寄与を受けて決まることを示す。</figcaption></figure>
+<p>試料前処理の手順は、<strong>試料採取</strong>（試料を採取した場所、被検物の予想濃度）、<strong>保管</strong>（温度、分析までの時間）、<strong>輸送条件</strong>（容器、所要時間、温度など）、<strong>分析用試料調製</strong>（試料を実験室試料の形にするために加えるすべての機械的処理）から、<strong>ある物理パラメータを測ることで分析の最終的な表現が得られる測定手順</strong>までのすべての処理・手順を含む。被検物の濃度を測る前に、一連の調製手順を実施しなければならない。操作の量と複雑さは、選んだ方法と分析の目的に依存する[<a href="#ref-11" class="cite">11</a>]。</p>
+<p><strong>試料前処理はいまなお、分析サイクルの中で最も時間を要し、手間がかかり、誤りを生みやすい段階の一つである</strong>[<a href="#ref-12" class="cite">12</a>]。試料前処理法の選択は、次のようないくつかの因子に依存する。</p>
+<ol><li>被検物（analyte）そのもの。</li><li>被検物の濃度レベル。</li><li>試料マトリックス。</li><li>機器測定の技法。</li><li>必要な試料量。</li></ol>
+<p>選んだ方法は、それに固有の試料前処理装置と試薬を要求する。</p>
+<p>したがって特定の課題を解くには、吸収・発光・質量電荷比など<strong>さまざまな物質パラメータの測定によって被検物量を決定する</strong>、適切な分光分析法が用いられる[<a href="#ref-4" class="cite">4</a>]。</p>
+<h4>2.1.1 機械的な試料前処理</h4>
+<p>選んだ分析法に適した形へ試料を変換するために試料へ加えるあらゆる処置・手順は、試料前処理に属する[<a href="#ref-13" class="cite">13</a>]。方法が異なれば、それに見合った試料前処理が要求されるが、いくつかの分光分析法（原子吸光、原子発光、吸光光度法、赤外分光）には共通する目的と前処理手順を見出すことができる。</p>
+<p>まず被検物は、選んだ分析法と両立する物理的・化学的形態へ変換されなければならない（<strong>大半の分析法は固体試料や不均一な試料に対してうまく働かない</strong>）。また分析用試料は可能なかぎり純粋でなければならない（<strong>後続の被検物測定を妨害しないよう、試料から余計な物質を最大限除去する</strong>）。Table 1 に、各分光分析法について集合状態（固体・液体・気体）別の機械的試料前処理手順を示す。</p>
+<p><strong>Table 1. 分光分析における集合状態別の機械的試料前処理手順</strong></p>
+<table>
+<thead><tr><th>分析法</th><th>固体試料の前処理</th><th>液体試料の前処理</th><th>気体試料の前処理</th></tr></thead>
+<tbody>
+<tr><td>原子発光分光法（AES）</td><td>加熱、溶解、不純物分離、蒸発</td><td>濃縮または希釈、不純物分離</td><td>不純物分離、乾燥</td></tr>
+<tr><td>原子吸光分光法（AAS）</td><td>乾燥、均質化、不純物分離、粉砕、篩分け、抽出、濾過、原子化</td><td>不純物分離、濾過、濃縮または希釈、原子化</td><td>—</td></tr>
+<tr><td>吸光光度法（Spectrophotometry）</td><td>抽出、乾燥、濃縮、収着、沈殿、不純物分離、濾過、溶解</td><td>濃縮または希釈、不純物分離</td><td>—</td></tr>
+<tr><td>赤外分光法（IR）</td><td>粉砕、溶解、懸濁化、加圧成形</td><td>脱水</td><td>濾過</td></tr>
+<tr><td>質量分析法（MS）</td><td>粉砕、蒸発</td><td>直接測定</td><td>直接測定</td></tr>
+</tbody></table>
+<h4>2.1.2 化学的な試料前処理</h4>
+<p><strong>化学的試料前処理の不確かさは、結果の合成不確かさの一成分である。</strong>残念ながらこの不確かさはたいてい忘れられるか無視され、その結果、得られる測定値の不確かさを<strong>楽観的に過小評価する</strong>ことにつながる。<strong>化学的試料調製に伴う不確かさが最終結果の不確かさバジェット（uncertainty budget）の一部となることこそ、現代の不確かさ評価の目的である。</strong></p>
+<p>化学的試料前処理と外部因子が、分光分析の結果——被検物濃度の測定——に与える影響を Table 2 に示す。あわせて各方法で測定すべき物理パラメータも示した。<strong>Table 2 のデータは、上に挙げた分析法の結果評価にとって「試験試料の温度」が最も重要な因子であることを示している。</strong>他の成分の重要度は、個々の測定法に依存する。</p>
+<p><strong>Table 2. 化学的試料前処理と外部因子が分光分析の結果に与える影響</strong>（「+」＝影響あり）</p>
+<table>
+<thead><tr><th>分光分析法</th><th>化学量（濃度）に対応する物理パラメータ</th><th>試料pH</th><th>不純物の影響</th><th>試料と試薬の反応</th><th>試料マトリックスからの被検物分離</th><th>化学試薬の量</th><th>調製試料の容量</th><th>試験試料の希釈</th><th>試験試料の温度</th><th>試験試料の安定性</th><th>調製試料の保持時間</th><th>圧力</th></tr></thead>
+<tbody>
+<tr><td>原子吸光分光法</td><td>吸収</td><td></td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td></td><td>+</td><td></td></tr>
+<tr><td>原子発光分光法</td><td>発光</td><td></td><td>+</td><td></td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td></td><td>+ᵃ</td></tr>
+<tr><td>吸光光度法</td><td>吸収</td><td>+</td><td>+</td><td>+</td><td></td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td></td></tr>
+<tr><td>赤外分光法</td><td>吸収</td><td>+</td><td>+</td><td>+</td><td></td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td>+</td><td></td></tr>
+<tr><td>質量分析法</td><td>質量電荷比</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>+</td><td></td><td></td><td>+</td></tr>
+</tbody></table>
+<p>ᵃ 気体の場合のみ。</p>
+<blockquote>補足（Table 2 の読み方）: 横に見ると、<strong>吸光光度法とIR分光法は11因子のうち9因子で「+」</strong>＝影響を受ける因子が最も多い方法です。縦に見ると、<strong>「試験試料の温度」だけが5法すべてで「+」</strong>になっており、本文の「温度が最も重要」という記述と符合します。逆に質量分析法は温度と圧力の2因子だけで、試料pHや試薬量の影響を受けません（化学発色反応を介さないため）。</blockquote>
+<h2>3. 吸光光度分析の不確かさ源</h2>
+<p>分光分析の簡便さ・分析の速さ・高い選択性ゆえに、これらの方法は多様な被検物の多くの問題を解くために用いられる。<strong>先進的な装置は一見単純に見えるが、物質中の被検物濃度と記録される信号との関係はかなり複雑である。</strong>このため計量学的特性の研究はより複雑になる。</p>
+<p>さらに被検物の信号は、通常、被検物濃度だけでなく、<strong>他のすべての物質の濃度・物質の構造・試料の形態・環境条件</strong>にも依存する。加えて、どの測定機器を使う場合でも、<strong>化学分析の正確さと信頼性は分析対象試料の調製の仕方に大きく依存する。</strong>なぜなら化学測定において前処理の機構は固有のものだからである。</p>
+<p>測定結果を評価するには、結果に影響しうるすべての因子を分析することが必要である[<a href="#ref-14" class="cite">14</a>]。</p>
+<p>吸光光度分析法は化学分析の検査室で一般に用いられる測定法の一群である。<strong>しかし光度測定結果の計量学的な評価は不十分である。</strong></p>
+<p>吸光光度分析から得られる結果の不確かさ評価のための図を Fig. 2 に示す。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig2-uncertainty-evaluation-diagram.png" alt="図2. 吸光光度分析結果の不確かさ評価のための図（原文 Fig. 2）。破線で囲まれた領域が「試験対象（Specimen Y₀）と測定装置（Measuring instrument, Yₘ = F(x̄, θ̄)）は評価の過程で切り離せない」ことを表す。装置には上から「測定装置の校正の不確かさ」が入り、指示値（Indicator Y）には「読取りの不確かさ」が加わって拡張不確かさ UΣ に至る。下から Σxᵦᵢ として「測定条件の影響」＝温度・調製試料の放置時間・化学試薬の含量・pH・吸収層の厚さ・容器・標準物質・検量線のパラメータ等が装置へ流れ込む。" loading="lazy"><figcaption>図2. 吸光光度分析結果の不確かさ評価のための図（原文 Fig. 2）。破線で囲まれた領域が「試験対象（Specimen Y₀）と測定装置（Measuring instrument, Yₘ = F(x̄, θ̄)）は評価の過程で切り離せない」ことを表す。装置には上から「測定装置の校正の不確かさ」が入り、指示値（Indicator Y）には「読取りの不確かさ」が加わって拡張不確かさ UΣ に至る。下から Σxᵦᵢ として「測定条件の影響」＝温度・調製試料の放置時間・化学試薬の含量・pH・吸収層の厚さ・容器・標準物質・検量線のパラメータ等が装置へ流れ込む。</figcaption></figure>
+<p>この図は、<strong>評価の過程において試験対象と測定装置を切り離すことができない</strong>ことを示している。</p>
+<p>この図に従えば、測定結果を徹底的に評価するには、測定結果に影響しうるすべての因子を分析しなければならない。それらの因子とは、<strong>測定装置の技術的特性、測定条件、測定マトリックス、試料前処理手順、試験品と測定装置の相互作用、用いた測定法の制約、読取りの不確かさ、データ処理</strong>である。上記の因子を精査し、個々の事例における追加条件を評価して初めて、測定結果の正確な推定値としての不確かさを適切に与えることができる。</p>
+<h2>4. 方法と結果（Methods and results）</h2>
+<h3>4.1 方法の作り込みと不確かさ源の同定</h3>
+<p>吸光光度法の分析対象として、<strong>水試料中の鉄濃度の測定</strong>を選んだ。</p>
+<p>吸光光度法による鉄含量の測定は、<strong>検量線</strong>を用いて行った。</p>
+<p>標準溶液 c₁ 〜 cₙ の吸光度を測定し、値 A₁ 〜 Aₙ を得た。この場合、濃度は検量線の回帰式パラメータの評価によって得られたデータから計算され、次式で与えられる。</p>
+<p>$$A_i = c_i \cdot B_1 + B_0 \tag{1}$$</p>
+<p>ここで cᵢ は検量線から計算される試料中の被検物含量（mg/L）、Aᵢ は測定された試験試料の吸収、B₁ は検量線の傾き、B₀ は検量線の切片である。</p>
+<p>線形最小二乗検量線の傾き B₁ と、作成した検量線の切片 B₀ は次式から計算される。</p>
+<p>$$B_1 = \frac{\sum_{i=1}^{n} c_i A_i - n \bar{c} \bar{A}}{\sum_{i=1}^{n} c_i^{2} - n \bar{c}^{2}} \tag{2}$$</p>
+<p>$$B_0 = \frac{\bar{A} \sum c_i^{2} - \bar{c} \sum_{i=1}^{n} c_i A_i}{\sum_{i=1}^{n} c_i^{2} - n \bar{c}^{2}} \tag{3}$$</p>
+<p>ここで cᵢ は i 番目の鉄標準溶液の濃度、Aᵢ は i 番目の標準溶液の吸光度（A₁, …, Aᵢ, …, Aₙ）、n は直線上の点の数である。</p>
+<p>研究結果の比較可能性を確保するため、水中鉄濃度の測定法として<strong>2つの方法</strong>を選んだ。</p>
+<ol><li><strong>ISO 6332:1988</strong> <em>Water quality – Determination of iron – Spectrometric method using 1,10-phenanthroline</em>（以下<strong>法A</strong>）[<a href="#ref-15" class="cite">15</a>]。</li><li><strong>スルホサリチル酸を用いる鉄含量測定法</strong>（以下<strong>法B</strong>）。</li></ol>
+<p>鉄濃度の定量範囲は <strong>0.10〜2.00 mg/L</strong> とした。この範囲は選んだ両方法の適用領域をカバーする。</p>
+<blockquote>補足（原文の文献番号の不一致）: 本文では「ISO 6332:1988」と書かれていますが、巻末の参考文献[<a href="#ref-15" class="cite">15</a>]は「ISO 6322:1998 Water quality – Determination of iron – Spectrometric method using 1,10-phenanthroline」と表記されています。<strong>規格番号・年号が本文と文献リストで食い違っています</strong>（1,10-フェナントロリンによる鉄の吸光光度法は ISO 6332 系列）。原文の表記をそのまま両方示します。</blockquote>
+<p>選んだ方法に従った吸光光度法による被検物測定の手順は、いくつかの段階からなる。</p>
+<ul><li>測定用の試料前処理、</li><li>吸収の測定、</li><li>検量線の作成、</li><li>結果の評価。</li></ul>
+<p>これらの手順を Fig. 3 に示す。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig3-measurement-procedure.png" alt="図3. 吸光光度法による鉄濃度測定の手順（原文 Fig. 3）。左の破線枠が「測定用試料前処理の手順」で、試料前処理→試験試料容器への充填→試験試料の調製→試料容器への充填→試料の化学的調製→調製試料の放置（発色）と進み、分光光度計での試料吸収測定に至る。右系列は「参照物質の調製→検量線用標準溶液の調製→検量線溶液の吸収を分光光度計で測定」で、両者が合流して「結果（Result）」となる。" loading="lazy"><figcaption>図3. 吸光光度法による鉄濃度測定の手順（原文 Fig. 3）。左の破線枠が「測定用試料前処理の手順」で、試料前処理→試験試料容器への充填→試験試料の調製→試料容器への充填→試料の化学的調製→調製試料の放置（発色）と進み、分光光度計での試料吸収測定に至る。右系列は「参照物質の調製→検量線用標準溶液の調製→検量線溶液の吸収を分光光度計で測定」で、両者が合流して「結果（Result）」となる。</figcaption></figure>
+<p>測定の信頼性という問いを解くには、結果に影響しうるすべての因子を評価することが非常に重要である。このため、水中鉄濃度の測定について選んだ両方法の詳細な分析を行い、Fig. 4 に示した。異なる測定段階における化学的・物理的変換のありうる因子が、法Aと法Bについてそれぞれ Fig. 4 の右側と左側に示されている。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig4-methods-a-b.png" alt="図4. 法Aと法Bによる鉄濃度測定の手順（原文 Fig. 4）。中央の共通フロー（試料前処理→試験試料容器への充填→試験試料の調製→試料容器への充填→試料の化学的調製→調製試料の放置→分光光度計での試料吸収測定）に対し、左が法A・右が法Bの具体条件。法A: 試料酸性化／50 mLフラスコ／煮沸／50 mLフラスコ／塩化ヒドロキシルアミン1 mL＋酢酸緩衝液2 mL＋1・10-フェナントロリン2 mL／15分放置／吸収層20 mm・波長510 nm。法B: 試料酸性化／50 mLフラスコ／40分煮沸／50 mLフラスコ／塩化アンモニウム1 mL＋スルホサリチル酸1 mL＋アンモニア1 mL／5分放置／吸収層20 mm・波長400 nm。" loading="lazy"><figcaption>図4. 法Aと法Bによる鉄濃度測定の手順（原文 Fig. 4）。中央の共通フロー（試料前処理→試験試料容器への充填→試験試料の調製→試料容器への充填→試料の化学的調製→調製試料の放置→分光光度計での試料吸収測定）に対し、左が法A・右が法Bの具体条件。法A: 試料酸性化／50 mLフラスコ／煮沸／50 mLフラスコ／塩化ヒドロキシルアミン1 mL＋酢酸緩衝液2 mL＋1・10-フェナントロリン2 mL／15分放置／吸収層20 mm・波長510 nm。法B: 試料酸性化／50 mLフラスコ／40分煮沸／50 mLフラスコ／塩化アンモニウム1 mL＋スルホサリチル酸1 mL＋アンモニア1 mL／5分放置／吸収層20 mm・波長400 nm。</figcaption></figure>
+<blockquote>補足（原文本文と図の左右の食い違い）: 本文は「法Aと法Bをそれぞれ右側と左側に示す」と書いていますが、<strong>実際の Fig. 4 は左が Method A、右が Method B</strong> と印字されています。上のキャプションは図の実際の表記（左=法A、右=法B）に従いました。</blockquote>
+<p>測定手順の分析から、被検物濃度についての式(1)の表現では<strong>不十分</strong>であることが示された。測定手順のすべての段階の影響を評価するには、水試料中の鉄量を計算する数学モデルを<strong>新たな補正係数で補う</strong>必要がある。</p>
+<p>$$c = c_0 \cdot d \cdot f_r \cdot f_T \cdot f_{pH} \cdot f_t \cdot f_{\varphi} \cdot f_b \cdot f_V \tag{4}$$</p>
+<p>ここで</p>
+<ul><li>c: 試験試料中の鉄濃度（mg/L）</li><li>c₀: 検量線から計算された試料中の鉄含量（mg/L）</li><li>d: 希釈係数</li><li>f_r: 化学試薬の含量に関係する補正係数</li><li>f_T: 温度の補正係数</li><li>f_pH: 溶液pHに関係する補正係数</li><li>f_t: 調製溶液の放置時間に関係する補正係数</li><li>f_φ: 溶液中の不純物に関係する補正係数</li><li>f_b: 吸収層の厚さに関係する補正係数</li><li>f_V: 容器の容積に関係する補正係数</li></ul>
+<blockquote>補足（式(4)がこの論文の核心）: 通常の分析法バリデーションでは、濃度は「検量線から出た値 c₀」で終わりです。本論文は<strong>そこに8個の補正係数を掛ける形にモデルを書き換え、各係数に不確かさを割り当てられるようにした</strong>点が新しい。式の形は掛け算なので、後の誤差伝播では各項の<strong>相対</strong>標準不確かさを二乗和平方根でまとめられます。</blockquote>
+<p>この数学モデルに従って測定する場合の不確かさ源と、それらが測定結果に与える影響を Fig. 5 に示す。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig5-factors-diagram.png" alt="図5. 結果に影響する因子の図（原文 Fig. 5）。最終量 c(Fe) に至る幹に対し、上側の枝が検量線から出る濃度 c₀ への寄与（参照物質の容量 V(et) の温度・校正・繰返し性、鉄の秤量 m_Fe の繰返し性・丸め・ドリフト、標準液濃度 cᵢ(st)、標準液吸光度 Aᵢ(st) の繰返し性・丸め・ドリフト、参照物質濃度 c(et) と純度 Purity、標準液容量 Vᵢ(st) の繰返し性・校正・温度、検量線＝分光光度計の校正不確かさと回帰式係数）を、下側の枝が8つの補正係数 d・f_T・f_φ・f_pH・f_r・f_t・f_b・f_Vi を、右下の枝が容器の温度・校正・繰返し性を表す。" loading="lazy"><figcaption>図5. 結果に影響する因子の図（原文 Fig. 5）。最終量 c(Fe) に至る幹に対し、上側の枝が検量線から出る濃度 c₀ への寄与（参照物質の容量 V(et) の温度・校正・繰返し性、鉄の秤量 m_Fe の繰返し性・丸め・ドリフト、標準液濃度 cᵢ(st)、標準液吸光度 Aᵢ(st) の繰返し性・丸め・ドリフト、参照物質濃度 c(et) と純度 Purity、標準液容量 Vᵢ(st) の繰返し性・校正・温度、検量線＝分光光度計の校正不確かさと回帰式係数）を、下側の枝が8つの補正係数 d・f_T・f_φ・f_pH・f_r・f_t・f_b・f_Vi を、右下の枝が容器の温度・校正・繰返し性を表す。</figcaption></figure>
+<p>分析条件の変動を評価するために、<strong>比較測定サイクル</strong>を実施した。両方法について、試験試料の温度、調製試料の放置時間、化学試薬の含量、吸収層の厚さ、調製溶液のpH値を変えて、あるいは試料に不純物として追加物質を加えて分析を行った。実験に用いた測定手順のマトリックスを Table 3 に示す。</p>
+<p>Table 3 のパラメータについて、<strong>大文字は当該パラメータの正常値</strong>を示し、<strong>小文字は正常値より低いか高い値</strong>を示す。</p>
+<ul><li><strong>C/c</strong>: 試験溶液の温度</li><li><strong>D/d</strong>: 調製試料の放置時間</li><li><strong>E/e</strong>: 化学試薬の量</li><li><strong>F/f</strong>: 吸収層の厚さ</li><li><strong>G/g</strong>: 試験溶液のpH値</li><li><strong>H/h</strong>: 試験試料中の不純物</li></ul>
+<p><strong>Table 3. 鉄濃度測定手順の実験マトリックス</strong></p>
+<table>
+<thead><tr><th>パラメータ</th><th>J</th><th>K</th><th>L</th><th>M</th><th>N</th><th>O</th></tr></thead>
+<tbody>
+<tr><td>C/c（温度）</td><td>c</td><td>C</td><td>C</td><td>C</td><td>C</td><td>C</td></tr>
+<tr><td>D/d（放置時間）</td><td>D</td><td>d</td><td>D</td><td>D</td><td>D</td><td>D</td></tr>
+<tr><td>E/e（試薬量）</td><td>E</td><td>E</td><td>e</td><td>E</td><td>E</td><td>E</td></tr>
+<tr><td>F/f（吸収層厚）</td><td>F</td><td>F</td><td>F</td><td>f</td><td>F</td><td>F</td></tr>
+<tr><td>G/g（pH）</td><td>G</td><td>G</td><td>G</td><td>G</td><td>g</td><td>G</td></tr>
+<tr><td>H/h（不純物）</td><td>H</td><td>H</td><td>H</td><td>H</td><td>H</td><td>h</td></tr>
+</tbody></table>
+<blockquote>補足（Table 3 の設計）: 各列（J〜O）で<strong>小文字が1つだけ</strong>＝「1因子だけを正常値から外し、他は正常値に保つ」設計です（一度に1因子ずつ変える one-factor-at-a-time）。J列は温度のみ、K列は放置時間のみ、L列は試薬量のみ、M列は吸収層厚のみ、N列はpHのみ、O列は不純物のみを振っています。</blockquote>
+<p>鉄濃度測定手順のありうる変種についての<strong>実験条件の限界値</strong>を Table 4 に示す。</p>
+<p><strong>Table 4. 実験条件の限界値</strong></p>
+<table>
+<thead><tr><th>測定条件</th><th>方法</th><th>下限</th><th>正常条件</th><th>上限</th></tr></thead>
+<tbody>
+<tr><td>温度（°C）</td><td>A</td><td>10</td><td>20</td><td>30</td></tr>
+<tr><td>温度（°C）</td><td>B</td><td>10</td><td>20</td><td>30</td></tr>
+<tr><td>調製試料の放置時間（min）</td><td>A</td><td>5</td><td>15</td><td>20</td></tr>
+<tr><td>調製試料の放置時間（min）</td><td>B</td><td>3</td><td>5</td><td>10</td></tr>
+<tr><td>化学試薬の量（mL）</td><td>A</td><td>1</td><td>2</td><td>4</td></tr>
+<tr><td>化学試薬の量（mL）</td><td>B</td><td>0.5</td><td>1</td><td>2.5</td></tr>
+<tr><td>吸収層（mm）</td><td>A</td><td>5</td><td>20</td><td>30</td></tr>
+<tr><td>吸収層（mm）</td><td>B</td><td>5</td><td>20</td><td>30</td></tr>
+<tr><td>pH</td><td>A</td><td>1</td><td>4.5</td><td>9</td></tr>
+<tr><td>pH</td><td>B</td><td>4</td><td>≧9</td><td>10</td></tr>
+<tr><td>不純物 Fe:Zn / Fe:Cu / Fe:Co</td><td>AおよびB</td><td>—</td><td>—</td><td>1:10</td></tr>
+</tbody></table>
+<p>実施した実験研究により、次のことが示された。</p>
+<ul><li><strong>温度</strong>の偏りは、<strong>両方法とも低濃度域（0.5 mg/L まで）の結果に最も大きな影響</strong>を与えた。ただし温度の偏りは 0.5 mg/L を超える濃度域でも有意であり、<strong>特定の点では公称値の 20% に達しうる</strong>。実験結果の計算から、<strong>両方法とも、試験温度 20 ± 3 °C において 1 mg/L までの濃度域で拡張不確かさを計算する際には、温度に伴う不確かさ成分を含める必要がある</strong>と結論できる。</li><li><strong>化学試薬量</strong>の正常値からの偏りは両方法の結果にとって重要であり、<strong>とくに 1 mg/L を超える濃度で結果の偏りが公称値の 40% に達する</strong>。より小さな濃度域では偏りは公称値の 10% までに達する。測定結果の分析から、<strong>化学試薬に伴う成分の影響は試験被検物の濃度によって異なる</strong>ことが示された。</li><li><strong>吸収層の厚さ</strong>の許容偏差は（−0.05 〜 +0.05）であり、この影響は両方法で有意ではない。<strong>より大きな吸収層の偏差は全濃度域で測定結果に影響を与える。</strong>とくに大きな結果の偏りは低濃度域で見られる。</li><li><strong>試料pH</strong> の正常値からの偏りは、<strong>両方法の測定結果に全濃度域で影響する</strong>。pH値が高くなっても低くなっても、結果の偏りはより強くなる。</li><li>規定条件からの偏りは、<strong>法Bを用い、かつ調製試料の放置時間が（−1; +2）分に保たれていれば測定結果に影響しない</strong>。調製試料の放置時間の偏りは、<strong>法Aでは 1 mg/L から 2 mg/L の濃度域で、放置時間が方法の規定より短い場合に結果へ有意な影響</strong>を与える。</li><li>溶液に<strong>不純物</strong>が含まれる場合、それらは測定結果の正確さと信頼性を低下させる。実験は、<strong>試験物質の濃度が増加すると不純物の影響が減少する</strong>ことを示した。汚染された試料や組成不明の試料で鉄濃度を測定する場合には、<strong>相対合成標準不確かさの計算に試料汚染の成分を含める必要がある</strong>。</li></ul>
+<h3>4.2 合成不確かさと不確かさ成分の評価</h3>
+<p>水試料中の鉄含量測定の不確かさは、入力量 c₀, f_r, f_T, f_pH, f_t, f_φ, f_b, f_V の標準不確かさをすべて合成することで計算される。不確かさの合成には<strong>誤差伝播則</strong>を用いた[<a href="#ref-2" class="cite">2</a>,<a href="#ref-3" class="cite">3</a>]。</p>
+<p>測定結果と入力パラメータの関係は次のモデルで表される。</p>
+<p>$$c = f(x_1, x_2, \ldots , x_i , \ldots , x_N) \tag{5}$$</p>
+<p>ここで x₁, …, xᵢ, …, xₙ は入力パラメータ（c₀, f_r, f_T, f_pH, f_t, f_φ, f_b, f_V）を表す。</p>
+<p><strong>検量線に由来する不確かさ成分 u(C_cal)</strong> は、回帰式のパラメータ・測定装置の特性・検量線標準溶液の濃度に依存する3つの構成要素からなる。検量線の不確かさ u(C_cal) は次式で計算される。</p>
+<p>$$u(C_{cal}) = \sqrt{u(C_{cal},\mathrm{reg})^{2} + u(C_{cal},\mathrm{inst})^{2} + u(C_{cal},\mathrm{st})^{2}} \tag{6}$$</p>
+<p>ここで u(C_cal, reg) は検量線の回帰式の標準不確かさ、u(C_cal, inst) は測定装置の特性の標準不確かさ、u(C_cal, st) は標準溶液濃度の不確かさである。</p>
+<p>検量線の回帰式の標準不確かさ u(C_cal, reg) は最小二乗法により次式で計算される。</p>
+<p>$$u(C_{cal},\mathrm{reg}) = \frac{s}{B_1}\sqrt{\frac{1}{p} + \frac{1}{n} + \frac{(c_0 - \bar{c})^{2}}{S}} \tag{7}$$</p>
+<p>$$s = \frac{\sum_{j=1}^{n}\left[A_j - (B_0 + B_1 \cdot c_j)\right]^{2}}{n-2} \tag{8}$$</p>
+<p>$$S = \sum_{j=1}^{n} (c_j - \bar{c})^{2} \tag{9}$$</p>
+<p>ここで B₁ は検量線の傾き、p は c₀ を決定するための測定回数、n は検量のための測定回数、c₀ は決定された鉄濃度、c̄ は異なる検量標準の平均値、i は検量標準の番号の指標、j は検量線を得るための測定の番号の指標、s は残差標準偏差である。</p>
+<blockquote>補足（式(8)の表記について）: 原文は式(8)を<strong>平方根なしの分数のまま</strong>印刷しています（分子が残差平方和、分母が n−2）。ただし本文は s を「残差標準偏差（residual standard deviation）」と定義しており、標準偏差であれば通例この式全体に平方根がかかります（平方根なしでは残差<strong>分散</strong>）。<strong>原文の印字どおりに転記</strong>しました。実装時は s の定義（標準偏差か分散か）を確認してください。</blockquote>
+<p>測定装置の特性についての標準不確かさは次式である。</p>
+<p>$$u(C_{cal},\mathrm{inst}) = \frac{\Delta_{instr}}{3} \tag{10}$$</p>
+<p>ここで Δ_instr は分光光度計の正確さ（accuracy）である。</p>
+<blockquote>補足（式(10)の分母について）: 原文は分母を <strong>3</strong> と印刷しています（√3 ではありません）。GUMで矩形（一様）分布を仮定して半幅を標準不確かさへ換算する場合の通例は √3 なので、<strong>原文の印字どおり 3 と示した</strong>うえで注意を促しておきます。なお同じ論文内でも、参照物質の純度（後述）と容量器具の温度項（式14）では √3 が使われています。</blockquote>
+<p>参照溶液の濃度と標準溶液の容量が、標準溶液濃度の不確かさ u(C_cal, st) に影響する。</p>
+<p>参照溶液濃度の不確かさは、参照物質の純度の不確かさ u(P)、参照物質の秤量不確かさ u(m)、参照溶液の全量フラスコの不確かさ u(V_fl, ref) として表される。参照溶液濃度の不確かさ u(c_ref) は次式で計算される。</p>
+<p>$$u(c_{ref}) = \sqrt{u(m)^{2} + u(P)^{2} + u(V_{fl},\mathrm{ref})^{2}} \tag{11}$$</p>
+<p><strong>秤量の不確かさ u(m)</strong> は、繰返し性の不確かさ u(m, rep)、分銅（秤）の校正不確かさ u(m, cal)、デジタル表示の丸めによる不確かさ u(m, roun) として表される。秤量の不確かさの式は次のとおりである。</p>
+<p>$$u(m) = \sqrt{u(m,\mathrm{rep})^{2} + u(m,\mathrm{roun})^{2} + u(m,\mathrm{cal})^{2}} \tag{12}$$</p>
+<p><strong>試薬の純度に伴う不確かさ</strong>は、製造業者の仕様から計算される。鉄の純度は成績書に与えられており、その値を <strong>√3 で除して</strong>標準不確かさを得る（矩形分布を仮定）。</p>
+<p><strong>全量フラスコの不確かさ</strong>は、標線までフラスコを満たすことの不確かさ u(V_fl, fill)、フラスコ容量の校正不確かさ u(V_fl, cal)、温度差に起因する容量の不確かさとして表される。フラスコ容量の不確かさは次式である。</p>
+<p>$$u(V_{fl}) = \sqrt{u(V_{fl},\mathrm{cal})^{2} + u(V_{fl},\mathrm{fill})^{2} + u(V_{fl},\mathrm{temp})^{2}} \tag{13}$$</p>
+<p>$$u(V_{fl},\mathrm{temp}) = \frac{V_{fl} \cdot \Delta t \cdot \gamma}{\sqrt{3}} \tag{14}$$</p>
+<p>ここで V_fl はフラスコの容量、Δt はフラスコの校正に用いられた温度と実験室で用いる媒体の温度との差、γ は水の熱膨張係数である。</p>
+<p><strong>ピペットの容量の不確かさ</strong>は、ピペットが送り出す容量の繰返し性、ピペットの校正不確かさ u(V_p, cal)、フラスコの校正に用いられた温度と実験室で用いる媒体の温度との差に起因する容量の不確かさ u(V_p, temp) として表される。ピペットの不確かさは次式である。</p>
+<p>$$u(V_p) = \sqrt{u(V_p,\mathrm{cal})^{2} + u(V_p,\mathrm{rep})^{2} + u(V_p,\mathrm{temp})^{2}} \tag{15}$$</p>
+<p>実験に従って評価された不確かさの成分は次のとおりである。</p>
+<ul><li>化学試薬の量を評価する成分</li><li>試験溶液の温度の成分</li><li>試験溶液のpHの成分</li><li>調製溶液の放置時間に伴う成分</li><li>試験溶液中の不純物の成分</li><li>吸収層の厚さの成分</li></ul>
+<p>上記成分の標準不確かさ u(fᵢ) は、各不確かさ成分の<strong>実験曲線</strong>から、分析のありうる実条件を考慮して計算される。</p>
+<p>$$u(f_i) = \frac{a_{i+} - a_{i-}}{\sqrt{12}} \tag{16}$$</p>
+<p>ここで a_{i+} と a_{i−} は、選んだ範囲における各成分の最低値と最高値である。</p>
+<blockquote>補足（式(16)について）: 原文の記号説明は「a_{i+} と a_{i−} は各成分の最低値（the lowest）と最高値（the highest）」と、添字の＋／−と最低／最高の対応が逆に読める書き方になっています（原文どおり訳出）。式の意味は「幅（上限−下限）を √12 で割る」＝矩形分布の全幅から標準不確かさを求める標準的な換算です（半幅なら √3、全幅なら √12）。</blockquote>
+<p>測定被検物の<strong>合成標準不確かさ</strong>は、測定濃度の全範囲について次式で計算される。</p>
+<p>$$u(c_{Fe})^{2} = \sum_{i=1}^{N} \left(\frac{\partial c_{Fe}}{\partial x_i}\right)^{2} \cdot u(x_i)^{2} \tag{17}$$</p>
+<p>ここで u(xᵢ) は入力パラメータの標準不確かさ、(∂c_Fe/∂xᵢ) は感度係数である。</p>
+<p>鉄測定の<strong>拡張不確かさ U(c)</strong> は、合成不確かさに<strong>包含係数 k = 2</strong> を掛けて得られる。<strong>信頼の水準は 95%</strong> である。</p>
+<h2>5. 結果の考察（Discussion of results）</h2>
+<p><strong>法A</strong>による測定を実施した場合、拡張不確かさに対する不確かさ成分の影響は、次の濃度域で異なることが判明した——<strong>0.2 mg/L まで</strong>、および <strong>0.2 mg/L から 2 mg/L</strong>。この影響を Fig. 6 に示す。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig6-influence-method-a.png" alt="図6. 法Aによる鉄濃度測定において、不確かさ成分が拡張不確かさに与える影響（原文 Fig. 6）。縦軸に不確かさ源（上から: 容器、吸収層、不純物、放置時間、pH、温度、試薬量、回帰式、測定装置、標準溶液濃度）、横軸に影響（%）。左パネルが低濃度域（0.2 mg/L・0.1 mg/L）、右パネルが高濃度域（2・1.5・1・0.5 mg/L）。低濃度域では「標準溶液濃度」が約50%（0.1 mg/L）と際立ち、高濃度域ではpHと不純物が優位で、いずれの濃度でも「測定装置」の寄与はごく小さい。" loading="lazy"><figcaption>図6. 法Aによる鉄濃度測定において、不確かさ成分が拡張不確かさに与える影響（原文 Fig. 6）。縦軸に不確かさ源（上から: 容器、吸収層、不純物、放置時間、pH、温度、試薬量、回帰式、測定装置、標準溶液濃度）、横軸に影響（%）。左パネルが低濃度域（0.2 mg/L・0.1 mg/L）、右パネルが高濃度域（2・1.5・1・0.5 mg/L）。低濃度域では「標準溶液濃度」が約50%（0.1 mg/L）と際立ち、高濃度域ではpHと不純物が優位で、いずれの濃度でも「測定装置」の寄与はごく小さい。</figcaption></figure>
+<p><strong>相対合成標準不確かさ</strong>は、<strong>0.2 mg/L までの低濃度域で最大 0.12</strong>、<strong>0.2 mg/L から 2 mg/L の濃度域で最大 0.07</strong> である。不確かさ成分の分析により、<strong>低濃度域では、温度・試験溶液のpH・試料マトリックス・検量線に依存する成分が測定不確かさに最も大きな影響</strong>を与えることが示された。</p>
+<p><strong>0.2 mg/L を超える濃度域</strong>では、<strong>化学試薬の量・試験溶液のpH・試料マトリックス・検量線の標準溶液濃度</strong>の成分が、被検物の測定不確かさに支配的な影響を与える。</p>
+<p><strong>法B</strong>を用いて規定の分析条件で測定を実施した場合、不確かさ成分の拡張不確かさへの影響は、<strong>0.5 mg/L までの濃度域</strong>と <strong>0.5 mg/L から 2 mg/L の濃度域</strong>で判明した。この影響を Fig. 7 に示す。</p>
+<figure><img src="assets/spectrophotometric-uncertainty-sample-preparation-iron/fig7-influence-method-b.png" alt="図7. 法Bによる鉄濃度測定において、不確かさ成分が拡張不確かさに与える影響（原文 Fig. 7）。縦軸の不確かさ源と横軸の影響（%）は Fig. 6 と同じ。左パネルが低濃度域（0.5・0.2・0.1 mg/L）、右パネルが高濃度域（2・1.5・1 mg/L）。低濃度域では「標準溶液濃度」が0.1 mg/Lで約65%に達し、不純物も約35%（0.5 mg/L）と大きい。高濃度域では不純物・pH・試薬量が優位で、「測定装置」「回帰式」の寄与は全域でごく小さい。" loading="lazy"><figcaption>図7. 法Bによる鉄濃度測定において、不確かさ成分が拡張不確かさに与える影響（原文 Fig. 7）。縦軸の不確かさ源と横軸の影響（%）は Fig. 6 と同じ。左パネルが低濃度域（0.5・0.2・0.1 mg/L）、右パネルが高濃度域（2・1.5・1 mg/L）。低濃度域では「標準溶液濃度」が0.1 mg/Lで約65%に達し、不純物も約35%（0.5 mg/L）と大きい。高濃度域では不純物・pH・試薬量が優位で、「測定装置」「回帰式」の寄与は全域でごく小さい。</figcaption></figure>
+<p><strong>相対合成標準不確かさ</strong>は、<strong>0.5 mg/L までの濃度域で最大 0.17</strong>、<strong>0.5 mg/L から 2 mg/L の濃度域で最大 0.07</strong> である。</p>
+<p>不確かさ成分についての研究結果は、<strong>溶液の放置時間の成分は、試験した全濃度域で測定結果に有意な影響を与えない</strong>ことを示している。支配的な成分は個々の濃度で異なる。<strong>低濃度域では検量線と試験試料のマトリックスの成分</strong>が測定不確かさに最も大きな影響を与える。<strong>0.5 mg/L を超える濃度域では、化学試薬の量・試験溶液のpH・試料マトリックス</strong>が最大の不確かさ成分である。</p>
+<p><strong>Fig. 6 と Fig. 7 のヒストグラムは、「測定装置の特性は被検物の測定不確かさを評価するのに十分ではない」という主張を裏づけている。</strong>したがって、<strong>試料前処理と測定過程の条件を確保することが非常に重要</strong>であり、被検物の測定モデルに<strong>補正係数を考慮に入れる必要がある</strong>。</p>
+<h2>6. 結論（Conclusion）</h2>
+<p>最終的な化学測定モデルを作るには、<strong>3つの主要な段階——物理的・化学的変換、測定、結果の推定——に現れるパラメータを評価することが必要</strong>である。</p>
+<p><strong>個々の試料前処理手順の影響と、その実施の質は、分光分析結果の不確かさに直接の影響を持つ。</strong>示唆の大半は新しいものではない。よく組織された専門的な検査室であれば、標準的な手順の中で既に考慮されているはずのことである。<strong>新しい挑戦は、それらを「化学的・機械的な試料前処理から生じる測定不確かさ」という文脈に置くことである。</strong>測定不確かさの知識は、あらゆる分析結果にとって付加価値である。</p>
+<p>吸光光度法による水中鉄含量の測定の分析を実施した結果、<strong>不確かさは基本的に化学分析の最初の諸段階（測定条件・標準溶液・検量線のパラメータ）によって形成される</strong>ことが示された。したがって、<strong>物質濃度の総測定不確かさは、用いた測定装置のパラメータに対しては有意に敏感ではない。</strong></p>
+<h2>参考文献</h2>
+<ol class="references"><li id="ref-1">R.V. Meyer, <em>Minimizing the Effect of Sample Preparation on Measurement Uncertainty</em>, Agilent Technologies, USA, 2002.</li><li id="ref-2">EURACHEM/CITAC Guide <em>Quantifying Uncertainty in Analytical Measurement</em>, second ed., 2000.</li><li id="ref-3">BIPM, IEC, IFCC, ISO, IUPAC, OIML, <em>Guide to the Expression of Uncertainty in Measurement</em>, International Organization for Standardization, Geneva, 1995.</li><li id="ref-4">A.D. Skoog, F.J. Holler, T.A. Nieman, <em>Principles of Instrumental Analysis</em>, fifth ed., 1998.（原文の同項に「10. D. Mazej, V. Stibilj, Accredit. Qual. Assur. 8 (2003) 117–123.」が混入している）</li><li id="ref-5">L. Sooväli, E.I. Roõõm, A. Kütt, I. Kaljurand, I. Leito, <em>Accredit. Qual. Assur.</em> 11 (2006) 246–255.</li><li id="ref-6">R. Ramachandran, Rashmi, <em>Analyst</em> 124 (1999) 1099–1103.</li><li id="ref-7">J. Jürgens, L. Paama, I. Leito, <em>Accredit. Qual. Assur.</em> 12 (2007) 593–601.</li><li id="ref-8">J. Traks, L. Sooväli, I. Leito, <em>Accredit. Qual. Assur.</em> 10 (2005) 197–207.</li><li id="ref-9">A. Drolc, M. Roš, <em>Acta Chim. Slov.</em> 49 (2002) 409–423.</li><li id="ref-10">EURACHEM/CITAC Guide: <em>Traceability in Chemical Measurement. A Guide to Achieving Comparable Results in Chemical Measurement</em>, 2003.</li><li id="ref-11">D. Mickevicius, <em>Chemines analizes metodai</em>, I, II dalys, Vilnius, 1998.</li><li id="ref-12">E. de Oliveira, Sample preparation for atomic spectroscopy: evolution and future trends, <em>J. Braz. Chem. Soc.</em> 14 (2) (2003).</li><li id="ref-13">I. Leito, <em>ISO GUM Uncertainty in Chemistry: Successes and Difficulties</em>, University of Tartu, Testing Centre, 2004.</li><li id="ref-14">S.K. Timothi, <em>The Uncertainty of Measurements Physical and Chemical Metrology: Impact and Analysis</em>, American Society for Quality, USA, 2002.</li><li id="ref-15">ISO 6322:1998 <em>Water quality – Determination of iron – Spectrometric method using 1,10-phenanthroline</em>.（本文では「ISO 6332:1988」と表記）</li></ol>
+<h2>訳者補足</h2>
+<ul><li><strong>この論文の主張を一文で言うと</strong>: 「装置カタログの正確さ（accuracy）を根拠に測定値の信頼性を語るのは間違いで、実際に効いているのは温度・pH・試薬量・不純物といった<strong>前処理条件</strong>と<strong>検量線の作り方</strong>である」。Fig. 6・Fig. 7 で &quot;measuring instrument&quot; の棒がほぼ見えないのが、この論文の視覚的な結論です。</li><li><strong>漢方・生薬QCへの読み替え</strong>: 本論文の8つの補正係数（希釈・試薬量・温度・pH・発色時間・不純物・吸収層厚・容器容積）は、そのままHPLCの多成分定量に置き換えられます。抽出溶媒比・超音波抽出時間・抽出温度・希釈操作・移動相pH・カラム温度・注入量……当サイトの各解説が「RSD 1.2%」などと報告する併行精度は、<strong>これら条件が一定に保たれた場合の再現性</strong>であって、条件が振れたときの不確かさは別に評価しなければなりません。とくに<strong>低濃度域（微量成分）で検量線標準液の濃度不確かさが支配的になる</strong>という本論文の知見は、指標成分の含量が0.1%を下回るような微量マーカーの定量で重要です。</li><li><strong>「1因子ずつ振る」設計の限界</strong>: Table 3 は各列で1因子だけを動かす one-factor-at-a-time 設計で、<strong>因子間の交互作用は検出できません</strong>。当サイトの[実験計画法(DoE)の総説](experimental-designs-hplc-method-development-validation-overview)や[満足度関数による多重応答最適化](doe-desirability-multiresponse-optimization)が扱う要因計画・応答曲面法なら交互作用も拾えます。2009年の論文という時代背景を踏まえて読むとよい部分です。</li><li><strong>原文の表記上の注意点3つ</strong>（いずれも本文中に補足として明記しました）: ①式(8)に平方根がなく、s を「残差標準偏差」と呼ぶ定義と整合しない。②式(10)の分母が √3 でなく 3（同じ論文内の式(14)や純度の項では √3 を使用）。③本文の「ISO 6332:1988」と参考文献[<a href="#ref-15" class="cite">15</a>]の「ISO 6322:1998」が食い違い、かつ Fig. 4 の左右が本文の説明と逆。<strong>いずれも原文の印字どおりに転記し、訳者が数値を直すことはしていません。</strong></li><li>図はいずれも原論文（Dobilienė et al., <em>Measurement</em> 43 (2010) 113–121, Elsevier）より、原本PDFから300 dpiで描画・切り出したもの。数値・条件・式はすべて原文どおりで、訳者による加工はありません。</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="danhong-injection-qnmr-ipca-control-chart.html">漢方注射剤の極性代謝物を定量プロファイリングし 独立主成分分析（IPCA）で多変量統計評価する——丹紅注射液をモデルとした1H NMR法</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="bioanalytical-validation-risk-uncertainty.html">バイオ分析法のバリデーション・リスク・不確かさ評価の進歩——判定基準の解釈を整理し「目的に合わない分析法を通してしまうリスク」を減らす</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="sfstp-part4-accuracy-profile-examples.html">定量分析法バリデーション戦略の調和——SFSTP提案 パートIV：適用例（正確性プロファイルの実践7例）</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="total-error-tolerance-interval-validation.html">定量分析法バリデーションのためのTotal Error（総合誤差）アプローチ——両側β含有許容区間で「不適切な分析法を通してしまうリスク」を制御する</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="spectrophotometric-uncertainty-sample-preparation-iron" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

@@ -1296,6 +1296,12 @@
       "title": "伝統医学の技と科学 パート1——今日のTCM：統合への論拠（Science 特別増刊 全8編＋序文3編）",
       "source_pdf": "TCM_Dec_19_issue_high_resolution.pdf",
       "date": "2026-08-07"
+    },
+    "local:Uncertainty_of_measurement_in_spectromet.pdf": {
+      "slug": "spectrophotometric-uncertainty-sample-preparation-iron",
+      "title": "分光分析における測定の不確かさ——試料前処理と「化学量→物理量」変換が結果を支配する（水中鉄の吸光光度法ケーススタディ）",
+      "source_pdf": "Uncertainty_of_measurement_in_spectromet.pdf",
+      "date": "2026-08-08"
     }
   }
 }
