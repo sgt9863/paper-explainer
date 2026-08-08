@@ -1296,6 +1296,25 @@
       "title": "伝統医学の技と科学 パート1——今日のTCM：統合への論拠（Science 特別増刊 全8編＋序文3編）",
       "source_pdf": "TCM_Dec_19_issue_high_resolution.pdf",
       "date": "2026-08-07"
+    },
+    "1nILfDAxY6DzfwliqT0M80NwKb3Hx8lUG": {
+      "slug": null,
+      "title": "US regulatory approaches to chemistry, manufacturing, and controls for botanical drug products（Agarwal, 学会抄録）",
+      "source_pdf": "US_regulatory_approaches_to_chemistry_ma.pdf",
+      "date": "2026-08-08",
+      "note": "学会抄録のみで本文が存在しない（J Transl Med 2012, 10(Suppl 2):A40）。ERozet_ATA_2009と同種のケース。全訳密度の解説ページは作成せず、再処理しないための記録のみ残す。"
+    },
+    "18Uq8QuOjJrx2QtjHyHbWfXjRqjPiqCZQ": {
+      "slug": "spectrometric-uncertainty-iron-case-study",
+      "title": "分光分析における測定不確かさ：ケーススタディ（水中鉄濃度の分光光度定量を題材に）",
+      "source_pdf": "Uncertainty_of_measurement_in_spectromet.pdf",
+      "date": "2026-08-08"
+    },
+    "1YOvrYLd3YDOs5PmKhyiYmOjbhELnjm9L": {
+      "slug": "kadis-1998-uncertainty-pursuit-of-correctness",
+      "title": "分析測定における不確かさの評価 — 「正しさ」を追求して",
+      "source_pdf": "Evaluating_uncertainty_in_analytical_mea.pdf",
+      "date": "2026-08-08"
     }
   }
 }
