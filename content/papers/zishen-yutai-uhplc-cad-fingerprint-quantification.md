@@ -31,6 +31,7 @@ Cao et al., J. Pharm. Biomed. Anal. 191 (2020) 113570 の全訳密度日本語�
 - 掲載誌・巻号・DOI: Journal of Pharmaceutical and Biomedical Analysis, 191 (2020) 113570. DOI: 10.1016/j.jpba.2020.113570
 - インパクトファクター: 3.1（J. Pharm. Biomed. Anal., JCR 2024 / Clarivate。Q2）
 - 受理経過: 2020年6月24日受領／8月10日改訂／8月12日受理／8月23日オンライン公開。© 2020 Elsevier B.V.
+- 助成: 広州市科学技術計画（Science and Technology Program of Guangzhou, China、課題番号201807010044）、中国博士後科学基金特別資助プロジェクト（China Postdoctoral Science Foundation Funded Project、課題番号2019M663455）。
 
 > 補足: 滋腎育胎丸（Zishen Yutai Pills, ZYP）は、Luo Yuankai教授が創方した中成薬（中国の承認済み伝統薬）で、子宮内膜の受容性を高め習慣性流産の予防・切迫流産・黄体機能不全・卵巣機能不全の治療に使われる。**菟絲子・人参・続断・杜仲・桑寄生・巴戟天・鹿茸・党参・白朮・阿膠・枸杞子・地黄・何首烏・艾葉・砂仁の15生薬**から成る大型複方。本論文の要点は、こうした「成分が多く・性質もバラバラな複方」を、①指紋（CAD）②成分同定（高分解能MS）③定量（MS/MS）の3手法で立体的に品質評価した点。本文にツムラ（Tsumura And Co.）からのダウンロード記録がある。
 
