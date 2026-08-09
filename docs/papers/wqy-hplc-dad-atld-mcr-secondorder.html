@@ -92,8 +92,26 @@
 <p>（r＝相関係数、AVG±SD＝平均添加回収率±標準偏差、RMSEP＝予測の相対二乗平均平方根誤差）</p>
 <p>ATLDでは回収率91.8–112.5%（SD&lt;9.7%）、r 0.9969–0.9993、RMSEP&lt;4.05。ATLD-MCRでは r 0.9973–0.9995、RMSEP&lt;3.04、回収率88.6–101.6%（SD&lt;10.3%）。両者は近い結果ですが、<strong>ATLD-MCRのRMSEPは小さく</strong>、いずれの回収率も許容範囲でした。</p>
 <h3>再現性（Table 2）と性能指標</h3>
-<p>同一バッチの実試料を同日3回・連続3日で測り、日内・日間精度（RSD%）を求めました。<strong>日間再現性はATLD-MCRがATLDより良好</strong>でした。とりわけ<strong>ベルベリン（BER）は、ATLDでの日間RSDが40.8%</strong>と大きく悪化——これは連続日測定で生じた深刻な保持時間シフトのためです（補足 Figure S1）。最初の4成分は急速溶出のため軽い時間ドリフトはATLDが妨害として除去できましたが、<strong>最後に溶出するBERのシフトは別アルゴリズム（ATLD-MCR）で解く必要</strong>がありました。ATLD-MCRではBERの日間RSDは0.9%まで改善しています。</p>
-<p>性能指標（Table 2）では、感度 SEN は ATLD で 1.04×10⁴〜1.24×10⁵、ATLD-MCR で 7.74×10³〜7.93×10⁴（mAU·mL/µg）、選択性 SEL は ATLD 0.20–0.56／ATLD-MCR 0.13–0.35。性能指標の数理的定義は既報[<a href="#ref-36" class="cite">36</a>]に詳しく、ここでは繰り返しません。SELが低めなのはピーク重なりと未知妨害の影響が大きいためです。検出限界 LOD は ATLD 0.07–11.67／ATLD-MCR 0.22–4.53（µg/mL）。ATLDのBERのLODは検量線最低濃度を下回っており（時間シフトの影響）、その点でもATLD-MCRの結果の方が妥当でした。</p>
+<p>同一バッチの実試料を同日3回・連続3日で測り、日内・日間精度（RSD%）を求めました。<strong>日間再現性はATLD-MCRがATLDより良好</strong>でした。とりわけ<strong>ベルベリン（BER）は、ATLDでの日間RSDが40.8%</strong>と大きく悪化——これは連続日測定で生じた深刻な保持時間シフトのためです（補足 Figure S1）。最初の4成分は急速溶出のため軽い時間ドリフトはATLDが妨害として除去できましたが、<strong>最後に溶出するBERのシフトは別アルゴリズム（ATLD-MCR）で解く必要</strong>がありました。ATLD-MCRではBERの日間RSDは0.9%まで改善しています。日内RSDは総じて日間RSDより小さい値でした。</p>
+<p>性能を評価する指標として、選択性(SEL)・感度(SEN)・検出限界(LOD)・定量限界(LOQ)を算出し、精度(RSD%)と併せてTable 2にまとめました。これらの数理的定義（$SEL_n$・$SEN_n$・$LOD_n$・$LOQ_n$の算出式。正規化行列 <strong>A</strong>・<strong>B</strong>、対象成分nの全応答信号$l_n$、未知試料中の予測濃度の標準偏差$\sigma_x$、ブランク試料でのレバレッジ$h_0$等を用いる）は既報[<a href="#ref-36" class="cite">36</a>]で詳しく論じられているため、ここでは繰り返しません。</p>
+<p><strong>Table 2. 温清飲実試料における5成分の性能指標と精度（ATLD／ATLD-MCR、n=3）</strong></p>
+<table>
+<thead><tr><th>指標</th><th>手法</th><th>HMF</th><th>ペオニフロリン</th><th>フェルラ酸</th><th>バイカリン</th><th>ベルベリン</th></tr></thead>
+<tbody>
+<tr><td>SEL（選択性）</td><td>ATLD</td><td>0.49</td><td>0.52</td><td>0.56</td><td>0.43</td><td>0.20</td></tr>
+<tr><td>SEL（選択性）</td><td>ATLD-MCR</td><td>0.15</td><td>0.23</td><td>0.35</td><td>0.13</td><td>0.19</td></tr>
+<tr><td>SEN（感度, mAU·mL/µg）</td><td>ATLD</td><td>8.46×10⁴</td><td>1.04×10⁴</td><td>1.24×10⁵</td><td>3.00×10⁴</td><td>2.46×10⁴</td></tr>
+<tr><td>SEN（感度, mAU·mL/µg）</td><td>ATLD-MCR</td><td>3.09×10⁴</td><td>7.74×10³</td><td>7.93×10⁴</td><td>9.11×10³</td><td>2.24×10⁴</td></tr>
+<tr><td>LOD（µg/mL）</td><td>ATLD</td><td>0.95</td><td>1.84</td><td>0.07</td><td>4.94</td><td>11.67</td></tr>
+<tr><td>LOD（µg/mL）</td><td>ATLD-MCR</td><td>0.22</td><td>1.12</td><td>0.17</td><td>4.53</td><td>0.84</td></tr>
+<tr><td>LOQ（µg/mL）</td><td>ATLD</td><td>2.85</td><td>5.59</td><td>0.22</td><td>14.98</td><td>35.37</td></tr>
+<tr><td>LOQ（µg/mL）</td><td>ATLD-MCR</td><td>0.65</td><td>3.40</td><td>0.51</td><td>13.72</td><td>2.54</td></tr>
+<tr><td>日内RSD%（n=3）</td><td>ATLD</td><td>9.65</td><td>3.24</td><td>0.67</td><td>2.12</td><td>5.22</td></tr>
+<tr><td>日内RSD%（n=3）</td><td>ATLD-MCR</td><td>3.04</td><td>1.12</td><td>1.33</td><td>1.83</td><td>0.36</td></tr>
+<tr><td>日間RSD%（n=3）</td><td>ATLD</td><td>12.47</td><td>2.72</td><td>4.47</td><td>3.16</td><td>40.82</td></tr>
+<tr><td>日間RSD%（n=3）</td><td>ATLD-MCR</td><td>2.90</td><td>1.64</td><td>2.65</td><td>2.14</td><td>0.92</td></tr>
+</tbody></table>
+<p>SELはATLDで0.20–0.56、ATLD-MCRで0.13–0.35といずれも低めの値でした。これはピーク重なりと未知妨害の影響が大きいためです。SENはATLDで1.04×10⁴〜1.24×10⁵、ATLD-MCRで7.74×10³〜7.93×10⁴（mAU·mL/µg）でした。LODはATLDで0.07–11.67、ATLD-MCRで0.22–4.53（µg/mL）で、<strong>ATLDのBERのLODは検量線最低濃度を下回っており</strong>（時間シフトの影響）、その点でもATLD-MCRの結果の方が妥当でした。</p>
 <h3>2手法の統計的比較</h3>
 <p>対応のある両側t検定では、HMF・PAE・FER・BAIの p 値は 0.358・0.258・0.063・0.332で<strong>有意差なし</strong>。一方 BER は p=0.001 で、保持時間シフトの影響により有意差が出ました。結論として——<strong>溶出時間が十分短く保持時間シフトが軽微なら ATLD を直接使え</strong>、良好な再現性が得られます。<strong>保持時間シフトが深刻なら ATLD-MCR</strong> がその影響をうまく処理し、HPLC-DADによる主要有効成分の正確な定量を助けます。実際、他の2社の市販温清飲品にはATLD-MCRを適用しています（補足 Table S6）。</p>
 <h2>結論</h2>
