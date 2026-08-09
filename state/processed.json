@@ -1308,6 +1308,12 @@
       "title": "不確かさ評価の「正しさ」を追う——EURACHEMガイドの計算例に潜む3つの誤り（分布の選び方・二重計上・効かない要因）",
       "source_pdf": "Evaluating_uncertainty_in_analytical_mea.pdf",
       "date": "2026-08-09"
+    },
+    "local:Evaluation_of_measurement_uncertainty_in.pdf": {
+      "slug": "kadis-thesis-uncertainty-analytical-chemistry",
+      "title": "分析化学における測定不確かさの評価——関連概念と誤解されている点（Kadis 博士論文, Tartu 2008）",
+      "source_pdf": "Evaluation_of_measurement_uncertainty_in.pdf",
+      "date": "2026-08-09"
     }
   }
 }
