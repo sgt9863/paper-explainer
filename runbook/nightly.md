@@ -124,6 +124,13 @@ python3 scripts/build_site.py
 - `make_infographic_ai.py` は OpenAI 画像API（既定 gpt-image-2・横長 1536x1024・webp）で、front matter の
   事実（タイトル・数値・要点）を正確に反映しつつ研究概要を1枚に描かせる。要 `OPENAI_API_KEY`＋
   api.openai.com への到達。応答は webp 圧縮で取得し途中切断に再試行する（環境変数で上書き可。スクリプト冒頭参照）。
+  - **失敗したら原因を切り分けてから諦めること**（2026-08-09 に実際に踏んだ2つ）:
+    1. `URLError ... CERTIFICATE_VERIFY_FAILED` → **Python の CA バンドル不在**（macOS の python3.14 等）。
+       `SSL_CERT_FILE=/etc/ssl/cert.pem` を付けて再実行すれば通る。**APIキーの問題ではない。**
+    2. `429 insufficient_quota / credit_balance_exhausted` → **OpenAI アカウントのクレジット切れ**。
+       コードでは解決できないのでユーザーに課金残高の追加を依頼し、④は「未達」として報告する。
+       切り分け: `curl -s -o /dev/null -w '%{http_code}' https://api.openai.com/v1/models -H "Authorization: Bearer $OPENAI_API_KEY"`
+       が **200 ならキーは有効**（＝クレジットの問題）、401 ならキーの問題。
 - **ヒーロー画像の優先順位**（`build_site.py`）: `ai-infographic.{webp,png,jpg}` → `slide.png` → HTMLダイジェストカード。
   いずれも生成に失敗しても `build_site.py` は動く（順にフォールバック）。
 - `docs/` 以下に一覧ページと各論文ページが再生成される（build_site 自体は依存ライブラリ不要）。
@@ -188,6 +195,20 @@ python3 scripts/quality_audit.py --json    # 機械可読（パースして自�
 | **③ 引用文献** | 「## 参考文献」等の見出しが無ければ不足 | 原文の参考文献リストを抽出して `## 参考文献` を **`## 訳者補足` の直前**に挿入。原文が `[N]` 番号式なら本文の `[N]` が自動でリンク化される（`build_site.py` の `_linkify_citations`）。**空行区切りの番号付きリストでも明示番号で採番される**（既知バグ修正済み） |
 | **④ ヒーロー画像** | `assets/<slug>/ai-infographic.{webp,png,jpg}` が無ければ不足 | `OPENAI_API_KEY=... python3 scripts/make_infographic_ai.py <slug>` で gpt-image 生成（ステップ4参照） |
 | ⚠ 壊れ画像リンク | 参照先の画像ファイルが実在しない | 拡張子違い等を修正、または画像を抽出して配置 |
+
+**③に関する落とし穴（実際に踏んだもの・2026-08-09）**
+
+- **引用番号は必ず半角 `[N]` で書く。** 全角の `［N］` は `_linkify_citations` の正規表現（`\[(\d+...)\]`）に一致せず、
+  **リンクが1つも生成されないまま気づきにくい**。原文が `[5, Appendix A]` のように番号＋補足なら
+  `[5]（Appendix A）` と**番号だけを角括弧に入れて分ける**。範囲のダッシュは `–`（en dash）か `-`。
+  U+2212（`−`）は正規表現の文字クラスに無いため一致しない。
+  検査: `grep -c 'class="cite"' docs/papers/<slug>.html` が0なら未リンク。
+- **図キャプションに半角 `[` `]` を入れない。** 画像の正規表現は `!\[([^\]]*)\]\(...\)` なので、
+  キャプション中の `]` でマッチが切れ、**その図だけ `<figure>` にならず生テキストとして出る**。
+  原文キャプションに文献番号があれば `（文献5）` のように書き換える。
+  検査: `grep -c '<figure' docs/papers/<slug>.html` が本文の図数と一致するか。
+- **本文中の相対リンクは `.html` を必ず付ける。** `[表示文字](slug)` のように拡張子が無いと
+  リンク化されず角括弧のまま表示される（`_inline` は絶対URLと `*.html` のみ変換）。
 
 ### 8.2 是正の進め方（要対応ページごと）
 

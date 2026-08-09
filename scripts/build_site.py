@@ -149,10 +149,15 @@ def _inline(text: str) -> str:
         r'<img src="\2" alt="\1" loading="lazy">',
         text,
     )
-    # リンク [text](url)
+    # リンク [text](url) … 外部URLは別タブ、同一サイト内の相対リンク（<slug>.html）は同タブ
     text = re.sub(
         r"\[([^\]]+)\]\((https?://[^\s)]+)\)",
         r'<a href="\2" target="_blank" rel="noopener">\1</a>',
+        text,
+    )
+    text = re.sub(
+        r"\[([^\]]+)\]\(([A-Za-z0-9._/-]+\.html(?:#[A-Za-z0-9._-]+)?)\)",
+        r'<a href="\2">\1</a>',
         text,
     )
     # 太字 **...**

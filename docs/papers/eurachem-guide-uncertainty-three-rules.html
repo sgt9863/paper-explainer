@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>不確かさ評価の「正しさ」を追う——EURACHEMガイドの計算例に潜む3つの誤り（分布の選び方・二重計上・効かない要因）</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="不確かさ評価の「正しさ」を追う——EURACHEMガイドの計算例に潜む3つの誤り（分布の選び方・二重計上・効かない要因）">
+<meta property="og:description" content="ロシア・メンデレーエフ計量研究所（VNIIM）の Rouvim Kadis が 第2回EURACHEM測定不確かさワークショップ（ベルリン 1997年9月）で発表した実務者レポートの全訳。不確かさ評価の最重要文書であるEURACHEMガイド『Quantifying Uncertainty in Analytical Measurement』(1995) の計算例そのものを検証し 「正しさを追う」3つの規則を提示する。①type B評価での分布関数の選択（公称値が既知なら矩形ではなく三角分布 除数は√3ではなく√6）②合成する成分は独立に取る（容量器具の許容差と充填繰返しの二重計上 多段階手順での「まとめ推定値」と「個別推定値」の混同）③その手順で実際に効く影響因子だけを数える（同一条件で測るGCに装置間変動を持ち込まない一方 秤量は一元配置分散分析で分解すると真の寄与が0.05 gと判明）。さらに 内部整合性だけが問われる比較試験では全体の不確かさではなく「条件付き不確かさ」で足りるという fitness-for-purpose の考え方を提起する。図3点（うち1点は表形式）・式12本・参考文献10件を原文どおり収載。">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="eurachem-guide-uncertainty-three-rules"><h1>不確かさ評価の「正しさ」を追う——EURACHEMガイドの計算例に潜む3つの誤り（分布の選び方・二重計上・効かない要因）</h1><div class="paper-meta"><span class="date">2026-08-09</span> <span class="tag">分析法・バリデーション</span> <span class="tag">QC・品質評価</span> <span class="tag">規制・ガイドライン</span> <span class="tag">統計・ケモメトリクス</span> &middot; <a href="https://doi.org/10.1007/s007690050233" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Evaluating_uncertainty_in_analytical_mea.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="eurachem-guide-uncertainty-three-rules" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="eurachem-guide-uncertainty-three-rules" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><section class="digest" aria-label="ダイジェスト"><div class="digest-head">ダイジェスト</div><p class="digest-tagline">不確かさの計算は「原理は単純だが正しくやるのは難しい」。EURACHEMガイド（1995）の計算例そのものを俎上に載せ 分布の選び方・成分の二重計上・実際には効かない要因の3点で過大評価が起きていると指摘した実務者レポート。矩形分布を機械的に使うな 器具の許容差と充填の繰返しを足すな 同一装置・同一分析者・短時間なら装置間変動を足すな という3つの規則を提示する</p><div class="digest-stats"><div class="stat"><span class="stat-value">Accred Qual Assur 3</span><span class="stat-label">誌</span></div><div class="stat"><span class="stat-value">1998年・ロシア</span><span class="stat-label">発表</span></div><div class="stat"><span class="stat-value">実務者レポート</span><span class="stat-label">種別</span></div><div class="stat"><span class="stat-value">3つ</span><span class="stat-label">規則</span></div><div class="stat"><span class="stat-value">EURACHEMガイド1995</span><span class="stat-label">対象</span></div><div class="stat"><span class="stat-value">矩形より約30%小</span><span class="stat-label">三角分布</span></div><div class="stat"><span class="stat-value">0.05 g</span><span class="stat-label">秤量の真値</span></div><div class="stat"><span class="stat-value">9件</span><span class="stat-label">被引用</span></div></div><ul class="digest-points"><li>規則1「分布は手持ちの情報すべてに基づいて選べ」——公称値（＝期待値）が分かっている容量器具の許容差に矩形分布（除数√3）を当てるのは誤りで 三角分布（除数√6）が正しい。矩形分布は「限界値しか分からない」場合（例: 純度が「p%以上」）に限る。この違いだけで標準不確かさは約30%変わる</li><li>規則2「不確かさ成分は互いに独立になるように取れ」——容量器具では「許容差」の中に「充填の繰返し性」が既に含まれており 両方を足すのは二重計上。多段階手順でも 抽出段階で実測した回収率補正 F3 は後続全段階の系統誤差を含む「まとめ値」なので そのまま個別値として掛け合わせてはいけない</li><li>規則3「その手順で実際に効く要因だけを考えよ」——試料と標準を同一装置・同一分析者・短時間で測るGC定量に 装置間・分析者間・時期間のばらつきを持ち込むのは無意味。逆に秤量では一元配置分散分析で分解すると 実際の寄与は0.05 g で ガイドの0.031 gより大きかった</li></ul></section><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Accred Qual Assur 原著 Practitioner&#x27;s Report・全5ページ）の節構成に沿って訳出。図1〜3は原本PDFをpoppler（pdftoppm）で300 dpi描画・図領域を切り出し、各図をReadで目視確認のうえ全訳キャプションで埋め込んだ。図3は原文では表形式の図であるため、画像に加えてパイプ表としても全項目を転記した。式は原文の記述順に(1)〜(12)の番号を訳者が付し、記号定義とともに全て収載（原文には式番号は付されていない）。「&gt; 補足:」は訳者注。 --&gt;</p>
+<h2>書誌情報</h2>
+<ul><li>原題: Evaluating uncertainty in analytical measurements: the pursuit of correctness</li><li>著者: <strong>Rouvim L. Kadis</strong></li><li>D. I. メンデレーエフ計量研究所（D. I. Mendeleyev Institute for Metrology, VNIIM）, 19 Moskovsky pr., 198005 サンクトペテルブルク, ロシア</li><li>Fax: +7-812 327-97-76 / e-mail: hal6onti.vniim.spb.su（原文表記のまま）</li><li>掲載: <em>Accreditation and Quality Assurance</em> <strong>3</strong> (1998) 237–241, © Springer-Verlag 1998</li><li>種別: <strong>PRACTITIONER&#x27;S REPORT</strong>（品質保証・バリデーション・認定に関する経験の報告とノート）</li><li>DOI: https://doi.org/10.1007/s007690050233</li><li>受領 1998-01-29 / 受理 1998-02-10</li><li>発表: <strong>第2回EURACHEM 化学分析における測定不確かさワークショップ</strong>（ベルリン, 1997年9月29–30日）</li><li>キーワード: 化学分析（Chemical analysis）／測定不確かさ（Measurement uncertainty）／推定プロセス（Estimation process）</li><li>被引用数: <strong>9件</strong>（OpenAlex, 2026年8月時点）</li></ul>
+<blockquote>補足: 本論文は原著研究ではなく、EURACHEMガイド（1995年 第1版）の<strong>計算例に対する技術的批評</strong>です。したがって実験データや検量線は登場せず、代わりに「ガイドのこの数値はこう計算すべきだった」という議論が中心になります。本サイトの全訳密度基準のうち、実験条件・検量線の項目は原文に存在しないため該当しません。原文で言及される数値・除数・自由度・検定結果はすべて漏らさず収載しています。</blockquote>
+<h2>要旨</h2>
+<p>不確かさの評価は、原理は単純であるにもかかわらず、とりわけ化学分析においては定型作業ではなく、正しく行うには細心の注意を要する。このことは特に、この主題に関する最も重要な文書である EURACHEMガイド『Quantifying Uncertainty in Analytical Measurement』(1995) を検討することで見て取れる。著者の見るところ、この検討は、ガイドの計算例（worked examples）に示された不確かさ推定プロセスのいくつかの主要な細部において<strong>正しさが不足している</strong>ことを明らかにする。そこで著者は、不確かさを推定するための「正しさを追う（in pursuit of correctness）」規則をいくつか定式化した。規則とそれぞれのコメントは次の項目に関わる。</p>
+<ol><li>type B評価における<strong>適切な分布関数の選択</strong></li><li>合成不確かさへの<strong>個別寄与を分けて考える必要性</strong></li><li>不確かさ推定プロセスで<strong>実際の影響因子を考慮すること</strong></li></ol>
+<p>さらに、結果の内部整合性のみが要求される比較試験に関連して、<strong>条件付き（conditional）不確かさ対全体（overall）不確かさ</strong>の推定という問題にも触れる。</p>
+<h2>序論</h2>
+<p>「測定不確かさ」という用語は、物理測定の特性を表すものとして一般に用いられてきたが、化学分析の要求に適合させるのはこれまでいささか困難であった。しかし、この（物質量の・分析的な・化学的な）測定の分野へこの概念を導入することは、きわめて自然なことである。この主題については多くの論文[<a href="#ref-1" class="cite">1</a>–<a href="#ref-4" class="cite">4</a>]が発表され、分析データ品質の文脈における不確かさの使用と評価という重要な問題を論じてきた。しかし本論文が焦点を当てるのは、<strong>不確かさの推定値そのものの品質</strong>を決めるものである。</p>
+<p>分析実務における測定不確かさ概念の実装の現状は、鍵となる論点については合意に達しているが、なお細部のいくつかは確定したとは見なせず、さらなる修正を要する——そんな段階にある特異な建築物の設計になぞらえられよう。EURACHEMガイド[<a href="#ref-5" class="cite">5</a>]に示された不確かさ評価の手順についても同じことが言える。この文書は、分析化学の問題に適用される概念の発展にとって間違いなく最も重要な貢献である。しかしながら、計算例[<a href="#ref-5" class="cite">5</a>]（Appendix A）に示された不確かさ推定プロセスにおける実務上の指示のいくつかは、完全に正しいとは思われず、コメントを要する。これは、主題に対するいくらか単純化されすぎた、あるいは誤った見方に由来しており、非現実的な推定をもたらしうる。</p>
+<p>不確かさの推定値における「誤差」がどれほどのものであろうと、これらの問題は<strong>ガイドの教育的意義</strong>に鑑みて根本的に重要である。したがって、これらの「些事（trifles）」は、不確かさの推定値ができるだけ正しくなるように、いくつかの（十分に自明な）規則を定式化するために注意を向けるに値する。以下に、ガイドのそれぞれの計算例を参照しながら、この「正しさを追う」規則を示す。</p>
+<blockquote>補足: 著者が批判するのは1995年の第1版です。EURACHEM/CITAC Guide CG4 はその後改訂され、現行は第3版（QUAM:2012.P1, 2012年）です。本稿の指摘のうちどれが後版で採り入れられたかは、実際に使う版のAppendixを直接確認してください。<strong>引用や実務で参照する際は必ず現行版を見ること。</strong></blockquote>
+<h2>不確かさ推定における「正しさを追う」3つの規則</h2>
+<h3>規則1: type B評価における適切な分布関数の選択は、当該量について入手できるすべての情報に基づいてなされねばならない</h3>
+<p>標準不確かさの推定はしばしば、当該量 $X$ の値が存在すると期待される限界 $a_-$ および $a_+$ から行われる。範囲 $a_-$ から $a_+$ は通常 $X$ の最良推定値に関して対称であり、半値幅は次で与えられる。</p>
+<p>$$a = (a_+ - a_-)/2 \tag{1}$$</p>
+<p>これは測定データ評価の実務ではかなり頻度の高い作業である。というのも、（客観的知識または個人の判断に基づく）最大限界の割り当てが、しばしばできることのすべてだからである。上の $a$ の値を、仮定される確率分布の種類に応じた適切な<strong>変換係数（conversion factor）</strong>で単純に割ればよい。ここで肝要なのは、<strong>入手できる関連情報のすべてを使う</strong>ことである。何が分かっているかについての典型的な3つの場合は次のとおりである（図1参照）。</p>
+<ol><li>信頼水準が明記された（統計的に）推定された信頼区間</li><li>期待値と、その周りに割り当てられた最大限界</li><li>割り当てられた最大限界のみ</li></ol>
+<p>別段の記述がない限り、<strong>ケース1</strong>では区間の計算に正規（ガウス）分布が用いられたと仮定し、その分布の適切な分位点を用いて標準不確かさを回復するのがきわめて自然である（分位点は信頼水準95%に対して2.0とする）。</p>
+<p>$$u(X) = a/2{,}0 \quad (P = 0{,}95) \tag{2}$$</p>
+<p>対照的に、<strong>ケース3</strong>では当該量についての情報がきわめて乏しく、できることは対称一様（矩形）分布でモデル化することだけである。このとき当該量の期待値は範囲の中点であり、変換係数は $\sqrt{3}$ に等しい。</p>
+<p>$$u(X) = a/\sqrt{3} \tag{3}$$</p>
+<p><strong>ケース2</strong>は、期待値のような追加情報により、当該量の値がこの値の近くにあるほうが限界の近くにあるよりも起こりやすいと見なせる場合に生じる。この状況はケース3のそれとは異なる。まさにこのゆえに、ISO『測定における不確かさの表現のガイド（GUM）』[<a href="#ref-6" class="cite">6</a>]の項目 <strong>F.2.3.3</strong> は、そうした場合には正規分布と矩形分布という2つの極端の<strong>妥協</strong>として三角分布を採用することを推奨している。この場合の変換係数は $\sqrt{6}$ に等しく、</p>
+<p>$$u(X) = a/\sqrt{6} \tag{4}$$</p>
+<p>得られる標準不確かさは矩形分布モデルを用いて得られるものより<strong>約30%小さい</strong>ことが分かる。ケース2からケース3へ移るにつれて不確かさが増大するのは、ある意味で、限界の間における当該量のとりうる値の分布についての<strong>我々の無知に対する「支払い」</strong>であると言える。</p>
+<blockquote>補足: 「約30%小さい」は検算できます。$\sqrt{6}/\sqrt{3} = \sqrt{2} \approx 1{,}414$ なので、三角分布での標準不確かさは矩形分布での $1/\sqrt{2} \approx 0{,}707$ 倍、すなわち約29%小さくなります。原文の記述と一致します。</blockquote>
+<figure><img src="assets/eurachem-guide-uncertainty-three-rules/fig1-type-b-distributions.png" alt="図1 量 $X$ が (1) 推定された信頼区間、(2) 期待値とその周りに割り当てられた最大限界、(3) 割り当てられた最大限界のみ、として与えられた場合のtype B標準不確かさ評価。上段は各ケースに対応する分布形（正規・三角・矩形）と変換係数、下段「Examples」は分析実務での具体例。左: 秤量結果の信頼区間 $(m \pm 0{,}1)$ mg（$P = 0{,}95$）に対し $u(m) = 0{,}1/2{,}0 = 0{,}05$ mg（ガイドの例1・ステップ1）。中: 容量器具の公称値と規格限界——250 ml標準フラスコで $V = (250{,}00 \pm 0{,}15)$ ml に対し $u(V) = 0{,}15/\sqrt{6} = 0{,}061$ ml。ガイドの例1・ステップ2は $u(V) = 0{,}15/\sqrt{3} = 0{,}087$ ml を与える。右: 材料の純度が「p (%) 以上」と表される場合——$100 - p = 2a$ より $u(p) = (100-p)/(2\sqrt{3})$" loading="lazy"><figcaption>図1 量 $X$ が (1) 推定された信頼区間、(2) 期待値とその周りに割り当てられた最大限界、(3) 割り当てられた最大限界のみ、として与えられた場合のtype B標準不確かさ評価。上段は各ケースに対応する分布形（正規・三角・矩形）と変換係数、下段「Examples」は分析実務での具体例。左: 秤量結果の信頼区間 $(m \pm 0{,}1)$ mg（$P = 0{,}95$）に対し $u(m) = 0{,}1/2{,}0 = 0{,}05$ mg（ガイドの例1・ステップ1）。中: 容量器具の公称値と規格限界——250 ml標準フラスコで $V = (250{,}00 \pm 0{,}15)$ ml に対し $u(V) = 0{,}15/\sqrt{6} = 0{,}061$ ml。ガイドの例1・ステップ2は $u(V) = 0{,}15/\sqrt{3} = 0{,}087$ ml を与える。右: 材料の純度が「p (%) 以上」と表される場合——$100 - p = 2a$ より $u(p) = (100-p)/(2\sqrt{3})$</figcaption></figure>
+<p>EURACHEMガイドの計算例における<strong>矩形分布使用のすべての事例は、実際にはケース3ではなくケース2に該当する</strong>ことを認識すべきである。とりわけそうであるのが、容量器具（volumetric glassware）に関わる不確かさの評価である——公称容量とは、単に期待値にほかならない。したがって、変換係数 $\sqrt{3}$ を適用して計算されたすべての標準不確かさは<strong>過大評価</strong>であると考えられる。</p>
+<p>ベイズ流の「等無知の原理（principle of equal ignorance）」に基づくこのアプローチは、計量学における不確かさ推定の一般的な実務ではあるものの、測定誤差を最大限界の形で規定するすべての場合において正しいと見なすことはできない。単純かつ普遍的ではあるが、この図式は常識と衝突する。<strong>矩形分布は、当該量のとりうる値についての限界以外に何も分かっていない場合にのみ仮定されるべきである。</strong> たとえば、材料の純度に関連する不確かさが「p (%) 以上」と表される場合は、ここでは純度の期待値（あるいは公称値）が未知であるから、そうしたケースの一つでありうる。モデル分布の適用のその他の例は図1に示す。</p>
+<blockquote>補足: この規則は、漢方・生薬QCの日常作業に直接効きます。標準品の秤量に使うメスフラスコの許容差（JIS/ISOのクラスA・B）は「公称容量に対する許容差」なので、期待値が既知であるケース2です。<strong>除数 $\sqrt{3}$ ではなく $\sqrt{6}$ を使えば、容量器具由来の標準不確かさは約30%小さくなります。</strong> 一方、標準品の純度が「≥98.0%」としか表示されていない場合は、期待値が不明なのでケース3、すなわち矩形分布 $u(p) = (100-p)/(2\sqrt{3})$ が正しい扱いです。同じ「限界値だけ与えられた量」でも、公称値の有無で扱いが変わる点がポイントです。</blockquote>
+<h3>規則2: 不確かさ成分は、可能な限り合成不確かさに独立な寄与をなすものとして考える必要がある</h3>
+<p>しかし計算例には、合成される成分の一つが実際には別の成分を包含してしまい、その結果「<strong>二重計上（double counting）</strong>」となって不確かさ推定に冗長性が生じている状況がある。容量測定における不確かさの評価がその特徴的な例である。</p>
+<p>さて、ここでは3つの寄与が本質的であると考えられている。</p>
+<ul><li><strong>A.</strong> 所与の型のガラス器具に対する規格限界（specification limits）</li><li><strong>B.</strong> 標線まで充填することの繰返し性（repeatability of filling the article to the mark）</li><li><strong>C.</strong> 周囲温度の影響（ambient temperature effects）</li></ul>
+<p>規定された容量許容差をもつ標準的な容量器具はどこでも使われている。しかし重要なのは、<strong>許容差、すなわち容量誤差の限界は、標準条件下での各使用について、所与の型の容量器具1個に対する単一かつ十分な誤差特性である</strong>ということである（ISO規格[<a href="#ref-7" class="cite">7</a>, <a href="#ref-8" class="cite">8</a>]参照）。言い換えれば、実際の容量と公称容量の差は、器具（たとえば全量フラスコ）を標線まで充填する各回において、その限界内に収まるべきものである。したがって、<strong>許容差を用いる場合、充填のばらつきを別個の不確かさ成分として考えるのは余計である。</strong></p>
+<p>もちろん、水での充填の繰返し性に関するデータが入手可能ならば、それを考慮に入れてもよい。しかしその場合、繰返し性実験の結果として、実際にはその器具を<strong>個別校正した</strong>ことになり、公称容量を推定された容量値で置き換えることができ、規定許容差を適用する必要は直ちに消滅する。<strong>そうした場合、不確かさへの寄与は2つだけ残り、最終的な分析では実質的に低減された不確かさの値が得られる。</strong> 考察したケースを模式的に描いたのが図2である。</p>
+<p>［ここで注意すべきは、測定される液体の性質（粘度、表面張力など）と、たとえば非水溶液の場合における水の性質との間に相当な差がある場合、不確かさへの追加的寄与が生じうることである。これらの効果は、適切な校正用液体を用いた個別校正によって考慮される。］</p>
+<figure><img src="assets/eurachem-guide-uncertainty-three-rules/fig2-volumetric-uncertainty.png" alt="図2 容量測定における不確かさの評価。合成不確かさ $u_c$ への寄与——(1) ガラス器具の規格限界、(2) 標線まで充填する際のばらつき、(3) 周囲温度の影響。左「General case（文献5）」はガイドの一般的な扱いで、3成分を独立に足し合わせるため $u_c$ が最も大きくなる。中「Standard volumetric glassware」は規定許容差を用いる標準的な容量器具の場合で、成分(2)は成分(1)にすでに包含されている（円2が円1の内側に描かれている）ため実質2成分となり $u_c$ が小さくなる。右「Volumetric glassware individually calibrated」は個別校正した容量器具の場合で、成分(1)が消えて成分(2)と(3)のみとなり $u_c$ は最も小さい" loading="lazy"><figcaption>図2 容量測定における不確かさの評価。合成不確かさ $u_c$ への寄与——(1) ガラス器具の規格限界、(2) 標線まで充填する際のばらつき、(3) 周囲温度の影響。左「General case（文献5）」はガイドの一般的な扱いで、3成分を独立に足し合わせるため $u_c$ が最も大きくなる。中「Standard volumetric glassware」は規定許容差を用いる標準的な容量器具の場合で、成分(2)は成分(1)にすでに包含されている（円2が円1の内側に描かれている）ため実質2成分となり $u_c$ が小さくなる。右「Volumetric glassware individually calibrated」は個別校正した容量器具の場合で、成分(1)が消えて成分(2)と(3)のみとなり $u_c$ は最も小さい</figcaption></figure>
+<p>別の状況、「<strong>パン中の有機リン系農薬の定量</strong>」（ガイドの例3）を検討しよう。これは均質化に始まりGC定量に終わる、いくつかの逐次的ステップからなる多段階手順である。手順全体に対する<strong>合成補正 $F_c$</strong> と<strong>合成不確かさ $u_c$</strong> は、段階 $i$ にそれぞれ関係する補正係数の個別値 $F_i$ と不確かさ $u_i$ から次のように導かれる。</p>
+<p>$$F_c = \prod_{i=1}^{n} F_i \tag{5}$$</p>
+<p>$$u_c = \sqrt{\sum_{i=1}^{n} u_i^2} \tag{6}$$</p>
+<p>（これらの値は回収率実験から分かることがある。$R_i$ を回収率とすれば $F_j = 1/R_i$ となる。）プロトコルはこれらすべての計算を示している。しかし、これが正しいのは<strong>上式の成分が強く独立である場合に限られる</strong>。実際にはそうではない。たとえば、抽出段階で実験的に得られた補正係数 $F_3$ は、後続するすべての段階の系統的効果を含んでおり、不確かさ $u_3$ が後続するすべての不確かさを取り込んでいるのと同様である。同じことが、洗浄済み抽出液の濃縮段階の値 $F_5$ と $u_5$ にも当てはまる。つまり我々は実際には、個別推定値（individual estimates）ではなく<strong>まとめ推定値（summary estimates）</strong>を手にしているのである。</p>
+<blockquote>補足: 原文は「$R_i$ を回収率とすれば $F_j = 1/R_i$」と印刷されていますが、添字が $j$ と $i$ で食い違っています。図3の表では明確に $F_i = 1/R_i$（および $\tilde{F}_i = 1/\tilde{R}_i$）と書かれているので、本文側の $j$ は誤植と考えられます。原文どおりに転記したうえで注記します。</blockquote>
+<p>そうした段階について個別補正係数 $F_i$ を得るには、まとめ値 $\tilde{F}_i$ を、後続するすべての段階に関係する補正係数で割らねばならない（例3で入手できるデータはこれを可能にする）。</p>
+<p>$$F_i = \frac{\tilde{F}_i}{\prod_{j=i+1}^{n} F_j} \tag{7}$$</p>
+<p>不確かさについても同様に、まとめ推定値から個別推定値を得る。</p>
+<p>$$u_i = \sqrt{\tilde{u}_i^2 - \sum_{j=i+1}^{n} u_j^2} \tag{8}$$</p>
+<p>そのうえで手順全体の合成係数を計算できる。</p>
+<p><strong>個別補正係数を求めずに</strong>、合成補正の計算でこれを行うことも可能である。因子の積において<strong>最初のまとめ係数 $\tilde{F}_i$（例3における $F_3$ のような）で止めれば十分</strong>である。これにより多段階手順は、合成値に独立な寄与をなす要素へと分解される。</p>
+<p>$$u_c = \sqrt{\tilde{u}_i^2 + \sum_{j=1}^{i-1} u_j^2} \tag{9}$$</p>
+<p>$$F_c = \tilde{F}_i \prod_{j=1}^{i-1} F_j \tag{10}$$</p>
+<p>図3は2通りの計算法を示している。<strong>まとめ推定値から個別推定値を得る</strong>のは縦向きの矢印で、<strong>合成補正を積として得る</strong>のは横向きの矢印で描かれている。（合成不確かさの計算における適切な手順も表に含めてある。）表の右端の列は、例3に関連する具体的な計算を示す。</p>
+<figure><img src="assets/eurachem-guide-uncertainty-three-rules/fig3-multistage-correction.png" alt="図3 多段階手順における合成補正係数と合成不確かさの評価。上部は多段階手順の模式図（段階1→2→…→i→…→n→結果）。段階 $i$ に関係する成分（丸で囲んだもの）は、個別推定値 $F_i$, $u_i$（表の上半分）またはまとめ推定値 $\tilde{F}_i$, $\tilde{u}_i$（表の下半分）のいずれかである。縦向きの矢印はまとめ推定値から個別推定値への変換を、横向きの破線矢印は手順全体への合成を表す" loading="lazy"><figcaption>図3 多段階手順における合成補正係数と合成不確かさの評価。上部は多段階手順の模式図（段階1→2→…→i→…→n→結果）。段階 $i$ に関係する成分（丸で囲んだもの）は、個別推定値 $F_i$, $u_i$（表の上半分）またはまとめ推定値 $\tilde{F}_i$, $\tilde{u}_i$（表の下半分）のいずれかである。縦向きの矢印はまとめ推定値から個別推定値への変換を、横向きの破線矢印は手順全体への合成を表す</figcaption></figure>
+<p><strong>図3の表（全項目の転記）</strong></p>
+<table>
+<thead><tr><th>区分</th><th>パラメータ</th><th>段階 $i$</th><th>手順全体</th><th>例3[<a href="#ref-5" class="cite">5</a>]</th></tr></thead>
+<tbody>
+<tr><td>個別推定値</td><td>回収率</td><td>$R_i$</td><td>—</td><td>$F_C = 1 \times 1{,}00 \times 1{,}04 \times 1 \times 1{,}10 \times 0{,}96 \times 1 \times 1 \times 1 = 1{,}10$</td></tr>
+<tr><td>個別推定値</td><td>補正係数</td><td>$F_i = \dfrac{1}{R_i}$</td><td>合成補正 $F_C = \prod_{i=1}^{n} F_i$</td><td>$F_3 = 1{,}04$ ／ $F_5 = 1{,}10$</td></tr>
+<tr><td>個別推定値</td><td>不確かさ</td><td>$u_i$</td><td>合成不確かさ $u_C = \sqrt{\sum_{i=1}^{n} u_i^2}$</td><td>—</td></tr>
+<tr><td>（変換）</td><td>まとめ→個別</td><td>$F_i = \dfrac{\tilde{F}_i}{\prod_{j=i+1}^{n} F_j}$ ／ $u_i = \sqrt{\tilde{u}_i^2 - \sum_{j=i+1}^{n} u_j^2}$</td><td>—</td><td>$\dfrac{1{,}10}{1{,}06}$ ／ $\dfrac{1{,}06}{0{,}96}$</td></tr>
+<tr><td>まとめ推定値</td><td>不確かさ</td><td>$\tilde{u}_i$</td><td>合成不確かさ $u_C = \sqrt{\tilde{u}_i^2 + \sum_{j=1}^{i-1} u_j^2}$</td><td>—</td></tr>
+<tr><td>まとめ推定値</td><td>補正係数</td><td>$\tilde{F}_i = \dfrac{1}{\tilde{R}_i}$</td><td>合成補正 $F_C = \tilde{F}_i \prod_{j=1}^{i-1} F_j$</td><td>$\tilde{F}_3 = 1{,}10$ ／ $\tilde{F}_5 = 1{,}06$</td></tr>
+<tr><td>まとめ推定値</td><td>回収率</td><td>$\tilde{R}_i$</td><td>—</td><td>$F_C = 1 \times 1{,}00 \times 1{,}10 = 1{,}10$</td></tr>
+</tbody></table>
+<blockquote>補足: 右端の列が言いたいのは「<strong>どちらの道を通っても $F_C = 1{,}10$ で一致する</strong>」ということです。上段は9段階すべての個別補正係数を掛け合わせる道（$1 \times 1{,}00 \times 1{,}04 \times 1 \times 1{,}10 \times 0{,}96 \times 1 \times 1 \times 1 = 1{,}10$）、下段は最初のまとめ係数 $\tilde{F}_3 = 1{,}10$ で止めてそれ以前だけを掛ける道（$1 \times 1{,}00 \times 1{,}10 = 1{,}10$）です。個別値 $F_3 = 1{,}04$ は $\tilde{F}_3 = 1{,}10$ を後続の $1{,}06$ で割って得られ、$F_5 = 1{,}10$ は $\tilde{F}_5 = 1{,}06$ を後続の $0{,}96$ で割って得られます。<strong>下段のほうが計算が短く、しかも成分の独立性が保証される</strong>——これが著者の推奨です。</blockquote>
+<h3>規則3: 不確かさを推定する際は、その手順の文脈で測定結果に実際に影響する影響因子のみを考慮すべきである</h3>
+<p>再びガイドの例3を参照しよう。GC測定に関連する不確かさの評価は、ここでは（[<a href="#ref-5" class="cite">5</a>]のTable A3.6）<strong>異なる装置・異なる分析者・（および異なる時期）にまたがるGC変動の広範な研究</strong>に基づいている。しかし、因子の変動範囲が広いにもかかわらず、そうして得られた不確かさ推定値の有用性は疑わしい。実際、GC定量の条件は通常、<strong>試料と標準の両方の応答が、同一装置で、同一分析者により、短期間のうちに記録される</strong>ようなものである。このゆえに、これらの影響因子は分析結果において大きく相殺される。したがって、これらの因子を（GC定量段階と校正段階について別々にばらつきを推定して）勘定に入れるのは、その手順の文脈では<strong>誤解に基づく</strong>ものと思われる。</p>
+<p>同じ例における<strong>秤量</strong>に関連する不確かさの評価にも触れておくべきだろう。この場合に考慮された不確かさへの2つの寄与は、「繰返し性実験」の標準偏差（<strong>0.03 g</strong>）と、長期データの平均値の標準偏差（<strong>0.008 g</strong>）である。この2成分が合成されて <strong>0.031 g</strong> の値が与えられている。</p>
+<p>まず何より、求める不確かさの推定において、<strong>長期変動の尺度として平均値の標準偏差を用いるのは正しくない</strong>ことに注意されたい。もし入手できるデータが例のように11か月ではなく、たとえば22か月をカバーしていたとすれば、この考え方に従えば長期寄与は $\sqrt{2}$ 倍だけ小さくなってしまう。入手できる月次チェックウェイトのデータ（[<a href="#ref-5" class="cite">5</a>]のTable A3.1(3)）は標準偏差 <strong>0.026 g</strong> を与えるのであり、<strong>この値だけが単一秤量の長期変動を特徴づける</strong>。</p>
+<p>同時に、[<a href="#ref-5" class="cite">5</a>]のTable A3.1(1) は、<strong>繰返し秤量／繰返し読み取り（repeat weighings / replicate readings）</strong>の結果を示しており、これは秤量の精度を詳細に検討するのに非常に有用でありうる。標準的な図式[<a href="#ref-9" class="cite">9</a>]に従って<strong>一元配置分散分析</strong>を適用すれば、秤量の全変動の個別成分を推定できる。上述の 0.03 g という標準偏差は、明らかに分離を行わずデータを1つの大標本として扱って得られたものだからである。</p>
+<p>こうして、<strong>繰返し読み取りの標準偏差は 0.020 g</strong>（自由度 $f = 36$）と求められる。$F$ 検定によって、<strong>長期標準偏差 0.026 g</strong>（$f = 10$）がこの推定値と、<strong>10%水準においてさえ有意に異ならない</strong>ことを容易に証明できる。これは、ここでは<strong>時期がまったく因子ではない</strong>こと、したがって長期変動に由来する寄与を考慮する必要がないことを意味する。</p>
+<p>さらに解析を進めると、単一秤量に対する<strong>繰返し秤量の標準偏差は概ね 0.05 g</strong>（$f = 11$）となる。この推定値は、繰返し読み取りの標準偏差 0.020 g より（$F$ 検定で）<strong>有意に大きい</strong>。したがって、この試験室の秤量には何らかの<strong>追加的な変動源</strong>が存在する。その源が何であれ、<strong>求める合成標準不確かさへの秤量の実際の寄与として採るべきは 0.05 g という値である。</strong></p>
+<blockquote>補足: 規則3の結論は一見すると逆説的です。規則1・2は「ガイドは不確かさを過大評価している」でしたが、規則3の秤量の例だけは逆に「ガイドの 0.031 g は<strong>過小評価</strong>で、正しくは 0.05 g」となります。著者の主張は「小さくしろ」でも「大きくしろ」でもなく、<strong>その手順で実際に効いている変動源を分散分析でちゃんと分離しろ</strong>、という一点です。  数値の関係を整理すると——繰返し読み取り（同一試料を置いたまま表示を読み直す）0.020 g &lt; 繰返し秤量（載せ直して量る）0.05 g、そして長期（月次チェックウェイト）0.026 g は 0.020 g と有意差なし。つまり<strong>月をまたぐ時間は効いておらず、効いているのは「載せ直し」の操作</strong>だということです。ガイドが使った 0.03 g は載せ直しと読み直しを混ぜた1つの標本の標準偏差であり、成分に分けていなかった、というのが批判の中身です。</blockquote>
+<h2>もう一つの所見</h2>
+<p>不確かさの評価に関する最も重要な点の一つは、<strong>関連するすべての誤差源が考慮に入れられ、対応する寄与が合成されるべきである</strong>ということである。こうして得られた推定値は、当該分析手順に内在する<strong>全体の（overall）不確かさ</strong>を定量する。分析結果の意味のある報告と解釈は別として、全体の不確かさは、たとえば標準物質を用いる品質管理の目的に適用可能である。</p>
+<p>しかしながら分析実務には、全体の不確かさの推定値が扱うのに不適切であり、したがって不要と思われる場合が多くある。たとえば、<strong>BS 6478 に従ってセラミック製品2個をカドミウム溶出に関して比較</strong>しなければならないとしよう（ガイドの例2参照）。実験は、同じ浸出液を満たした被検容器を、同じ期間、同じ温度で（いずれも妥当な精度で測定される）静置するように実施され、得られた2つの抽出液は<strong>同じブラケッティング参照溶液を用いてAAS（原子吸光）で分析される</strong>。問題は、2つの試料が当該試験に関して互いに異なるか否か——統計学の言葉で言えば、<strong>2つの測定結果の差が、それぞれのばらつきを背景として有意であるか</strong>である。</p>
+<p>ベイズ理論に基づく適合性判定基準も、通常の統計学に基づくものも、2つの測定結果をそれらの不確かさを考慮して比較する問題に適用できる[<a href="#ref-10" class="cite">10</a>]。<strong>しかし、例2で計算されたような全体の不確かさは、この比較実験に関して問題を正しく解くには不適切である。それらはこの目的には「過大」なのである。</strong> 明らかに、とりわけ実際の実験条件が公称条件から偏ることによって生じる誤差成分の多くは、比較される2つの結果について同一であり、対応する寄与は<strong>差の不確かさバジェットにおいて消える</strong>。</p>
+<p>したがって、<strong>絶対的な真度ではなく、結果の内部整合性のみが問題である場合には、そうした比較試験の範囲内で変動しない影響量は無視してよく、全体の不確かさは特定の条件に適した値へと縮減される。これを「条件付き不確かさ（conditional uncertainty）」と呼ぶ。</strong></p>
+<p>このようなアプローチの可能性は、不確かさを扱う「トップダウン」法に関してではあるが、[<a href="#ref-1" class="cite">1</a>]において指摘されていた。「条件付き不確かさ」あるいはそれに類する用語は、分析データ処理において通用するようになりそうである。というのも、分析試験室の日常業務のかなりの部分は、そうした結果の内部整合性のみを要求するからである。<strong>これは、さもなくば大きすぎるかもしれない不確かさを小さくするための「抜け穴」と見なされてはならない。</strong> むしろ、<strong>fitness-for-purpose（目的適合性）の原則を適用する一例</strong>と考えるべきである。目的適合性という概念は、測定プロセス自体が生み出すデータに対してと同様に、不確かさの推定値に対しても明らかに十分適用可能である。</p>
+<p>結びとして、ISOガイド[<a href="#ref-6" class="cite">6</a>]の項目 3.4.6 の——EURACHEM文書の項目 5.4.16 にそっくり引き継がれた——きわめて的確で深い一節を引くのが適切であろう。その趣旨は次のとおりである。<strong>不確かさの評価は定型作業でも純粋に数学的な作業でもなく、測定量の性質と測定方法・手順についての詳細な知識に依存する。したがって、測定結果に付される不確かさの品質と有用性は、究極的にはその値の割り当てに関与する人々の理解・批判的分析・誠実さに依存する。</strong></p>
+<blockquote>補足: 最後の一節は原文では英語の直接引用ですが、本サイトの方針に従い日本語で趣旨を訳出しました。原文の正確な文言はGUM 3.4.6／EURACHEMガイド 5.4.16 を直接参照してください。</blockquote>
+<h2>参考文献</h2>
+<ol class="references"><li id="ref-1">Analytical Methods Committee, RSC (1995) <em>Analyst</em> <strong>120</strong>: 2303–2308</li><li id="ref-2">Cortez L (1995) <em>Microchim Acta</em> <strong>119</strong>: 323–328</li><li id="ref-3">Williams A (1996) <em>Accred Qual Assur</em> <strong>1</strong>: 14–17</li><li id="ref-4">Wegscheider W, Zeiler H-J, Heindl R, Mosser J (1997) <em>Annal Chim</em> <strong>87</strong>: 273–283</li><li id="ref-5">EURACHEM (1995) <em>Quantifying Uncertainty in Analytical Measurement</em></li><li id="ref-6">ISO, IEC, OIML, BIPM (1992) <em>Guide to the Expression of Uncertainty in Measurement</em>, 1st edn. ISO（IFCC・IUPAC・IUPAPを含む7団体名義の1993年版も入手可能）</li><li id="ref-7">ISO 384 (1979) <em>Laboratory glassware. Principles of design and construction of volumetric glassware</em></li><li id="ref-8">ISO 4787 (1984) <em>Laboratory glassware. Volumetric glassware. Methods for use and testing of capacity</em></li><li id="ref-9">Doerffel K (1990) <em>Statistik in der analytischen Chemie</em>, 5th edn, chap 8. Deutscher Verlag für Grundstoffindustrie, Leipzig</li><li id="ref-10">Weise K, Wöger W (1994) <em>Meas Sci Technol</em> <strong>5</strong>: 879–882</li></ol>
+<h2>訳者補足</h2>
+<h3>この論文の位置づけ</h3>
+<p>1998年の5ページの実務者レポートで、被引用は9件と多くありません。しかし内容は<strong>測定不確かさを実務で計算するときに誰もが踏む3つの落とし穴</strong>を、当時の教科書的存在だったEURACHEMガイドの計算例を名指しで検証する形で挙げたもので、四半世紀たった今もそのまま通用します。GUM／EURACHEMガイドを「手順書として読む」のではなく「批判的に読む」ための一次資料として価値があります。</p>
+<p>なお本稿の批判対象はEURACHEMガイド<strong>第1版（1995）</strong>です。同ガイドはその後改訂され、現行は EURACHEM/CITAC Guide CG4 <strong>第3版（QUAM:2012.P1, 2012年）</strong>です。本稿の指摘のうち何が後版に反映されたかは、実際に使う版のAppendixを直接確認してください。</p>
+<h3>原文で気づいた表記上の不整合</h3>
+<table>
+<thead><tr><th>箇所</th><th>原文の印刷</th><th>備考</th></tr></thead>
+<tbody>
+<tr><td>規則2・本文</td><td>「$R_i$ が回収率なら $F_j = 1/R_i$」</td><td>添字が $j$ と $i$ で食い違う。図3の表では $F_i = 1/R_i$ と明記されており、本文側が誤植と思われる</td></tr>
+<tr><td>図3 キャプション</td><td>「まとめ推定値 $\tilde{F}_i$, $u_i$」</td><td>表中では $\tilde{u}_i$（チルダ付き）。キャプションでチルダが落ちている</td></tr>
+<tr><td>数値表記</td><td>$0{,}95$ / $1{,}10$ など</td><td>小数点にコンマを用いる大陸式表記。本文は原文どおり転記した</td></tr>
+</tbody></table>
+<p>いずれも原文の印刷どおりに転記し、訳者が黙って「直す」ことはしていません。</p>
+<h3>漢方・生薬QCの実務への読み替え</h3>
+<p><strong>① 容量器具の除数（規則1）</strong> — 標準品調製で 25 mL や 100 mL のメスフラスコを使うとき、その許容差（クラスAなら 100 mL で ±0.10 mL など）に矩形分布の $\sqrt{3}$ を当てているなら、それは過大評価です。公称容量という期待値が分かっている以上、三角分布の $\sqrt{6}$ が本来の扱いで、<strong>寄与は約30%小さくなります</strong>。一方、標準品の純度表示が「≥98.0%」のように下限しかない場合は期待値が不明なので、矩形分布 $u(p) = (100-p)/(2\sqrt{3})$ が正しい——同じ「限界値だけ」でも扱いが割れる点が要注意です。</p>
+<p><strong>② 多段階前処理の回収率補正（規則2）</strong> — 生薬の一斉分析は「粉砕→抽出→ろ過→濃縮→定容→HPLC」という多段階手順で、まさにガイドの例3と同じ構造です。ここで<strong>添加回収試験の回収率は、その段階だけでなく後続の全段階を通した「まとめ値」</strong>です。段階ごとの回収率を掛け合わせて全体の補正係数にすると、後続段階を何重にも数えることになります。式(10)が示すとおり、<strong>最初のまとめ係数で止めて、それ以前の段階だけを掛ける</strong>のが正しい扱いです。</p>
+<p><strong>③ 同一条件で相殺される要因（規則3）</strong> — 検量線用標準溶液と試料溶液を<strong>同一のHPLC・同一カラム・同日・同一分析者</strong>で測るなら、装置間差・カラムロット差・日間差は分子分母で相殺されます。バリデーション報告書の中間精度（装置・分析者・日を振ったデータ）から得た RSD をそのまま日常のバッチ判定の不確かさに持ち込むと、<strong>その手順では効いていない変動を数えている</strong>ことになります。逆に、天秤の寄与を「繰返し読み取り」で代表させると過小評価になります——載せ直しを含む繰返し秤量で評価すべき、というのが本稿の 0.020 g 対 0.05 g の教訓です。</p>
+<p><strong>④ 条件付き不確かさ（もう一つの所見）</strong> — 「このロットは規格に適合するか」という<strong>絶対判定</strong>には全体の不確かさが要りますが、「参照ロットと今回のロットで指標成分パターンが違うか」という<strong>相対比較</strong>には条件付き不確かさで足ります。同一日・同一装置・同一標準溶液で並べて測る限り、共通する誤差源は差の不確かさから消えるからです。指紋分析の類似度評価やバッチ間一貫性の評価は、まさにこの内部整合性だけが問われる場面です。ただし著者が釘を刺すとおり、これは<strong>不確かさを小さく見せるための抜け穴ではなく、目的適合性の原則の適用</strong>として説明できなければなりません。</p>
+<h3>関連する当サイトの解説</h3>
+<ul><li><a href="spectrophotometric-uncertainty-sample-preparation-iron.html">分光分析における測定の不確かさ——試料前処理と「化学量→物理量」変換が結果を支配する</a> — 本稿が「規則」として述べた話を、水中鉄の吸光光度定量で実験的に裏づけた論文。補正係数を掛ける測定モデル（本稿の式(5)と同じ構造）を実データで組み上げている</li></ul><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="kadis-thesis-uncertainty-analytical-chemistry.html">分析化学における測定不確かさの評価——関連概念と誤解されている点（Kadis 博士論文, Tartu 2008）</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="bioanalytical-validation-risk-uncertainty.html">バイオ分析法のバリデーション・リスク・不確かさ評価の進歩——判定基準の解釈を整理し「目的に合わない分析法を通してしまうリスク」を減らす</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="sfstp-part4-accuracy-profile-examples.html">定量分析法バリデーション戦略の調和——SFSTP提案 パートIV：適用例（正確性プロファイルの実践7例）</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li><li><a href="total-error-tolerance-interval-validation.html">定量分析法バリデーションのためのTotal Error（総合誤差）アプローチ——両側β含有許容区間で「不適切な分析法を通してしまうリスク」を制御する</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span><span class="rel-tag">規制・ガイドライン</span><span class="rel-tag">分析法・バリデーション</span><span class="rel-tag">QC・品質評価</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="eurachem-guide-uncertainty-three-rules" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>
