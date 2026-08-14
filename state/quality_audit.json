@@ -18,7 +18,7 @@
     "retention-modeling-lc-review": "全訳密度(9545字)・参考文献は既存。図のみ未抽出。原本 JSSC4488.pdf(約11.9MB)はDriveにあるが10MB上限超。2026-07-17: download_file_content が明確に「File too large for download, over limit of 10 MB」を返却（10MB上限は近似ではなく厳格に適用されることを確認）。read_file_content（テキストEP）は成功したが画像バイトは取得不可のため図は据え置き。",
     "bayesian-optimization-chemical-reactions-review": "全訳密度(11460字)・参考文献は既存。図のみ未抽出。原本 d5cs00962f.pdf(約11.4MB)はDriveにあるが10MB上限超。2026-07-17: download_file_content が同一の「File too large for download, over limit of 10 MB」エラーを返却。フロントマター内の訳者補足にも同じ制約を記載済み。read_file_content は成功したが画像バイトは取得不可のため図は据え置き。",
     "xzol-ai-spectrum-effect-nir-qc": "原本(13.7MB)はDriveにあるが10MB上限超のため図は未抽出のまま（2026-07-17に download_file_content で同エラーを確認）。参考文献は2026-07-17にread_file_contentから[1]-[22]の22件を復元・追加済み（[23]-[46]の24件は2段組みレイアウトの行送り混線で著者名・誌名・DOIが交錯し、機械的復元では捏造リスクがあるため見送り、原文DOI参照の訳者注を追加）。全訳密度(11285字)は既存で充足。",
-    "lcxlc-bayesian-optimization-method-development": "原本(11.4MB)はDriveにあるが10MB上限超のため図は未抽出のまま（2026-07-17に download_file_content で同エラーを確認）。参考文献は2026-07-17にread_file_contentから全32件を復元・追加済み（本文中の[N]引用の最大値[32]と一致することを確認）。全訳密度(5677字)は既存で充足。"
+    "lcxlc-bayesian-optimization-method-development": "原本(11.4MB)はDriveにあるが10MB上限超のため図は未抽出のまま（2026-07-17に download_file_content で同エラーを確認）。参考文献は2026-07-17にread_file_contentから全32件を復元・追加済み（本文中の[N]引用の最大値[32]と一致することを確認）。全訳密度(5677字)は既存で充足。2026-08-14再確認: download_file_content が同じ「File too large for download, over limit of 10 MB」エラーを再現（get_file_metadataは11,360,829バイトと正常応答）。28日経過後も上限は解消せず。"
   },
   "no_figures_in_source": {
     "_comment": "PyMuPDF(get_images/get_drawings/ページ描画)で原本PDF全ページを確認したが、出版社ロゴ・チェックマーク等の小さいUI画像以外に実質的な図が存在しないことを確認済み。②図0枚のまま quality_audit.py には要対応として出続けるが、捏造を避けるため図は追加していない。再確認不要。",
