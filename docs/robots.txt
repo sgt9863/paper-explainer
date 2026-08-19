@@ -1,0 +1,8 @@
+# このサイトは個人の学習用アーカイブです。検索エンジンへの登録を希望しません。
+# 注意: GitHub Pages のプロジェクトサイト（*.github.io/<repo>/）では、
+# クローラはドメイン直下の /robots.txt しか読まないため、このファイルは
+# 実際には参照されません。実効的な検索避けは各ページの
+# <meta name="robots" content="noindex, ..."> です（build_site.py の page_template）。
+# 独自ドメインに移した場合はこのファイルが有効になります。
+User-agent: *
+Disallow: /

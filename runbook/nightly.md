@@ -136,6 +136,20 @@ python3 scripts/build_site.py
 - `docs/` 以下に一覧ページと各論文ページが再生成される（build_site 自体は依存ライブラリ不要）。
 - エラーが出たら front matter / Markdown を修正して再実行。
 
+### 検索避け（noindex）について
+
+このサイトは**検索エンジンに載せない方針**（2026-08-09 ユーザー決定）。実効的な仕組みは
+`build_site.py` の `page_template` が全ページの `<head>` に出す
+`<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">` である。
+**このタグを消さないこと。**
+
+- `docs/robots.txt` も置いてあるが、GitHub Pages のプロジェクトサイト（`*.github.io/<repo>/`）では
+  クローラは**ドメイン直下の `/robots.txt` しか読まない**ため、現状では参照されない。
+  独自ドメインに移した場合に有効になる保険として残している。
+- 検索避けは「隠す」だけで**アクセス制限ではない**。URLを知っていれば誰でも閲覧できる。
+  本当に限定したい場合は Cloudflare Access 等を前段に置く必要がある（未実施）。
+- 検査: `for f in docs/*.html docs/papers/*.html; do grep -q 'name="robots" content="noindex' "$f" || echo "未挿入: $f"; done`
+
 ## ステップ 5: 状態の更新
 
 `state/processed.json` の `processed` に、今回処理した各PDFを追記する:
