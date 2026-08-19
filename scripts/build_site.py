@@ -453,6 +453,8 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <title>{html.escape(title)}</title>
 {og}<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}{math_head}
 </head>
