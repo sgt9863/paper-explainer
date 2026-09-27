@@ -103,11 +103,6 @@
       "retry_date_basis": "migration_date",
       "schedule_initialized_at": "2026-09-27"
     },
-    "_comment": {
-      "next_retry_on": "2026-10-27",
-      "retry_date_basis": "migration_date",
-      "schedule_initialized_at": "2026-09-27"
-    },
     "shd-spectrum-effect-fingerprint-ciri": {
       "next_retry_on": "2026-08-16",
       "retry_date_basis": "recorded_attempt_date",
