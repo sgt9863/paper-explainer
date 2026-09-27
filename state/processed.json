@@ -1341,6 +1341,13 @@
       "title": "植物性医薬品（ボタニカルドラッグ）のCMCに対する米国の規制アプローチ（2012年 米中シンポジウム 会議抄録）",
       "source_pdf": "US_regulatory_approaches_to_chemistry_ma.pdf",
       "date": "2026-08-11"
+    },
+    "1h679gbZsYXM4GyUB4MqkNLH1Oa2lcslx": {
+      "slug": "hplc-py-chromatogram-deconvolution",
+      "title": "hplc-py：重なったクロマトグラムのピークを分離・定量するPythonツール",
+      "source_pdf": "joss.06270.pdf",
+      "date": "2026-09-27",
+      "doi": "10.21105/joss.06270"
     }
   }
 }
