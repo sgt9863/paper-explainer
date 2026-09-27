@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<title>hplc-py：重なったクロマトグラムのピークを分離・定量するPythonツール</title>
+<meta property="og:type" content="article">
+<meta property="og:title" content="hplc-py：重なったクロマトグラムのピークを分離・定量するPythonツール">
+<meta property="og:description" content="hplc-pyの全処理工程を原文の図3枚・式・図中の数値とともに解説。乳糖とリン酸の重複ピークを例に、既知成分の制約が定量結果を左右することを示す。">
+<meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/hplc-py-chromatogram-deconvolution/ai-infographic.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+</head>
+<body>
+<header class="site-header">
+  <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
+</header>
+<div class="layout"><main class="container">
+<article class="paper" data-slug="hplc-py-chromatogram-deconvolution"><h1>hplc-py：重なったクロマトグラムのピークを分離・定量するPythonツール</h1><div class="paper-meta"><span class="date">2026-09-27</span> <span class="tag">HPLC・UPLC</span> <span class="tag">多成分定量</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> &middot; <a href="https://doi.org/10.21105/joss.06270" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">joss.06270.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="hplc-py-chromatogram-deconvolution" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="hplc-py-chromatogram-deconvolution" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/hplc-py-chromatogram-deconvolution/ai-infographic.png" target="_blank" rel="noopener"><img src="assets/hplc-py-chromatogram-deconvolution/ai-infographic.png" alt="ベースライン補正・ピーク検出・歪正規分布フィットを自動化し、重複信号を定量する" loading="lazy"></a><h2>書誌情報</h2>
+<ul><li>原題: hplc-py: A Python Utility For Rapid Quantification of Complex Chemical Chromatograms</li><li>著者: Griffin Chure、Jonas Cremer。所属: Stanford University, Department of Biology（米国カリフォルニア州）。責任著者: Griffin Chure。</li><li>掲載誌: Journal of Open Source Software, 9(94), 6270（2024）。<a href="https://joss.theoj.org/papers/10.21105/joss.06270" target="_blank" rel="noopener">原論文・出版社ページ</a>。</li><li>投稿: 2023年10月5日。公開: 2024年2月16日。担当編集者: Jeff Gostick。査読者: @florian-huber、@Kastakin。</li><li>雑誌IF: 要確認。2026年9月27日に<a href="https://joss.theoj.org/about" target="_blank" rel="noopener">JOSS公式情報</a>を確認したが、JCRの年次付き数値を確認できなかったため数値は掲載しない。</li><li>被引用数: 11件（<a href="https://openalex.org/W4391885430" target="_blank" rel="noopener">OpenAlexの当該論文レコード</a>、2026年9月27日取得）。データベースと取得日によって変わる。</li><li>原文のライセンス: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International</a>。著者が著作権を保持。本ページは日本語訳・注記を加えたもの。</li><li><a href="https://github.com/cremerlab/hplc-py" target="_blank" rel="noopener">ソフトウェア</a>／<a href="https://cremerlab.github.io/hplc-py/" target="_blank" rel="noopener">公式ドキュメント</a>。</li></ul>
+<h2>概要</h2>
+<p>高速液体クロマトグラフィー（HPLC）およびガスクロマトグラフィーは、混合物中の化学成分を定量的に特徴づけることができる分析手法である［図1(A)］。試料調製および機械的自動化の技術的進歩により、HPLCはハイスループットなツールとなり（<a href="https://www.chromatographyonline.com/view/modern-hplc-pumps-perspectives-principles-and-practices" target="_blank" rel="noopener">Broeckhoven et al., 2019</a>; <a href="https://doi.org/10.1021/acs.analchem.9b04713" target="_blank" rel="noopener">Kaplitz et al., 2020</a>）、得られるクロマトグラムの再現可能かつ迅速な解析という新たな課題が生じている。本稿では、パイプライン化されたワークフローにおいてクロマトグラム内の成分シグナルを迅速かつ高信頼に定量できるPythonパッケージであるhplc-pyを提案する。これは、i) ピークを含む時間ウィンドウを特定し、ii) 観測シグナルを再構成するように足し合わされる振幅重み付き歪正規分布（skew-normal distribution）の混合モデルのパラメータを推定する、というシグナル検出・定量アルゴリズムによって達成される。このアプローチは、高度に重複したシグナルのデコンボリューション（波形分離）に特に有効であり、クロマトグラフィー保持時間が類似している化学成分の正確な絶対定量を可能にする。</p>
+<h2>必要性</h2>
+<p>クロマトグラフィーは、化学混合物の高精度な定量および分離のための標準的な手法として多様な分野で定着している。クロマトグラフィーデータの解析における主要な目的は、各成分の時間積分シグナルを決定することであるが、化学的に類似した成分によってシグナルが強く重複する場合［図1(B)の青と緑の記号など］、このプロセスは困難となる。本稿の執筆時点で、オープンソースのPython 2.7ソフトウェアであるHappyTools（<a href="https://doi.org/10.1371/journal.pone.0200280" target="_blank" rel="noopener">Jansen et al., 2018</a>）、Microsoft Excelアプリケーション（<a href="https://doi.org/10.1021/acs.jchemed.2c00588" target="_blank" rel="noopener">Cruz Villalon, 2023</a>）、あるいはThermo-Fisher社のChromeleonやWaters社のEmpowerなどの商用ソリューションなど、シグナル定量に利用可能なツールの多くは、クロマトグラムの手動処理や得られた定量データの整理・確認に依存している。さらに、高度に重複したシグナルを高信頼にデコンボリューションできるツールは、我々の知る限り存在しない。hplc-pyは、わずか数行のコードで複雑なクロマトグラムの成分を迅速かつ確実に定量するためのプログラム用インターフェースを提供する［図1(C)］。hplc-pyのピーク検出・フィッティングアルゴリズムは、完全に重複したシグナルをデコンボリューションすることが可能であり、大規模な実験的最適化を行わなければ分離できないような混合物の正確な定量を可能にする。</p>
+<figure><img src="assets/hplc-py-chromatogram-deconvolution/fig1-workflow.png" alt="図1: 化合物のクロマトグラフィー分離とhplc-pyによる検出" loading="lazy"><figcaption>図1: 化合物のクロマトグラフィー分離とhplc-pyによる検出</figcaption></figure>
+<p>図1: 化合物のクロマトグラフィー分離とhplc-pyによる検出。(A) クロマトグラフィーの原理の模式図。(B) パネルAに示した分離された3化合物の模擬クロマトグラム。(C) この模擬クロマトグラムをhplc-pyのChromatogramオブジェクトのメソッドに渡すことで、観測されたクロマトグラムを再構成するように合算される個々のシグナルのデコンボリューションと定量が可能となる。パネル(B)および(C)の生成に使用されたコードは、<a href="https://github.com/cremerlab/hplc-py/tree/publication" target="_blank" rel="noopener">GitHubリポジトリのpublicationブランチ</a>で公開されている。</p>
+<h3>図1(C)に示された入力と操作</h3>
+<p>図中の入力例は <code>LC Chromatogram(Detector A-Ch1)</code>、強度単位 mV、強度倍率 0.001、波長 254 nmである。<code>time,signal</code> 列の最初の2行は <code>0.00000,-4</code> と <code>0.00833,-4</code>。この入力例は図1の模擬データの表示であり、後述する乳糖実験の検出条件を示すものではない。</p>
+<p>図中のコードは次の順に実行する。</p>
+<ol><li><code>from hplc.io import load_chromatogram</code></li><li><code>from hplc.quant import Chromatogram</code></li><li><code>data = load_chromatogram(&#x27;chromatogram.txt&#x27;, cols=[&#x27;time&#x27;, &#x27;signal&#x27;])</code></li><li><code>chrom = Chromatogram(data)</code></li><li><code>peaks = chrom.fit_peaks()</code></li><li><code>chrom.show()</code></li></ol>
+<h2>方法論</h2>
+<p>hplc-pyの主要な構成要素は図2(A)に示されている。ヘルパー関数 <code>load_chromatogram</code> は、生のテキストファイルを読み込み、ヘッダー内のメタデータをフィルタリングして、ユーザーが指定した列名に基づいて時間およびシグナルのデータを取得するために使用できる［図2(B)］。得られたpandasのDataFrameオブジェクトは <code>Chromatogram</code> オブジェクトに渡すことができ、このオブジェクトにはクロマトグラムの切り出し（クロップ）、フィッティング、スコアリング、定量、およびプロットを行うための多数のメソッドが備わっている。hplc-pyが採用している中核的なアルゴリズムのステップは図2(C)に図示されており、パッケージのドキュメントで詳細に説明されている。<code>Chromatogram</code> が生成されると、<code>.fit_peaks</code> メソッドを呼び出すことによって、観測クロマトグラムを構成するピークの自動検出と定量が実行できる。内部では、このメソッドは以下のステップを実行する3つのヘルパー関数［図2(C)に図示］を呼び出す：</p>
+<h3>図2(A) hplc-pyのデータモデルと主要メソッド</h3>
+<table>
+<thead><tr><th>モジュール / クラス</th><th>関数 / メソッド</th><th>説明</th></tr></thead>
+<tbody>
+<tr><td><code>hplc-py/io.py</code></td><td><code>load_chromatogram()</code></td><td>クロマトグラムの.txtファイルを受け取り、ヘッダーを解析して指定された「time」「signal」列名に基づいて測定データを特定する。</td></tr>
+<tr><td><code>hplc-py/quant.py</code> ／ <code>Chromatogram()</code></td><td><code>crop()</code></td><td>指定された開始・終了境界に基づき、クロマトグラムの時間軸の範囲を限定し、元のデータを更新する。</td></tr>
+<tr><td><code>hplc-py/quant.py</code> ／ <code>Chromatogram()</code></td><td><code>fit_peaks()</code></td><td>SNIPアルゴリズムによりベースラインを推定・減算し、クロマトグラムを孤立ピークおよび重複ピークを含む領域に分割、重み付き歪正規分布の混合モデルをフィッティングして、ピーク特性（積分面積、保持時間など）を算出する。</td></tr>
+<tr><td><code>hplc-py/quant.py</code> ／ <code>Chromatogram()</code></td><td><code>assess_fit()</code></td><td>フィッティングされた混合モデルが生のクロマトグラムをどの程度再現できているかをスコア化したレポートカードを出力する。</td></tr>
+<tr><td><code>hplc-py/quant.py</code> ／ <code>Chromatogram()</code></td><td><code>map_peaks()</code></td><td>ユーザーが指定した化合物名と保持時間の辞書に基づき、各ピークに化合物の同定情報を割り当てる。線形検量線が与えられている場合は、各化合物の濃度も計算する。</td></tr>
+<tr><td><code>hplc-py/quant.py</code> ／ <code>Chromatogram()</code></td><td><code>show()</code></td><td>ベースライン補正済みクロマトグラム、推定ベースライン信号、個々のピーク、フィッティングされた全ピークの推定混合モデルをプロットする。</td></tr>
+</tbody></table>
+<h3>i) 変動するベースラインの推定と補正</h3>
+<p>HPLCデータの解析における一般的な課題は、擬似的なバックグラウンドシグナルの特定と除去である。ベースライン変動の物理化学的要因は複雑であるが（<a href="https://api.semanticscholar.org/CorpusID:19173011" target="_blank" rel="noopener">Choikhet et al., 2003</a>; <a href="https://doi.org/10.1016/j.chemolab.2004.01.018" target="_blank" rel="noopener">Felinger &amp; Káré, 2004</a>）、その補正のために多数の手法が開発されてきた（<a href="https://doi.org/10.1081/JLC-100103447" target="_blank" rel="noopener">Macko &amp; Berek, 2001</a>; <a href="https://doi.org/10.1016/j.apcbee.2014.10.003" target="_blank" rel="noopener">Mecozzi, 2014</a>）。hplc-pyでは、分光データの平滑化のために元々開発されたSNIP（Sensitive Nonlinear Iterative Peak）法（<a href="https://doi.org/10.1366/000370208783412762" target="_blank" rel="noopener">Morháč &amp; Matoušek, 2008</a>）を用いてこれが実装されている。</p>
+<h3>ii) ピーク検出と時間領域への分割</h3>
+<p>変動するバックグラウンドが特定・補正された後、神経細胞の活動電位の信号処理で一般的な手法である局所突出度（topographic prominence）の閾値適用を通じて、ピークが存在するクロマトグラム領域が同定される（<a href="https://doi.org/10.1088/1741-2552/aa5646" target="_blank" rel="noopener">Choi et al., 2017</a>）。ピーク位置が特定されると、クロマトグラムは化学種が共溶出して重複する時間領域である「ウィンドウ」へとさらに切り出される。</p>
+<h3>iii) 各時間領域への歪正規分布の混合モデルの当てはめ</h3>
+<p>$N$ 個のピークが割り当てられたピークウィンドウに対して、hplc-pyはそのウィンドウ内の観測シグナル $S$ に対し、$N$ 個の振幅重み付き歪正規分布の畳み込み（重ね合わせ）をフィッティングする。重み付き歪正規分布は、振幅 $A$、位置パラメータ $\tau$、スケールパラメータ $\sigma$、および歪度パラメータ $\alpha$ によってパラメータ化され、以下の形式をとる：</p>
+<p>$$S(t) = \frac{A}{\sqrt{2\pi\sigma^2}} \exp \left[ -\frac{(t - \tau)^2}{2\sigma^2} \right] \left[ 1 + \operatorname{erf} \left( \frac{\alpha(t - \tau)}{\sqrt{2\sigma^2}} \right) \right] \tag{1}$$</p>
+<p>ここで、$t$ は時点であり、$\operatorname{erf}$ は誤差関数である。クロマトグラムのピークは高い歪度を伴って非対称になることが多く、その特性が単一のパラメータ $\alpha$ で記述できるため、歪正規分布はクロマトグラムシグナルのフィッティングに有用である。</p>
+<p><code>.fit_peaks</code> メソッドは、各ピークの各パラメータの最良適合値を報告するPandas DataFrame［図2(D)］を返す。また、このメソッドは所与の時間ウィンドウにおける各化合物の式(1)の積分値も返し、これは分析対象物の濃度に線形に比例する（<a href="https://doi.org/10.5772/intechopen.72932" target="_blank" rel="noopener">Moosavi &amp; Ghassabian, 2018</a>）。図2(E-F)は、hplc-pyのピーク定量アルゴリズムが、1桁にわたる濃度範囲の乳糖（ラクトース）溶液の標準曲線において、濃度と積分面積の間に線形関係をもたらすことを実証している。</p>
+<p>図2(E)に表示された乳糖濃度は、0.5、1.0、1.5、2.0、3.0、4.0、6.0、8.0 mMである。</p>
+<h3>図2(D) ピーク測定値テーブル</h3>
+<table>
+<thead><tr><th>保持時間 (<code>ret_time</code>)</th><th>振幅 (<code>amp.</code>)</th><th>スケール (<code>scale</code>)</th><th>歪度 (<code>skew</code>)</th><th>面積 (<code>area</code>)</th><th>ピーク番号 (<code>peak</code>)</th></tr></thead>
+<tbody>
+<tr><td>10.90</td><td>2.3e+4</td><td>0.16</td><td>0.70</td><td>2.8e+6</td><td>1</td></tr>
+<tr><td>13.19</td><td>2.5e+4</td><td>0.42</td><td>3.19</td><td>3.0e+6</td><td>2</td></tr>
+<tr><td>14.45</td><td>3.7e+4</td><td>0.38</td><td>-3.53</td><td>4.4e+6</td><td>3</td></tr>
+</tbody></table>
+<figure><img src="assets/hplc-py-chromatogram-deconvolution/fig2-algorithm.png" alt="図2: 実際のクロマトグラムに適用されたhplc-py実装のピーク定量アルゴリズム" loading="lazy"><figcaption>図2: 実際のクロマトグラムに適用されたhplc-py実装のピーク定量アルゴリズム</figcaption></figure>
+<p>図2: 実際のクロマトグラムに適用されたhplc-py実装のピーク定量アルゴリズム。(A) hplc-pyのデータモデル。(B) 生のクロマトグラムテキストファイルをPandas DataFrameとして読み込むことによるChromatogramオブジェクトの生成。(C) Chromatogramオブジェクトのfit_peaks()メソッドによって行われるピーク定量操作。(D) .fit_peaks()によって返される代表的なピーク定量テーブル。(E) 異なる濃度の乳糖（ラクトース）溶液の代表的なシグナル。(F) hplc-pyを用いてパネルEから生成された検量線。これらの一連の図を生成するために使用されたコードは、<a href="https://github.com/cremerlab/hplc-py/tree/publication" target="_blank" rel="noopener">GitHubリポジトリのpublicationブランチ</a>で公開されている。</p>
+<h2>ピークパラメータの制約と重複信号</h2>
+<p>HPLCによる異なる化学種の分離効率は、カラムの化学的性質、溶媒、測定温度、カラム寸法など無数の変数に依存する。所与の実験構成において、一部の化学種が共溶出することは珍しくない。例えば、糖類である乳糖（ラクトース）［図3(A, 青)］と無機イオンであるリン酸［図3(A, 紫)］は、2.5 mM $\text{H}_2\text{SO}_4$ 移動相を用いたRezex Organic Acid H+ 8%カラム上でほぼ同一の溶出時間を示し、その結果、単一のピークと誤認されかねない重なり（畳み込み）を生じる［図3(A, 破線)］。その結果、他のHPLCデータ解析プログラムを用いた場合、これらのシグナルは分離不可能と分類され、それらを分離するにはさらなる実験的最適化が必要となる。</p>
+<p>しかし、hplc-pyはシグナルそのものを経験的に積分するのではなく、重み付き分布の混合モデルをフィッティングするため、これらのシグナルを定量的に分離することが可能である。これは、重なり合う2つのシグナルのうち一方（リン酸など）のパラメータを厳密に制約することによって実行できる。例として、サンプル間でリン酸が一定濃度で存在する一方、乳糖濃度は変動し得るというユースケースを検討した。このようなシナリオの下では、hplc-pyを使用してリン酸ピークのサイズと形状を定義するパラメータを事前に独立して特徴づけることができる［図3(B)］。これらのパラメータが得られれば、混合物中のリン酸シグナルのパラメータ範囲を（hplc-pyのドキュメントに記載されているように）厳密に制約することができ［図3(C)］、乳糖ピークのパラメータ値を効果的に推定することが可能となる。このアプローチと図2(E)に示した乳糖の検量線（原文の参照番号。検量線自体は図2(F)、濃度別の波形は図2(E)）を用いることで、広範な乳糖・リン酸混合物中の乳糖濃度を正確に定量できた［図3(D)］。リン酸ピークと乳糖ピークの双方のパラメータを自由に推定させた場合、推定されたクロマトグラムの再構成が観測シグナルと一致しているにもかかわらず［図3(E)］、このような精度は失われる［図3(F)］。</p>
+<p>総じて、hplc-pyは、分析対象物間に極めて大きな重複がある場合でも、実験者がクロマトグラムから化学シグナルを迅速に定量できるようにするプログラムから操作できるインターフェースを提供する。hplc-pyの各メソッドのデフォルトパラメータは典型的なHPLCクロマトグラフィーの出力に適するように調整されているが、バックグラウンド減算の度合いを制御するパラメータ、フィッティングパラメータの制約、さらには局所突出度が低いピークの推定の強制など、ピーク定量アルゴリズムのさまざまな側面を手動で簡単に調整できるようにしている。さらに、再構成の品質を評価するためにユーザーが利用できる経験則に基づく評価方法も開発したが、これは測定不確かさの尺度として使用するものではないことを強調しておく。我々は、hplc-pyが、結果の生成ではなく科学的解釈こそがHPLCベースの実験における次のボトルネックとなるようなツールとして機能することを期待している。</p>
+<figure><img src="assets/hplc-py-chromatogram-deconvolution/fig3-overlap.png" alt="図3: hplc-pyによるリン酸と乳糖の重複シグナル分離" loading="lazy"><figcaption>図3: hplc-pyによるリン酸と乳糖の重複シグナル分離</figcaption></figure>
+<p>図3: hplc-pyは実際のクロマトグラムにおいて完全に重複したリン酸と乳糖のシグナルを正確に分離・定量する。(A) 2.5 mM $\text{H}_2\text{SO}_4$ 移動相を用いたRezex Organic Acid H+ (8%)カラムで検出された乳糖（青）、リン酸緩衝液（紫）、および乳糖・リン酸混合物の3つの重ね合わせクロマトグラム。(B) hplc-pyによって計算されたリン酸シグナル（紫）の最良適合ピーク形状（赤）。(C)および(E)はそれぞれ、リン酸パラメータを制約した場合と制約しない場合における、乳糖（青）およびリン酸（紫）の推定潜在分布波形。(D)および(F)はそれぞれ、リン酸パラメータを制約した場合と制約しない場合について、混合物中の既知濃度と比較した推定乳糖濃度プロット。この解析を実行し図を生成するために使用されたコードは、<a href="https://github.com/cremerlab/hplc-py/tree/publication" target="_blank" rel="noopener">GitHubリポジトリのpublicationブランチ</a>で公開されている。</p>
+<blockquote>補足: 原文論文の図3キャプションでは、波形プロットを(C)および(D)、濃度比較プロットを(E)および(F)と表記する誤りがあります。実際の図のパネル構成および本文の記述に基づくと、波形プロットは(C)（制約あり）および(E)（制約なし）であり、既知濃度と推定濃度の比較プロットは(D)（制約あり）および(F)（制約なし）に対応しています。本翻訳では本文および実際のパネル配置に合わせて正しい対応関係を明記しています。</blockquote>
+<h2>データとコードの公開</h2>
+<p>各図に示したデータの処理に用いたすべての実験データおよびコードは、hplc-py <a href="https://github.com/cremerlab/hplc-py/tree/publication" target="_blank" rel="noopener">GitHubリポジトリのpublicationブランチ</a>で公開されている。図3のデータは、リポジトリのpublicationブランチにある実験データフォルダのREADME.mdファイルに記載されている手順に従って収集された。</p>
+<h2>謝辞</h2>
+<p>ソフトウェアのニーズに関する広範な議論、および多様な種類のHPLCデータを用いた初期リリースのプロトタイピングを行ってくれたMarkus Arnoldini氏とRicha Sharma氏に感謝する。ソフトウェアの設計と実装について助言をいただいたOlivia Warren氏に感謝する。Griffin Chureは、NSF（全米科学財団）生物学分野博士研究員フェローシッププログラム（助成番号 2010807）からの財政的支援に謝意を表する。</p>
+<h2>参考文献</h2>
+<ol class="references"><li id="ref-1">Broeckhoven, K., Shoykhet, K., &amp; Dong, M. (2019). Modern HPLC Pumps: Perspectives, Principles, and Practices. <em>LCGC North America</em>, 37(6), 374–384. <a href="https://www.chromatographyonline.com/view/modern-hplc-pumps-perspectives-principles-and-practices" target="_blank" rel="noopener">https://www.chromatographyonline.com/view/modern-hplc-pumps-perspectives-principles-and-practices</a></li><li id="ref-2">Choi, M.-H., Ahn, J., Park, D. J., Lee, S. M., Kim, K., Cho, D. D., Senok, S. S., Koo, K., &amp; Goo, Y. S. (2017). Topographic Prominence Discriminator for the Detection of Short-Latency Spikes of Retinal Ganglion Cells. <em>Journal of Neural Engineering</em>, 14(1), 016017. <a href="https://doi.org/10.1088/1741-2552/aa5646" target="_blank" rel="noopener">https://doi.org/10.1088/1741-2552/aa5646</a></li><li id="ref-3">Choikhet, K., Glatz, B., &amp; Rozing, G. (2003). The Physicochemical Causes of Baseline Disturbances in HPLC: TFA-containing eluents. <em>LCGC International</em>, 6(2), 96–105. <a href="https://api.semanticscholar.org/CorpusID:19173011" target="_blank" rel="noopener">https://api.semanticscholar.org/CorpusID:19173011</a></li><li id="ref-4">Cruz Villalon, G. (2023). Characterization of Chromatographic Peaks with Excel. <em>Journal of Chemical Education</em>, 100(2), 928–932. <a href="https://doi.org/10.1021/acs.jchemed.2c00588" target="_blank" rel="noopener">https://doi.org/10.1021/acs.jchemed.2c00588</a></li><li id="ref-5">Felinger, A., &amp; Káré, M. (2004). Wavelet Analysis of the Baseline Noise in HPLC. <em>Chemometrics and Intelligent Laboratory Systems</em>, 72(2), 225–232. <a href="https://doi.org/10.1016/j.chemolab.2004.01.018" target="_blank" rel="noopener">https://doi.org/10.1016/j.chemolab.2004.01.018</a></li><li id="ref-6">Jansen, B. C., Hafkenscheid, L., Bondt, A., Gardner, R. A., Hendel, J. L., Wuhrer, M., &amp; Spencer, D. I. R. (2018). HappyTools: A Software for High-Throughput HPLC Data Processing and Quantitation. <em>PLOS ONE</em>, 13(7), e0200280. <a href="https://doi.org/10.1371/journal.pone.0200280" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pone.0200280</a></li><li id="ref-7">Kaplitz, A. S., Kresge, G. A., Selover, B., Horvat, L., Franklin, E. G., Godinho, J. M., Grinias, K. M., Foster, S. W., Davis, J. J., &amp; Grinias, J. P. (2020). High-Throughput and Ultrafast Liquid Chromatography. <em>Analytical Chemistry</em>, 92(1), 67–84. <a href="https://doi.org/10.1021/acs.analchem.9b04713" target="_blank" rel="noopener">https://doi.org/10.1021/acs.analchem.9b04713</a></li><li id="ref-8">Macko, T., &amp; Berek, D. (2001). Pressure Effects in Hplc: Influence of Pressure and Pressure Changes on Peak Shape, Base Line, and Retention Volume in Hplc Separations. <em>Journal of Liquid Chromatography &amp; Related Technologies</em>, 24(9), 1275–1293. <a href="https://doi.org/10.1081/JLC-100103447" target="_blank" rel="noopener">https://doi.org/10.1081/JLC-100103447</a></li><li id="ref-9">Mecozzi, M. (2014). A Polynomial Curve Fitting Method for Baseline Drift Correction in the Chromatographic Analysis of Hydrocarbons in Environmental Samples. <em>APCBEE Procedia</em>, 10, 2–6. <a href="https://doi.org/10.1016/j.apcbee.2014.10.003" target="_blank" rel="noopener">https://doi.org/10.1016/j.apcbee.2014.10.003</a></li><li id="ref-10">Moosavi, S. M., &amp; Ghassabian, S. (2018). Linearity of Calibration Curves for Analytical Methods: A Review of Criteria for Assessment of Method Reliability. In <em>Calibration and Validation of Analytical Methods - A Sampling of Current Approaches</em>. IntechOpen. <a href="https://doi.org/10.5772/intechopen.72932" target="_blank" rel="noopener">https://doi.org/10.5772/intechopen.72932</a></li><li id="ref-11">Morháč, M., &amp; Matoušek, V. (2008). Peak Clipping Algorithms for Background Estimation in Spectroscopic Data. <em>Applied Spectroscopy</em>, 62(1), 91–106. <a href="https://doi.org/10.1366/000370208783412762" target="_blank" rel="noopener">https://doi.org/10.1366/000370208783412762</a></li></ol>
+<h2>訳者補足</h2>
+<blockquote>補足: 本ページはChure &amp; Cremer（2024）の7ページのソフトウェア論文を、原文の節順に日本語化したものです。図は原論文の図1〜3を切り出して掲載し、図中の説明と表を日本語でも補いました。本文・図の出典は上記DOI、ライセンスはCC BY 4.0です。日本語訳・注記および冒頭のAI生成模式図は本ページで追加したものです。</blockquote>
+<blockquote>補足: 原文の「convolution」は、ここでは複数のピーク形状を足して観測波形を再構成する文脈で使われています。確率分布同士の畳み込み積分を実行する、という意味で読み替えないよう注意してください。式(1)のαは非対称性を調整する形状パラメータであり、通常の統計量として計算する標準化三次モーメントの「歪度」と同じ値ではありません。</blockquote>
+<blockquote>補足: 図3が示すのは、合成波形への当てはまりがよくても、乳糖とリン酸への寄与の分配を誤り得るという点です。独立した測定からリン酸ピークのパラメータ範囲を制限した例と、制限しない例を比較しています。あらゆる共溶出ピークを無条件で正しく分離できると実証した論文ではありません。原文自身も、再構成の品質指標を測定不確かさの指標として使わないよう述べています。</blockquote>
+<blockquote>補足: 他ソフトウェアとの比較は2024年の論文執筆時点の著者の記述です。本ページは現在の製品機能を比較検証したものではありません。また、本文には検量線の回帰係数・決定係数・LOD/LOQ・濃度ごとの誤差率は記載されていないため、図から正確な値を作って補っていません。</blockquote><section class="related" aria-label="関連論文"><h2>関連論文</h2><ul class="related-list"><li><a href="cad-pfv-powerlaw-linearization-qishen-yiqi.html">荷電化エアロゾル検出（CAD）の応答を線形化する最適化戦略 — 芪参益気滴丸の糖類多成分定量</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">多成分定量</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="xzol-ai-spectrum-effect-nir-qc.html">AIを活用した漢方の活性成分探索と非破壊品質管理の戦略 — 血府逐瘀口服液（XZOL）を例として</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">多成分定量</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="danshen-hplc-nir-chemometrics.html">丹参(Danshen)の産地別品質評価・モニタリング — HPLC-DAD＋NIR＋ケモメトリクス統合</a><span class="rel-tags"><span class="rel-tag">機械学習・データ処理</span><span class="rel-tag">多成分定量</span><span class="rel-tag">HPLC・UPLC</span></span></li><li><a href="eurachem-guide-uncertainty-three-rules.html">不確かさ評価の「正しさ」を追う——EURACHEMガイドの計算例に潜む3つの誤り（分布の選び方・二重計上・効かない要因）</a><span class="rel-tags"><span class="rel-tag">統計・ケモメトリクス</span></span></li></ul></section><p class="back"><a href="../index.html">&larr; 一覧へ戻る</a></p></article>
+</main>
+<aside class="notes" id="notesPanel" data-slug="hplc-py-chromatogram-deconvolution" aria-label="この論文のメモ">
+  <div class="notes-head">
+    <span class="notes-title">メモ</span>
+    <span class="notes-status" id="notesStatus" aria-live="polite"></span>
+  </div>
+  <div class="notes-toolbar" id="notesToolbar" role="toolbar" aria-label="書式">
+    <button type="button" class="nt-btn" data-cmd="bold" title="太字 (Ctrl+B)"><b>B</b></button>
+    <button type="button" class="nt-btn" data-cmd="italic" title="斜体 (Ctrl+I)"><i>I</i></button>
+    <button type="button" class="nt-btn" data-cmd="underline" title="下線 (Ctrl+U)"><u>U</u></button>
+    <button type="button" class="nt-btn" data-cmd="strikeThrough" title="取り消し線"><s>S</s></button>
+    <button type="button" class="nt-btn nt-marker" data-cmd="marker" title="マーカー">◾</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="insertUnorderedList" title="箇条書き">•≡</button>
+    <button type="button" class="nt-btn" data-cmd="insertOrderedList" title="番号付きリスト">1.≡</button>
+    <span class="nt-sep"></span>
+    <button type="button" class="nt-btn" data-cmd="formatBlock:H4" title="見出し">H</button>
+    <button type="button" class="nt-btn" data-cmd="removeFormat" title="書式をクリア">✕書式</button>
+  </div>
+  <div id="notesText" class="notes-text" contenteditable="true" role="textbox" aria-multiline="true"
+       data-placeholder="この論文についてのメモを書く…（自動保存）"></div>
+  <p class="notes-hint" id="notesHint">このブラウザに保存中。ログインすると全端末で共有できます。</p>
+</aside>
+<button type="button" id="notesFab" class="notes-fab" title="メモ">&#128221;</button>
+</div>
+<footer class="site-footer">
+  <p>自動生成: paper-explainer パイプライン</p>
+</footer>
+
+<script src="../assets/read.js" defer></script>
+<script src="../assets/fav.js" defer></script>
+<script src="../assets/highlight.js" defer></script>
+<script src="../assets/notes.js" defer></script>
+<script src="../assets/sync-config.js" defer></script>
+<script src="../assets/sync.js" defer></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script>document.addEventListener("DOMContentLoaded",function(){if(window.renderMathInElement){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:true},{left:"\\[",right:"\\]",display:true},{left:"$",right:"$",display:false},{left:"\\(",right:"\\)",display:false}],throwOnError:false});}});</script>
+
+</body>
+</html>

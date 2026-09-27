@@ -54,6 +54,84 @@
   },
   "density_ok_below_heuristic": {
     "rrf-imatinib-related-substances-robustness-hplc": "Rasayan 2011のRRF堅牢性研究。原文が表21個＋図40枚主体のデータ報告で本文散文が少なく、完全全訳でもCJK 4215字(<5000)。要約でなく全訳(全21表・保持時間全掲載・回収率・薬局方定義)。density判定は原文と突き合わせ済=充足扱い。夜間ルーチンで再フラグ不要。",
-    "snyder-dolan-gradient-elution-book-review": "原本が2頁の書評（BOOKS AND SOFTWARE IN REVIEW欄）であり、研究論文ではないため原文自体が短い。要約による省略はせず全訳済み（主題・全9章の内容・既存文献との比較・批判的評価・読者推薦・総括の全節）。CJK 3377字は原文の長さを反映したもの。density判定は原文と突き合わせ済＝充足扱い。夜間ルーチンで再フラグ不要。2026-08-05 レビュー。"
+    "snyder-dolan-gradient-elution-book-review": "原本が2頁の書評（BOOKS AND SOFTWARE IN REVIEW欄）であり、研究論文ではないため原文自体が短い。要約による省略はせず全訳済み（主題・全9章の内容・既存文献との比較・批判的評価・読者推薦・総括の全節）。CJK 3377字は原文の長さを反映したもの。density判定は原文と突き合わせ済＝充足扱い。夜間ルーチンで再フラグ不要。2026-08-05 レビュー。",
+    "hplc-py-chromatogram-deconvolution": "2026-09-27: 7頁の短いソフトウェア論文。全本文・謝辞・11文献、式(1)、全3図、図2Dの数値3行、図2Eの8濃度を原PDFと照合。字数を増やすための創作は行わない。"
+  },
+  "retry_schedule": {
+    "rrf-potency-assay-uv-detector-settings": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "tolerance-intervals-specification-limits-censored-gamma-mle-bayesian": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "lss-model-extension-elution-degree-parameter": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "patient-centric-drug-product-quality-specifications": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "qbd-biopharmaceutics-dissolution-specification-setting-2010": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "gradient-elution-hplc-1-theoretical-basis-reversed-phase": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "gradient-elution-hplc-2-practical-application-reversed-phase": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "who-cgmp-herbal-medicines-overview": {
+      "next_retry_on": "2026-10-05",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-09-05"
+    },
+    "who-ghpp-good-herbal-processing-practices": {
+      "next_retry_on": "2026-10-27",
+      "retry_date_basis": "migration_date",
+      "schedule_initialized_at": "2026-09-27"
+    },
+    "shd-spectrum-effect-fingerprint-ciri": {
+      "next_retry_on": "2026-08-16",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-07-16"
+    },
+    "xecq-qbd-fullchain-machinevision-qc": {
+      "next_retry_on": "2026-10-26",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-09-26"
+    },
+    "retention-modeling-lc-review": {
+      "next_retry_on": "2026-08-17",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-07-17"
+    },
+    "bayesian-optimization-chemical-reactions-review": {
+      "next_retry_on": "2026-08-17",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-07-17"
+    },
+    "xzol-ai-spectrum-effect-nir-qc": {
+      "next_retry_on": "2026-08-17",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-07-17"
+    },
+    "lcxlc-bayesian-optimization-method-development": {
+      "next_retry_on": "2026-08-17",
+      "retry_date_basis": "recorded_attempt_date",
+      "last_attempt_at": "2026-07-17"
+    }
   }
 }
