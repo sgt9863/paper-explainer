@@ -1,0 +1,11 @@
+Restyle the hplc-py infographic (last input image) to closely match the visual style of the FIRST TWO reference infographics from the same scientific Japanese website. First two inputs are STYLE references ONLY: never copy their scientific claims, journal impact factors or numbers. Last input is the current hplc-py content to redesign.
+Create a polished LANDSCAPE 1536x1024 dense Japanese research-summary poster. White background, dark navy and deep forest-green headers, fine green/blue rounded panel borders, pale blue/green panel fills, bold readable Japanese sans-serif, small scientific instrument illustrations with subtle shading. Like reference: compact title band, small bibliographic box upper right, four arrow-connected columns with colored solid headers "目的" "手法" "結果" "意義". Wider center columns; NOT giant numbered circles, NOT a big orange warning, NOT lots of empty space. Consistent with references' restrained laboratory report aesthetic.
+Title: "hplc-py：複雑なクロマトグラムの迅速な定量"
+Subtitle: "重複ピークを歪正規分布の混合モデルで分離"
+Bibliographic box only: "JOSS 2024" and "Chure & Cremer". No IF, no citation count.
+Purpose column: "重なったピークを自動解析" and "保持時間が近い成分を定量", illustrative HPLC instrument connected to computer and chromatogram.
+Methods column: vertically stacked mini-panels "1 ベースライン補正：SNIP法", "2 ピーク検出と時間領域の分割", "3 歪正規分布の当てはめ", "4 ピーク面積と検量線から定量". Small clear process diagrams.
+Results column: "乳糖＋リン酸の共溶出" then two paired schematic panels "リン酸のパラメータを制約" / "制約なし". Schematics must show strongly OVERLAPPING peak shapes with nearly same retention time, NOT well-separated peaks. For both panels same total reconstructed curve but different component allocations. Label all charts "模式図"; no axes numbers. Green concise label: "独立測定に基づく制約で乳糖を定量". Caution text: "制約なしでは波形が一致しても濃度を誤り得る".
+Significance column: "解析の自動化・再現性", "既知成分の情報を活用", "再構成の評価は不確かさ評価ではない". Use sober icons.
+Bottom full-width bordered takeaway: "波形の一致だけでは、成分濃度の正確さは保証できない"
+Small footer "出典：10.21105/joss.06270". All graphs schematic, no invented performance metrics, no unsupported general guarantees. Accurate clear Japanese lettering. Match reference visual density, panel organization, colors, and typography closely.
