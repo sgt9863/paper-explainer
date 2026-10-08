@@ -463,7 +463,6 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 <a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="{rel_root}/index.html">{html.escape(site_title)}</a>
-  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
 {main_open}
