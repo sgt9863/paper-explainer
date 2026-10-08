@@ -40,3 +40,5 @@ The user requested a consistent sgt9863.com design based on the Digital Agency D
 - Rebuilt 134 articles with the standard-library generator. Chrome/Playwright verified index and representative article at 1440px and 390px, search, favorites, reading status after reload, notes after reload, keyboard skip link, no uncaught JavaScript errors. Corrected narrow-screen list sizing and wide-table overflow. Screenshot inspection confirmed readable index/article layouts.
 - No AI API requests, email, login, sync writes or paper-content changes were made. External authenticated services are unverified; their scripts and configuration are unchanged. Real device and assistive-technology testing remains outside this smoke test.
 - Final 134-article narrow-screen scan: all pages fit 390px. Eight long inline-equation cases were corrected with local equation scrolling and a positioned table container; no article text was changed.
+
+User follow-up: site-specific primary colors. Paper Lab now uses green #216e39 (white contrast6.26) and a pale green surface. Shared typography, navigation and black/yellow focus remain unchanged. Rebuilt from the canonical stylesheet.
