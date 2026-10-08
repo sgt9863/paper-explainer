@@ -42,3 +42,7 @@ The user requested a consistent sgt9863.com design based on the Digital Agency D
 - Final 134-article narrow-screen scan: all pages fit 390px. Eight long inline-equation cases were corrected with local equation scrolling and a positioned table container; no article text was changed.
 
 User follow-up: site-specific primary colors. Paper Lab now uses green #216e39 (white contrast6.26) and a pale green surface. Shared typography, navigation and black/yellow focus remain unchanged. Rebuilt from the canonical stylesheet.
+
+## 2026-10-09 — Remove domain-home link
+
+User requested removal of the sgt9863.com home link from KAMPO PAPER LAB. Removed it from the page generator and rebuilt the index and all article pages. The site-title link back to the paper index and keyboard skip link remain.
