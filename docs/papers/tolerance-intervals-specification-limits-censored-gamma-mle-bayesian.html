@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="tolerance-intervals-specification-limits-censored-gamma-mle-bayesian"><h1>左側打ち切りガンマ分布の医薬品品質特性に対する規格限度設定のための頻度論・ベイズ許容区間</h1><div class="paper-meta"><span class="date">2026-07-10</span> <span class="tag">規制・薬事</span> <span class="tag">QC・品質評価</span> <span class="tag">機械学習・データ処理</span> &middot; <a href="https://doi.org/10.1002/pst.2344" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">dba2b051-Pharmaceutical_Statistics__2023__Montes__Frequentist_and_Bayesian_tolerance_intervals_for_setting_specification_limits.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="tolerance-intervals-specification-limits-censored-gamma-mle-bayesian" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="tolerance-intervals-specification-limits-censored-gamma-mle-bayesian" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/tolerance-intervals-specification-limits-censored-gamma-mle-bayesian/ai-infographic.webp" alt="LOQ未満（左側打ち切り）で右に裾を引くガンマ分布の品質データから規格限度を設定――MLEとベイズ（参照事前分布/MDIP）の許容区間を打ち切り率・標本数を変えて比較" loading="lazy"></a><p>&lt;!-- Montes RO. Frequentist and Bayesian tolerance intervals for setting specification limits for left-censored gamma distributed drug quality attributes. Pharmaceutical Statistics 2024;23(2):168-184. doi:10.1002/pst.2344 の全訳密度日本語版。 --&gt;</p>
 <blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は生薬そのものの研究ではなく、<strong>医薬品の「規格限度（spec）」を統計的にどう決めるか</strong>を扱う製薬統計の論文である。ただし当サイトが扱う漢方・生薬 QC でも、「不純物・有害成分・品質特性の上限規格をどう設定するか」は中心課題で、しかも生薬では <strong>測定値が定量下限（LOQ）未満になる（＝左側打ち切り）</strong> ことが頻繁に起こる（微量の重金属・農薬・カビ毒など）。本論文はまさにその「LOQ 未満のデータが混じり、かつ右に長く裾を引く（ガンマ分布的な）品質データ」から、母集団の 99.73% を 95% 信頼度で含む <strong>上側許容限度（UTL）</strong> を求め、それを規格限度にする方法を、MLE とベイズで比較する。実際この PDF はツムラ（漢方メーカー）がダウンロードしており、生薬製剤の規格設定への関心がうかがえる。当サイトの USP 生薬品質規格・AOAC 公定法・シックスシグマ等の「規格・品質保証」系論文の、統計的な裏付けを与える文献。数式・シミュレーションが中心で専門性は高いが、「なぜ対数正規でなくガンマなのか」「MLE で十分か、ベイズが要るか」を理解する実務指針になる。</blockquote>
 <hr>

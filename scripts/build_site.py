@@ -423,7 +423,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
             '{left:"$",right:"$",display:false},{left:"\\\\(",right:"\\\\)",display:false}],'
             'throwOnError:false});}});</script>'
         )
-    main_open, main_close = "<main class=\"container\">", "</main>"
+    main_open, main_close = "<main id=\"main-content\" tabindex=\"-1\" class=\"container\">", "</main>"
     if chat:
         chat_aside = chat_panel_html()
         # </script> 等でスクリプトタグを抜けられないよう "</" をエスケープ
@@ -435,7 +435,7 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
             f'<script src="{rel_root}/assets/chat.js" defer></script>'
         )
     if chat or notes_slug:
-        main_open = '<div class="layout"><main class="container">'
+        main_open = '<div class="layout"><main id="main-content" tabindex="-1" class="container">'
         main_close = "</main>" + chat_aside + notes_aside + "</div>"
     og = (
         f'<meta property="og:type" content="article">\n'
@@ -456,11 +456,14 @@ def page_template(title, body, site_title, rel_root=".", chat=None, notes_slug=N
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <title>{html.escape(title)}</title>
-{og}<link rel="stylesheet" href="{rel_root}/assets/style.css">{head_extra}{math_head}
+{og}<link rel="stylesheet" href="{rel_root}/assets/style.css">
+<link rel="stylesheet" href="{rel_root}/assets/dads.css">{head_extra}{math_head}
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="{rel_root}/index.html">{html.escape(site_title)}</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
 {main_open}
@@ -619,6 +622,8 @@ def main():
     out_dir = os.path.join(ROOT, config.get("publish", {}).get("output_dir", "docs"))
     papers_out = os.path.join(out_dir, "papers")
     os.makedirs(papers_out, exist_ok=True)
+    os.makedirs(os.path.join(out_dir, "assets"), exist_ok=True)
+    shutil.copyfile(os.path.join(ROOT, "assets", "dads.css"), os.path.join(out_dir, "assets", "dads.css"))
 
     # 生成済みページをクリアし、削除/改名された解説の取り残しを防ぐ
     for old in os.listdir(papers_out):

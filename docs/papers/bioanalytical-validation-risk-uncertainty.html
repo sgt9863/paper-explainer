@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/bioanalytical-validation-risk-uncertainty/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="bioanalytical-validation-risk-uncertainty"><h1>バイオ分析法のバリデーション・リスク・不確かさ評価の進歩——判定基準の解釈を整理し「目的に合わない分析法を通してしまうリスク」を減らす</h1><div class="paper-meta"><span class="date">2026-08-05</span> <span class="tag">分析法・バリデーション</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">QC・品質評価</span> <span class="tag">規制・ガイドライン</span> &middot; <a href="https://doi.org/10.1016/j.jpba.2010.12.018" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0731708510007235-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="bioanalytical-validation-risk-uncertainty" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="bioanalytical-validation-risk-uncertainty" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/bioanalytical-validation-risk-uncertainty/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/bioanalytical-validation-risk-uncertainty/ai-infographic.webp" alt="FDAガイダンスは「accuracy（正確性）」を「平均が真値の±15%以内」と定義している——しかしそれは accuracy ではなく trueness（真度）である。この定義の取り違えを起点に 選択性・検量線・真度/精度/正確性・定量限界・希釈整合性・安定性の解釈を系統的に整理し ISR（実試料再現性）と測定不確かさで補強することを説く総説" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・J. Pharm. Biomed. Anal. 総説）の節構成に沿って訳出。図1〜図6は原本PDFからPyMuPDFで埋め込み画像を xref 抽出し（キャプション矩形との位置関係で対応を検証）Read で内容確認のうえ全訳キャプションで埋め込んだ。表1は全数値を転記。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>原題: Advances in validation, risk and uncertainty assessment of bioanalytical methods</li><li>著者: <strong>E. Rozet\</strong>* ᵃ ¹・R.D. Marini ᵃ・E. Ziemons ᵃ・<strong>B. Boulanger</strong> ᵇ・<strong>Ph. Hubert</strong> ᵃ</li><li>ᵃ リエージュ大学 薬学部 CIRM 分析化学研究室（ベルギー リエージュ）</li><li>ᵇ Arlenda s.a.（ベルギー リエージュ）</li><li>責任著者: E. Rozet（Laboratory of Analytical Chemistry, Institute of Pharmacy, Université de Liège, CHU, B 36, B-4000 Liège／eric.rozet@ulg.ac.be）</li><li>¹ ベルギー F.R.S.-FNRS ポスドク研究員</li><li>掲載: <em>Journal of Pharmaceutical and Biomedical Analysis</em> <strong>55</strong> (2011) 848–858. DOI: 10.1016/j.jpba.2010.12.018</li><li>受理: 2010年10月20日受付／12月9日改訂／12月10日受理／12月21日オンライン公開</li><li>種別: <strong>総説（Review）</strong></li><li>キーワード: バイオ分析法バリデーション／結果の正確性（Results accuracy）／検量線（Standard curve）／実試料再現性（Incurred sample reproducibility）／測定不確かさ（Measurement uncertainty）</li></ul>

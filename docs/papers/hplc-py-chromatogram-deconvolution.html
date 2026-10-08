@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/hplc-py-chromatogram-deconvolution/ai-infographic.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="hplc-py-chromatogram-deconvolution"><h1>hplc-py：重なったクロマトグラムのピークを分離・定量するPythonツール</h1><div class="paper-meta"><span class="date">2026-09-27</span> <span class="tag">HPLC・UPLC</span> <span class="tag">多成分定量</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> &middot; <a href="https://doi.org/10.21105/joss.06270" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">joss.06270.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="hplc-py-chromatogram-deconvolution" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="hplc-py-chromatogram-deconvolution" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/hplc-py-chromatogram-deconvolution/ai-infographic.png" target="_blank" rel="noopener"><img src="assets/hplc-py-chromatogram-deconvolution/ai-infographic.png" alt="ベースライン補正・ピーク検出・歪正規分布フィットを自動化し、重複信号を定量する" loading="lazy"></a><h2>書誌情報</h2>
 <ul><li>原題: hplc-py: A Python Utility For Rapid Quantification of Complex Chemical Chromatograms</li><li>著者: Griffin Chure、Jonas Cremer。所属: Stanford University, Department of Biology（米国カリフォルニア州）。責任著者: Griffin Chure。</li><li>掲載誌: Journal of Open Source Software, 9(94), 6270（2024）。<a href="https://joss.theoj.org/papers/10.21105/joss.06270" target="_blank" rel="noopener">原論文・出版社ページ</a>。</li><li>投稿: 2023年10月5日。公開: 2024年2月16日。担当編集者: Jeff Gostick。査読者: @florian-huber、@Kastakin。</li><li>雑誌IF: 要確認。2026年9月27日に<a href="https://joss.theoj.org/about" target="_blank" rel="noopener">JOSS公式情報</a>を確認したが、JCRの年次付き数値を確認できなかったため数値は掲載しない。</li><li>被引用数: 11件（<a href="https://openalex.org/W4391885430" target="_blank" rel="noopener">OpenAlexの当該論文レコード</a>、2026年9月27日取得）。データベースと取得日によって変わる。</li><li>原文のライセンス: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">Creative Commons Attribution 4.0 International</a>。著者が著作権を保持。本ページは日本語訳・注記を加えたもの。</li><li><a href="https://github.com/cremerlab/hplc-py" target="_blank" rel="noopener">ソフトウェア</a>／<a href="https://cremerlab.github.io/hplc-py/" target="_blank" rel="noopener">公式ドキュメント</a>。</li></ul>
 <h2>概要</h2>

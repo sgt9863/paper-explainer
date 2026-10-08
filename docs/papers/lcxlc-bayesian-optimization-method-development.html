@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/lcxlc-bayesian-optimization-method-development/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="lcxlc-bayesian-optimization-method-development"><h1>包括的二次元液体クロマトグラフィー（LC×LC）分離のベイズ最適化 — グラフ連結成分に基づく新しいクロマト応答関数で8つの勾配パラメータをin silico最適化</h1><div class="paper-meta"><span class="date">2026-07-07</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">機械学習・データ処理</span> <span class="tag">ケモメトリクス</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2021.462628" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1-s2.0-S0021967321007524-main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="lcxlc-bayesian-optimization-method-development" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="lcxlc-bayesian-optimization-method-development" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/lcxlc-bayesian-optimization-method-development/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/lcxlc-bayesian-optimization-method-development/ai-infographic.webp" alt="手間のかかるLC×LC(二次元LC)の分析法開発を、ガウス過程ベイズ最適化＋グラフ連結成分に基づく新規クロマト応答関数で加速——グリッド探索(11664実験)を104実験で上回る" loading="lazy"></a><p>&lt;!-- 方針: 11ページのJ. Chromatogr. Aチュートリアル論文の全訳密度版。原文構成(1序論→2理論(保持モデル/BO)→3材料と方法→4結果と考察(応答関数/グリッド/BO/比較/収束)→5結論)に忠実。数式(Neue-Kuss式1・GP式17-22・EI式25-26・分離度式28)と数値(11664実験・連結成分数など)を保持。元PDFが画像取得で一部数式OCRが崩れていたため、原文が明示する標準式(Neue-Kuss/GP/EI)は正しい標準形で再掲した。対象は合成試料のLC×LCだが、保持モデリング・メソッド開発・BOの実装例として収録。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>標題（原題）: Bayesian optimization of comprehensive two-dimensional liquid chromatography separations</li><li>著者・所属: Jim Boelrijk, Bob Pirok, Bernd Ensing, Patrick Forré（アムステルダム大学 AI4Science Lab／分析化学グループ／計算化学グループ／情報学研究所、オランダ）</li><li>掲載誌・巻号・DOI: J. Chromatogr. A, 2021, 1659, 462628. https://doi.org/10.1016/j.chroma.2021.462628</li><li>インパクトファクター: 4.0（Journal of Chromatography A, Q1・2024 JCR。分離科学の代表誌）</li><li>受理経過 / ライセンス: Received 2021-05-25 / Accepted 2021-10-13。CC BY 4.0（Tutorial Article、オープンアクセス）</li></ul>

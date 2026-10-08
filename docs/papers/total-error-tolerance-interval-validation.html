@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/total-error-tolerance-interval-validation/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="total-error-tolerance-interval-validation"><h1>定量分析法バリデーションのためのTotal Error（総合誤差）アプローチ——両側β含有許容区間で「不適切な分析法を通してしまうリスク」を制御する</h1><div class="paper-meta"><span class="date">2026-08-05</span> <span class="tag">分析法・バリデーション</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">QC・品質評価</span> <span class="tag">規制・ガイドライン</span> &middot; <a href="https://doi.org/10.1007/s11095-007-9242-3" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Hoffman-Kringle-2007-Total-Error-Approach.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="total-error-tolerance-interval-validation" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="total-error-tolerance-interval-validation" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/total-error-tolerance-interval-validation/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/total-error-tolerance-interval-validation/ai-infographic.webp" alt="「平均±15%以内 かつ CV 15%以下なら合格」——バイオアナリシスで長年使われてきたこの判定基準は 真のバイアス20%・CV15%という明らかに不適格な分析法を10%超の確率で通してしまう。真度と精度を別々に見るのをやめ 両側β含有許容区間ひとつで判定すれば 誤合格率は5%未満に抑えられる" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Pharmaceutical Research 原著）の節構成に沿って訳出。図1〜図7は原本PDFのベクター図をPyMuPDFで領域レンダリングしReadで内容確認のうえ全訳キャプションで埋め込んだ。表I〜表VIIIは全行・全数値を転記。原本PDFのテキスト層は数式・記号が壊れて抽出されるため（β→b、σ→、χ²→2 など）、数式は前後の文脈と数値例から復元し、復元が確定できない箇所はその旨を明記した。「&gt; 補足:」は訳者注。 --&gt;</p>
 <blockquote><strong>この論文について（重要）</strong>  このページの原本は **Hoffman D, Kringle R. &quot;A Total Error Approach for the Validation of Quantitative Analytical Methods.&quot; <em>Pharmaceutical Research</em> 24(6):1157–1164 (2007)<strong> です。  よく混同されるものに、</strong>Rozet・Boulanger・Rudaz・Marini・Ziemons・Hubert ら（リエージュ大学ほか）の &quot;Total Error for the Validation of Bioanalytical Methods&quot;**（<em>Annales de Toxicologie Analytique</em> 21(S1), p.35, 2009／演題 O75）がありますが、そちらは<strong>学会の口頭発表抄録</strong>であり、<strong>著者も掲載媒体も異なる別の文献</strong>です。両者はいずれも「総合誤差による分析法バリデーション」という同じ考え方を扱う密接な姉妹関係にありますが、<strong>一方が他方の抄録／完全版という関係ではありません</strong>。Rozet らの系統の考え方（β期待許容区間＋正確性プロファイル）を本文で読むには、末尾の「訳者による総括」に挙げた原著論文を参照してください。本ページは Hoffman &amp; Kringle の原著論文の全訳です。</blockquote>
 <h2>書誌情報</h2>
