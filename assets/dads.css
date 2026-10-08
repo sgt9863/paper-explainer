@@ -1,5 +1,5 @@
 /* DADS-inspired shared visual language. See DEVELOPMENT.md. */
-:root { --fg:#1a1a1c; --muted:#525258; --bg:#fff; --accent:#0031d8; --accent-soft:#f3f6ff; --border:#b6b6be; --code-bg:#f5f5f7; }
+:root { --fg:#1a1a1c; --muted:#525258; --bg:#fff; --accent:#216e39; --accent-soft:#eef7ef; --border:#b6b6be; --code-bg:#f5f5f7; }
 html { font-size:16px; scroll-padding-top:24px; }
 body { line-height:1.8; }
 a { text-decoration:underline; text-underline-offset:.2em; overflow-wrap:anywhere; }
