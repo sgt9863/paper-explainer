@@ -29,3 +29,14 @@
 - 初回生成結果に「微分などを用いてピークを検出」とあったため不採用。原文に合わせ「ピークの突出度を基準に検出し、重なりを含む時間領域に分割する。」へ限定修正。
 - プロンプト: runbook/hplc-py-hero-restyle-prompt.txt。論文本文や元図の内容は変更しない。
 - 修正版を目視確認して採用。生成元とdocs側の画像一致、134ページのビルド成功を確認。既存の本文・原図・メモ機能は変更なし。
+
+## 2026-10-09 — Domain-wide DADS alignment
+
+The user requested a consistent sgt9863.com design based on the Digital Agency Design System and the previously selected textbook layout. Work is isolated in `projects/paper-dads`, branch `codex/dads-paper`, from `origin/main` (`cae443e`). The original checkout and its untracked state backups are untouched.
+
+- Canonical visual overrides live in `assets/dads.css`. `scripts/build_site.py` copies them into the configured output directory and generates the stylesheet link, domain-home link, and keyboard skip link for every page. Existing application scripts and paper Markdown remain unchanged.
+- Adopted white surfaces, blue `#0031d8` links/actions, text `#1a1a1c`, muted `#525258`, pale `#f3f6ff`, 16px body text at 1.8 line height, restrained borders, underlined links, 44px primary controls and black/yellow focus indicators. Read/favorite state retains textual/symbolic cues. The old green accent is superseded.
+- Reference pages checked: https://design.digital.go.jp/dads/foundations/color/ ; https://design.digital.go.jp/dads/foundations/typography/ ; https://design.digital.go.jp/dads/foundations/layout/ ; https://design.digital.go.jp/dads/foundations/link-text/ ; https://design.digital.go.jp/dads/components/button/ . This adopts their principles; it does not assert official certification.
+- Rebuilt 134 articles with the standard-library generator. Chrome/Playwright verified index and representative article at 1440px and 390px, search, favorites, reading status after reload, notes after reload, keyboard skip link, no uncaught JavaScript errors. Corrected narrow-screen list sizing and wide-table overflow. Screenshot inspection confirmed readable index/article layouts.
+- No AI API requests, email, login, sync writes or paper-content changes were made. External authenticated services are unverified; their scripts and configuration are unchanged. Real device and assistive-technology testing remains outside this smoke test.
+- Final 134-article narrow-screen scan: all pages fit 390px. Eight long inline-equation cases were corrected with local equation scrolling and a positioned table container; no article text was changed.

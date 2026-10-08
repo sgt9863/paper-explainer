@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/chromatographic-response-functions-universal-comparison/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="chromatographic-response-functions-universal-comparison"><h1>クロマトグラフィー応答関数（CRF）の網羅的比較研究——自動メソッド開発のための「分離の良さ」を1つの数値で表す指標</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> <span class="tag">HPLC・UPLC</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2014.08.014" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">dbac7497-1s2.0S0021967314012448main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="chromatographic-response-functions-universal-comparison" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="chromatographic-response-functions-universal-comparison" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/chromatographic-response-functions-universal-comparison/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/chromatographic-response-functions-universal-comparison/ai-infographic.webp" alt="文献＋新規の50超のCRF（分離の良さを1数値化する指標）をin silicoで大規模比較――観測ピーク数とともに単調増加するCRFが有意に優れると結論" loading="lazy"></a><p>&lt;!-- Tyteca E, Desmet G. A universal comparison study of chromatographic response functions. J Chromatogr A 1361 (2014) 178-190. doi:10.1016/j.chroma.2014.08.014 の全訳密度日本語版。 --&gt;</p>
 <blockquote><strong>補足（本サイトでの位置づけ）:</strong> 本論文は生薬そのものを扱う研究ではなく、<strong>クロマトグラフィーの自動メソッド開発（automated method development）で「分離条件の良し悪し」を1つの数値でスコア化する指標——クロマトグラフィー応答関数（CRF）——を50種以上、計算機模擬で徹底比較した基盤研究</strong> である。当サイトが扱う生薬・漢方の指紋分析や多成分定量メソッドは、いずれも「多数のピークをいかに分離するか」という共通課題を抱えており、その最適化を自動化・数値化するには CRF のような客観的スコアが要る。本論文の核心的な教訓——「観測できたピーク数とともに単調に増える CRF でないと、成分数が事前にわからない試料（＝生薬エキスのような複雑試料の典型）では最適化が迷走する」——は、生薬の未知多成分プロファイルを扱う分析法開発にそのまま効く。当サイトで既に扱った「in silico HPLC のML保持予測」「望ましさ関数による多応答最適化」の議論と地続きの、メソッド開発を自動化・客観化するための理論的裏付けとして読める。やや専門性が高いが、生薬指紋分析の「なぜこの分離条件を選ぶのか」を根本から支える文献である。</blockquote>
 <hr>

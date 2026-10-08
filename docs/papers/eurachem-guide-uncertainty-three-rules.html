@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/eurachem-guide-uncertainty-three-rules/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="eurachem-guide-uncertainty-three-rules"><h1>不確かさ評価の「正しさ」を追う——EURACHEMガイドの計算例に潜む3つの誤り（分布の選び方・二重計上・効かない要因）</h1><div class="paper-meta"><span class="date">2026-08-09</span> <span class="tag">分析法・バリデーション</span> <span class="tag">QC・品質評価</span> <span class="tag">規制・ガイドライン</span> <span class="tag">統計・ケモメトリクス</span> &middot; <a href="https://doi.org/10.1007/s007690050233" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">Evaluating_uncertainty_in_analytical_mea.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="eurachem-guide-uncertainty-three-rules" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="eurachem-guide-uncertainty-three-rules" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/eurachem-guide-uncertainty-three-rules/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/eurachem-guide-uncertainty-three-rules/ai-infographic.webp" alt="不確かさの計算は「原理は単純だが正しくやるのは難しい」。EURACHEMガイド（1995）の計算例そのものを俎上に載せ 分布の選び方・成分の二重計上・実際には効かない要因の3点で過大評価が起きていると指摘した実務者レポート。矩形分布を機械的に使うな 器具の許容差と充填の繰返しを足すな 同一装置・同一分析者・短時間なら装置間変動を足すな という3つの規則を提示する" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・Accred Qual Assur 原著 Practitioner&#x27;s Report・全5ページ）の節構成に沿って訳出。図1〜3は原本PDFをpoppler（pdftoppm）で300 dpi描画・図領域を切り出し、各図をReadで目視確認のうえ全訳キャプションで埋め込んだ。図3は原文では表形式の図であるため、画像に加えてパイプ表としても全項目を転記した。式は原文の記述順に(1)〜(12)の番号を訳者が付し、記号定義とともに全て収載（原文には式番号は付されていない）。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>原題: Evaluating uncertainty in analytical measurements: the pursuit of correctness</li><li>著者: <strong>Rouvim L. Kadis</strong></li><li>D. I. メンデレーエフ計量研究所（D. I. Mendeleyev Institute for Metrology, VNIIM）, 19 Moskovsky pr., 198005 サンクトペテルブルク, ロシア</li><li>Fax: +7-812 327-97-76 / e-mail: hal6onti.vniim.spb.su（原文表記のまま）</li><li>掲載: <em>Accreditation and Quality Assurance</em> <strong>3</strong> (1998) 237–241, © Springer-Verlag 1998</li><li>種別: <strong>PRACTITIONER&#x27;S REPORT</strong>（品質保証・バリデーション・認定に関する経験の報告とノート）</li><li>DOI: https://doi.org/10.1007/s007690050233</li><li>受領 1998-01-29 / 受理 1998-02-10</li><li>発表: <strong>第2回EURACHEM 化学分析における測定不確かさワークショップ</strong>（ベルリン, 1997年9月29–30日）</li><li>キーワード: 化学分析（Chemical analysis）／測定不確かさ（Measurement uncertainty）／推定プロセス（Estimation process）</li><li>被引用数: <strong>9件</strong>（OpenAlex, 2026年8月時点）</li></ul>

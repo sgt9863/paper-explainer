@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/correction-factors-impurity-content-rrf-epshtein/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="correction-factors-impurity-content-rrf-epshtein"><h1>不純物含量の算出式における補正係数（correction factor）——その本質・決定法・限界</h1><div class="paper-meta"><span class="date">2026-07-23</span> <span class="tag">QC・品質評価</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">規制・薬事</span> &middot; <a href="https://doi.org/10.1007/s11094-019-02023-x" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">d4d62e67-s1109401902023x.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="correction-factors-impurity-content-rrf-epshtein" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="correction-factors-impurity-content-rrf-epshtein" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/correction-factors-impurity-content-rrf-epshtein/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/correction-factors-impurity-content-rrf-epshtein/ai-infographic.webp" alt="不純物定量に使う補正係数F（＝1/RRF）の「本質・正しい決定法・見落とされがちな限界（切片aの有意性・濃度域・非線形）」を式から整理し実務指針を与える" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文構成に沿って訳出。式・数値を保持。本文の[N]は原文の番号引用に対応し末尾の参考文献にリンクする。図はPyMuPDFで原本から抽出。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>原題: Correction Factors in Formulas for Calculating Impurity Contents: Essence and Determination Methods and Their Limitations</li><li>著者: N. A. Épshtein（医薬品登録・開発センター LLC IRVIN 2, モスクワ, ロシア）</li><li>掲載: <em>Pharmaceutical Chemistry Journal</em>, Vol. 53, No. 5, August 2019（露語原著 <em>Khimiko-Farmatsevticheskii Zhurnal</em> Vol. 53, No. 5, pp. 55–60, May 2019）. https://doi.org/10.1007/s11094-019-02023-x</li><li>インパクトファクター: <strong>約1.5</strong>（<em>Pharm. Chem. J.</em>, JCR 2024 / Clarivate。年により1.2〜1.6と幅があり要確認）</li><li>受理経過: 原著投稿 2018-07-30</li></ul>

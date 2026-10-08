@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/rphplc-bayesian-doptimal-design-retention-prediction/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="rphplc-bayesian-doptimal-design-retention-prediction"><h1>事前知識を活用した逆相HPLC保持予測の改善 — ベイズD最適設計と多階層モデルで多様な分析対象に効く実験計画を作る</h1><div class="paper-meta"><span class="date">2026-07-08</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">HPLC・UPLC</span> <span class="tag">ケモメトリクス</span> <span class="tag">機械学習・データ処理</span> &middot; <a href="https://doi.org/10.1016/j.chroma.2025.465787" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">1s2.0S0021967325001359main.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="rphplc-bayesian-doptimal-design-retention-prediction" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="rphplc-bayesian-doptimal-design-retention-prediction" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/rphplc-bayesian-doptimal-design-retention-prediction/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/rphplc-bayesian-doptimal-design-retention-prediction/ai-infographic.webp" alt="逆相HPLCの保持予測を、ベイズD最適設計＋多階層モデル＋事前知識で高効率化——単一分析対象でなく「多様な酸・塩基の集団」に効く最適な予備実験セットを設計" loading="lazy"></a><p>&lt;!-- 方針: 9ページのJ. Chromatogr. A 方法論論文(単著)の全訳密度版。原文構成(序論→理論→技術→結果と考察→結論)に忠実。数式(FIM式2・D最適式3・効率式4・等溶媒式7-9・勾配式10-11)と数値を保持。数式は元PDFのOCRが崩れていたため意味に基づき標準形で再掲。統計的にやや専門的なためlevel=researcher。「&gt; 補足:」は訳者注。2026-07-16 品質監査で密度不足のため原文をPyMuPDFで再取得し、Table1(D-optimal設計の全データ)とFig.2S言及部分(目標達成確率の議論)を追加、各節の説明を原文に沿って拡充。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>標題（原題）: Leveraging prior knowledge for improved retention prediction in reversed-phase HPLC</li><li>著者・所属: Paweł Wiczling（グダニスク医科大学 生物薬剤学・薬力学教室、ポーランド）</li><li>掲載誌・巻号・DOI: J. Chromatogr. A, 2025, 1746, 465787. https://doi.org/10.1016/j.chroma.2025.465787</li><li>インパクトファクター: 4.0（Journal of Chromatography A, Q1・2024 JCR）</li><li>受理経過 / ライセンス: Received 2024-12-31 / Accepted 2025-02-15。Elsevier</li><li>データ公開: R/Stan コードとデータは GitHub 公開（github.com/wiczling/optimal-design）</li><li>利益相反: 著者は開示すべき利益相反なし。計算の一部はグダニスク工科情報学センター(CI TASK)の計算クラスタで実行</li><li><strong>原本PDF</strong>: Driveへ自動アップロードできず、ユーザーに返却済み（<code>1s2.0S0021967325001359main.pdf</code>）</li></ul>

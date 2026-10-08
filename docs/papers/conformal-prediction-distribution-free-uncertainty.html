@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/conformal-prediction-distribution-free-uncertainty/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="conformal-prediction-distribution-free-uncertainty"><h1>コンフォーマル予測と分布フリー不確かさ定量化への やさしい入門</h1><div class="paper-meta"><span class="date">2026-07-24</span> <span class="tag">機械学習・AI</span> <span class="tag">統計・ケモメトリクス</span> <span class="tag">分析法・バリデーション</span> <span class="tag">QC・品質評価</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.48550/arXiv.2107.07511" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">2107.07511v6.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="conformal-prediction-distribution-free-uncertainty" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="conformal-prediction-distribution-free-uncertainty" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/conformal-prediction-distribution-free-uncertainty/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/conformal-prediction-distribution-free-uncertainty/ai-infographic.webp" alt="ブラックボックスのAIモデルの予測に「90%の確率で正解を含む」と数学的に保証された予測集合をつける——モデルにもデータ分布にも仮定を置かず 学習済みモデルをそのまま使える コンフォーマル予測の実践的入門（Angelopoulos &amp; Bates）" loading="lazy"></a><p>&lt;!-- 方針: ほぼ全訳＋必要に応じた補足。原文（英語・arXivチュートリアル、51頁）構成に沿って訳出。中核（1〜3章）は数式・Pythonコードを保ちつつ詳訳し、拡張・実例・理論（4〜7章・付録A-D）は全項目を漏らさず要点全訳。数式はKaTeXで再構成(1ブロック1式)。図1(Imagenet予測集合例)はPyMuPDFで抽出。本文の[N]は原文の番号引用に対応。原著は自己完結の教科書的文書で参考文献は多数——主要文献を末尾に列挙(全リストは原著参照)。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>原題: A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification</li><li>著者: Anastasios N. Angelopoulos・Stephen Bates</li><li>出典: arXiv:2107.07511v6 [cs.LG], 2022年12月7日</li><li>種別: チュートリアル／実践的入門（教科書的文書。各手法にPythonコードとJupyterノートブックが付属）</li><li>インパクトファクター: 該当なし（arXivプレプリント。ただし本分野で極めて広く参照される標準的入門）</li></ul>

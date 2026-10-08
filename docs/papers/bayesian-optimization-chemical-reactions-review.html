@@ -12,14 +12,17 @@
 <meta property="og:image" content="https://sgt9863.github.io/paper-explainer/papers/assets/bayesian-optimization-chemical-reactions-review/ai-infographic.webp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="../assets/dads.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 </head>
 <body>
+<a class="skip-link" href="#main-content">本文へ移動</a>
 <header class="site-header">
   <a class="site-title" href="../index.html">KAMPO PAPER LAB</a>
+  <a class="domain-home" href="/">sgt9863.com ホーム</a>
   <button type="button" id="authBtn" class="auth-btn" hidden>ログイン</button>
 </header>
-<div class="layout"><main class="container">
+<div class="layout"><main id="main-content" tabindex="-1" class="container">
 <article class="paper" data-slug="bayesian-optimization-chemical-reactions-review"><h1>化学反応のためのベイズ最適化（BO）— サロゲートモデル・獲得関数から実装・応用・転移学習まで（総説）</h1><div class="paper-meta"><span class="date">2026-07-07</span> <span class="tag">メソッド開発・QbD</span> <span class="tag">機械学習・データ処理</span> <span class="tag">ケモメトリクス</span> <span class="tag">レビュー</span> &middot; <a href="https://doi.org/10.1039/d5cs00962f" target="_blank" rel="noopener">原文 (DOI)</a> &middot; <span class="src">d5cs00962f.pdf</span> &middot; <button type="button" class="fav-toggle" data-slug="bayesian-optimization-chemical-reactions-review" aria-pressed="false" aria-label="お気に入り" title="お気に入り">☆</button> <span class="status-control">状況: <select class="status-select" data-slug="bayesian-optimization-chemical-reactions-review" aria-label="読書ステータス"><option value="unread">未読</option><option value="reading">読み途中</option><option value="read">既読</option></select></span></div><hr><a class="slide-hero" href="assets/bayesian-optimization-chemical-reactions-review/ai-infographic.webp" target="_blank" rel="noopener"><img src="assets/bayesian-optimization-chemical-reactions-review/ai-infographic.webp" alt="化学反応条件の最適化をデータ効率よく行うベイズ最適化(BO)を、ガウス過程サロゲート・カーネル・獲得関数・多目的/バッチ・実務指針・応用(HTE/フロー/産業)・転移学習まで一望する化学者向け入門総説" loading="lazy"></a><p>&lt;!-- 方針: 44ページのChem Soc Rev入門総説の全訳密度版。原文の節構成(1序論→2基礎→3 HTE→4フロー→5産業→6ハイブリッド→7最先端→8結論)に忠実。方法論の中核(2章)は数式込みで全訳。応用章(3-6)は原文の節立てに沿って代表研究と定量結果を網羅的に訳出。数式は元PDFのOCRが崩れていたため、原文が明示する標準形(Matérn/SE/EI/UCB等)を正しい形で再掲した(捏造ではなく同一の標準式の正確な表記)。対象は合成反応最適化で生薬ではないが、メソッド開発・QbD・データ駆動最適化の体系として収録。「&gt; 補足:」は訳者注。 --&gt;</p>
 <h2>書誌情報</h2>
 <ul><li>標題（原題）: Bayesian optimization for chemical reactions</li><li>著者・所属: Stefan Desimpel*, Matthieu Dorbec, Kevin M. Van Geem, Christian V. Stevens（ゲント大学 SynBioC／化学技術研究室 LCT、ベルギー／Johnson &amp; Johnson Innovative Medicine）</li><li>掲載誌・巻号・DOI: Chem. Soc. Rev., 2026, 55, 2731–2775. https://doi.org/10.1039/d5cs00962f</li><li>インパクトファクター: 39.0（Chemical Society Reviews, Q1・2024 JCR。5年IF 50.4、化学・総合分野で世界トップ級の総説誌）</li><li>受理経過 / ライセンス: Received 2025-09-30 / Published 2026-02-10。CC BY-NC 4.0（総説、オープンアクセス）</li></ul>
